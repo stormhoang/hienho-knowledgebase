@@ -204,18 +204,18 @@ def main():
         if s.has_text_frame:
             txt = s.text_frame.text.strip()
             if txt.startswith("Mục đích:"):
-                set_text(s, "Mục đích: Thống nhất danh mục 1 chủ đề cần BOM phê duyệt và thứ tự thảo luận trong cuộc họp.", font_size=8.5, color=COLOR_TEXT_MUTED)
+                set_text(s, "Mục đích: Xin CEO/BOM phê duyệt chiến lược tối ưu luồng Tải App (/tai-app) để thu hút 10.000 volume tìm kiếm tự nhiên.", font_size=8.5, color=COLOR_TEXT_MUTED)
             elif "Discussion Topics —" in txt:
                 set_text(s, "Discussion Topics — 1 Chủ Đề Trọng Tâm: 0 Discuss, 1 Approve", font_size=18, bold=True, color=COLOR_TEXT_MAIN)
             elif "Nguồn:" in txt:
-                set_text(s, "Nguồn: GA4 (Property 270743103)   |   Owner: Web Platform   |   Chốt số liệu: 30/10/2026", font_size=9, color=COLOR_TEXT_MUTED)
+                set_text(s, "Nguồn: Google Search Console & Web Platform   |   Owner: Web Platform   |   Chốt số liệu: 30/10/2026", font_size=9, color=COLOR_TEXT_MUTED)
             elif txt in ["2", "2 / 7", "2 / 8"]:
                 set_text(s, "2 / 7", font_size=9, color=COLOR_TEXT_MUTED)
-            elif "Mỗi chủ đề chỉ 1 dòng" in txt or txt.startswith("Mỗi chủ đề"):
+            elif "Mỗi chủ đề chỉ 1 dòng" in txt or txt.startswith("Mỗi chủ đề") or txt.startswith("• 01."):
                 content = (
-                    "• 01. Bộ Tiện Ích Thuế & Lương: Phê duyệt kế hoạch go-live bộ công cụ Tính Thuế TNCN & Lương Gross-Net đón đỉnh tìm kiếm quyết toán cuối năm (300K - 500K PVs).\n"
-                    "• 02. Phối hợp dữ liệu Finhub/Bank: Thống nhất cơ chế đối soát biểu mẫu và chuẩn hóa công thức tính thuế lũy tiến theo quy định hiện hành.\n"
-                    "• 03. Kỷ luật phê duyệt: Hoàn tất phê duyệt trước 31/10 để kịp kiểm thử chất lượng và go-live đúng kỳ tính lương tháng 11/2026."
+                    "• 01. Luồng Tải App chuẩn hóa: Đưa trang /tai-app thành điểm chạm trung tâm với Smart Device Routing (iOS App Store / Android Play Store / Desktop QR Code).\n"
+                    "• 02. Acquire 10.000 volume search: Tối ưu SEO On-Page và Schema SoftwareApplication để chiếm vị trí Top 1 tuyệt đối cho các từ khóa \"tải momo\", \"cài đặt momo\".\n"
+                    "• 03. Kỷ luật phê duyệt: Hoàn tất phê duyệt đồng bộ link nội bộ trước 31/10 để lập chỉ mục Google và kích hoạt trọn vẹn luồng chuyển đổi trong tháng 11/2026."
                 )
                 set_text(s, content, font_size=9.5, color=COLOR_TEXT_MAIN)
         elif s.has_table:
@@ -251,12 +251,12 @@ def main():
             for c, h in enumerate(headers):
                 set_cell(tbl.cell(0, c), h, font_size=8.5, bold=True, color=COLOR_WHITE, align=PP_ALIGN.CENTER if c in [0, 2, 5, 6, 7] else PP_ALIGN.LEFT)
 
-            # Row 1: Tax & Salary Toolkit Launch Plan
+            # Row 1: Download App Flow Optimization
             set_cell(tbl.cell(1, 0), "1", font_size=8.5, bold=True, align=PP_ALIGN.CENTER)
-            set_cell(tbl.cell(1, 1), "Kế Hoạch Ra Mắt Bộ Tiện Ích Thuế TNCN & Tính Lương Cuối Năm", font_size=8.5, bold=True)
+            set_cell(tbl.cell(1, 1), "Tối Ưu Luồng Tải App (/tai-app) Chiếm Lĩnh 10.000 Volume Tìm Kiếm Tự Nhiên", font_size=8.5, bold=True)
             set_cell(tbl.cell(1, 2), "Approve", font_size=8.0, bold=True, color=COLOR_PINK, align=PP_ALIGN.CENTER)
-            set_cell(tbl.cell(1, 3), "Phê duyệt kế hoạch phát hành và cơ chế phối hợp dữ liệu biểu mẫu thuế với Finhub; ưu tiên tài nguyên kỹ thuật go-live trong tháng 11/2026.", font_size=8.0)
-            set_cell(tbl.cell(1, 4), "Dự kiến thu hút 300K - 500K Pageviews tự nhiên; đón đỉnh tìm kiếm quyết toán thuế cuối năm", font_size=8.0, color=COLOR_GREEN)
+            set_cell(tbl.cell(1, 3), "Phê duyệt cơ chế hợp nhất URL (/download -> /tai-app) và đồng bộ hệ thống liên kết nội bộ (Header/Footer/Top Bar) trên toàn bộ Web Platform trỏ về trang Tải App chính thức.", font_size=8.0)
+            set_cell(tbl.cell(1, 4), "Thu hút trọn vẹn 10.000 volume search/tháng cho cụm từ khóa 'tải app MoMo'; bảo vệ an toàn thương hiệu, ngăn chặn thất thoát vào các nguồn APK giả mạo.", font_size=8.0, color=COLOR_GREEN)
             set_cell(tbl.cell(1, 5), "31/10", font_size=8.0, bold=True, align=PP_ALIGN.CENTER)
             set_cell(tbl.cell(1, 6), "CAO", font_size=8.0, bold=True, color=COLOR_ROSE, align=PP_ALIGN.CENTER)
             set_cell(tbl.cell(1, 7), "Slide 3", font_size=8.0, bold=True, color=COLOR_PINK, align=PP_ALIGN.CENTER)
@@ -283,40 +283,40 @@ def main():
     s2.shapes[11].height = Inches(1.60)
 
     # =========================================================================
-    # SLIDE 3: Đề Xuất 1 Deep-Dive [D] (Bộ Tiện Ích Thuế & Tính Lương)
+    # SLIDE 3: Đề Xuất 1 Deep-Dive [D] (Xây Dựng Luồng Tải App Chuẩn Hóa)
     # =========================================================================
     s3 = prs.slides[2]
     # Header & Purpose
-    set_text(s3.shapes[0], "Mục đích: Xin CEO/BOM phê duyệt kế hoạch go-live bộ công cụ Thuế & Lương trước 31/10 để đón đỉnh tìm kiếm cuối năm.", font_size=8.5, color=COLOR_TEXT_MUTED)
-    set_text(s3.shapes[1], "Đề Xuất 1: Phát Hành Bộ Tiện Ích Thuế Thu Nhập Cá Nhân & Tính Lương Gross-Net", font_size=18, bold=True, color=COLOR_TEXT_MAIN)
-    set_text(s3.shapes[5], "Nguồn: Google Search Trends & Web Platform   |   Owner: Web Platform   |   Chốt số liệu: 30/10/2026", font_size=9, color=COLOR_TEXT_MUTED)
+    set_text(s3.shapes[0], "Mục đích: Trình bày phương án tối ưu luồng Tải App (/tai-app) xin CEO/BOM phê duyệt đồng bộ liên kết toàn sàn.", font_size=8.5, color=COLOR_TEXT_MUTED)
+    set_text(s3.shapes[1], "Đề Xuất 1: Xây Dựng Luồng Tải App Chuẩn Hóa, Acquire 10.000 Volume Search 'Tải App MoMo'", font_size=18, bold=True, color=COLOR_TEXT_MAIN)
+    set_text(s3.shapes[5], "Nguồn: Google Search Console & Web Platform   |   Owner: Web Platform   |   Chốt số liệu: 30/10/2026", font_size=9, color=COLOR_TEXT_MUTED)
     set_text(s3.shapes[6], "3 / 7", font_size=9, color=COLOR_TEXT_MUTED)
 
     # Problem Statement, Bối cảnh, Tác động
-    set_text(s3.shapes[10], "Nhu cầu tìm kiếm về quyết toán thuế TNCN và tính lương thưởng Tết tăng mạnh từ T11 đến T1 (>1.2M search/tháng). Web Platform cần bộ công cụ tự động chuẩn xác để giữ chân người dùng và tạo lưu lượng tự nhiên chất lượng cao.", font_size=8.5, color=COLOR_TEXT_MAIN)
-    set_text(s3.shapes[14], "Kỹ thuật đã hoàn thành Staging cho bộ đôi công cụ Tính Thuế TNCN & Lương Gross-Net theo biểu thuế lũy tiến và giảm trừ gia cảnh mới nhất. Tiện ích dự kiến thu hút 300K - 500K PVs/tháng và kéo dài thời gian tương tác onsite so với bài viết tĩnh.", font_size=8.5, color=COLOR_TEXT_MAIN)
-    set_text(s3.shapes[18], "Hiệu quả kinh tế & ROI (cho CEO):\n• Dự kiến thu hút 300K - 500K PVs tự nhiên/tháng; tăng tương tác onsite so với nội dung tĩnh.\n• Quy đổi Media Value: Tiết kiệm ~120 - 200 Triệu VNĐ/tháng ngân sách Ads.\n• Chi phí phát sinh: 0 VNĐ (tận dụng 100% hạ tầng server hiện hữu).", font_size=8.0, color=COLOR_TEXT_MAIN)
+    set_text(s3.shapes[10], "Nhu cầu tìm kiếm từ khóa 'tải momo', 'cài đặt momo', 'tải app momo' đạt 10.000 lượt search/tháng trên Google. Hiện lưu lượng bị phân tán vào các website APK trung gian không an toàn, hoặc vào landing page cũ chưa tối ưu SEO và Smart Routing.", font_size=8.5, color=COLOR_TEXT_MAIN)
+    set_text(s3.shapes[14], "Kỹ sư Frontend đã hoàn thành trang /tai-app trên Production với cơ chế Smart Device Routing (iOS mở App Store, Android mở CH Play, Desktop hiển thị QR Code động). Cần chuẩn hóa SEO và quy tụ luồng truy cập toàn sàn về một mối.", font_size=8.5, color=COLOR_TEXT_MAIN)
+    set_text(s3.shapes[18], "Hiệu quả chiến lược & An toàn thương hiệu:\n• Thu hút trọn vẹn 10.000 volume tìm kiếm tự nhiên/tháng vào trang chính chủ MoMo.\n• Bảo vệ uy tín thương hiệu: Ngăn ngừa rủi ro người dùng tải nhầm file APK giả mạo chứa mã độc.\n• Chi phí phát sinh: 0 VNĐ (tận dụng 100% tính năng và hạ tầng đã build sẵn).", font_size=8.0, color=COLOR_TEXT_MAIN)
 
     # Table
     tbl = s3.shapes[20].table
-    headers = ["Phương Án", "Nội Dung Triển Khai", "Tác Động Lượng Hóa & ROI", "Đánh Giá Rủi Ro"]
+    headers = ["Phương Án", "Nội Dung Triển Khai", "Tác Động Lượng Hóa & Lợi Ích", "Đánh Giá Rủi Ro"]
     for c, h in enumerate(headers):
         set_cell(tbl.cell(0, c), h, font_size=9.0, bold=True, color=COLOR_WHITE, align=PP_ALIGN.CENTER if c == 0 else PP_ALIGN.LEFT)
 
     set_cell(tbl.cell(1, 0), "Phương Án A\n(Khuyến nghị)", font_size=8.5, bold=True, color=COLOR_GREEN, align=PP_ALIGN.CENTER)
-    set_cell(tbl.cell(1, 1), "Phát hành bộ tiện ích chuẩn UX MoMo, tích hợp biểu mẫu thuế mới nhất, tự động tính giảm trừ gia cảnh và xuất bảng chi tiết.", font_size=8.0)
-    set_cell(tbl.cell(1, 2), "Đạt 300K - 500K PVs tự nhiên; tiết kiệm 120 - 200 Tr VNĐ/tháng tiền Ads; chi phí phát sinh 0 VNĐ.", font_size=8.0, color=COLOR_GREEN)
-    set_cell(tbl.cell(1, 3), "Rủi ro thấp: Hạ tầng kỹ thuật đã hoàn thành trên môi trường Staging.", font_size=8.0)
+    set_cell(tbl.cell(1, 1), "Hợp nhất các link tải cũ về /tai-app; tối ưu Schema SoftwareApplication chuẩn SEO Top 1; đồng bộ nút Tải App trên Header/Footer toàn sàn.", font_size=8.0)
+    set_cell(tbl.cell(1, 2), "Acquire 10.000 volume search/tháng; trải nghiệm 1-chạm tải app theo thiết bị; chi phí phát sinh 0 VNĐ.", font_size=8.0, color=COLOR_GREEN)
+    set_cell(tbl.cell(1, 3), "Rủi ro thấp: Trang /tai-app đã nghiệm thu Production, chỉ cần đồng bộ liên kết.", font_size=8.0)
 
     set_cell(tbl.cell(2, 0), "Phương Án B\n(Hiện trạng)", font_size=8.5, bold=True, align=PP_ALIGN.CENTER)
-    set_cell(tbl.cell(2, 1), "Giữ các bài viết nội dung tĩnh thông thường không kèm công cụ tính toán tương tác.", font_size=8.0)
-    set_cell(tbl.cell(2, 2), "Tỷ lệ thoát trang cao (>75%); muốn đạt cùng lượng truy cập phải chi 120 - 200 Tr VNĐ tiền Ads ngoài.", font_size=8.0, color=COLOR_ROSE)
-    set_cell(tbl.cell(2, 3), "Rủi ro cao: Mất vị thế cạnh tranh trên Google Search vào tay các nền tảng tính lương ngoài.", font_size=8.0)
+    set_cell(tbl.cell(2, 1), "Giữ nguyên các trang rải rác (/download, các bài blog cũ) không có cơ chế Smart Device Routing thống nhất.", font_size=8.0)
+    set_cell(tbl.cell(2, 2), "Thất thoát 10.000 lượt search vào tay các trang download APK của bên thứ ba; trải nghiệm người dùng bị đứt gãy trên Desktop.", font_size=8.0, color=COLOR_ROSE)
+    set_cell(tbl.cell(2, 3), "Rủi ro cao: Nguy cơ bảo mật cho người dùng khi tải file nguồn không chính thống bên ngoài.", font_size=8.0)
 
     # Right column
-    set_text(s3.shapes[25], "Nội dung xin phê duyệt (Approve): Phê duyệt kế hoạch go-live bộ công cụ Thuế TNCN & Lương Gross-Net trong tháng 11/2026; phối hợp Finhub chuẩn hóa công thức tính thuế.\nKhuyến nghị của BU & ROI: Thông qua Phương án A. ROI vượt trội: Thu hồi giá trị thương hiệu và lưu lượng tự nhiên ngay trong tháng đầu; tiết kiệm 120 - 200 Tr VNĐ/tháng chi phí quảng cáo với 0 đồng chi phí ngoài.", font_size=9.5, color=COLOR_TEXT_MAIN)
+    set_text(s3.shapes[25], "Nội dung xin phê duyệt (Approve): Phê duyệt chủ trương đồng bộ liên kết Tải App trên Header/Footer toàn bộ Web Platform và cấu hình redirect các URL cũ về /tai-app trong tháng 11/2026.\nKhuyến nghị của BU: Thông qua Phương án A. Thu hồi trọn vẹn 10.000 lượt tìm kiếm chính chủ; nâng cao nhận diện thương hiệu và bảo vệ an toàn cho người dùng MoMo.", font_size=9.5, color=COLOR_TEXT_MAIN)
     set_text(s3.shapes[27], "Rủi ro khi chậm quyết định", font_size=8.5, bold=True, color=COLOR_WHITE)
-    set_text(s3.shapes[28], "Rủi ro khi chậm phê duyệt (sau 31/10): Không kịp kiểm thử công thức và triển khai trước kỳ lương tháng 11, bỏ lỡ điểm rơi nhu cầu cao điểm vào tay các website công cụ đối thủ.", font_size=9.5, color=COLOR_TEXT_MAIN)
+    set_text(s3.shapes[28], "Rủi ro khi chậm phê duyệt: Tiếp tục để mất 10.000 lượt tìm kiếm mỗi tháng vào các trang trung gian tải APK ngoài, tăng nguy cơ rủi ro bảo mật thương hiệu.", font_size=9.5, color=COLOR_TEXT_MAIN)
 
     # =========================================================================
     # SLIDE 4: Overall Performance & Non-Paid vs Paid [R] (Original Slide 14)
