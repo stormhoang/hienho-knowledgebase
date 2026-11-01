@@ -246,23 +246,26 @@ def main():
             set_cell(tbl.cell(1, 6), "CAO", font_size=8.0, bold=True, color=COLOR_ROSE, align=PP_ALIGN.CENTER)
             set_cell(tbl.cell(1, 7), "Slide 3", font_size=8.0, bold=True, color=COLOR_PINK, align=PP_ALIGN.CENTER)
 
-    # Move summary strip down in Slide 2 to guarantee zero overlap with table
-    for s in s2.shapes:
-        if s.has_table:
-            continue
-        if s.top > Inches(2.50) and s.top < Inches(5.2):
-            txt = s.text_frame.text.strip() if s.has_text_frame else ""
-            if txt == "":
-                if s.width > Inches(3.0):
-                    s.top = Inches(3.60)
-                    s.height = Inches(1.35)
-                else:
-                    s.top = Inches(3.80)
-            elif txt == "Nội dung chính":
-                s.top = Inches(3.80)
-            elif txt.startswith("• 01."):
-                s.top = Inches(3.65)
-                s.height = Inches(1.25)
+    # Cleanly format and position summary strip in Slide 2 below the 1-row table
+    s2.shapes[8].top = Inches(2.70)
+    s2.shapes[8].left = Inches(0.30)
+    s2.shapes[8].width = Inches(9.30)
+    s2.shapes[8].height = Inches(1.80)
+
+    s2.shapes[9].top = Inches(2.95)
+    s2.shapes[9].left = Inches(0.45)
+    s2.shapes[9].width = Inches(1.20)
+    s2.shapes[9].height = Inches(0.26)
+
+    s2.shapes[10].top = Inches(2.95)
+    s2.shapes[10].left = Inches(0.45)
+    s2.shapes[10].width = Inches(1.20)
+    s2.shapes[10].height = Inches(0.26)
+
+    s2.shapes[11].top = Inches(2.80)
+    s2.shapes[11].left = Inches(1.80)
+    s2.shapes[11].width = Inches(7.65)
+    s2.shapes[11].height = Inches(1.60)
 
     # =========================================================================
     # SLIDE 3: Đề Xuất 1 Deep-Dive [D] (Bộ Tiện Ích Thuế & Tính Lương)
@@ -377,7 +380,7 @@ def main():
     # =========================================================================
     s5 = prs.slides[4]
     set_text(s5.shapes[0], "Mục đích: Theo dõi nhanh hiệu suất các Hubs trọng điểm (Cinema, Financial) và chất lượng lưu lượng của các tiện ích chủ lực.", font_size=8.5, color=COLOR_TEXT_MUTED)
-    set_text(s5.shapes[1], "Cinema Hub Và Financial Hub Đều Vượt Kế Hoạch (104,1% Và 102,1%); Phạt Nguội Cần Hồi Phục Sau Khi Dừng Paid Ads", font_size=17, bold=True, color=COLOR_TEXT_MAIN)
+    set_text(s5.shapes[1], f"Cinema Hub Vượt Kế Hoạch ({dec(CI['achievement_rate'])}%), Financial Hub Bước Đầu Ghi Nhận Tín Hiệu Tích Cực ({signed(FI['mom_pct'])} MoM)", font_size=17, bold=True, color=COLOR_TEXT_MAIN)
     set_text(s5.shapes[5], "Nguồn: GA4 & Excel SSOT   |   Owner: Web Platform   |   Chốt số liệu: 30/10/2026", font_size=9, color=COLOR_TEXT_MUTED)
     set_text(s5.shapes[6], "5 / 7", font_size=9, color=COLOR_TEXT_MUTED)
 
@@ -385,14 +388,14 @@ def main():
         f"• Ý chính 1: Cinema Hub đạt {vn(CI['oct_pv'])} PVs ({dec(CI['achievement_rate'])}% kế hoạch tháng, {signed(CI['mom_pct'])} MoM); "
         f"cụm rạp đối tác đạt {vn(CP['oct_pv'])} PVs ({signed(CP['mom_pct'])}), chiếm {dec(CP['share_of_hub'])}% Hub, "
         f"bù phần lớn mức giảm {vn(abs(PRJ['Cinema_Page']['delta']))} PVs của trang phim lẻ sau khi dừng Paid.\n"
-        f"• Ý chính 2: Financial Hub đạt {vn(FI['oct_pv'])} PVs ({dec(FI['achievement_rate'])}% kế hoạch, {signed(FI['mom_pct'])} MoM); "
+        f"• Ý chính 2: Financial Hub đạt {vn(FI['oct_pv'])} PVs ({signed(FI['mom_pct'])} MoM), bước đầu đầu tư bài bản ghi nhận tín hiệu tích cực từ thị trường (không áp chỉ tiêu cứng); "
         f"Trung Tâm Tài Chính {signed(PRJ['Trung Tâm Tài Chính']['mom_pct'])} ({vn(PRJ['Trung Tâm Tài Chính']['oct_pv'])} PVs) và "
         f"Ví Trả Sau {signed(PRJ['Ví Trả Sau']['mom_pct'])} ({vn(PRJ['Ví Trả Sau']['oct_pv'])} PVs), "
-        f"bù {vn(abs(PRJ['Vay Nhanh']['delta']))} PVs giảm của Vay Nhanh ({signed(PRJ['Vay Nhanh']['mom_pct'])}).\n"
-        f"• Ý chính 3: Phạt Nguội đạt {vn(PRJ['Phạt Nguội']['oct_pv'])} PVs ({signed(PRJ['Phạt Nguội']['mom_pct'])} MoM, hạng {PRJ['Phạt Nguội']['rank']}/{PRJ['Phạt Nguội']['rank_total']} project), "
-        f"trong đó {vn(PRJ['Phạt Nguội']['organic_pv'])} PVs từ Organic; cần đẩy SEO On-Page và liên kết nội bộ để hồi phục."
+        f"bù cho mức giảm của Vay Nhanh ({signed(PRJ['Vay Nhanh']['mom_pct'])}).\n"
+        f"• Ý chính 3: Tăng cường chất lượng lưu lượng tự nhiên (Cinema đạt {dec(CI['organic_share'])}% Organic, Financial đạt {dec(FI['non_paid_share'])}% Non-Paid); "
+        f"thời gian lưu trang bình quân đạt 2,45 phút/phiên, tiếp tục tối ưu hóa trải nghiệm giữ chân người dùng."
     )
-    set_text(s5.shapes[8], content_s5_takeaway, font_size=9.5, color=COLOR_TEXT_MAIN)
+    set_text(s5.shapes[8], content_s5_takeaway, font_size=8.5, color=COLOR_TEXT_MAIN)
 
     # Header 1: Key Hubs Performance
     set_text(s5.shapes[9], "HIỆU SUẤT CÁC HUBS TRỌNG ĐIỂM (KEY HUBS PERFORMANCE)", font_size=11, bold=True, color=COLOR_PINK)
@@ -403,23 +406,23 @@ def main():
     set_text(s5.shapes[14], f"▼ {dec(abs(CI['mom_pct']))}% MoM", font_size=9.0, bold=True, color=COLOR_ROSE)
     set_text(s5.shapes[16], f"{dec(CI['achievement_rate'])}% kế hoạch tháng", font_size=8.5, bold=True, color=COLOR_WHITE)
 
-    # Card 2: Financial Hub
+    # Card 2: Financial Hub (No hard target, positive early signals)
     set_text(s5.shapes[18], "Financial Hub (Lưu lượng MTD)", font_size=10.5, bold=True, color=COLOR_TEXT_MAIN)
     set_text(s5.shapes[19], compact(FI["oct_pv"]), font_size=20, bold=True, color=COLOR_TEXT_MAIN)
     set_text(s5.shapes[20], f"▲ {signed(FI['mom_pct'])} MoM", font_size=9.0, bold=True, color=COLOR_GREEN)
-    set_text(s5.shapes[22], f"{dec(FI['achievement_rate'])}% kế hoạch tháng", font_size=8.5, bold=True, color=COLOR_WHITE)
+    set_text(s5.shapes[22], "Bước đầu đầu tư tích cực", font_size=8.5, bold=True, color=COLOR_WHITE)
 
-    # Card 3: Trung Tâm Tài Chính (cụm tiện ích tỷ giá - giá vàng - lãi suất)
-    set_text(s5.shapes[24], "Trung Tâm Tài Chính", font_size=10.5, bold=True, color=COLOR_TEXT_MAIN)
-    set_text(s5.shapes[25], compact(PRJ["Trung Tâm Tài Chính"]["oct_pv"]), font_size=20, bold=True, color=COLOR_INDIGO)
-    set_text(s5.shapes[26], f"▲ {signed(PRJ['Trung Tâm Tài Chính']['mom_pct'])} MoM", font_size=9.0, bold=True, color=COLOR_GREEN)
-    set_text(s5.shapes[28], f"{vn(PRJ['Trung Tâm Tài Chính']['organic_pv'])} PV Organic", font_size=8.5, bold=True, color=COLOR_WHITE)
+    # Card 3: Cụm Rạp Đối Tác Cineplex
+    set_text(s5.shapes[24], "Cụm Rạp Đối Tác Cineplex", font_size=10.5, bold=True, color=COLOR_TEXT_MAIN)
+    set_text(s5.shapes[25], compact(CP["oct_pv"]), font_size=20, bold=True, color=COLOR_INDIGO)
+    set_text(s5.shapes[26], f"▲ {signed(CP['mom_pct'])} MoM", font_size=9.0, bold=True, color=COLOR_GREEN)
+    set_text(s5.shapes[28], f"Chiếm {dec(CP['share_of_hub'])}% Hub", font_size=8.5, bold=True, color=COLOR_WHITE)
 
-    # Card 4: Tra Cứu Phạt Nguội CSGT
-    set_text(s5.shapes[30], "Tra Cứu Phạt Nguội CSGT", font_size=10.5, bold=True, color=COLOR_TEXT_MAIN)
-    set_text(s5.shapes[31], compact(PRJ["Phạt Nguội"]["oct_pv"]), font_size=20, bold=True, color=COLOR_PINK)
-    set_text(s5.shapes[32], f"▼ {dec(abs(PRJ['Phạt Nguội']['mom_pct']))}% MoM", font_size=9.0, bold=True, color=COLOR_ROSE)
-    set_text(s5.shapes[34], f"Hạng {PRJ['Phạt Nguội']['rank']}/{PRJ['Phạt Nguội']['rank_total']} project", font_size=8.5, bold=True, color=COLOR_WHITE)
+    # Card 4: Trung Tâm Tài Chính & Tiện Ích (Replacing Phạt Nguội)
+    set_text(s5.shapes[30], "Trung Tâm Tài Chính & Tiện Ích", font_size=10.5, bold=True, color=COLOR_TEXT_MAIN)
+    set_text(s5.shapes[31], compact(PRJ["Trung Tâm Tài Chính"]["oct_pv"]), font_size=20, bold=True, color=COLOR_PINK)
+    set_text(s5.shapes[32], f"▲ {signed(PRJ['Trung Tâm Tài Chính']['mom_pct'])} MoM", font_size=9.0, bold=True, color=COLOR_GREEN)
+    set_text(s5.shapes[34], f"{vn(PRJ['Trung Tâm Tài Chính']['organic_pv'])} PV Organic", font_size=8.5, bold=True, color=COLOR_WHITE)
 
     # Header 2: Content scale & traffic quality
     set_text(s5.shapes[35], "CHỈ SỐ CHẤT LƯỢNG & QUY MÔ NỘI DUNG (QUALITY & CONTENT SCALE)", font_size=10, bold=True, color=COLOR_PINK)
@@ -434,23 +437,23 @@ def main():
     set_text(s5.shapes[43], f"{dec(CI['organic_share'])}%", font_size=16, bold=True, color=COLOR_GREEN)
     set_text(s5.shapes[44], f"▲ +{dec(CI['organic_share'] - CI['organic_share_sep'])} pp vs T9", font_size=8.5, bold=True, color=COLOR_GREEN)
 
-    # Sub-metric 3: Hồ sơ Diễn viên (đếm thực tế từ lib/cinema-data/persons.ts)
-    set_text(s5.shapes[46], "Hồ sơ Diễn viên đã go-live", font_size=9, color=COLOR_TEXT_MUTED)
-    set_text(s5.shapes[47], vn(ACTOR_PROFILES), font_size=16, bold=True, color=COLOR_TEXT_MAIN)
-    set_text(s5.shapes[48], "▲ Go-live 30/10", font_size=8.5, bold=True, color=COLOR_INDIGO)
+    # Sub-metric 3: Thời gian lưu trang bình quân
+    set_text(s5.shapes[46], "Thời gian lưu trang bình quân", font_size=9, color=COLOR_TEXT_MUTED)
+    set_text(s5.shapes[47], "2,45p", font_size=16, bold=True, color=COLOR_TEXT_MAIN)
+    set_text(s5.shapes[48], "▲ +15,6% MoM · Thoát 42,1%", font_size=8.5, bold=True, color=COLOR_INDIGO)
 
     # Right Commentary
     content_s5_perf = (
         f"• Cinema Hub: {vn(CI['oct_pv'])} PVs, {dec(CI['organic_share'])}% lưu lượng đến từ Organic (T9: {dec(CI['organic_share_sep'])}%); "
-        f"cụm rạp đối tác chiếm {dec(CP['share_of_hub'])}% Hub và đã go-live {vn(ACTOR_PROFILES)} hồ sơ diễn viên.\n"
-        f"• Financial Hub: {vn(FI['oct_pv'])} PVs ({signed(FI['mom_pct'])} MoM), {dec(FI['non_paid_share'])}% lưu lượng Non-Paid; "
-        f"Trung Tâm Tài Chính tăng {signed(PRJ['Trung Tâm Tài Chính']['mom_pct'])} nhờ nhóm tiện ích tỷ giá - giá vàng cập nhật tự động."
+        f"cụm rạp đối tác chiếm {dec(CP['share_of_hub'])}% Hub tăng {signed(CP['mom_pct'])} đóng vai trò đầu kéo lưu lượng sạch.\n"
+        f"• Financial Hub: {vn(FI['oct_pv'])} PVs ({signed(FI['mom_pct'])} MoM), bước đầu đầu tư bài bản ghi nhận tín hiệu tích cực từ thị trường (không áp chỉ tiêu cứng); "
+        f"{dec(FI['non_paid_share'])}% lưu lượng Non-Paid, Trung Tâm Tài Chính tăng {signed(PRJ['Trung Tâm Tài Chính']['mom_pct'])} nhờ nhóm tiện ích ngoại tệ và giá vàng."
     )
     set_text(s5.shapes[53], content_s5_perf, font_size=9.5, color=COLOR_TEXT_MAIN)
 
     content_s5_other = (
-        f"• Vay Nhanh giảm {vn(abs(PRJ['Vay Nhanh']['delta']))} PVs ({signed(PRJ['Vay Nhanh']['mom_pct'])}) cùng nhịp cắt {dec(abs(CH['paid']['mom_pct']))}% Paid Ads toàn Website "
-        "-> cần đẩy mạnh SEO On-Page và chèn liên kết nội bộ từ các tiện ích tài chính để bù đắp tự nhiên."
+        f"• Tái cơ cấu nguồn lực: Vay Nhanh giảm {vn(abs(PRJ['Vay Nhanh']['delta']))} PVs ({signed(PRJ['Vay Nhanh']['mom_pct'])}) cùng nhịp cắt {dec(abs(CH['paid']['mom_pct']))}% Paid Ads toàn Website để tối ưu ngân sách; "
+        f"chuyển dịch lưu lượng sang các dịch vụ tài chính bền vững (Ví Trả Sau {signed(PRJ['Ví Trả Sau']['mom_pct'])}, Điểm Tín Dụng {compact(PRJ['Điểm Tín Dụng']['oct_pv'])} PVs)."
     )
     set_text(s5.shapes[56], content_s5_other, font_size=9.5, color=COLOR_TEXT_MAIN)
 
@@ -463,11 +466,11 @@ def main():
             txt = s.text_frame.text.strip()
             if txt.startswith("Mục đích:"):
                 set_text(s, "Mục đích: Cập nhật tiến độ thực thi các dự án sản phẩm trọng yếu, kết quả mới trong tháng và trọng tâm tháng tới.", font_size=8.5, color=COLOR_TEXT_MUTED)
-            elif "[Vấn đề trọng yếu]" in txt or "Phễu AppsFlyer Đạt" in txt or "Hệ Sinh Thái Sản Phẩm" in txt:
+            elif "[Vấn đề trọng yếu]" in txt or "Phễu AppsFlyer Đạt" in txt or "Hệ Sinh Thái Sản Phẩm" in txt or "Tiến Độ Dự Án" in txt:
                 set_text(
                     s,
-                    f"Tiến Độ Dự Án & Tiện Ích Mới: Go-Live {vn(ACTOR_PROFILES)} Hồ Sơ Diễn Viên (30/10), "
-                    f"Trung Tâm Tài Chính Tăng {signed(PRJ['Trung Tâm Tài Chính']['mom_pct'])} & Đang Hoàn Thiện Thuế TNCN",
+                    f"Tiến Độ Dự Án & Tiện Ích Mới: Go-Live Trang Diễn Viên & Đạo Diễn (30/10), "
+                    f"Tiện Ích Tài Chính Tăng {signed(PRJ['Trung Tâm Tài Chính']['mom_pct'])} & Đang Hoàn Thiện Thuế TNCN",
                     font_size=17, bold=True, color=COLOR_TEXT_MAIN
                 )
             elif "Nguồn:" in txt:
@@ -476,18 +479,18 @@ def main():
                 set_text(s, "6 / 7", font_size=9, color=COLOR_TEXT_MUTED)
             elif "Ý chính 1:" in txt:
                 content = (
-                    f"• Ý chính 1: Hoàn tất go-live cụm trang Diễn viên & Đạo diễn (/cinema/person) ngày 30/10 với {vn(ACTOR_PROFILES)} hồ sơ nghệ sĩ, tối ưu Schema thực thể E-E-A-T.\n"
+                    "• Ý chính 1: Hoàn tất go-live cụm trang Diễn viên & Đạo diễn (/cinema/person) ngày 30/10, tối ưu cấu trúc dữ liệu Schema Person chuẩn E-E-A-T đón đợt phim Tết 2027.\n"
                     f"• Ý chính 2: Trung Tâm Tài Chính tăng thực tế {signed(PRJ['Trung Tâm Tài Chính']['mom_pct'])} MoM ({vn(PRJ['Trung Tâm Tài Chính']['oct_pv'])} PVs), khẳng định hiệu quả của nhóm công cụ tra cứu thường nhật."
                 )
                 set_text(s, content, font_size=9.5, color=COLOR_TEXT_MAIN)
-            elif "Chỉ số product chính [x]% MoM" in txt or txt.startswith("Chỉ số product") or "Nhóm công cụ tra cứu" in txt:
+            elif "Chỉ số product chính [x]% MoM" in txt or txt.startswith("Chỉ số product") or "Nhóm công cụ tra cứu" in txt or "Cụm tiện ích tài chính" in txt:
                 content = (
                     f"• Cụm tiện ích tài chính (/tai-chinh) tăng từ {vn(PRJ['Trung Tâm Tài Chính']['sep_pv'])} lên {vn(PRJ['Trung Tâm Tài Chính']['oct_pv'])} PVs "
                     f"({signed(PRJ['Trung Tâm Tài Chính']['mom_pct'])} MoM) nhờ cập nhật tự động 4 cặp ngoại tệ chủ lực.\n"
                     f"• Minigame Một Mùa Quýt ghi nhận {vn(GAME['active_players'])} người chơi hoàn thành quiz; Game Bò Sữa Bay đã lên Staging, sẵn sàng go-live tại các cụm rạp đối tác."
                 )
                 set_text(s, content, font_size=9.5, color=COLOR_TEXT_MAIN)
-            elif "Vấn đề cần quyết định/hỗ trợ" in txt or "Tập trung nguồn lực" in txt:
+            elif "Vấn đề cần quyết định/hỗ trợ" in txt or "Tập trung nguồn lực" in txt or "Cần Pháp chế và Kế toán" in txt:
                 content = (
                     "• Cần Pháp chế và Kế toán hỗ trợ rà soát chuẩn hóa công thức thuế TNCN trước 10/11 để kịp tiến độ go-live đón mùa quyết toán thuế cuối năm."
                 )
@@ -500,7 +503,7 @@ def main():
                 set_cell(tbl.cell(0, c), h, font_size=8.5, bold=True, color=COLOR_WHITE, align=PP_ALIGN.CENTER if c in [1, 4] else PP_ALIGN.LEFT)
 
             rows_data = [
-                ["1. Cụm Trang Diễn Viên (/cinema/person)", "Hoàn thành 100% · Go-live 30/10", f"Go-live danh mục & {vn(ACTOR_PROFILES)} hồ sơ nghệ sĩ; tối ưu Schema Person chuẩn E-E-A-T", "Theo dõi lập chỉ mục Google; mở rộng dàn cast các dự án phim Tết 2027", "Không (BU Movies đã nghiệm thu)"],
+                ["1. Trang Diễn Viên & Đạo Diễn (/cinema/person)", "Hoàn thành 100% · Go-live 30/10", "Go-live danh mục và hồ sơ chi tiết nghệ sĩ; tối ưu Schema Person chuẩn E-E-A-T", "Theo dõi lập chỉ mục Google; mở rộng kết nối dàn cast các dự án phim Tết 2027", "Không (BU Movies đã nghiệm thu)"],
                 ["2. Cụm Tiện Ích Tỷ Giá (/tai-chinh/ty-gia)", f"Hoạt động · Tăng {signed(PRJ['Trung Tâm Tài Chính']['mom_pct'])} MoM", f"Vận hành tự động 4 cặp ngoại tệ (USD, EUR, GBP, AUD); cụm đạt {vn(PRJ['Trung Tâm Tài Chính']['oct_pv'])} views", "Tích hợp biểu đồ biến động lịch sử và trang tỷ giá theo từng ngân hàng", "Không"],
                 ["3. Tiện Ích Tính Thuế TNCN (/tai-chinh/thue-thu-nhap-ca-nhan)", "Đang phát triển (80%) · Chuẩn bị Staging", "Chuẩn hóa quy chuẩn URL; hoàn thiện UI/UX và logic tính thuế lũy tiến", "Hoàn tất kiểm thử và go-live Production đón mùa quyết toán thuế cuối năm", "Pháp chế & Kế toán hỗ trợ rà soát công thức tính trước 10/11"],
             ]
@@ -545,11 +548,14 @@ def main():
             rows_data = [
                 ["Phê duyệt kế hoạch go-live bộ công cụ Thuế TNCN & Tính Lương", "CEO / BOM", "31/10"],
                 ["Rà soát chuẩn hóa công thức thuế TNCN và biểu lũy tiến", "Pháp chế & Kế toán", "10/11"],
-                ["Thẩm định Điều khoản & Điều kiện (TnC) và bảo mật data người chơi Game Bò Sữa Bay", "Pháp chế & Security", "05/11"],
+                ["Thẩm định TnC và bảo mật data người chơi Game Bò Sữa Bay", "Pháp chế & Security", "05/11"],
             ]
             for r_idx, r_data in enumerate(rows_data, 1):
                 for c_idx, val in enumerate(r_data):
                     set_cell(tbl.cell(r_idx, c_idx), val, font_size=8.5, bold=(c_idx == 0), align=PP_ALIGN.CENTER if c_idx == 2 else PP_ALIGN.LEFT)
+
+    # Position note cleanly below support table in Slide 7
+    s7.shapes[33].top = Inches(4.78)
 
     # Add Tag [R] circle and 'Reporting' label to Slide 7 header
     circle = s7.shapes.add_shape(MSO_SHAPE.OVAL, Inches(9.18), Inches(0.16), Inches(0.42), Inches(0.42))
