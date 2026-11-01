@@ -261,19 +261,35 @@ def main():
     
     parser = argparse.ArgumentParser(description="Sync GA4 MTD All-In-One")
     parser.add_argument("--mtd", type=int, default=None, help="Số ngày MTD (mặc định: ngày hôm qua)")
+    parser.add_argument("--month", type=str, default=None, help="Tháng sync (YYYY-MM), mặc định tự phát hiện")
     parser.add_argument("--no-push", action="store_true", help="Không tự động push sang Hubs GitHub")
     args = parser.parse_args()
 
-    # Xác định số ngày MTD
+    # Xác định tháng và số ngày MTD
     now = datetime.now()
+    if args.month:
+        month_str = args.month
+        year_val, month_val = map(int, month_str.split("-"))
+    else:
+        # Nếu hôm nay là ngày 1 đầu tháng, hoặc mtd=31 khi now.day == 1, mặc định sync tháng trước
+        if now.day == 1 or (args.mtd and args.mtd >= 28 and now.day < 5):
+            prev_month = now - timedelta(days=1)
+            month_str = f"{prev_month.year}-{prev_month.month:02d}"
+            year_val, month_val = prev_month.year, prev_month.month
+        else:
+            month_str = f"{now.year}-{now.month:02d}"
+            year_val, month_val = now.year, now.month
+
+    import calendar
+    _, days_in_month = calendar.monthrange(year_val, month_val)
+
     if args.mtd:
         days_elapsed = args.mtd
     else:
         yesterday = now - timedelta(days=1)
         days_elapsed = yesterday.day
 
-    days_in_month = 31
-    month_str = f"{now.year}-{now.month:02d}"
+    days_elapsed = min(days_elapsed, days_in_month)
     start_date = f"{month_str}-01"
     end_date = f"{month_str}-{days_elapsed:02d}"
 

@@ -25,12 +25,20 @@ Strict MoMo executive rules:
 - STRICT table formatting: explicit column widths, tight margins, zero overlapping shapes!
 """
 
+import json
 import os
+from pathlib import Path
+
 from pptx import Presentation
 from pptx.util import Inches, Pt
 from pptx.dml.color import RGBColor
 from pptx.enum.text import PP_ALIGN
 from pptx.enum.shapes import MSO_SHAPE
+
+BASE_DIR = Path(__file__).resolve().parents[1]
+HUBS_DIR = Path("/Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo")
+FACTS_PATH = BASE_DIR / "07_REPORTS" / "data" / "october_2026_facts.json"
+PERSONS_TS = HUBS_DIR / "lib" / "cinema-data" / "persons.ts"
 
 TEMPLATE_PATH = "/Users/hienhv/Downloads/MoMo Reporting Guidelines & Templates.pptx .pptx"
 OUT_PATHS = [
@@ -47,6 +55,48 @@ COLOR_ROSE = RGBColor(0xB9, 0x1C, 0x1C)
 COLOR_PINK = RGBColor(0xD8, 0x2D, 0x8B)
 COLOR_INDIGO = RGBColor(0x4F, 0x46, 0xE5)
 COLOR_WHITE = RGBColor(0xFF, 0xFF, 0xFF)
+
+# =============================================================================
+# SỐ LIỆU SSOT: mọi con số trên deck đọc từ 07_REPORTS/data/october_2026_facts.json
+# (sinh bởi scripts/build_october_facts.py từ GA4 Data API + Excel SSOT)
+# =============================================================================
+FACTS = json.loads(FACTS_PATH.read_text(encoding="utf-8"))
+T = FACTS["total"]
+CH = FACTS["channels"]
+CI = FACTS["hubs"]["cinema"]
+FI = FACTS["hubs"]["financial"]
+CP = CI["cineplex"]
+PRJ = FACTS["projects"]
+GEO = FACTS["geo_ai"]
+GAME = FACTS["minigame_mot_mua_quyt"]
+ACTOR_PROFILES = (
+    PERSONS_TS.read_text(encoding="utf-8").count('"slug":') if PERSONS_TS.exists() else 631
+)
+PAID_CUT = CH["paid"]["oct"] - CH["paid"]["sep"]
+
+
+def vn(x):
+    """1234567 -> '1.234.567'"""
+    return f"{int(round(x)):,}".replace(",", ".")
+
+
+def dec(x, digits=1):
+    """10.3 -> '10,3'"""
+    return f"{x:.{digits}f}".replace(".", ",")
+
+
+def signed(x, unit="%"):
+    """10.3 -> '+10,3%'"""
+    return f"{x:+.{1}f}{unit}".replace(".", ",")
+
+
+def compact(x):
+    """1163517 -> '1,16M' ; 255196 -> '255,2K'"""
+    if abs(x) >= 1_000_000:
+        return dec(x / 1_000_000, 2) + "M"
+    if abs(x) >= 1_000:
+        return dec(x / 1_000, 1) + "K"
+    return vn(x)
 
 def delete_slide(prs, index):
     rId = prs.slides._sldIdLst[index].rId
@@ -226,8 +276,8 @@ def main():
 
     # Problem Statement, Bối cảnh, Tác động
     set_text(s3.shapes[10], "Nhu cầu tìm kiếm về quyết toán thuế TNCN và tính lương thưởng Tết tăng mạnh từ T11 đến T1 (>1.2M search/tháng). Web Platform cần bộ công cụ tự động chuẩn xác để giữ chân người dùng và tạo lưu lượng tự nhiên chất lượng cao.", font_size=8.5, color=COLOR_TEXT_MAIN)
-    set_text(s3.shapes[14], "Kỹ thuật đã hoàn thành Staging cho bộ đôi công cụ Tính Thuế TNCN & Lương Gross-Net theo biểu thuế lũy tiến và giảm trừ gia cảnh mới nhất. Tiện ích dự kiến thu hút 300K - 500K PVs/tháng, nâng thời gian lưu trang lên >2.5 phút.", font_size=8.5, color=COLOR_TEXT_MAIN)
-    set_text(s3.shapes[18], "Hiệu quả kinh tế & ROI (cho CEO):\n• Thu hút 300K - 500K PVs tự nhiên/tháng; tăng tương tác onsite gấp 3 lần.\n• Quy đổi Media Value: Tiết kiệm ~120 - 200 Triệu VNĐ/tháng ngân sách Ads.\n• Chi phí phát sinh: 0 VNĐ (tận dụng 100% hạ tầng server hiện hữu).", font_size=8.0, color=COLOR_TEXT_MAIN)
+    set_text(s3.shapes[14], "Kỹ thuật đã hoàn thành Staging cho bộ đôi công cụ Tính Thuế TNCN & Lương Gross-Net theo biểu thuế lũy tiến và giảm trừ gia cảnh mới nhất. Tiện ích dự kiến thu hút 300K - 500K PVs/tháng và kéo dài thời gian tương tác onsite so với bài viết tĩnh.", font_size=8.5, color=COLOR_TEXT_MAIN)
+    set_text(s3.shapes[18], "Hiệu quả kinh tế & ROI (cho CEO):\n• Dự kiến thu hút 300K - 500K PVs tự nhiên/tháng; tăng tương tác onsite so với nội dung tĩnh.\n• Quy đổi Media Value: Tiết kiệm ~120 - 200 Triệu VNĐ/tháng ngân sách Ads.\n• Chi phí phát sinh: 0 VNĐ (tận dụng 100% hạ tầng server hiện hữu).", font_size=8.0, color=COLOR_TEXT_MAIN)
 
     # Table
     tbl = s3.shapes[20].table
@@ -260,16 +310,24 @@ def main():
             if txt.startswith("Mục đích:"):
                 set_text(s, "Mục đích: Báo cáo kết quả lưu lượng tháng 10, chứng minh kênh tự nhiên (Non-Paid) tăng trưởng tự bù đắp phần Paid Ads cắt giảm.", font_size=8.5, color=COLOR_TEXT_MUTED)
             elif "Doanh thu [±x]% MoM" in txt or "Kênh Tự Nhiên Đạt" in txt or "Kênh Tự Nhiên Vượt" in txt:
-                set_text(s, "Kênh Tự Nhiên Vượt Mốc 3.04M Lượt Xem (+14.0% MoM), Tự Bù Đắp 725K Ads Cắt Giảm Và Đạt 98.6% Dự Báo", font_size=17, bold=True, color=COLOR_TEXT_MAIN)
+                set_text(
+                    s,
+                    f"Kênh Tự Nhiên Đạt {vn(CH['non_paid']['oct'])} Lượt Xem ({signed(CH['non_paid']['mom_pct'])} MoM), "
+                    f"Tự Bù {vn(abs(PAID_CUT))} Ads Cắt Giảm; Tổng Đạt {dec(T['forecast_rate'])}% Dự Báo Kết Tháng",
+                    font_size=17, bold=True, color=COLOR_TEXT_MAIN
+                )
             elif "Nguồn:" in txt:
                 set_text(s, "Nguồn: GA4 (Property 270743103)   |   Owner: Web Platform   |   Chốt số liệu: 30/10/2026", font_size=9, color=COLOR_TEXT_MUTED)
             elif txt in ["6", "4 / 7", "5 / 8"]:
                 set_text(s, "4 / 7", font_size=9, color=COLOR_TEXT_MUTED)
             elif "MAU [x]M" in txt or "Kênh tự nhiên (Non-Paid) tăng trưởng" in txt or "Kênh tự nhiên (Non-Paid) chính thức" in txt:
                 content = (
-                    "• Kênh tự nhiên (Non-Paid) chính thức vượt mốc 3 triệu PVs (+14.0% MoM, đạt 3.04M views), chiếm 87.0% toàn Web (tháng 9: 69.7%).\n"
-                    "• Việc chủ động giảm 60.6% Paid Ads (-725K views) giúp tiết kiệm dòng tiền mà tổng lượt xem đạt 95.4% kế hoạch MTD (3.50M MTD, forecast 3.61M - 98.6% Target).\n"
-                    "• Lượt truy cập trực tiếp (Direct) đạt 907.813 PVs (+20.1% MoM), phản ánh sức mạnh thương hiệu và thói quen quay lại tự nhiên của người dùng."
+                    f"• Kênh tự nhiên (Non-Paid) đạt {vn(CH['non_paid']['oct'])} PVs ({signed(CH['non_paid']['mom_pct'])} MoM), "
+                    f"chiếm {dec(CH['non_paid']['oct'] / T['oct_pv'] * 100, 2)}% toàn Website (tháng 9: 69,70%).\n"
+                    f"• Chủ động giảm {dec(abs(CH['paid']['mom_pct']))}% Paid Ads (-{vn(abs(PAID_CUT))} PVs) để cắt dòng vốn kém hiệu quả; "
+                    f"tổng lượt xem đạt {dec(T['achievement_rate'])}% kế hoạch MTD ({vn(T['oct_pv'])} PVs, forecast {vn(T['forecast'])} - {dec(T['forecast_rate'])}% Target).\n"
+                    f"• Lượt truy cập trực tiếp (Direct) đạt {vn(CH['direct']['oct'])} PVs ({signed(CH['direct']['mom_pct'])} MoM), "
+                    "phản ánh sức mạnh thương hiệu và thói quen quay lại tự nhiên của người dùng."
                 )
                 set_text(s, content, font_size=9.5, color=COLOR_TEXT_MAIN)
             elif "[Use case] thấp hơn Target" in txt or "Rủi ro: Lưu lượng phụ thuộc" in txt:
@@ -304,11 +362,11 @@ def main():
                 set_cell(tbl.cell(0, c), h, font_size=8.5, bold=True, color=COLOR_WHITE, align=PP_ALIGN.CENTER if c > 0 else PP_ALIGN.LEFT)
 
             rows_data = [
-                ["Tổng lượt xem (PVs)", "3.952.859", "3.496.864", "-8.6%", "3.665.607", "95.4%", "Đạt 98.6% FC"],
-                ["• Kênh tự nhiên (Non-Paid)", "2.755.766", "3.040.526", "+14.0%", "2.900.000", "104.8%", "Vượt mốc 3M"],
-                ["• Quảng cáo trả phí (Paid)", "1.197.093", "456.338", "-60.6%", "765.000", "59.6%", "Chủ động giảm"],
-                ["• Lượt truy cập trực tiếp (Direct)", "755.896", "907.813", "+20.1%", "850.000", "106.8%", "Tăng trưởng mạnh"],
-                ["• Lưu lượng AI Search (GEO)", "33.661", "40.827", "+25.6%", "38.000", "107.4%", "Trích dẫn AI cao"],
+                ["Tổng lượt xem (PVs)", vn(T['sep_pv']), vn(T['oct_pv']), signed(T['mom_pct']), vn(T['target']), f"{dec(T['achievement_rate'])}%", f"Dự báo {dec(T['forecast_rate'])}%"],
+                ["• Kênh tự nhiên (Non-Paid)", vn(CH['non_paid']['sep']), vn(CH['non_paid']['oct']), signed(CH['non_paid']['mom_pct']), "—", "—", "Vượt mốc 3M"],
+                ["• Quảng cáo trả phí (Paid)", vn(CH['paid']['sep']), vn(CH['paid']['oct']), signed(CH['paid']['mom_pct']), "—", "—", "Chủ động cắt"],
+                ["• Lượt truy cập trực tiếp (Direct)", vn(CH['direct']['sep']), vn(CH['direct']['oct']), signed(CH['direct']['mom_pct']), "—", "—", "Tăng trưởng mạnh"],
+                ["• Lưu lượng AI Search (GEO)", vn(GEO['sep']), vn(GEO['oct']), signed(GEO['mom_pct']), "—", "—", "Ước tính, cần chuẩn hóa"],
             ]
             for r_idx, r_data in enumerate(rows_data, 1):
                 for c_idx, val in enumerate(r_data):
@@ -318,15 +376,21 @@ def main():
     # SLIDE 5: Hubs & Category Breakdown [R] (Original Slide 15 - Fixed Format)
     # =========================================================================
     s5 = prs.slides[4]
-    set_text(s5.shapes[0], "Mục đích: Theo dõi nhanh hiệu suất các Hubs trọng điểm (Cinema, Financial) và các chỉ số tương tác chất lượng trang.", font_size=8.5, color=COLOR_TEXT_MUTED)
-    set_text(s5.shapes[1], "Cinema Hub Dẫn Đầu Tăng Trưởng (+142.2% Cụm Rạp); Financial Hub Tăng Trưởng Cụm Tỷ Giá (+444.9% MoM)", font_size=17, bold=True, color=COLOR_TEXT_MAIN)
-    set_text(s5.shapes[5], "Nguồn: GA4 & BigQuery   |   Owner: Web Platform   |   Chốt số liệu: 30/10/2026", font_size=9, color=COLOR_TEXT_MUTED)
+    set_text(s5.shapes[0], "Mục đích: Theo dõi nhanh hiệu suất các Hubs trọng điểm (Cinema, Financial) và chất lượng lưu lượng của các tiện ích chủ lực.", font_size=8.5, color=COLOR_TEXT_MUTED)
+    set_text(s5.shapes[1], "Cinema Hub Và Financial Hub Đều Vượt Kế Hoạch (104,1% Và 102,1%); Phạt Nguội Cần Hồi Phục Sau Khi Dừng Paid Ads", font_size=17, bold=True, color=COLOR_TEXT_MAIN)
+    set_text(s5.shapes[5], "Nguồn: GA4 & Excel SSOT   |   Owner: Web Platform   |   Chốt số liệu: 30/10/2026", font_size=9, color=COLOR_TEXT_MUTED)
     set_text(s5.shapes[6], "5 / 7", font_size=9, color=COLOR_TEXT_MUTED)
 
     content_s5_takeaway = (
-        "• Ý chính 1: Cinema Hub đạt 1.07M views (cụm rạp 795K views +142.2%), ra mắt cụm trang Diễn Viên và Minigame Bò Sữa Bay (85K lượt chơi).\n"
-        "• Ý chính 2: Financial Hub đạt 299.5K views (+25.6%), riêng cụm Tỷ giá tăng +444.9% (34.0K views), bù đắp phần giảm của Vay Nhanh do cắt Ads.\n"
-        "• Ý chính 3: Mở rộng cụm tiện ích tài chính (Thuế TNCN, Lương Gross-Net) chuẩn bị phục vụ cao điểm tra cứu cuối năm."
+        f"• Ý chính 1: Cinema Hub đạt {vn(CI['oct_pv'])} PVs ({dec(CI['achievement_rate'])}% kế hoạch tháng, {signed(CI['mom_pct'])} MoM); "
+        f"cụm rạp đối tác đạt {vn(CP['oct_pv'])} PVs ({signed(CP['mom_pct'])}), chiếm {dec(CP['share_of_hub'])}% Hub, "
+        f"bù phần lớn mức giảm {vn(abs(PRJ['Cinema_Page']['delta']))} PVs của trang phim lẻ sau khi dừng Paid.\n"
+        f"• Ý chính 2: Financial Hub đạt {vn(FI['oct_pv'])} PVs ({dec(FI['achievement_rate'])}% kế hoạch, {signed(FI['mom_pct'])} MoM); "
+        f"Trung Tâm Tài Chính {signed(PRJ['Trung Tâm Tài Chính']['mom_pct'])} ({vn(PRJ['Trung Tâm Tài Chính']['oct_pv'])} PVs) và "
+        f"Ví Trả Sau {signed(PRJ['Ví Trả Sau']['mom_pct'])} ({vn(PRJ['Ví Trả Sau']['oct_pv'])} PVs), "
+        f"bù {vn(abs(PRJ['Vay Nhanh']['delta']))} PVs giảm của Vay Nhanh ({signed(PRJ['Vay Nhanh']['mom_pct'])}).\n"
+        f"• Ý chính 3: Phạt Nguội đạt {vn(PRJ['Phạt Nguội']['oct_pv'])} PVs ({signed(PRJ['Phạt Nguội']['mom_pct'])} MoM, hạng {PRJ['Phạt Nguội']['rank']}/{PRJ['Phạt Nguội']['rank_total']} project), "
+        f"trong đó {vn(PRJ['Phạt Nguội']['organic_pv'])} PVs từ Organic; cần đẩy SEO On-Page và liên kết nội bộ để hồi phục."
     )
     set_text(s5.shapes[8], content_s5_takeaway, font_size=9.5, color=COLOR_TEXT_MAIN)
 
@@ -335,55 +399,58 @@ def main():
 
     # Card 1: Cinema Hub
     set_text(s5.shapes[12], "Cinema Hub (Lưu lượng MTD)", font_size=10.5, bold=True, color=COLOR_TEXT_MAIN)
-    set_text(s5.shapes[13], "1.07M", font_size=20, bold=True, color=COLOR_TEXT_MAIN)
-    set_text(s5.shapes[14], "▲ +31.8% MoM (Rạp: +142%)", font_size=9.0, bold=True, color=COLOR_GREEN)
-    set_text(s5.shapes[16], "Cụm rạp: 795K views", font_size=8.5, bold=True, color=COLOR_WHITE)
+    set_text(s5.shapes[13], compact(CI["oct_pv"]), font_size=20, bold=True, color=COLOR_TEXT_MAIN)
+    set_text(s5.shapes[14], f"▼ {dec(abs(CI['mom_pct']))}% MoM", font_size=9.0, bold=True, color=COLOR_ROSE)
+    set_text(s5.shapes[16], f"{dec(CI['achievement_rate'])}% kế hoạch tháng", font_size=8.5, bold=True, color=COLOR_WHITE)
 
     # Card 2: Financial Hub
     set_text(s5.shapes[18], "Financial Hub (Lưu lượng MTD)", font_size=10.5, bold=True, color=COLOR_TEXT_MAIN)
-    set_text(s5.shapes[19], "299.5K", font_size=20, bold=True, color=COLOR_TEXT_MAIN)
-    set_text(s5.shapes[20], "▲ +25.6% MoM", font_size=9.0, bold=True, color=COLOR_GREEN)
-    set_text(s5.shapes[22], "98.5% Kế hoạch MTD", font_size=8.5, bold=True, color=COLOR_WHITE)
+    set_text(s5.shapes[19], compact(FI["oct_pv"]), font_size=20, bold=True, color=COLOR_TEXT_MAIN)
+    set_text(s5.shapes[20], f"▲ {signed(FI['mom_pct'])} MoM", font_size=9.0, bold=True, color=COLOR_GREEN)
+    set_text(s5.shapes[22], f"{dec(FI['achievement_rate'])}% kế hoạch tháng", font_size=8.5, bold=True, color=COLOR_WHITE)
 
-    # Card 3: Cụm Tỷ Giá Ngoại Tệ
-    set_text(s5.shapes[24], "Cụm Tỷ Giá Ngoại Tệ", font_size=10.5, bold=True, color=COLOR_TEXT_MAIN)
-    set_text(s5.shapes[25], "34.0K", font_size=20, bold=True, color=COLOR_INDIGO)
-    set_text(s5.shapes[26], "▲ +444.9% MoM", font_size=9.0, bold=True, color=COLOR_GREEN)
-    set_text(s5.shapes[28], "100% Kênh tự nhiên", font_size=8.5, bold=True, color=COLOR_WHITE)
+    # Card 3: Trung Tâm Tài Chính (cụm tiện ích tỷ giá - giá vàng - lãi suất)
+    set_text(s5.shapes[24], "Trung Tâm Tài Chính", font_size=10.5, bold=True, color=COLOR_TEXT_MAIN)
+    set_text(s5.shapes[25], compact(PRJ["Trung Tâm Tài Chính"]["oct_pv"]), font_size=20, bold=True, color=COLOR_INDIGO)
+    set_text(s5.shapes[26], f"▲ {signed(PRJ['Trung Tâm Tài Chính']['mom_pct'])} MoM", font_size=9.0, bold=True, color=COLOR_GREEN)
+    set_text(s5.shapes[28], f"{vn(PRJ['Trung Tâm Tài Chính']['organic_pv'])} PV Organic", font_size=8.5, bold=True, color=COLOR_WHITE)
 
     # Card 4: Tra Cứu Phạt Nguội CSGT
     set_text(s5.shapes[30], "Tra Cứu Phạt Nguội CSGT", font_size=10.5, bold=True, color=COLOR_TEXT_MAIN)
-    set_text(s5.shapes[31], "245.0K", font_size=20, bold=True, color=COLOR_PINK)
-    set_text(s5.shapes[32], "▲ Ổn định MoM", font_size=9.0, bold=True, color=COLOR_GREEN)
-    set_text(s5.shapes[34], "Top 1 Tiện ích Web", font_size=8.5, bold=True, color=COLOR_WHITE)
+    set_text(s5.shapes[31], compact(PRJ["Phạt Nguội"]["oct_pv"]), font_size=20, bold=True, color=COLOR_PINK)
+    set_text(s5.shapes[32], f"▼ {dec(abs(PRJ['Phạt Nguội']['mom_pct']))}% MoM", font_size=9.0, bold=True, color=COLOR_ROSE)
+    set_text(s5.shapes[34], f"Hạng {PRJ['Phạt Nguội']['rank']}/{PRJ['Phạt Nguội']['rank_total']} project", font_size=8.5, bold=True, color=COLOR_WHITE)
 
-    # Header 2: Engagement & Quality Metrics
-    set_text(s5.shapes[35], "CHỈ SỐ TƯƠNG TÁC & CHẤT LƯỢNG (ENGAGEMENT & QUALITY)", font_size=10, bold=True, color=COLOR_PINK)
+    # Header 2: Content scale & traffic quality
+    set_text(s5.shapes[35], "CHỈ SỐ CHẤT LƯỢNG & QUY MÔ NỘI DUNG (QUALITY & CONTENT SCALE)", font_size=10, bold=True, color=COLOR_PINK)
 
-    # Sub-metric 1: Thời gian lưu trang
-    set_text(s5.shapes[38], "Thời gian lưu trang", font_size=9, color=COLOR_TEXT_MUTED)
-    set_text(s5.shapes[39], "2.45p", font_size=16, bold=True, color=COLOR_TEXT_MAIN)
-    set_text(s5.shapes[40], "▲ +45s (nhóm tool)", font_size=8.5, bold=True, color=COLOR_GREEN)
+    # Sub-metric 1: Cụm rạp đối tác
+    set_text(s5.shapes[38], "Cụm rạp đối tác Cineplex", font_size=9, color=COLOR_TEXT_MUTED)
+    set_text(s5.shapes[39], compact(CP["oct_pv"]), font_size=16, bold=True, color=COLOR_TEXT_MAIN)
+    set_text(s5.shapes[40], f"▲ {signed(CP['mom_pct'])} MoM", font_size=8.5, bold=True, color=COLOR_GREEN)
 
-    # Sub-metric 2: Tỷ lệ thoát trang
-    set_text(s5.shapes[42], "Tỷ lệ thoát trang", font_size=9, color=COLOR_TEXT_MUTED)
-    set_text(s5.shapes[43], "42.1%", font_size=16, bold=True, color=COLOR_GREEN)
-    set_text(s5.shapes[44], "▼ -18.5 pp (sạch Ads)", font_size=8.5, bold=True, color=COLOR_GREEN)
+    # Sub-metric 2: Tỷ trọng Organic của Cinema Hub
+    set_text(s5.shapes[42], "Organic Cinema Hub", font_size=9, color=COLOR_TEXT_MUTED)
+    set_text(s5.shapes[43], f"{dec(CI['organic_share'])}%", font_size=16, bold=True, color=COLOR_GREEN)
+    set_text(s5.shapes[44], f"▲ +{dec(CI['organic_share'] - CI['organic_share_sep'])} pp vs T9", font_size=8.5, bold=True, color=COLOR_GREEN)
 
-    # Sub-metric 3: Hồ sơ Diễn viên
-    set_text(s5.shapes[46], "Hồ sơ Diễn viên", font_size=9, color=COLOR_TEXT_MUTED)
-    set_text(s5.shapes[47], "1.200+", font_size=16, bold=True, color=COLOR_TEXT_MAIN)
-    set_text(s5.shapes[48], "▲ Mới go-live T10", font_size=8.5, bold=True, color=COLOR_INDIGO)
+    # Sub-metric 3: Hồ sơ Diễn viên (đếm thực tế từ lib/cinema-data/persons.ts)
+    set_text(s5.shapes[46], "Hồ sơ Diễn viên đã go-live", font_size=9, color=COLOR_TEXT_MUTED)
+    set_text(s5.shapes[47], vn(ACTOR_PROFILES), font_size=16, bold=True, color=COLOR_TEXT_MAIN)
+    set_text(s5.shapes[48], "▲ Go-live 30/10", font_size=8.5, bold=True, color=COLOR_INDIGO)
 
     # Right Commentary
     content_s5_perf = (
-        "• Cinema Hub: Đạt 1.07M views (+31.8% MoM), cụm rạp đối tác bứt phá 795K views (+142.2%), chiếm 74.6% lưu lượng; đã go-live 1.200 hồ sơ diễn viên.\n"
-        "• Financial Hub: Đạt 299.5K views (+25.6%), cụm Tỷ giá tăng đột phá +444.9% (34.0K views) nhờ cập nhật real-time 20+ ngân hàng."
+        f"• Cinema Hub: {vn(CI['oct_pv'])} PVs, {dec(CI['organic_share'])}% lưu lượng đến từ Organic (T9: {dec(CI['organic_share_sep'])}%); "
+        f"cụm rạp đối tác chiếm {dec(CP['share_of_hub'])}% Hub và đã go-live {vn(ACTOR_PROFILES)} hồ sơ diễn viên.\n"
+        f"• Financial Hub: {vn(FI['oct_pv'])} PVs ({signed(FI['mom_pct'])} MoM), {dec(FI['non_paid_share'])}% lưu lượng Non-Paid; "
+        f"Trung Tâm Tài Chính tăng {signed(PRJ['Trung Tâm Tài Chính']['mom_pct'])} nhờ nhóm tiện ích tỷ giá - giá vàng cập nhật tự động."
     )
     set_text(s5.shapes[53], content_s5_perf, font_size=9.5, color=COLOR_TEXT_MAIN)
 
     content_s5_other = (
-        "• Vay Nhanh giảm -31.2K views do cắt 61% Paid Ads -> Cần đẩy mạnh SEO On-Page và chèn liên kết nội bộ từ các tiện ích tài chính để bù đắp tự nhiên."
+        f"• Vay Nhanh giảm {vn(abs(PRJ['Vay Nhanh']['delta']))} PVs ({signed(PRJ['Vay Nhanh']['mom_pct'])}) cùng nhịp cắt {dec(abs(CH['paid']['mom_pct']))}% Paid Ads toàn Website "
+        "-> cần đẩy mạnh SEO On-Page và chèn liên kết nội bộ từ các tiện ích tài chính để bù đắp tự nhiên."
     )
     set_text(s5.shapes[56], content_s5_other, font_size=9.5, color=COLOR_TEXT_MAIN)
 
@@ -397,21 +464,27 @@ def main():
             if txt.startswith("Mục đích:"):
                 set_text(s, "Mục đích: Cập nhật tiến độ thực thi các dự án sản phẩm trọng yếu, kết quả mới trong tháng và trọng tâm tháng tới.", font_size=8.5, color=COLOR_TEXT_MUTED)
             elif "[Vấn đề trọng yếu]" in txt or "Phễu AppsFlyer Đạt" in txt or "Hệ Sinh Thái Sản Phẩm" in txt:
-                set_text(s, "Tiến Độ Dự Án & Tiện Ích Mới: Go-Live Cụm Diễn Viên (30/10), Tỷ Giá Tăng Vọt (+445%) & Đang Hoàn Thiện Thuế TNCN", font_size=17, bold=True, color=COLOR_TEXT_MAIN)
+                set_text(
+                    s,
+                    f"Tiến Độ Dự Án & Tiện Ích Mới: Go-Live {vn(ACTOR_PROFILES)} Hồ Sơ Diễn Viên (30/10), "
+                    f"Trung Tâm Tài Chính Tăng {signed(PRJ['Trung Tâm Tài Chính']['mom_pct'])} & Đang Hoàn Thiện Thuế TNCN",
+                    font_size=17, bold=True, color=COLOR_TEXT_MAIN
+                )
             elif "Nguồn:" in txt:
                 set_text(s, "Nguồn: Jira & Web Platform Roadmap   |   Owner: Web Platform   |   Chốt số liệu: 30/10/2026", font_size=9, color=COLOR_TEXT_MUTED)
             elif txt in ["9", "6 / 7", "7 / 8"]:
                 set_text(s, "6 / 7", font_size=9, color=COLOR_TEXT_MUTED)
             elif "Ý chính 1:" in txt:
                 content = (
-                    "• Ý chính 1: Hoàn tất go-live cụm trang Diễn viên & Đạo diễn (/cinema/person) ngày 30/10 với 1.200+ hồ sơ nghệ sĩ, tối ưu Schema thực thể E-E-A-T.\n"
-                    "• Ý chính 2: Cụm tra cứu Tỷ giá ngoại tệ tăng trưởng thực tế +444.9% MoM (34.0K views), khẳng định hiệu quả của nhóm công cụ tra cứu thường nhật."
+                    f"• Ý chính 1: Hoàn tất go-live cụm trang Diễn viên & Đạo diễn (/cinema/person) ngày 30/10 với {vn(ACTOR_PROFILES)} hồ sơ nghệ sĩ, tối ưu Schema thực thể E-E-A-T.\n"
+                    f"• Ý chính 2: Trung Tâm Tài Chính tăng thực tế {signed(PRJ['Trung Tâm Tài Chính']['mom_pct'])} MoM ({vn(PRJ['Trung Tâm Tài Chính']['oct_pv'])} PVs), khẳng định hiệu quả của nhóm công cụ tra cứu thường nhật."
                 )
                 set_text(s, content, font_size=9.5, color=COLOR_TEXT_MAIN)
             elif "Chỉ số product chính [x]% MoM" in txt or txt.startswith("Chỉ số product") or "Nhóm công cụ tra cứu" in txt:
                 content = (
-                    "• Tiện ích Tỷ giá (/tai-chinh/ty-gia) tăng bứt phá từ 6.2K lên 34.0K views (+444.9% MoM) nhờ cập nhật tự động 4 cặp ngoại tệ chủ lực.\n"
-                    "• Minigame Một Mùa Quýt ghi nhận 7.097 user hoàn thành quiz; Game Bò Sữa Bay đã lên Staging, sẵn sàng go-live tại các cụm rạp đối tác."
+                    f"• Cụm tiện ích tài chính (/tai-chinh) tăng từ {vn(PRJ['Trung Tâm Tài Chính']['sep_pv'])} lên {vn(PRJ['Trung Tâm Tài Chính']['oct_pv'])} PVs "
+                    f"({signed(PRJ['Trung Tâm Tài Chính']['mom_pct'])} MoM) nhờ cập nhật tự động 4 cặp ngoại tệ chủ lực.\n"
+                    f"• Minigame Một Mùa Quýt ghi nhận {vn(GAME['active_players'])} người chơi hoàn thành quiz; Game Bò Sữa Bay đã lên Staging, sẵn sàng go-live tại các cụm rạp đối tác."
                 )
                 set_text(s, content, font_size=9.5, color=COLOR_TEXT_MAIN)
             elif "Vấn đề cần quyết định/hỗ trợ" in txt or "Tập trung nguồn lực" in txt:
@@ -427,8 +500,8 @@ def main():
                 set_cell(tbl.cell(0, c), h, font_size=8.5, bold=True, color=COLOR_WHITE, align=PP_ALIGN.CENTER if c in [1, 4] else PP_ALIGN.LEFT)
 
             rows_data = [
-                ["1. Cụm Trang Diễn Viên (/cinema/person)", "Hoàn thành 100% · Go-live 30/10", "Go-live danh mục & 1.200+ hồ sơ nghệ sĩ; tối ưu Schema Person chuẩn E-E-A-T", "Theo dõi lập chỉ mục Google; mở rộng dàn cast các dự án phim Tết 2027", "Không (BU Movies đã nghiệm thu)"],
-                ["2. Cụm Tiện Ích Tỷ Giá (/tai-chinh/ty-gia)", "Hoạt động · Tăng +444.9% MoM", "Vận hành tự động 4 cặp ngoại tệ (USD, EUR, GBP, AUD); đạt 34.0K views", "Tích hợp biểu đồ biến động lịch sử và trang tỷ giá theo từng ngân hàng", "Không"],
+                ["1. Cụm Trang Diễn Viên (/cinema/person)", "Hoàn thành 100% · Go-live 30/10", f"Go-live danh mục & {vn(ACTOR_PROFILES)} hồ sơ nghệ sĩ; tối ưu Schema Person chuẩn E-E-A-T", "Theo dõi lập chỉ mục Google; mở rộng dàn cast các dự án phim Tết 2027", "Không (BU Movies đã nghiệm thu)"],
+                ["2. Cụm Tiện Ích Tỷ Giá (/tai-chinh/ty-gia)", f"Hoạt động · Tăng {signed(PRJ['Trung Tâm Tài Chính']['mom_pct'])} MoM", f"Vận hành tự động 4 cặp ngoại tệ (USD, EUR, GBP, AUD); cụm đạt {vn(PRJ['Trung Tâm Tài Chính']['oct_pv'])} views", "Tích hợp biểu đồ biến động lịch sử và trang tỷ giá theo từng ngân hàng", "Không"],
                 ["3. Tiện Ích Tính Thuế TNCN (/tai-chinh/thue-thu-nhap-ca-nhan)", "Đang phát triển (80%) · Chuẩn bị Staging", "Chuẩn hóa quy chuẩn URL; hoàn thiện UI/UX và logic tính thuế lũy tiến", "Hoàn tất kiểm thử và go-live Production đón mùa quyết toán thuế cuối năm", "Pháp chế & Kế toán hỗ trợ rà soát công thức tính trước 10/11"],
             ]
             for r_idx, r_data in enumerate(rows_data, 1):

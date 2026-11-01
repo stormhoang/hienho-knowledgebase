@@ -1,0 +1,231 @@
+{
+  "period": {
+    "month": "2026-10",
+    "start": "2026-10-01",
+    "end": "2026-10-30",
+    "days_elapsed": 30,
+    "days_in_month": 31
+  },
+  "total": {
+    "oct_pv": 3496864,
+    "sep_pv": 3952859,
+    "target": 3665607,
+    "achievement_rate": 95.4,
+    "forecast": 3613426,
+    "forecast_rate": 98.6,
+    "mom_pct": -11.5,
+    "daily_pace": 116562
+  },
+  "channels": {
+    "organic": {
+      "oct": 1665361,
+      "sep": 1623796,
+      "mom_pct": 2.6
+    },
+    "paid": {
+      "oct": 456431,
+      "sep": 1197093,
+      "mom_pct": -61.9
+    },
+    "direct": {
+      "oct": 907878,
+      "sep": 755896,
+      "mom_pct": 20.1
+    },
+    "referral": {
+      "oct": 340299,
+      "sep": 345132,
+      "mom_pct": -1.4
+    },
+    "others": {
+      "oct": 126895,
+      "sep": 30942,
+      "mom_pct": 310.1
+    },
+    "non_paid": {
+      "oct": 3040433,
+      "sep": 2755766,
+      "mom_pct": 10.3
+    }
+  },
+  "geo_ai": {
+    "oct": 40827,
+    "sep": 33661,
+    "mom_pct": 21.3,
+    "verified": false
+  },
+  "minigame_mot_mua_quyt": {
+    "active_players": 7097,
+    "period": "2026-10-15/2026-10-25"
+  },
+  "hubs": {
+    "cinema": {
+      "oct_pv": 1163517,
+      "sep_pv": 1220075,
+      "mom_pct": -4.6,
+      "forecast": 1202301,
+      "organic_pv": 1042726,
+      "organic_share": 89.6,
+      "organic_share_sep": 65.9,
+      "non_paid_pv": 1142802,
+      "non_paid_share": 98.2,
+      "non_paid_share_sep": 71.4,
+      "paid_pv": 20715,
+      "projects": {
+        "Cinema_Page": 389247,
+        "Cinema_Cineplex Page": 713549,
+        "Cinema_Home Page": 35300,
+        "Cinema_Blog": 19526,
+        "Cinema_News": 2503,
+        "Cinema_Landing Page": 3392
+      },
+      "target": 1117378,
+      "achievement_rate": 104.1,
+      "cineplex": {
+        "oct_pv": 713549,
+        "sep_pv": 501574,
+        "delta": 211975,
+        "mom_pct": 42.3,
+        "organic_pv": 656272,
+        "paid_pv": 12922,
+        "paid_sep_pv": 15825,
+        "share_of_hub": 61.3,
+        "organic_sep": 463510
+      }
+    },
+    "financial": {
+      "oct_pv": 255196,
+      "sep_pv": 249823,
+      "mom_pct": 2.2,
+      "forecast": 263703,
+      "organic_pv": 130508,
+      "organic_share": 51.1,
+      "organic_share_sep": 30.6,
+      "non_paid_pv": 169933,
+      "non_paid_share": 66.6,
+      "non_paid_share_sep": 62.2,
+      "paid_pv": 85263,
+      "projects": {
+        "Vay Nhanh": 62338,
+        "Điểm Tín Dụng": 77652,
+        "Ví Trả Sau": 57798,
+        "Trung Tâm Tài Chính": 38708,
+        "Túi Thần Tài": 2074,
+        "Mở Thẻ Tín Dụng": 3297,
+        "Trả Góp Apple": 522,
+        "Quản Lý Chi Tiêu": 4723,
+        "Thanh Toán Khoản Vay": 572,
+        "Tiết Kiệm Online": 1533,
+        "Chứng Khoán": 1870,
+        "Chứng Chỉ Quỹ": 449,
+        "Sàn Đầu Tư": 29,
+        "Thanh Toán Thẻ Tín Dụng": 454,
+        "Mở tài khoản ngân hàng": 2244,
+        "Tiệm Vàng Online": 739,
+        "Tỷ Giá": 194
+      },
+      "target": 250000,
+      "achievement_rate": 102.1
+    }
+  },
+  "projects": {
+    "Cinema_Cineplex Page": {
+      "oct_pv": 713549,
+      "sep_pv": 501574,
+      "delta": 211975,
+      "mom_pct": 42.3,
+      "organic_pv": 656272,
+      "paid_pv": 12922,
+      "paid_sep_pv": 15825,
+      "share_of_hub": 61.3,
+      "organic_sep": 463510
+    },
+    "Cinema_Page": {
+      "oct_pv": 389247,
+      "sep_pv": 645998,
+      "delta": -256751,
+      "mom_pct": -39.7,
+      "organic_pv": 337524,
+      "paid_pv": 6861,
+      "paid_sep_pv": 332738
+    },
+    "Cinema_Blog": {
+      "oct_pv": 19526,
+      "sep_pv": 41166,
+      "delta": -21640,
+      "mom_pct": -52.6,
+      "organic_pv": 15912,
+      "paid_pv": 96,
+      "paid_sep_pv": 165
+    },
+    "Cinema_Home Page": {
+      "oct_pv": 35300,
+      "sep_pv": 29066,
+      "delta": 6234,
+      "mom_pct": 21.4,
+      "organic_pv": 28019,
+      "paid_pv": 466,
+      "paid_sep_pv": 754
+    },
+    "Vay Nhanh": {
+      "oct_pv": 62338,
+      "sep_pv": 109955,
+      "delta": -47617,
+      "mom_pct": -43.3,
+      "organic_pv": 47570,
+      "paid_pv": 1250,
+      "paid_sep_pv": 1229
+    },
+    "Ví Trả Sau": {
+      "oct_pv": 57798,
+      "sep_pv": 42174,
+      "delta": 15624,
+      "mom_pct": 37.0,
+      "organic_pv": 42516,
+      "paid_pv": 5046,
+      "paid_sep_pv": 18306
+    },
+    "Trung Tâm Tài Chính": {
+      "oct_pv": 38708,
+      "sep_pv": 8025,
+      "delta": 30683,
+      "mom_pct": 382.3,
+      "organic_pv": 18680,
+      "paid_pv": 8945,
+      "paid_sep_pv": 1146
+    },
+    "Điểm Tín Dụng": {
+      "oct_pv": 77652,
+      "sep_pv": 79092,
+      "delta": -1440,
+      "mom_pct": -1.8,
+      "organic_pv": 7735,
+      "paid_pv": 68577,
+      "paid_sep_pv": 72984
+    },
+    "Quản Lý Chi Tiêu": {
+      "oct_pv": 4723,
+      "sep_pv": 1000,
+      "delta": 3723,
+      "mom_pct": 372.3,
+      "organic_pv": 3779,
+      "paid_pv": 197,
+      "paid_sep_pv": 12
+    },
+    "Phạt Nguội": {
+      "oct_pv": 21605,
+      "sep_pv": 39382,
+      "delta": -17777,
+      "mom_pct": -45.1,
+      "organic_pv": 12313,
+      "paid_pv": 2642,
+      "paid_sep_pv": 9795,
+      "rank": 24,
+      "rank_total": 69
+    }
+  },
+  "sources": {
+    "total_and_channels": "GA4 Data API 01-30/10 (monthly_10_2026_consolidated.json) + T9 full month",
+    "hubs_and_projects": "07_REPORTS/web_performance_tracking.xlsx pivot Full month, tên project chuẩn hóa theo hub-map.json"
+  }
+}

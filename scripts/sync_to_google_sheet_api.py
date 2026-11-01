@@ -66,10 +66,14 @@ def sync_google_sheet(
     # 1. Chuẩn bị Batch Update cho các cell chính
     updates = []
 
-    # Overall Performance: A1, K9:K13, K15:K20, T9:T13, T15:T19
+    # Overall Performance: A1, K5, K9:K13, K15:K20, T9:T13, T15:T19
     updates.append({
         "range": "'Overall Performance'!A1",
         "values": [[f"Update to: {days_elapsed}"]]
+    })
+    updates.append({
+        "range": "'Overall Performance'!K5",
+        "values": [["=SUM(K9:K13)"]]
     })
     updates.append({
         "range": "'Overall Performance'!K9:K13",
@@ -145,30 +149,62 @@ def sync_google_sheet(
         ]
     })
 
-    # Cinema: B1, H9, H16, H23, H30, H37
+    # Cinema: B1, H3, H8, H9, H15, H16, H22, H23, H29, H30, H36, H37, H43, H44 (Dùng công thức chuẩn tra cứu Pivot)
     updates.append({
         "range": "'Cinema'!B1",
         "values": [[f"Update to: {days_elapsed}"]]
     })
     updates.append({
+        "range": "'Cinema'!H3",
+        "values": [["=SUM(H8,H15,H22,H29,H36,H43)"]]
+    })
+    updates.append({
+        "range": "'Cinema'!H8",
+        "values": [["=sum(H9:H13)"]]
+    })
+    updates.append({
         "range": "'Cinema'!H9",
-        "values": [[cinema_sub.get("Trang Rạp phim", 0)]]
+        "values": [["=SUMIFS('MTD Pivot'!I:I, 'MTD Pivot'!$A:$A, \"Cinema_Cineplex Page\", 'MTD Pivot'!$C:$C, $B9)"]]
+    })
+    updates.append({
+        "range": "'Cinema'!H15",
+        "values": [["=sum(H16:H20)"]]
     })
     updates.append({
         "range": "'Cinema'!H16",
-        "values": [[cinema_sub.get("Trang phim chi tiết", 0)]]
+        "values": [["=SUMIFS('MTD Pivot'!I:I, 'MTD Pivot'!$A:$A, \"Cinema_Page\", 'MTD Pivot'!$C:$C, $B16)"]]
+    })
+    updates.append({
+        "range": "'Cinema'!H22",
+        "values": [["=sum(H23:H27)"]]
     })
     updates.append({
         "range": "'Cinema'!H23",
-        "values": [[cinema_sub.get("Cinema_Home Page", 0)]]
+        "values": [["=SUMIFS('MTD Pivot'!I:I, 'MTD Pivot'!$A:$A, \"Cinema_Blog\", 'MTD Pivot'!$C:$C, $B23)"]]
+    })
+    updates.append({
+        "range": "'Cinema'!H29",
+        "values": [["=sum(H30:H34)"]]
     })
     updates.append({
         "range": "'Cinema'!H30",
-        "values": [[cinema_sub.get("Cinema_Blog", 0)]]
+        "values": [["=SUMIFS('MTD Pivot'!I:I, 'MTD Pivot'!$A:$A, \"Cinema_Home Page\", 'MTD Pivot'!$C:$C, $B30)"]]
+    })
+    updates.append({
+        "range": "'Cinema'!H36",
+        "values": [["=sum(H37:H41)"]]
     })
     updates.append({
         "range": "'Cinema'!H37",
-        "values": [[cinema_sub.get("Tin tức", 0)]]
+        "values": [["=SUMIFS('MTD Pivot'!I:I, 'MTD Pivot'!$A:$A, \"Cinema_News\", 'MTD Pivot'!$C:$C, $B37)"]]
+    })
+    updates.append({
+        "range": "'Cinema'!H43",
+        "values": [["=sum(H44:H47)"]]
+    })
+    updates.append({
+        "range": "'Cinema'!H44",
+        "values": [["=SUMIFS('MTD Pivot'!I:I, 'MTD Pivot'!$A:$A, \"Cinema_Landing Page\", 'MTD Pivot'!$C:$C, $B44)"]]
     })
     # Financial: B1
     updates.append({
