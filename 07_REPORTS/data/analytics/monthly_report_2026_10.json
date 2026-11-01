@@ -5,12 +5,12 @@
     "scope": "Monthly Business Review (MBR)",
     "audience": "Ban Giám Đốc / Hội đồng Quản trị",
     "meeting_principle": "Báo cáo cung cấp bối cảnh chiến lược và số liệu kinh doanh [R]; Cuộc họp tập trung thảo luận và ra quyết định [D]",
-    "period": "01/10/2026 - 30/10/2026",
-    "days_elapsed": 30,
+    "period": "01/10/2026 - 31/10/2026",
+    "days_elapsed": 31,
     "days_in_month": 31,
-    "last_updated": "2026-10-31T22:30:00+07:00",
+    "last_updated": "2026-11-01T08:00:00+07:00",
     "sources": [
-      "GA4 Data API (Property 270743103) - MTD 01-30/10/2026",
+      "GA4 Data API (Property 270743103) - Chốt sổ Full month 01-31/10/2026",
       "Excel SSOT web_performance_tracking.xlsx - pivot Full month, tên project chuẩn hóa theo hub-map.json",
       "AppsFlyer GPD Attribution - OneLink installs / Map Bank"
     ]
@@ -18,9 +18,9 @@
   "executive_pillars": {
     "title": "1. Khung Điều Hành 3 Trụ Cột - Web Platform",
     "highlights": [
-      "Chất lượng lưu lượng sạch nhất từ đầu năm: Kênh tự nhiên (Non-Paid) đạt 3.040.433 PV, chiếm 86.95% toàn Website (+10,3% MoM), tự bù đắp việc chủ động cắt 62% Paid Ads.",
-      "Financial Hub đạt 255.196 PV (102.1% chỉ tiêu tháng): Trung Tâm Tài Chính +382,3% và Ví Trả Sau +37,0%, bù 47.617 PV giảm của Vay Nhanh khi dừng Paid Ads.",
-      "Cinema Hub đạt 1.163.517 PV (104.1% chỉ tiêu tháng, -4,6% MoM): cụm rạp đối tác 713.549 PV (+42,3%), chiếm 61.3% Hub, bù phần lớn mức giảm của trang phim lẻ.",
+      "Chất lượng lưu lượng sạch nhất từ đầu năm: Kênh tự nhiên (Non-Paid) đạt 3.128.542 PV, chiếm 86.86% toàn Website (+13,5% MoM), tự bù đắp việc chủ động cắt 60% Paid Ads.",
+      "Financial Hub đạt 273.705 PV (109.5% chỉ tiêu tháng): Trung Tâm Tài Chính +442,0% và Ví Trả Sau +38,2%, bù 47.814 PV giảm của Vay Nhanh khi dừng Paid Ads.",
+      "Cinema Hub đạt 1.132.721 PV (101.4% chỉ tiêu tháng, -7,2% MoM): cụm rạp đối tác 700.229 PV (+39,6%), chiếm 61.8% Hub, bù phần lớn mức giảm của trang phim lẻ.",
       "Phễu Web-to-App AppsFlyer duy trì CVR cao 21.09%: Lượt cài đặt qua OneLink đạt 9.824 installs MTD (28d); Liên kết ngân hàng (Map Bank / N2MM) đạt 2.072 users (forecast 2.294 users, phá kỷ lục Tháng 9)."
     ],
     "collaboration": [
@@ -38,24 +38,24 @@
   },
   "summary": {
     "target_pvs": 3665607,
-    "actual_pvs_mtd": 3496864,
-    "forecast_pvs_31d": 3613426,
-    "achievement_rate_mtd": 0.954,
-    "forecast_achievement_rate": 0.986,
-    "daily_run_rate": 116562,
-    "non_paid_pvs_mtd": 3040433,
-    "non_paid_share": 0.8695,
-    "paid_pvs_mtd": 456431,
-    "paid_share": 0.1305,
-    "paid_cut_volume": 740662,
-    "paid_cut_rate": -0.619,
-    "non_paid_net_add": 284667,
-    "non_paid_growth_mom": 0.103,
-    "total_installs_mtd": 9820,
-    "forecast_installs_31d": 10870,
-    "registered_users_mtd": 3535,
-    "map_bank_users_mtd": 2180,
-    "install_to_map_cvr": 0.222
+    "actual_pvs_mtd": 3602023,
+    "forecast_pvs_31d": 3602023,
+    "achievement_rate_mtd": 0.983,
+    "forecast_achievement_rate": 0.983,
+    "daily_run_rate": 116194,
+    "non_paid_pvs_mtd": 3128542,
+    "non_paid_share": 0.8686,
+    "paid_pvs_mtd": 473481,
+    "paid_share": 0.1314,
+    "paid_cut_volume": 723612,
+    "paid_cut_rate": -0.604,
+    "non_paid_net_add": 372776,
+    "non_paid_growth_mom": 0.135,
+    "total_installs_mtd": 9824,
+    "forecast_installs_31d": 9824,
+    "registered_users_mtd": 3436,
+    "map_bank_users_mtd": 2072,
+    "install_to_map_cvr": 0.2109
   },
   "target_vs_actual": [
     {
@@ -78,33 +78,33 @@
       "metric": "Total Page Views (Actual)",
       "sep_2026": 3952859,
       "oct_target": null,
-      "forecast_31d": 3613426,
-      "assessment": "Đạt 95.4% Target sau 30/31 ngày (96,77% tiến độ thời gian)",
-      "oct_mtd_30d": 3496864
+      "forecast_31d": 3602023,
+      "assessment": "Đạt 98.3% Target sau 30/31 ngày (96,77% tiến độ thời gian)",
+      "oct_mtd_30d": 3602023
     },
     {
       "metric": "Net Add (Lưu lượng Tăng mới)",
       "sep_2026": 487496,
       "oct_target": -287252,
-      "forecast_31d": -339433,
+      "forecast_31d": -350836,
       "assessment": "Chênh lệch thực đạt so với đỉnh chạy Ads Tháng 9",
-      "oct_mtd_30d": -455995
+      "oct_mtd_30d": -350836
     },
     {
       "metric": "% Growth Rate (Actual)",
       "sep_2026": "+13.62%",
       "oct_target": null,
-      "forecast_31d": "-8.59%",
+      "forecast_31d": "-8.88%",
       "assessment": "So với mức thực đạt Tháng 9",
-      "oct_mtd_30d": "-11.5%"
+      "oct_mtd_30d": "-8.9%"
     },
     {
       "metric": "% Target Rate (Tiến độ về đích)",
       "sep_2026": "112.65%",
       "oct_target": "100.00%",
-      "forecast_31d": "98.6%",
-      "assessment": "Dự kiến kết tháng đạt 98.6% Target",
-      "oct_mtd_30d": "95.4%"
+      "forecast_31d": "98.3%",
+      "assessment": "Dự kiến kết tháng đạt 98.3% Target",
+      "oct_mtd_30d": "98.3%"
     }
   ],
   "traffic_sources": [
@@ -112,71 +112,71 @@
       "channel": "KÊNH TỰ NHIÊN (NON-PAID)",
       "is_group": true,
       "sep_2026": 2755766,
-      "forecast_31d": 3141781,
-      "diff_vs_sep": 284667,
-      "share": 0.8695,
-      "assessment": "Kênh tự nhiên 3.040.433 PVs (+10,3% MoM), chiếm 86.95% toàn Website; tự chủ nguồn tăng trưởng",
-      "oct_mtd_30d": 3040433
+      "forecast_31d": 3128542,
+      "diff_vs_sep": 372776,
+      "share": 0.8686,
+      "assessment": "Kênh tự nhiên 3.128.542 PVs (+13,5% MoM), chiếm 86.86% toàn Website; tự chủ nguồn tăng trưởng",
+      "oct_mtd_30d": 3128542
     },
     {
       "channel": "Organic Search",
       "is_group": false,
       "sep_2026": 1623796,
-      "forecast_31d": 1720873,
-      "diff_vs_sep": 41565,
-      "share": 0.4762,
-      "assessment": "Organic 1.665.361 PVs (+2,6% MoM), chiếm 47.62% toàn Website",
-      "oct_mtd_30d": 1665361
+      "forecast_31d": 1715771,
+      "diff_vs_sep": 91975,
+      "share": 0.4763,
+      "assessment": "Organic 1.715.771 PVs (+5,7% MoM), chiếm 47.63% toàn Website",
+      "oct_mtd_30d": 1715771
     },
     {
       "channel": "Direct",
       "is_group": false,
       "sep_2026": 755896,
-      "forecast_31d": 938141,
-      "diff_vs_sep": 151982,
-      "share": 0.2596,
-      "assessment": "Truy cập trực tiếp 907.878 PVs (+20,1% MoM); người dùng chủ động quay lại các tiện ích",
-      "oct_mtd_30d": 907878
+      "forecast_31d": 931731,
+      "diff_vs_sep": 175835,
+      "share": 0.2587,
+      "assessment": "Truy cập trực tiếp 931.731 PVs (+23,3% MoM); người dùng chủ động quay lại các tiện ích",
+      "oct_mtd_30d": 931731
     },
     {
       "channel": "Referral",
       "is_group": false,
       "sep_2026": 345132,
-      "forecast_31d": 351642,
-      "diff_vs_sep": -4833,
-      "share": 0.0973,
-      "assessment": "Referral 340.299 PVs (-1,4% MoM); mạng lưới rạp chiếu phim, ngân hàng đối tác và báo chí",
-      "oct_mtd_30d": 340299
+      "forecast_31d": 350162,
+      "diff_vs_sep": 5030,
+      "share": 0.0972,
+      "assessment": "Referral 350.162 PVs (+1,5% MoM); mạng lưới rạp chiếu phim, ngân hàng đối tác và báo chí",
+      "oct_mtd_30d": 350162
     },
     {
       "channel": "Others (Kênh tự nhiên khác)",
       "is_group": false,
       "sep_2026": 30942,
-      "forecast_31d": 131125,
-      "diff_vs_sep": 95953,
+      "forecast_31d": 130878,
+      "diff_vs_sep": 99936,
       "share": 0.0363,
-      "assessment": "Kênh tự nhiên khác 126.895 PVs (+310,1% MoM); điểm chạm tiện ích mới triển khai",
-      "oct_mtd_30d": 126895
+      "assessment": "Kênh tự nhiên khác 130.878 PVs (+323,0% MoM); điểm chạm tiện ích mới triển khai",
+      "oct_mtd_30d": 130878
     },
     {
       "channel": "KÊNH TRẢ PHÍ (PAID TRAFFIC)",
       "is_group": true,
       "sep_2026": 1197093,
-      "forecast_31d": 471645,
-      "diff_vs_sep": -740662,
-      "share": 0.1305,
-      "assessment": "Chủ động cắt 62% Paid Ads (-740.662 PVs) để tối ưu dòng vốn của BOM",
-      "oct_mtd_30d": 456431
+      "forecast_31d": 473481,
+      "diff_vs_sep": -723612,
+      "share": 0.1314,
+      "assessment": "Chủ động cắt 60% Paid Ads (-723.612 PVs) để tối ưu dòng vốn của BOM",
+      "oct_mtd_30d": 473481
     },
     {
       "channel": "TỔNG LƯỢNG TRUY CẬP",
       "is_group": true,
       "sep_2026": 3952859,
-      "forecast_31d": 3613426,
-      "diff_vs_sep": -455995,
+      "forecast_31d": 3602023,
+      "diff_vs_sep": -350836,
       "share": 1.0,
-      "assessment": "Đạt 95.4% kế hoạch tháng; dự báo kết tháng 98.6% Target (-11,5% MoM)",
-      "oct_mtd_30d": 3496864
+      "assessment": "Đạt 98.3% kế hoạch tháng; dự báo kết tháng 98.3% Target (-8,9% MoM)",
+      "oct_mtd_30d": 3602023
     }
   ],
   "strategic_hubs": {
@@ -187,15 +187,15 @@
       "metrics": {
         "sep_2026": 1220075,
         "oct_target": 1117378,
-        "forecast_31d": 1202301,
-        "achievement_rate": 1.041,
-        "organic_share_mtd": 0.896,
+        "forecast_31d": 1132721,
+        "achievement_rate": 1.014,
+        "organic_share_mtd": 0.864,
         "organic_share_sep": 0.659,
-        "oct_mtd_30d": 1163517
+        "oct_mtd_30d": 1132721
       },
       "highlights": [
-        "Cụm rạp đối tác Cineplex đạt 713.549 views (+42,3% MoM), chiếm 61.3% Hub; Organic cụm rạp đạt 656.272 views (+41,6%), bù phần lớn mức giảm 256.751 views của trang phim lẻ sau khi dừng Paid Ads.",
-        "Thống lĩnh vị thế Topical Authority mùa phim cuối năm: 61.3% lưu lượng Hub đến từ cụm rạp đối tác, nhóm từ khóa phim rạp trọng điểm giữ vị trí Top 1 Google Search và là nguồn trích dẫn của Google AI Overviews.",
+        "Cụm rạp đối tác Cineplex đạt 700.229 views (+39,6% MoM), chiếm 61.8% Hub; Organic cụm rạp đạt 615.638 views (+32,8%), bù phần lớn mức giảm 272.360 views của trang phim lẻ sau khi dừng Paid Ads.",
+        "Thống lĩnh vị thế Topical Authority mùa phim cuối năm: 61.8% lưu lượng Hub đến từ cụm rạp đối tác, nhóm từ khóa phim rạp trọng điểm giữ vị trí Top 1 Google Search và là nguồn trích dẫn của Google AI Overviews.",
         "Mô hình chuyển đổi O2O (Offline-to-Online) tại rạp: Game tương tác Bò Sữa Bay sẵn sàng tiếp nhận luồng quét mã QR từ TVC tại hệ thống rạp đối tác để chuyển đổi khán giả thành người dùng app."
       ],
       "next_actions": [
@@ -210,15 +210,15 @@
       "metrics": {
         "sep_2026": 249823,
         "oct_target": 250000,
-        "forecast_31d": 263703,
-        "achievement_rate": 1.021,
-        "non_paid_share_mtd": 0.666,
+        "forecast_31d": 273705,
+        "achievement_rate": 1.095,
+        "non_paid_share_mtd": 0.627,
         "non_paid_share_sep": 0.622,
-        "oct_mtd_30d": 255196
+        "oct_mtd_30d": 273705
       },
       "highlights": [
-        "Hoàn thành 102.1% chỉ tiêu tháng (255.196 PV, +2,2% MoM) nhờ đa dạng hóa tiện ích tài chính.",
-        "Nhóm tiện ích tài chính mới bù đắp đà giảm của Vay Nhanh: Trung Tâm Tài Chính 38.708 views (+382,3%), Ví Trả Sau 57.798 views (+37,0%), bù 47.617 views giảm của Vay Nhanh (-43,3%).",
+        "Hoàn thành 109.5% chỉ tiêu tháng (273.705 PV, +9,6% MoM) nhờ đa dạng hóa tiện ích tài chính.",
+        "Nhóm tiện ích tài chính mới bù đắp đà giảm của Vay Nhanh: Trung Tâm Tài Chính 43.495 views (+442,0%), Ví Trả Sau 58.268 views (+38,2%), bù 47.814 views giảm của Vay Nhanh (-43,5%).",
         "Đón đầu chính sách công với bộ đôi công cụ tính thuế: Công cụ Tính Thuế TNCN và Thuế Hộ Kinh Doanh là điểm chạm chiến lược thu hút tệp hộ kinh doanh cá thể và Freelancers về hệ sinh thái MoMo.",
         "Định hình thói quen tài chính (Habit Formation) qua Gamification CIC: Thiết kế bài học tương tác giáo dục tài chính (tương tự Duolingo) để xây dựng niềm tin tài chính bền vững thay vì dựa vào thông báo đẩy."
       ],
@@ -234,46 +234,46 @@
         "stage": "1. Total Installs (Lượt cài đặt)",
         "aug_2026": 10041,
         "sep_2026": 10501,
-        "oct_mtd_28d": 9824,
-        "forecast_31d": 10876,
-        "growth_mom": "+3.57%",
-        "assessment": "Tăng trưởng liên tục 3 tháng; nhịp chạy 351 installs/ngày, tiến sát mốc 11.000 Installs"
+        "forecast_31d": 9824,
+        "growth_mom": "-6,45%",
+        "assessment": "Nhịp chạy 317 installs/ngày; giảm so với đỉnh Tháng 9 khi còn chạy Paid Ads",
+        "oct_mtd_30d": 9824
       },
       {
         "stage": "2. Registered Users (Tạo tài khoản)",
         "aug_2026": 3230,
         "sep_2026": 3569,
-        "oct_mtd_28d": 3436,
-        "forecast_31d": 3804,
-        "growth_mom": "+6.58%",
-        "assessment": "CVR Install -> REG đạt 34.98% (tăng so với 33.99% T9)"
+        "forecast_31d": 3436,
+        "growth_mom": "-3,73%",
+        "assessment": "CVR Install -> REG đạt 34,98% (T9: 33,99%)",
+        "oct_mtd_30d": 3436
       },
       {
         "stage": "3. Map Bank (Liên kết ngân hàng / N2MM)",
         "aug_2026": 1818,
         "sep_2026": 2276,
-        "oct_mtd_28d": 2072,
-        "forecast_31d": 2294,
-        "growth_mom": "+0.79%",
-        "assessment": "CVR REG -> Map Bank giữ vững mức 60.30%; dự kiến thiết lập kỷ lục mới 2.294 users"
+        "forecast_31d": 2072,
+        "growth_mom": "-8,96%",
+        "assessment": "CVR REG -> Map Bank đạt 60,3% (T9: 63,77%)",
+        "oct_mtd_30d": 2072
       },
       {
         "stage": "4. Active MAU (Giao dịch tháng đầu)",
         "aug_2026": 1029,
         "sep_2026": 1328,
-        "oct_mtd_28d": 1131,
-        "forecast_31d": 1252,
-        "growth_mom": "-5.72%",
-        "assessment": "CVR Map -> MAU đạt 54.58%; tập trung vào tệp người dùng tài chính chất lượng cao"
+        "forecast_31d": 1131,
+        "growth_mom": "-14,83%",
+        "assessment": "CVR Map -> MAU đạt 54,58% (T9: 58,35%)",
+        "oct_mtd_30d": 1131
       },
       {
         "stage": "End-to-End CVR (Install -> Map Bank)",
         "aug_2026": "18.10%",
         "sep_2026": "21.67%",
-        "oct_mtd_28d": "21.09%",
-        "forecast_31d": "21.09%",
-        "growth_mom": "-0.58 p.p",
-        "assessment": "Chất lượng chuyển đổi thực chất duy trì ổn định trên mốc 21%"
+        "forecast_31d": "21,09%",
+        "growth_mom": "-0,58 p.p",
+        "assessment": "Chất lượng chuyển đổi thực chất duy trì ổn định trên mốc 21%",
+        "oct_mtd_30d": "21,09%"
       }
     ],
     "channel_breakdown": {

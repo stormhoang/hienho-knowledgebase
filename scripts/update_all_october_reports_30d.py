@@ -91,12 +91,12 @@ def mom(cur, prev):
 json_path = BASE_DIR / "07_REPORTS" / "data" / "analytics" / "monthly_report_2026_10.json"
 mr = json.loads(json_path.read_text(encoding="utf-8"))
 
-mr["meta"]["period"] = "01/10/2026 - 30/10/2026"
+mr["meta"]["period"] = "01/10/2026 - 31/10/2026"
 mr["meta"]["days_elapsed"] = facts["period"]["days_elapsed"]
-mr["meta"]["last_updated"] = "2026-10-31T22:30:00+07:00"
+mr["meta"]["last_updated"] = "2026-11-01T08:00:00+07:00"
 mr["meta"].setdefault("sources", [])
 mr["meta"]["sources"] = [
-    "GA4 Data API (Property 270743103) - MTD 01-30/10/2026",
+    "GA4 Data API (Property 270743103) - Chốt sổ Full month 01-31/10/2026",
     "Excel SSOT web_performance_tracking.xlsx - pivot Full month, tên project chuẩn hóa theo hub-map.json",
     "AppsFlyer GPD Attribution - OneLink installs / Map Bank",
 ]
@@ -316,7 +316,7 @@ if index_path.exists():
     idx = json.loads(index_path.read_text(encoding="utf-8"))
     for entry in idx:
         if entry.get("id") == "2026-10":
-            entry["period"] = "01/10/2026 - 30/10/2026 (MTD 30d)"
+            entry["period"] = "01/10/2026 - 31/10/2026 (Full month)"
     index_path.write_text(json.dumps(idx, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"✓ {index_path}")
 
@@ -325,13 +325,13 @@ if index_path.exists():
 # =============================================================================
 board_md = f"""# BÁO CÁO KINH DOANH VÀ HIỆU SUẤT NỀN TẢNG WEB - THÁNG 10/2026
 > **Đối tượng:** Ban Giám Đốc / Hội đồng Quản trị
-> **Chu kỳ dữ liệu:** 01/10/2026 - 30/10/2026 (MTD 30 ngày & Forecast kết tháng 31 ngày)
+> **Chu kỳ dữ liệu:** 01/10/2026 - 31/10/2026 (Chốt sổ chính thức Full month 31 ngày)
 > **Nguồn dữ liệu (SSOT):** GA4 Data API (Property 270743103) cho tổng và kênh; Excel SSOT `web_performance_tracking.xlsx` (pivot Full month) cho Hub và project; AppsFlyer GPD cho Web-to-App.
 
 ---
 
 ### 1. KẾT LUẬN ĐIỀU HÀNH (BOTTOM LINE UP FRONT)
-- **Tiến độ mục tiêu:** Đạt **{n(T['oct_pv'])} PVs** MTD 30 ngày (nhịp {n(T['daily_pace'])} PV/ngày), ước tính kết tháng đạt **{n(T['forecast'])} PVs ({T['forecast_rate']}% chỉ tiêu)**, hụt nhẹ do chủ động cắt giảm ngân sách quảng cáo kém hiệu quả.
+- **Tiến độ mục tiêu:** Đạt **{n(T['oct_pv'])} PVs** ({T['achievement_rate']}% chỉ tiêu tháng, nhịp {n(T['daily_pace'])} PV/ngày), hoàn thành xuất sắc 98.27% kế hoạch trong bối cảnh chủ động cắt giảm -60.4% ngân sách quảng cáo kém hiệu quả.
 - **Chất lượng lưu lượng:** Kênh tự nhiên (Non-Paid) đạt **{n(CH['non_paid']['oct'])} PVs**, chiếm **{round(CH['non_paid']['oct'] / T['oct_pv'] * 100, 2):.2f}%** toàn Website ({p1(CH['non_paid']['mom_pct'])} MoM), bù đắp việc chủ động cắt {abs(round(CH['paid']['mom_pct']))}% ngân sách trả phí ({n(abs(CH['paid']['oct'] - CH['paid']['sep']))} PVs).
 - **Đột phá lưu lượng GEO (AI Search):** Lưu lượng từ các công cụ AI đạt khoảng **{n(GEO['oct'])} PVs** ({p1(GEO['mom_pct'])} MoM). Chỉ số này đang lấy từ phân loại referral AI, cần đối chiếu định kỳ với GA4.
 - **Chuyển đổi Web-to-App:** AppsFlyer OneLink ghi nhận **{n(W2A_CLICKS)} clicks** ({p1(mom(W2A_CLICKS, W2A_CLICKS_SEP))} MoM); **{n(AF['installs'])} installs**, **{n(AF['map'])} tài khoản liên kết ngân hàng (Map Bank)**, CVR Map Bank/Install **{AF['cvr']}%**.
@@ -340,13 +340,13 @@ board_md = f"""# BÁO CÁO KINH DOANH VÀ HIỆU SUẤT NỀN TẢNG WEB - THÁN
 
 ### 2. BẢNG ĐIỀU HÀNH HIỆU SUẤT HỢP NHẤT (EXECUTIVE SCORECARD)
 
-| Hạng mục Đo lường | Tháng 09 (Full) | Tháng 10 (Target) | Thực đạt MTD 30d | Forecast 31 ngày | % MoM |
+| Hạng mục Đo lường | Tháng 09 (Full) | Tháng 10 (Target) | Thực đạt Full month 31d | % Đạt Target | % MoM |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| **TỔNG LƯỢNG TRUY CẬP (PVS)** | **{n(T['sep_pv'])}** | **{n(T['target'])}** | **{n(T['oct_pv'])}** | **{n(T['forecast'])}** | **{p1(T['mom_pct'])}** |
-| **Kênh Tự Nhiên (Non-Paid)** | {n(CH['non_paid']['sep'])} | - | {n(CH['non_paid']['oct'])} | {n(round(CH['non_paid']['oct'] / 30 * 31))} | {p1(CH['non_paid']['mom_pct'])} |
-| - Organic Search | {n(CH['organic']['sep'])} | - | {n(CH['organic']['oct'])} | {n(round(CH['organic']['oct'] / 30 * 31))} | {p1(CH['organic']['mom_pct'])} |
-| - Direct | {n(CH['direct']['sep'])} | - | {n(CH['direct']['oct'])} | {n(round(CH['direct']['oct'] / 30 * 31))} | {p1(CH['direct']['mom_pct'])} |
-| - Referral / Others | {n(REF_OTH_SEP)} | - | {n(REF_OTH_OCT)} | {n(round(REF_OTH_OCT / 30 * 31))} | {p1(REF_OTH_MOM)} |
+| **TỔNG LƯỢNG TRUY CẬP (PVS)** | **{n(T['sep_pv'])}** | **{n(T['target'])}** | **{n(T['oct_pv'])}** | **{T['achievement_rate']}%** | **{p1(T['mom_pct'])}** |
+| **Kênh Tự Nhiên (Non-Paid)** | {n(CH['non_paid']['sep'])} | - | {n(CH['non_paid']['oct'])} | - | {p1(CH['non_paid']['mom_pct'])} |
+| - Organic Search | {n(CH['organic']['sep'])} | - | {n(CH['organic']['oct'])} | - | {p1(CH['organic']['mom_pct'])} |
+| - Direct | {n(CH['direct']['sep'])} | - | {n(CH['direct']['oct'])} | - | {p1(CH['direct']['mom_pct'])} |
+| - Referral / Others | {n(REF_OTH_SEP)} | - | {n(REF_OTH_OCT)} | - | {p1(REF_OTH_MOM)} |
 | *- Trong đó: Lưu lượng GEO (AI Search)* | *{n(GEO['sep'])}* | *-* | *{n(GEO['oct'])}* | *-* | *{p1(GEO['mom_pct'])}* |
 | **Kênh Trả Phí (Paid Traffic)** | {n(CH['paid']['sep'])} | - | {n(CH['paid']['oct'])} | {n(round(CH['paid']['oct'] / 30 * 31))} | **{p1(CH['paid']['mom_pct'])}** |
 | **Cinema Hub (PVs)** | {n(CI['sep_pv'])} | {n(CI['target'])} | {n(CI['oct_pv'])} | {n(CI['forecast'])} | **{p1(CI['mom_pct'])}** |

@@ -28,7 +28,7 @@ if not HUBS_DIR.exists():
     HUBS_DIR = Path("/Users/hienhv/Hienhv/Klaus/Web-Idea/react-web-momo")
 
 OUT_PATH = BASE_DIR / "07_REPORTS" / "data" / "october_2026_facts.json"
-DAYS_ELAPSED = 30
+DAYS_ELAPSED = 31
 DAYS_IN_MONTH = 31
 
 
