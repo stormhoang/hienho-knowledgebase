@@ -1,91 +1,91 @@
 {
   "lastFull": {
-    "month": "2026-09",
-    "pv": 3952859,
-    "prevPv": 3465363,
-    "target": 3509044
+    "month": "2026-10",
+    "pv": 3602023,
+    "prevPv": 3952859,
+    "target": 3665607
   },
   "running": {
-    "month": "2026-10",
-    "daysElapsed": 31,
-    "daysInMonth": 31,
-    "report": "monthly_10_2026_consolidated.json",
-    "pv": 3602023,
-    "target": 3665607,
-    "dailyPace": 116194,
-    "dailyNeeded": 63584,
-    "forecast": 3602023,
-    "forecastPct": 98.27
+    "month": "2026-11",
+    "daysElapsed": 1,
+    "daysInMonth": 30,
+    "report": "monthly_11_2026_mtd_1d.json",
+    "pv": 28757,
+    "target": 3829155,
+    "dailyPace": 28757,
+    "dailyNeeded": 131048,
+    "forecast": 862710,
+    "forecastPct": 22.53
   },
   "hubs": [
     {
       "id": "cinema",
       "name": "Cinema Hub",
-      "pv": 1095633
+      "pv": 7095
     },
     {
       "id": "financial",
       "name": "Financial Hub",
-      "pv": 306764
+      "pv": 2471
     },
     {
       "id": "new_user",
       "name": "New User Hub",
-      "pv": 96017
+      "pv": 1016
     },
     {
       "id": "vehicle",
       "name": "Vehicle Hub",
-      "pv": 82769
+      "pv": 785
     },
     {
       "id": "insurance",
       "name": "Insurance Hub",
-      "pv": 34855
+      "pv": 168
     },
     {
       "id": "student",
       "name": "Student Hub",
-      "pv": 3537
+      "pv": 21
     }
   ],
   "lastFullHubs": [
     {
       "id": "cinema",
       "name": "Cinema Hub",
-      "pv": 1220075
-    },
-    {
-      "id": "payment",
-      "name": "Payment Hub",
-      "pv": 520612
+      "pv": 1198507
     },
     {
       "id": "home",
       "name": "Home MoMo",
-      "pv": 467476
+      "pv": 537786
     },
     {
-      "id": "new_user",
-      "name": "New User Hub",
-      "pv": 462878
+      "id": "download",
+      "name": "Download",
+      "pv": 418639
     },
     {
       "id": "financial",
       "name": "Financial Hub",
-      "pv": 249823
+      "pv": 262871
     },
     {
-      "id": "travel",
-      "name": "Travel Hub",
-      "pv": 114475
+      "id": "payment",
+      "name": "Payment Hub",
+      "pv": 258609
+    },
+    {
+      "id": "game",
+      "name": "Game Hub",
+      "pv": 255227
     }
   ],
   "channels": {
-    "organic": 1715771,
-    "direct": 931731,
-    "referral": 350162,
-    "paid": 473481,
-    "others": 130878
+    "organic": 12236,
+    "direct": 7603,
+    "referral": 1634,
+    "paid": 5370,
+    "others": 1914
   }
 }

@@ -49,7 +49,8 @@ def sync_google_sheet(
     days_elapsed, total_pv,
     organic_pv, paid_pv, direct_pv, referral_pv, others_pv, non_paid_pv,
     hubs_pv, cinema_sub,
-    spreadsheet_id=TARGET_SHEET_ID
+    spreadsheet_id=TARGET_SHEET_ID,
+    month="2026-11"
 ):
     """Cập nhật toàn bộ các sheet trong Google Sheet SSOT qua Sheets API."""
     token = get_sheets_token()
@@ -59,24 +60,38 @@ def sync_google_sheet(
     }
 
     print("\n" + "=" * 70)
-    print(f"BẮT ĐẦU ĐỒNG BỘ CLOUD-TO-CLOUD GOOGLE SHEETS API (MTD {days_elapsed}D)")
+    print(f"BẮT ĐẦU ĐỒNG BỘ CLOUD-TO-CLOUD GOOGLE SHEETS API ({month} MTD {days_elapsed}D)")
     print(f"Spreadsheet ID: {spreadsheet_id}")
     print("=" * 70)
+
+    # Cấu hình cột theo tháng
+    if month == "2026-11":
+        col_mtd = "L"
+        col_full = "U"
+        col_pivot = "J"
+        col_pivot_idx = 9
+        baseline_col_idx = 8
+    else:
+        col_mtd = "K"
+        col_full = "T"
+        col_pivot = "I"
+        col_pivot_idx = 8
+        baseline_col_idx = 7
 
     # 1. Chuẩn bị Batch Update cho các cell chính
     updates = []
 
-    # Overall Performance: A1, K5, K9:K13, K15:K20, T9:T13, T15:T19
+    # Overall Performance: A1, MTD 5, 9:13, 15:20, Full Month 9:13, 15:19
     updates.append({
         "range": "'Overall Performance'!A1",
         "values": [[f"Update to: {days_elapsed}"]]
     })
     updates.append({
-        "range": "'Overall Performance'!K5",
-        "values": [["=SUM(K9:K13)"]]
+        "range": f"'Overall Performance'!{col_mtd}5",
+        "values": [[f"=SUM({col_mtd}9:{col_mtd}13)"]]
     })
     updates.append({
-        "range": "'Overall Performance'!K9:K13",
+        "range": f"'Overall Performance'!{col_mtd}9:{col_mtd}13",
         "values": [
             [organic_pv],
             [paid_pv],
@@ -86,18 +101,18 @@ def sync_google_sheet(
         ]
     })
     updates.append({
-        "range": "'Overall Performance'!K15:K20",
+        "range": f"'Overall Performance'!{col_mtd}15:{col_mtd}20",
         "values": [
-            ["=K9/$K$5"],
-            ["=K10/$K$5"],
-            ["=K11/$K$5"],
-            ["=K12/$K$5"],
-            ["=K13/$K$5"],
-            ["=K15+K17+K18"]
+            [f"={col_mtd}9/${col_mtd}$5"],
+            [f"={col_mtd}10/${col_mtd}$5"],
+            [f"={col_mtd}11/${col_mtd}$5"],
+            [f"={col_mtd}12/${col_mtd}$5"],
+            [f"={col_mtd}13/${col_mtd}$5"],
+            [f"={col_mtd}15+{col_mtd}17+{col_mtd}18+{col_mtd}19"]
         ]
     })
     updates.append({
-        "range": "'Overall Performance'!T9:T13",
+        "range": f"'Overall Performance'!{col_full}9:{col_full}13",
         "values": [
             [organic_pv],
             [paid_pv],
@@ -107,23 +122,23 @@ def sync_google_sheet(
         ]
     })
     updates.append({
-        "range": "'Overall Performance'!T15:T19",
+        "range": f"'Overall Performance'!{col_full}15:{col_full}19",
         "values": [
-            ["=T9/$T$5"],
-            ["=T10/$T$5"],
-            ["=T11/$T$5"],
-            ["=T12/$T$5"],
-            ["=T13/$T$5"]
+            [f"={col_full}9/${col_full}$5"],
+            [f"={col_full}10/${col_full}$5"],
+            [f"={col_full}11/${col_full}$5"],
+            [f"={col_full}12/${col_full}$5"],
+            [f"={col_full}13/${col_full}$5"]
         ]
     })
 
-    # PaidNonPaid: A1, K9:K13
+    # PaidNonPaid: A1, MTD 9:13
     updates.append({
         "range": "'PaidNonPaid'!A1",
         "values": [[f"Update to: {days_elapsed}"]]
     })
     updates.append({
-        "range": "'PaidNonPaid'!K9:K13",
+        "range": f"'PaidNonPaid'!{col_mtd}9:{col_mtd}13",
         "values": [
             [organic_pv],
             [direct_pv],
@@ -133,13 +148,13 @@ def sync_google_sheet(
         ]
     })
 
-    # Target: A1, K10:K14
+    # Target: A1, MTD 10:14
     updates.append({
         "range": "'Target'!A1",
         "values": [[f"Update to: {days_elapsed}"]]
     })
     updates.append({
-        "range": "'Target'!K10:K14",
+        "range": f"'Target'!{col_mtd}10:{col_mtd}14",
         "values": [
             [organic_pv],
             [paid_pv],
@@ -213,7 +228,7 @@ def sync_google_sheet(
     })
 
     for pivot_sheet in ["MTD Pivot", "Full month Pivot"]:
-        q_range = urllib.parse.quote(f"'{pivot_sheet}'!A:I")
+        q_range = urllib.parse.quote(f"'{pivot_sheet}'!A:{col_pivot}")
         url_get = f"https://sheets.googleapis.com/v4/spreadsheets/{spreadsheet_id}/values/{q_range}?valueRenderOption=UNFORMATTED_VALUE"
         req_get = urllib.request.Request(url_get, headers=headers)
         with urllib.request.urlopen(req_get) as resp:
@@ -222,12 +237,11 @@ def sync_google_sheet(
         if not rows or len(rows) < 3:
             continue
 
-        # Cột I là index 8 (Tháng 10/2026)
-        col_idx = 8
         sum_items = 0
         grand_total_row_idx = None
         others_row_idx = None
 
+        # Tính tổng cột hiện tại (nếu là tháng mới chưa có số, dùng baseline tháng trước làm tỷ trọng)
         for r_idx, r in enumerate(rows):
             if r_idx < 2:
                 continue
@@ -238,8 +252,19 @@ def sync_google_sheet(
             if name == "Others" and others_row_idx is None:
                 others_row_idx = r_idx
 
-            val = r[col_idx] if len(r) > col_idx and isinstance(r[col_idx], (int, float)) else 0
+            val = r[col_pivot_idx] if len(r) > col_pivot_idx and isinstance(r[col_pivot_idx], (int, float)) else 0
             sum_items += val
+
+        use_baseline = (sum_items == 0)
+        if use_baseline:
+            # Dùng trọng số tháng trước (baseline_col_idx)
+            for r_idx, r in enumerate(rows):
+                if r_idx < 2:
+                    continue
+                name = str(r[0]).strip() if r and len(r) > 0 else ""
+                if name.lower() != "grand total":
+                    val = r[baseline_col_idx] if len(r) > baseline_col_idx and isinstance(r[baseline_col_idx], (int, float)) else 0
+                    sum_items += val
 
         scale_factor = total_pv / sum_items if sum_items > 0 else 1.0
 
@@ -247,14 +272,15 @@ def sync_google_sheet(
         new_sum = 0
         for r_idx, r in enumerate(rows):
             if r_idx < 2:
-                new_col_values.append([r[col_idx] if len(r) > col_idx else ""])
+                new_col_values.append([r[col_pivot_idx] if len(r) > col_pivot_idx else ""])
                 continue
             name = str(r[0]).strip() if r and len(r) > 0 else ""
             if name.lower() == "grand total":
                 new_col_values.append([total_pv])
                 continue
 
-            val = r[col_idx] if len(r) > col_idx and isinstance(r[col_idx], (int, float)) else 0
+            ref_idx = baseline_col_idx if use_baseline else col_pivot_idx
+            val = r[ref_idx] if len(r) > ref_idx and isinstance(r[ref_idx], (int, float)) else 0
             scaled_val = round(val * scale_factor)
             new_col_values.append([scaled_val])
             new_sum += scaled_val
@@ -265,7 +291,7 @@ def sync_google_sheet(
             new_col_values[others_row_idx][0] += diff
 
         updates.append({
-            "range": f"'{pivot_sheet}'!I1:I{len(new_col_values)}",
+            "range": f"'{pivot_sheet}'!{col_pivot}1:{col_pivot}{len(new_col_values)}",
             "values": new_col_values
         })
 

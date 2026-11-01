@@ -123,14 +123,29 @@ def rescale_pivot_column(ws, col, total_pv):
             ws.cell(r, col, total_pv)
             break
 
-# Các ô cố định ở sheet 3/4/5/8 (cột K/T/H, mốc so sánh 3764435 / 2654786 / 863885) được dựng cho layout T10/2026.
-# Tháng khác bỏ qua phase XML này cho tới khi layout sheet được cập nhật, tránh ghi số tháng mới đè lên cột T10.
-XML_LAYOUT_MONTH = "2026-10"
+# Các layout sheet 3/4/5 được hỗ trợ patch cố định
+XML_LAYOUT_MONTHS = ["2026-10", "2026-11"]
+TARGET_OCT = 3665607
+TARGET_NOV = 3829155
 
 def patch_excel_dynamic(file_path, month_str, target_pv, days_elapsed, total_pv, organic_pv, paid_pv, direct_pv, referral_pv, others_pv, non_paid_pv, hubs_pv, cinema_sub):
     if not os.path.exists(file_path):
         print(f"Bỏ qua file không tồn tại: {file_path}")
         return
+
+    # Cấu hình theo tháng
+    if month_str == "2026-11":
+        col_mtd = "L"
+        col_full = "U"
+        prev_mtd = "K"
+        prev_full = "T"
+        prev_actual = 3602023
+    else:
+        col_mtd = "K"
+        col_full = "T"
+        prev_mtd = "J"
+        prev_full = "S"
+        prev_actual = 3952859
 
     # PHASE 1: Openpyxl updates for Pivots, ArrayFormula, and Active Tab
     wb = openpyxl.load_workbook(file_path)
@@ -154,8 +169,8 @@ def patch_excel_dynamic(file_path, month_str, target_pv, days_elapsed, total_pv,
     wb.save(file_path)
 
     # PHASE 2: XML Zipfile updates for Sheet 3, 4, 5, 8
-    if month_str != XML_LAYOUT_MONTH:
-        print(f"[Excel] Sheet Overall/PaidNonPaid/Target/Cinema đang dựng cho {XML_LAYOUT_MONTH}: bỏ qua patch ô cố định cho {month_str}.")
+    if month_str not in XML_LAYOUT_MONTHS:
+        print(f"[Excel] Sheet Overall/PaidNonPaid/Target/Cinema chưa dựng cho {month_str}: bỏ qua patch XML.")
         print(f"✓ Đã patch pivot Excel SSOT: {file_path}")
         return
     temp_path = str(file_path) + ".tmp"
@@ -169,64 +184,65 @@ def patch_excel_dynamic(file_path, month_str, target_pv, days_elapsed, total_pv,
             if item.filename == "xl/worksheets/sheet3.xml":
                 root = ET.fromstring(content)
                 update_cell(root, "A1", formula='"Update to: " & DAY(NOW())', val=f"Update to: {days_elapsed}")
-                update_cell(root, "K5", formula="SUM(K9:K13)", val=str(total_pv))
-                update_cell(root, "K6", formula="K5-J5", val=str(total_pv - 3764435))
-                update_cell(root, "K7", formula="IFERROR((K5/J5)-1, 0)", val=str(round((total_pv / 3764435) - 1, 10)))
-                update_cell(root, "K9", formula="", val=str(organic_pv))
-                update_cell(root, "K10", formula="", val=str(paid_pv))
-                update_cell(root, "K11", formula="", val=str(direct_pv))
-                update_cell(root, "K12", formula="", val=str(referral_pv))
-                update_cell(root, "K13", formula="", val=str(others_pv))
-                update_cell(root, "K15", formula="K9/$K$5", val=str(round(organic_pv / total_pv, 10)))
-                update_cell(root, "K16", formula="K10/$K$5", val=str(round(paid_pv / total_pv, 10)))
-                update_cell(root, "K17", formula="K11/$K$5", val=str(round(direct_pv / total_pv, 10)))
-                update_cell(root, "K18", formula="K12/$K$5", val=str(round(referral_pv / total_pv, 10)))
-                update_cell(root, "K19", formula="K13/$K$5", val=str(round(others_pv / total_pv, 10)))
-                update_cell(root, "K20", formula="K15+K17+K18", val=str(round((organic_pv + direct_pv + referral_pv) / total_pv, 10)))
-                update_cell(root, "T5", formula="SUM(T9:T13)", val=str(total_pv))
-                update_cell(root, "T6", formula="T5-S5", val=str(total_pv - 2654786))
-                update_cell(root, "T7", formula="IFERROR((T5/S5)-1, 0)", val=str(round((total_pv / 2654786) - 1, 10)))
-                update_cell(root, "T9", formula="", val=str(organic_pv))
-                update_cell(root, "T10", formula="", val=str(paid_pv))
-                update_cell(root, "T11", formula="", val=str(direct_pv))
-                update_cell(root, "T12", formula="", val=str(referral_pv))
-                update_cell(root, "T13", formula="", val=str(others_pv))
-                update_cell(root, "T15", formula="T9/$T$5", val=str(round(organic_pv / total_pv, 10)))
-                update_cell(root, "T16", formula="T10/$T$5", val=str(round(paid_pv / total_pv, 10)))
-                update_cell(root, "T17", formula="T11/$T$5", val=str(round(direct_pv / total_pv, 10)))
-                update_cell(root, "T18", formula="T12/$T$5", val=str(round(referral_pv / total_pv, 10)))
-                update_cell(root, "T19", formula="T13/$T$5", val=str(round(others_pv / total_pv, 10)))
+                update_cell(root, f"{col_mtd}5", formula=f"SUM({col_mtd}9:{col_mtd}13)", val=str(total_pv))
+                update_cell(root, f"{col_mtd}6", formula=f"{col_mtd}5-{prev_mtd}5", val=str(total_pv - prev_actual))
+                update_cell(root, f"{col_mtd}7", formula=f"IFERROR(({col_mtd}5/{prev_mtd}5)-1, 0)", val=str(round((total_pv / max(1, prev_actual)) - 1, 10)))
+                update_cell(root, f"{col_mtd}9", formula="", val=str(organic_pv))
+                update_cell(root, f"{col_mtd}10", formula="", val=str(paid_pv))
+                update_cell(root, f"{col_mtd}11", formula="", val=str(direct_pv))
+                update_cell(root, f"{col_mtd}12", formula="", val=str(referral_pv))
+                update_cell(root, f"{col_mtd}13", formula="", val=str(others_pv))
+                update_cell(root, f"{col_mtd}15", formula=f"{col_mtd}9/${col_mtd}$5", val=str(round(organic_pv / max(1, total_pv), 10)))
+                update_cell(root, f"{col_mtd}16", formula=f"{col_mtd}10/${col_mtd}$5", val=str(round(paid_pv / max(1, total_pv), 10)))
+                update_cell(root, f"{col_mtd}17", formula=f"{col_mtd}11/${col_mtd}$5", val=str(round(direct_pv / max(1, total_pv), 10)))
+                update_cell(root, f"{col_mtd}18", formula=f"{col_mtd}12/${col_mtd}$5", val=str(round(referral_pv / max(1, total_pv), 10)))
+                update_cell(root, f"{col_mtd}19", formula=f"{col_mtd}13/${col_mtd}$5", val=str(round(others_pv / max(1, total_pv), 10)))
+                update_cell(root, f"{col_mtd}20", formula=f"{col_mtd}15+{col_mtd}17+{col_mtd}18+{col_mtd}19", val=str(round((organic_pv + direct_pv + referral_pv + others_pv) / max(1, total_pv), 10)))
+                
+                update_cell(root, f"{col_full}5", formula=f"SUM({col_full}9:{col_full}13)", val=str(total_pv))
+                update_cell(root, f"{col_full}6", formula=f"{col_full}5-{prev_full}5", val=str(total_pv - prev_actual))
+                update_cell(root, f"{col_full}7", formula=f"IFERROR(({col_full}5/{prev_full}5)-1, 0)", val=str(round((total_pv / max(1, prev_actual)) - 1, 10)))
+                update_cell(root, f"{col_full}9", formula="", val=str(organic_pv))
+                update_cell(root, f"{col_full}10", formula="", val=str(paid_pv))
+                update_cell(root, f"{col_full}11", formula="", val=str(direct_pv))
+                update_cell(root, f"{col_full}12", formula="", val=str(referral_pv))
+                update_cell(root, f"{col_full}13", formula="", val=str(others_pv))
+                update_cell(root, f"{col_full}15", formula=f"{col_full}9/${col_full}$5", val=str(round(organic_pv / max(1, total_pv), 10)))
+                update_cell(root, f"{col_full}16", formula=f"{col_full}10/${col_full}$5", val=str(round(paid_pv / max(1, total_pv), 10)))
+                update_cell(root, f"{col_full}17", formula=f"{col_full}11/${col_full}$5", val=str(round(direct_pv / max(1, total_pv), 10)))
+                update_cell(root, f"{col_full}18", formula=f"{col_full}12/${col_full}$5", val=str(round(referral_pv / max(1, total_pv), 10)))
+                update_cell(root, f"{col_full}19", formula=f"{col_full}13/${col_full}$5", val=str(round(others_pv / max(1, total_pv), 10)))
                 content = ET.tostring(root, encoding="utf-8", xml_declaration=True)
 
             # Sheet 4: PaidNonPaid
             elif item.filename == "xl/worksheets/sheet4.xml":
                 root = ET.fromstring(content)
                 update_cell(root, "A1", formula='"Update to: " & DAY(NOW())', val=f"Update to: {days_elapsed}")
-                update_cell(root, "K5", formula="'Overall Performance'!K5", val=str(total_pv))
-                update_cell(root, "K6", formula="K5-J5", val=str(total_pv - 3764435))
-                update_cell(root, "K7", formula="IFERROR((K5/J5)-1, 0)", val=str(round((total_pv / 3764435) - 1, 10)))
-                update_cell(root, "K8", formula="SUM(K9:K12)", val=str(non_paid_pv))
-                update_cell(root, "K9", formula="", val=str(organic_pv))
-                update_cell(root, "K10", formula="", val=str(direct_pv))
-                update_cell(root, "K11", formula="", val=str(referral_pv))
-                update_cell(root, "K12", formula="", val=str(others_pv))
-                update_cell(root, "K13", formula="", val=str(paid_pv))
+                update_cell(root, f"{col_mtd}5", formula=f"'Overall Performance'!{col_mtd}5", val=str(total_pv))
+                update_cell(root, f"{col_mtd}6", formula=f"{col_mtd}5-{prev_mtd}5", val=str(total_pv - prev_actual))
+                update_cell(root, f"{col_mtd}7", formula=f"IFERROR(({col_mtd}5/{prev_mtd}5)-1, 0)", val=str(round((total_pv / max(1, prev_actual)) - 1, 10)))
+                update_cell(root, f"{col_mtd}8", formula=f"SUM({col_mtd}9:{col_mtd}12)", val=str(non_paid_pv))
+                update_cell(root, f"{col_mtd}9", formula="", val=str(organic_pv))
+                update_cell(root, f"{col_mtd}10", formula="", val=str(direct_pv))
+                update_cell(root, f"{col_mtd}11", formula="", val=str(referral_pv))
+                update_cell(root, f"{col_mtd}12", formula="", val=str(others_pv))
+                update_cell(root, f"{col_mtd}13", formula="", val=str(paid_pv))
                 content = ET.tostring(root, encoding="utf-8", xml_declaration=True)
 
             # Sheet 5: Target
             elif item.filename == "xl/worksheets/sheet5.xml":
                 root = ET.fromstring(content)
                 update_cell(root, "A1", formula='"Update to: " & DAY(NOW())', val=f"Update to: {days_elapsed}")
-                update_cell(root, "K6", formula="'Overall Performance'!K5", val=str(total_pv))
-                update_cell(root, "K7", formula="K6-J6", val=str(total_pv - 3764435))
-                update_cell(root, "K8", formula="IFERROR((K6/J6)-1, 0)", val=str(round((total_pv / 3764435) - 1, 10)))
+                update_cell(root, f"{col_mtd}6", formula=f"'Overall Performance'!{col_mtd}5", val=str(total_pv))
+                update_cell(root, f"{col_mtd}7", formula=f"{col_mtd}6-{prev_mtd}6", val=str(total_pv - prev_actual))
+                update_cell(root, f"{col_mtd}8", formula=f"IFERROR(({col_mtd}6/{prev_mtd}6)-1, 0)", val=str(round((total_pv / max(1, prev_actual)) - 1, 10)))
                 prog_pct = round((total_pv / target_pv) * 100) if target_pv else 0
-                update_cell(root, "K9", formula='IFERROR(REPT("█", ROUND(K6/K3*4,0)) & " " & TEXT(K6/K3,"0%"), "")', val=f"███ {prog_pct}%")
-                update_cell(root, "K10", formula="", val=str(organic_pv))
-                update_cell(root, "K11", formula="", val=str(paid_pv))
-                update_cell(root, "K12", formula="", val=str(direct_pv))
-                update_cell(root, "K13", formula="", val=str(referral_pv))
-                update_cell(root, "K14", formula="", val=str(others_pv))
+                update_cell(root, f"{col_mtd}9", formula=f'IFERROR(REPT("█", ROUND({col_mtd}6/{col_mtd}3*4,0)) & " " & TEXT({col_mtd}6/{col_mtd}3,"0%"), "")', val=f"█ {prog_pct}%")
+                update_cell(root, f"{col_mtd}10", formula="", val=str(organic_pv))
+                update_cell(root, f"{col_mtd}11", formula="", val=str(paid_pv))
+                update_cell(root, f"{col_mtd}12", formula="", val=str(direct_pv))
+                update_cell(root, f"{col_mtd}13", formula="", val=str(referral_pv))
+                update_cell(root, f"{col_mtd}14", formula="", val=str(others_pv))
                 content = ET.tostring(root, encoding="utf-8", xml_declaration=True)
 
             # Sheet 8: Cinema
@@ -270,9 +286,9 @@ def main():
         month_str = args.month
         year_val, month_val = map(int, month_str.split("-"))
     else:
-        # Nếu hôm nay là ngày 1 đầu tháng, hoặc mtd=31 khi now.day == 1, mặc định sync tháng trước
-        if now.day == 1 or (args.mtd and args.mtd >= 28 and now.day < 5):
-            prev_month = now - timedelta(days=1)
+        # Nếu chỉ định mtd >= 28 trong mấy ngày đầu tháng, ưu tiên sync chốt tháng trước
+        if args.mtd and args.mtd >= 28 and now.day < 5:
+            prev_month = now - timedelta(days=5)
             month_str = f"{prev_month.year}-{prev_month.month:02d}"
             year_val, month_val = prev_month.year, prev_month.month
         else:
@@ -285,15 +301,14 @@ def main():
     if args.mtd:
         days_elapsed = args.mtd
     else:
-        yesterday = now - timedelta(days=1)
-        days_elapsed = yesterday.day
+        days_elapsed = max(1, (now - timedelta(days=1)).day if now.day > 1 else 1)
 
     days_elapsed = min(days_elapsed, days_in_month)
     start_date = f"{month_str}-01"
     end_date = f"{month_str}-{days_elapsed:02d}"
     # Tháng đủ ngày là tháng trọn: dashboard không còn "running" (khớp scripts/build-dashboard-data.py bên Hubs)
     closed = days_elapsed >= days_in_month
-    report_name = f"monthly_{month_val:02d}_{year_val}_consolidated.json"
+    report_name = f"monthly_{month_val:02d}_{year_val}_consolidated.json" if closed else f"monthly_{month_val:02d}_{year_val}_mtd_{days_elapsed}d.json"
 
     web_data_path = HUBS_REPO / "lib" / "dashboard" / "web-data.json"
     if not web_data_path.exists():
@@ -681,7 +696,8 @@ def main():
             others_pv=others_pv,
             non_paid_pv=non_paid_pv,
             hubs_pv=hubs_pv,
-            cinema_sub=cinema_sub
+            cinema_sub=cinema_sub,
+            month=month_str
         )
 
         # Đồng bộ bảng Click to app by Project trong Projects Detail Flow
