@@ -41,8 +41,6 @@ sys.path.insert(0, str(BASE_DIR))
 from scripts.sync_ga4_to_hubs import get_access_token, PROPERTY_ID, run_ga4_report
 from scripts.build_full_funnel_matrix import build_theme_matcher
 
-TARGET_OCT = 3665607
-
 NS_MAIN = "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
 ET.register_namespace("", NS_MAIN)
 
@@ -85,65 +83,64 @@ def update_cell(root, coord, formula=None, val=None):
         elif "t" in c.attrib:
             del c.attrib["t"]
 
-def patch_excel_dynamic(file_path, days_elapsed, total_pv, organic_pv, paid_pv, direct_pv, referral_pv, others_pv, non_paid_pv, hubs_pv, cinema_sub):
+def month_col(ws, month_str):
+    """Cột của tháng trong pivot, dò theo header hàng 2 (datetime đầu tháng). Không có trả None."""
+    year, month = map(int, month_str.split("-"))
+    for c in range(1, ws.max_column + 1):
+        v = ws.cell(2, c).value
+        if isinstance(v, datetime) and v.year == year and v.month == month:
+            return c
+    return None
+
+def rescale_pivot_column(ws, col, total_pv):
+    """Co giãn cột tháng cho khớp total_pv, phần lệch làm tròn dồn vào dòng Others.
+    Cột tháng mới còn toàn 0 thì lấy tỷ trọng cột tháng trước làm gốc, tránh dồn hết vào Others."""
+    rows = [
+        r for r in range(3, ws.max_row + 1)
+        if str(ws.cell(r, 1).value).strip().lower() != "grand total"
+    ]
+    def col_vals(c):
+        return {r: ws.cell(r, c).value for r in rows if isinstance(ws.cell(r, c).value, (int, float))}
+
+    base = col_vals(col)
+    if sum(base.values()) <= 0 and col > 4:
+        base = col_vals(col - 1)
+    s = sum(base.values())
+    scale = total_pv / s if s > 0 else 1.0
+
+    new_s = 0
+    for r, val in base.items():
+        new_val = round(val * scale)
+        ws.cell(r, col, new_val)
+        new_s += new_val
+    diff = total_pv - new_s
+    for r in range(3, ws.max_row + 1):
+        if str(ws.cell(r, 1).value).strip() == "Others":
+            ws.cell(r, col, (ws.cell(r, col).value or 0) + diff)
+            break
+    for r in range(3, ws.max_row + 1):
+        if str(ws.cell(r, 1).value).strip().lower() == "grand total":
+            ws.cell(r, col, total_pv)
+            break
+
+# Các ô cố định ở sheet 3/4/5/8 (cột K/T/H, mốc so sánh 3764435 / 2654786 / 863885) được dựng cho layout T10/2026.
+# Tháng khác bỏ qua phase XML này cho tới khi layout sheet được cập nhật, tránh ghi số tháng mới đè lên cột T10.
+XML_LAYOUT_MONTH = "2026-10"
+
+def patch_excel_dynamic(file_path, month_str, target_pv, days_elapsed, total_pv, organic_pv, paid_pv, direct_pv, referral_pv, others_pv, non_paid_pv, hubs_pv, cinema_sub):
     if not os.path.exists(file_path):
         print(f"Bỏ qua file không tồn tại: {file_path}")
         return
 
     # PHASE 1: Openpyxl updates for Pivots, ArrayFormula, and Active Tab
     wb = openpyxl.load_workbook(file_path)
-    ws_mtd = wb["MTD Pivot"]
-    ws_full = wb["Full month Pivot"]
-    col_oct = 9
-
-    # Sum of Col 9 items excluding Grand Total
-    s_mtd = sum(
-        ws_mtd.cell(r, col_oct).value for r in range(3, ws_mtd.max_row + 1)
-        if isinstance(ws_mtd.cell(r, col_oct).value, (int, float)) and str(ws_mtd.cell(r, 1).value).strip().lower() != "grand total"
-    )
-    scale_mtd = total_pv / s_mtd if s_mtd > 0 else 1.0
-
-    new_s_mtd = 0
-    for r in range(3, ws_mtd.max_row + 1):
-        val = ws_mtd.cell(r, col_oct).value
-        pname = str(ws_mtd.cell(r, 1).value).strip()
-        if isinstance(val, (int, float)) and pname.lower() != "grand total":
-            new_val = round(val * scale_mtd)
-            ws_mtd.cell(r, col_oct, new_val)
-            new_s_mtd += new_val
-    diff_mtd = total_pv - new_s_mtd
-    for r in range(3, ws_mtd.max_row + 1):
-        if str(ws_mtd.cell(r, 1).value).strip() == "Others":
-            ws_mtd.cell(r, col_oct, ws_mtd.cell(r, col_oct).value + diff_mtd)
-            break
-    for r in range(3, ws_mtd.max_row + 1):
-        if str(ws_mtd.cell(r, 1).value).strip().lower() == "grand total":
-            ws_mtd.cell(r, col_oct, total_pv)
-            break
-
-    s_full = sum(
-        ws_full.cell(r, col_oct).value for r in range(3, ws_full.max_row + 1)
-        if isinstance(ws_full.cell(r, col_oct).value, (int, float)) and str(ws_full.cell(r, 1).value).strip().lower() != "grand total"
-    )
-    scale_full = total_pv / s_full if s_full > 0 else 1.0
-
-    new_s_full = 0
-    for r in range(3, ws_full.max_row + 1):
-        val = ws_full.cell(r, col_oct).value
-        pname = str(ws_full.cell(r, 1).value).strip()
-        if isinstance(val, (int, float)) and pname.lower() != "grand total":
-            new_val = round(val * scale_full)
-            ws_full.cell(r, col_oct, new_val)
-            new_s_full += new_val
-    diff_full = total_pv - new_s_full
-    for r in range(3, ws_full.max_row + 1):
-        if str(ws_full.cell(r, 1).value).strip() == "Others":
-            ws_full.cell(r, col_oct, ws_full.cell(r, col_oct).value + diff_full)
-            break
-    for r in range(3, ws_full.max_row + 1):
-        if str(ws_full.cell(r, 1).value).strip().lower() == "grand total":
-            ws_full.cell(r, col_oct, total_pv)
-            break
+    for sheet_name in ("MTD Pivot", "Full month Pivot"):
+        ws = wb[sheet_name]
+        col = month_col(ws, month_str)
+        if col is None:
+            print(f"[Excel] '{sheet_name}' chưa có cột {month_str}: bỏ qua patch pivot (cần refresh pivot từ BigQuery).")
+            continue
+        rescale_pivot_column(ws, col, total_pv)
 
     # Formula Array for Projects Detail Flow Q3
     ws_proj = wb["Projects Detail Flow"]
@@ -157,6 +154,10 @@ def patch_excel_dynamic(file_path, days_elapsed, total_pv, organic_pv, paid_pv, 
     wb.save(file_path)
 
     # PHASE 2: XML Zipfile updates for Sheet 3, 4, 5, 8
+    if month_str != XML_LAYOUT_MONTH:
+        print(f"[Excel] Sheet Overall/PaidNonPaid/Target/Cinema đang dựng cho {XML_LAYOUT_MONTH}: bỏ qua patch ô cố định cho {month_str}.")
+        print(f"✓ Đã patch pivot Excel SSOT: {file_path}")
+        return
     temp_path = str(file_path) + ".tmp"
     cinema_tot = hubs_pv.get("cinema", 0)
 
@@ -219,7 +220,7 @@ def patch_excel_dynamic(file_path, days_elapsed, total_pv, organic_pv, paid_pv, 
                 update_cell(root, "K6", formula="'Overall Performance'!K5", val=str(total_pv))
                 update_cell(root, "K7", formula="K6-J6", val=str(total_pv - 3764435))
                 update_cell(root, "K8", formula="IFERROR((K6/J6)-1, 0)", val=str(round((total_pv / 3764435) - 1, 10)))
-                prog_pct = round((total_pv / TARGET_OCT) * 100)
+                prog_pct = round((total_pv / target_pv) * 100) if target_pv else 0
                 update_cell(root, "K9", formula='IFERROR(REPT("█", ROUND(K6/K3*4,0)) & " " & TEXT(K6/K3,"0%"), "")', val=f"███ {prog_pct}%")
                 update_cell(root, "K10", formula="", val=str(organic_pv))
                 update_cell(root, "K11", formula="", val=str(paid_pv))
@@ -253,8 +254,6 @@ def patch_excel_dynamic(file_path, days_elapsed, total_pv, organic_pv, paid_pv, 
 
     os.replace(temp_path, file_path)
     print(f"✓ Đã patch động Excel SSOT: {file_path}")
-
-TARGET_OCT = 3665607
 
 def main():
     start_time = time.time()
@@ -292,6 +291,22 @@ def main():
     days_elapsed = min(days_elapsed, days_in_month)
     start_date = f"{month_str}-01"
     end_date = f"{month_str}-{days_elapsed:02d}"
+    # Tháng đủ ngày là tháng trọn: dashboard không còn "running" (khớp scripts/build-dashboard-data.py bên Hubs)
+    closed = days_elapsed >= days_in_month
+    report_name = f"monthly_{month_val:02d}_{year_val}_consolidated.json"
+
+    web_data_path = HUBS_REPO / "lib" / "dashboard" / "web-data.json"
+    if not web_data_path.exists():
+        sys.exit(f"Không thấy {web_data_path}: cần repo Hubs để lấy target tháng và ghi dashboard.")
+    with open(web_data_path, "r", encoding="utf-8") as f:
+        web_data = json.load(f)
+    target_pv = web_data.get("monthTargets", {}).get(month_str)
+    if not target_pv:
+        print(f"⚠ Chưa có target {month_str} trong web-data.json monthTargets: bỏ qua các chỉ số % target.")
+    # Target hub: lấy của tháng sync, chưa có thì dùng tháng gần nhất trước đó
+    hub_targets_all = web_data.get("hubTargets", {})
+    hub_target_month = max((m for m in hub_targets_all if m <= month_str), default=None)
+    hub_targets = hub_targets_all.get(hub_target_month, {}) if hub_target_month else {}
 
     print("=" * 75)
     print(f"KHỞI CHẠY PIPELINE GA4 ALL-IN-ONE (CHU KỲ: {start_date} -> {end_date})")
@@ -473,23 +488,26 @@ def main():
 
     # Tính Pacing & Forecast
     daily_pace = round(total_pv / days_elapsed, 2)
-    daily_needed = round((TARGET_OCT - total_pv) / max(1, days_in_month - days_elapsed), 2)
     forecast_31d = round(daily_pace * days_in_month, 2)
-    forecast_pct = round((forecast_31d / TARGET_OCT) * 100, 2)
-    progress_pct = round((total_pv / TARGET_OCT) * 100, 2)
+    if target_pv:
+        daily_needed = round((target_pv - total_pv) / max(1, days_in_month - days_elapsed), 2)
+        forecast_pct = round((forecast_31d / target_pv) * 100, 2)
+        progress_pct = round((total_pv / target_pv) * 100, 2)
+    else:
+        daily_needed = forecast_pct = progress_pct = None
 
     # 5. Cập nhật các đích dữ liệu (SSOT & Hubs)
     print("[5/6] Ghi dữ liệu đồng bộ vào SSOT Knowledge Base & Hubs /dashboard...")
     
     # 5.1 Snapshot JSON (Chỉ duy nhất 1 file SSOT consolidated của tháng, không sinh file mtd_XXd lẻ)
-    consolidated_path = BASE_DIR / "07_REPORTS" / "data" / "monthly_10_2026_consolidated.json"
+    consolidated_path = BASE_DIR / "07_REPORTS" / "data" / report_name
     snapshot_payload = {
         "file_source": f"GA4 Data API (Property {PROPERTY_ID})",
         "read_timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-        "report_type": f"MTD {days_elapsed} Ngày (01/10 - {days_elapsed}/10/2026)",
+        "report_type": f"MTD {days_elapsed} Ngày (01/{month_val:02d} - {days_elapsed:02d}/{month_val:02d}/{year_val})",
         "days_elapsed": days_elapsed,
         "days_in_month": days_in_month,
-        "target_oct_pv": TARGET_OCT,
+        "target_pv": target_pv,
         "actual_mtd_pv": total_pv,
         "progress_pct": progress_pct,
         "daily_pace": daily_pace,
@@ -507,12 +525,12 @@ def main():
             "non_paid_total": {"pv": non_paid_pv, "pct": round(non_paid_pv / total_pv * 100, 2)}
         },
         "hubs": {
-            "cinema": {"pv": hubs_pv["cinema"], "target": 1117378, "pct": round(hubs_pv["cinema"] / 1117378 * 100, 2)},
-            "financial": {"pv": hubs_pv["financial"], "target": 450000, "pct": round(hubs_pv["financial"] / 450000 * 100, 2)},
-            "new_user": {"pv": hubs_pv["new_user"], "target": 300000, "pct": round(hubs_pv["new_user"] / 300000 * 100, 2)},
-            "vehicle": {"pv": hubs_pv["vehicle"], "target": 100000, "pct": round(hubs_pv["vehicle"] / 100000 * 100, 2)},
-            "insurance": {"pv": hubs_pv["insurance"], "target": 50000, "pct": round(hubs_pv["insurance"] / 50000 * 100, 2)},
-            "student": {"pv": hubs_pv["student"], "target": 100000, "pct": round(hubs_pv["student"] / 100000 * 100, 2)}
+            h: {
+                "pv": hubs_pv[h],
+                "target": hub_targets.get(h),
+                "pct": round(hubs_pv[h] / hub_targets[h] * 100, 2) if hub_targets.get(h) else None,
+            }
+            for h in ("cinema", "financial", "new_user", "vehicle", "insurance", "student")
         },
         "cinema_breakdown": {
             "Trang Rạp phim": cinema_sub["Trang Rạp phim"],
@@ -527,42 +545,99 @@ def main():
     with open(consolidated_path, "w", encoding="utf-8") as f:
         json.dump(snapshot_payload, f, ensure_ascii=False, indent=2)
 
-    # 5.2 Summary JSON
+    # 5.2 Web-data.json cho /dashboard
+    months = web_data["months"]
+    if month_str not in months:
+        # Tháng mới chưa có trong dashboard: nối thêm cột rỗng cho mọi project
+        months.append(month_str)
+        for p in web_data["projects"]:
+            p["full"].append([0, 0, 0, 0, 0])
+            p["mtd"].append([0, 0, 0, 0, 0])
+    m_idx = months.index(month_str)
+    web_data["running"] = None if closed else {
+        "month": month_str,
+        "daysElapsed": days_elapsed,
+        "daysInMonth": days_in_month,
+        "report": report_name
+    }
+    web_data["generatedAt"] = datetime.now().isoformat()
+
+    cur_ch = [0, 0, 0, 0, 0]
+    for p in web_data["projects"]:
+        for i in range(5):
+            cur_ch[i] += p["full"][m_idx][i]
+    # Kênh của tháng còn toàn 0 (tháng mới): phân bổ theo tỷ trọng project của tháng trước
+    base_idx = [m_idx if cur_ch[i] > 0 or m_idx == 0 else m_idx - 1 for i in range(5)]
+    base_ch = [sum(p["full"][base_idx[i]][i] for p in web_data["projects"]) for i in range(5)]
+    tgt_ch = [organic_pv, paid_pv, direct_pv, referral_pv, others_pv]
+    scales = [tgt_ch[i] / base_ch[i] if base_ch[i] > 0 else 1.0 for i in range(5)]
+
+    new_ch = [0, 0, 0, 0, 0]
+    for p in web_data["projects"]:
+        for i in range(5):
+            val = round(p["full"][base_idx[i]][i] * scales[i])
+            p["full"][m_idx][i] = val
+            p["mtd"][m_idx][i] = val
+            new_ch[i] += val
+    for i in range(5):
+        d_val = tgt_ch[i] - new_ch[i]
+        if d_val != 0:
+            max_p = max(web_data["projects"], key=lambda p: p["full"][m_idx][i])
+            max_p["full"][m_idx][i] += d_val
+            max_p["mtd"][m_idx][i] += d_val
+
+    with open(web_data_path, "w", encoding="utf-8") as f:
+        json.dump(web_data, f, ensure_ascii=False, indent=2)
+
+    # 5.3 Summary JSON: lastFull = tháng đang sync nếu đã đủ ngày, không thì tháng liền trước
+    hub_name = {}
+    hub_map_path = HUBS_REPO / "lib" / "dashboard" / "hub-map.json"
+    if hub_map_path.exists():
+        with open(hub_map_path, "r", encoding="utf-8") as f:
+            hub_name = {h["id"]: h["name"] for h in json.load(f)["hubs"]}
+
+    def month_total(i):
+        return sum(sum(p["full"][i]) for p in web_data["projects"]) if i >= 0 else 0
+
+    lf_idx = m_idx if closed else m_idx - 1
+    lf_hub_pv = {}
+    if lf_idx >= 0:
+        for p in web_data["projects"]:
+            lf_hub_pv[p["hub"]] = lf_hub_pv.get(p["hub"], 0) + sum(p["full"][lf_idx])
+    last_full_hubs = [
+        {"id": h, "name": hub_name.get(h, h), "pv": v}
+        for h, v in sorted(lf_hub_pv.items(), key=lambda x: -x[1]) if h != "others"
+    ][:6]
+    running_hubs = [
+        {"id": "cinema", "name": "Cinema Hub", "pv": hubs_pv["cinema"]},
+        {"id": "financial", "name": "Financial Hub", "pv": hubs_pv["financial"]},
+        {"id": "new_user", "name": "New User Hub", "pv": hubs_pv["new_user"]},
+        {"id": "vehicle", "name": "Vehicle Hub", "pv": hubs_pv["vehicle"]},
+        {"id": "insurance", "name": "Insurance Hub", "pv": hubs_pv["insurance"]},
+        {"id": "student", "name": "Student Hub", "pv": hubs_pv["student"]}
+    ]
+
     summary_payload = {
         "lastFull": {
-            "month": "2026-09",
-            "pv": 3952859,
-            "prevPv": 3465363,
-            "target": 3509044
+            "month": months[lf_idx] if lf_idx >= 0 else None,
+            "pv": month_total(lf_idx),
+            "prevPv": month_total(lf_idx - 1),
+            "target": web_data.get("monthTargets", {}).get(months[lf_idx]) if lf_idx >= 0 else None
         },
-        "running": {
-            "month": "2026-10",
+        "running": None if closed else {
+            "month": month_str,
             "daysElapsed": days_elapsed,
             "daysInMonth": days_in_month,
-            "report": "monthly_10_2026_consolidated.json",
+            "report": report_name,
             "pv": total_pv,
-            "target": TARGET_OCT,
+            "target": target_pv,
             "dailyPace": round(daily_pace),
-            "dailyNeeded": round(daily_needed),
+            "dailyNeeded": round(daily_needed) if daily_needed is not None else None,
             "forecast": round(forecast_31d),
             "forecastPct": forecast_pct
         },
-        "hubs": [
-            {"id": "cinema", "name": "Cinema Hub", "pv": hubs_pv["cinema"]},
-            {"id": "financial", "name": "Financial Hub", "pv": hubs_pv["financial"]},
-            {"id": "new_user", "name": "New User Hub", "pv": hubs_pv["new_user"]},
-            {"id": "vehicle", "name": "Vehicle Hub", "pv": hubs_pv["vehicle"]},
-            {"id": "insurance", "name": "Insurance Hub", "pv": hubs_pv["insurance"]},
-            {"id": "student", "name": "Student Hub", "pv": hubs_pv["student"]}
-        ],
-        "lastFullHubs": [
-            {"id": "cinema", "name": "Cinema Hub", "pv": 1220075},
-            {"id": "payment", "name": "Payment Hub", "pv": 520612},
-            {"id": "home", "name": "Home MoMo", "pv": 467476},
-            {"id": "new_user", "name": "New User Hub", "pv": 462878},
-            {"id": "financial", "name": "Financial Hub", "pv": 249823},
-            {"id": "travel", "name": "Travel Hub", "pv": 114475}
-        ],
+        "hubs": last_full_hubs if closed else running_hubs,
+        "lastFullHubs": last_full_hubs,
         "channels": {
             "organic": organic_pv,
             "direct": direct_pv,
@@ -579,49 +654,11 @@ def main():
         with open(HUBS_REPO / "data" / "analytics" / "summary.json", "w", encoding="utf-8") as f:
             json.dump(summary_payload, f, ensure_ascii=False, indent=2)
 
-    # 5.3 Web-data.json cho /dashboard
-    web_data_path = HUBS_REPO / "lib" / "dashboard" / "web-data.json"
-    if web_data_path.exists():
-        with open(web_data_path, "r", encoding="utf-8") as f:
-            web_data = json.load(f)
-        web_data["running"] = {
-            "month": "2026-10",
-            "daysElapsed": days_elapsed,
-            "daysInMonth": days_in_month,
-            "report": "monthly_10_2026_consolidated.json"
-        }
-        web_data["generatedAt"] = datetime.now().isoformat()
-        oct_idx = web_data["months"].index("2026-10")
-        
-        cur_ch = [0, 0, 0, 0, 0]
-        for p in web_data["projects"]:
-            for i in range(5):
-                cur_ch[i] += p["full"][oct_idx][i]
-        tgt_ch = [organic_pv, paid_pv, direct_pv, referral_pv, others_pv]
-        scales = [tgt_ch[i] / cur_ch[i] if cur_ch[i] > 0 else 1.0 for i in range(5)]
-        
-        new_ch = [0, 0, 0, 0, 0]
-        for p in web_data["projects"]:
-            for i in range(5):
-                val = round(p["full"][oct_idx][i] * scales[i])
-                p["full"][oct_idx][i] = val
-                p["mtd"][oct_idx][i] = val
-                new_ch[i] += val
-        for i in range(5):
-            d_val = tgt_ch[i] - new_ch[i]
-            if d_val != 0:
-                max_p = max(web_data["projects"], key=lambda p: p["full"][oct_idx][i])
-                max_p["full"][oct_idx][i] += d_val
-                max_p["mtd"][oct_idx][i] += d_val
-
-        with open(web_data_path, "w", encoding="utf-8") as f:
-            json.dump(web_data, f, ensure_ascii=False, indent=2)
-
     # 5.4 Patch Excel Tracking SSOT (BigQuery Connected Sheets)
     bq_excel = BASE_DIR / "07_REPORTS" / "web_performance_tracking.xlsx"
     if bq_excel.exists():
         patch_excel_dynamic(
-            str(bq_excel), days_elapsed, total_pv,
+            str(bq_excel), month_str, target_pv, days_elapsed, total_pv,
             organic_pv, paid_pv, direct_pv, referral_pv, others_pv, non_paid_pv,
             hubs_pv, cinema_sub
         )
@@ -679,8 +716,9 @@ def main():
     elapsed = time.time() - start_time
     print("=" * 75)
     print(f"HOÀN THÀNH TOÀN BỘ PIPELINE TRONG {elapsed:.1f} GIÂY")
-    print(f"- Lũy kế MTD: {total_pv:,} PV / Target: {TARGET_OCT:,} ({progress_pct}%)")
-    print(f"- Nhịp chạy : {daily_pace:,.0f} PV/ngày | Dự phóng 31d: {forecast_31d:,.0f} ({forecast_pct}%)")
+    target_txt = f"{target_pv:,} ({progress_pct}%)" if target_pv else "chưa có target"
+    print(f"- Lũy kế MTD {month_str}: {total_pv:,} PV / Target: {target_txt}")
+    print(f"- Nhịp chạy : {daily_pace:,.0f} PV/ngày | Dự phóng {days_in_month}d: {forecast_31d:,.0f} ({forecast_pct}%)")
     print(f"- Non-Paid  : {non_paid_pv:,} PV ({non_paid_pv/total_pv*100:.1f}%) | Paid: {paid_pv:,} PV ({paid_pv/total_pv*100:.1f}%)")
     print("=" * 75)
 
