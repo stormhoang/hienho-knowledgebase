@@ -69,6 +69,7 @@ CP = CI["cineplex"]
 PRJ = FACTS["projects"]
 GEO = FACTS["geo_ai"]
 GAME = FACTS["minigame_mot_mua_quyt"]
+NU = FACTS.get("new_users", {})
 ACTOR_PROFILES = (
     PERSONS_TS.read_text(encoding="utf-8").count('"slug":') if PERSONS_TS.exists() else 631
 )
@@ -151,13 +152,27 @@ def main():
     print(f"Loading official template from: {TEMPLATE_PATH}")
     prs = Presentation(TEMPLATE_PATH)
 
-    # 1. Prune down to exact 7 template slides: 7, 10, 12, 14, 15, 20, 21 (0-indexed: 6, 9, 11, 13, 14, 19, 20)
-    keep_indices = {6, 9, 11, 13, 14, 19, 20}
+    # 1. Prune down to exact 7 template slides: 7, 10, 12, 14, 15, 17, 20 (0-indexed: 6, 9, 11, 13, 14, 16, 19)
+    keep_indices = {6, 9, 11, 13, 14, 16, 19}
     delete_indices = sorted([i for i in range(len(prs.slides)) if i not in keep_indices], reverse=True)
     for i in delete_indices:
         delete_slide(prs, i)
 
-    print(f"Total slides after pruning: {len(prs.slides)} (Exact 7-slide C-Suite deck)")
+    # Reorder slides: move original slide idx 16 (currently at position 5) to the end (position 6)
+    # Resulting order:
+    # 0: Cover (idx 6)
+    # 1: Discussion Topics [D] (idx 9)
+    # 2: Proposal 1 Deep-Dive [D] (idx 11)
+    # 3: Overall Traffic [R] (idx 13)
+    # 4: Hubs Breakdown [R] (idx 14)
+    # 5: Product Tracker [R] (idx 19)
+    # 6: New User Acquisition Flow [R] (idx 16)
+    sldIdLst = prs.slides._sldIdLst
+    sld_to_move = sldIdLst[5]
+    sldIdLst.remove(sld_to_move)
+    sldIdLst.append(sld_to_move)
+
+    print(f"Total slides after pruning & reordering: {len(prs.slides)} (Exact 7-slide C-Suite deck)")
 
     # Clean instruction shapes across all slides
     for s in prs.slides:
@@ -512,69 +527,86 @@ def main():
                     set_cell(tbl.cell(r_idx, c_idx), val, font_size=8.0, bold=(c_idx == 0), align=PP_ALIGN.CENTER if c_idx in [1, 4] else PP_ALIGN.LEFT)
 
     # =========================================================================
-    # SLIDE 7: Project Milestones & Support Tracker [R] (Original Slide 21)
+    # SLIDE 7: Luồng Tăng Trưởng Người Dùng Mới (New User Flow) [R] (Original Slide 17)
     # =========================================================================
     s7 = prs.slides[6]
-    for s in s7.shapes:
-        if s.has_text_frame:
-            txt = s.text_frame.text.strip()
-            if txt.startswith("Mục đích:"):
-                set_text(s, "Mục đích: Cho người đọc hiểu tiến độ các mốc dự án Q4/2026 và các đề xuất hỗ trợ liên phòng ban cần chốt.", font_size=8.5, color=COLOR_TEXT_MUTED)
-            elif "Dự án C chậm 2 tuần" in txt or "Lộ Trình Quý 4:" in txt:
-                set_text(s, "Lộ Trình Quý 4: Đưa Tiện Ích Thuế TNCN Lên Production, Chuẩn Bị Toàn Diện Cho Cao Điểm Tết 2027", font_size=17, bold=True, color=COLOR_TEXT_MAIN)
-            elif "Nguồn:" in txt:
-                set_text(s, "Nguồn: Jira & Web Platform Roadmap   |   Owner: Web Platform   |   Chốt số liệu: 30/10/2026", font_size=9, color=COLOR_TEXT_MUTED)
-            elif txt in ["7", "8", "8 / 8", "7 / 7", "7 / 8"]:
-                set_text(s, "7 / 7", font_size=9, color=COLOR_TEXT_MUTED)
-            elif "Ý chính 1:" in txt:
-                content = (
-                    "• Ý chính 1: Hoàn thành 100% go-live cụm Diễn viên (30/10) và trang Tải App (/tai-app); hoàn tất Staging minigame Bò Sữa Bay.\n"
-                    "• Ý chính 2: Tiện ích tính Thuế TNCN đang hoàn thiện UI/UX và logic tính toán, dự kiến go-live Production trong tháng 11/2026.\n"
-                    "• Ý chính 3: Cần 3 nội dung hỗ trợ từ BOM, Pháp chế và Kế toán để bảo đảm đúng hạn mốc triển khai."
-                )
-                set_text(s, content, font_size=9.5, color=COLOR_TEXT_MAIN)
-            elif txt in ["75%", "80%"]:
-                set_text(s, "80%", font_size=11, bold=True, color=COLOR_TEXT_MAIN)
-            elif txt in ["55%", "85%"]:
-                set_text(s, "85%", font_size=11, bold=True, color=COLOR_GREEN)
-            elif "Việc đầu tiên quyết định" in txt or "Lưu ý:" in txt:
-                set_text(s, "Lưu ý: Việc phê duyệt kế hoạch ra mắt tiện ích thuế trước 31/10 quyết định khả năng kịp tiến độ kiểm thử và go-live đón mùa quyết toán cuối năm.", font_size=9.5, color=COLOR_TEXT_MUTED)
-        elif s.has_table:
-            tbl = s.table
-            headers = ["Việc cần hỗ trợ", "Bên liên quan / Owner", "Hạn hoàn thành"]
-            for c, h in enumerate(headers):
-                set_cell(tbl.cell(0, c), h, font_size=9.0, bold=True, color=COLOR_WHITE, align=PP_ALIGN.CENTER if c == 2 else PP_ALIGN.LEFT)
+    set_text(s7.shapes[0], "Mục đích: Phân tích luồng tăng trưởng Người dùng mới (New Users) theo kênh tiếp cận và các Hub chuyển đổi chủ lực.", font_size=8.5, color=COLOR_TEXT_MUTED)
+    set_text(
+        s7.shapes[1],
+        f"Kênh Tự Nhiên Dẫn Dắt {compact(NU['non_paid']['oct'])} Người Dùng Mới ({dec(NU['non_paid']['share_pct'])}% Tổng New Users), "
+        f"Bù Đắp Sụt Giảm Paid Ads; Cinema Hub Tăng Trưởng {signed(NU['hubs']['cinema']['mom_pct'])}",
+        font_size=17, bold=True, color=COLOR_TEXT_MAIN
+    )
+    set_text(s7.shapes[5], "Nguồn: GA4 (Property 270743103)   |   Owner: Web Platform   |   Chốt số liệu: 30/10/2026", font_size=9, color=COLOR_TEXT_MUTED)
+    set_text(s7.shapes[6], "7 / 7", font_size=9, color=COLOR_TEXT_MUTED)
 
-            rows_data = [
-                ["Phê duyệt kế hoạch go-live bộ công cụ Thuế TNCN & Tính Lương", "CEO / BOM", "31/10"],
-                ["Rà soát chuẩn hóa công thức thuế TNCN và biểu lũy tiến", "Pháp chế & Kế toán", "10/11"],
-                ["Thẩm định TnC và bảo mật data người chơi Game Bò Sữa Bay", "Pháp chế & Security", "05/11"],
-            ]
-            for r_idx, r_data in enumerate(rows_data, 1):
-                for c_idx, val in enumerate(r_data):
-                    set_cell(tbl.cell(r_idx, c_idx), val, font_size=8.5, bold=(c_idx == 0), align=PP_ALIGN.CENTER if c_idx == 2 else PP_ALIGN.LEFT)
+    content_s7_takeaway = (
+        f"• Ý chính 1: Toàn Website thu hút {vn(NU['new_users_oct'])} Người dùng mới (New Users) trong tháng 10, chiếm {dec(NU['new_users_share_pct'])}% tổng {compact(NU['total_users_oct'])} người dùng ghé thăm Web Platform.\n"
+        f"• Ý chính 2: Kênh tự nhiên (Non-Paid) đạt {vn(NU['non_paid']['oct'])} New Users ({signed(NU['non_paid']['mom_pct'])} MoM, chiếm {dec(NU['non_paid']['share_pct'])}% tổng New Users), tự bù đắp mức giảm -364K New Users do chủ động cắt giảm Paid Ads kém chất lượng.\n"
+        f"• Ý chính 3: Cinema Hub ({compact(NU['hubs']['cinema']['oct'])} New Users, {signed(NU['hubs']['cinema']['mom_pct'])} MoM) và Minigame ({compact(NU['hubs']['game_entertainment']['oct'])} New Users, {signed(NU['hubs']['game_entertainment']['mom_pct'])} MoM) trở thành hai phễu hút người dùng mới bên ngoài ứng dụng hiệu quả nhất."
+    )
+    set_text(s7.shapes[8], content_s7_takeaway, font_size=8.5, color=COLOR_TEXT_MAIN)
 
-    # Position note cleanly below support table in Slide 7
-    s7.shapes[33].top = Inches(4.78)
+    # 4 Stat Cards:
+    # Card 1: Tổng New Users MTD
+    set_text(s7.shapes[10], "Tổng New Users MTD", font_size=10.5, bold=True, color=COLOR_TEXT_MAIN)
+    set_text(s7.shapes[11], compact(NU["new_users_oct"]), font_size=20, bold=True, color=COLOR_TEXT_MAIN)
+    set_text(s7.shapes[12], f"{dec(NU['new_users_share_pct'])}% tổng người dùng", font_size=9.0, bold=True, color=COLOR_INDIGO)
 
-    # Add Tag [R] circle and 'Reporting' label to Slide 7 header
-    circle = s7.shapes.add_shape(MSO_SHAPE.OVAL, Inches(9.18), Inches(0.16), Inches(0.42), Inches(0.42))
-    circle.fill.solid()
-    circle.fill.fore_color.rgb = RGBColor(0x99, 0x1B, 0x1B)  # deep red wine matching R
-    circle.line.color.rgb = RGBColor(0x99, 0x1B, 0x1B)
-    p = circle.text_frame.paragraphs[0]
-    p.text = "R"
-    p.font.size = Pt(14)
-    p.font.bold = True
-    p.font.color.rgb = COLOR_WHITE
-    p.alignment = PP_ALIGN.CENTER
+    # Card 2: New Users Tự Nhiên (Non-Paid)
+    set_text(s7.shapes[14], "New Users Tự Nhiên (Non-Paid)", font_size=10.5, bold=True, color=COLOR_TEXT_MAIN)
+    set_text(s7.shapes[15], compact(NU["non_paid"]["oct"]), font_size=20, bold=True, color=COLOR_GREEN)
+    set_text(s7.shapes[16], f"▲ {signed(NU['non_paid']['mom_pct'])} MoM ({dec(NU['non_paid']['share_pct'])}% tổng)", font_size=9.0, bold=True, color=COLOR_GREEN)
 
-    txBox = s7.shapes.add_textbox(Inches(8.88), Inches(0.60), Inches(1.02), Inches(0.18))
-    p2 = txBox.text_frame.paragraphs[0]
-    p2.text = "Reporting"
-    p2.font.size = Pt(8.5)
-    p2.font.color.rgb = RGBColor(0x99, 0x1B, 0x1B)
-    p2.alignment = PP_ALIGN.CENTER
+    # Card 3: Phễu Dịch Vụ Cinema Hub
+    set_text(s7.shapes[18], "Phễu Dịch Vụ Cinema Hub", font_size=10.5, bold=True, color=COLOR_TEXT_MAIN)
+    set_text(s7.shapes[19], compact(NU["hubs"]["cinema"]["oct"]), font_size=20, bold=True, color=COLOR_INDIGO)
+    set_text(s7.shapes[20], f"▲ {signed(NU['hubs']['cinema']['mom_pct'])} MoM · Top 1 Hub", font_size=9.0, bold=True, color=COLOR_GREEN)
+
+    # Card 4: Phễu Onboarding & Tải App
+    set_text(s7.shapes[22], "Phễu Onboarding & Tải App", font_size=10.5, bold=True, color=COLOR_TEXT_MAIN)
+    set_text(s7.shapes[23], compact(NU["hubs"]["download_onboarding"]["oct"]), font_size=20, bold=True, color=COLOR_PINK)
+    set_text(s7.shapes[24], f"▲ {signed(NU['hubs']['download_onboarding']['mom_pct'])} MoM · Dẫn vào App", font_size=9.0, bold=True, color=COLOR_INDIGO)
+
+    # Section 2: Header & Table
+    set_text(s7.shapes[25], "CƠ CẤU NGƯỜI DÙNG MỚI THEO KÊNH ĐẦU VÀO (NEW USER FLOW BREAKDOWN)", font_size=10, bold=True, color=COLOR_PINK)
+
+    tbl = s7.shapes[26].table
+    widths = [Inches(2.10), Inches(0.85), Inches(0.75), Inches(2.10)]
+    for i, w in enumerate(widths):
+        tbl.columns[i].width = w
+
+    headers = ["Kênh / Nguồn đầu vào", "New Users", "Tỷ trọng", "Đánh giá & Xu hướng"]
+    for c, h in enumerate(headers):
+        set_cell(tbl.cell(0, c), h, font_size=8.5, bold=True, color=COLOR_WHITE, align=PP_ALIGN.CENTER if c in [1, 2] else PP_ALIGN.LEFT)
+
+    rows_data = [
+        ["• Tìm kiếm tự nhiên (Organic Search)", vn(NU["channels"][0]["oct"]), f"{dec(NU['channels'][0]['share_pct'])}%", f"▲ {signed(NU['channels'][0]['mom_pct'])} MoM · Nguồn New User lớn nhất"],
+        ["• Truy cập trực tiếp (Direct)", vn(NU["channels"][1]["oct"]), f"{dec(NU['channels'][1]['share_pct'])}%", f"▲ {signed(NU['channels'][1]['mom_pct'])} MoM · Thương hiệu vững chắc"],
+        ["• Quảng cáo trả phí (Paid Media)", vn(NU["channels"][2]["oct"]), f"{dec(NU['channels'][2]['share_pct'])}%", f"▼ -{dec(abs(NU['channels'][2]['mom_pct']))}% MoM · Chủ động cắt giảm"],
+    ]
+    for r_idx, r_data in enumerate(rows_data, 1):
+        for c_idx, val in enumerate(r_data):
+            set_cell(tbl.cell(r_idx, c_idx), val, font_size=8.0, bold=(c_idx == 0 or r_idx in [1, 2]), align=PP_ALIGN.CENTER if c_idx in [1, 2] else PP_ALIGN.LEFT)
+
+    # Right Column Highlights
+    set_text(s7.shapes[28], "Key Highlights & Strategy", font_size=11, bold=True, color=COLOR_PINK)
+    set_text(s7.shapes[30], "Chất Lượng Tăng Trưởng", font_size=9, bold=True, color=COLOR_PINK)
+
+    content_s7_perf = (
+        f"• Kênh tự nhiên (Non-Paid) trở thành trục xương sống hút {compact(NU['non_paid']['oct'])} New Users ({dec(NU['non_paid']['share_pct'])}% tổng số), "
+        "khẳng định sức hút nội dung và tính năng vượt trội so với mua traffic trả phí.\n"
+        f"• Cinema Hub ghi nhận {compact(NU['hubs']['cinema']['oct'])} New Users ({signed(NU['hubs']['cinema']['mom_pct'])} MoM) nhờ chuỗi trang cụm rạp CGV, Lotte, BHD; "
+        f"Minigame đóng góp {compact(NU['hubs']['game_entertainment']['oct'])} New Users ({signed(NU['hubs']['game_entertainment']['mom_pct'])} MoM) từ viral truyền miệng."
+    )
+    set_text(s7.shapes[31], content_s7_perf, font_size=8.5, color=COLOR_TEXT_MAIN)
+
+    set_text(s7.shapes[33], "Chiến Lược New User Q4", font_size=9, bold=True, color=COLOR_PINK)
+    content_s7_strategy = (
+        "• Tối ưu phễu chuyển đổi: Chuyển dịch dòng New Users tự nhiên vào sản phẩm tài chính qua Bộ tiện ích Thuế TNCN & Lương cuối năm (dự kiến đón 300K - 500K New Users).\n"
+        "• Tăng tốc Cinema Hub đón mùa phim Tết 2027 để mở rộng phễu người dùng trẻ bên ngoài ứng dụng."
+    )
+    set_text(s7.shapes[34], content_s7_strategy, font_size=8.5, color=COLOR_TEXT_MAIN)
 
     # Save to all destination paths
     for p in OUT_PATHS:

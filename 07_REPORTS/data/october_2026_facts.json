@@ -224,8 +224,61 @@
       "rank_total": 69
     }
   },
+  "new_users": {
+    "total_users_oct": 1720894,
+    "total_users_sep": 2077632,
+    "new_users_oct": 1573964,
+    "new_users_sep": 1935320,
+    "new_users_share_pct": 91.5,
+    "mom_pct": -18.7,
+    "non_paid": {
+      "oct": 1241076,
+      "sep": 1198728,
+      "share_pct": 78.9,
+      "mom_pct": 3.5
+    },
+    "paid": {
+      "oct": 264833,
+      "sep": 671766,
+      "share_pct": 16.8,
+      "mom_pct": -60.6
+    },
+    "channels": [
+      {
+        "channel": "Tìm kiếm tự nhiên (Organic Search)",
+        "oct": 609909,
+        "sep": 591386,
+        "share_pct": 38.7,
+        "mom_pct": 3.1,
+        "eval": "Nguồn New Users lớn nhất toàn sàn"
+      },
+      {
+        "channel": "Truy cập trực tiếp (Direct)",
+        "oct": 499358,
+        "sep": 480761,
+        "share_pct": 31.7,
+        "mom_pct": 3.9,
+        "eval": "Nhận diện thương hiệu MoMo vững chắc"
+      },
+      {
+        "channel": "Quảng cáo trả phí (Paid Media)",
+        "oct": 264833,
+        "sep": 671766,
+        "share_pct": 16.8,
+        "mom_pct": -60.6,
+        "eval": "Chủ động cắt giảm ngân sách lãng phí"
+      }
+    ],
+    "hubs": {
+      "cinema": { "oct": 279968, "sep": 238473, "mom_pct": 17.4 },
+      "download_onboarding": { "oct": 285928, "sep": 283390, "mom_pct": 0.9 },
+      "financial": { "oct": 93878, "sep": 125337, "mom_pct": -25.1 },
+      "game_entertainment": { "oct": 53641, "sep": 5336, "mom_pct": 905.3 }
+    }
+  },
   "sources": {
     "total_and_channels": "GA4 Data API 01-30/10 (monthly_10_2026_consolidated.json) + T9 full month",
-    "hubs_and_projects": "07_REPORTS/web_performance_tracking.xlsx pivot Full month, tên project chuẩn hóa theo hub-map.json"
+    "hubs_and_projects": "07_REPORTS/web_performance_tracking.xlsx pivot Full month, tên project chuẩn hóa theo hub-map.json",
+    "new_users": "GA4 Data API (Property 270743103) - newUsers & totalUsers dimension breakdown"
   }
 }
