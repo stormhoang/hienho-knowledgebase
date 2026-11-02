@@ -213,8 +213,9 @@ def main():
     )
     set_text(s5.shapes[10], bottom_commentary_s5, font_size=8.0, color=COLOR_TEXT_MAIN)
 
-    # 7. Xóa bỏ Slide 6 cũ (Old Slide 7 with duplicate GA4 browser new users)
-    delete_slide(prs, 6)
+    # 7. Xóa bỏ Slide 6 cũ nếu chưa xóa (Old Slide 7 with duplicate GA4 browser new users)
+    if len(prs.slides) > 7:
+        delete_slide(prs, 6)
     TOTAL = len(prs.slides)
     print(f"Updated slides count after removing duplicate slide: {TOTAL}")
 
@@ -301,11 +302,12 @@ def main():
             elif "/" in txt and any(c.isdigit() for c in txt) and len(txt) <= 8 and idx > 0:
                 set_text(sh, f"{idx+1} / {TOTAL}", font_size=8.5, color=COLOR_TEXT_MUTED)
 
-    # Save to all 3 SSOT paths
+    # Save to all 4 SSOT paths (including Google Drive Desktop)
     out_paths = [
         BASE_DIR / "07_REPORTS" / "docs" / "presentations" / "Web_Platform_Thang_10_2026_Pyramid.pptx",
         Path("/Users/hienhv/Downloads/Web_Platform_Thang_10_2026_Pyramid.pptx"),
         Path("/Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/public/reports/Web_Platform_Thang_10_2026_Pyramid.pptx"),
+        Path("/Users/hienhv/Library/CloudStorage/GoogleDrive-hien.ho@mservice.com.vn/My Drive/WEB GROWTH 2026/#6 - Report/Web_Platform_Thang_10_2026_Pyramid.pptx"),
     ]
     for p in out_paths:
         p.parent.mkdir(parents=True, exist_ok=True)
