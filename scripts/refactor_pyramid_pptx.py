@@ -73,8 +73,8 @@ def main():
             txt = sh.text_frame.text
             if "Mục đích:" in txt:
                 sh.text_frame.text = ""
-            elif "AppsFlyer" in txt:
-                sh.text_frame.text = "Kỳ dữ liệu 01/10 - 31/10/2026 (31 ngày, full month). Nguồn: GA4 (Property 270743103) & Excel SSOT."
+            elif "AppsFlyer" in txt or "Nguồn:" in txt or "Kỳ dữ liệu" in txt:
+                sh.text_frame.text = "Kỳ dữ liệu 01/10 - 31/10/2026 (31 ngày, full month)"
 
     # 2. Slide 1: Executive Summary
     s1 = prs.slides[1]
@@ -155,7 +155,7 @@ def main():
         set_cell(tbl4_2.cell(r_idx, 5), pct_tgt, align=PP_ALIGN.RIGHT, bold=is_bold, color=val_col)
 
     set_text(s4.shapes[8], "Nhận định & Hành động tiếp theo\n- Động lực tự nhiên vững chắc: Cả 3 kênh tự nhiên (Organic, Direct, Referral) đều tăng trưởng mạnh và vượt từ 108% - 109% chỉ tiêu kế hoạch. Direct tăng +23,3% phản ánh uy tín thương hiệu MoMo ngày càng vững chắc.\n- Tự bù đắp khoảng trống Paid Ads: Kênh Non-Paid tăng thêm +372.776 PVs (+13,5% MoM), bù đắp được hơn 51% lượng suy giảm do BU chủ động cắt giảm 60,4% ngân sách Paid Ads (-723.612 PVs toàn Web).\n- Trọng tâm tháng 11: Chuẩn hóa luồng Tải App (/tai-app) để thu hút 10.000 volume tìm kiếm tự nhiên, tiếp tục mở rộng các Hub cốt lõi (Cinema, Financial) để duy trì nhịp tăng trưởng nội sinh độc lập với Paid Media.", font_size=8.5, color=COLOR_TEXT_MAIN)
-    set_text(s4.shapes[9], "Ghi chú: Toàn bộ các kênh tự nhiên (Organic, Direct, Referral) đều hoàn thành vượt chỉ tiêu (108% - 109% Target). Tổng lưu lượng toàn sàn về đích 98,3% do khoảng hụt 723.612 PVs từ việc BU chủ động cắt giảm 60,4% ngân sách Paid Ads.", font_size=7.5, color=COLOR_TEXT_MUTED)
+    s4.shapes[9].text_frame.text = "" # Clear duplicate bottom note
 
     # 6. Slide 5: Dự Án New User & Phễu Chuyển Đổi (Slide 6 of deck)
     s5 = prs.slides[5]
@@ -295,9 +295,9 @@ def main():
             # Clean template instruction
             if txt.startswith("Mục đích:"):
                 sh.text_frame.text = ""
-            # Clean footer source
-            elif "Nguồn:" in txt:
-                set_text(sh, "Nguồn: GA4 (Property 270743103) & Excel SSOT   |   Owner: Web Platform   |   Chốt số liệu: 31/10/2026", font_size=8.5, color=COLOR_TEXT_MUTED)
+            # Clean footer source (remove completely as requested)
+            elif txt.startswith("Nguồn:") or "Owner: Web Platform" in txt:
+                sh.text_frame.text = ""
             # Update page number
             elif "/" in txt and any(c.isdigit() for c in txt) and len(txt) <= 8 and idx > 0:
                 set_text(sh, f"{idx+1} / {TOTAL}", font_size=8.5, color=COLOR_TEXT_MUTED)
