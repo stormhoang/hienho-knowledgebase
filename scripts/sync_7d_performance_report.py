@@ -33,6 +33,7 @@ BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.append(os.path.join(BASE_DIR, "scripts", "lib"))
 import url_project_resolver as upr
 
+TOP_N = 30
 HUBS_REPO = os.path.abspath(os.path.join(BASE_DIR, "..", "Web-Idea", "react-web-momo"))
 KEY_FILE = os.path.join(BASE_DIR, "07_REPORTS", "data", "credentials", "gsc-credentials.json")
 
@@ -115,6 +116,51 @@ def fetch_top_queries_for_urls(service, urls, start_date, end_date):
             queries_map[u] = "N/A"
     return queries_map
 
+def fetch_query_breakdown(service, urls, curr_range, prev_range, limit=10):
+    """Top query theo click của từng URL, kèm số tuần trước để thấy query nào rớt hạng / mất CTR."""
+    def q(u, start, end):
+        try:
+            res = service.searchanalytics().query(siteUrl="https://www.momo.vn/", body={
+                "startDate": start,
+                "endDate": end,
+                "dimensions": ["query"],
+                "dimensionFilterGroups": [{"filters": [{"dimension": "page", "operator": "equals", "expression": u}]}],
+                "rowLimit": 50
+            }).execute()
+            return {r["keys"][0]: r for r in res.get("rows", [])}
+        except Exception:
+            return {}
+
+    out = {}
+    for n, u in enumerate(urls, 1):
+        cur = q(u, curr_range[0], curr_range[1])
+        prev = q(u, prev_range[0], prev_range[1])
+        # Lấy query nổi bật ở cả hai tuần, để query mất hẳn cũng hiện ra
+        keys = sorted(set(cur) | set(prev),
+                      key=lambda k: max(cur.get(k, {}).get("clicks", 0), prev.get(k, {}).get("clicks", 0),
+                                        cur.get(k, {}).get("impressions", 0) / 100, prev.get(k, {}).get("impressions", 0) / 100),
+                      reverse=True)[:limit]
+        rows = []
+        for k in keys:
+            c = cur.get(k, {})
+            p_ = prev.get(k, {})
+            rows.append({
+                "query": k,
+                "curr_imp": c.get("impressions", 0),
+                "prev_imp": p_.get("impressions", 0),
+                "curr_clk": c.get("clicks", 0),
+                "prev_clk": p_.get("clicks", 0),
+                "curr_pos": round(c["position"], 1) if c else None,
+                "prev_pos": round(p_["position"], 1) if p_ else None,
+                "curr_ctr": round(c.get("ctr", 0) * 100, 2),
+                "prev_ctr": round(p_.get("ctr", 0) * 100, 2),
+            })
+        out[u] = rows
+        if n % 20 == 0:
+            print(f"   ... {n}/{len(urls)} URL")
+    return out
+
+
 def analyze_performance(curr_pages, prev_pages, curr_range, prev_range, service):
     rules = upr.load_rules()
     inferred = upr.load_inferred_rules(rules)
@@ -166,6 +212,8 @@ def analyze_performance(curr_pages, prev_pages, curr_range, prev_range, service)
     losses.sort(key=lambda x: x["diff_imp"]) # sụt giảm nhiều nhất lên đầu
     
     click_surges = sorted([x for x in gains if x["diff_clk"] > 0], key=lambda x: x["diff_clk"], reverse=True)
+    # Mất click là thứ ảnh hưởng traffic trực tiếp, không phụ thuộc hiển thị tăng hay giảm
+    click_losers = sorted([x for x in gains + losses if x["diff_clk"] < 0], key=lambda x: x["diff_clk"])
     breakout_stars = [x for x in gains if x["prev_imp"] < 50 and x["curr_imp"] >= 300]
     breakout_stars.sort(key=lambda x: x["curr_imp"], reverse=True)
     
@@ -177,6 +225,14 @@ def analyze_performance(curr_pages, prev_pages, curr_range, prev_range, service)
         x["top_query"] = queries_map.get(x["url"], "N/A")
     for x in losses[:10]:
         x["top_query"] = queries_map.get(x["url"], "N/A")
+
+    # Bóc tách query cho mọi URL được hiển thị trên /dashboard
+    detail_urls = list(dict.fromkeys(
+        [x["url"] for x in losses[:TOP_N]] + [x["url"] for x in click_losers[:TOP_N]]
+        + [x["url"] for x in click_surges[:TOP_N]] + [x["url"] for x in gains[:TOP_N]]
+    ))
+    print(f"   Đang lấy query chi tiết cho {len(detail_urls)} URL...")
+    query_breakdown = fetch_query_breakdown(service, detail_urls, curr_range, prev_range)
         
     return {
         "metadata": {
@@ -194,10 +250,12 @@ def analyze_performance(curr_pages, prev_pages, curr_range, prev_range, service)
             "total_urls_losing": len(losses),
             "total_breakout_stars": len(breakout_stars)
         },
-        "top_gainers": gains[:25],
-        "top_losers": losses[:25],
-        "top_click_surges": click_surges[:25],
-        "breakout_stars": breakout_stars[:25]
+        "top_gainers": gains[:TOP_N],
+        "top_losers": losses[:TOP_N],
+        "top_click_surges": click_surges[:TOP_N],
+        "top_click_losers": click_losers[:TOP_N],
+        "breakout_stars": breakout_stars[:25],
+        "query_breakdown": query_breakdown
     }
 
 def get_latest_weekly_report_filename():
@@ -433,6 +491,10 @@ def main():
             json.dump(data, f, ensure_ascii=False, indent=2)
         print(f"   Đã đồng bộ JSON sang react-web-momo: {hub_json}")
         
+    if "--json-only" in sys.argv:
+        print("\n--json-only: chỉ ghi JSON, bỏ qua báo cáo tuần, web-data, commit và push.")
+        return
+
     # 5. Cập nhật Báo Cáo Tuần trên /report
     report_filename = get_latest_weekly_report_filename()
     print(f"\n5. Đang cập nhật Báo Cáo Tuần ({report_filename}) hiển thị tại /report...")
@@ -450,7 +512,12 @@ def main():
     
     # 7. Git commit trên Hub
     print("\n7. Đang commit thay đổi trên react-web-momo...")
-    subprocess.run(["git", "add", "."], cwd=HUBS_REPO, check=True)
+    own_files = [
+        os.path.relpath(hub_json, HUBS_REPO),
+        os.path.relpath(hub_weekly, HUBS_REPO),
+        os.path.relpath(hub_web_data, HUBS_REPO),
+    ]
+    subprocess.run(["git", "add", "--", *own_files], cwd=HUBS_REPO, check=True)
     commit_res = subprocess.run(
         ["git", "commit", "-m", f"feat(report): auto-update rolling 7-day performance ({curr_start} - {curr_end}) on /report"],
         cwd=HUBS_REPO, capture_output=True, text=True

@@ -877,14 +877,6 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
       <td style="border:1px solid #94a3b8; padding:6px;">Đã Go-live: Bảng tra cứu lãi suất 40 ngân hàng toàn cảnh thị trường và công cụ tính lãi gửi tiết kiệm theo số tiền, tự động hiển thị ngân hàng có lãi suất tối ưu nhất.</td>
       <td style="border:1px solid #94a3b8; padding:6px; color:#15803d; background-color:#dcfce7; font-weight:700; text-align:center;">Done</td>
     </tr>
-    <tr style="background-color:#fefce8;">
-      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700;"><strong>Phase 2</strong></td>
-      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 10/2026</td>
-      <td style="border:1px solid #94a3b8; padding:6px; font-weight:600;">Kiến Trúc & Tái Định Tuyến URL</td>
-      <td style="border:1px solid #94a3b8; padding:6px; font-weight:700;">Di Chuyển & 301 Redirect 7 Trang Standalone</td>
-      <td style="border:1px solid #94a3b8; padding:6px;">Lập bảng mapping và rule Edge CDN 301 Redirect cho 7 trang standalone về /tai-chinh/* (/nhan-tien-quoc-te, /quy-nhom, /thanh-toan-the-tin-dung, /quan-ly-chi-tieu, /chung-khoan, /chung-chi-quy, /tui-sinh-loi). Cam kết giữ nguyên URL root CreditTech. Hiện trạng chưa triển khai di chuyển.</td>
-      <td style="border:1px solid #94a3b8; padding:6px; color:#475569; background-color:#f1f5f9; font-weight:700; text-align:center;">Chưa triển khai</td>
-    </tr>
     <tr style="background-color:#f0fdf4;">
       <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700;"><strong>Phase 2</strong></td>
       <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 10/2026</td>
@@ -894,11 +886,11 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
       <td style="border:1px solid #94a3b8; padding:6px; color:#15803d; background-color:#dcfce7; font-weight:700; text-align:center;">Done</td>
     </tr>
     <tr style="background-color:#fefce8;">
-      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700;"><strong>Phase 2</strong></td>
-      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 10/2026</td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700;"><strong>Phase 3</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 11/2026</td>
       <td style="border:1px solid #94a3b8; padding:6px; font-weight:600;">Đầu Tư & Tích Sản</td>
       <td style="border:1px solid #94a3b8; padding:6px; font-weight:700;">Chứng Chỉ Quỹ (/tai-chinh/chung-chi-quy)</td>
-      <td style="border:1px solid #94a3b8; padding:6px;">Đang review API dữ liệu giá NAV và tỷ suất sinh lời của 30 quỹ mở từ BU CVS; xây dựng bảng giá tra cứu và công cụ đầu tư tích sản định kỳ từ 10.000đ/ngày. Tích hợp cơ chế chuyển đổi chéo trực tiếp từ các trang mã cổ phiếu.</td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Đẩy qua Tháng 11/2026: Triển khai Cổng tra cứu giá NAV và công cụ đầu tư định kỳ từ 10.000đ/ngày. Go-live Phase 1 với dữ liệu danh mục tĩnh/bán tự động của 30 quỹ mở đối tác CVS, kết nối phễu mở tài khoản in-app theo định hướng đồng thuận.</td>
       <td style="border:1px solid #94a3b8; padding:6px; color:#b45309; background-color:#fef9c3; font-weight:700; text-align:center;">In Progress</td>
     </tr>
     <tr style="background-color:#f8fafc;">
@@ -916,6 +908,14 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
       <td style="border:1px solid #94a3b8; padding:6px; font-weight:700;">Thuế Hộ Kinh Doanh (/tai-chinh/thue-ho-kinh-doanh)</td>
       <td style="border:1px solid #94a3b8; padding:6px;">Bổ sung mới: Tool tính thuế khoán và thuế kê khai hộ kinh doanh cá thể theo Thông tư 40/2021/TT-BTC. Tự động tính thuế GTGT, thuế TNCN và lệ phí môn bài theo doanh thu và lĩnh vực (phân phối 1.5%, dịch vụ 7%, sản xuất 4.5%...), kết nối giải pháp tài khoản thanh toán và MoMo QR kinh doanh.</td>
       <td style="border:1px solid #94a3b8; padding:6px; color:#4338ca; background-color:#e0e7ff; font-weight:700; text-align:center;">Planned</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700;"><strong>Phase 3</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 11/2026</td>
+      <td style="border:1px solid #94a3b8; padding:6px; font-weight:600;">Kiến Trúc & Tái Định Tuyến URL</td>
+      <td style="border:1px solid #94a3b8; padding:6px; font-weight:700;">Di Chuyển & 301 Redirect 7 Trang Standalone</td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Đẩy qua Tháng 11/2026: Lập bảng mapping và rule Edge CDN 301 Redirect cho các trang standalone về /tai-chinh/* (/nhan-tien-quoc-te, /quy-nhom, /thanh-toan-the-tin-dung, /quan-ly-chi-tieu, /chung-khoan, /chung-chi-quy, /tui-sinh-loi). Cam kết giữ nguyên URL root CreditTech. Hiện trạng chưa triển khai di chuyển.</td>
+      <td style="border:1px solid #94a3b8; padding:6px; color:#475569; background-color:#f1f5f9; font-weight:700; text-align:center;">Not Started</td>
     </tr>
     <tr style="background-color:#fff1f2;">
       <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700;"><strong>Phase 3</strong></td>
@@ -967,5 +967,6 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
     </tr>
   </tbody>
 </table>
+
 
 

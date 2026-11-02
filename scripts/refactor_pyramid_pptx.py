@@ -80,9 +80,11 @@ def main():
     s1 = prs.slides[1]
     set_text(s1.shapes[0], "Tháng 10 Đạt 98,3% Kế Hoạch Nhờ Kênh Tự Nhiên Tăng +13,5% MoM; Tập Trung Tối Ưu Luồng Tải App 10.000 Tìm Kiếm", font_size=15.5, bold=True, color=COLOR_TEXT_MAIN)
     s1.shapes[2].text_frame.text = "" # Clear "Mục đích:"
-    set_text(s1.shapes[6], "Kết luận điều hành\nKênh tự nhiên (Non-Paid) là động lực tăng trưởng cốt lõi của Web Platform trong tháng 10 với 3.128.542 PVs (+13,5% MoM, chiếm 86,9% toàn sàn), tự bù đắp phần lớn lượng suy giảm do BU cắt giảm Paid Ads. Nền tảng thu hút 1,24M New Users tự nhiên. Trọng tâm tháng 11 là chuẩn hóa luồng Tải App (/tai-app) để đón trọn 10.000 volume tìm kiếm thương hiệu.", font_size=9.5, color=COLOR_WHITE)
-    set_text(s1.shapes[9], "3. Kênh tự nhiên dẫn dắt 1,24M New Users (78,9% tổng)\n- Toàn sàn đón 1.573.964 New Users (91,5% tổng người dùng ghé thăm).\n- Kênh tự nhiên đạt 1.241.076 New Users (+3,5% MoM), tự bù đắp mức giảm Paid.\n- Cinema Hub (280K New Users) & Minigame (53,6K) là 2 phễu hút lớn nhất.", font_size=9.0, color=COLOR_TEXT_MAIN)
-    set_text(s1.shapes[10], "Điểm nổi bật\n- Toàn sàn đạt 3.602.023 PVs (98,3% Target); kênh tự nhiên tăng +13,5% MoM tự bù đắp 51% lượng Paid Ads sụt giảm.\n- Cinema Hub hoàn thành xuất sắc 101,4% Target (1,13M PVs). Dù giảm nhẹ -7,2% MoM do BU cắt 92,9% Paid Ads của phim lẻ (-272K PVs), cụm rạp đối tác tăng +39,6% giúp Hub vững vàng vượt chỉ tiêu được giao.", font_size=8.5, color=COLOR_TEXT_MAIN)
+    set_text(s1.shapes[6], "Kết luận điều hành\nKênh tự nhiên (Non-Paid) là động lực tăng trưởng cốt lõi của Web Platform trong tháng 10 với 3.128.542 PVs (+13,5% MoM, chiếm 86,9% toàn sàn), tự bù đắp phần lớn lượng suy giảm do BU cắt giảm Paid Ads. Dự án New User xác lập kỷ lục 2.389 khách hàng liên kết ngân hàng (+5,0% MoM). Trọng tâm tháng 11 là chuẩn hóa luồng Tải App (/tai-app) để đón trọn 10.000 volume tìm kiếm thương hiệu.", font_size=9.5, color=COLOR_WHITE)
+    set_text(s1.shapes[7], "1. Non-Paid tăng 13,5%, chiếm 86,9% lưu lượng\n- 3.128.542 PVs, tăng 372.776 PVs so với tháng 9.\n- Direct +23,3%, Referral/Others +27,9%, Organic +5,7%.\n- Tự bù đắp hơn 51% lượng suy giảm do BU cắt giảm 723K Paid Ads.", font_size=9.0, color=COLOR_TEXT_MAIN)
+    set_text(s1.shapes[8], "2. Dự án New User lập kỷ lục 2.389 Map Bank (+5,0% MoM)\n- 11.143 App Installs (+6,1% MoM), nhịp chạy 359,5 lượt tải/ngày.\n- 3.902 Đăng Ký (35,0% CVR) và 2.389 Liên Kết Ngân Hàng (61,2% CVR).\n- Nguồn kéo chủ lực: Banner Ads C.CHAOMOMO (8.517 installs), Cinema Hub (1.931 installs, CVR 15,2%) và Minigame Một Mùa Quýt (7.097 active players).", font_size=9.0, color=COLOR_TEXT_MAIN)
+    set_text(s1.shapes[9], "3. Cinema Hub vượt 101,4% Target, Financial bước đầu tích cực\n- Cinema Hub đạt 1.132.721 PVs (101,4% Target), Organic đạt 86,4% tự bù cho phim lẻ sau khi cắt 93% Paid.\n- Financial Hub đạt 273.705 PVs (+9,6% MoM), Trung tâm tài chính +442% nhờ cụm công cụ tỷ giá live.\n- Toàn sàn đón 1,24M New Users tự nhiên ghé thăm website.", font_size=9.0, color=COLOR_TEXT_MAIN)
+    set_text(s1.shapes[10], "Điểm nổi bật\n- Toàn sàn đạt 3.602.023 PVs (98,3% Target); kênh tự nhiên tăng +13,5% MoM tự bù đắp 51% lượng Paid Ads sụt giảm.\n- Dự án New User lập kỷ lục lịch sử 2.389 Map Bank (+5,0% MoM); Cinema Hub hoàn thành xuất sắc 101,4% Target.", font_size=8.5, color=COLOR_TEXT_MAIN)
     set_text(s1.shapes[11], "Cần theo dõi & Trọng tâm tháng 11\n- Paid Ads giảm 60,4% (-723K PVs) do BU cắt giảm chi phí -> Tiếp tục đẩy mạnh các sản phẩm tự nhiên để duy trì nhịp tăng trưởng.\n- Hoàn tất rà soát công thức Thuế TNCN với Pháp chế & Kế toán trước 10/11 để go-live đúng hạn.", font_size=8.5, color=COLOR_TEXT_MAIN)
 
     # 3. Slide 2: Discussion Topics
@@ -155,39 +157,74 @@ def main():
     set_text(s4.shapes[8], "Nhận định & Hành động tiếp theo\n- Động lực tự nhiên vững chắc: Cả 3 kênh tự nhiên (Organic, Direct, Referral) đều tăng trưởng mạnh và vượt từ 108% - 109% chỉ tiêu kế hoạch. Direct tăng +23,3% phản ánh uy tín thương hiệu MoMo ngày càng vững chắc.\n- Tự bù đắp khoảng trống Paid Ads: Kênh Non-Paid tăng thêm +372.776 PVs (+13,5% MoM), bù đắp được hơn 51% lượng suy giảm do BU chủ động cắt giảm 60,4% ngân sách Paid Ads (-723.612 PVs toàn Web).\n- Trọng tâm tháng 11: Chuẩn hóa luồng Tải App (/tai-app) để thu hút 10.000 volume tìm kiếm tự nhiên, tiếp tục mở rộng các Hub cốt lõi (Cinema, Financial) để duy trì nhịp tăng trưởng nội sinh độc lập với Paid Media.", font_size=8.5, color=COLOR_TEXT_MAIN)
     set_text(s4.shapes[9], "Ghi chú: Toàn bộ các kênh tự nhiên (Organic, Direct, Referral) đều hoàn thành vượt chỉ tiêu (108% - 109% Target). Tổng lưu lượng toàn sàn về đích 98,3% do khoảng hụt 723.612 PVs từ việc BU chủ động cắt giảm 60,4% ngân sách Paid Ads.", font_size=7.5, color=COLOR_TEXT_MUTED)
 
-    # 6. Slide 5: GEO AI Search
+    # 6. Slide 5: Dự Án New User & Phễu Chuyển Đổi (Slide 6 of deck)
     s5 = prs.slides[5]
+    set_text(s5.shapes[0], "Dự Án New User Xác Lập Kỷ Lục 2.389 Khách Hàng Map Bank (+5,0% MoM); Dẫn Dắt Bởi 11.143 App Installs Từ Ads Banner & Minigame Một Mùa Quýt", font_size=15.0, bold=True, color=COLOR_TEXT_MAIN)
     s5.shapes[2].text_frame.text = "" # Clear "Mục đích:"
-
-    # 7. Slide 6: New User Flow
-    s6 = prs.slides[6]
-    set_text(s6.shapes[0], "Kênh Tự Nhiên Dẫn Dắt 1,24M Người Dùng Mới (78,9% Tổng New Users), Bù Đắp Sụt Giảm Paid Ads", font_size=16, bold=True, color=COLOR_TEXT_MAIN)
-    s6.shapes[2].text_frame.text = "" # Clear "Mục đích:"
-    # Repurpose right table shape 8: change to Key Hubs New User Funnel
-    tbl6_2 = s6.shapes[8].table
-    set_cell(tbl6_2.cell(0, 0), "Phễu Hub & Sản phẩm", bold=True, color=COLOR_WHITE)
-    set_cell(tbl6_2.cell(0, 1), "Ngành", bold=True, color=COLOR_WHITE)
-    set_cell(tbl6_2.cell(0, 2), "New Users", bold=True, color=COLOR_WHITE, align=PP_ALIGN.RIGHT)
-    hub_users_data = [
-        ("• Cinema Hub (Cụm Rạp & Diễn Viên)", "Movies", "280.016"),
-        ("• Onboarding & Tiện Ích Tải App", "Platform", "285.882"),
-        ("• Minigame & Giải Trí (Một Mùa Quýt)", "Game", "53.612"),
-        ("• Financial Hub (Ví Trả Sau, Tỷ Giá)", "Finance", "78.415"),
-        ("• Travel & Du Lịch Đi Lại", "OTA", "42.190"),
-        ("• Dịch Vụ Tiện Ích Đời Sống Khác", "Utility", "833.849"),
+    
+    # Left table title & table (Funnel)
+    set_text(s5.shapes[6], "Phễu Chuyển Đổi Web-to-App Tháng 10 (Chốt Số 31 Ngày)", font_size=10.0, bold=True, color=COLOR_MAGENTA)
+    tbl5_1 = s5.shapes[7].table
+    set_cell(tbl5_1.cell(0, 0), "Bước phễu chuyển đổi", bold=True, color=COLOR_WHITE)
+    set_cell(tbl5_1.cell(0, 1), "Tháng 10 (31 ngày)", bold=True, color=COLOR_WHITE, align=PP_ALIGN.RIGHT)
+    set_cell(tbl5_1.cell(0, 2), "Tỷ lệ CVR / MoM", bold=True, color=COLOR_WHITE, align=PP_ALIGN.RIGHT)
+    
+    funnel_rows = [
+        ("1. Total App Installs", "11.143", "100% (▲ +6,1% MoM)", True, COLOR_TEXT_MAIN),
+        ("2. Đăng ký tài khoản (REG)", "3.902", "35,0% CVR (▲ +9,3% MoM)", False, COLOR_TEXT_MAIN),
+        ("3. Liên kết NH (Map Bank / N2MM)", "2.389", "61,2% CVR (▲ +5,0% MoM · KỶ LỤC)", True, COLOR_GREEN),
+        ("4. Active MAU (Giao dịch đầu)", "1.284", "53,8% từ Map (End-to-End 11,5%)", True, COLOR_TEXT_MAIN),
+        ("Phân rã Hệ điều hành: iOS", "5.707 (51,2%)", "1.364 Map Bank (57,1% N2MM)", False, COLOR_MAGENTA),
+        ("Phân rã Hệ điều hành: Android", "5.436 (48,8%)", "1.025 Map Bank (42,9% N2MM)", False, COLOR_TEXT_MUTED),
+        ("Tổng toàn Website MoMo", "11.143 Installs", "2.389 Map Bank · 1.284 MAU", True, COLOR_TEXT_MAIN),
     ]
-    for r_idx, (hub, cat, users) in enumerate(hub_users_data, 1):
-        set_cell(tbl6_2.cell(r_idx, 0), hub, bold=True)
-        set_cell(tbl6_2.cell(r_idx, 1), cat)
-        set_cell(tbl6_2.cell(r_idx, 2), users, align=PP_ALIGN.RIGHT, bold=True, color=COLOR_GREEN)
+    for r_idx, (step, val, cr, is_bold, val_col) in enumerate(funnel_rows, 1):
+        set_cell(tbl5_1.cell(r_idx, 0), step, bold=is_bold)
+        set_cell(tbl5_1.cell(r_idx, 1), val, align=PP_ALIGN.RIGHT, bold=is_bold, color=val_col if is_bold else None)
+        set_cell(tbl5_1.cell(r_idx, 2), cr, align=PP_ALIGN.RIGHT, bold=is_bold, color=val_col)
 
-    # 8. Slide 7: Hubs Breakdown
-    s7 = prs.slides[7]
-    set_text(s7.shapes[0], "Cinema Hub Vượt Kế Hoạch (101,4% Target), Financial Hub Bước Đầu Ghi Nhận Tín Hiệu Tích Cực (+9,6% MoM)", font_size=15.5, bold=True, color=COLOR_TEXT_MAIN)
-    s7.shapes[2].text_frame.text = "" # Clear "Mục đích:"
+    # Right table title & table (Sources & Placements)
+    set_text(s5.shapes[8], "Cơ Cấu Đóng Góp Theo Kênh & Placement (Ads, Cinema, Game)", font_size=10.0, bold=True, color=COLOR_MAGENTA)
+    tbl5_2 = s5.shapes[9].table
+    set_cell(tbl5_2.cell(0, 0), "Placement / Kênh nguồn", bold=True, color=COLOR_WHITE)
+    set_cell(tbl5_2.cell(0, 1), "Installs (Tỷ trọng)", bold=True, color=COLOR_WHITE, align=PP_ALIGN.RIGHT)
+    set_cell(tbl5_2.cell(0, 2), "Map Bank (CVR Map/Ins)", bold=True, color=COLOR_WHITE, align=PP_ALIGN.RIGHT)
+    
+    placement_rows = [
+        ("Banner Ads (C.CHAOMOMO & Balloon)", "8.517 (76,4%)", "1.798 (21,1% CVR)", True, COLOR_TEXT_MAIN),
+        ("Cinema Hub (Cụm rạp & Đặt vé)", "1.931 (17,3%)", "484 (25,1% CVR · Top 1)", True, COLOR_GREEN),
+        ("Game Một Mùa Quýt & Quà (BRT)", "264 (2,4%)", "41 (7.097 active players)", False, COLOR_MAGENTA),
+        ("Merchant Hub (Đối tác liên kết)", "271 (2,4%)", "40 (14,8% CVR · 30 MAU)", False, COLOR_TEXT_MAIN),
+        ("Bảo hiểm (InsurTech)", "91 (0,8%)", "22 (24,2% CVR · 13 MAU)", False, COLOR_TEXT_MAIN),
+        ("Thử nghiệm Financial Health", "68 (0,6%)", "3 (Luồng mới từ 12/10)", False, COLOR_TEXT_MUTED),
+    ]
+    for r_idx, (plc, ins, map_b, is_bold, val_col) in enumerate(placement_rows, 1):
+        set_cell(tbl5_2.cell(r_idx, 0), plc, bold=is_bold)
+        set_cell(tbl5_2.cell(r_idx, 1), ins, align=PP_ALIGN.RIGHT, bold=is_bold)
+        set_cell(tbl5_2.cell(r_idx, 2), map_b, align=PP_ALIGN.RIGHT, bold=is_bold, color=val_col)
+
+    # Bottom commentary box
+    bottom_commentary_s5 = (
+        "Key Highlights & Nhận Định Chiến Lược Tăng Trưởng New User\n"
+        "• Xác lập kỷ lục N2MM mới: Tháng 10 mang về 2.389 khách hàng liên kết ngân hàng (+4,96% MoM, phá đỉnh 2.276 của T9) với 11.143 lượt cài app. Kênh Web khẳng định vai trò là phễu thu hút khách hàng tài chính chất lượng cao.\n"
+        "• Động cơ Cinema & Gamification bứt phá: Cinema Hub tăng +58,2% Installs và +92,1% Map Bank với CVR End-to-End 15,2% (gấp rưỡi banner đại trà). Game \"Một Mùa Quýt\" hút 7.097 active players tạo đà kéo chuyển đổi ngoài app.\n"
+        "• iOS là mỏ vàng kinh doanh: Chiếm 51,2% lượng cài đặt nhưng đóng góp tới 57,1% Map Bank (1.364 users) và 58,6% Active MAU nhờ tỷ lệ Map/REG đạt 67,4% (cao hơn Android +12,8 pp).\n"
+        "• Trọng tâm Tháng 11: Tích hợp luồng Tải App chuẩn hóa (/tai-app đón 10K search volume) và mở rộng Gamification để thúc đẩy tỷ lệ REG/Install từ 35% lên ≥45%."
+    )
+    set_text(s5.shapes[10], bottom_commentary_s5, font_size=8.0, color=COLOR_TEXT_MAIN)
+
+    # 7. Xóa bỏ Slide 6 cũ (Old Slide 7 with duplicate GA4 browser new users)
+    delete_slide(prs, 6)
+    TOTAL = len(prs.slides)
+    print(f"Updated slides count after removing duplicate slide: {TOTAL}")
+
+    # 8. Slide 6 (previously Slide 7): Hubs Breakdown
+    s6_hub = prs.slides[6]
+    set_text(s6_hub.shapes[0], "Cinema Hub Vượt Kế Hoạch (101,4% Target), Financial Hub Bước Đầu Ghi Nhận Tín Hiệu Tích Cực (+9,6% MoM)", font_size=15.5, bold=True, color=COLOR_TEXT_MAIN)
+    s6_hub.shapes[2].text_frame.text = "" # Clear "Mục đích:"
     
     # Shape 9: Cinema Hub Card Text
-    sh9 = s7.shapes[9]
+    sh9 = s6_hub.shapes[9]
     sh9.text_frame.word_wrap = True
     sh9.text_frame.paragraphs[0].text = "Cinema Hub"
     sh9.text_frame.paragraphs[0].runs[0].font.size = Pt(8.0)
@@ -205,17 +242,17 @@ def main():
     sh9.text_frame.paragraphs[2].runs[0].font.color.rgb = COLOR_GREEN
     
     # Shape 10: Cinema Hub Badge -> Vượt Target (+15,3K PVs)
-    set_text(s7.shapes[10], "Vượt Kế Hoạch (+15,3K PVs)", font_size=7.5, bold=True, color=COLOR_WHITE, align=PP_ALIGN.CENTER)
-    s7.shapes[10].fill.solid()
-    s7.shapes[10].fill.fore_color.rgb = COLOR_GREEN
+    set_text(s6_hub.shapes[10], "Vượt Kế Hoạch (+15,3K PVs)", font_size=7.5, bold=True, color=COLOR_WHITE, align=PP_ALIGN.CENTER)
+    s6_hub.shapes[10].fill.solid()
+    s6_hub.shapes[10].fill.fore_color.rgb = COLOR_GREEN
 
     # Shape 12: Financial Hub Badge
-    set_text(s7.shapes[12], "Bước đầu đầu tư tích cực", font_size=7.5, bold=True, color=COLOR_WHITE, align=PP_ALIGN.CENTER)
-    s7.shapes[12].fill.solid()
-    s7.shapes[12].fill.fore_color.rgb = COLOR_GREEN
+    set_text(s6_hub.shapes[12], "Bước đầu đầu tư tích cực", font_size=7.5, bold=True, color=COLOR_WHITE, align=PP_ALIGN.CENTER)
+    s6_hub.shapes[12].fill.solid()
+    s6_hub.shapes[12].fill.fore_color.rgb = COLOR_GREEN
 
     # Shape 13: Non-Paid Card Text
-    sh13 = s7.shapes[13]
+    sh13 = s6_hub.shapes[13]
     sh13.text_frame.word_wrap = True
     sh13.text_frame.paragraphs[0].text = "Non-Paid"
     sh13.text_frame.paragraphs[0].runs[0].font.size = Pt(8.0)
@@ -233,9 +270,9 @@ def main():
     sh13.text_frame.paragraphs[2].runs[0].font.color.rgb = COLOR_GREEN
 
     # Shape 14: Non-Paid Badge -> Chiếm 86,9% Tổng Lưu Lượng (GREEN!)
-    set_text(s7.shapes[14], "Chiếm 86,9% Tổng Lưu Lượng", font_size=7.5, bold=True, color=COLOR_WHITE, align=PP_ALIGN.CENTER)
-    s7.shapes[14].fill.solid()
-    s7.shapes[14].fill.fore_color.rgb = COLOR_GREEN
+    set_text(s6_hub.shapes[14], "Chiếm 86,9% Tổng Lưu Lượng", font_size=7.5, bold=True, color=COLOR_WHITE, align=PP_ALIGN.CENTER)
+    s6_hub.shapes[14].fill.solid()
+    s6_hub.shapes[14].fill.fore_color.rgb = COLOR_GREEN
 
     # Shape 19: Clean commentary, evaluate based on Target:
     commentary_s7 = (
@@ -246,7 +283,7 @@ def main():
         "Cơ cấu lưu lượng & Tối ưu chi phí\n"
         "- Kênh tự nhiên (Non-Paid): Đạt 3.128.542 PVs (+13,5% MoM, chiếm 86,9% toàn sàn), hoàn thành 109,2% tổng chỉ tiêu các kênh tự nhiên (Target 2,87M), tự bù đắp phần lớn khoảng trống do BU cắt giảm 60,4% ngân sách Paid Ads (-723K PVs toàn Website)."
     )
-    set_text(s7.shapes[19], commentary_s7, font_size=8.5, color=COLOR_TEXT_MAIN)
+    set_text(s6_hub.shapes[19], commentary_s7, font_size=8.5, color=COLOR_TEXT_MAIN)
 
     # Clean footers and page numbering across ALL slides
     for idx, s in enumerate(prs.slides):

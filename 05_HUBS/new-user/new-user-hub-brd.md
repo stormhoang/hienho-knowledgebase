@@ -353,7 +353,7 @@ Thống nhất xây dựng **New User Master Hub (`momo.vn/welcome`)** làm tran
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Baseline Cũ (T7/2026)</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Thực tế Tháng 08/2026</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Thực tế Tháng 09/2026</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">MTD Tháng 10/2026 (22 Ngày)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Thực tế Tháng 10/2026 (Full Month)</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Mục tiêu H2 (Mỗi tháng)</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cơ sở & Phương pháp Đo lường</th>
     </tr>
@@ -364,7 +364,7 @@ Thống nhất xây dựng **New User Master Hub (`momo.vn/welcome`)** làm tran
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">948 users</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">1.818 users</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.276 users (~2.3K)</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center; font-weight:700; color:#16a34a;">1.719 users (Run-rate ~2.42K)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center; font-weight:700; color:#16a34a;">2.389 users (+5,0% MoM - Kỷ lục mới)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>5.000 users/tháng</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Người dùng mới hoàn tất đăng ký & liên kết ngân hàng qua Web-to-App.</td>
     </tr>
@@ -373,7 +373,7 @@ Thống nhất xây dựng **New User Master Hub (`momo.vn/welcome`)** làm tran
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">5.239 installs</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">10.041 installs</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">10.501 installs</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center; font-weight:700; color:#16a34a;">7.804 installs (Run-rate ~11.0K)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center; font-weight:700; color:#16a34a;">11.143 installs (+6,1% MoM)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>20.000 - 30.000 installs/tháng</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tổng lượt tải App ghi nhận attribution qua AppsFlyer OneLink.</td>
     </tr>
@@ -382,7 +382,7 @@ Thống nhất xây dựng **New User Master Hub (`momo.vn/welcome`)** làm tran
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">32.10%</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">32.10%</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">33.99%</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center; font-weight:700; color:#16a34a;">35.97%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center; font-weight:700; color:#16a34a;">35.02% (+1,03 p.p MoM)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>≥ 50.0% - 60.0%</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nâng cao nhờ cơ chế chọn quà trước và luồng Hybrid Onboarding tại momo.vn/welcome.</td>
     </tr>
@@ -391,7 +391,7 @@ Thống nhất xây dựng **New User Master Hub (`momo.vn/welcome`)** làm tran
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">536 MAU</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">1.029 MAU</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">1.328 MAU</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center; font-weight:700; color:#16a34a;">902 MAU (Run-rate ~1.27K)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center; font-weight:700; color:#16a34a;">1.284 MAU (Tiệm cận đỉnh T9)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>2.500 MAU/tháng</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Người dùng mới phát sinh ít nhất 1 giao dịch thực tế trên App.</td>
     </tr>
