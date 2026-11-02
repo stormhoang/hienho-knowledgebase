@@ -12,7 +12,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(BASE_DIR))
 
-from scripts.rebuild_projects_detail_flow import run as sync_google_sheet_clicks, get_clicks_by_project
+from scripts.rebuild_projects_detail_flow_v3 import run as sync_google_sheet_clicks
 
 if __name__ == "__main__":
     sync_google_sheet_clicks()

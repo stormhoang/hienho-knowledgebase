@@ -157,11 +157,6 @@ def patch_excel_dynamic(file_path, month_str, target_pv, days_elapsed, total_pv,
             continue
         rescale_pivot_column(ws, col, total_pv)
 
-    # Formula Array for Projects Detail Flow Q3
-    ws_proj = wb["Projects Detail Flow"]
-    q3_formula = "=INDEX('Full month Pivot'!$D$3:$K$400, MATCH(\"Grand Total\", 'Full month Pivot'!$A$3:$A$400, 0), MATCH(Q$2, 'Full month Pivot'!$D$2:$K$2, 0))"
-    ws_proj["Q3"] = ArrayFormula(ref="Q3", text=q3_formula)
-
     # Active view
     idx = wb.sheetnames.index("Overall Performance")
     wb.active = idx
