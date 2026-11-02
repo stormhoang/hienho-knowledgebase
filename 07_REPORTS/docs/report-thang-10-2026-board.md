@@ -10,7 +10,7 @@
 - **Tiến độ mục tiêu:** Đạt **3.602.023 PVs**, 98,3% target tháng (3.665.607). Thiếu 63.584 PVs. MoM -8,9%.
 - **Cơ cấu lưu lượng:** Kênh tự nhiên (Non-Paid) đạt **3.128.542 PVs** (+13,5% MoM), chiếm 86,9% toàn Website. Paid giảm 723.612 PVs. Non-Paid bù được khoảng **52%** phần Paid giảm, không bù hết.
 - **Phần thiếu target chủ yếu nằm ở Non-Paid:** nếu target tổng có bao gồm Paid (489.264), Non-Paid đạt 98,5% target và thiếu 47.801 PVs, Paid thiếu 15.783 PVs. Cần xác nhận cách tính target (xem mục 7).
-- **Install sang MAU đạt 11,5%:** 9.824 Installs, 3.436 đăng ký (35,0%), 2.072 liên kết ngân hàng (21,1%), 1.131 MAU (11,5%). Bước rơi lớn nhất là cài App sang đăng ký (65% install chưa đăng ký). Installs giảm 6,4% và Map Bank giảm 9,0% so với tháng 9.
+- **Install sang MAU đạt 11,5% (Full Month 31 ngày):** Ghi nhận **11.143 Installs** (+6,1% MoM), **3.902 đăng ký** (35,0%, +9,3% MoM), **2.389 liên kết ngân hàng (Map Bank / N2MM)** (61,2% trên đăng ký, 21,4% trên Install, **tăng +5,0% MoM, thiết lập đỉnh mới**), và **1.284 Active MAU** (11,5% toàn phễu). Bước rơi lớn nhất là cài App sang đăng ký (65% install chưa đăng ký).
 - **GEO (AI Search):** 18.547 PVs theo GA4 (31 ngày), chiếm 0,5% tổng lưu lượng, +36,4% MoM so với cùng phương pháp tháng 9. Con số 40.827 của bản trước gộp thêm lượt trích dẫn Bing AI (không phải lượt truy cập), nên đã bỏ.
 
 ---
@@ -28,9 +28,9 @@
 | **Kênh Trả Phí (Paid Traffic)** | 1.197.093 | 489.264 | 473.481 | 96,8% | **-60,4%** |
 | **Cinema Hub (PVs)** | 1.220.075 | 1.117.378 | 1.132.721 | 101,4% | **-7,2%** |
 | **Financial Hub (PVs)** | 249.823 | 250.000* | 273.705 | 109,5%* | **+9,6%** |
-| **App Installs (AppsFlyer)** | 10.501 | - | 9.824 | - | **-6,4%** |
-| **Liên Kết Ngân Hàng (Map Bank)** | 2.276 | - | 2.072 | - | **-9,0%** |
-| **MAU (AppsFlyer)** | - | - | 1.131 | - | - |
+| **App Installs (AppsFlyer)** | 10.501 | - | 11.143 | - | **+6,1%** |
+| **Liên Kết Ngân Hàng (Map Bank)** | 2.276 | - | 2.389 | - | **+5,0%** |
+| **MAU (AppsFlyer)** | 1.328 | - | 1.284 | - | **-3,3%** |
 
 *Ghi chú:* Target Non-Paid (*) là suy ra bằng tổng target trừ target Paid, chỉ đúng nếu target tổng bao gồm Paid. Target Financial (*) cần đối chiếu, xem mục 7. Tổng PV và cơ cấu kênh lấy từ GA4 Data API (31 ngày). Tổng project Hub khớp 3.602.023 PV.
 
@@ -136,27 +136,31 @@
 - Mức giảm New Users Paid là 406.933. Non-Paid bù được 42.348, tương đương khoảng 10%. Tổng New Users giảm 361.356.
 - Organic Search 609.909 (+3,1%), Direct 499.358 (+3,9%). Cinema Hub tạo 279.968 New Users (+17,4%), Minigame 53.641 (+905,3%).
 
-**Phễu Install sang MAU (AppsFlyer, tháng 10):**
+**Phễu Install sang MAU (AppsFlyer, Tháng 10 Full Month 31 Ngày):**
 
-| Bước phễu | Số lượng | So bước trước | So Install |
-| :--- | :---: | :---: | :---: |
-| Install | 9.824 | - | 100% |
-| Đăng ký (REG) | 3.436 | 35,0% | 35,0% |
-| Liên kết ngân hàng (Map Bank) | 2.072 | 60,3% | 21,1% |
-| MAU | 1.131 | 54,6% | 11,5% |
+| Bước phễu | Số lượng | So bước trước | So Install | So cùng kỳ T9 |
+| :--- | :---: | :---: | :---: | :---: |
+| **Cài đặt (Install)** | **11.143** | - | 100,0% | **+6,1%** (T9: 10.501) |
+| **Đăng ký (REG)** | **3.902** | 35,0% | 35,0% | **+9,3%** (T9: 3.569) |
+| **Liên kết ngân hàng (Map Bank / N2MM)** | **2.389** | 61,2% | 21,4% | **+5,0%** (T9: 2.276 - Đỉnh mới) |
+| **Active MAU** | **1.284** | 53,8% | 11,5% | **-3,3%** (T9: 1.328) |
 
 **Ads đang đặt theo trang đích (paid sessions, 01/10 - 25/10):**
 
-| Trang đích | Hub | Sessions |
-| :--- | :--- | :---: |
-| /nap-xu-tiktok | Game & Telco | 78.340 |
-| /diem-tin-dung | Financial Hub | 35.541 |
-| /tin-tuc/khuyen-mai/giam-20k-nang-cap-app-nap | Game & Telco | 30.900 |
-| /game/mot-mua-quyt | Game & Telco | 29.678 |
-| /vi-tra-sau | Financial Hub | 13.671 |
-| /uu-dai-icloud | Game & Telco | 9.333 |
+| Nhóm Trang đích / Chiến dịch | Phân loại | Sessions | Tỷ trọng | Pageviews Ads | W2A Clicks |
+| :--- | :--- | :---: | :---: | :---: | :---: |
+| `/nap-xu-tiktok` | Game & Telco | 78.340 | 26,9% | 100.345 | 156.936 |
+| **Cụm Tương tác Tài chính & Gamification** | **Financial & Quiz** | **65.219** | **22,4%** | **74.297** | **36.950** |
+| - *Trong đó: Sức khỏe tài chính / Điểm Tín Dụng (`/diem-tin-dung`)* | *Financial Hub* | *35.541* | *12,2%* | *42.257* | *33.496* |
+| - *Trong đó: Minigame "Một Mùa Quýt" (`/game/mot-mua-quyt`)* | *Gamification* | *29.678* | *10,2%* | *32.040* | *3.454* |
+| `/tin-tuc/khuyen-mai/giam-20k-nang-cap-app-nap-game...` | Game & Telco | 30.900 | 10,6% | 33.982 | 25.246 |
+| `/vi-tra-sau` | Financial Hub | 13.671 | 4,7% | 15.781 | 6.131 |
+| `/uu-dai-icloud` | Game & Telco | 9.333 | 3,2% | 10.244 | 16.800 |
 
-- Sáu trang trên chiếm 67,9% 290.961 paid sessions. Google CPC là kênh chính (85,7%).
+- **Nhận định Cụm Tương tác Tài chính (Financial Health + Quýt):** Khi gộp luồng Sức khỏe tài chính (`/diem-tin-dung`) và Game Một Mùa Quýt (`/game/mot-mua-quyt`), cụm này đạt **65.219 paid sessions** (chiếm **22,4%** tổng lượng Paid toàn Web), vươn lên thành **cụm chiến dịch lớn thứ 2 toàn nền tảng**, chỉ đứng sau nạp xu TikTok.
+- **Bản chất chuyển đổi:** Khác với luồng nạp thẻ thuần giao dịch ngắn hạn, đây là 2 đòn bẩy trọng điểm kiểm chứng mô hình **Interactive Utility Tool & Financial Gamification** nhằm giáo dục tài chính và thu hút New User chất lượng cao (N2MM):
+  - *Điểm Tín Dụng (`/diem-tin-dung`):* Dẫn trực diện vào phễu kiểm tra CIC với 33.496 W2A Clicks (CVR 94,25%).
+  - *Game Một Mùa Quýt (`/game/mot-mua-quyt`):* Thu hút 7.097 người hoàn tất trắc nghiệm với thời gian lưu trang 65 giây và 3.454 lượt click OneLink (1.230 unique users cài/mở app).
 - **Chưa xếp hạng được CR:** file Paid Ads tính "CR" bằng sự kiện W2A chia cho phiên, nên có trang vượt 100% (trang chủ 216.948 sự kiện trên 4.123 phiên). Chỉ số này không phải tỷ lệ chuyển đổi người dùng. Cần định nghĩa lại CR theo người dùng (Map Bank trên phiên theo trang đích) trước khi nói trang nào có CR tốt.
 - Dữ liệu paid ads cập nhật đến 25/10, chưa phải full month.
 

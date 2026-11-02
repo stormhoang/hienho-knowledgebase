@@ -713,6 +713,15 @@ def main():
         except Exception as e:
             print(f"[Auto-Drive] Lưu ý đồng bộ Drive: {e}")
 
+    # 5.7 Tự động đồng bộ biến động 7 ngày SERP (Gainers & Losers) vào /report và /dashboard
+    try:
+        print("[Auto-7D-SERP] Đang đồng bộ biến động 7 ngày SERP (Gainers & Losers) vào /report & /dashboard...")
+        sync_7d_script = BASE_DIR / "scripts" / "sync_7d_performance_report.py"
+        if sync_7d_script.exists():
+            subprocess.run([sys.executable, str(sync_7d_script), "--no-push"], check=False)
+    except Exception as e:
+        print(f"[Auto-7D-SERP] Lưu ý đồng bộ 7D SERP: {e}")
+
     # 6. Push GitHub REST API
     if not args.no_push:
         print("[6/6] Tự động đẩy dữ liệu sang GitHub Hubs qua REST API...")

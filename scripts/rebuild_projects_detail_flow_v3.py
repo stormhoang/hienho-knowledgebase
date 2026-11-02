@@ -55,6 +55,10 @@ HUB_STRUCTURE = {
         ("Cinema_News", ["Cinema_News"]),
     ],
     "Financial Hub": [
+        ("Trang Tài Chính (/tai-chinh)", ["Trung Tâm Tài Chính", "Trung tâm tài chính", "Tài chính"]),
+        ("Tính Lương", ["Tính Lương", "tinh-luong"]),
+        ("Tỷ Giá", ["Tỷ Giá", "ty-gia"]),
+        ("Giá Vàng", ["Tiệm Vàng Online", "Giá Vàng", "gia-vang"]),
         ("Vay Nhanh", ["Vay Nhanh", "Vay nhanh"]),
         ("Ví Trả Sau", ["Ví Trả Sau"]),
         ("Túi Thần Tài", ["Túi Thần Tài"]),
@@ -65,10 +69,10 @@ HUB_STRUCTURE = {
         ("Quản Lý Chi Tiêu", ["Quản Lý Chi Tiêu", "Quản lý chi tiêu"]),
         ("Thanh Toán Khoản Vay", ["Thanh Toán Khoản Vay"]),
         ("Thanh Toán Thẻ Tín Dụng", ["Thanh Toán Thẻ Tín Dụng"]),
-        ("Chứng Chỉ Quỹ", ["Chứng Chỉ Quỹ"]),
-        ("Trung Tâm Tài Chính", ["Trung Tâm Tài Chính", "Trung tâm tài chính"]),
+        ("Chứng Chỉ Quỹ", ["Chứng Chỉ Quỹ", "Quỹ"]),
         ("Trả Góp Apple", ["Trả Góp Apple"]),
         ("Sàn Đầu Tư", ["Sàn Đầu Tư"]),
+        ("Mở tài khoản ngân hàng", ["Mở tài khoản ngân hàng"]),
     ],
     "Vehicle Hub": [
         ("Phạt nguội", ["Phạt nguội", "Phạt Nguội"]),
@@ -104,7 +108,7 @@ HUB_STRUCTURE = {
     ]
 }
 
-# 25 DỰ ÁN ĐỘC LẬP
+# 22 DỰ ÁN ĐỘC LẬP
 STANDALONE_PROJECTS = [
     ("Home MoMo", ["Home MoMo"]),
     ("Download", ["Download"]),
@@ -122,14 +126,11 @@ STANDALONE_PROJECTS = [
     ("P2P", ["P2P"]),
     ("Cross Border", ["Cross Border"]),
     ("Hoàn Tiền Mua Sắm", ["Hoàn Tiền Mua Sắm"]),
-    ("Mở tài khoản ngân hàng", ["Mở tài khoản ngân hàng"]),
     ("Hỏi đáp", ["Hỏi đáp"]),
     ("TnC", ["TnC", "Tnc"]),
     ("Trust", ["Trust"]),
     ("Guide", ["Guide"]),
     ("Donation", ["Donation"]),
-    ("Tiệm Vàng Online", ["Tiệm Vàng Online"]),
-    ("Tỷ Giá", ["Tỷ Giá"]),
     ("Others", ["Others", "XU"]),
 ]
 
@@ -191,8 +192,17 @@ def fetch_clicks_from_ga4(ga4_token):
         for r in res.get("rows", []):
             lp = r["dimensionValues"][0]["value"]
             cnt = int(r["metricValues"][0]["value"])
-            resolved = upr.resolve_primary("https://www.momo.vn" + lp, rules, inferred)
-            key = alias_map.get(resolved.lower(), resolved)
+            if "/tai-chinh/tinh-luong" in lp:
+                key = "Tính Lương"
+            elif "/tai-chinh/gia-vang" in lp or "tiem-vang" in lp:
+                key = "Giá Vàng"
+            elif "/tai-chinh/ty-gia" in lp:
+                key = "Tỷ Giá"
+            elif lp.startswith("/tai-chinh"):
+                key = "Trang Tài Chính (/tai-chinh)"
+            else:
+                resolved = upr.resolve_primary("https://www.momo.vn" + lp, rules, inferred)
+                key = alias_map.get(resolved.lower(), resolved)
             mapped[key] += cnt
         clicks_by_month[m] = mapped
         print(f"      ✓ {m}: {sum(mapped.values()):,} clicks")

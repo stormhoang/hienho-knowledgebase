@@ -23,6 +23,7 @@ Tự động:
 import os
 import sys
 import json
+import argparse
 import subprocess
 from datetime import datetime, timedelta
 from collections import defaultdict
@@ -443,7 +444,12 @@ def push_to_github():
         return False
     return True
 
-def main():
+def sync_7d_performance(no_push: bool = False, json_only: bool = False) -> dict:
+    """
+    Thực hiện quy trình phân tích và đồng bộ hiệu suất 7 ngày SERP.
+    - no_push: Nếu True, bỏ qua commit và đẩy GitHub (dành cho khi được gọi lồng trong pipeline MTD).
+    - json_only: Nếu True, chỉ cập nhật file JSON SSOT.
+    """
     print("=" * 65)
     print("CẬP NHẬT HIỆU SUẤT BIẾN ĐỘNG 7 NGÀY GSC VÀO /report VÀ HUBS")
     print("=" * 65)
@@ -491,9 +497,9 @@ def main():
             json.dump(data, f, ensure_ascii=False, indent=2)
         print(f"   Đã đồng bộ JSON sang react-web-momo: {hub_json}")
         
-    if "--json-only" in sys.argv:
+    if json_only:
         print("\n--json-only: chỉ ghi JSON, bỏ qua báo cáo tuần, web-data, commit và push.")
-        return
+        return data
 
     # 5. Cập nhật Báo Cáo Tuần trên /report
     report_filename = get_latest_weekly_report_filename()
@@ -510,6 +516,10 @@ def main():
     hub_web_data = os.path.join(HUBS_REPO, "lib", "dashboard", "web-data.json")
     update_dashboard_web_data(hub_web_data, data)
     
+    if no_push:
+        print("\n[no-push] Bỏ qua commit và đẩy GitHub (điều phối bởi pipeline chính).")
+        return data
+
     # 7. Git commit trên Hub
     print("\n7. Đang commit thay đổi trên react-web-momo...")
     own_files = [
@@ -530,6 +540,15 @@ def main():
     print("\n" + "=" * 65)
     print("HOÀN TẤT ĐỒNG BỘ HIỆU SUẤT 7 NGÀY LÊN /report VÀ HUBS!")
     print("=" * 65)
+    return data
+
+def main():
+    parser = argparse.ArgumentParser(description="Đồng bộ hiệu suất biến động 7 ngày GSC lên /report và /dashboard.")
+    parser.add_argument("--no-push", action="store_true", help="Không commit và không đẩy lên GitHub")
+    parser.add_argument("--json-only", action="store_true", help="Chỉ xuất JSON SSOT, không sửa markdown/dashboard")
+    args = parser.parse_args()
+
+    sync_7d_performance(no_push=args.no_push, json_only=args.json_only)
 
 if __name__ == "__main__":
     main()
