@@ -44,6 +44,7 @@ Skill này cung cấp bộ khung chuẩn hóa, phương pháp luận bóc tách 
 
 ## 3. THAM CHIẾU TÀI LIỆU CHI TIẾT
 
+- **Từ điển thuật ngữ báo cáo (SSOT):** [`03_SKILLS/momo-reporting-glossary.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS/momo-reporting-glossary.md)
 - **Quy chuẩn gốc cấp công ty:** [`03_SKILLS/momo-reporting-guidelines.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS/momo-reporting-guidelines.md)
 - **Tài liệu Master Framework:** [`03_SKILLS/web-platform-reporting-framework.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS/web-platform-reporting-framework.md)
 - **Nhật ký Họp & Chỉ đạo Chiến lược:** [`MEETING_RECAPS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/MEETING_RECAPS.md)

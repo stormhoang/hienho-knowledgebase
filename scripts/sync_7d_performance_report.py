@@ -280,7 +280,7 @@ def build_markdown_section(data):
     pct_sign = "+" if meta["pct_imp_change"] >= 0 else ""
     net_imp_str = f"{meta['net_imp_change']:+,}"
     
-    md = f"""### 3. Hiệu Suất Biến Động 7 Ngày Qua Trên Google SERP (Rolling 7-Day Performance Trends)
+    md = f"""### 7. Hiệu Suất Biến Động 7 Ngày Qua Trên Google SERP (Rolling 7-Day Performance Trends)
 
 Toàn Website ghi nhận chu kỳ 7 ngày gần nhất ({r_start} đến {r_end} so với {p_start} đến {p_end}) đạt **{meta['total_website_curr_imp']:,} lượt hiển thị** (tăng ròng **{net_imp_str} impressions**, {pct_sign}{meta['pct_imp_change']}% WoW) và **{meta['total_website_curr_clk']:,} clicks SERP**.
 - **Cơ cấu biến động URL chính tắc:** **{meta['total_urls_growing']:,} URLs** tăng trưởng hiển thị vs. **{meta['total_urls_losing']:,} URLs** sụt giảm hiển thị.
@@ -377,40 +377,7 @@ Toàn Website ghi nhận chu kỳ 7 ngày gần nhất ({r_start} đến {r_end}
     return md
 
 def update_weekly_markdown_file(report_file, md_section):
-    if not os.path.exists(report_file):
-        print(f"File không tồn tại: {report_file}")
-        return False
-        
-    with open(report_file, "r", encoding="utf-8") as f:
-        content = f.read()
-        
-    marker = "### 3. "
-    sec2_marker = "## II."
-    sec3_marker = "\n---\n\n## III."
-    
-    # Kiểm tra xem đã có mục 3 trong Section II chưa
-    has_sec3_in_sec2 = False
-    if sec2_marker in content and sec3_marker in content:
-        sec2_part = content[content.find(sec2_marker):content.find(sec3_marker)]
-        if marker in sec2_part:
-            has_sec3_in_sec2 = True
-            
-    if has_sec3_in_sec2:
-        # Thay thế mục 3 hiện có
-        before = content[:content.find(marker, content.find(sec2_marker))]
-        after = content[content.find(sec3_marker):]
-        new_content = before.rstrip() + "\n\n" + md_section.strip() + "\n\n" + after.lstrip()
-    else:
-        # Chèn trước Section III
-        if sec3_marker in content:
-            before, after = content.split(sec3_marker, 1)
-            new_content = before.rstrip() + "\n\n" + md_section.strip() + "\n\n" + sec3_marker + after
-        else:
-            new_content = content + "\n\n" + md_section.strip()
-            
-    with open(report_file, "w", encoding="utf-8") as f:
-        f.write(new_content)
-    print(f"Đã cập nhật Báo cáo Tuần thành công: {report_file}")
+    print(f"Bỏ qua cập nhật mục 7 vào Báo cáo Tuần theo yêu cầu người dùng: {report_file}")
     return True
 
 def update_dashboard_web_data(web_data_file, data):

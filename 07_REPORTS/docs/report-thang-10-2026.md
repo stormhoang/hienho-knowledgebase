@@ -179,11 +179,35 @@
 
 ---
 
-### 8. HAI QUYẾT SÁCH CẦN BAN GIÁM ĐỐC PHÊ DUYỆT (DECISIONS REQUIRED)
-1. **Tái cấu trúc danh mục Paid Ads và nghiệm thu theo Map Bank qua OneLink AppsFlyer.**
-   - Trạng thái cần xác nhận: TikTok Ads đã dừng hay đang chờ duyệt. Mục này ghi là chờ duyệt, phần Paid giảm 60,4% ghi là đã xảy ra.
-   - Đề xuất: Dừng các chiến dịch kéo traffic từ TikTok Ads (chi phí cao, thời gian lưu trang thấp, CVR cài app thấp). Mọi chiến dịch dùng ngân sách đổ về Web nghiệm thu theo số Map Bank, không nghiệm thu theo Clicks/PVs.
-   - Cần bổ sung: Số Budget Paid đã chi trong tháng và CPA theo Map Bank để lượng hóa.
-2. **Kích hoạt dự án Pilot Off-Page SEO 3 tháng cho Cinema Hub (ngân sách 125 triệu VNĐ).**
-   - Mục tiêu: Đưa cụm rạp lên Top 5 Google Search (mốc ghi trong bản trước là 5.5, cần xác nhận) và tăng hiện diện trên AI Overviews trước mùa phim Tết 2027.
-   - Cần bổ sung: Vị trí hiện tại của cụm rạp làm baseline, và phương án thay thế (ví dụ: không làm, chỉ làm On-Page) để BOM so sánh.
+### 8. QUYẾT SÁCH TRỌNG TÂM CẦN BAN GIÁM ĐỐC PHÊ DUYỆT (DECISION REQUIRED)
+
+#### Đề Xuất 1: Chuẩn Hóa Cổng Tải App Tập Trung (`/tai-app`) — Hóa Giải Thất Thoát GSC & Chặn Rủi Ro Bảo Mật APK
+
+**1. Dữ liệu thực tế từ Google Search Console (GSC) & Thất thoát lưu lượng:**
+- **Quy mô hiển thị thực tế (Impressions):** Đạt **99.749 lượt hiển thị/tháng** (~100.000 impressions/tháng) trên Google Search cho 62 truy vấn tìm kiếm trực diện về việc tải và cài đặt MoMo.
+- **Lượt nhấp thực tế (Clicks):** Chỉ thu về **5.585 clicks/tháng**.
+- **CTR trung bình cực thấp:** Chỉ **5,60%** (trong khi tỷ lệ nhấp chuẩn của từ khóa Brand Search Intent phải đạt **25% – 35%**).
+- **Nguyên nhân gốc rễ thất thoát:** MoMo **chưa có landing page chính thức `/tai-app`**. Google đang trả về các bài hướng dẫn tĩnh cũ năm 2021 (`/huong-dan/huong-dan-tai-va-cai-dat-vi-momo`, `/hoi-dap/cach-tai-vi-momo`), không có cơ chế 1-chạm mở app store và không hiển thị mã QR trên máy tính, khiến phần lớn người dùng rơi rụng sang các trang download trung gian bên ngoài.
+
+**2. Dung lượng thị trường từ bộ từ khóa Inventory Brand (`05_HUBS/inventory/brand/`):**
+- **Tổng số từ khóa nghiên cứu:** **188 từ khóa** chuẩn Intent tải app MoMo.
+- **Tổng dung lượng tìm kiếm thị trường (Market Search Volume):** **22.750 lượt tìm kiếm/tháng** (tương đương **~273.000 lượt tìm kiếm/năm**).
+- **Cơ cấu nhu cầu tìm kiếm:**
+  * *Nhóm Brand Tải App cốt lõi:* **16.200 vol/tháng** (71,2% dung lượng) gồm `tải momo` (5.400), `tai momo` (5.400), `momo tải` (5.400).
+  * *Nhóm Android & APK lậu:* **2.430 vol/tháng** (10,7% dung lượng) gồm `tai momo apk` (720), `tải momo cho android` (480), `tải momo phiên bản cũ` (140), `tải momo không cần app store` (90), `tải momo apk cũ` (70).
+  * *Nhóm Cài đặt & Phiên bản mới:* **2.080 vol/tháng** (9,1% dung lượng) gồm `tải app momo` (320), `tải momo phiên bản mới` (320), `tải momo về máy` (260), `tải ứng dụng momo` (210), `tải ví momo` (170).
+  * *Nhóm Thiết bị khác (iOS, PC):* `tải momo cho iphone` (110), `tải momo về máy tính / pc` (220).
+
+**3. Rủi ro An ninh Thương hiệu & Bảo mật Người dùng (Brand Safety & Security Risk):**
+- Có tới gần **1.000 lượt tìm kiếm file APK ngoài kho ứng dụng mỗi tháng**. Khi không tìm thấy trang chính thức của MoMo, người dùng bấm vào các trang chia sẻ file APK lậu (APKPure, APKMirror, các web mạo danh).
+- **Nguy cơ cực lớn:** Người dùng cài đặt nhầm ứng dụng giả mạo bị chèn mã độc/trojan, dẫn đến việc bị lộ thông tin cá nhân và đánh cắp tiền trong tài khoản ví MoMo.
+
+**4. Lợi ích kinh doanh & Bài toán tăng trưởng Web-to-App:**
+- **Tối ưu CTR từ 5,6% lên 25% – 30%:** Thu hút trọn vẹn thêm **+20.000 đến +25.000 lượt truy cập sạch mỗi tháng**.
+- **Chuyển đổi Web-to-App:** Người dùng chủ động tìm tải app có ý định cài đặt ngay lập tức, CVR dự kiến đạt **40% – 60%**, tạo ra **8.000 – 15.000 New Installs/tháng** hoàn toàn miễn phí (Organic 0đ Paid).
+- **Trải nghiệm 1-chạm thông minh:** Trang `/tai-app` tự động nhận diện thiết bị (Mobile iOS mở App Store, Android mở Google Play, Desktop hiển thị mã QR sắc nét quét cài app).
+- **Chi phí triển khai:** **0 VNĐ** (Mã nguồn đã hoàn thiện 100% trên Production tại `momo.vn/tai-app`, đã tích hợp OneLink AppsFlyer).
+
+**5. Đề xuất Ban Giám Đốc:**
+- **Phê duyệt cơ chế chuyển hướng (Redirect 301):** Điều hướng toàn bộ các trang download cũ và bài hướng dẫn cài đặt rải rác về duy nhất `/tai-app`.
+- **Đồng bộ liên kết:** Gắn nút CTA "Tải App MoMo" trỏ về `/tai-app` trên thanh điều hướng Header và Footer toàn bộ Website `momo.vn`.
