@@ -265,26 +265,18 @@ Trong chu kỳ 7 ngày gần nhất ({r_start} đến {r_end} so với {p_start}
     return True
 
 def update_dashboard_web_data(web_data_file, data):
-    if not os.path.exists(web_data_file):
-        print(f"File not found: {web_data_file}")
-        return False
-        
-    with open(web_data_file, "r", encoding="utf-8") as f:
-        wd = json.load(f)
-        
-    # Add breakoutPages / surgingInsights to webData
-    wd["breakoutPages7d"] = {
+    # web_data_file giữ cho tương thích chữ ký; web-data.json chỉ do build-dashboard-data.py ghi.
+    sys.path.insert(0, os.path.join(BASE_DIR, "scripts", "lib"))
+    from hubs_dashboard import write_patch, rebuild_dashboard
+    write_patch("breakoutPages7d", {
         "metadata": data["metadata"],
         "topBreakouts": data["breakout_stars"][:10],
         "topClickSurges": data["click_surges"][:10],
         "topImpSurges": data["imp_surges"][:10],
         "hubSummary": data["hub_summary"][:10]
-    }
-    
-    with open(web_data_file, "w", encoding="utf-8") as f:
-        json.dump(wd, f, ensure_ascii=False, indent=2)
-    print(f"Đã cập nhật dữ liệu /dashboard: {web_data_file}")
-    return True
+    })
+    return rebuild_dashboard()
+
 
 def main():
     print("=" * 60)

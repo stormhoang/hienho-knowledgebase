@@ -596,8 +596,7 @@ def main():
             max_p["full"][m_idx][i] += d_val
             max_p["mtd"][m_idx][i] += d_val
 
-    with open(web_data_path, "w", encoding="utf-8") as f:
-        json.dump(web_data, f, ensure_ascii=False, indent=2)
+    # web_data chỉ dùng trong bộ nhớ cho summary 5.3; web-data.json do build-dashboard-data.py ghi ở 5.5b.
 
     # 5.3 Summary JSON: lastFull = tháng đang sync nếu đã đủ ngày, không thì tháng liền trước
     hub_name = {}
@@ -677,6 +676,11 @@ def main():
     build_script = BASE_DIR / "scripts" / "build_web_platform_performance.py"
     if build_script.exists():
         subprocess.run([sys.executable, str(build_script)], check=False)
+
+    # 5.5b Dựng lại /dashboard web-data.json + summary.json từ Excel vừa patch (writer duy nhất)
+    sys.path.insert(0, str(BASE_DIR / "scripts" / "lib"))
+    from hubs_dashboard import rebuild_dashboard
+    rebuild_dashboard()
 
     # 5.6 Tự động đồng bộ lên Google Sheets Native SSOT qua Cloud Sheets API
     try:

@@ -381,25 +381,18 @@ def update_weekly_markdown_file(report_file, md_section):
     return True
 
 def update_dashboard_web_data(web_data_file, data):
-    if not os.path.exists(web_data_file):
-        print(f"File không tồn tại: {web_data_file}")
-        return False
-        
-    with open(web_data_file, "r", encoding="utf-8") as f:
-        wd = json.load(f)
-        
-    wd["performance7d"] = {
+    # web_data_file giữ cho tương thích chữ ký; web-data.json chỉ do build-dashboard-data.py ghi.
+    sys.path.insert(0, os.path.join(BASE_DIR, "scripts", "lib"))
+    from hubs_dashboard import write_patch, rebuild_dashboard
+    write_patch("performance7d", {
         "metadata": data["metadata"],
         "topGainers": data["top_gainers"][:10],
         "topLosers": data["top_losers"][:10],
         "topClickSurges": data["top_click_surges"][:10],
         "breakoutStars": data["breakout_stars"][:10]
-    }
-    
-    with open(web_data_file, "w", encoding="utf-8") as f:
-        json.dump(wd, f, ensure_ascii=False, indent=2)
-    print(f"Đã cập nhật dữ liệu /dashboard: {web_data_file}")
-    return True
+    })
+    return rebuild_dashboard()
+
 
 def push_to_github():
     print("\n--- BẮT ĐẦU ĐẨY THAY ĐỔI LÊN GITHUB HUBS (MAIN) ---")
