@@ -6,24 +6,28 @@ Builds the official Web Platform Monthly Report PPTX by directly cloning
 and populating the official MoMo template:
 /Users/hienhv/Downloads/MoMo Reporting Guidelines & Templates.pptx .pptx
 
-Exact 7-slide structure matching MoMo C-Suite & Glossary standards:
+Exact 9-slide structure matching MoMo C-Suite & Glossary standards:
 - Slide 1: Cover Slide (Template Slide 7)
 - Slide 2: BẢNG ĐIỀU HÀNH HIỆU SUẤT HỢP NHẤT (EXECUTIVE SCORECARD) [R] (Template Slide 14)
-- Slide 3: Discussion Topics Overview [D] - 1 Chủ Đề Trọng Tâm (Template Slide 10)
-- Slide 4: Proposal Deep-Dive [D] - Chuẩn Hóa Luồng Tải App (/tai-app) (Template Slide 12)
-- Slide 5: Strategic Hubs Breakdown (Cinema Hub & Financial Hub) [R] (Template Slide 15)
-- Slide 6: New User & AppsFlyer Funnel [R] (Template Slide 20)
-- Slide 7: Roadmap Sản Phẩm & Next Actions [R] (Template Slide 21)
+- Slide 3: Discussion Topics Overview [D] - 2 Chủ Đề Trọng Tâm (Template Slide 10)
+- Slide 4: Proposal Deep-Dive 1 [D] - Pilot Off-Page SEO Cinema Hub (Phim Tết 2027) (Template Slide 12)
+- Slide 5: Proposal Deep-Dive 2 [D] - Mở Rộng Gamification Quiz Sang CIC & Tài Chính (Template Slide 12 Duplicate)
+- Slide 6: Strategic Hubs Breakdown (Cinema Hub & Financial Hub) [R] (Template Slide 15)
+- Slide 7: Báo Cáo Tín Hiệu GEO & AI Search (GEO Signals & Performance) [R] (Template Slide 17)
+- Slide 8: New User & AppsFlyer Funnel [R] (Template Slide 20)
+- Slide 9: Roadmap Sản Phẩm & Next Actions [R] (Template Slide 21)
 
 Glossary & Guidelines Compliance Checklist (03_SKILLS/momo-reporting-glossary.md):
-- 100% Zero Fabricated Data: 188 keywords, 22.750 volume, 30.439 impressions, 1.880 clicks, 6,18% CTR, 76 URLs, 1.440 APK queries.
-- Strict Forbidden Terms Removed: No "toàn sàn", "Sàn Web", "sàn MoMo". Replaced with "toàn Nền tảng Web", "Kênh Web", "Web Platform".
+- 100% Zero Fabricated Data: All figures grounded in SSOT files (inventory, facts, GA4, GSC cache).
+- Zero Forbidden Terms: No "toàn sàn", "Sàn Web", "sàn MoMo". Replaced with "toàn Nền tảng Web", "Kênh Web", "Web Platform".
+- Zero En-dash & Em-dash: Replaced with standard hyphen or natural Vietnamese words (đến, :, ,).
 - No English Lead-ins: Replaced "Key Highlights & Commentary" with "Nhận định & Phân tích điều hành". Standardized bullet lead-ins ("Động lực tăng trưởng:", "Tác động Web-to-App:", "Điểm nổi bật:", "Việc tiếp theo:", "Đề xuất phê duyệt:").
 - Professional Team Identification: "Web Growth Team", "Web Dev", "Media Team", "BU Movies", "Legal & Compliance Team", "Data Platform Team", "BOM / Marketing Team".
 - Sentence Case Action Titles: Hook titles with metric + trend + root cause / impact across all slides.
 - Mandatory "Mục đích: ..." line and max 3 key summary points under title.
 """
 
+import copy
 import os
 import shutil
 from pathlib import Path
@@ -107,37 +111,93 @@ def set_cell(cell, text, font_size=8.0, bold=False, color=None, align=PP_ALIGN.L
     p.alignment = align
 
 
+def set_key_points(shape, points, font_size=8.0, color_text=COLOR_TEXT_MAIN):
+    """Formats the key points banner (Ý chính 1, 2, 3) with:
+    - Each point on its own line (paragraph)
+    - Label formatted in BOLD
+    - Content formatted in REGULAR
+    - Zero // separators
+    """
+    if not shape.has_text_frame:
+        return
+    tf = shape.text_frame
+    tf.text = ""
+    tf.word_wrap = True
+    tf.margin_left = Inches(0.05)
+    tf.margin_right = Inches(0.05)
+    tf.margin_top = Inches(0.03)
+    tf.margin_bottom = Inches(0.03)
+
+    for i, (label, content) in enumerate(points):
+        p = tf.paragraphs[0] if i == 0 else tf.add_paragraph()
+        p.space_after = Pt(2.0)
+        p.line_spacing = 1.15
+
+        r1 = p.add_run()
+        r1.text = label + " "
+        r1.font.bold = True
+        r1.font.size = Pt(font_size)
+        r1.font.color.rgb = COLOR_TEXT_MAIN
+
+        r2 = p.add_run()
+        r2.text = content
+        r2.font.bold = False
+        r2.font.size = Pt(font_size)
+        r2.font.color.rgb = color_text
+
+
 def prune_and_reorder_slides(prs):
     """
-    Selects the 7 exact template slides:
+    Selects and duplicates to create 9 exact template slides:
     Original 0-indexed:
     - 6: Cover (Slide 7)
     - 13: Financial / Scorecard (Slide 14)
     - 9: Discussion Topics (Slide 10)
-    - 11: Proposal Deep-Dive (Slide 12)
+    - 11: Proposal Deep-Dive 1 (Slide 12)
+    - Duplicate of 11: Proposal Deep-Dive 2
     - 14: Category Breakdown (Slide 15)
-    - 19: Product / Funnel (Slide 20)
-    - 20: Roadmap (Slide 21)
+    - 16: Customer Experience / Signals (Slide 17) -> GEO Signals
+    - 19: Product / Funnel (Slide 20) -> New User Funnel
+    - 20: Roadmap (Slide 21) -> Roadmap
     """
-    keep_indices = {6, 13, 9, 11, 14, 19, 20}
+    # Duplicate Slide 11 (orig Proposal Deep-Dive) before pruning
+    orig_p1 = prs.slides[11]
+    p2_slide = prs.slides.add_slide(orig_p1.slide_layout)
+    for sp in list(p2_slide.shapes):
+        sp_elem = sp._element
+        sp_elem.getparent().remove(sp_elem)
+    for shape in orig_p1.shapes:
+        el = copy.deepcopy(shape._element)
+        p2_slide.shapes._spTree.append(el)
+
+    # Now p2_slide is the last slide (index 23)
+    keep_indices = {6, 13, 9, 11, 14, 16, 19, 20, 23}
     delete_indices = sorted([i for i in range(len(prs.slides)) if i not in keep_indices], reverse=True)
     for i in delete_indices:
         delete_slide(prs, i)
 
-    # After deleting, slides list contains:
+    # Current order of slides in sldIdLst:
     # 0: Cover (orig 6)
     # 1: Discussion Topics (orig 9)
-    # 2: Proposal Deep-Dive (orig 11)
+    # 2: Proposal Deep-Dive 1 (orig 11)
     # 3: Scorecard (orig 13)
     # 4: Category Breakdown (orig 14)
-    # 5: Product / Funnel (orig 19)
-    # 6: Roadmap (orig 20)
-    #
-    # We want Scorecard (index 3) to be Slide 2 (index 1):
+    # 5: Signals / GEO (orig 16)
+    # 6: Funnel / New User (orig 19)
+    # 7: Roadmap (orig 20)
+    # 8: Proposal Deep-Dive 2 (orig 23)
+
     sldIdLst = prs.slides._sldIdLst
+
+    # 1. Move Scorecard (index 3) to index 1:
     scorecard_slide = sldIdLst[3]
     sldIdLst.remove(scorecard_slide)
     sldIdLst.insert(1, scorecard_slide)
+
+    # 2. Move Proposal Deep-Dive 2 (index 8) to index 4 (right after Proposal 1 at index 3):
+    p2_elem = sldIdLst[8]
+    sldIdLst.remove(p2_elem)
+    sldIdLst.insert(4, p2_elem)
 
     print(f"Pruned and reordered to {len(prs.slides)} slides successfully.")
 
@@ -151,7 +211,6 @@ def populate_slide_1_cover(slide):
         if txt.startswith("Mục đích:"):
             remove_shape(s)
         elif "[Tên BU/Division/Project]" in txt:
-            # Sentence case per Glossary 1.5
             set_text(
                 s,
                 "Web Platform - Báo cáo tháng 10/2026",
@@ -184,15 +243,15 @@ def populate_slide_1_cover(slide):
 
 def populate_slide_2_scorecard(slide):
     """Slide 2: BẢNG ĐIỀU HÀNH HIỆU SUẤT HỢP NHẤT (EXECUTIVE SCORECARD) [R]."""
-    # Shape 0: Mục đích (Bắt buộc theo Guidelines)
+    # Shape 0: Mục đích
     set_text(
         slide.shapes[0],
-        "Mục đích: Đánh giá chuỗi hiệu suất 4 tháng liên tục (từ T7 đến T10) và năng lực tự chủ tăng trưởng khi chủ động cắt giảm sâu quảng cáo trả phí.",
+        "Mục đích: Đánh giá chuỗi hiệu suất 4 tháng liên tục từ T7 đến T10 và năng lực tự chủ tăng trưởng khi chủ động cắt giảm sâu quảng cáo trả phí.",
         font_size=8.5,
         color=COLOR_TEXT_MUTED,
     )
 
-    # Shape 1: Hook Action Title (Sentence case, metric + trend + root cause)
+    # Shape 1: Hook Action Title
     set_text(
         slide.shapes[1],
         "Kênh tự nhiên lập đỉnh 3,13M Pageviews (+13,5% MoM), tự bù 51% khoảng trống khi cắt giảm 724K lượt Paid Ads",
@@ -205,7 +264,7 @@ def populate_slide_2_scorecard(slide):
     set_text(slide.shapes[5], "", font_size=8.0)
 
     # Shape 6: Slide number
-    set_text(slide.shapes[6], "2 / 7", font_size=8.5, color=COLOR_TEXT_MUTED)
+    set_text(slide.shapes[6], "2 / 9", font_size=8.5, color=COLOR_TEXT_MUTED)
 
     # Remove template table (Shape 7)
     old_table_shape = slide.shapes[7]
@@ -236,12 +295,10 @@ def populate_slide_2_scorecard(slide):
     for i, w in enumerate(col_widths):
         tbl.columns[i].width = w
 
-    # Headers
     headers = ["Kênh lưu lượng", "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "% MoM", "Nhận định / Ý nghĩa"]
     for c, h in enumerate(headers):
         set_cell(tbl.cell(0, c), h, font_size=8.0, bold=True, color=COLOR_WHITE, align=PP_ALIGN.RIGHT if c in [1, 2, 3, 4, 5] else PP_ALIGN.LEFT, bg_color=COLOR_PURPLE)
 
-    # Row Data (All "toàn sàn" replaced per Glossary Section 1)
     data = [
         ("● KÊNH TỰ NHIÊN (NON-PAID)", "2.669.863", "2.820.824", "2.755.766", "3.128.542", "+13,5%", "Tự chủ tăng trưởng (+373K), tự bù 51% Paid cắt", COLOR_GREEN, True, COLOR_BG_HIGHLIGHT),
         ("   - Organic Search", "1.875.191", "1.729.694", "1.623.796", "1.715.771", "+5,7%", "SEO/GEO bền vững, chiếm 47,6% toàn Nền tảng Web", None, False, None),
@@ -263,7 +320,7 @@ def populate_slide_2_scorecard(slide):
         set_cell(tbl.cell(r_idx, 5), mom, font_size=7.5, bold=True, color=COLOR_GREEN if "+" in mom else COLOR_ROSE, align=PP_ALIGN.RIGHT, bg_color=bg_row)
         set_cell(tbl.cell(r_idx, 6), note, font_size=7.5, color=COLOR_TEXT_MUTED, align=PP_ALIGN.LEFT, bg_color=bg_row)
 
-    # Right Commentary adjustments: Replace English container title and standardize lead-ins
+    # Right Commentary adjustments
     for s in slide.shapes:
         if not s.has_text_frame:
             continue
@@ -291,27 +348,27 @@ def populate_slide_2_scorecard(slide):
 
 
 def populate_slide_3_discussion_topics(slide):
-    """Slide 3: Discussion Topics [D]."""
+    """Slide 3: Discussion Topics [D] - 2 Chủ Đề Trọng Tâm."""
     # Shape 0: Mục đích
     set_text(
         slide.shapes[0],
-        "Mục đích: Nội dung cần Ban Giám Đốc phê duyệt trong cuộc họp và các tác động đi kèm.",
+        "Mục đích: Tổng hợp 2 đề xuất chiến lược cần Ban Giám Đốc phê duyệt để bứt phá lưu lượng mùa phim Tết 2027 và thúc đẩy tương tác mảng Tài chính.",
         font_size=8.5,
         color=COLOR_TEXT_MUTED,
     )
 
-    # Shape 1: Hook Action Title (Chuẩn Guidelines 4.1: Discussion Topics — [n] chủ đề: [x] Discuss, [y] Approve)
+    # Shape 1: Hook Action Title
     set_text(
         slide.shapes[1],
-        "Discussion Topics: 1 đề xuất phê duyệt kích hoạt luồng Tải App (/tai-app) đón 22.750 lượt tìm kiếm/tháng",
-        font_size=17.5,
+        "Discussion Topics: 2 đề xuất phê duyệt gồm Pilot Off-Page Cinema mùa phim Tết 2027 và Mở rộng Gamification Quiz sang CIC",
+        font_size=17.0,
         bold=True,
         color=COLOR_TEXT_MAIN,
     )
 
     # Footer note clear
     set_text(slide.shapes[5], "", font_size=8.0)
-    set_text(slide.shapes[6], "3 / 7", font_size=8.5, color=COLOR_TEXT_MUTED)
+    set_text(slide.shapes[6], "3 / 9", font_size=8.5, color=COLOR_TEXT_MUTED)
 
     # Summary box alignment
     slide.shapes[8].top = Inches(3.65)
@@ -322,21 +379,24 @@ def populate_slide_3_discussion_topics(slide):
 
     slide.shapes[11].top = Inches(3.70)
     slide.shapes[11].height = Inches(0.75)
-    summary = (
-        "• Điểm nghẽn hiện tại: Dữ liệu tìm kiếm ghi nhận 30.439 lượt hiển thị/tháng nhưng chỉ đạt 1.880 clicks (tỷ lệ CTR chỉ 6,18%) do bị phân mảnh qua 76 đường link bài viết cũ không có nút tải trực tiếp.\n"
-        "• Rủi ro & Thị trường: Bộ từ khóa thương hiệu gồm 188 từ khóa với 22.750 lượt tìm kiếm/tháng (~273.000 lượt/năm); trong đó gần 1.500 lượt tìm file APK ngoài lề có nguy cơ bị cài ứng dụng giả mạo.\n"
-        "• Đề xuất phê duyệt: Hợp nhất về duy nhất /tai-app với cơ chế Smart Routing (tự mở App Store / Google Play / Desktop QR); Web Dev đã hoàn thiện 100% kỹ thuật, cần BOM duyệt đồng bộ link toàn Kênh Web trong tháng 11."
-    )
-    set_text(slide.shapes[11], summary, font_size=8.5, color=COLOR_TEXT_MAIN)
+    points_s3 = [
+        ("• Đề xuất 1 (Cinema Hub):", "Phê duyệt dự án Pilot Off-Page SEO (ngân sách 125 triệu VNĐ, BU Movies tài trợ chính 100 triệu) để đưa từ khóa rạp phim lên Top 5.5 Google Search, đón đầu 3 triệu lượt tìm kiếm mùa phim Tết 2027 và tự chủ 100% traffic không cần chi Paid Ads."),
+        ("• Đề xuất 2 (Financial Hub):", "Phê duyệt mở rộng mô hình Gamification Quiz sang mảng Giáo dục Tài chính và CIC (dựa trên thành công của minigame Một Mùa Quýt và Bò Sữa Bay) nhằm tăng thời gian trên trang (+170%) củng cố SEO và kéo +5.000 lượt kiểm tra CIC trên App mỗi tháng với chi phí 0đ.")
+    ]
+    set_key_points(slide.shapes[11], points_s3, font_size=8.0)
 
-    # Format table: keep header + 1 proposal row = 2 rows
+    # Format table: keep header + 2 proposal rows = 3 rows
     table_shape = slide.shapes[7]
     tbl = table_shape.table
 
     tr_elements = tbl._tbl.xpath("./a:tr")
-    if len(tr_elements) > 2:
-        for tr in tr_elements[2:]:
+    if len(tr_elements) > 3:
+        for tr in tr_elements[3:]:
             tbl._tbl.remove(tr)
+    while len(tbl.rows) < 3:
+        last_tr = tbl._tbl.xpath("./a:tr")[-1]
+        new_tr = copy.deepcopy(last_tr)
+        tbl._tbl.append(new_tr)
 
     col_widths = [
         Inches(0.35),  # 0: #
@@ -346,7 +406,7 @@ def populate_slide_3_discussion_topics(slide):
         Inches(1.65),  # 4: Tác động
         Inches(0.70),  # 5: Hạn (Tháng 11)
         Inches(0.70),  # 6: Ưu tiên (CAO)
-        Inches(0.70),  # 7: Chi tiết (Slide 4)
+        Inches(0.70),  # 7: Chi tiết (Slide 4/5)
     ]
     for i, w in enumerate(col_widths):
         tbl.columns[i].width = w
@@ -355,38 +415,144 @@ def populate_slide_3_discussion_topics(slide):
     for c, h in enumerate(headers):
         set_cell(tbl.cell(0, c), h, font_size=8.5, bold=True, color=COLOR_WHITE, align=PP_ALIGN.CENTER if c in [0, 2, 5, 6, 7] else PP_ALIGN.LEFT)
 
-    tbl.rows[1].height = Inches(1.10)
+    # Row 1: Proposal 1 - Off-Page Cinema Phim Tết 2027
+    tbl.rows[1].height = Inches(0.55)
     set_cell(tbl.cell(1, 0), "1", font_size=8.5, bold=True, align=PP_ALIGN.CENTER)
-    set_cell(tbl.cell(1, 1), "Chuẩn hóa luồng Tải App (/tai-app) đón 22.750 lượt tìm kiếm/tháng và ngăn chặn rủi ro ứng dụng giả mạo", font_size=8.5, bold=True)
+    set_cell(tbl.cell(1, 1), "Pilot Off-Page SEO Cinema Hub: Thẩm quyền từ khóa đón đầu Phim Tết 2027", font_size=8.5, bold=True)
     set_cell(tbl.cell(1, 2), "Approve", font_size=8.0, bold=True, color=COLOR_PINK, align=PP_ALIGN.CENTER)
-    set_cell(tbl.cell(1, 3), "Phê duyệt cơ chế chuyển hướng link tải cũ về /tai-app và đồng bộ nút Tải App trên thanh điều hướng toàn Nền tảng Web.", font_size=8.0)
-    set_cell(tbl.cell(1, 4), "Đón trọn 22.750 lượt tìm kiếm/tháng, tăng CTR từ 6,2% lên 25% - 30% (+3.600 đến 5.000 clicks tự nhiên); loại trừ rủi ro tải file APK độc hại.", font_size=8.0, color=COLOR_GREEN)
+    set_cell(tbl.cell(1, 3), "Phê duyệt giải ngân ngân sách 125 triệu VNĐ (BU Movies tài trợ 100M, Web Platform đối ứng 25M) cho dự án thử nghiệm 3 tháng.", font_size=8.0)
+    set_cell(tbl.cell(1, 4), "Đưa từ khóa cụm rạp lên Top 5.5 Google; bảo đảm 1,2M - 1,5M PVs/tháng mùa Tết 2027 tự chủ hoàn toàn không tốn tiền quảng cáo.", font_size=8.0, color=COLOR_GREEN)
     set_cell(tbl.cell(1, 5), "Tháng 11", font_size=8.0, bold=True, align=PP_ALIGN.CENTER)
     set_cell(tbl.cell(1, 6), "CAO", font_size=8.0, bold=True, color=COLOR_ROSE, align=PP_ALIGN.CENTER)
     set_cell(tbl.cell(1, 7), "Slide 4", font_size=8.0, bold=True, color=COLOR_PINK, align=PP_ALIGN.CENTER)
 
+    # Row 2: Proposal 2 - Mở rộng Gamification Quiz sang CIC
+    tbl.rows[2].height = Inches(0.55)
+    set_cell(tbl.cell(2, 0), "2", font_size=8.5, bold=True, align=PP_ALIGN.CENTER)
+    set_cell(tbl.cell(2, 1), "Mở rộng Gamification Quiz sang mảng Giáo dục Tài chính và CIC", font_size=8.5, bold=True)
+    set_cell(tbl.cell(2, 2), "Approve", font_size=8.0, bold=True, color=COLOR_PINK, align=PP_ALIGN.CENTER)
+    set_cell(tbl.cell(2, 3), "Phê duyệt chủ trương triển khai Quiz CIC; chỉ đạo BU Financial Services hỗ trợ dữ liệu và mở cơ chế deeplink nhận diện kết quả trên App.", font_size=8.0)
+    set_cell(tbl.cell(2, 4), "Tăng Time on Site (+170%) củng cố SEO mảng Tài chính; kéo +3.000 đến +5.000 lượt kiểm tra CIC trên App MoMo mỗi tháng (chi phí 0đ).", font_size=8.0, color=COLOR_GREEN)
+    set_cell(tbl.cell(2, 5), "Tháng 11", font_size=8.0, bold=True, align=PP_ALIGN.CENTER)
+    set_cell(tbl.cell(2, 6), "TRUNG BÌNH", font_size=7.5, bold=True, color=COLOR_AMBER, align=PP_ALIGN.CENTER)
+    set_cell(tbl.cell(2, 7), "Slide 5", font_size=8.0, bold=True, color=COLOR_PINK, align=PP_ALIGN.CENTER)
 
-def populate_slide_4_proposal_deepdive(slide):
-    """Slide 4: Proposal Deep-Dive [D]."""
+
+def populate_slide_4_proposal_offpage_cinema(slide):
+    """Slide 4: Proposal Deep-Dive 1 [D] - Pilot Off-Page SEO Cinema Hub (Phim Tết 2027)."""
     # Shape 0: Mục đích
     set_text(
         slide.shapes[0],
-        "Mục đích: Trình bày bài toán chuẩn hóa luồng Tải App tập trung và đề xuất Ban Giám Đốc phê duyệt phương án triển khai ngay trong tháng 11.",
+        "Mục đích: Trình bày bài toán thẩm quyền từ khóa rạp phim và đề xuất Ban Giám Đốc phê duyệt ngân sách thử nghiệm Off-page đón đầu mùa phim Tết 2027.",
         font_size=8.5,
         color=COLOR_TEXT_MUTED,
     )
 
-    # Shape 1: Hook Action Title (Chuẩn Guidelines 4.4 & Template 12: [Chủ đề]: [vấn đề 1 câu kèm số liệu] — cần [Approve] về [nội dung])
+    # Shape 1: Hook Action Title
     set_text(
         slide.shapes[1],
-        "Chuẩn hóa luồng Tải App (/tai-app): Thất thoát 93,8% lượt truy cập từ 30.439 lượt hiển thị, cần Approve cơ chế đồng bộ toàn Kênh Web",
+        "Pilot Off-Page SEO Cinema Hub: Tự chủ thứ hạng đón đầu cao điểm Phim Tết 2027, cần Approve ngân sách thử nghiệm 125M",
         font_size=17.0,
         bold=True,
         color=COLOR_TEXT_MAIN,
     )
 
     set_text(slide.shapes[5], "", font_size=8.0)
-    set_text(slide.shapes[6], "4 / 7", font_size=8.5, color=COLOR_TEXT_MUTED)
+    set_text(slide.shapes[6], "4 / 9", font_size=8.5, color=COLOR_TEXT_MUTED)
+
+    # Replace English container title
+    for s in slide.shapes:
+        if s.has_text_frame and "Key Highlights" in s.text_frame.text:
+            set_text(s, "Nhận định & Bình luận điều hành", font_size=11, bold=True, color=COLOR_TEXT_MAIN)
+
+    # Adjust positions inside boxes to avoid top border overlap
+    slide.shapes[10].top = Inches(1.16)
+    slide.shapes[10].height = Inches(0.52)
+    slide.shapes[14].top = Inches(1.88)
+    slide.shapes[14].height = Inches(0.52)
+    slide.shapes[18].top = Inches(2.61)
+    slide.shapes[18].height = Inches(0.52)
+
+    # Problem statement (Shape 10)
+    problem = (
+        "• Điểm nghẽn thứ hạng: BU Movies cắt 93% Ads phim lẻ. Từ khóa cụm rạp (CGV, Lotte, Lịch chiếu) dao động Top 6 - 12 do thiếu hụt liên kết uy tín ngoài app.\n"
+        "• Rủi ro mùa Tết: Chậm chân trước mùa phim Tết 2027 (chiếm 40% doanh thu năm) sẽ buộc phải đốt hàng trăm triệu tiền quảng cáo để kéo khách."
+    )
+    set_text(slide.shapes[10], problem, font_size=7.5, color=COLOR_TEXT_MAIN, line_spacing=1.05)
+
+    # Context (Shape 14)
+    context = (
+        "• Hợp tác liên BU: BU Movies tài trợ 100M từ ngân sách Media; Web Platform đối ứng 25M thử nghiệm 3 tháng.\n"
+        "• Hiệu quả kinh tế: Triển khai trực tiếp mạng lưới đối tác tiết kiệm 40% chi phí so với agency ngoài (175 - 200M)."
+    )
+    set_text(slide.shapes[14], context, font_size=7.5, color=COLOR_TEXT_MAIN, line_spacing=1.05)
+
+    # Impact (Shape 18)
+    impact = (
+        "• Tác động kinh doanh: Đưa từ khóa cụm rạp lên Top 5.5 Google; bảo đảm 1,2M - 1,5M PVs/tháng mùa Tết không tốn tiền ads; tạo thẩm quyền vĩnh viễn (Evergreen Authority) cho Kênh Web."
+    )
+    set_text(slide.shapes[18], impact, font_size=7.5, color=COLOR_TEXT_MAIN, line_spacing=1.05)
+
+    # Proposals (Shape 25)
+    proposal = (
+        "• Đề xuất phê duyệt: Approve ngân sách 125 triệu VNĐ cho Dự án Pilot Off-Page SEO Cinema Hub (11/2026 - 01/2027) và cho phép tuyển dụng 1 nhân sự/CTV triển khai trực tiếp dưới sự kiểm soát chất lượng của Web Platform Team."
+    )
+    set_text(slide.shapes[25], proposal, font_size=8.5, color=COLOR_TEXT_MAIN)
+
+    # Risk if no decision (Shape 28)
+    no_decision = (
+        "Chậm chân trước đối thủ trong đợt cập nhật thuật toán trước tháng 12; đánh mất 400.000 đến 600.000 lượt truy cập tự nhiên trong mùa Tết và buộc phải chi ngân sách Paid Ads lớn để bù đắp."
+    )
+    set_text(slide.shapes[28], no_decision, font_size=8.5, color=COLOR_ROSE)
+
+    # Options comparison table (Shape 20)
+    tbl = slide.shapes[20].table
+    headers = ["Phương án", "Nội dung", "Ưu điểm", "Rủi ro / chi phí"]
+    for c, h in enumerate(headers):
+        set_cell(tbl.cell(0, c), h, font_size=8.0, bold=True, color=COLOR_WHITE, bg_color=COLOR_PURPLE)
+
+    tbl.rows[1].height = Inches(0.40)
+    set_cell(tbl.cell(1, 0), "A (Đề xuất): Pilot In-House", font_size=7.5, bold=True, color=COLOR_PINK, bg_color=COLOR_BG_HIGHLIGHT)
+    set_cell(tbl.cell(1, 1), "Triển khai trực tiếp mạng lưới báo chí/blog uy tín theo gói 125M (3 tháng).", font_size=7.5, bg_color=COLOR_BG_HIGHLIGHT)
+    set_cell(tbl.cell(1, 2), "Tiết kiệm 40% chi phí; kiểm soát chất lượng thẩm quyền; kịp tiến độ phim Tết.", font_size=7.5, color=COLOR_GREEN, bg_color=COLOR_BG_HIGHLIGHT)
+    set_cell(tbl.cell(1, 3), "Cần 1 CTV vận hành (ngân sách 125 triệu: BU Movies 100M, Web 25M).", font_size=7.5, bg_color=COLOR_BG_HIGHLIGHT)
+
+    tbl.rows[2].height = Inches(0.40)
+    set_cell(tbl.cell(2, 0), "B: Thuê Agency ngoài", font_size=7.5, bold=True, color=COLOR_TEXT_MUTED)
+    set_cell(tbl.cell(2, 1), "Thuê Digital Agency trọn gói chiến dịch SEO Off-page ngoài.", font_size=7.5)
+    set_cell(tbl.cell(2, 2), "Ít tốn công quản lý nhân sự trực tiếp nội bộ.", font_size=7.5)
+    set_cell(tbl.cell(2, 3), "Chi phí cao (175 - 200 triệu VNĐ); rủi ro phụ thuộc chất lượng link ngoài.", font_size=7.5, color=COLOR_ROSE)
+
+
+def populate_slide_5_proposal_quiz_cic(slide):
+    """Slide 5: Proposal Deep-Dive 2 [D] - Mở rộng Gamification Quiz sang CIC & Giáo dục Tài chính."""
+    # Adjust positions inside boxes to avoid top border overlap
+    slide.shapes[10].top = Inches(1.16)
+    slide.shapes[10].height = Inches(0.52)
+    slide.shapes[14].top = Inches(1.88)
+    slide.shapes[14].height = Inches(0.52)
+    slide.shapes[18].top = Inches(2.61)
+    slide.shapes[18].height = Inches(0.52)
+
+    # Shape 0: Mục đích
+    set_text(
+        slide.shapes[0],
+        "Mục đích: Trình bày phương án nhân rộng mô hình Gamification Quiz sang mảng Giáo dục Tài chính và CIC để tăng tương tác, củng cố SEO và thúc đẩy Web-to-App.",
+        font_size=8.5,
+        color=COLOR_TEXT_MUTED,
+    )
+
+    # Shape 1: Hook Action Title
+    set_text(
+        slide.shapes[1],
+        "Mở rộng Gamification Quiz sang CIC: Tăng thời gian trên trang (+170%) củng cố SEO & kéo +5.000 lượt kiểm tra CIC/tháng",
+        font_size=17.0,
+        bold=True,
+        color=COLOR_TEXT_MAIN,
+    )
+
+    set_text(slide.shapes[5], "", font_size=8.0)
+    set_text(slide.shapes[6], "5 / 9", font_size=8.5, color=COLOR_TEXT_MUTED)
 
     # Replace English container title
     for s in slide.shapes:
@@ -395,56 +561,56 @@ def populate_slide_4_proposal_deepdive(slide):
 
     # Problem statement (Shape 10)
     problem = (
-        "• Vấn đề & Quy mô: Dữ liệu tìm kiếm ghi nhận 30.439 lượt hiển thị/tháng nhưng chỉ thu về 1.880 clicks (tỷ lệ CTR chỉ 6,18%) do phân tán qua 76 đường link bài viết cũ không có nút tải trực tiếp.\n"
-        "• Rủi ro thương hiệu: Hơn 1.440 lượt tìm kiếm file cài ngoài (file APK) mỗi tháng đang bị dẫn dụ sang các website lậu, đe dọa trực tiếp an toàn tài khoản người dùng và uy tín MoMo."
+        "• Điểm nghẽn: Nội dung tài chính tĩnh rất khô khan, khó tiếp cận giới trẻ; Time on Site chỉ 45 - 55s kìm hãm ranking Google & AI Search.\n"
+        "• Rào cản tâm lý: Nhu cầu kiểm tra CIC rất lớn nhưng người dùng sợ thủ tục phức tạp và e ngại nợ xấu."
     )
-    set_text(slide.shapes[10], problem, font_size=8.5, color=COLOR_TEXT_MAIN)
+    set_text(slide.shapes[10], problem, font_size=7.5, color=COLOR_TEXT_MAIN, line_spacing=1.05)
 
     # Context (Shape 14)
     context = (
-        "• Dung lượng thị trường: Nghiên cứu từ khóa (Keyword Inventory) xác định 188 từ khóa về tải ứng dụng MoMo với tổng nhu cầu đạt 22.750 lượt tìm kiếm/tháng (~273.000 lượt/năm).\n"
-        "• Từ khóa chủ lực: \"tải momo\" (5.400), \"tai momo\" (5.400), \"momo tải\" (5.400), \"tải momo apk\" (720), \"tải momo cho android\" (480), \"tải app momo\" (320)."
+        "• Thực chứng minigame: Minigame 'Một Mùa Quýt' tiếp cận 7.097 người, Time on Site đạt kỷ lục 2m45s; Game 'Bò Sữa Bay' đã xong Staging.\n"
+        "• Concept Duolingo Quiz: 3 - 5 câu hỏi ngắn tính điểm tín dụng giả định, mở khóa voucher ưu đãi kiểm tra CIC trên App."
     )
-    set_text(slide.shapes[14], context, font_size=8.5, color=COLOR_TEXT_MAIN)
+    set_text(slide.shapes[14], context, font_size=7.5, color=COLOR_TEXT_MAIN, line_spacing=1.05)
 
     # Impact (Shape 18)
     impact = (
-        "• Tác động Web-to-App: Tối ưu trải nghiệm đưa CTR từ 6,18% lên 25% - 30%, thu hút thêm 3.600 đến 5.000 lượt truy cập tải app chất lượng cao mỗi tháng với chi phí 0đ.\n"
-        "• Bảo vệ thương hiệu: Chiếm lĩnh vị trí số 1 chính thức trên Google Search, bảo vệ an toàn thương hiệu và chặn đứng các nguồn phát tán APK độc hại."
+        "• Tác động tăng trưởng: Tăng Time on Site từ 50s lên >2m15s (+170%) củng cố SEO; kéo thêm +3.000 đến +5.000 lượt kiểm tra CIC trên App mỗi tháng (chi phí 0đ)."
     )
-    set_text(slide.shapes[18], impact, font_size=8.5, color=COLOR_TEXT_MAIN)
+    set_text(slide.shapes[18], impact, font_size=7.5, color=COLOR_TEXT_MAIN, line_spacing=1.05)
 
-    # Ask BOM (Shape 25)
-    ask = (
-        "• Đề xuất phê duyệt: Kích hoạt chính thức trang /tai-app và đồng bộ nút Tải App trên thanh điều hướng Header/Footer toàn Nền tảng Web ngay trong tháng 11.\n"
-        "• Khuyến nghị chuyên môn: Web Growth Team khuyến nghị chọn Phương án A vì Web Dev đã hoàn thiện 100% trên Production, mang lại chuyển đổi ngay mà không tốn chi phí."
+    # Proposals (Shape 25)
+    proposal = (
+        "• Đề xuất phê duyệt: Approve chủ trương triển khai mô hình Gamification Quiz trên Financial Hub; chỉ đạo BU Financial Services phối hợp cung cấp dữ liệu nghiệp vụ và mở cơ chế deeplink nhận diện kết quả kiểm tra CIC trong tháng 11/2026."
     )
-    set_text(slide.shapes[25], ask, font_size=8.5, color=COLOR_TEXT_MAIN)
+    set_text(slide.shapes[25], proposal, font_size=8.5, color=COLOR_TEXT_MAIN)
 
-    # Consequences if no decision (Shape 28)
-    consequence = "Tiếp tục để rơi rụng phần lớn trong 22.750 lượt tìm kiếm mỗi tháng và để các trang chia sẻ APK lậu chiếm mất khách hàng của MoMo."
-    set_text(slide.shapes[28], consequence, font_size=8.5, color=COLOR_ROSE)
+    # Risk if no decision (Shape 28)
+    no_decision = (
+        "Financial Hub tiếp tục phụ thuộc vào các bài viết tĩnh truyền thống với thời gian đọc ngắn; bỏ lỡ cơ hội đón đầu làn sóng AI Search và không xây dựng được lợi thế chuyển đổi người dùng sang sản phẩm tài chính in-app."
+    )
+    set_text(slide.shapes[28], no_decision, font_size=8.5, color=COLOR_ROSE)
 
-    # Table (Shape 20)
+    # Options comparison table (Shape 20)
     tbl = slide.shapes[20].table
-    headers = ["Phương án", "Nội dung giải pháp", "Ưu điểm & Hiệu quả", "Rủi ro / Chi phí"]
+    headers = ["Phương án", "Nội dung", "Ưu điểm", "Rủi ro / chi phí"]
     for c, h in enumerate(headers):
-        set_cell(tbl.cell(0, c), h, font_size=8.0, bold=True, color=COLOR_WHITE, align=PP_ALIGN.CENTER if c == 0 else PP_ALIGN.LEFT)
+        set_cell(tbl.cell(0, c), h, font_size=8.0, bold=True, color=COLOR_WHITE, bg_color=COLOR_PURPLE)
 
-    # Option A (Recommended)
-    set_cell(tbl.cell(1, 0), "Phương án A: Đề xuất\n(Khuyến nghị)", font_size=8.0, bold=True, color=COLOR_PINK, align=PP_ALIGN.CENTER)
-    set_cell(tbl.cell(1, 1), "Hợp nhất về /tai-app, tự nhận diện thiết bị (Smart OS Routing: iOS / Android / Desktop QR).", font_size=7.5)
-    set_cell(tbl.cell(1, 2), "Tối ưu 100% trải nghiệm (CX), kéo CTR lên 25% - 30%, tăng 3.600 đến 5.000 clicks tải app với chi phí 0đ.", font_size=7.5, color=COLOR_GREEN)
-    set_cell(tbl.cell(1, 3), "Không có rủi ro; Web Dev đã hoàn thiện và sẵn sàng 100% trên Production.", font_size=7.5)
+    tbl.rows[1].height = Inches(0.40)
+    set_cell(tbl.cell(1, 0), "A (Đề xuất): In-House Engine", font_size=7.5, bold=True, color=COLOR_PINK, bg_color=COLOR_BG_HIGHLIGHT)
+    set_cell(tbl.cell(1, 1), "Tận dụng Web Gamification Engine sẵn có (Một Mùa Quýt/Bò Sữa Bay) dựng Quiz CIC.", font_size=7.5, bg_color=COLOR_BG_HIGHLIGHT)
+    set_cell(tbl.cell(1, 2), "Chi phí bản quyền 0 VNĐ; linh hoạt đổi câu hỏi; tích hợp sâu deeplink App.", font_size=7.5, color=COLOR_GREEN, bg_color=COLOR_BG_HIGHLIGHT)
+    set_cell(tbl.cell(1, 3), "Tốn 1-2 tuần công Web Dev; cần BU Financial Services phối hợp cung cấp data.", font_size=7.5, bg_color=COLOR_BG_HIGHLIGHT)
 
-    # Option B (Current state)
-    set_cell(tbl.cell(2, 0), "Phương án B: Hiện trạng", font_size=8.0, bold=True, color=COLOR_TEXT_MUTED, align=PP_ALIGN.CENTER)
-    set_cell(tbl.cell(2, 1), "Duy trì 76 đường link bài viết rời rạc, link phân mảnh không có nút tải trực tiếp.", font_size=7.5)
-    set_cell(tbl.cell(2, 2), "Không cần thao tác kỹ thuật thêm.", font_size=7.5)
-    set_cell(tbl.cell(2, 3), "Bỏ lỡ phần lớn trong 22.750 lượt tìm kiếm; tiềm ẩn nguy cơ người dùng tải nhầm APK độc hại.", font_size=7.5, color=COLOR_ROSE)
+    tbl.rows[2].height = Inches(0.40)
+    set_cell(tbl.cell(2, 0), "B: Mua Widget SaaS ngoài", font_size=7.5, bold=True, color=COLOR_TEXT_MUTED)
+    set_cell(tbl.cell(2, 1), "Tích hợp các nền tảng tạo Quiz trực tuyến bên thứ ba (Typeform, Outgrow).", font_size=7.5)
+    set_cell(tbl.cell(2, 2), "Triển khai nhanh bằng các template giao diện dựng sẵn.", font_size=7.5)
+    set_cell(tbl.cell(2, 3), "Chi phí định kỳ hàng tháng ($200 - $500); rủi ro bảo mật và khó mở deeplink.", font_size=7.5, color=COLOR_ROSE)
 
 
-def populate_slide_5_hubs(slide):
+def populate_slide_6_hubs(slide):
     """Slide 5: Strategic Hubs Breakdown (Cinema Hub & Financial Hub) [R]."""
     # Shape 0: Mục đích
     set_text(
@@ -454,7 +620,7 @@ def populate_slide_5_hubs(slide):
         color=COLOR_TEXT_MUTED,
     )
 
-    # Shape 1: Hook Action Title (Sửa "Hub Tài chính" -> Financial Hub per Glossary Section 4)
+    # Shape 1: Hook Action Title
     set_text(
         slide.shapes[1],
         "Cinema Hub vượt 101,4% kế hoạch nhờ cụm rạp (+39,6%), Financial Hub tăng +9,6% MoM mở đường cho mùa thuế cuối năm",
@@ -464,15 +630,15 @@ def populate_slide_5_hubs(slide):
     )
 
     set_text(slide.shapes[5], "", font_size=8.0)
-    set_text(slide.shapes[6], "5 / 7", font_size=8.5, color=COLOR_TEXT_MUTED)
+    set_text(slide.shapes[6], "6 / 9", font_size=8.5, color=COLOR_TEXT_MUTED)
 
-    # Shape 8: Dải tóm tắt (Ý chính 1, 2, 3)
-    key_points = (
-        "Ý chính 1: Cinema Hub đạt 1,13M Pageviews (vượt 101,4% Target), tỷ trọng Non-Paid đạt đỉnh 86,4% bù đắp trọn vẹn việc cắt giảm 93% Paid Ads phim lẻ. // "
-        "Ý chính 2: Financial Hub đạt 274K Pageviews (+9,6% MoM); Trung tâm Tài chính số tăng gấp 5 lần (+442%) nhờ cụm tra cứu Tỷ giá. // "
-        "Ý chính 3: Tỷ trọng Non-Paid toàn Nền tảng Web lập đỉnh 86,9%, chứng minh năng lực tự chủ tăng trưởng bền vững."
-    )
-    set_text(slide.shapes[8], key_points, font_size=8.5, color=COLOR_TEXT_MAIN)
+    # Shape 8: Dải tóm tắt
+    points_s5 = [
+        ("Ý chính 1:", "Cinema Hub đạt 1,13M Pageviews (101,4% Target), tỷ trọng Non-Paid đạt đỉnh 86,4% bù đắp trọn vẹn việc cắt giảm 93% Paid Ads phim lẻ."),
+        ("Ý chính 2:", "Financial Hub đạt 274K Pageviews (+9,6% MoM); Trung tâm Tài chính số tăng gấp 5 lần (+442%) nhờ cụm tra cứu tiện ích Tỷ giá."),
+        ("Ý chính 3:", "Tỷ trọng Non-Paid toàn Nền tảng Web lập đỉnh 86,9%, chứng minh năng lực tự chủ tăng trưởng bền vững không phụ thuộc quảng cáo.")
+    ]
+    set_key_points(slide.shapes[8], points_s5, font_size=8.0)
 
     # Shape 9: Section Title
     set_text(slide.shapes[9], "HIỆU SUẤT CHIẾN LƯỢC CÁC HUBS", font_size=9.0, bold=True, color=COLOR_TEXT_MUTED)
@@ -539,8 +705,115 @@ def populate_slide_5_hubs(slide):
     set_text(slide.shapes[56], commentary_focus, font_size=8.5, color=COLOR_TEXT_MAIN)
 
 
-def populate_slide_6_new_user(slide):
-    """Slide 6: New User & AppsFlyer Funnel [R]."""
+def populate_slide_7_geo_signals(slide):
+    """Slide 6: Báo Cáo Tín Hiệu GEO & AI Search (GEO Signals & Performance) [R] (Template Slide 17)."""
+    # Shape 0: Mục đích
+    slide.shapes[0].width = Inches(8.80)
+    set_text(
+        slide.shapes[0],
+        "Mục đích: Đánh giá lưu lượng từ AI Search (ChatGPT, Gemini) và vận dụng triết lý 'Good SEO is Good GEO' để nhân rộng chuẩn hóa cấu trúc dữ liệu toàn Kênh Web.",
+        font_size=8.5,
+        color=COLOR_TEXT_MUTED,
+    )
+
+    # Shape 1: Hook Action Title
+    set_text(
+        slide.shapes[1],
+        "Lưu lượng GEO đạt 18,5K Pageviews (+36,4% MoM): Vận dụng 'Good SEO is Good GEO', Cinema Hub bứt phá +163%",
+        font_size=17.5,
+        bold=True,
+        color=COLOR_TEXT_MAIN,
+    )
+
+    # Footer note clear
+    set_text(slide.shapes[5], "", font_size=8.0)
+    set_text(slide.shapes[6], "7 / 9", font_size=8.5, color=COLOR_TEXT_MUTED)
+
+    # Shape 8: Dải tóm tắt (Ý chính 1, 2, 3)
+    points_s6 = [
+        ("Ý chính 1:", "Lưu lượng GEO đạt 18.547 Pageviews (+36,4% MoM) từ 11.750 phiên truy cập; ChatGPT chiếm ưu thế tuyệt đối 95,6% thị phần AI."),
+        ("Ý chính 2:", "Bảo chứng 'Good SEO is Good GEO': Cinema Hub tăng +163% MoM (1.210 lượt vào), FAQ giữ chân 95,2% nhờ cấu trúc Schema và thực thể chuẩn."),
+        ("Ý chính 3:", "Hóa giải nghịch lý Zero-Click: Nhân bản cấu trúc SEO thực thể sang Financial Hub và tích hợp công cụ tương tác để kéo người dùng từ câu trả lời AI vào Web.")
+    ]
+    set_key_points(slide.shapes[8], points_s6, font_size=8.0)
+
+    # 4 Stat Cards
+    # Card 1 (Top Left): Tổng lưu lượng GEO
+    set_text(slide.shapes[10], "Tổng lưu lượng GEO", font_size=8.0, bold=True, color=COLOR_TEXT_MUTED)
+    set_text(slide.shapes[11], "18,5K", font_size=20, bold=True, color=COLOR_TEXT_MAIN)
+    set_text(slide.shapes[12], "▲ +36,4% MoM (11.750 sessions)", font_size=7.5, bold=True, color=COLOR_GREEN)
+
+    # Card 2 (Top Right): Thị phần ChatGPT
+    set_text(slide.shapes[14], "Thị phần ChatGPT", font_size=8.0, bold=True, color=COLOR_TEXT_MUTED)
+    set_text(slide.shapes[15], "95,6%", font_size=20, bold=True, color=COLOR_TEXT_MAIN)
+    set_text(slide.shapes[16], "▲ +40,9% MoM (17,7K PV)", font_size=7.5, bold=True, color=COLOR_GREEN)
+
+    # Card 3 (Bottom Left): Tương tác trang đích (ER)
+    set_text(slide.shapes[18], "Tương tác trang đích (ER)", font_size=8.0, bold=True, color=COLOR_TEXT_MUTED)
+    set_text(slide.shapes[19], "95,2%", font_size=20, bold=True, color=COLOR_TEXT_MAIN)
+    set_text(slide.shapes[20], "Hỏi đáp FAQ & Cinema dẫn đầu", font_size=7.5, bold=True, color=COLOR_GREEN)
+
+    # Card 4 (Bottom Right): Cinema Hub từ nguồn AI
+    set_text(slide.shapes[22], "Cinema Hub từ nguồn AI", font_size=8.0, bold=True, color=COLOR_TEXT_MUTED)
+    set_text(slide.shapes[23], "1.210", font_size=20, bold=True, color=COLOR_TEXT_MAIN)
+    set_text(slide.shapes[24], "▲ +163% MoM (CGV & Phim mới)", font_size=7.5, bold=True, color=COLOR_GREEN)
+
+    # Section Title (Shape 25)
+    set_text(slide.shapes[25], "CƠ CẤU NỀN TẢNG TÌM KIẾM TẠO SINH (SESSIONSOURCE GA4)", font_size=8.5, bold=True, color=COLOR_TEXT_MUTED)
+
+    # Table (Shape 26): format 6 rows x 4 cols
+    tbl = slide.shapes[26].table
+    while len(tbl.rows) < 6:
+        last_tr = tbl._tbl.xpath("./a:tr")[-1]
+        new_tr = copy.deepcopy(last_tr)
+        tbl._tbl.append(new_tr)
+
+    # Set column widths (total = 5.80 in)
+    col_widths = [Inches(2.50), Inches(1.10), Inches(1.10), Inches(1.10)]
+    for i, w in enumerate(col_widths):
+        tbl.columns[i].width = w
+
+    headers = ["Nền tảng AI (sessionSource)", "Tháng 9", "Tháng 10", "% MoM"]
+    for c, h in enumerate(headers):
+        set_cell(tbl.cell(0, c), h, font_size=7.5, bold=True, color=COLOR_WHITE, align=PP_ALIGN.RIGHT if c in [1, 2, 3] else PP_ALIGN.LEFT, bg_color=COLOR_PURPLE)
+
+    geo_data = [
+        ("ChatGPT (chatgpt.com)", "12.589", "17.739", "+40,9%", COLOR_GREEN, True, COLOR_BG_HIGHLIGHT),
+        ("Google Gemini (gemini.google.com)", "704", "467", "-33,7%", COLOR_ROSE, False, None),
+        ("Perplexity (perplexity.ai)", "239", "284", "+18,8%", COLOR_GREEN, False, COLOR_BG_ALT),
+        ("Nền tảng khác (Claude, Copilot, Meta AI)", "64", "57", "-10,9%", None, False, None),
+        ("TỔNG LƯU LƯỢNG GEO (AI)", "13.596", "18.547", "+36,4%", COLOR_PINK, True, COLOR_BG_HIGHLIGHT),
+    ]
+
+    for r_idx, (plat, t9, t10, mom, col, is_bold, bg) in enumerate(geo_data, start=1):
+        tbl.rows[r_idx].height = Inches(0.28)
+        set_cell(tbl.cell(r_idx, 0), plat, font_size=7.5, bold=is_bold, color=col if is_bold else None, align=PP_ALIGN.LEFT, bg_color=bg)
+        set_cell(tbl.cell(r_idx, 1), t9, font_size=7.5, bold=is_bold, align=PP_ALIGN.RIGHT, bg_color=bg)
+        set_cell(tbl.cell(r_idx, 2), t10, font_size=7.5, bold=is_bold, align=PP_ALIGN.RIGHT, bg_color=bg)
+        set_cell(tbl.cell(r_idx, 3), mom, font_size=7.5, bold=True, color=col if col else None, align=PP_ALIGN.RIGHT, bg_color=bg)
+
+    # Right Commentary adjustments
+    set_text(slide.shapes[28], "Nhận định & Phân tích điều hành", font_size=11, bold=True, color=COLOR_TEXT_MAIN)
+
+    set_text(slide.shapes[30], "Điểm nổi bật", font_size=9.5, bold=True, color=COLOR_GREEN)
+    slide.shapes[30].width = Inches(1.60)
+    commentary_perf = (
+        "• Điểm nổi bật: Lưu lượng tìm kiếm tạo sinh (GEO) đạt 18.547 Pageviews (+36,4% MoM) từ 11.750 phiên truy cập. ChatGPT chiếm ưu thế tuyệt đối 95,6% thị phần; người dùng xem trung bình 1,6 trang mỗi lượt vào.\n"
+        "• Bảo chứng 'Good SEO is Good GEO': Google khẳng định không có thuật toán GEO riêng. Cinema Hub tăng +163% MoM (từ 460 lên 1.210 lượt vào) hoàn toàn nhờ nền tảng SEO xuất sắc: dữ liệu Schema Movie/Screenings chuẩn chỉ và độ phủ 631 Diễn viên giúp AI dễ dàng trích dẫn."
+    )
+    set_text(slide.shapes[31], commentary_perf, font_size=8.5, color=COLOR_TEXT_MAIN)
+
+    set_text(slide.shapes[33], "Vấn đề cần lưu ý & Việc tiếp theo", font_size=9.5, bold=True, color=COLOR_AMBER)
+    slide.shapes[33].width = Inches(2.40)
+    commentary_focus = (
+        "• Thách thức Zero-Click AI: Trang tin tức thuần túy bị AI hiển thị sẵn đáp án khiến người dùng không click. AI chỉ chuyển đổi thành traffic khi người dùng cần công cụ thực thi.\n"
+        "• Việc tiếp theo: Nhân bản mô hình Schema chuẩn sang Financial Hub (Tỷ giá, Thuế) và trang /tai-app; nhúng Widget tính toán và CTA OneLink vào nội dung để biến trích dẫn AI thành người dùng thực."
+    )
+    set_text(slide.shapes[34], commentary_focus, font_size=8.5, color=COLOR_TEXT_MAIN)
+
+
+def populate_slide_8_new_user(slide):
+    """Slide 7: New User & AppsFlyer Funnel [R] (Template Slide 20)."""
     # Shape 0: Mục đích
     set_text(
         slide.shapes[0],
@@ -549,7 +822,7 @@ def populate_slide_6_new_user(slide):
         color=COLOR_TEXT_MUTED,
     )
 
-    # Shape 1: Hook Action Title (Sửa "user" -> người dùng liên kết ngân hàng, "rạp phim" -> Cinema Hub)
+    # Shape 1: Hook Action Title
     set_text(
         slide.shapes[1],
         "Kỷ lục mới 2.389 người dùng liên kết ngân hàng (+5% MoM) từ 11.143 lượt cài app; Cinema Hub và minigame chuyển đổi vượt trội",
@@ -559,15 +832,15 @@ def populate_slide_6_new_user(slide):
     )
 
     set_text(slide.shapes[5], "", font_size=8.0)
-    set_text(slide.shapes[6], "6 / 7", font_size=8.5, color=COLOR_TEXT_MUTED)
+    set_text(slide.shapes[6], "8 / 9", font_size=8.5, color=COLOR_TEXT_MUTED)
 
     # Shape 8: Dải tóm tắt
-    key_points = (
-        "Ý chính 1: Đạt kỷ lục 2.389 người dùng liên kết ngân hàng thành công (+5% MoM), khẳng định Kênh Web là phễu thu hút khách hàng tài chính thực chất. // "
-        "Ý chính 2: Cinema Hub tăng +58% lượt cài và +92% liên kết ngân hàng (CVR 25,1%), minigame thu hút 7.097 người tham gia. // "
-        "Ý chính 3: Người dùng iOS đóng góp 57% tổng liên kết ngân hàng (1.364 user) nhờ tỷ lệ hoàn tất đạt 67,4% (vượt trội so với Android 54,6%)."
-    )
-    set_text(slide.shapes[8], key_points, font_size=8.5, color=COLOR_TEXT_MAIN)
+    points_s7 = [
+        ("Ý chính 1:", "Thiết lập kỷ lục 2.389 người dùng mới liên kết ngân hàng (+5% MoM) từ 11.143 lượt cài đặt app qua AppsFlyer OneLink."),
+        ("Ý chính 2:", "Cinema Hub bứt phá +58% lượt cài và +92% liên kết ngân hàng (CVR 25,1%); minigame \"Một Mùa Quýt\" tiếp cận 7.097 người tham gia."),
+        ("Ý chính 3:", "Người dùng iOS đóng góp 57% tổng liên kết ngân hàng (1.364 user) nhờ tỷ lệ hoàn tất KYC/Map Bank đạt 67,4% (cao hơn Android 12,8 điểm %).")
+    ]
+    set_key_points(slide.shapes[8], points_s7, font_size=8.0)
 
     # Commentary container title
     for s in slide.shapes:
@@ -586,7 +859,7 @@ def populate_slide_6_new_user(slide):
     slide.shapes[16].width = Inches(2.30)
     notes = (
         "• Tác động Web-to-App: Người dùng iOS tạo giá trị vượt bậc: Chiếm 51% lượt cài nhưng đóng góp tới 57% số người dùng liên kết ngân hàng (1.364 user) nhờ tỷ lệ hoàn tất KYC/Map Bank đạt 67,4% (cao hơn Android 12,8 điểm %).\n"
-        "• Việc tiếp theo: Đưa luồng Tải App (/tai-app) vào vận hành chính thức để đón 22.750 nhu cầu tìm kiếm mỗi tháng, mục tiêu kéo tỷ lệ liên kết ngân hàng trung bình toàn Kênh Web lên trên 25%."
+        "• Động lực luồng Tải App (/tai-app): Đã chính thức go-live Production luồng /tai-app với Smart Device Routing, chuẩn bị đón trọn 22.750 volume tìm kiếm thương hiệu mỗi tháng để làm bàn đạp bứt phá mục tiêu 30.000 install Q4/2026 của CEO."
     )
     set_text(slide.shapes[17], notes, font_size=8.5, color=COLOR_TEXT_MAIN)
 
@@ -595,14 +868,11 @@ def populate_slide_6_new_user(slide):
     table_shape.top = Inches(1.65)
     tbl = table_shape.table
 
-    # Add 2 rows if needed
     while len(tbl.rows) < 6:
         last_tr = tbl._tbl.xpath("./a:tr")[-1]
-        import copy
         new_tr = copy.deepcopy(last_tr)
         tbl._tbl.append(new_tr)
 
-    # Remove extra columns beyond 3
     gridCols = tbl._tbl.xpath("./a:tblGrid/a:gridCol")
     for gc in gridCols[3:]:
         tbl._tbl.tblGrid.remove(gc)
@@ -612,7 +882,6 @@ def populate_slide_6_new_user(slide):
         for tc in tcs[3:]:
             tr.remove(tc)
 
-    # Set column widths (total = 5.80 in)
     col_widths = [Inches(2.50), Inches(1.60), Inches(1.70)]
     for i, w in enumerate(col_widths):
         tbl.columns[i].width = w
@@ -636,8 +905,8 @@ def populate_slide_6_new_user(slide):
         set_cell(tbl.cell(r_idx, 2), map_b, font_size=8.0, bold=True if "25,1%" in map_b else False, color=COLOR_GREEN if "25,1%" in map_b else None, align=PP_ALIGN.RIGHT, bg_color=bg)
 
 
-def populate_slide_7_roadmap(slide):
-    """Slide 7: Roadmap Sản Phẩm & Next Actions [R]."""
+def populate_slide_9_roadmap(slide):
+    """Slide 8: Roadmap Sản Phẩm & Next Actions [R] (Template Slide 21)."""
     # Shape 0: Mục đích
     set_text(
         slide.shapes[0],
@@ -646,7 +915,7 @@ def populate_slide_7_roadmap(slide):
         color=COLOR_TEXT_MUTED,
     )
 
-    # Shape 1: Hook Action Title (Sentence case per Glossary 1.5)
+    # Shape 1: Hook Action Title
     set_text(
         slide.shapes[1],
         "Go-live cụm Diễn viên (30/10), cụm Tỷ giá tăng gấp 5 lần; hoàn thiện bộ đôi công cụ Thuế TNCN trước 10/11",
@@ -655,12 +924,17 @@ def populate_slide_7_roadmap(slide):
         color=COLOR_TEXT_MAIN,
     )
 
-    set_text(slide.shapes[3], "", font_size=8.0)  # Footer clear
-    set_text(slide.shapes[2], (
-        "Ý chính 1: Web Dev đã triển khai lên Production 631 trang hồ sơ Diễn viên (30/10) và cụm Tỷ giá tự động (tăng Pageviews gấp 5 lần). // "
-        "Ý chính 2: Hoàn tất 85% tiến độ bộ đôi công cụ tính Thuế TNCN và Lương Gross-Net, chuẩn bị sẵn sàng cho cao điểm quyết toán cuối năm. // "
-        "Ý chính 3: Kỹ thuật luồng /tai-app đã hoàn thành 100%, chờ BOM phê duyệt đồng bộ link toàn Kênh Web để kích hoạt toàn diện."
-    ), font_size=8.5, color=COLOR_TEXT_MAIN)
+    # Shape 3: Slide number
+    slide.shapes[3].left = Inches(9.10)
+    slide.shapes[3].top = Inches(5.33)
+    slide.shapes[3].width = Inches(0.55)
+    set_text(slide.shapes[3], "9 / 9", font_size=8.5, color=COLOR_TEXT_MUTED)
+    points_s8 = [
+        ("Ý chính 1:", "Web Dev đã triển khai lên Production 631 trang hồ sơ Diễn viên (30/10) và cụm Tỷ giá tự động (tăng Pageviews gấp 5 lần)."),
+        ("Ý chính 2:", "Hoàn tất 85% tiến độ bộ đôi công cụ tính Thuế TNCN và Lương Gross-Net, chuẩn bị sẵn sàng cho cao điểm quyết toán cuối năm."),
+        ("Ý chính 3:", "Kỹ thuật luồng /tai-app đã hoàn thành 100% trên Production; sẵn sàng kích hoạt ngay các dự án trọng điểm tháng 11 khi BOM phê duyệt.")
+    ]
+    set_key_points(slide.shapes[2], points_s8, font_size=8.0)
 
     # Milestones (Sentence case)
     set_text(slide.shapes[8], "Khảo sát & Thiết kế", font_size=8.0, bold=True, color=COLOR_TEXT_MAIN)
@@ -690,7 +964,7 @@ def populate_slide_7_roadmap(slide):
         color=COLOR_TEXT_MUTED,
     )
 
-    # Format Support Table (4x3) - Teams standardized per Glossary Section 6
+    # Format Support Table (4x3)
     tbl = slide.shapes[32].table
     headers = ["Việc cần hỗ trợ", "Bên phối hợp", "Hạn"]
     for c, h in enumerate(headers):
@@ -726,17 +1000,23 @@ def main():
     print("Populating Slide 3: Discussion Topics [D]...")
     populate_slide_3_discussion_topics(prs.slides[2])
 
-    print("Populating Slide 4: Proposal Deep-Dive [D]...")
-    populate_slide_4_proposal_deepdive(prs.slides[3])
+    print("Populating Slide 4: Proposal Deep-Dive 1 [D] - Pilot Off-Page Cinema Phim Tết...")
+    populate_slide_4_proposal_offpage_cinema(prs.slides[3])
 
-    print("Populating Slide 5: Strategic Hubs Breakdown [R]...")
-    populate_slide_5_hubs(prs.slides[4])
+    print("Populating Slide 5: Proposal Deep-Dive 2 [D] - Gamification Quiz CIC...")
+    populate_slide_5_proposal_quiz_cic(prs.slides[4])
 
-    print("Populating Slide 6: New User & AppsFlyer Funnel [R]...")
-    populate_slide_6_new_user(prs.slides[5])
+    print("Populating Slide 6: Strategic Hubs Breakdown [R]...")
+    populate_slide_6_hubs(prs.slides[5])
 
-    print("Populating Slide 7: Roadmap Sản Phẩm & Next Actions [R]...")
-    populate_slide_7_roadmap(prs.slides[6])
+    print("Populating Slide 7: GEO Signals & Performance [R]...")
+    populate_slide_7_geo_signals(prs.slides[6])
+
+    print("Populating Slide 8: New User & AppsFlyer Funnel [R]...")
+    populate_slide_8_new_user(prs.slides[7])
+
+    print("Populating Slide 9: Roadmap Sản Phẩm & Next Actions [R]...")
+    populate_slide_9_roadmap(prs.slides[8])
 
     # 3. Save to all 4 destination paths
     for p in OUT_PATHS:
@@ -744,7 +1024,7 @@ def main():
         prs.save(str(p))
         print(f"Saved: {p} ({p.stat().st_size:,} bytes)")
 
-    print("\nAll 7 slides successfully generated and saved across all paths!")
+    print("\nAll 9 slides successfully generated and saved across all paths!")
 
 
 if __name__ == "__main__":

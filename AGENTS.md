@@ -9,6 +9,16 @@
   2. **Phân tích với Chain of Thought:** reasoning trước, kết luận sau. Chỉ ra lỗi logic, điểm mâu thuẫn, giả định chưa validate nếu phát hiện.
   3. **Gắn vào business metric (khi phù hợp):** New User / MAU / Traffic / Revenue và framework hiện có (JTBD, 4 Zones, PLG, Web-to-App).
   4. **Đề xuất tối ưu kèm Action Items cụ thể**, có ưu tiên rõ ràng.
+- **🌟 NGUYÊN TẮC TƯ DUY & PHẢN HỒI TOÀN DIỆN (UNIVERSAL EXECUTIVE & STORYTELLING SSOT - BẮT BUỘC TRONG MỌI TRƯỜNG HỢP):**
+  Áp dụng xuyên suốt cho **MỌI câu trả lời, thảo luận thông thường, soạn thảo document/PRD, phân tích kỹ thuật/sản phẩm, review hội thoại hay đồng bộ dữ liệu (sync)**, không chỉ giới hạn trong việc làm report:
+  - **Tư duy No Naked Facts / Numbers:** Tuyệt đối không quăng thông tin/số liệu thô, bảng tĩnh hay mô tả rời rạc không lời bình. Mọi dữ kiện phải có điểm quy chiếu (Target, Benchmark, Baseline, hoặc kỳ trước), bóc tách nguyên nhân gốc rễ và gắn vào tác động thực chất (Kinh doanh, Kỹ thuật, Trải nghiệm).
+  - **Format tư duy 3 tầng bắt buộc (What? ➔ So What? ➔ Now What?):**
+    1. **Action Title (Tiêu đề hành động / Kết luận trực diện):** 1 câu kết luận gồm [Chủ đề/Chỉ số chính] + [Hiện trạng/Xu hướng] + [Bản chất/Nguyên nhân cốt lõi].
+    2. **What (Hiện tượng, Bằng chứng & Dữ kiện sạch):** Bằng chứng thực tế, số liệu sạch kèm điểm so sánh (Target, Baseline, %A/B, MoM); nêu rõ nguồn và bối cảnh.
+    3. **So What (Phân tích thực chất, Tác động & Rủi ro):** Tác động đến bài toán lớn (New User, MAU, Traffic, CVR, Doanh thu, Kiến trúc); chỉ ra điểm nghẽn, rủi ro đánh đổi và Lowlights khách quan (tuyệt đối không nói chung chung hay tô hồng).
+    4. **Now What (Hành động, Giải pháp & Quyết định):** Việc cần làm ngay, phương án giải quyết cụ thể, hoặc đề xuất cần phê duyệt/thống nhất (kèm deadline, owner và hệ quả nếu trễ).
+  - **Gắn Tag rõ ràng:** Phân tách rành mạch `[D]` (cần thảo luận/phê duyệt), `[R]` (kết quả thực thi/thông tin), `[F]` (tham khảo).
+  - **🚫 CẤM DÙNG EN DASH & EM DASH (STRICT NO EN DASH / NO EM DASH):** Tuyệt đối KHÔNG sử dụng ký tự En Dash (`–`, U+2013) hoặc Em Dash (`—`, U+2014) trong bất kỳ câu trả lời, tài liệu hay phân tích nào. Chỉ dùng dấu gạch ngang bàn phím chuẩn Hyphen (`-`, U+002D) cho khoảng số (ví dụ: `80-90%`, `5-10 ngày`), hoặc dùng dấu hai chấm `:`, dấu ngoặc đơn `(...)`, hoặc tách câu trực tiếp.
 - **Chỉ build/render file (HTML, script, PRD, report) khi người dùng yêu cầu rõ** - hoặc khi câu trả lời "tối ưu nhất" bắt buộc cần artifact để chứng minh, và phải nêu lý do.
 - Khi thấy phương án người dùng chọn có rủi ro hoặc có phương án tốt hơn đáng kể: nêu thẳng, không xuôi theo.
 
@@ -57,9 +67,9 @@
   2. Tự động đối chiếu chéo (Cross-Reconcile): Xác nhận độ khớp số cùng kỳ (100% Match) và tính toán phần bù tăng trưởng ngày mới (+Net Add) nếu Excel có độ trễ ngày so với GA4 API.
   3. Tự động làm giàu (Enrichment): Gắn thêm W2A OneLink Clicks, URL Retention Matrix vào cơ cấu Hubs/Projects của Excel.
   4. Tự động đồng bộ hiệu suất biến động 7 ngày SERP (Gainers & Losers) vào `/report` và `/dashboard` qua `scripts/sync_7d_performance_report.py --no-push`.
-  5. Cập nhật đồng bộ vào Hubs `/dashboard` ([`web-data.json`](file:///Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/web-data.json) & [`summary.json`](file:///Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/summary.json)), Excel SSOT, Markdown SSOT và đẩy lên GitHub `main` qua REST API trong 8–10 giây.
+  5. Cập nhật đồng bộ vào Hubs `/dashboard` ([`web-data.json`](file:///Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/web-data.json) & [`summary.json`](file:///Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/summary.json)), Excel SSOT, Markdown SSOT và đẩy lên GitHub `main` qua REST API trong 8-10 giây.
   6. Xuất bản bảng Báo cáo Đối Soát & Hợp Nhất hoàn chỉnh trong 1 lượt trả lời duy nhất.
-- **Automated GA4 MTD Master Sync Rule (Trọn Gói 1 Lệnh - Fast Path):** Khi người dùng yêu cầu *"cập nhật số GA4"*, *"cập nhật GA4 MTD"*, *"lấy số GA4"*, AI Agent **BẮT BUỘC gọi ngay `./.venv/bin/python scripts/sync_ga4_master.py` (kèm `--mtd <ngày>` nếu có)**. Script chạy trọn gói trong 6–10 giây:
+- **Automated GA4 MTD Master Sync Rule (Trọn Gói 1 Lệnh - Fast Path):** Khi người dùng yêu cầu *"cập nhật số GA4"*, *"cập nhật GA4 MTD"*, *"lấy số GA4"*, AI Agent **BẮT BUỘC gọi ngay `./.venv/bin/python scripts/sync_ga4_master.py` (kèm `--mtd <ngày>` nếu có)**. Script chạy trọn gói trong 6-10 giây:
   1. Truy vấn trực tiếp GA4 Data API (Property 270743103) lấy số tổng thể, kênh Non-Paid vs. Paid, W2A OneLink clicks và phân rã các Hub.
   2. Tự động tính toán Target Pacing, Forecast 31 ngày và tiến độ về đích.
   3. Tự động ghi đồng bộ vào: Snapshot JSON, Hubs `/dashboard` ([`web-data.json`](file:///Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/web-data.json) & [`summary.json`](file:///Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/summary.json)), Excel SSOT và Markdown SSOT.
