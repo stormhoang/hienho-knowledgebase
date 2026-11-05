@@ -42,7 +42,53 @@ Skill này cung cấp bộ khung chuẩn hóa, phương pháp luận bóc tách 
 
 ---
 
-## 3. THAM CHIẾU TÀI LIỆU CHI TIẾT
+## 3. TIÊU CHUẨN BÁO CÁO THÁNG ĐIỀU HÀNH WEB PLATFORM (EXECUTIVE 6 STREAMS ARCHITECTURE SSOT)
+
+Đây là chuẩn mực báo cáo tháng chính thức (Monthly Executive Standard) được thống nhất cho Kênh Web MoMo, bảo đảm tính nhất quán 100% giữa văn bản Board Markdown (`report-thang-XX-YYYY-board.md`), Web Dashboard Hubs (`MonthlyReportApp.tsx`, `MonthlySlideDeck.tsx`) và Bộ Slide Trình Chiếu PowerPoint (`Web_Platform_Thang_XX_YYYY_Pyramid.pptx`):
+
+### 6 Luồng Điều Hành Bắt Buộc (6 Executive Streams)
+
+1. **Stream 1: Khung Điều Hành 3 Trụ Cột (Pillars) [R]:**
+   - Phân bổ thành 3 khối chiến lược: Điểm nổi bật (Highlights), Hợp tác liên phòng ban (Collaboration), và Ưu tiên hành động (Priorities).
+   - Tóm tắt cô đọng tình hình chuyển dịch tăng trưởng tự nhiên của Kênh Web.
+
+2. **Stream 2: Hiệu Suất Kinh Doanh & Quan Sát Chiến Lược [R]:**
+   - Bảng tổng thể Full Month 31 ngày kèm so sánh Target và MoM.
+   - Bóc tách rõ ràng cơ cấu Non-Paid Traffic vs Paid Traffic.
+   - 3 nhận định điều hành "So What?": Bản chất chuyển dịch, động lực tăng trưởng cốt lõi và cảnh báo rủi ro.
+
+3. **Stream 3: Hai Dự Án Trọng Điểm: Cinema Hub & Financial Hub [R]:**
+   - **Cinema Hub:** Quy mô lưu lượng, tỷ trọng cụm rạp, chuyển đổi W2A (Installs, Map Bank, CVR) và tiến độ kỹ thuật cụm Diễn viên.
+   - **Financial Hub:** Quy mô lưu lượng, tỷ trọng Non-Paid, mức độ tập trung sản phẩm tín chấp và tín hiệu nhóm Tiện ích Tỷ giá.
+   - **Khối đối trọng PLG:** Bắt buộc có khối 3 thẻ so sánh hiệu suất tương tác: Bảng biểu tĩnh (0,0% CTR) vs Tool Tính Lương (33,7% CTR) vs Tool Vay & CIC (38,6% - 43,8% CTR).
+
+4. **Stream 4: Dự Án New User & Phễu Chuyển Đổi Web-to-App [R]:**
+   - Phễu chuyển đổi 4 tầng AppsFlyer GPD: Installs -> Registered -> Map Bank -> Active MAU.
+   - Phân tích hiệu quả theo hệ điều hành (iOS vs Android) và tỷ lệ KYC/Map Bank.
+   - Bóc tách hiệu quả 4 kênh: Banner chào MoMo, Bối cảnh Cinema Hub, Interactive Gamification (Minigame) và Cổng tải app tập trung (`/tai-app`).
+
+5. **Stream 5: Hiệu Suất Công Cụ Tài Chính Tương Tác (Interactive Tools Performance) [R]:**
+   - **Quy chuẩn bảng 5 cột tinh gọn duy nhất:**
+     `STT | Tên Công Cụ / Tiện Ích | Lượt hiển thị (Imp) | Lượt tương tác (Clicks) | Tỷ lệ tương tác (CTR)`
+   - **Quy tắc hiển thị:** Tuyệt đối KHÔNG đưa cột URL kỹ thuật, cột hành động W2A, hay cột đánh giá nhận xét dài dòng vào bảng.
+   - **Số liệu MoSpark CMS:** Thống kê đầy đủ các công cụ tương tác thực tế và đối lập với nhóm bảng biểu tĩnh (0% CTR, onsite 48s).
+   - **Nhận định điều hành:** 3 gạch đầu dòng phân tích dưới bảng làm rõ công cụ dẫn dắt và cơ sở go-live cho các công cụ tháng kế tiếp.
+
+6. **Stream 6: Trọng Tâm Thảo Luận & Quyết Nghị Ban Giám Đốc [D]:**
+   - Mỗi đề xuất cấu trúc chặt chẽ 6 phần: Vấn đề -> Bối cảnh -> Tác động tăng trưởng -> Bảng so sánh các phương án (A vs B) -> Đề nghị với CEO/BOM -> Rủi ro nếu không quyết định.
+
+---
+
+## 4. QUY TẮC ĐỒNG BỘ TAM GIÁC (THREE-WAY SSOT SYNC)
+
+Mọi cập nhật số liệu báo cáo tháng bắt buộc đồng bộ song song 3 thực thể:
+1. **Markdown Board Report:** `07_REPORTS/docs/report-thang-XX-YYYY-board.md` và `data/reports/report-thang-XX-YYYY-board.md`.
+2. **Web Hubs Dashboard & Slide Deck:** `lib/report/monthly-report-server.ts`, `data/deck/monthly-deck-XX-YYYY.json`, `components/report/monthly/*`.
+3. **PowerPoint Deck Template:** `scripts/build_official_templated_pptx.py` -> sinh file `Web_Platform_Thang_XX_YYYY_Pyramid.pptx` đồng bộ Drive và Web Public.
+
+---
+
+## 5. THAM CHIẾU TÀI LIỆU CHI TIẾT
 
 - **Từ điển thuật ngữ báo cáo (SSOT):** [`03_SKILLS/momo-reporting-glossary.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS/momo-reporting-glossary.md)
 - **Quy chuẩn gốc cấp công ty:** [`03_SKILLS/momo-reporting-guidelines.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS/momo-reporting-guidelines.md)
