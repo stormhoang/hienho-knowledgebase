@@ -46,6 +46,16 @@ Bảng dưới đây chuẩn hóa triệt để các "tật" hành văn của AI
 | **Kiến tạo / Thúc đẩy bùng nổ** | Foster / Boost / Skyrocket | **Tăng trưởng định lượng cụ thể (+X%)**, **Tối ưu hóa** | ❌ *"Kiến tạo giá trị bùng nổ cho dịch vụ"*<br>✅ *"Thúc đẩy tăng trưởng lượt cài đặt mới (+24% MoM) qua luồng CHAOMOMO."* |
 | **Nút thắt cổ chai** | Bottleneck | **Điểm nghẽn kỹ thuật**, **Điểm nghẽn quy trình**, hoặc **Bottleneck** | ❌ *"Gặp nút thắt cổ chai ở backend"*<br>✅ *"Phát sinh điểm nghẽn kỹ thuật (Bottleneck) tại cổng API tra cứu phạt nguội do đối tác quá tải."* |
 | **Chạm tới / Chạm mốc** *(Lạm dụng)* | Reach / Hit milestone | **Đạt**, **Ghi nhận**, **Cán mốc** | ❌ *"Traffic chạm tới ngưỡng bùng nổ"*<br>✅ *"Lưu lượng đạt 5,2M MUA, vượt 4% chỉ tiêu tháng."* |
+| **Vùng trũng / Vùng trũng traffic** | Traffic trough / Low volume area | **Lưu lượng còn thấp**, **Chưa có lưu lượng tự nhiên**, **Đóng góp còn khiêm tốn** | ❌ *"Xóa vùng trũng traffic của CCQ"*<br>✅ *"Kích hoạt lưu lượng tự nhiên cho nhóm sản phẩm Đầu tư (hiện chỉ đạt 458 PVs) và mở rộng danh mục."*<br>*(Tuyệt đối không dùng "vùng trũng", từ ngữ sáo rỗng giống dự báo thời tiết lũ lụt).* |
+| **Bấm nút / Bấm nút triển khai** | Kick-off / Push button | **Kích hoạt triển khai**, **Bắt đầu thực thi**, **Giải ngân gói thử nghiệm** | ❌ *"Bấm nút gói bài PR"*<br>✅ *"Triển khai dự án thử nghiệm Pilot Off-Page SEO 125M (BU Movies tài trợ 80%)."*<br>*(Bấm nút là từ khẩu ngữ, văn nói bình dân, cấm dùng trong slide BOM).* |
+| **Gói bài PR** | PR articles / Guest posts | **Chiến dịch Off-Page SEO**, **Bài viết thẩm quyền (Authority Content)**, **Dự án Pilot Off-Page** | ❌ *"Chốt vendor mua gói bài PR"*<br>✅ *"Lựa chọn đối tác triển khai gói Pilot Off-Page SEO thẩm quyền."* |
+| **Hứng trọn** | Capture / Absorb | **Đón nhận và tối ưu chuyển đổi**, **Hấp thu lưu lượng tìm kiếm** | ❌ *"Hứng trọn 22K volume tìm kiếm"*<br>✅ *"Tối ưu chuyển đổi từ 22.750 lượt tìm kiếm thương hiệu hàng tháng."* |
+| **Kéo người chơi / Kéo lượng lớn** | Drive users / Acquire gamers | **Thu hút người dùng mới trải nghiệm**, **Thúc đẩy tương tác** | ❌ *"Kéo lượng lớn người chơi vào web"*<br>✅ *"Thu hút người dùng mới tham gia trải nghiệm minigame và mở rộng tệp tương tác."* |
+| **Mức nền vận hành tiêu chuẩn** | Operating Baseline | **Mức nền vận hành tiêu chuẩn**, **Mức nền cơ sở** | ✅ *"Paid Traffic đạt 473.481 PVs (-60,4% MoM), quay về mức nền vận hành tiêu chuẩn tương đương Tháng 7 và Tháng 8 sau khi kết thúc các chiến dịch cao điểm mùa lễ và tựu trường."* |
+| **Mức nền vận hành tiêu chuẩn** | Operating Baseline | **Mức nền vận hành tiêu chuẩn**, **Mức nền cơ sở** | ✅ *"Paid Traffic đạt 473.481 PVs (-60,4% MoM), quay về mức nền vận hành tiêu chuẩn tương đương Tháng 7 và Tháng 8 sau khi kết thúc các chiến dịch cao điểm mùa lễ và tựu trường."* |
+| **Kênh tự nhiên gánh vác / Tự chủ quy mô** | Organic Self-Sufficiency | **Tự chủ quy mô**, **Kênh tự nhiên gánh vác** | ✅ *"Việc traffic tổng thể vẫn đạt 98,3% Target thể hiện sự tự chủ rất lớn khi hầu như toàn bộ quy mô truy cập tháng này đều do kênh tự nhiên gánh vác (chiếm 86,86%)."* |
+| **Đảo chiều tăng trưởng** | Reversal / Rebound | **Đảo chiều tăng trở lại**, **Phục hồi tăng trưởng** | ✅ *"Điểm sáng là Organic Search đã đảo chiều tăng trở lại đạt 1,72M PVs (+5,7%), cho thấy nội lực từ nội dung và tiện ích trên trang đang giúp phục hồi tốt sau giai đoạn xây dựng nền tảng trong Q3."* |
+| **Đà tăng liên tục qua các tháng** | Multi-Month Growth Momentum | **Duy trì đà tăng liên tục [n] tháng** | ✅ *"Direct Traffic đạt 931.731 PVs (chiếm 25,9% toàn trang) và duy trì đà tăng liên tục 4 tháng (từ 440K lên 932K, tăng +111,3% so với Tháng 7), chứng minh người dùng ngày càng có thói quen vào thẳng momo.vn."* |
 
 ---
 
@@ -235,6 +245,17 @@ Khi trình bày các gạch đầu dòng phân tích dưới Action Title, bắt
 - `Tác động kinh doanh:` (Tác động tới New User, W2A, Doanh thu hoặc Chi phí)
 - `Việc tiếp theo:` (Kế hoạch hành động cụ thể trong 7-30 ngày tới kèm thời hạn)
 - `Đề xuất phê duyệt:` (Nội dung cần BOM/CEO quyết định phương án)
+
+### 7.4. Cấu trúc Mẫu Slide Điều hành Kênh Lưu lượng (Executive Scorecard Pattern)
+Khi xây dựng slide tổng quan hiệu suất kênh (`Scorecard` / `Executive Summary`), chuẩn hóa bố cục 2 khối đối xứng:
+- **Khối bên trái (Chiếm 62% chiều rộng slide):**
+  1. **Bảng phân rã 6 cột:** `Kênh lưu lượng | Tháng 7 | Tháng 8 | Tháng 9 | Tháng 10 | % MoM` (chia 2 tầng rành mạch `KÊNH TỰ NHIÊN (NON-PAID)` gồm Organic, AI Traffic (GEO), Direct, Referral và `KÊNH TRẢ PHÍ (PAID ADS)`, kèm các dòng tổng hợp `TỔNG LƯỢNG TRUY CẬP (ACTUAL)`, `MỤC TIÊU THÁNG (TARGET)`, `TỶ LỆ ĐẠT TARGET`).
+  2. **Hộp Key Highlights (Chân bảng):** Phân tích 3 gạch đầu dòng cốt lõi:
+     - *Kênh tự nhiên:* Đạt đỉnh, tỷ trọng chi phối (% share), đảo chiều tăng trở lại của Organic Search.
+     - *Kênh trực tiếp & AI Search:* Tăng trưởng liên tục [n] tháng của Direct Traffic (thói quen vào thẳng momo.vn) và tốc độ bứt phá của AI Search (GEO).
+     - *Kênh trả phí (Paid Ads):* Quay về mức nền vận hành tiêu chuẩn sau cao điểm mùa vụ; khẳng định sự tự chủ quy mô của kênh tự nhiên.
+- **Khối bên phải (Chiếm 35% chiều rộng slide):**
+  - **Hộp Priorities for the Next 30 Days (Toàn bộ chiều cao):** Xác lập ngay các mũi nhọn ưu tiên trong 30 ngày tới của từng Hub sản phẩm (Financial Hub, Cinema Hub, Platform) để người đọc thấy ngay lời giải và kế hoạch hành động.
 
 ---
 
