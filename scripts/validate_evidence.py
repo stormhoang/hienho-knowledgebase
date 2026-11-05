@@ -3,6 +3,7 @@
 
 import argparse
 import json
+import re
 import sys
 from collections import defaultdict
 from datetime import date
@@ -34,6 +35,7 @@ def validate(payload: dict, max_age_days: int | None = None, today: date | None 
             errors.append("as_of không đúng định dạng YYYY-MM-DD")
 
     seen = defaultdict(list)
+    by_id = {c.get("id"): c for c in claims if isinstance(c, dict)}
     for index, claim in enumerate(claims, start=1):
         missing = REQUIRED_FIELDS - claim.keys()
         if missing:
@@ -55,6 +57,13 @@ def validate(payload: dict, max_age_days: int | None = None, today: date | None 
                             actual = actual[int(part)] if isinstance(actual, list) else actual[part]
                         if type(actual) is not type(claim.get("value")) or actual != claim.get("value"):
                             errors.append(f"Claim {claim['id']}: value {claim.get('value')!r} khác source_field {actual!r}")
+                        snapshot_days = json.loads(source_path.read_text(encoding="utf-8")).get("days_elapsed")
+                        match = re.search(r"monthly_(\d{2})_(\d{4})_mtd_(\d+)d\.json$", source_path.name)
+                        if match and snapshot_days is not None:
+                            month, year, filename_days = map(int, match.groups())
+                            expected = f"{year:04d}-{month:02d}-01/{year:04d}-{month:02d}-{snapshot_days:02d}"
+                            if int(filename_days) != snapshot_days or claim["period"] != expected:
+                                errors.append(f"Claim {claim['id']}: period hoặc tên snapshot không khớp {expected}")
                     except (ValueError, KeyError, IndexError, TypeError, json.JSONDecodeError) as exc:
                         errors.append(f"Claim {claim['id']}: không đọc được source_field {field}: {exc}")
         if claim["evidence_type"] not in ALLOWED_TYPES:
@@ -66,6 +75,18 @@ def validate(payload: dict, max_age_days: int | None = None, today: date | None 
         metric_key = (claim.get("metric"), claim["period"], claim.get("unit"))
         if claim.get("metric") is not None:
             seen[metric_key].append(claim)
+
+        calculation = claim.get("calculation")
+        if calculation:
+            if calculation.get("operator") != "subtract" or len(calculation.get("inputs", [])) != 2:
+                errors.append(f"Claim {claim['id']}: calculation không được hỗ trợ")
+            else:
+                try:
+                    left, right = (by_id[key]["value"] for key in calculation["inputs"])
+                    if left - right != claim.get("value"):
+                        errors.append(f"Claim {claim['id']}: phép trừ không khớp")
+                except (KeyError, TypeError):
+                    errors.append(f"Claim {claim['id']}: thiếu claim đầu vào")
 
     for key, same_metric_claims in seen.items():
         values = {json.dumps(c.get("value"), sort_keys=True) for c in same_metric_claims if "value" in c}

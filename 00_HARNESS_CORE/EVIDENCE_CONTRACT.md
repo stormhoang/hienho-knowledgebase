@@ -30,6 +30,8 @@ Mọi kết luận có số liệu hoặc khẳng định thực tế phải có
 - JSON đầu vào có thể truyền qua stdin, không cần lưu file cho mỗi câu hỏi. Chỉ lưu record khi cần audit hoặc tái lập báo cáo.
 - `source` nội bộ phải là file trong workspace; URL chỉ xác minh cú pháp, Agent vẫn phải tự kiểm tra nội dung nguồn ngoài.
 - Với fact từ JSON, `source_field` là đường dẫn key phân tách bằng dấu chấm và `value` phải khớp giá trị gốc. Giá trị tính toán phải ghi rõ phép tính và các claim đầu vào; validator chưa tự chứng minh phép tính.
+- Với snapshot `monthly_MM_YYYY_mtd_Nd.json`, `period` phải khớp `YYYY-MM-01/YYYY-MM-NN` và `days_elapsed` phải khớp tên file.
+- Phép tính `calculation: {"operator": "subtract", "inputs": ["claim_mới", "claim_cũ"]}` được đối chiếu với hai claim đầu vào. Chỉ dùng để tính mức tăng giữa hai snapshot cùng tháng.
 - `as_of` không được muộn hơn ngày hiện tại.
 - Dữ liệu quá cũ phải được đánh dấu stale theo ngưỡng của capability.
 - `fact`, `inference` và `recommendation` không được trộn lẫn.
