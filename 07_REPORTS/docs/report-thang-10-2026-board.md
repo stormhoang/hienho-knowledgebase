@@ -100,18 +100,18 @@
 
 #### 1. Bảng Đối Soát Hiệu Suất Tương Tác Công Cụ (Dữ Liệu Thực Tế MoSpark CMS Tháng 10/2026)
 
-| STT | Tên Công Cụ / Tiện Ích | URL / Mã Tool | Lượt hiển thị (Imp) | Lượt tương tác (Clicks) | Tỷ lệ tương tác (CTR) | Hành động chuyển đổi Web-to-App | Đánh giá hiệu suất & Xu hướng |
-| :---: | :--- | :--- | :---: | :---: | :---: | :--- | :--- |
-| 1 | **Ước tính khoản vay** | `/tai-chinh/vay-nhanh` (`fast_money`) | 9.800 | 4.300 | **43,8%** | Mở luồng duyệt Vay Nhanh 100tr | Dẫn đầu toàn Kênh Web; nhu cầu vay tiêu dùng cấp thiết cuối năm |
-| 2 | **Tra cứu điểm CIC** | `/tai-chinh/diem-tin-dung` (`cic_lookup`) | 4.800 | 1.800 | **38,6%** | Kiểm tra tín dụng & mở thẻ in-app | Tương tác rất cao; bảo chứng cho đề xuất Gamification Quiz CIC |
-| 3 | **Tính Lương Gross sang Net** | `/tai-chinh/tinh-luong-gross-net` (`salary_converter`) | 3.100 | 1.000 | **33,7%** | Mở Ví Trả Sau hạn mức 100tr | 1/3 người dùng tự nhập số liệu; bảo chứng cho bộ đôi Tool Thuế T11 |
-| 4 | **Giả lập điểm tín dụng CIC** | `/tai-chinh/diem-tin-dung` (`cic_score_simulator`) | 528 | 116 | **22,0%** | Tư vấn nâng hạng điểm tín dụng | Tỷ lệ tương tác tốt trên nhóm người dùng có rủi ro nợ xấu |
-| 5 | **Trả góp Ví Trả Sau** | `/tai-chinh/vi-tra-sau` (`paylater_converter`) | 1.500 | 242 | **16,1%** | Kích hoạt hạn mức Ví Trả Sau | Kích hoạt nhu cầu mua sắm trả góp tiêu dùng |
-| 6 | **Tính BHXH & Lương Hưu** | `/tai-chinh/an-sinh` (`bhxh_simulator`) | 108 | 14 | **13,0%** | Tham gia Bảo hiểm Số MoMo | Mới thử nghiệm, nhu cầu tra cứu an sinh ổn định |
-| 7 | **Máy tính Lãi Tiết Kiệm & SIP** | `/tai-chinh/tiet-kiem` (`saving`) | 1.500 | 182 | **12,5%** | Mở Túi Thần Tài sinh lời ngày | Tương tác đều đặn từ nhóm người dùng có tiền nhàn rỗi tích lũy |
-| 8 | **Chuyển đổi Ngoại tệ** | `/tai-chinh/ty-gia` (`currency_converter`) | 1.900 | 178 | **9,2%** | Mở App chuyển tiền quốc tế | Chuyển đổi 2 chiều 4 cặp ngoại tệ chủ lực (USD, EUR, GBP, AUD) |
-| 9 | **Tính Thuế TNCN & Hộ KD** | `/tai-chinh/thue-tncn` | Sắp go-live | Dự phóng >30% | Nộp thuế điện tử qua MoMo | Đang hoàn thiện UAT 85%, go-live trước 10/11 đón mùa quyết toán thuế |
-| 10 | **Nhóm Bảng Biểu Tĩnh** (Giá vàng, Tỷ giá, Lãi suất) | `/tai-chinh/*` (nội dung tĩnh) | 1.410 | **0** | **0,0%** | Thoát trang (Bounce >70%) | Onsite 48s, xem lướt thoát ngay; minh chứng cần chuyển dịch 100% sang PLG |
+| STT | Tên Công Cụ / Tiện Ích | Lượt hiển thị (Imp) | Lượt tương tác (Clicks) | Tỷ lệ tương tác (CTR) |
+| :---: | :--- | :---: | :---: | :---: |
+| 1 | **Ước tính khoản vay** | 9.800 | 4.300 | **43,8%** |
+| 2 | **Tra cứu điểm CIC** | 4.800 | 1.800 | **38,6%** |
+| 3 | **Tính Lương Gross sang Net** | 3.100 | 1.000 | **33,7%** |
+| 4 | **Giả lập điểm tín dụng CIC** | 528 | 116 | **22,0%** |
+| 5 | **Trả góp Ví Trả Sau** | 1.500 | 242 | **16,1%** |
+| 6 | **Tính BHXH & Lương Hưu** | 108 | 14 | **13,0%** |
+| 7 | **Máy tính Lãi Tiết Kiệm & SIP** | 1.500 | 182 | **12,5%** |
+| 8 | **Chuyển đổi Ngoại tệ** | 1.900 | 178 | **9,2%** |
+| 9 | **Tính Thuế TNCN & Hộ KD** | - | - | Sắp go-live |
+| 10 | **Nhóm Bảng Biểu Tĩnh** (Giá vàng, Tỷ giá, Lãi suất) | 1.410 | **0** | **0,0%** |
 
 #### 2. Nhận Định Điều Hành & Phân Tích Thực Chất (Insights)
 - **Đối nghịch rõ nét giữa Bảng tĩnh (0% CTR) và Interactive Tools (33,7% - 43,8% CTR):** Các bài viết tĩnh và bảng hiển thị thụ động (như Giá vàng 1,2K imp, Tỷ giá 126 imp) ghi nhận 0 lượt click tương tác, thời gian onsite chỉ 48 giây và người dùng thoát trang ngay. Ngược lại, khi người dùng được cung cấp công cụ tự nhập thu nhập hoặc số tiền vay, tỷ lệ tương tác bứt phá lên 33,7% - 43,8%, kéo theo thời gian onsite đạt hơn 2,5 phút.
