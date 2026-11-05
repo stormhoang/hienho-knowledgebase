@@ -3,7 +3,7 @@
 > **Kính gửi:** Executive Leadership (anh Công)  
 > **Đơn vị:** Web Platform Team  
 > **Chu kỳ:** 7 ngày (Weekly Shipping Cadence)  
-> **Nguồn dữ liệu:** `07_REPORTS/data/summary.json` & `12_TASK_MANAGEMENT/2026-10/week_0X.md`  
+> **Nguồn dữ liệu:** `07_REPORTS/data/summary.json` & `14_ROADMAP/ship_releases.json`
 
 ---
 
