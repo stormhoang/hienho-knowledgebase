@@ -1,0 +1,17 @@
+{
+  "as_of": "2026-11-05",
+  "claims": [
+    {
+      "id": "traffic_mtd",
+      "claim": "MTD đạt 370310 PV",
+      "value": 370310,
+      "metric": "pageviews_mtd",
+      "unit": "PV",
+      "source": "07_REPORTS/data/monthly_11_2026_mtd_4d.json",
+      "source_field": "actual_mtd_pv",
+      "period": "2026-11-01/2026-11-04",
+      "evidence_type": "fact",
+      "confidence": "high"
+    }
+  ]
+}

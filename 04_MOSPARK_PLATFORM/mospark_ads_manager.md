@@ -5,7 +5,7 @@ Nền tảng quản lý và phân phối quảng cáo tự động trên Web
 > - **Division:** GPD (Growth Platform Division)
 > - **Owner:** Bảo
 > - **PIC:** Thuận (Tech)
-> - **Version:** 3.4 · June 2026
+> - **Version:** 3.5 · November 2026
 
 ---
 
@@ -541,6 +541,12 @@ Thay vì targeting theo Screen (như Athena), Ads Manager targeting theo loại 
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><em>Chỉ dùng cho Landing Page khuyến mãi</em></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Traffic (Hạn chế dùng)</td>
     </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Smart Resume Dock / Retargeting Bar</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thấp đến Trung bình - Bottom Dock / Floating Card</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tất cả trang trên momo.vn (trừ trang đang bỏ dở)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Re-engagement, phục hồi flow giỏ hàng/lead về Trang A</td>
+    </tr>
   </tbody>
 </table>
 
@@ -561,6 +567,247 @@ Thay vì targeting theo Screen (như Athena), Ads Manager targeting theo loại 
 - **Placement-based targeting:** Chọn slot từ Registry tập trung thay vì tự nhập URL pattern tĩnh.
 - **On-site Retargeting (Behavior-based):** Sử dụng Local Storage / 1st Party Cookie để lưu vết Intent (Ví dụ: User từng vào `/vay-nhanh` nhưng chưa tải app). Khi user truy cập các trang dùng chung (Homepage, Blog), hệ thống tái kích hoạt Widget Vay Nhanh hoặc Sticky Bar nhắc nhở. Tính năng này giúp bám đuổi hiệu quả mà **không cần User phải Log In**, đảm bảo 100% ẩn danh và tuân thủ Data Privacy.
 - **Gamified Behavioral Signal Integration:** Các tương tác vuốt (swipe right/left) trên thẻ Swipe to Match và hành vi cuộn/lưu (double tap to like) trên Doom Scroll Feed sẽ được ghi nhận vào hồ sơ sở thích ẩn danh ở Local Storage (`momo_user_interests`). Động cơ phân phối của Ads Manager sẽ đọc các nhãn sở thích này để tự động cá nhân hóa và hiển thị các chiến dịch quảng cáo liên quan (như phiếu mua hàng F&B hoặc coupon hoàn tiền) trên các trang dùng chung khác của momo.vn.
+
+### 5.3.1. Đặc tả Nghiệp vụ & Kỹ thuật: Luồng On-site Retargeting & Cookie Intent 30 Ngày (Dành cho Thuận & Tech Team)
+
+> **Mục tiêu:** Nhận diện người dùng đã bắt đầu tương tác với luồng sản phẩm tại một trang cụ thể (Trang A - ví dụ: `/vay-nhanh`, `/bao-hiem-xe-may`) nhưng **thoát ra giữa chừng mà chưa đạt Goal** (chưa bấm OneLink, chưa gửi lead). Hệ thống tự động lưu vết Intent bằng 1st-party Cookie (TTL 30 ngày). Khi người dùng quay lại bất kỳ trang nào trên toàn bộ domain `momo.vn`, Ads Manager Engine sẽ tự động kích hoạt một định dạng quảng cáo mới (**Smart Resume Dock**) để kéo người dùng quay trở lại hoàn thành flow tại Trang A.
+
+#### 1. Sơ đồ Luồng Hoạt động (End-to-End Architectural Flow)
+
+```
+[User vào Trang A] (Có luồng sản phẩm / Form / Calculator)
+       │
+       ├──► Người dùng tương tác: điền thông tin, chọn gói, kéo slider...
+       │         │
+       │         ├──► [Trường hợp 1: Chạm Goal thành công]
+       │         │    (Click CTA W2A OneLink / Submit Form)
+       │         │    └──► Action: Xóa / Vô hiệu hóa Cookie `momo_retarget_intent` ngay lập tức.
+       │         │
+       │         └──► [Trường hợp 2: Thoát trang / Bỏ dở luồng (Drop-off)]
+       │              (Đóng tab, back browser, chuyển sang website khác)
+       │              └──► Action: Bắt event `pagehide` / `visibilitychange`
+       │                   └──► GHI 1st-Party Cookie `momo_retarget_intent` (TTL = 30 days)
+       │                        Scope: domain=.momo.vn (kèm LocalStorage mirror).
+       ▼
+[User truy cập lại momo.vn tại bất kỳ URL nào (Trang B, Blog, FAQ, Homepage...)]
+       │
+       ├──► Ads Manager Client Engine (hoặc Middleware) đọc Cookie `momo_retarget_intent`
+       │         │
+       │         ├── Check 1: Cookie có tồn tại và còn hạn (expires_at > now)?
+       │         ├── Check 2: Trang hiện tại có khác Trang A không (currentPath !== intent.url)?
+       │         ├── Check 3: Goal đã hoàn thành chưa (goal_achieved === false)?
+       │         └── Check 4: User có đang trong thời gian tạm ẩn (Dismiss Cooldown) không?
+       │
+       └──► THỎA MÃN TẤT CẢ ĐIỀU KIỆN:
+                 │
+                 └──► Kích hoạt Ads Format mới: Smart Resume Dock (Ưu tiên P0 / Tier 1)
+                           │
+                           ├── Hiển thị: Thumbnail Trang A + Tiêu đề flow dở dang + Nút "Tiếp tục"
+                           └── Click CTA ──► Điều hướng về Trang A (kèm state param để khôi phục bước dở)
+```
+
+#### 2. Quy chuẩn Lưu trữ Dữ liệu Cookie (Cookie Specification)
+
+- **Tên Cookie:** `momo_retarget_intent`
+- **Phạm vi Domain:** `.momo.vn` (áp dụng cho toàn bộ domain chính và các sub-domain).
+- **Đường dẫn (Path):** `/`
+- **Thuộc tính bảo mật:** `SameSite=Lax`, `Secure=true` (HTTPS only).
+- **Thời hạn lưu trữ (TTL):** `Max-Age: 2592000` (tương đương 30 ngày: $30 \times 24 \times 60 \times 60$ giây).
+- **Cơ chế dự phòng (Safari ITP Resiliency):** Trình duyệt Safari (iOS / macOS WebKit) có cơ chế Intelligent Tracking Prevention tự động dọn dẹp Cookie JS sau 7 ngày. Để bảo đảm đúng vòng đời 30 ngày, hệ thống lưu song song một bản sao (mirror) tại `localStorage`. Khi engine duyệt cookie, nếu cookie bị xóa sớm nhưng `localStorage` vẫn còn hạn, engine sẽ tự động khôi phục cookie cho phiên làm việc hiện tại.
+
+**Cấu trúc dữ liệu Payload (JSON Contract):**
+
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trường (Field)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Kiểu dữ liệu</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ví dụ</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô tả nghiệp vụ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">version</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">String</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"1.0"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phiên bản định dạng payload</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">page_id</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">String</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"vay-nhanh"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Định danh duy nhất của Trang A</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">url</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">String</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"/vay-nhanh"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">URL đích cần kéo user quay lại</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">title</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">String</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Vay Nhanh MoMo"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tên hiển thị của dịch vụ trên Ads Format</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">step_name</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">String</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"amount_selected"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bước dở dang user dừng lại</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">form_state</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Object</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">{ "amount": 15000000 }</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">(Tùy chọn) Snapshot dữ liệu form để tự động điền lại khi resume</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">timestamp</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Number</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1741000000000</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thời điểm rời trang (Epoch ms)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">expires_at</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Number</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1743592000000</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thời điểm hết hạn (timestamp + 30 days)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">goal_achieved</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Boolean</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">false</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trạng thái đã hoàn thành mục tiêu hay chưa</td>
+    </tr>
+  </tbody>
+</table>
+
+#### 3. Nguyên tắc Hoạt động của Drop-off Tracker (Cài đặt tại Trang A)
+
+1. **Ghi nhận tương tác (Interaction Trigger):**
+   - Lắng nghe các tương tác của người dùng trên trang luồng sản phẩm (thay đổi giá trị input, chọn gói dịch vụ, thao tác với thanh trượt calculator).
+   - Chỉ lưu intent khi người dùng **thực sự đã có thao tác**; không lưu với traffic vãng lai bounce ngay lập tức mà không tương tác gì.
+
+2. **Cơ chế Bắt Bỏ dở (Drop-off Hook):**
+   - Đăng ký sự kiện vòng đời trình duyệt: `visibilitychange` (khi `document.visibilityState === 'hidden'`) và `pagehide`.
+   - Nếu user rời khỏi tab hoặc đóng trình duyệt trong khi cờ `goal_achieved === false`, hệ thống đóng gói payload và set cookie 30 ngày.
+
+3. **Cơ chế Triệt tiêu Intent khi Đạt Goal (Goal Invalidation):**
+   - Khi người dùng bấm nút CTA chuyển đổi Web-to-App OneLink (`data-goal-action="w2a-conversion"`) hoặc hoàn tất việc gửi lead:
+   - Hệ thống set ngay cờ `goal_achieved = true`, xóa cookie `momo_retarget_intent` (set `max-age=0`) và dọn dẹp `localStorage` để không tiếp tục hiển thị quảng cáo nhắc nhở nữa.
+
+#### 4. Nguyên tắc Vận hành Động cơ Phân phối (Delivery Engine trên toàn site)
+
+Khi người dùng truy cập vào bất kỳ trang nào trên domain `momo.vn`, Ads Manager Engine thẩm định các điều kiện sau trước khi render Ads:
+
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Điều kiện Kiểm tra</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Logic Xác thực</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Hành vi nếu không đạt</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>1. Tồn tại Intent</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có cookie hoặc local storage <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">momo_retarget_intent</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bỏ qua, chạy luồng Ads thường (Contextual/Global)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>2. Thời hạn hiệu lực</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Date.now() &lt; payload.expires_at</code> (trong vòng 30 ngày)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cookie hết hạn, tự động xóa bản ghi</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>3. Mục tiêu chưa hoàn thành</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">payload.goal_achieved === false</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không kích hoạt Ad nhắc nhở</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>4. Trang hiện tại khác Trang A</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">currentPath !== payload.url</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không tự hiện quảng cáo kéo về Trang A khi đang đứng tại chính Trang A</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>5. Tần suất / Cooldown</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">User chưa bấm nút đóng (X) trong vòng 24 giờ qua</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tạm ẩn để tránh gây ức chế cho người dùng</td>
+    </tr>
+  </tbody>
+</table>
+
+#### 5. Đặc tả Định dạng Mới: Smart Resume Dock
+
+Định dạng này được xếp vào danh mục **Ad Format Re-engagement** với quy chuẩn hiển thị tinh gọn, không gây gián đoạn trải nghiệm:
+
+- **Vị trí và Bố cục hiển thị:**
+  - **Trên Desktop:** Định dạng dạng Card nổi (Floating Card) cố định ở góc dưới bên phải màn hình (`bottom: 24px; right: 24px;`), chiều rộng chuẩn 360–380px, bo góc mềm, bóng đổ nổi bật.
+  - **Trên Mobile:** Định dạng thanh Dock dính đáy (Sticky Bottom Dock), cố định nằm ngay trên lớp Bottom Navigation (nếu có), không chiếm quá 15% chiều cao màn hình.
+  - **Đảm bảo Core Web Vitals:** Load bất đồng bộ, render với container cố định hoặc animation trượt vào mượt mà, đảm bảo $CLS = 0$ (không gây giật nhảy khung hình).
+- **Nội dung thông điệp:**
+  - Tiêu đề phụ: Nhãn nhỏ màu nhấn *"Hồ sơ chưa hoàn tất"* hoặc *"Đang bỏ dở"*.
+  - Tiêu đề chính: Tên dịch vụ cụ thể tại Trang A (ví dụ: *"Vay Nhanh MoMo"*).
+  - Nội dung ngắn: *"Bạn đang thực hiện dở hồ sơ. Tiếp tục ngay để giữ quyền lợi và không phải nhập lại."*
+- **Hành vi tương tác:**
+  - **Nút CTA "Tiếp tục hoàn thành":** Điều hướng người dùng quay lại URL của Trang A kèm tham số định danh: `${payload.url}?utm_source=onsite_retarget&utm_medium=smart_dock&resume=true`.
+  - **Nút "Đóng (X)":** Tắt dock và lưu mốc thời gian cooldown 24 giờ vào bộ nhớ trình duyệt để không làm phiền người dùng trong các lần mở trang tiếp theo của ngày hôm đó.
+- **Quy tắc Phân xử Ưu tiên (Priority Arbitration):**
+  - **Cấp độ Ưu tiên P0 (Tier 1):** Quảng cáo On-site Retargeting có mức chuyển đổi cao nhất nên được quyền ưu tiên hiển thị đè lên Balloon / Float Icon thông thường.
+  - **Xử lý xung đột với Popup chiến dịch:** Nếu trang hiện tại có Popup khuyến mại toàn trang đang kích hoạt, Smart Resume Dock sẽ tự động lùi thời gian hiển thị sau 4 giây hoặc chỉ hiện sau khi người dùng đã đóng Popup chiến dịch.
+
+#### 6. Quy chuẩn Đo lường Vòng lặp Kín (Closed-Loop Telemetry Schema)
+
+Hệ thống ghi nhận 5 sự kiện chuẩn vào Umami Analytics & Google Analytics 4 (GA4):
+
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tên sự kiện (Event Name)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Điều kiện kích hoạt (Trigger)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tham số đo lường (Parameters)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">retarget_cookie_set</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khi user thoát Trang A với intent bỏ dở luồng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">page_id</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">step_name</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">ttl_days: 30</code></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">retarget_ad_impression</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khi Smart Resume Dock hiển thị thành công trên trang khác</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">source_page</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">target_page</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">format: "smart_dock"</code></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">retarget_ad_click</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khi user bấm nút "Tiếp tục hoàn thành"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">source_page</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">target_page</code></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">retarget_ad_dismiss</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khi user bấm nút X tắt thông báo</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">target_page</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">cooldown_hours: 24</code></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">retarget_recovery_cvr</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">User quay lại Trang A từ dock và hoàn tất Goal thành công</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">page_id</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">utm_medium: "smart_dock"</code></td>
+    </tr>
+  </tbody>
+</table>
+
+#### 7. Kế hoạch Phân rã Công việc Triển khai (Action Checklist)
+
+- [ ] **Task 1 (Client Tracker Engine):** Xây dựng module nhận diện intent tương tác và bắt sự kiện `pagehide`/`visibilitychange` khi drop-off; quản lý cookie `domain=.momo.vn; max-age=2592000` kèm fallback `localStorage`.
+- [ ] **Task 2 (Goal Invalidation Hook):** Cài đặt hàm xóa cookie khi người dùng chạm Goal chuyển đổi (click OneLink W2A hoặc submit form thành công).
+- [ ] **Task 3 (Delivery Resolver):** Tích hợp bộ giải quyết phân phối vào Layout dùng chung của Web Platform để kiểm tra điều kiện kích hoạt quảng cáo retargeting trên toàn bộ các trang `momo.vn`.
+- [ ] **Task 4 (UI Layout & Styling):** Xây dựng giao diện định dạng Smart Resume Dock theo chuẩn MoMo UI Tokens, hỗ trợ hiển thị tối ưu cho cả giao diện Mobile và Desktop.
+- [ ] **Task 5 (Telemetry Tracking):** Gắn 5 sự kiện đo lường vào hệ thống Umami theo chuẩn tài liệu `04_MOSPARK_PLATFORM/umami_utility_tracking.md`.
+
+---
 
 ### 5.4. Chiến lược Cross-Services & Cross-Traffic bằng Native Widget / Component
 
@@ -1502,6 +1749,10 @@ Nhằm giải quyết dứt điểm các mục tiêu tích hợp và nâng cấp
 ---
 
 ## Change Log
+- **Tháng 11/2026 (v3.5):** 
+  - Bổ sung Section 5.3.1: Đặc tả kỹ thuật chi tiết luồng **On-site Retargeting & Cookie Intent 30 ngày** (phụ trách bởi Tech Lead Thuận). Cơ chế bắt drop-off khi người dùng bỏ dở flow tại Trang A, lưu vết 1st-party cookie root domain `.momo.vn` (TTL 30 ngày, kèm Hybrid LocalStorage fallback).
+  - Bổ sung định dạng Ads mới vào Section 5.1: **Smart Resume Dock / Retargeting Bar** (Floating Corner Card trên Desktop, Sticky Bottom Dock trên Mobile) kích hoạt ưu tiên Tier 1 (P0) trên toàn bộ `momo.vn` để kéo user quay lại hoàn thành luồng tại Trang A.
+  - Chuẩn hóa schema 5 sự kiện đo lường vòng lặp trên Umami & GA4 (`retarget_cookie_set`, `retarget_ad_impression`, `retarget_ad_click`, `retarget_ad_dismiss`, `retarget_recovery_cvr`).
 - **Tháng 6/2026 (v3.4):** Định hướng lại trọng tâm dự án Ads tập trung vào việc tích hợp các định dạng quảng cáo từ Admin Tool (Float, Balloon, A/B Testing) về MoSpark và cải thiện các Format hiển thị (Widget, Popup).
 - **Tháng 6/2026 (v3.3):** Thay thế cơ chế registry Project và mapping URL thủ công bằng cơ chế Smart Targeting Engine (CMS Tags & Categories + Dynamic Matching Rules), tích hợp thuật toán tính điểm ưu tiên (Priority Score Engine) cho phần giải quyết xung đột (Conflict Resolution).
 - **Tháng 5/2026 (v3.2):** Thêm Section 6.4 - A/B Testing trên Landing Page Builder. Ownership: Ads Manager owns toàn bộ test logic (split, distribute, track, winner). LP Builder chỉ tạo trang LP. 3 loại test: LP Variant, Ad Creative, CTA/Copy. Workflow 8 bước. Winner: manual PM declare trong Ads Manager. Scope giới hạn Phase 1: chỉ Landing Page, không test Hub/Spoke/Blog/Homepage.

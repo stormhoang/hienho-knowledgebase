@@ -42,9 +42,9 @@ PERSONS_TS = HUBS_DIR / "lib" / "cinema-data" / "persons.ts"
 
 TEMPLATE_PATH = "/Users/hienhv/Downloads/MoMo Reporting Guidelines & Templates.pptx .pptx"
 OUT_PATHS = [
-    "/Users/hienhv/Downloads/Web_Platform_Thang_10_2026_Monthly_Report.pptx",
-    "07_REPORTS/docs/presentations/Web_Platform_Thang_10_2026_Monthly_Report.pptx",
-    "/Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/public/reports/Web_Platform_Thang_10_2026_Monthly_Report.pptx"
+    "/Users/hienhv/Downloads/Web_Platform_Thang_10_2026_Pyramid.pptx",
+    "07_REPORTS/docs/presentations/Web_Platform_Thang_10_2026_Pyramid.pptx",
+    "/Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/public/reports/Web_Platform_Thang_10_2026_Pyramid.pptx"
 ]
 
 COLOR_TEXT_MAIN = RGBColor(0x1C, 0x17, 0x1A)

@@ -11,6 +11,8 @@ import os
 import sys
 import json
 import time
+import re
+import calendar
 from datetime import datetime
 from pathlib import Path
 from urllib.parse import urlparse
@@ -137,17 +139,23 @@ def sync_fact_daily_performance(conn) -> int:
     synced_at = datetime.utcnow().isoformat()
     rows = []
 
-    # Quét tất cả file monthly_10_2026_mtd_*.json
-    for p in sorted(DATA_DIR.glob("monthly_10_2026_mtd_*.json")):
+    for p in sorted(DATA_DIR.glob("monthly_*_*_mtd_*d.json")):
         try:
+            match = re.fullmatch(r"monthly_(\d{2})_(\d{4})_mtd_(\d+)d\.json", p.name)
+            if not match:
+                continue
+            month, year, file_days = map(int, match.groups())
+            month_length = calendar.monthrange(year, month)[1]
             with open(p, "r", encoding="utf-8") as f:
                 d = json.load(f)
             days = d.get("days_elapsed", 0)
-            if not days:
+            if days != file_days or not 1 <= days <= month_length:
                 continue
-            date_str = f"2026-10-{days:02d}"
+            date_str = f"{year:04d}-{month:02d}-{days:02d}"
             total_pv = d.get("actual_mtd_pv", 0)
-            target_pv = d.get("target_oct_pv", 3665607)
+            target_pv = d.get("target_pv", d.get("target_oct_pv"))
+            if target_pv is None:
+                continue
             progress_pct = d.get("progress_pct", 0.0)
             forecast_pv = d.get("forecast_31d", 0.0)
             forecast_pct = d.get("forecast_pct", 0.0)
@@ -163,7 +171,7 @@ def sync_fact_daily_performance(conn) -> int:
             non_paid = ch.get("non_paid_total", {}).get("pv", 0)
 
             rows.append((
-                date_str, days, 31, total_pv, target_pv, org, dir_pv, paid_pv,
+                date_str, days, month_length, total_pv, target_pv, org, dir_pv, paid_pv,
                 ref_pv, oth_pv, non_paid, sessions, users, progress_pct,
                 forecast_pv, forecast_pct, synced_at
             ))

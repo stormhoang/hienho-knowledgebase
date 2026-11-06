@@ -308,6 +308,14 @@ def sync_google_sheet(
         print(f"✓ Cập nhật thành công {res.get('totalUpdatedCells', 0)} ô trên {len(updates)} dải ô!")
         print(f"✓ Liên kết trực tiếp: https://docs.google.com/spreadsheets/d/{spreadsheet_id}/edit?gid=1273714888#gid=1273714888")
         print("=" * 70)
+
+        # Tự động co giãn toàn bộ các cột MTD lịch sử (T5..T11) theo chu kỳ N ngày cùng kỳ
+        try:
+            from scripts.sync_mtd_all_months import sync_all_mtd
+            sync_all_mtd(days_elapsed=days_elapsed)
+        except Exception as e_mtd:
+            print(f"[Sheets-API] Lưu ý co giãn MTD đa tháng: {e_mtd}")
+
         return res
 
 if __name__ == "__main__":

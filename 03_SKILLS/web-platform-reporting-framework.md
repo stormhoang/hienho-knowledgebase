@@ -39,6 +39,11 @@ Theo chỉ dẫn tại `AGENTS.md`, mọi báo cáo của Web Platform bắt bu�
 ## 3. CÔNG THỨC HÀNH VĂN & MÔ TẢ (TEXTING & COPYWRITING FORMULA)
 
 ### 3.1. Công thức viết khối "Key Highlights & Business Impact"
+**Giới hạn bắt buộc:** tối đa 5 ý, mỗi ý 1 dòng, mở đầu bằng con số (PV, % target, Install, ngày go-live) và kết bằng chỉ dẫn mục chi tiết ("Chi tiết mục III.2"). Khối này là bản tóm tắt cho cấp quản lý, không lặp lại phần mô tả của mục II-IV.
+- Không đưa chi tiết build (tên tính năng con, URL, kiến trúc, quy trình nội bộ) vào đây; các chi tiết đó nằm ở mục Hub/Platform tương ứng.
+- Nhiều việc go-live trong tuần gom chung vào một ý "Lên Production".
+- Không kết luận vượt quá số liệu (ví dụ: tỷ trọng Non-Paid cao không có nghĩa "độc lập hoàn toàn với Paid").
+
 Áp dụng công thức 4 thành tố liên kết:
 $$\text{Số liệu đạt được (Biên độ WoW/MoM)} \longrightarrow \text{Nguyên nhân cốt lõi (Driver)} \longrightarrow \text{Tác động hệ sinh thái (Impact)} \longrightarrow \text{Hành động tiếp theo (Next Action)}$$
 

@@ -9,6 +9,17 @@
   2. **Phân tích với Chain of Thought:** reasoning trước, kết luận sau. Chỉ ra lỗi logic, điểm mâu thuẫn, giả định chưa validate nếu phát hiện.
   3. **Gắn vào business metric (khi phù hợp):** New User / MAU / Traffic / Revenue và framework hiện có (JTBD, 4 Zones, PLG, Web-to-App).
   4. **Đề xuất tối ưu kèm Action Items cụ thể**, có ưu tiên rõ ràng.
+- **🌟 NGUYÊN TẮC TƯ DUY & PHẢN HỒI TOÀN DIỆN (UNIVERSAL EXECUTIVE & STORYTELLING SSOT - BẮT BUỘC TRONG MỌI TRƯỜNG HỢP):**
+  Áp dụng xuyên suốt cho **MỌI câu trả lời, thảo luận thông thường, soạn thảo document/PRD, phân tích kỹ thuật/sản phẩm, review hội thoại hay đồng bộ dữ liệu (sync)**, không chỉ giới hạn trong việc làm report:
+  - **Tư duy No Naked Facts / Numbers:** Tuyệt đối không quăng thông tin/số liệu thô, bảng tĩnh hay mô tả rời rạc không lời bình. Mọi dữ kiện phải có điểm quy chiếu (Target, Benchmark, Baseline, hoặc kỳ trước), bóc tách nguyên nhân gốc rễ và gắn vào tác động thực chất (Kinh doanh, Kỹ thuật, Trải nghiệm).
+  - **Format tư duy 3 tầng bắt buộc (What? ➔ So What? ➔ Now What?):**
+    1. **Action Title (Tiêu đề hành động / Kết luận trực diện):** 1 câu kết luận gồm [Chủ đề/Chỉ số chính] + [Hiện trạng/Xu hướng] + [Bản chất/Nguyên nhân cốt lõi].
+    2. **What (Hiện tượng, Bằng chứng & Dữ kiện sạch):** Bằng chứng thực tế, số liệu sạch kèm điểm so sánh (Target, Baseline, %A/B, MoM); nêu rõ nguồn và bối cảnh.
+    3. **So What (Phân tích thực chất, Tác động & Rủi ro):** Tác động đến bài toán lớn (New User, MAU, Traffic, CVR, Doanh thu, Kiến trúc); chỉ ra điểm nghẽn, rủi ro đánh đổi và Lowlights khách quan (tuyệt đối không nói chung chung hay tô hồng).
+    4. **Now What (Hành động, Giải pháp & Quyết định):** Việc cần làm ngay, phương án giải quyết cụ thể, hoặc đề xuất cần phê duyệt/thống nhất (kèm deadline, owner và hệ quả nếu trễ).
+  - **Quy chuẩn Tag [D], [R], [F] (CHỈ DÙNG KHI LÀM BÁO CÁO - STRICT REPORT ONLY):** Các tag định vị nội dung `[D]` (thảo luận/quyết định), `[R]` (kết quả/báo cáo số), `[F]` (tham khảo) **CHỈ ĐƯỢC DÙNG KHI LÀM BÁO CÁO** (Weekly/Monthly Report, slide báo cáo ban lãnh đạo). Tuyệt đối **KHÔNG** tự ý gắn các tag `[D]`, `[R]`, `[F]` vào câu trả lời thông thường, tài liệu kỹ thuật, PRD, tài liệu kiến trúc hay các đoạn văn trao đổi/thảo luận.
+  - **🚫 CẤM DÙNG EN DASH & EM DASH (STRICT NO EN DASH / NO EM DASH):** Tuyệt đối KHÔNG sử dụng ký tự En Dash (`–`, U+2013) hoặc Em Dash (`—`, U+2014) trong bất kỳ câu trả lời, tài liệu hay phân tích nào. Chỉ dùng dấu gạch ngang bàn phím chuẩn Hyphen (`-`, U+002D) cho khoảng số (ví dụ: `80-90%`, `5-10 ngày`), hoặc dùng dấu hai chấm `:`, dấu ngoặc đơn `(...)`, hoặc tách câu trực tiếp.
+  - **🚫 CẤM GẮN NHÃN PRIORITY (STRICT NO P0, P1, P2, P3):** Tuyệt đối KHÔNG gắn nhãn, phân loại mức độ ưu tiên hay tạo cột dạng `P0`, `P1`, `P2`, `P3` (hoặc Priority 0/1/2/3) cho các task, hành động, giải pháp hay kế hoạch trong bất kỳ câu trả lời, tài liệu, bảng biểu hay báo cáo nào. Trình bày các đầu việc một cách tự nhiên theo thứ tự triển khai logic, nhóm chuyên môn hoặc danh sách gạch đầu dòng thuần túy.
 - **Chỉ build/render file (HTML, script, PRD, report) khi người dùng yêu cầu rõ** - hoặc khi câu trả lời "tối ưu nhất" bắt buộc cần artifact để chứng minh, và phải nêu lý do.
 - Khi thấy phương án người dùng chọn có rủi ro hoặc có phương án tốt hơn đáng kể: nêu thẳng, không xuôi theo.
 
@@ -24,6 +35,7 @@
 | **Cảnh báo Dị biệt, Anomaly Detection, Đứt gãy W2A** | [`scripts/detect_anomalies.py`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/scripts/detect_anomalies.py) | Chạy `./.venv/bin/python scripts/detect_anomalies.py`. |
 | **Xếp hạng Ưu tiên RICE, Sáng kiến Tăng trưởng** | [`scripts/prioritize_initiatives.py`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/scripts/prioritize_initiatives.py) | Chạy `./.venv/bin/python scripts/prioritize_initiatives.py`. |
 | **Thống kê A/B Test, P-Value, Cỡ mẫu MDE** | [`scripts/lib/ab_test_evaluator.py`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/scripts/lib/ab_test_evaluator.py) | Chạy `./.venv/bin/python scripts/lib/ab_test_evaluator.py`. |
+| **Hiệu suất 7 ngày SERP, Biến động Tăng/Giảm, Đồng bộ /report** | [`scripts/sync_7d_performance_report.py`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/scripts/sync_7d_performance_report.py) | Chạy `./.venv/bin/python scripts/sync_7d_performance_report.py`. |
 | **Sổ cái Quyết định, Đối soát Closed-Loop** | [`scripts/track_decisions.py`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/scripts/track_decisions.py) | Chạy `./.venv/bin/python scripts/track_decisions.py`. |
 | **Truy vấn Dữ liệu Đa chiều, Quick Wins, W2A, SQL** | [`scripts/query_analytics.py`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/scripts/query_analytics.py) | Chạy `./.venv/bin/python scripts/query_analytics.py`. |
 | **Mô phỏng Kịch bản What-If, Cắt giảm Ads, CTR Lift** | [`scripts/lib/scenario_simulator.py`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/scripts/lib/scenario_simulator.py) | Chạy `./.venv/bin/python scripts/lib/scenario_simulator.py`. |
@@ -31,7 +43,9 @@
 | **Paid Ads, Kênh Media, UTM Campaigns** | [`07_REPORTS/data/analytics/paid_ads_performance.json`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/data/analytics/paid_ads_performance.json) | Đọc file JSON SSOT hoặc chạy `./.venv/bin/python scripts/sync_paid_ads.py`. |
 | **Lịch mùa vụ, Phân tích Google Trends** | [`07_REPORTS/data/theme_seasonality.json`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/data/theme_seasonality.json) | Đọc file JSON đã xuất bản hoặc chạy script cron. |
 | **Báo cáo Tuần/Tháng, Hiệu suất MTD, Target** | [`07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md) | Chỉ đọc khi người dùng yêu cầu làm báo cáo/phân tích số liệu. |
+| **Tiêu chuẩn Báo cáo Tháng (Executive 6 Streams SSOT)** | [`.agents/skills/web-platform-reporting/SKILL.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/.agents/skills/web-platform-reporting/SKILL.md) | Đọc khi soạn thảo, review hoặc đồng bộ báo cáo tháng cấp Ban Giám Đốc. |
 | **Quy chuẩn trình bày báo cáo, slide, agenda, tag R/D/F** | [`03_SKILLS/momo-reporting-guidelines.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS/momo-reporting-guidelines.md) | Đọc bắt buộc trước khi dựng hoặc review bất kỳ báo cáo/slide nào. Hiệu lực cao hơn mọi quy chuẩn nội bộ. |
+| **Glossary Báo cáo, Chuẩn hóa Thuật ngữ, Tránh viết tùm lum** | [`03_SKILLS/momo-reporting-glossary.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS/momo-reporting-glossary.md) | Tra cứu từ điển thuật ngữ, chỉ số, cấm kỵ và quy chuẩn hành văn báo cáo. |
 | **Tra cứu Báo cáo Lịch sử (T1 -> T10, Hubs)** | [`07_REPORTS/docs/INDEX.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/INDEX.md) | Đọc index để mở đúng file báo cáo tháng hoặc chuyên đề cần tìm. |
 | **Chỉ đạo Lãnh đạo, Quyết định chiến lược** | [`MEETING_RECAPS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/MEETING_RECAPS.md) | Chỉ đọc section gần nhất khi lập kế hoạch chiến lược mới. |
 | **Cinema Hub Roadmap, BU Movies Collab, Minigames** | [`scripts/sync_cinema_roadmap_sheet.py`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/scripts/sync_cinema_roadmap_sheet.py) | Chạy `./.venv/bin/python scripts/sync_cinema_roadmap_sheet.py`. SSOT Sheet ID: `1YT2sdU-O4smoy6TUKBic6PTFBxUXNUVkd_S-tmjiplg`. |
@@ -54,14 +68,17 @@
   1. Quét file Excel BigQuery mới nhất và truy vấn GA4 Data API song song.
   2. Tự động đối chiếu chéo (Cross-Reconcile): Xác nhận độ khớp số cùng kỳ (100% Match) và tính toán phần bù tăng trưởng ngày mới (+Net Add) nếu Excel có độ trễ ngày so với GA4 API.
   3. Tự động làm giàu (Enrichment): Gắn thêm W2A OneLink Clicks, URL Retention Matrix vào cơ cấu Hubs/Projects của Excel.
-  4. Cập nhật đồng bộ vào Hubs `/dashboard` ([`web-data.json`](file:///Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/web-data.json) & [`summary.json`](file:///Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/summary.json)), Excel SSOT, Markdown SSOT và đẩy lên GitHub `main` qua REST API trong 8–10 giây.
-  5. Xuất bản bảng Báo cáo Đối Soát & Hợp Nhất hoàn chỉnh trong 1 lượt trả lời duy nhất.
-- **Automated GA4 MTD Master Sync Rule (Trọn Gói 1 Lệnh - Fast Path):** Khi người dùng yêu cầu *"cập nhật số GA4"*, *"cập nhật GA4 MTD"*, *"lấy số GA4"*, AI Agent **BẮT BUỘC gọi ngay `./.venv/bin/python scripts/sync_ga4_master.py` (kèm `--mtd <ngày>` nếu có)**. Script chạy trọn gói trong 6–10 giây:
+  4. Tự động đồng bộ hiệu suất biến động 7 ngày SERP (Gainers & Losers) vào `/report` và `/dashboard` qua `scripts/sync_7d_performance_report.py --no-push`.
+  5. Cập nhật đồng bộ vào Hubs `/dashboard` ([`web-data.json`](file:///Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/web-data.json) & [`summary.json`](file:///Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/summary.json)), Excel SSOT, Markdown SSOT và đẩy lên GitHub `main` qua REST API trong 8-10 giây.
+  6. Xuất bản bảng Báo cáo Đối Soát & Hợp Nhất hoàn chỉnh trong 1 lượt trả lời duy nhất.
+- **Automated GA4 MTD Master Sync Rule (Trọn Gói 1 Lệnh - Fast Path):** Khi người dùng yêu cầu *"cập nhật số GA4"*, *"cập nhật GA4 MTD"*, *"lấy số GA4"*, AI Agent **BẮT BUỘC gọi ngay `./.venv/bin/python scripts/sync_ga4_master.py` (kèm `--mtd <ngày>` nếu có)**. Script chạy trọn gói trong 6-10 giây:
   1. Truy vấn trực tiếp GA4 Data API (Property 270743103) lấy số tổng thể, kênh Non-Paid vs. Paid, W2A OneLink clicks và phân rã các Hub.
   2. Tự động tính toán Target Pacing, Forecast 31 ngày và tiến độ về đích.
   3. Tự động ghi đồng bộ vào: Snapshot JSON, Hubs `/dashboard` ([`web-data.json`](file:///Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/web-data.json) & [`summary.json`](file:///Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/summary.json)), Excel SSOT và Markdown SSOT.
-  4. Tự động đẩy lên Google Sheets Native SSOT qua Cloud Sheets API (Spreadsheet ID: `1JaaYv2MnDy-dfBdC3P-GMB6SFgjez2VowdjX9PjmPYU`), đồng bộ tệp Excel dự phòng trên Google Drive Desktop và đẩy lên GitHub Hubs (`main`) qua REST API.
-  5. Trả về bảng kết quả hoàn chỉnh ngay lập tức trong 1 lượt trả lời duy nhất, tuyệt đối không chạy phân mảnh hay hỏi đi hỏi lại từng bước.
+  4. Tự động đẩy lên Google Sheets Native SSOT qua Cloud Sheets API (Spreadsheet ID: `1JaaYv2MnDy-dfBdC3P-GMB6SFgjez2VowdjX9PjmPYU`), đồng bộ tệp Excel dự phòng trên Google Drive Desktop.
+  5. Tự động đồng bộ hiệu suất biến động 7 ngày SERP (Gainers & Losers, Clicks & Root Causes) vào Báo cáo Tuần (`/report`) và Dashboard (`/dashboard`) qua `scripts/sync_7d_performance_report.py --no-push`.
+  6. Tự động đẩy toàn bộ thay đổi lên GitHub Hubs (`main`) qua REST API.
+  7. Trả về bảng kết quả hoàn chỉnh ngay lập tức trong 1 lượt trả lời duy nhất, tuyệt đối không chạy phân mảnh hay hỏi đi hỏi lại từng bước.
 - **Google Sheets Cloud-Native SSOT Rule (Spreadsheet ID `1JaaYv2MnDy-dfBdC3P-GMB6SFgjez2VowdjX9PjmPYU`):** Mọi thao tác cập nhật/đồng bộ số liệu hiệu suất Web Platform lên Google Sheets **BẮT BUỘC** trỏ trực tiếp qua Google Sheets API vào Spreadsheet ID **`1JaaYv2MnDy-dfBdC3P-GMB6SFgjez2VowdjX9PjmPYU`** (đường dẫn mở trên trình duyệt: [https://docs.google.com/spreadsheets/d/1JaaYv2MnDy-dfBdC3P-GMB6SFgjez2VowdjX9PjmPYU/edit?gid=1273714888#gid=1273714888](https://docs.google.com/spreadsheets/d/1JaaYv2MnDy-dfBdC3P-GMB6SFgjez2VowdjX9PjmPYU/edit?gid=1273714888#gid=1273714888)). Ghi trực tiếp Cloud-to-Cloud đảm bảo:
   1. Tự động lưu 100% lịch sử sửa đổi trong **Google Sheets Version History** (Tệp ➔ Lịch sử phiên bản).
   2. Google Sheets tự động tính toán lại các công thức `SUM`, `INDEX MATCH`, `ARRAYFORMULA`.
@@ -74,7 +91,7 @@
 - **Automated Performance Diagnostic & Root Cause Rule (RCA Trigger):** Khi người dùng yêu cầu *"chẩn đoán hiệu suất"*, *"tại sao traffic tụt"*, *"tìm nguyên nhân gốc rễ"*, *"phân tích gap/laggard"*, AI Agent **BẮT BUỘC tự động chạy script `./.venv/bin/python scripts/diagnose_performance.py`** để:
   1. Đo lường độ lệch tiến độ MTD thực tế so với mục tiêu và nhịp độ cần đạt.
   2. Phân rã đa chiều: Non-Paid vs Paid -> Cơ cấu Hubs -> Phễu Sessions vs W2A CVR.
-  3. Phát hiện từ khóa Quick Wins (>50K impressions, CTR thấp) và đưa ra đơn thuốc hành động chuẩn P0/P1/P2 kèm đội ngũ chịu trách nhiệm và ROI kỳ vọng.
+  3. Phát hiện từ khóa Quick Wins (>50K impressions, CTR thấp) và đưa ra danh mục hành động cụ thể kèm ROI kỳ vọng (không gắn nhãn P0/P1/P2).
 - **Automated Anomaly Detection Trigger Rule:** Khi người dùng yêu cầu *"quét dị biệt"*, *"kiểm tra bất thường"*, *"có trang nào rớt traffic không"*, *"hỏng tracking/OneLink"*, AI Agent **BẮT BUỘC gọi ngay `./.venv/bin/python scripts/detect_anomalies.py`** để phát hiện các URL bị đứt gãy W2A, rớt thứ hạng hoặc sụt giảm tương tác.
 - **Automated Scenario Modeling Trigger Rule:** Khi người dùng yêu cầu *"mô phỏng kịch bản"*, *"nếu cắt giảm paid ads"*, *"tối ưu CTR được gì"*, *"nâng CVR W2A"*, AI Agent **BẮT BUỘC gọi ngay `./.venv/bin/python scripts/lib/scenario_simulator.py`** để định lượng tác động kinh doanh cụ thể.
 - **Automated Strategy & What-If Simulation Trigger Rule:** Khi người dùng yêu cầu *"dự báo mùa vụ"*, *"mô phỏng dịch chuyển nguồn lực"*, *"kịch bản what-if"*, AI Agent **BẮT BUỘC gọi ngay `./.venv/bin/python scripts/lib/forecast_engine.py`** để định lượng tác động chuyển đổi ròng (Net W2A Lift) và 3 kịch bản kết tháng.

@@ -13,6 +13,8 @@ Quy trình chẩn đoán 4 bước chuẩn Product Lead:
 import sys
 import argparse
 import json
+import calendar
+from datetime import date
 from pathlib import Path
 from tabulate import tabulate
 
@@ -39,31 +41,73 @@ def format_table(headers, rows):
     return tabulate(rows, headers=headers, tablefmt="github")
 
 
-def run_full_diagnosis(target_hub=None):
+def validate_snapshot(data, as_of):
+    errors = []
+    actual = data.get("actual_mtd_pv")
+    target = data.get("target_pv", data.get("target_oct_pv"))
+    channels = data.get("channels", {})
+    if data.get("days_in_month") != calendar.monthrange(as_of.year, as_of.month)[1]:
+        errors.append("days_in_month không khớp lịch")
+    if not isinstance(actual, (int, float)) or not isinstance(target, (int, float)) or target <= 0:
+        errors.append("thiếu actual_mtd_pv hoặc target_pv hợp lệ")
+        return errors
+    try:
+        non_paid = channels["non_paid_total"]["pv"]
+        paid = channels["paid"]["pv"]
+        parts = sum(channels[key]["pv"] for key in ("organic", "direct", "referral", "others"))
+        if non_paid + paid != actual or parts != non_paid:
+            errors.append("tổng kênh không khớp tổng PV")
+    except (KeyError, TypeError):
+        errors.append("thiếu phân rã kênh")
+    if abs(data.get("progress_pct", 0) - actual / target * 100) > 0.02:
+        errors.append("progress_pct không khớp actual/target")
+    if abs(data.get("daily_pace", 0) - actual / as_of.day) > 1:
+        errors.append("daily_pace không khớp actual/days_elapsed")
+    if abs(data.get("forecast_31d", 0) - actual / as_of.day * data["days_in_month"]) > 2:
+        errors.append("forecast không khớp số ngày trong tháng")
+    return errors
+
+
+def select_snapshot(month=None, data_dir=DATA_DIR, today=None):
+    today = today or date.today()
+    month = month or today.strftime("%Y-%m")
+    year, month_number = map(int, month.split("-"))
+    prefix = f"monthly_{month_number:02d}_{year}"
+    candidates = list(data_dir.glob(f"{prefix}_mtd_*d.json"))
+    candidates += list(data_dir.glob(f"{prefix}_consolidated.json"))
+    if not candidates:
+        raise ValueError(f"Không có snapshot cho {month}; không dùng dữ liệu tháng khác.")
+    def rank(path):
+        with path.open(encoding="utf-8") as handle:
+            payload = json.load(handle)
+        return payload.get("days_elapsed", -1), path.stat().st_mtime
+    path = max(candidates, key=rank)
+    data = json.loads(path.read_text(encoding="utf-8"))
+    days = data.get("days_elapsed")
+    if not isinstance(days, int) or not 1 <= days <= calendar.monthrange(year, month_number)[1]:
+        raise ValueError(f"Snapshot {path.name} có days_elapsed không hợp lệ")
+    if (year, month_number) == (today.year, today.month) and days > today.day:
+        raise ValueError(f"Snapshot {path.name} ghi nhận ngày tương lai")
+    return path, data, date(year, month_number, days)
+
+
+def run_full_diagnosis(target_hub=None, month=None):
     print("=" * 80)
     print("HỆ THỐNG CHẨN ĐOÁN HIỆU SUẤT VÀ NGUYÊN NHÂN GỐC RỄ (ROOT CAUSE ANALYSIS)")
     print("=" * 80)
 
     # 1. Nạp snapshot MTD mới nhất (ưu tiên file consolidated SSOT)
-    consolidated_file = DATA_DIR / "monthly_10_2026_consolidated.json"
-    latest_snapshot_file = None
-    if consolidated_file.exists():
-        latest_snapshot_file = consolidated_file
-    else:
-        for p in sorted(DATA_DIR.glob("monthly_10_2026_mtd_*.json"), reverse=True):
-            latest_snapshot_file = p
-            break
-
-    if not latest_snapshot_file:
-        print("[ERROR] Không tìm thấy snapshot MTD trong 07_REPORTS/data/")
-        return
-
-    with open(latest_snapshot_file, "r", encoding="utf-8") as f:
-        mtd_data = json.load(f)
+    latest_snapshot_file, mtd_data, data_as_of = select_snapshot(month)
+    errors = validate_snapshot(mtd_data, data_as_of)
+    if errors:
+        raise ValueError(f"Snapshot {latest_snapshot_file.name} không nhất quán: {', '.join(errors)}")
+    print(f"Nguồn: {latest_snapshot_file.relative_to(REPO_ROOT)} | Dữ liệu đến: {data_as_of}")
 
     days_elapsed = mtd_data.get("days_elapsed", 0)
     days_in_month = mtd_data.get("days_in_month", 31)
-    target_pv = mtd_data.get("target_oct_pv", 3665607)
+    target_pv = mtd_data.get("target_pv", mtd_data.get("target_oct_pv"))
+    if not target_pv:
+        raise ValueError(f"Snapshot {latest_snapshot_file.name} thiếu target_pv")
     actual_pv = mtd_data.get("actual_mtd_pv", 0)
     progress_pct = mtd_data.get("progress_pct", 0.0)
     daily_pace = mtd_data.get("daily_pace", 0.0)
@@ -141,6 +185,15 @@ def run_full_diagnosis(target_hub=None):
     print("[BƯỚC 3: CHẨN ĐOÁN NGUYÊN NHÂN GỐC RỄ (ROOT CAUSE)]")
     
     conn = get_connection()
+    db_latest = conn.execute("SELECT MAX(date) FROM fact_daily_performance").fetchone()[0]
+    fact = conn.execute("SELECT total_pv FROM fact_daily_performance WHERE date = ?", (data_as_of.isoformat(),)).fetchone()
+    if db_latest != data_as_of.isoformat() or not fact or fact[0] != actual_pv:
+        conn.close()
+        print(f"\n[DATA GAP] Fact Data Mart chỉ đến {db_latest} hoặc khác snapshot {data_as_of}. Không phân tích nguyên nhân gốc rễ khác kỳ.")
+        return
+    print("\n[DATA GAP] GA4 landing pages và GSC search analytics không có period_start/period_end. Chưa thể xác nhận cùng kỳ với snapshot; không phân tích phễu, ranking hoặc nguyên nhân gốc rễ.")
+    conn.close()
+    return
     cur = conn.cursor()
 
     # 3.1 Funnel Health: Traffic Volume vs W2A Conversion
@@ -247,9 +300,13 @@ def run_full_diagnosis(target_hub=None):
 def main():
     parser = argparse.ArgumentParser(description="Automated RCA Engine")
     parser.add_argument("--hub", type=str, default=None, help="Chỉ định Hub cần chẩn đoán chuyên sâu")
+    parser.add_argument("--month", type=str, help="Kỳ YYYY-MM, mặc định tháng hiện tại")
     args = parser.parse_args()
 
-    run_full_diagnosis(target_hub=args.hub)
+    try:
+        run_full_diagnosis(target_hub=args.hub, month=args.month)
+    except ValueError as exc:
+        parser.exit(2, f"[ERROR] {exc}\n")
 
 
 if __name__ == "__main__":

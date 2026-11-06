@@ -43,6 +43,17 @@ Hienho_MoMo-Base/
 │   ├── lib/                  # Thư viện dùng chung (db.py, vi_nlp.py, forecast_engine.py...)
 │   └── *.py                  # Các CLI tools chẩn đoán, quét dị biệt, đồng bộ dữ liệu
 └── .venv/                    # Môi trường ảo Python 3.12 chuẩn hóa
+
+Agent operating layer:
+├── AGENT_OPERATING_CONTRACT.md
+└── 00_HARNESS_CORE/
+    ├── AGENT_CAPABILITIES.yaml
+    ├── AGENT_SAFETY_CONTRACT.yaml
+    └── AGENT_OUTPUT_CONTRACT.md
+
+Evidence validation:
+├── 00_HARNESS_CORE/EVIDENCE_CONTRACT.md
+└── scripts/validate_evidence.py
 ```
 
 ---
@@ -89,6 +100,8 @@ Mọi thao tác phân tích, chẩn đoán và dự báo đều được tự đ
 ---
 
 ## 5. NGUYÊN TẮC VẬN HÀNH DÀNH RIÊNG CHO AI AGENTS (MANDATORY RULES)
+
+Trước khi xử lý yêu cầu, Agent phải đọc `AGENT_OPERATING_CONTRACT.md`, sau đó tra capability tương ứng trong `00_HARNESS_CORE/AGENT_CAPABILITIES.yaml`. Các thao tác ghi hoặc đồng bộ bên ngoài tuân thủ `00_HARNESS_CORE/AGENT_SAFETY_CONTRACT.yaml` và `00_HARNESS_CORE/AGENT_OUTPUT_CONTRACT.md`.
 
 Bất kỳ AI Agent nào khi đọc hiểu và làm việc trong repo này **BẮT BUỘC TUÂN THỦ 100% CÁC QUY TẮC SAU**:
 

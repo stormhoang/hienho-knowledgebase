@@ -49,10 +49,29 @@
     }
   },
   "geo_ai": {
-    "oct": 40827,
-    "sep": 33661,
-    "mom_pct": 21.3,
-    "verified": false
+    "oct": 18547,
+    "sep": 13596,
+    "mom_pct": 36.4,
+    "verified": true,
+    "source": "GA4 sessionSource, 31 ngày, cùng danh sách nguồn cho tháng 9",
+    "breakdown": {
+      "ChatGPT": {
+        "oct": 17739,
+        "sep": 12589
+      },
+      "Perplexity": {
+        "oct": 284,
+        "sep": 239
+      },
+      "Gemini": {
+        "oct": 467,
+        "sep": 704
+      },
+      "Khác (Claude, Copilot.com, OpenAI, Meta)": {
+        "oct": 57,
+        "sep": 64
+      }
+    }
   },
   "minigame_mot_mua_quyt": {
     "active_players": 7097,
@@ -270,10 +289,26 @@
       }
     ],
     "hubs": {
-      "cinema": { "oct": 279968, "sep": 238473, "mom_pct": 17.4 },
-      "download_onboarding": { "oct": 285928, "sep": 283390, "mom_pct": 0.9 },
-      "financial": { "oct": 93878, "sep": 125337, "mom_pct": -25.1 },
-      "game_entertainment": { "oct": 53641, "sep": 5336, "mom_pct": 905.3 }
+      "cinema": {
+        "oct": 279968,
+        "sep": 238473,
+        "mom_pct": 17.4
+      },
+      "download_onboarding": {
+        "oct": 285928,
+        "sep": 283390,
+        "mom_pct": 0.9
+      },
+      "financial": {
+        "oct": 93878,
+        "sep": 125337,
+        "mom_pct": -25.1
+      },
+      "game_entertainment": {
+        "oct": 53641,
+        "sep": 5336,
+        "mom_pct": 905.3
+      }
     }
   },
   "sources": {

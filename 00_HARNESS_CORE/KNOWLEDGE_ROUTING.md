@@ -38,6 +38,10 @@ Tài liệu định nghĩa kiến trúc **Tầng Knowledge (Knowledge Layer)** c
 
 ## 2. QUY TRÌNH VẬN HÀNH CHI TIẾT TỪNG TẦNG KNOWLEDGE
 
+### Agent Execution Contract
+
+Sau khi định tuyến tri thức, Agent phải tra `AGENT_CAPABILITIES.yaml` để chọn đúng entrypoint và kiểm tra thuộc tính `read_only`, `requires_approval`, `external_write`. Mọi thao tác ghi tuân thủ `AGENT_SAFETY_CONTRACT.yaml`. Kết quả trả về theo `AGENT_OUTPUT_CONTRACT.md`.
+
 ### Tầng 1: Context Memory Layer (Tầng Bối Cảnh Lịch Sử & Chỉ Đạo - Kích Hoạt Có Điều Kiện)
 Chỉ kích hoạt khi thực hiện bài toán Chiến lược cấp cao, Viết báo cáo Lãnh đạo hoặc Lập PRD mới. Đối với các tác vụ kỹ thuật, code review, tra cứu nhanh, Agent bỏ qua Tầng 1 và đi thẳng vào Tầng 3 (SSOT Domain):
 - [`MEETING_RECAPS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/MEETING_RECAPS.md): Chỉ đạo chiến lược của Ban Giám đốc (chỉ đọc mục gần nhất liên quan đến chủ đề).
@@ -62,7 +66,7 @@ Phân tích vấn đề người dùng đặt ra theo 3 góc nhìn quản trị:
 - **Đặc tả PRD:** Thư mục [`09_PRD/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/09_PRD).
 - **Tư duy & Triết lý Lãnh đạo:** File [`10_LEADERSHIP_MINDSET/leadership-mindset.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/10_LEADERSHIP_MINDSET/leadership-mindset.md).
 - **Tin tức & Thị trường (Gemini Spark):** Thư mục [`11_NEWS_FEED/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/11_NEWS_FEED).
-- **Quản lý Đầu việc & Tasklist Dự án:** Thư mục [`12_TASK_MANAGEMENT/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/12_TASK_MANAGEMENT) và file chuẩn [`TASK_OPERATING_MODEL.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/12_TASK_MANAGEMENT/TASK_OPERATING_MODEL.md).
+- **Trạng thái triển khai & shipment:** Dùng [`14_ROADMAP/ship_releases.json`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/14_ROADMAP/ship_releases.json), PRD liên quan và dữ liệu release thực tế. Project không duy trì một hệ thống tasklist nội bộ riêng.
 
 ### Tầng 4: Master Skill & Framework Execution Layer (Tầng Thực Thi Master Skills)
 Kích hoạt 3 Master Skills trong thư mục [`.agents/skills/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/.agents/skills) kết hợp cùng kho tham chiếu [`03_SKILLS/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS):

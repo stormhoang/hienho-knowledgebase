@@ -1,0 +1,92 @@
+version: 1
+runtime: ./.venv/bin/python
+capabilities:
+  diagnose_performance:
+    purpose: Phân tích nguyên nhân gốc rễ của hiệu suất Web Platform
+    entrypoint: scripts/diagnose_performance.py
+    read_only: true
+    requires_approval: false
+    external_write: false
+    sources:
+      - 07_REPORTS/data/cache/performance.sqlite
+      - 07_REPORTS/data/monthly_10_2026_consolidated.json
+    output_contract:
+      - action_title
+      - what
+      - so_what
+      - now_what
+      - sources
+
+  detect_anomalies:
+    purpose: Phát hiện bất thường traffic, W2A và ranking
+    entrypoint: scripts/detect_anomalies.py
+    read_only: true
+    requires_approval: false
+    external_write: false
+    sources:
+      - 07_REPORTS/data/cache/performance.sqlite
+    output_contract:
+      - anomaly
+      - evidence
+      - recommended_check
+
+  query_analytics:
+    purpose: Truy vấn Hub, W2A, quick wins và Data Mart
+    entrypoint: scripts/query_analytics.py
+    read_only: true
+    requires_approval: false
+    external_write: false
+    sources:
+      - 07_REPORTS/data/cache/performance.sqlite
+
+  forecast_growth:
+    purpose: Dự báo và mô phỏng kịch bản tăng trưởng
+    entrypoint: scripts/lib/forecast_engine.py
+    read_only: true
+    requires_approval: false
+    external_write: false
+    sources:
+      - 07_REPORTS/data/cache/performance.sqlite
+      - 07_REPORTS/data/theme_seasonality.json
+
+  sync_ga4_master:
+    purpose: Đồng bộ GA4 MTD vào các SSOT và dashboard liên quan
+    entrypoint: scripts/sync_ga4_master.py
+    read_only: false
+    requires_approval: true
+    external_write: true
+    verification:
+      - Đối soát tổng GA4 với snapshot sau sync
+      - Kiểm tra diff các file local
+      - Xác nhận trạng thái push bên ngoài
+
+  sync_paid_ads:
+    purpose: Đồng bộ và phân tích Paid Ads, UTM và W2A
+    entrypoint: scripts/sync_paid_ads.py
+    read_only: false
+    requires_approval: true
+    external_write: true
+    verification:
+      - Kiểm tra kỳ dữ liệu
+      - Kiểm tra file JSON và Markdown đầu ra
+
+  track_decisions:
+    purpose: Theo dõi và đối soát quyết định chiến lược
+    entrypoint: scripts/track_decisions.py
+    read_only: false
+    requires_approval: true
+    external_write: false
+    verification:
+      - Kiểm tra decision audit trail
+      - Đối chiếu baseline, target và actual
+
+  validate_evidence:
+    purpose: Kiểm chứng claim, nguồn, độ mới và conflict trước khi trả lời
+    entrypoint: scripts/validate_evidence.py
+    read_only: true
+    requires_approval: false
+    external_write: false
+    output_contract:
+      - source_status
+      - freshness_status
+      - conflict_status
