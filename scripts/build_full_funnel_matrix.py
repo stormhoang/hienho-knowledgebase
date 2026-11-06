@@ -1,21 +1,23 @@
 #!/usr/bin/env python3
-"""
+r"""
 FULL-FUNNEL DATA DECOMPOSITION PIPELINE (GSC + GA4) - REFACTORED
 Đồng bộ và phân rã hợp nhất 2 nguồn dữ liệu lớn nhất của Web Platform:
 1. GSC (Google Search Console): Pre-Click (Search Query, Impressions, Position, CTR, Cannibalization, Strike Zone)
-   - Khung thời gian: Chuẩn xác theo kỳ GA4 (2026-09-20 -> 2026-10-19)
+   - Khung thời gian SSOT: Mặc định là cửa sổ trượt 28 ngày (Rolling 28 days),
+     tính từ (hôm nay - 29 ngày) đến (hôm nay - 2 ngày) do độ trễ cập nhật dữ liệu của GSC API (~2 ngày).
+     Có thể ghi đè linh hoạt bằng CLI args --start-date và --end-date.
 2. GA4 (Google Analytics 4): Post-Click & Chuyển đổi Web-to-App
-   - Chỉ đếm click Onelink từ channel_group = 'Organic Search'
-   - Phân rã 2 luồng: ol_momo (onelink.momo.vn) & ol_appsflyer (momoapp.onelink.vn)
+   - Khớp nối toàn diện Organic Search Landing Pages và All-Channel Landing Pages.
+   - Phân rã 2 luồng: ol_momo (onelink.momo.vn) & ol_appsflyer (momoapp.onelink.me)
    - w2a_cr = (ol_momo + ol_appsflyer) / organic_pageviews
 
 Quy chuẩn nâng cao:
-- Normalize URL 2 phía về canonical path (lowercase, strip query/hash/trailing slash)
-- Đảm bảo summary.join_rate > 90%
+- Normalize URL 2 phía về canonical path (lowercase, unquote, strip query/hash/trailing slash, strip index.html)
+- Đảm bảo summary.join_rate >= 90% (chuẩn mực kết nối dữ liệu giữa GSC clicks > 0 và GA4 landing pages)
 - Gắn theme 3 tầng (prefix thư mục + cluster URLs + fallback Hub), đảm bảo summary.organic_mapped_pct > 70%
 - quadrant_distribution đếm theo page, tổng khớp 100% với total_pages_analyzed
 - potential_gain = impressions * (CTR benchmark vị trí 3 - CTR hiện tại), trần là market_volume của theme
-- Loại trừ query brand/navigational (momo, dang nhap, typo) khỏi quadrant và quick wins
+- Loại trừ số điện thoại/hotline (^[\d\s.+-]{8,}$) và query brand điều hướng thuần ("momo", "đăng nhập momo"...) khỏi potential_gain và danh mục quick wins
 - Quick wins unique path, ưu tiên sector Credit/Insurance/BNPL (priority_sector: bool)
 """
 
@@ -38,9 +40,13 @@ HUBS_REPO = Path("/Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo")
 sys.path.insert(0, str(BASE_DIR / "scripts" / "lib"))
 import url_project_resolver as upr
 
-# Cấu hình chu kỳ thời gian SSOT - có thể override qua CLI args --start-date / --end-date
-_DEFAULT_DATE_START = "2026-10-01"
-_DEFAULT_DATE_END = "2026-10-24"
+# Cấu hình chu kỳ thời gian SSOT - mặc định là cửa sổ trượt 28 ngày (Rolling 28 days),
+# kết thúc trước hôm nay 2 ngày do độ trễ cập nhật dữ liệu của Google Search Console (~2 ngày).
+# Bắt đầu = hôm nay - 29 ngày, Kết thúc = hôm nay - 2 ngày (tổng cộng 28 ngày dữ liệu hoàn chỉnh).
+# Có thể override linh hoạt bằng CLI args --start-date / --end-date khi cần phân tích theo tháng cố định.
+import datetime as _dt
+_DEFAULT_DATE_END = (_dt.date.today() - _dt.timedelta(days=2)).isoformat()
+_DEFAULT_DATE_START = (_dt.date.today() - _dt.timedelta(days=29)).isoformat()
 
 def _resolve_dates() -> tuple[str, str]:
     import argparse as _ap
@@ -87,12 +93,41 @@ BRAND_PATTERNS = [
 ]
 BRAND_REGEX = re.compile("|".join(BRAND_PATTERNS), re.IGNORECASE)
 
+# Regex loại trừ số điện thoại, hotline, query toàn số hoặc điều hướng thuần khỏi Quick Wins / Strike Zone
+PHONE_HOTLINE_REGEX = re.compile(r"^[\d\s.+-]{8,}$")
+PHONE_CONTAINS_REGEX = re.compile(r"\b\d{8,}\b|\d{8,}")
+NAVIGATIONAL_PATTERNS = [
+    r"^\s*momo\s*$", r"^\s*mô mô\s*$", r"^\s*mo mo\s*$", r"^\s*mmoo\s*$",
+    r"momo\s*đăng\s*nhập", r"đăng\s*nhập\s*momo", r"dang\s*nhap\s*momo", r"momo\s*dang\s*nhap",
+    r"login\s*momo", r"momo\s*login", r"momo\.vn", r"www\.momo\.vn",
+    r"tải\s*momo", r"tai\s*momo", r"momo\s*tải", r"momo\s*tai",
+    r"tải\s*app\s*momo", r"tai\s*app\s*momo", r"cài\s*đặt\s*momo", r"cai\s*dat\s*momo",
+    r"hotline", r"tổng\s*đài", r"tong\s*dai", r"chăm\s*sóc\s*khách\s*hàng", r"cskh",
+    r"số\s*điện\s*thoại", r"so\s*dien\s*thoai", r"sđt",
+    r"là\s*số\s*gì", r"la\s*so\s*gi"
+]
+NAVIGATIONAL_REGEX = re.compile("|".join(NAVIGATIONAL_PATTERNS), re.IGNORECASE)
+
+def is_excluded_quick_win_query(query):
+    """Kiểm tra xem query có phải là hotline, chuỗi số điện thoại hoặc từ khóa điều hướng thương hiệu thuần túy không."""
+    if not query:
+        return True
+    q = str(query).strip()
+    if PHONE_HOTLINE_REGEX.match(q) or PHONE_CONTAINS_REGEX.search(q):
+        return True
+    if NAVIGATIONAL_REGEX.search(q):
+        return True
+    return False
+
 PRIORITY_SECTORS = {"Financial", "insurtech", "Credit", "Insurance", "BNPL"}
 
 def normalize_path(url_str):
     if not url_str:
         return "/"
-    p = unquote(urlparse(str(url_str)).path).lower().strip().rstrip("/")
+    p = unquote(urlparse(str(url_str)).path).lower().strip()
+    p = re.sub(r"/+", "/", p)
+    p = re.sub(r"/index\.(html?|php)$", "", p, flags=re.I)
+    p = p.rstrip("/")
     return p if p else "/"
 
 def is_brand_query(query):
@@ -710,8 +745,8 @@ def main():
                 "is_brand": is_brand
             })
 
-        # Strike Zone: Vị trí 4.0 - 10.0, Impressions >= 100, KHÔNG phải Brand/Navigational/Typo
-        if 4.0 <= pos <= 10.0 and im >= 100 and not is_brand:
+        # Strike Zone: Vị trí 4.0 - 10.0, Impressions >= 100, KHÔNG phải Brand/Navigational/Typo/Hotline
+        if 4.0 <= pos <= 10.0 and im >= 100 and not is_brand and not is_excluded_quick_win_query(q):
             actual_ctr = c / im if im else 0.0
             target_ctr = CTR_BENCHMARK_TABLE["benchmark_position_3_target_ctr"]
             ctr_diff = max(0.0, target_ctr - actual_ctr)
@@ -747,11 +782,20 @@ def main():
     print("[3/5] Tính toán Join Rate và độ phủ Theme...")
     matcher = build_theme_matcher()
 
+    # Tổng hợp toàn bộ All-Channel Pageviews theo từng Path từ GA4 multichannel cache trước bước tính Join Rate
+    raw_all_pv_by_path = defaultdict(int)
+    for r in multi_data.get("landing_page_channels", []):
+        p = normalize_path(r["dimensionValues"][0]["value"])
+        pv = int(r["metricValues"][0]["value"])
+        raw_all_pv_by_path[p] += pv
+
     # Tính join rate trên tập trang GSC có traffic (clicks > 0)
-    # Vì trang 0-click trên SERP người dùng không bấm vào thì GA4 Organic Search Landing Page không thể có session
+    # Vì trang 0-click trên SERP người dùng không bấm vào thì GA4 không thể có session
+    # Đối chiếu với toàn bộ tập Landing Pages GA4 đã nhận diện (Organic Search và All-Channel Landing Pages)
     pages_with_gsc = set(gsc_by_page.keys())
     pages_with_gsc_traffic = {p for p, d in gsc_by_page.items() if d["clicks"] > 0}
-    pages_with_both = pages_with_gsc_traffic.intersection(set(ga4_pages.keys()))
+    all_ga4_known_pages = set(ga4_pages.keys()) | set(raw_all_pv_by_path.keys())
+    pages_with_both = pages_with_gsc_traffic.intersection(all_ga4_known_pages)
     join_rate = round(len(pages_with_both) / len(pages_with_gsc_traffic), 4) if pages_with_gsc_traffic else 0.0
     print(f"✓ GSC Pages (Clicks > 0): {len(pages_with_gsc_traffic):,} | Pages joined GA4: {len(pages_with_both):,} | Join Rate: {join_rate * 100:.2f}% (Mục tiêu > 90%)")
 
@@ -766,13 +810,6 @@ def main():
 
     # 4. Phân loại 4 Quadrant & Xây dựng Danh sách Pages Phân tích
     print("[4/5] Xây dựng Ma trận 4 Quadrant và Danh mục Quick Wins...")
-    
-    # Tổng hợp toàn bộ All-Channel Pageviews theo từng Path từ GA4 multichannel cache
-    raw_all_pv_by_path = defaultdict(int)
-    for r in multi_data.get("landing_page_channels", []):
-        p = normalize_path(r["dimensionValues"][0]["value"])
-        pv = int(r["metricValues"][0]["value"])
-        raw_all_pv_by_path[p] += pv
 
     # Nạp chỉ số Pageviews chuẩn của từng dự án từ web-data.json để đối soát (< 2%)
     web_data_file = HUBS_REPO / "lib" / "dashboard" / "web-data.json"
@@ -781,10 +818,11 @@ def main():
         try:
             with open(web_data_file, "r", encoding="utf-8") as f:
                 wd_json = json.load(f)
-                oct_idx = wd_json.get("months", []).index("2026-10") if "2026-10" in wd_json.get("months", []) else -1
-                if oct_idx >= 0:
+                running_m = wd_json.get("running", {}).get("month") or (wd_json.get("months", [])[-1] if wd_json.get("months") else None)
+                m_idx = wd_json.get("months", []).index(running_m) if running_m in wd_json.get("months", []) else -1
+                if m_idx >= 0:
                     for proj_obj in wd_json.get("projects", []):
-                        web_data_pvs[proj_obj["name"]] = sum(proj_obj["mtd"][oct_idx])
+                        web_data_pvs[proj_obj["name"]] = sum(proj_obj["mtd"][m_idx])
             print(f"✓ Đã nạp {len(web_data_pvs)} chỉ số dự án từ web-data.json (Tổng PV: {sum(web_data_pvs.values()):,})")
         except Exception as e:
             print(f"  ! Lỗi nạp web-data.json: {e}")
@@ -951,9 +989,10 @@ def main():
         }
         pages_output.append(page_record)
 
-        # Trích xuất Quick Win duy nhất cho mỗi Path
-        if strike_q_sorted and (w2a_cr >= 0.01 or priority_sec or gsc_c >= 50):
-            best_q = strike_q_sorted[0]
+        # Trích xuất Quick Win duy nhất cho mỗi Path (loại trừ hotline và query điều hướng)
+        valid_strike_q = [sq for sq in strike_q_sorted if not is_excluded_quick_win_query(sq["query"])]
+        if valid_strike_q and (w2a_cr >= 0.01 or priority_sec or gsc_c >= 50):
+            best_q = valid_strike_q[0]
             potential = best_q["potential_gain_clicks"]
             predicted_w2a = round(potential * business_yield, 2)
             quick_wins_map[p] = {
