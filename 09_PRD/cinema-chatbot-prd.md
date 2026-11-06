@@ -80,7 +80,7 @@ Toàn bộ dữ liệu phục vụ Chatbot được chuẩn hóa và quản lý 
 - **Cơ chế nạp & thẩm định:**
   - Quét tự động từ tập tin momo.vn/cinema/blog/sitemap.xml.
   - Bộ thẩm định nội dung (Eligibility Validation) kiểm tra điều kiện: Bài viết phải ở trạng thái đã xuất bản chính thức (published), bóc tách tiêu đề, tóm tắt, các thẻ đề mục H2 và các đoạn văn bản phân tích chuyên sâu.
-- **Nhiệm vụ trả lời:** Giải đáp các câu hỏi sâu về cảm nhận, ý nghĩa tình tiết phim, thông tin after-credit, đồng thời tự động đính kèm liên kết ngược về bài blog gốc để tăng lượt đọc tự nhiên cho phân hệ Blog.
+- **Nhiệm vụ trả lời:** Giải đáp các câu hỏi sâu về cảm nhận, ý nghĩa tình tiết phim, thông tin after-credit, đồng thời tự động đính kèm liên kết ngược về bài blog gốc để tăng lượt đọc tự nhiên cho cụm bài viết Blog.
 
 ### 2.2 Trụ Cột 2: Toàn Bộ Thông Tin Chi Tiết Của Phim (Movie Information & Metadata)
 - **Nguồn dữ liệu:** Hệ thống quản lý danh mục phim của Cinema Hub (momo.vn/cinema/phim-chieu/* và cơ sở dữ liệu phim MoMo).
@@ -578,8 +578,8 @@ Toàn bộ tương tác của người dùng với Chatbot được gắn mã th
 | `cinema_chatbot_prompt_click` | Khi người dùng bấm vào câu hỏi gợi ý nhanh | `prompt_text`, `page_type`, `movie_slug` | Xác định nhóm chủ đề người dùng quan tâm nhất |
 | `cinema_chatbot_query_send` | Khi người dùng gửi câu hỏi tự do | `query_length`, `page_type`, `has_movie_slug` | Phân tích nhu cầu tìm kiếm thực tế của khách hàng |
 | `cinema_chatbot_response_view` | Khi Chatbot trả lời thành công | `latency_ms`, `cached` (true/false), `has_action` | Kiểm soát hiệu năng và chất lượng phản hồi |
-| `cinema_chatbot_link_click` | Khi người dùng bấm vào link bài blog gợi ý | `target_url`, `source_query` | Đo lường lưu lượng kéo sang phân hệ Blog |
-| `cinema_chatbot_w2a_click` | Khi người dùng bấm nút OneLink đặt vé App | `movie_slug`, `target_theater`, `one_link_url` | Đo lường tỷ lệ chuyển đổi Web-to-App thực tế |
+| `cinema_chatbot_link_click` | Khi người dùng bấm vào link bài blog gợi ý | `target_url`, `source_query` | Đo lường lưu lượng kéo sang mảng Blog |
+| `cinema_chatbot_w2a_click` | Khi người dùng nhấp vào nút OneLink đặt vé App | `movie_slug`, `target_theater`, `one_link_url` | Đo lường tỷ lệ chuyển đổi Web-to-App thực tế |
 
 ---
 
@@ -606,7 +606,7 @@ Dự án được phân chia thành 2 giai đoạn chiến lược, cam kết đ
   - Trả lời trọn vẹn 4 ca sử dụng cơ bản: After-credit, Review nhanh không spoil, Diễn viên tham gia phim nào, Địa chỉ và tiện ích rạp. Đính kèm liên kết bài viết và nút mở ứng dụng MoMo cơ bản.
   - Tích hợp bộ đo lường Umami Tracking đầy đủ.
 - **Tiến độ chi tiết từng tuần trong tháng 11/2026:**
-  - *Tuần 1 (04/11 - 10/11/2026):* Cấu hình phân hệ Cinema trên Chatbot Admin, thiết lập nguồn quét sitemap, kích hoạt bộ thẩm định nội dung và nạp dữ liệu tri thức đợt 1.
+  - *Tuần 1 (04/11 - 10/11/2026):* Cấu hình dự án Cinema trên Chatbot Admin, thiết lập nguồn quét sitemap, kích hoạt bộ thẩm định nội dung và nạp dữ liệu tri thức đợt 1.
   - *Tuần 2 (11/11 - 17/11/2026):* Phát triển giao diện Chatbot Widget trên Web Cinema; kết nối Frontend vào API Gateway (`POST /api/cinema/chatbot/query`); cấu hình Contextual Prompts.
   - *Tuần 3 (18/11 - 24/11/2026):* Kiểm thử toàn diện trên môi trường Staging/UAT (`momovn-dev.mservice.io`); thẩm định độ chính xác câu trả lời và rà soát các trường hợp ngoại lệ.
   - *Tuần 4 (25/11 - 30/11/2026):* **Go-Live Production Phase 1** trên toàn bộ Kênh Web MoMo Cinema (`momo.vn/cinema/*`); giám sát hiệu năng P95 dưới 1.2 giây và theo dõi phản hồi thực tế của người dùng.
@@ -635,7 +635,7 @@ Phần này đóng vai trò là kim chỉ nam kỹ thuật giúp bất kỳ Kỹ
   - Khu vực mã nguồn Cinema Hub: `app/cinema/` (chứa các trang chủ, phim chiếu, cụm rạp, chi tiết phim).
 - **Vị trí gắn Component Chatbot vào giao diện toàn trang:**
   - Tập tin Layout SSOT: `components/cinema/CinemaLayoutWrapper.tsx`
-  - Cơ chế cắm: Khai báo component `<CinemaChatbotWidget />` bên trong `CinemaLayoutInner`, nằm cạnh `<CinemaNavbar />` và bao ngoài `<MobaseProviders>`. Khi gắn tại đây, khung Chatbot sẽ tự động hiện diện trên 100% các trang thuộc phân hệ Cinema.
+  - Cơ chế cắm: Khai báo component `<CinemaChatbotWidget />` bên trong `CinemaLayoutInner`, nằm cạnh `<CinemaNavbar />` và bao ngoài `<MobaseProviders>`. Khi gắn tại đây, khung Chatbot sẽ tự động hiện diện trên 100% các trang thuộc Cinema Hub.
 
 ### 9.2 Đề Xuất Cấu Trúc Thư Mục Component Mới
 Kỹ sư tạo mới thư mục `components/cinema/chatbot/` với các tập tin chức năng chuyên biệt:

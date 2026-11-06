@@ -41,7 +41,7 @@
 
 ### 1.1 Elegant Framing
 ### 1.1 Elegant Framing
-Hàng triệu chủ xe ô tô và xe máy tại Việt Nam đang bị phân mảnh thông tin, phải chuyển qua lại giữa 5–7 ứng dụng và website rời rạc chỉ để xử lý các nhu cầu thiết yếu: tra phạt nguội, xem giá xăng, nạp tiền ETC, theo dõi hạn đăng kiểm, tìm trạm sạc và mua bảo hiểm. Nếu chỉ cung cấp dịch vụ trong ứng dụng di động đóng (App-only ecosystem), MoMo sẽ hoàn toàn vô hình trước hơn **20.1 triệu lượt tìm kiếm tự nhiên/tháng** (từ bộ 11.104 từ khóa độc lập) ngoài Open Web.
+Hàng triệu chủ xe ô tô và xe máy tại Việt Nam đang bị phân mảnh thông tin, phải chuyển qua lại giữa 5-7 ứng dụng và website rời rạc chỉ để xử lý các nhu cầu thiết yếu: tra phạt nguội, xem giá xăng, nạp tiền ETC, theo dõi hạn đăng kiểm, tìm trạm sạc và mua bảo hiểm. Nếu chỉ cung cấp dịch vụ trong ứng dụng di động đóng (App-only ecosystem), MoMo sẽ hoàn toàn vô hình trước hơn **20.1 triệu lượt tìm kiếm tự nhiên/tháng** (từ bộ 11.104 từ khóa độc lập) ngoài Open Web.
 
 **Vehicle Hub trên Web (`momo.vn/tien-ich-giao-thong`)** ra đời với định vị cốt lõi là **"Cổng Tiện Ích Giao Thông All-in-One"** dành cho chủ xe ô tô và xe máy tại Việt Nam, đóng vai trò là **Điểm đến Tiện ích Xe Mở & Cổng Định Danh Thẻ Xe Số**. Bằng cách cung cấp các công cụ tiện ích tra cứu công cộng tốc độ cao (0-CAPTCHA real-time, bảng giá xăng, trạm sạc EV) kết hợp cùng **Nội dung bài viết GenAI Content (Dự án PLG Project)**, Kênh Web giải quyết tức thời nhu cầu của chủ xe ngoài Open Web, khởi tạo Hồ sơ phương tiện (Vehicle Profile) và điều hướng giữ chân người dùng trong hệ sinh thái MoMo.
 
@@ -290,7 +290,7 @@ Hệ thống URL Kênh Web Vehicle Hub được quy hoạch thành **2 Nhóm C�
   <thead>
     <tr style="background-color:#f1f5f9;">
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">STT</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tên Phân Hệ / Trang</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tên Nhóm Trang / Dịch Vụ</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">URL Canonical</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Phân Cấp Routing</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Vai Trò & Chức Năng Trong Cấu Trúc</th>
@@ -489,7 +489,7 @@ Dạng trang **Merchant Listing (Danh mục cửa hàng/đối tác M4B)** kết
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Live Fuel Feed & E10 Compatibility Tool</strong> <em>(Học hỏi từ <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">e10.vn</code>)</em></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Tôi muốn xem giá xăng hôm nay và tra xem xe tôi có đi được xăng E10 không."</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Live Feed giá xăng Petrolimex/PVOil Vùng 1 & 2 kết hợp Biểu đồ lịch sử + Công cụ tra cứu tương thích nhiên liệu.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">• Bảng niêm yết giá xăng RON 95-III, E5 RON 92, Dầu Diesel.<br>• <strong>Biểu đồ biến động giá xăng 3–6 tháng gần nhất</strong>.<br>• Form đăng ký SĐT nhận Push tin báo giá trước 15 phút chiều thứ 5.<br>• <strong>Tool Tra Cứu Tương Thích Xăng E10 (e10.vn Benchmark):</strong> Nhập Dòng xe/Hãng xe  ➔  Kiểm tra mức độ tương thích xăng sinh học E10 & dầu nhớt tối ưu.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">• Bảng niêm yết giá xăng RON 95-III, E5 RON 92, Dầu Diesel.<br>• <strong>Biểu đồ biến động giá xăng 3-6 tháng gần nhất</strong>.<br>• Form đăng ký SĐT nhận Push tin báo giá trước 15 phút chiều thứ 5.<br>• <strong>Tool Tra Cứu Tương Thích Xăng E10 (e10.vn Benchmark):</strong> Nhập Dòng xe/Hãng xe  ➔  Kiểm tra mức độ tương thích xăng sinh học E10 & dầu nhớt tối ưu.</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">5</td>
@@ -548,7 +548,7 @@ Dạng trang **Merchant Listing (Danh mục cửa hàng/đối tác M4B)** kết
    * **Q1:** *Làm thế nào để tra cứu phạt nguội không cần nhập mã CAPTCHA trên MoMo?*
      * **A1:** Bạn chỉ cần nhập biển số xe (ví dụ: 30F-12345) vào ô tra cứu trên trang Tiện ích giao thông MoMo. Hệ thống tự động kết nối dữ liệu Cục CSGT và trả kết quả tức thì trong 3 giây mà không yêu cầu nhập mã CAPTCHA.
    * **Q2:** *Tôi có thể nộp tiền phạt nguội online trực tiếp qua MoMo được không?*
-     * **A2:** Có. Nếu kết quả tra cứu hiển thị lỗi vi phạm, bạn bấm nút "Nộp phạt ngay" để mở App MoMo, kiểm tra chi tiết quyết định xử phạt và thanh toán 1-click qua Ví MoMo hoặc Ví Trả Sau.
+     * **A2:** Có. Nếu kết quả tra cứu hiển thị lỗi vi phạm, bạn nhấp vào nút "Nộp phạt ngay" để mở App MoMo, kiểm tra chi tiết quyết định xử phạt và thanh toán 1-click qua Ví MoMo hoặc Ví Trả Sau.
    * **Q3:** *Gói Cảnh Báo Phạt Nguội Tự Động 9k/năm của MoMo hoạt động như thế nào?*
      * **A3:** Khi đăng ký Gói 9.000đ/năm, MoMo sẽ tự động quét dữ liệu CSGT định kỳ hàng tuần cho biển số xe của bạn và phát thông báo trực tiếp qua App MoMo ngay khi phát sinh lỗi vi phạm mới.
    * **Q4:** *MoMo có hỗ trợ tự động điền thông tin khi mua bảo hiểm ô tô / xe máy không?*
@@ -563,7 +563,7 @@ Dạng trang **Merchant Listing (Danh mục cửa hàng/đối tác M4B)** kết
 <table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
   <thead>
     <tr style="background-color:#f1f5f9;">
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trang / Phân Hệ</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trang / Nhóm Dịch Vụ</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tên Component / Section</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nhu Cầu Người Dùng (JTBD)</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Giải Pháp Cấu Trúc (Solution)</th>
@@ -617,7 +617,7 @@ Dạng trang **Merchant Listing (Danh mục cửa hàng/đối tác M4B)** kết
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Price History Chart</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Tôi muốn xem lịch sử biến động giá xăng."</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Biểu đồ tương tác theo dõi biến động giá xăng trong 3–6 tháng.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Biểu đồ tương tác theo dõi biến động giá xăng trong 3-6 tháng.</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Biểu đồ tương tác biến động giá xăng 3-6 tháng gần nhất</td>
     </tr>
     <tr style="background-color:#f8fafc;">
@@ -733,7 +733,7 @@ Dạng trang **Merchant Listing (Danh mục cửa hàng/đối tác M4B)** kết
 <table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
   <thead>
     <tr style="background-color:#f1f5f9;">
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Phân Hệ / Page</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nhóm Tính Năng / Page</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Touchpoint / Vị Trí</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Hành Động Người Dùng</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Umami Event Name</th>
@@ -755,7 +755,7 @@ Dạng trang **Merchant Listing (Danh mục cửa hàng/đối tác M4B)** kết
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Giá Xăng</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Subscribe Form</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bấm nút đăng ký nhận tin báo giá xăng tự động</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">nhấp vào nút đăng ký nhận tin báo giá xăng tự động</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">subscribe_gas_price</code></td>
     </tr>
     <tr style="background-color:#f8fafc;">
@@ -779,7 +779,7 @@ Dạng trang **Merchant Listing (Danh mục cửa hàng/đối tác M4B)** kết
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Cứu Hộ 24/7</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hotline Button</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bấm nút gọi tổng đài Cứu hộ 24/7</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">nhấp vào nút gọi tổng đài Cứu hộ 24/7</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">click_call_rescue</code></td>
     </tr>
   </tbody>

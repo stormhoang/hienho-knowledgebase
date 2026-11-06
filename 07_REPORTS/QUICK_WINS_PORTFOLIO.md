@@ -1,15 +1,15 @@
 # DANH MỤC TỪ KHÓA QUICK WINS TOÀN WEB PLATFORM (HIGH ROI OPPORTUNITIES)
 
-Tập hợp các từ khóa có **Search Volume cao ($\\ge 1.500$) và Mức độ Cạnh tranh Thấp (Low PPC Competition)** trên toàn bộ 161 Use Cases của Web Platform. Đây là các chủ đề ưu tiên P0 mang lại lưu lượng truy cập nhanh nhất với chi phí nội dung tối thiểu.
+Tập hợp các từ khóa có **Search Volume cao ($\\ge 1.500$) và Mức độ Cạnh tranh Thấp (Low PPC Competition)** trên toàn bộ 163 Use Cases của Web Platform. Đây là các chủ đề ưu tiên hàng đầu mang lại lưu lượng truy cập nhanh nhất với chi phí nội dung tối thiểu.
 
-- **Tổng số từ khóa Quick Wins phát hiện:** 571 từ khóa
-- **Tổng dung lượng tìm kiếm Quick Wins:** 7,727,200 lượt/tháng
+- **Tổng số từ khóa Quick Wins phát hiện:** 573 từ khóa
+- **Tổng dung lượng tìm kiếm Quick Wins:** 7,738,000 lượt/tháng
 
 ---
 
-## TOP 50 TỪ KHÓA QUICK WINS ƯU TIÊN SẢN XUẤT P0
+## TOP 50 TỪ KHÓA QUICK WINS ƯU TIÊN SẢN XUẤT HÀNG ĐẦU
 
-| STT | Từ Khóa Quick Win | Search Volume | Search Intent | Điểm Cơ Hội | Use Case | Phân Khối Ngành | Biến Thể Đồng Nghĩa Đã Gom Cụm |
+| STT | Từ Khóa Quick Win | Search Volume | Search Intent | Điểm Cơ Hội | Use Case | Khối Ngành | Biến Thể Đồng Nghĩa Đã Gom Cụm |
 | :---: | :--- | :---: | :---: | :---: | :--- | :--- | :--- |
 | 1 | `nạp tiktok` | 14,800 | `Transactional` | 12.51 | Nạp Xu TikTok | Entertainment | tiktok nạp, nạp u tiktok |
 | 2 | `nạp the garena` | 201,000 | `Transactional` | 11.75 | Nạp Thẻ Game | Entertainment | cách nạp the garena, nạp the garena momo |

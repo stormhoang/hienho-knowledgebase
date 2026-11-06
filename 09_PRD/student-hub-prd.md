@@ -32,10 +32,10 @@
 ### 2.2 Trụ Cột 2: Phát Triển Hệ Sinh Thái Tiện Ích (Utility Tools Ecosystem)
 Tích hợp các công cụ giải quyết trực tiếp "nỗi đau" hàng ngày của sinh viên:
 1. **Công cụ Tài chính Cá nhân (Tuition & Budget Calculator):**
-   * *Utility Tính Học Phí Theo Tín Chỉ:* Công cụ giả lập tính tổng tiền học phí theo số lượng tín chỉ sinh viên chọn (12 - 30 tín chỉ), phân rã chi tiết học phí và kích hoạt CTA *"Nộp học phí ngay"* dẫn qua OneLink sang phễu thanh toán In-App.
+   * *Utility Tính Học Phí Theo Tín Chỉ:* Công cụ giả lập tính tổng tiền học phí theo số lượng tín chỉ sinh viên chọn (12 - 30 tín chỉ), cơ cấu chi tiết học phí và kích hoạt CTA *"Nộp học phí ngay"* dẫn qua OneLink sang phễu thanh toán In-App.
    * *Công cụ Quản lý Ngân sách / Thu nhập:* Giúp sinh viên tính toán tiền sinh hoạt hàng tháng, điều hướng mở **Túi Thần Tài** (tích lũy sinh lời) hoặc **Ví Trả Sau 0%** (chi tiêu thiết bị học tập).
 2. **Bản đồ Tiện ích Vị trí (Location-Based Amenities Map 5km):**
-   * Bản đồ tương tác hiển thị Nhà trọ, Quán ăn, Cà phê, Xe buýt, Siêu thị quanh campus (phân rã *Bên trong Campus* & *Bên ngoài Campus* bán kính 500m, 1km, 2km, 5km).
+   * Bản đồ tương tác hiển thị Nhà trọ, Quán ăn, Cà phê, Xe buýt, Siêu thị quanh campus (cơ cấu *Bên trong Campus* & *Bên ngoài Campus* bán kính 500m, 1km, 2km, 5km).
    * **Ưu tiên hiển thị cửa hàng SME chấp nhận thanh toán MoMo** kèm mã giảm giá O2O.
    * Tích hợp API Tuyến xe buýt (Google Transit API & dữ liệu GTFS miễn phí từ Sở GTVT).
 3. **Cổng Việc Làm & Thực Tập (Jobs & Internship Gateway):**
@@ -43,7 +43,7 @@ Tích hợp các công cụ giải quyết trực tiếp "nỗi đau" hàng ngà
    * Xử lý "nỗi đau" thiếu hụt nhân sự của các chuỗi nhà hàng, F&B, siêu thị đối tác thương mại của MoMo.
 4. **Hệ thống Đánh giá UGC & Sự kiện (Review & Event Meetup Module):**
    * Đồng bộ API luồng đánh giá trường học 5 sao đa tiêu chí từ trong App ra ngoài Web.
-   * Phân hệ xem & đăng ký tham gia Webinar, AI talk, Workshop kỹ năng sinh viên (mô hình Meetup).
+   * Tính năng xem & đăng ký tham gia Webinar, AI talk, Workshop kỹ năng sinh viên (mô hình Meetup).
 
 ### 2.3 Trụ Cột 3: Số Hóa Chương Trình Đại Sứ Sinh Viên (Productized Ambassador Engine)
 * **Sản phẩm hóa Ambassador (Tech-Enabled Ambassador System):** Chuyển đổi chiến dịch Social thủ công (TikTok, Threads) của 50 đại sứ hàng năm thành một **sản phẩm công nghệ độc lập**.
@@ -99,7 +99,7 @@ Tích hợp các công cụ giải quyết trực tiếp "nỗi đau" hàng ngà
   * **Phase 1 (Hiện tại - Single-Page + Modal Popups):** Hiện tại **chưa triển khai các trang con (Sub-pages)** cho Ngành đào tạo, Học bổng, Việc làm, Nhà trọ. Tất cả nội dung chi tiết được hiển thị trực tiếp trên một trang trường học duy nhất (`momo.vn/sinh-vien/[ten-truong-ma-truong]`) thông qua **Modal Popups / Drawers / Anchor Links (`#nganh-dao-tao`, `#hoc-bong`, `#viec-lam`, `#nha-tro`, `#review`)** nhằm tập trung sức mạnh SEO Domain Authority và tối ưu tốc độ tải trang.
   * **Phase 2 (Mở rộng Programmatic Sub-Pages):** Fast-track ra mắt Cổng Việc Làm Master (`/sinh-vien/viec-lam`) và trang Đại sứ (`/ambassador`) trong Phase 2 (Tháng 9/2026); các Cổng Master Nhà Trọ (`/nha-tro`) và Workshop (`/workshop`) mở rộng trong Phase 3.
  (`/sinh-vien`)
-Cấu trúc đường dẫn URL chuẩn phân cấp Subdirectory phân rã từ gốc `/sinh-vien`:
+Cấu trúc đường dẫn URL chuẩn phân cấp Subdirectory cơ cấu từ gốc `/sinh-vien`:
 
 ```
 momo.vn/sinh-vien (Trang chủ Student Hub / Discovery Hub)
@@ -197,7 +197,7 @@ Lưới 6 icon điều hướng 1-touch truy cập nhanh các dịch vụ trọn
 
 ### 5.5 Interactive Credit-Based Tuition Calculator (Utility Tính Học Phí Theo Tín Chỉ)
 * **Thanh trượt tín chỉ linh hoạt (Credit Slider):** Sinh viên kéo chọn số lượng tín chỉ muốn học trong học kỳ (từ 12 đến 30 tín chỉ).
-* **Bảng phân rã chi phí dự kiến:** Tự động tính tổng tiền học phí (`~12.600.000đ`), chi phí cơ sở vật chất và bảo hiểm.
+* **cơ cấu chi phí dự kiến:** Tự động tính tổng tiền học phí (`~12.600.000đ`), chi phí cơ sở vật chất và bảo hiểm.
 * **CTA Chuyển đổi trực tiếp:** Nút *"Nộp học phí ngay"* dẫn dắt trực tiếp qua OneLink sang phễu Nộp học phí In-App.
 * **Khối thông tin Học bổng:** Hiển thị danh sách học bổng của trường (Học bổng Xuất sắc 23.4 triệu, Học bổng Toàn phần 15.6 triệu) kèm điều kiện xét tuyển.
 
@@ -228,7 +228,7 @@ Lưới 6 icon điều hướng 1-touch truy cập nhanh các dịch vụ trọn
   * **Tối ưu SEO/GEO Schema Markup:** Khai báo cấu trúc dữ liệu chuẩn `AggregateRating` và `Review` theo Google Rich Snippets để hiển thị trực tiếp số sao trung bình, số lượng đánh giá trên trang kết quả tìm kiếm Google cho từ khóa `review trường [tên trường]`.
   * **Đòn bẩy lòng tin (Verified Student Trust Layer):** Hiển thị rõ nhãn "Sinh viên đã xác thực" (Verified Student Badge) kèm logo trường trên từng bài review để khẳng định tính khách quan, khác biệt hoàn toàn với các diễn đàn review không xác thực hiện nay.
 
-* **Phân Rã 5 Tiêu Chí Đánh Giá Cốt Lõi (Multi-Criteria Rating):**
+* **cơ cấu 5 Tiêu Chí Đánh Giá Cốt Lõi (Multi-Criteria Rating):**
   1. Khuôn viên & Cảnh quan trường (Campus Environment)
   2. Thư viện & Thiết bị học tập (Academic Facilities)
   3. Canteen & Giá cả dịch vụ (Canteen & Service Pricing)

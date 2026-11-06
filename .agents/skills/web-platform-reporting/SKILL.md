@@ -33,7 +33,7 @@ Skill này cung cấp bộ khung chuẩn hóa, phương pháp luận bóc tách 
    - Tuyệt đối không đưa CX, không đưa CWV/P90, không đưa Ticket tồn đọng. Không tính New User vào nhóm Hubs. 
    - Tuyệt đối không liệt kê lại các con số đã có trên bảng.
    - **Định vị kênh:** Organic là kênh chủ lực của Web Platform. Tuyệt đối không tô điểm cho Paid. Paid tăng mà Organic giảm là cảnh báo rủi ro về chất lượng tăng trưởng.
-   - **Phân loại Traffic Source SSOT (Non-Paid vs Paid):** BẮT BUỘC phân rã thành 2 nhóm lớn rõ rệt: **Non-Paid Traffic** (tất cả trừ Paid Traffic: Organic, Direct, Referral, Others...) và **Paid Traffic** (Paid). Khi trình bày bảng hoặc danh sách, gom rõ 2 dòng lớn Non-Paid vs Paid, các kênh con đặt thụt dòng dưới Non-Paid, tuyệt đối không để Paid xen kẽ ngang hàng.
+   - **Phân loại Traffic Source SSOT (Non-Paid vs Paid):** BẮT BUỘC cơ cấu thành 2 nhóm lớn rõ rệt: **Kênh Tự Nhiên (Non-Paid)** chỉ gồm đúng 4 kênh con (Organic, Direct, AI Traffic (GEO), Referral) và **Kênh Trả Phí (Paid Ads)**. Khi trình bày bảng hoặc danh sách, gom rõ 2 dòng lớn Non-Paid vs Paid, 4 kênh con đặt thụt dòng dưới Non-Paid, tuyệt đối không tách thêm dòng Others rời rạc và không để Paid xen kẽ ngang hàng.
    - **Bullet Lead-ins:** Viết tiếng Việt ngắn gọn (`Vượt target:`, `Lưu lượng trực tiếp & sức mạnh thương hiệu:`, `Chuyển dịch SEO sang GEO:`, `Điểm nổi bật:`, `Việc tiếp theo:`). Chỉ giữ tiếng Anh cho thuật ngữ chỉ số: Target, Budget, Actual, MAU, MEU, CVR, Map Bank, OneLink, Installs, New Reg. Toàn bộ báo cáo dùng một ngôn ngữ.
 7. **Mật độ thông điệp & bảng biểu:** Tối đa 3 ý chính dưới mỗi tiêu đề, tốt nhất 1-2. Nhiều hơn thì tách slide. Tối đa 2-3 bảng/biểu đồ, không copy dashboard thô.
 8. **Trực quan hóa:**

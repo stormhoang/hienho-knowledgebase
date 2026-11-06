@@ -33,13 +33,13 @@ Báo cáo Web Platform không chỉ dừng lại ở số liệu Pageviews bề 
 
 ## 2. CHI TIẾT 3 NGUỒN DỮ LIỆU ĐẦU VÀO
 
-### Trụ Cột 1: Hiệu Suất Tăng Trưởng & Phân Rã Kênh (Performance & Channels)
+### Trụ Cột 1: Hiệu Suất Tăng Trưởng & cơ cấu (Performance & Channels)
 - **Nguồn trích xuất:** File `Web Performance Tracking (2).xlsx` (tại `/Users/hienhv/Downloads/`).
 - **File SSOT lưu trữ:** [`07_REPORTS/web_performance_tracking.xlsx`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/web_performance_tracking.xlsx).
 - **Snapshot tự động:** [`07_REPORTS/data/monthly_MM_YYYY_mtd_XXd.json`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/data).
 - **Chỉ số trọng yếu:**
   - Tổng Pageviews lũy kế (Actual MTD), Số ngày MTD (MTD Days).
-  - Tốc độ vận hành ngày (Daily Pace) và Dự phóng cuối tháng (Run-rate Forecast 31d).
+  - Tốc độ vận hành ngày (Daily Pace) và dự báo cuối tháng (Run-rate Forecast 31d).
   - Phân bổ Kênh: Organic, Direct, Referral, Paid, Others.
   - Phân bổ 5 Strategic Hubs: Cinema Hub, Financial Hub, Vehicle Hub, New User Hub, Student Hub.
 
@@ -82,7 +82,7 @@ Báo cáo Web Platform không chỉ dừng lại ở số liệu Pageviews bề 
 │   ├── monthly_10_2026_consolidated.json    # Snapshot hợp nhất (Tracking + Crawl + Backlinks)
 │   └── ...                                  # Snapshots các mốc thời gian trước
 │
-├── technical_seo/                           # Phân hệ Sức khỏe Kỹ thuật & Hạ tầng SEO
+├── technical_seo/                           # Báo cáo Sức khỏe Kỹ thuật & Hạ tầng SEO
 │   ├── crawl_stats/                         # Dữ liệu & Báo cáo GSC Crawl Stats
 │   │   └── gsc_crawl_stats_latest.json      # Snapshot chi tiết Crawl Budget & Status Codes
 │   └── backlinks/                           # Dữ liệu Hồ sơ Liên kết & Audit Disavow
@@ -91,7 +91,7 @@ Báo cáo Web Platform không chỉ dừng lại ở số liệu Pageviews bề 
 │       ├── backlink_disavow_candidates_2026-10-10.txt
 │       └── backlink_disavow_baseline_2026-10-10.csv
 │
-├── packages/                                # Phân hệ Đóng gói Báo cáo Điều hành (Executive)
+├── packages/                                # Bộ Báo cáo Điều hành (Executive Packages)
 │   ├── monthly/                             # Báo cáo Tháng (Chuẩn Agenda 4 phần gửi BOM)
 │   │   ├── report-thang-08-2026.md
 │   │   ├── report-thang-09-2026.md

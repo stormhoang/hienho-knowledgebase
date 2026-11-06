@@ -78,7 +78,7 @@ Hàng triệu người dùng Internet phát sinh nhu cầu tra cứu hàng ngày
 
 ## 3. PHÂN LOẠI HUBS (THEO MA TRẬN 3+1 ZONES QUẢN TRỊ CHIẾN LƯỢC)
 
-Toàn bộ các Hubs và phân hệ trên Web MoMo được quản trị theo **Ma trận 3+1 Zones** nhằm tập trung tối đa hỏa lực, chống dàn trải tài nguyên:
+Toàn bộ các Hubs và mảng sản phẩm trên Web MoMo được quản trị theo **Ma trận 3+1 Zones** nhằm tập trung tối đa hỏa lực, chống dàn trải tài nguyên:
 
 ```
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
@@ -122,7 +122,7 @@ Toàn bộ các Hubs và phân hệ trên Web MoMo được quản trị theo **
 
 2. **TRANSFORMATION ZONE (Duy nhất 2 dự án):**
    * **Financial Hub (`momo.vn/tai-chinh`):** Định vị Financial Authority số 1 của MoMo. Tích hợp 7 Simulator Widgets (CIC, Tính lương, Phân bổ lương, Tỷ giá, Giá vàng, Lãi suất tiết kiệm Net Yield Gap, Chứng chỉ quỹ), mở phễu bán chéo Vay Nhanh & Ví Trả Sau. Chuẩn bị chiến dịch đón đầu mốc 8 triệu lượt check CIC toàn dân năm 2027.
-   * **Vehicle Hub (`momo.vn/tien-ich-giao-thong`):** Trụ cột tăng trưởng quy mô số 1 ngoài Web (>16.2M searches/tháng). Tích hợp liên phân hệ:
+   * **Vehicle Hub (`momo.vn/tien-ich-giao-thong`):** Trụ cột tăng trưởng quy mô số 1 ngoài Web (>16.2M searches/tháng). Tích hợp liên hoàn các dịch vụ:
      - **VTTI:** Phạt nguội 0-CAPTCHA, Đóng phạt trực tuyến C08/DVCQG, ePass/VETC, Đăng kiểm, Cây xăng Petrolimex/PVOil, Trạm sạc EV, Tìm garage, Cứu hộ.
      - **InsurTech:** Bảo hiểm bắt buộc TNDS xe máy, Bảo hiểm thân vỏ ô tô.
      - **Trọng tâm kỹ thuật:** **Migration sang MoSpark CMS + Revised UI**, đặt mục tiêu tạo lập 260K - 500K Hồ sơ phương tiện (Vehicle Profile).
