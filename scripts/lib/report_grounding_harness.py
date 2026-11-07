@@ -10,7 +10,7 @@ import re
 import sys
 from pathlib import Path
 
-DRIVE_RAW_DIR = Path("/Users/hienhv/Library/CloudStorage/GoogleDrive-hien.ho@mservice.com.vn/My Drive/WEB GROWTH 2026/#6 - Report/Web Platform_Report (Markdown)/26 10-01 11")
+DRIVE_RAW_DIR = Path("/Users/hienhv/Library/CloudStorage/GoogleDrive-hien.ho@mservice.com.vn/My Drive/WEB GROWTH 2026/#6 - Report/Web Platform_Report (Markdown)/Tuần 44 (26.10 - 01.11.2026)")
 REPORT_FILE = Path("/Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/weekly-report-2026-10-26-11-01.md")
 
 # Danh sach cac tu khoa "slop / bia dat" bi cam tuyet doi xuat hien

@@ -30,7 +30,7 @@ Trước đây, Web Platform vận hành như một đơn vị hỗ trợ thụ 
     *   **Grow Smart:** Đảm bảo SEO/GEO-ready ngay từ nền tảng và tích hợp AI Content Production.
     *   **Scale Anywhere:** Một platform phục vụ toàn bộ các Division/Center của MoMo.
 
-### Các Phân hệ & Module Nền tảng trong MoSpark:
+### Các Module Nền tảng trong MoSpark:
 
 1.  **Landing Page Builder:** Giải pháp đầu tiên được xây dựng trên MoSpark giúp việc tạo Landing Page trở nên dễ dàng, trực quan và nhanh chóng hơn rất nhiều công cụ hiện tại. Người dùng non-tech có thể tự thực hiện và xuất bản mà không phụ thuộc vào Tech như quy trình trước đây.
 2.  **Mobase Design System (V2):** Hệ thống ngôn ngữ thiết kế và component dùng chung chuẩn hóa giao diện Web MoMo.

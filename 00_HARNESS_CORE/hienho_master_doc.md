@@ -79,7 +79,7 @@
 - **Transformation Zone (2 Mũi nhọn bứt phá quy mô):**
   - **Financial Hub** (`/tai-chinh`): 7 Simulator Widgets (CIC, Tính lương, Phân bổ lương, Tỷ giá, Giá vàng, Lãi suất Net Yield Gap, Chứng chỉ quỹ), mở phễu Vay Nhanh & Ví Trả Sau.
   - **Vehicle Hub** (`/tien-ich-giao-thong`): VTTI (Phạt nguội 0-CAPTCHA, Đóng phạt trực tuyến, ePass, Đăng kiểm, Giá xăng, Trạm sạc EV, Garage) và InsurTech (Bảo hiểm ô tô/xe máy). Trọng tâm: Migration MoSpark + Revised UI.
-- **Incubation Zone (Toàn bộ phân hệ còn lại):** **Insurance Hub** (`/bao-hiem`), **Travel Hub** (`/du-lich-di-lai`), **Student Hub** (`/sinh-vien`), **Lottery Hub** (`/ve-so`), **Payment Hub** (`/thanh-toan-so`), **Game Hub** (`/nap-the-game`), **Merchant Hub** (`/merchant`), **New User Hub** (`/download`) và **Home Web** (`momo.vn`).
+- **Incubation Zone (Toàn bộ các Hubs còn lại):** **Insurance Hub** (`/bao-hiem`), **Travel Hub** (`/du-lich-di-lai`), **Student Hub** (`/sinh-vien`), **Lottery Hub** (`/ve-so`), **Payment Hub** (`/thanh-toan-so`), **Game Hub** (`/nap-the-game`), **Merchant Hub** (`/merchant`), **New User Hub** (`/download`) và **Home Web** (`momo.vn`).
 - **Productivity Zone (Hạ tầng Nền tảng):** **MoSpark Platform** (`mospark.mservice.io`) và **Web User Login & Auth Platform** (`m.momo.vn` - Platform chuyên biệt quản trị xác thực, SSO, Web Login và User Session).
 
 **Platform Health & Governance (Vẫn duy trì):**
@@ -387,7 +387,7 @@ Nhằm đáp ứng sự bùng nổ của trí tuệ nhân tạo và chiến lư�
     *   **KR 3.3:** Xây dựng Pillar/Cluster Content Strategy cho nhóm Use Case Credit & Insurance, kết hợp programmatic SEO để scale. Đảm bảo mỗi sản phẩm web đều có đóng góp DLU/MAU.
 *   **Kết quả đạt được thực tế H1/2026 (Actual Achievements):**
     *   **Đối với KR 3.1 (MiniWeb & Utility Tools):**
-        *   *Phạt Nguội (Traffic Fines):* Triển khai thành công dự án P0 Phạt Nguội Phase 1 (Live) tích hợp API real-time từ TTDK & CSGT, bản đồ camera, tính năng đăng ký nhận cảnh báo vi phạm (Subscription).
+        *   *Phạt Nguội (Traffic Fines):* Triển khai thành công dự án trọng điểm Phạt Nguội Phase 1 (Live) tích hợp API real-time từ TTDK & CSGT, bản đồ camera, tính năng đăng ký nhận cảnh báo vi phạm (Subscription).
         *   *CIC Simulator:* Xây dựng và hoàn thiện HTML Widget giả lập điểm tín dụng CIC (band 300-850) làm PLG hook.
         *   *Finhub Simulation Tools:* Thiết lập logic tính toán và thiết kế wireframe prototype cho bộ 10 công cụ tài chính cốt lõi (Gross-Net, lãi tiết kiệm, lương hưu...).
     *   **Đối với KR 3.2 (Thu hút organic traffic & Chuyển đổi DLU/MAU):**
@@ -1446,7 +1446,7 @@ Dùng để đánh giá định kỳ (quarterly) mức độ tham chiến của 
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Vehicle Hub (Phạt Nguội & Tiện ích Giao thông)</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P0 Transformation Project</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trọng Điểm Transformation Project</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiến + Hùng (FE) + Hoài Anh (API)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Target Web: 315K visits, 100K WVP; Target App: 260K WVP, Top 3 Google Search; 0-CAPTCHA & MoSpark Migration.</td>
     </tr>
@@ -2104,7 +2104,7 @@ Xây dựng nền tảng quản lý nội dung Web thế hệ mới thay thế A
 ---
 
 **Meeting log:**
-> Chưa có – sẽ cập nhật khi có sync
+> Chưa có: sẽ cập nhật khi có sync
 
 ---
 
@@ -2164,7 +2164,7 @@ Xây dựng nền tảng quản lý nội dung Web thế hệ mới thay thế A
 **Status:** Active
 
 **Meeting log:**
-> Chưa có – sẽ cập nhật khi có sync
+> Chưa có: sẽ cập nhật khi có sync
 
 ---
 
@@ -2295,7 +2295,7 @@ flowchart TD
 **Meeting log:**
 **[2026-05-12] - Kickoff Cinema URL Lifecycle**
 - Participants: Hiến, Hùng, Nhật
-- Key decisions: Tự động hóa chuyển phase cho 959 zombie URLs. P0: Xử lý Group C (traffic = 0) bằng 410 Gone.
+- Key decisions: Tự động hóa chuyển phase cho 959 zombie URLs. Ưu tiên hàng đầu: Xử lý Group C (traffic = 0) bằng 410 Gone.
 
 ---
 
@@ -2398,26 +2398,26 @@ Spoke: /thanh-toan-momo-{brand} → Breadcrumb về VTS Hub → Related merchant
   </thead>
   <tbody>
     <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P0</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tầng 1 (Bắt buộc)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Crawl & Index Integrity</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Block publish</td>
     </tr>
     <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tầng 2 (Chuẩn hóa)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Structured Data & Entity Signal</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Block publish</td>
     </tr>
     <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tầng 3 (Hiệu năng)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Performance & UX Signal (CWV)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Warning, không block</td>
     </tr>
   </tbody>
 </table>
 
-- P0 items: robots meta, canonical, URL slug, HTTP 200, sitemap inclusion
-- P1 items: Schema markup hợp lệ, entity mention, FAQ structured data
-- P2 items: LCP < 2.5s, CLS < 0.1, INP < 200ms
+- Tiêu chuẩn Tầng 1: robots meta, canonical, URL slug, HTTP 200, sitemap inclusion
+- Tiêu chuẩn Tầng 2: Schema markup hợp lệ, entity mention, FAQ structured data
+- Tiêu chuẩn Tầng 3: LCP < 2.5s, CLS < 0.1, INP < 200ms
 
 **SOP 2 - Content Angle Governance (5 bước):**
 1. Angle Registration: mỗi keyword/angle chỉ được owned bởi 1 Use Case
@@ -2898,7 +2898,7 @@ MoSpark không còn là CMS đơn thuần mà là một sản phẩm phần mề
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-04-29</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2.3</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cập nhật từ Web Platform OKR 2026: Org Chart T4 (Hiến report Bảo+Công, Bảo = Project Lead Out-App Traffic từ 10/04); T5 Out-App Traffic thành team cross-functional riêng; Phạt Nguội nâng P0 (CEO mandate, target live đầu T5); GenAI Content đang tích hợp Claude API, pilot Phạt Nguội; Full Funnel Tracking Pipeline status (GA4 done, GSC+Appsflyer đang triển khai, Hiến observe); bổ sung OKR alignment và role mới cho Bảo</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cập nhật từ Web Platform OKR 2026: Org Chart T4 (Hiến report Bảo+Công, Bảo = Project Lead Out-App Traffic từ 10/04); T5 Out-App Traffic thành team cross-functional riêng; Phạt Nguội nâng ưu tiên cao nhất (CEO mandate, target live đầu T5); GenAI Content đang tích hợp Claude API, pilot Phạt Nguội; Full Funnel Tracking Pipeline status (GA4 done, GSC+Appsflyer đang triển khai, Hiến observe); bổ sung OKR alignment và role mới cho Bảo</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-04-30</td>
@@ -3049,7 +3049,7 @@ MoSpark không còn là CMS đơn thuần mà là một sản phẩm phần mề
 - **Tháng 5/2026:** Khởi tạo tài liệu và chuẩn hóa cấu trúc thư mục.
 - **2026-06-09:** Cập nhật bảng phân công chi tiết nhân sự (PIC) cho các dự án trọng điểm của Web Platform (Mục 2.3b).
 - **2026-06-09 (v4.5):** Tái phân công vai trò Bảo (MoSpark Platform Owner), Hiến (Foundation & Platform Detail Design) và Hùng (MoBase Design System Owner).
-- **2026-06-09 (v4.6):** Chi tiết hóa scope của Thuận (phân phối MoSpark, Umami dashboard, GenAI Galleries, BigQuery/GSC/GA4 tracking API) và Hiếu (chủ trì UI/UX/Dev Widget Management).
+- **2026-06-09 (v4.6):** Chi tiết hóa scope của Thuận (phân phối MoSpark, Umami dashboard, GenAI Galleries, BigQuery/GSC/GA4 tracking API) và Hiếu (điều phối UI/UX/Dev Widget Management).
 - **2026-06-10 (v4.8):** Tích hợp MoSpark Multimodal Studio (Video/Image/Audio/Text) vào GenAI Content Engine, phân bổ role mới cho Thuận (Image/Video Nodes) và Trọng (Text/Logic Nodes).
 - **2026-06-09 (v4.7):** Tích hợp Google Map Search Crawler & Dynamic Schema theo ngành hàng vào Merchant BRD/PRD, tái định nghĩa cụ thể JTBD cho 10 core Utilities và loại bỏ static shortcode specifications khỏi Widget Store BRD.
 

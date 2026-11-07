@@ -58,7 +58,7 @@ Kênh Website vận hành dựa trên các tiện ích tra cứu miễn phí đ�
 | **1** | Tìm kiếm thông tin | Search từ khóa (Phạt nguội, Giá xăng, Phong thủy, Đăng kiểm) trên Google | Hiển thị kết quả tìm kiếm tự nhiên của momo.vn | Google Search |
 | **2** | Trải nghiệm tiện ích | Truy cập trang Web, nhập biển số xe để tra cứu miễn phí | Trả kết quả tra cứu tốc độ cao, không yêu cầu đăng nhập | Website momo.vn |
 | **3** | Nhận diện giá trị | Xem kết quả tra cứu và đề xuất gói ưu đãi đính kèm | Hiển thị nút CTA chuyển tiếp mở App MoMo để nhận nhắc lịch | Website momo.vn |
-| **4** | Chuyển đổi kênh | Quét Dynamic QR Code (trên máy tính) hoặc bấm nút Onelink (trên điện thoại) | Hệ thống phân luồng mở ứng dụng MoMo hoặc chuyển về Store | QR / Onelink |
+| **4** | Chuyển đổi kênh | Quét Dynamic QR Code (trên máy tính) hoặc nhấp vào nút Onelink (trên điện thoại) | Hệ thống phân luồng mở ứng dụng MoMo hoặc chuyển về Store | QR / Onelink |
 | **5** | Kích hoạt In-App | Đăng nhập ứng dụng MoMo | Lưu Thẻ Xe Số vào hồ sơ, nhận cảnh báo tự động & thanh toán | App MoMo |
 
 #### Web Spoke Directory
@@ -102,7 +102,7 @@ Kênh Website vận hành dựa trên các tiện ích tra cứu miễn phí đ�
 * **Lưu lượng Chốt Sổ (Full Month 30d):** Đạt **66.808 Pageviews** (chiếm 1.69% tổng lưu lượng Kênh Web).
 * **Tỷ lệ hoàn thành Target:** Đạt **33,40% Target Tháng 9** (200.000 PVs).
 * **Tốc độ vận hành (Daily Pace):** Đạt **2.227 PV/ngày**.
-* **Phân rã theo Verticals Chốt Sổ Tháng 9:**
+* **cơ cấu theo Verticals Chốt Sổ Tháng 9:**
   * Phạt Nguội: **39.382 PVs** (59.0% Hub)
   * Bảo Hiểm Ô Tô: **19.022 PVs** (28.5% Hub)
   * Bảo Hiểm Xe Máy: **6.178 PVs** (9.2% Hub)
@@ -209,7 +209,7 @@ Toàn bộ 19 thị trường ngành (23.2 triệu search volume) và các tính
 
 ### 3.2 Master Page Block Spec
 
-* **Main Headline:** `Một chiếc xe – Một tài khoản quản lý tự động trên MoMo`
+* **Main Headline:** `Một chiếc xe: Một tài khoản quản lý tự động trên MoMo`
 * **Sub-headline:** `Tự động hóa toàn bộ nhắc lịch, cảnh báo vi phạm và đơn giản hóa thủ tục xe cộ ngay trên App MoMo.`
 
 | Cột | Tiêu Đề Thẻ | Nội Dung Mô Tả Chi Tiết |
@@ -333,20 +333,20 @@ Các trang sản phẩm độc lập có cấu trúc đường dẫn Root URL c�
 #### B. Chuỗi Chuyển Tiếp & Phân Định Đỉnh Trạm Entry Points
 
 * **Chuỗi phân luồng chuyển tiếp Entry Points:**
-  `[Bấm nút Entry Point trên Web Mobile]` ➔ `[Kích hoạt đường dẫn Onelink tiêu chuẩn]` ➔ `[Hệ thống Onelink phân luồng: Đã cài App ➔ Mở App MoMo / Chưa cài App ➔ Điều hướng về App Store / Google Play]` ➔ `[Chuyển giao cho Luồng Sản Phẩm Phía App xử lý]`
+  `[nhấp vào nút Entry Point trên Web Mobile]` ➔ `[Kích hoạt đường dẫn Onelink tiêu chuẩn]` ➔ `[Hệ thống Onelink phân luồng: Đã cài App ➔ Mở App MoMo / Chưa cài App ➔ Điều hướng về App Store / Google Play]` ➔ `[Chuyển giao cho Luồng Sản Phẩm Phía App xử lý]`
 
 | Bước | Tên Giai Đoạn | Trải Nghiệm Người Dùng (UX) | Hạ Tầng / Cơ Chế Kỹ Thuật | Phân Định Trách Nhiệm Scope |
 | :---: | :--- | :--- | :--- | :--- |
-| **1** | Nhấp điểm chạm Entry Point trên Web | Bấm nút hành động ('Lưu biển số' / 'Nhận thông báo' / 'Mua ngay') | Bắt sự kiện Click trên Web, kích hoạt mở đường dẫn Onelink tiêu chuẩn | **100% Web Platform Scope (Entry Point)** |
+| **1** | Nhấp điểm chạm Entry Point trên Web | nhấp vào nút hành động ('Lưu biển số' / 'Nhận thông báo' / 'Mua ngay') | Bắt sự kiện Click trên Web, kích hoạt mở đường dẫn Onelink tiêu chuẩn | **100% Web Platform Scope (Entry Point)** |
 | **2** | Phân luồng chuyển tiếp | Chuyển tiếp tức thì, không bị gián đoạn màn hình trắng | Onelink Engine (Appsflyer) xử lý định tuyến theo trạng thái thiết bị | **Web Platform x InsurTech / VTTI Scope** |
 | **3A** | Mở ứng dụng In-App | Mở ứng dụng MoMo vào đúng màn hình tiện ích xe tương ứng | Luồng tiếp nhận schema và chuyển tiếp màn hình nội bộ trên App | **100% App Product Scope (InsurTech / VTTI)** |
 | **3B** | Cài đặt ứng dụng | Chuyển đến trang tải ứng dụng MoMo trên Store | Điều hướng Store (App Store trên iOS / Google Play trên Android) | **Store Platform Scope** |
 
 #### C. Phối Hợp Đội Ngũ (Team Alignment)
-* **Web Platform:** Chủ trì thiết kế và phát triển Kênh Web, tối ưu lưu lượng tìm kiếm tự nhiên (500K Traffic) và tích hợp các điểm chạm Entry Points (nút bấm CTA, mã Dynamic QR, Onelink) dẫn dắt chuyển đổi W2A.
-* **InsurTech Cell:** Đơn vị chủ trì chính về **Khung KPI, Mục tiêu Tăng trưởng (Growth) và Doanh thu Bảo hiểm**; vận hành luồng mua Bảo hiểm xe máy, Bảo hiểm ô tô và thúc đẩy tỷ lệ hoàn tất đơn hàng (+10% CR Uplift) qua cơ chế Auto-fill từ dữ liệu Web.
-* **VTTI:** Đơn vị chủ trì và sở hữu toàn bộ **API Sản Phẩm và Dữ Liệu Đối Tác** (API Cây xăng, Trạm sạc EV, Garage, Biểu phí BOT, ePass); quản trị hạ tầng backend của tính năng Thẻ Xe Số (Vehicle Profile) In-App.
-* **Content Team:** Chủ trì sản xuất bài viết cẩm nang và nội dung hướng dẫn giao thông.
+* **Web Platform:** điều phối thiết kế và phát triển Kênh Web, tối ưu lưu lượng tìm kiếm tự nhiên (500K Traffic) và tích hợp các điểm chạm Entry Points (nút bấm CTA, mã Dynamic QR, Onelink) dẫn dắt chuyển đổi W2A.
+* **InsurTech Cell:** Đơn vị điều phối chính về **Khung KPI, Mục tiêu Tăng trưởng (Growth) và Doanh thu Bảo hiểm**; vận hành luồng mua Bảo hiểm xe máy, Bảo hiểm ô tô và thúc đẩy tỷ lệ hoàn tất đơn hàng (+10% CR Uplift) qua cơ chế Auto-fill từ dữ liệu Web.
+* **VTTI:** Đơn vị điều phối và sở hữu toàn bộ **API Sản Phẩm và Dữ Liệu Đối Tác** (API Cây xăng, Trạm sạc EV, Garage, Biểu phí BOT, ePass); quản trị hạ tầng backend của tính năng Thẻ Xe Số (Vehicle Profile) In-App.
+* **Content Team:** điều phối sản xuất bài viết cẩm nang và nội dung hướng dẫn giao thông.
 
 ---
 
@@ -474,7 +474,7 @@ Bộ máy tính được thiết kế dạng Multi-tab, cho phép chuyển đổ
 
 ### 3.8 Đặc Tả Kỹ Thuật: Chuyên Trang Bản Đồ Cây Xăng Gần Đây (/cay-xang) & 5 Trang Location Trọng Điểm
 
-Chuyên trang Cây Xăng (`/cay-xang`) thâu tóm toàn bộ nhóm từ khóa có ý định hành động khẩn cấp (Local & Urgent Search - 550.000 volume/tháng). Sản phẩm được thiết kế gồm **1 Trang Master Map** và **5 Trang Con (Subpages)** đánh vào các khu vực có mật độ tìm kiếm cao nhất cả nước:
+Chuyên trang Cây Xăng (`/cay-xang`) bao phủ toàn bộ nhóm từ khóa có ý định hành động khẩn cấp (Local & Urgent Search - 550.000 volume/tháng). Sản phẩm được thiết kế gồm **1 Trang Master Map** và **5 Trang Con (Subpages)** đánh vào các khu vực có mật độ tìm kiếm cao nhất cả nước:
 
 #### A. Định Vị Trang Chính Master Hub (/cay-xang)
 * **Trọng tâm sản phẩm:** Tập trung giải quyết 2 bài toán tìm kiếm lớn nhất: **"Cây xăng gần đây"** (theo định vị GPS tức thời) và **"Cây xăng mở cửa 24/24"** (đáp ứng nhu cầu ban đêm).
@@ -482,7 +482,7 @@ Chuyên trang Cây Xăng (`/cay-xang`) thâu tóm toàn bộ nhóm từ khóa c�
   * Bản đồ tương tác kết hợp Bottom Sheet trượt trên Mobile.
   * Tự động tính khoảng cách theo công thức Haversine chạy Client-side (<15ms).
   * Bộ lọc nhanh (Filter Chips): Thương hiệu (Petrolimex, PVOil, Comeco), Đang mở cửa / Mở 24/7, Chấp nhận thanh toán MoMo.
-  * Thao tác 1 chạm: Bấm nút "Chỉ đường" mở thẳng ứng dụng Google Maps / Apple Maps với tọa độ đích `{lat, lng}`.
+  * Thao tác 1 chạm: nhấp vào nút "Chỉ đường" mở thẳng ứng dụng Google Maps / Apple Maps với tọa độ đích `{lat, lng}`.
 
 #### B. Danh Mục 5 Trang Location Trọng Điểm (Target Subpages)
 
@@ -490,7 +490,7 @@ Nhằm tối ưu hóa nguồn lực sản xuất nội dung, hệ thống không
 
 | STT | Phân Nhóm | Tên Trang Con | URL Chuẩn Hóa | Mục Tiêu Từ Khóa & Đặc Điểm Khu Vực |
 | :---: | :--- | :--- | :--- | :--- |
-| **1** | **Tỉnh / Thành** | Cây Xăng TP. Hồ Chí Minh | `/tien-ich-giao-thong/cay-xang/tp-hcm` | Thâu tóm thị trường lớn nhất phía Nam; tích hợp mạng lưới trạm Comeco, Petrolimex, PVOil. |
+| **1** | **Tỉnh / Thành** | Cây Xăng TP. Hồ Chí Minh | `/tien-ich-giao-thong/cay-xang/tp-hcm` | bao phủ thị trường lớn nhất phía Nam; tích hợp mạng lưới trạm Comeco, Petrolimex, PVOil. |
 | **2** | **Tỉnh / Thành** | Cây Xăng Hà Nội | `/tien-ich-giao-thong/cay-xang/ha-noi` | Thị trường lớn nhất phía Bắc; tập trung các trạm Petrolimex & MIPEC mở cửa 24/7 nội đô. |
 | **3** | **Tỉnh / Thành** | Cây Xăng Đà Nẵng | `/tien-ich-giao-thong/cay-xang/da-nang` | Trung tâm du lịch miền Trung; tập trung phục vụ khách thuê xe máy và tài xế du lịch. |
 | **4** | **Tỉnh / Thành** | Cây Xăng Bình Dương | `/tien-ich-giao-thong/cay-xang/binh-duong` | Thủ phủ khu công nghiệp; tập trung lưu lượng xe tải, container và phương tiện công nhân. |
@@ -530,11 +530,11 @@ Mỗi trang trong cụm 10 trang con bắt buộc phải đi kèm khối nội d
 
 ### 3.9 Đặc Tả Kỹ Thuật: Chuyên Trang Trạm Sạc Xe Điện (/tram-sac) & Bộ Tiện Ích Sạc Pin
 
-Chuyên trang Trạm Sạc Xe Điện (`/tram-sac`) thâu tóm lưu lượng tìm kiếm đứng thứ 3 toàn hệ sinh thái (1.237.970 search volume/tháng). Nhằm tối ưu hóa tài nguyên và tập trung 100% vào tệp ô tô điện có giá trị kinh tế cao (High ARPU), hệ thống quy hoạch **7 trang trọng điểm** và **duy nhất 1 tiện ích lõi (Core Utility)**:
+Chuyên trang Trạm Sạc Xe Điện (`/tram-sac`) bao phủ lưu lượng tìm kiếm đứng thứ 3 toàn hệ sinh thái (1.237.970 search volume/tháng). Nhằm tối ưu hóa tài nguyên và tập trung 100% vào tệp ô tô điện có giá trị kinh tế cao (High ARPU), hệ thống quy hoạch **7 trang trọng điểm** và **duy nhất 1 tiện ích lõi (Core Utility)**:
 
 #### A. Danh Mục 7 Trang Trọng Điểm Cụm Trạm Sạc EV
 1. `/tien-ich-giao-thong/tram-sac`: Bản đồ trạm sạc xe điện toàn quốc (Master Hub).
-2. `/tien-ich-giao-thong/tram-sac/vinfast`: Chuyên trang mạng lưới trạm sạc VinFast / V-Green (thâu tóm 85% lượng tìm kiếm toàn thị trường).
+2. `/tien-ich-giao-thong/tram-sac/vinfast`: Chuyên trang mạng lưới trạm sạc VinFast / V-Green (bao phủ 85% lượng tìm kiếm toàn thị trường).
 3. `/tien-ich-giao-thong/tram-sac/cao-toc`: Mạng lưới trụ sạc nhanh DC tại các trạm dừng nghỉ trên các trục cao tốc huyết mạch (Pháp Vân - Cầu Giẽ, Hà Nội - Hải Phòng, Long Thành - Dầu Giây - Phan Thiết).
 4. `/tien-ich-giao-thong/tram-sac/ha-noi`: Trạm sạc ô tô điện tại Hà Nội (mật độ chung cư & Vincom lớn nhất miền Bắc).
 5. `/tien-ich-giao-thong/tram-sac/tp-hcm`: Trạm sạc ô tô điện tại TP. Hồ Chí Minh.
@@ -587,7 +587,7 @@ Khi người dùng chọn **[ VF 5 ]** ➔ Bấm **[ Sạc 20% - 80% tại trụ
 * **So sánh tài chính:** *"Cùng quãng đường này xe xăng tốn ~220.000 đ ➔ Bạn tiết kiệm được ~134.000 đ"*.
 
 #### C. Luồng Chuyển Đổi Web-to-App (W2A Hooks)
-* **Bán chéo Bảo hiểm Thân vỏ Ô tô điện:** Khối banner chân trang: *"Bảo hiểm xe điện MoMo – Bảo vệ pin toàn diện, cam kết đền bù thủy kích 100%"*.
+* **Bán chéo Bảo hiểm Thân vỏ Ô tô điện:** Khối banner chân trang: *"Bảo hiểm xe điện MoMo: Bảo vệ pin toàn diện, cam kết đền bù thủy kích 100%"*.
 * **Nạp ví ePass:** Đón đầu các tài xế xe điện chạy cao tốc.
 
 ---
@@ -757,7 +757,7 @@ graph TD
 | **3B** | **Kịch Bản Không Vi Phạm** | Thẻ chúc mừng phương tiện không có lỗi vi phạm. Gợi ý *"Đăng ký nhận cảnh báo phạt nguội tự động định kỳ"* qua App MoMo và khối mua bảo hiểm TNDS/Thân vỏ. | Onelink dẫn vào tính năng Quản lý xe (Vehicle Profile) In-App để kích hoạt bot quét tự động; Widget bán chéo bảo hiểm InsurTech. | Web ➔ MoMo App |
 
 #### B. Chiến Lược Programmatic SEO Cổng Phạt Nguội 63 Tỉnh/Thành (/phat-nguoi/[tinh])
-* **Mục tiêu:** Thâu tóm lưu lượng tìm kiếm địa phương có ý định cao dạng `phạt nguội [tỉnh/thành]` (VD: `phạt nguội Hà Nội`, `phạt nguội TP.HCM`, `phạt nguội Đà Nẵng`, `phạt nguội Hải Phòng`...).
+* **Mục tiêu:** bao phủ lưu lượng tìm kiếm địa phương có ý định cao dạng `phạt nguội [tỉnh/thành]` (VD: `phạt nguội Hà Nội`, `phạt nguội TP.HCM`, `phạt nguội Đà Nẵng`, `phạt nguội Hải Phòng`...).
 * **Cấu trúc dữ liệu On-page chuyên biệt từng tỉnh:**
   1. Khung tra cứu biển số tích hợp sẵn mã vùng biển số địa phương (VD: Hà Nội 29, 30; TP.HCM 50, 51...).
   2. Bảng tổng hợp các điểm nóng camera giám sát giao thông trên địa bàn tỉnh/thành (vị trí giao lộ, tuyến đường lắp đặt camera AI).
@@ -772,7 +772,7 @@ Nhằm tối ưu hóa năng lực hiển thị Rich Snippets trên Google Search
 
 #### A. Ma Trận Loại Schema Bắt Buộc Theo Từng Trang
 
-| Trang / Phân Hệ | URL Slug | Trạng Thái | Loại Schema Chính (@type) | Mục Tiêu Rich Snippets Trên Google |
+| Trang / Nhóm Dịch Vụ | URL Slug | Trạng Thái | Loại Schema Chính (@type) | Mục Tiêu Rich Snippets Trên Google |
 | :--- | :--- | :---: | :--- | :--- |
 | **Trang Chủ Master Hub** | `/tien-ich-giao-thong` | Đã Go-live | `WebSite`, `Organization`, `Service`, `ItemList`, `FAQPage` | Xác thực thực thể thương hiệu MoMo, kích hoạt Sitelinks Search Box và danh mục dịch vụ. |
 | **Bảng Giá Xăng Dầu** | `/gia-xang` | Sắp Go-live (Phase 1.1) | `WebPage`, `ItemList`, `Product`, `Offer`, `FAQPage` | Rich Snippet biểu giá nhiên liệu Euro 5, ngày điều hành thứ Năm và FAQ mở rộng. |
@@ -900,11 +900,11 @@ Hệ thống chuẩn hóa 1.631 bản ghi triệu chứng xe thành cấu trúc 
 
 ---
 
-### 3.20 Đặc Tả Kỹ Thuật P0 Priority: Chuyên Trang Chi Tiết Dòng Xe & Báo Giá Bảo Hiểm Ô Tô Real-time (/hang-xe/[brand]/[model])
+### 3.20 Đặc Tả Kỹ Thuật Trọng Tâm: Chuyên Trang Chi Tiết Dòng Xe & Báo Giá Bảo Hiểm Ô Tô Real-time (/hang-xe/[brand]/[model])
 
-Chuyên trang Chi Tiết Dòng Xe (`momo.vn/tien-ich-giao-thong/hang-xe/[brand]/[model]`, VD: `/hang-xe/vinfast/vf3`, `/hang-xe/toyota/camry`) được đưa lên **P0 Priority trong tuần**, tập trung vào 2 khối chức năng cốt lõi:
+Chuyên trang Chi Tiết Dòng Xe (`momo.vn/tien-ich-giao-thong/hang-xe/[brand]/[model]`, VD: `/hang-xe/vinfast/vf3`, `/hang-xe/toyota/camry`) được đưa lên **ưu tiên triển khai trong tuần**, tập trung vào 2 khối chức năng cốt lõi:
 
-#### A. Khối 1 (P0 Core): Widget Báo Giá Bảo Hiểm Ô Tô Real-time (InsurTech API Integration)
+#### A. Khối 1 (Core Module): Widget Báo Giá Bảo Hiểm Ô Tô Real-time (InsurTech API Integration)
 - **Cơ chế tích hợp:** Gọi trực tiếp REST API từ InsurTech Car Insurance Engine (`POST /api/v1/insurance/car/quote`).
 - **Input Parameters:** `make`, `model`, `variant` (phiên bản chi tiết), `manufacture_year` (2017-2026), `seats`, `engine_type` (Electric/Petrol/Diesel/Hybrid), `usage_type` (PERSONAL/COMMERCIAL).
 - **Output Trả về & Hiển thị:**
@@ -912,7 +912,7 @@ Chuyên trang Chi Tiết Dòng Xe (`momo.vn/tien-ich-giao-thong/hang-xe/[brand]/
   - **Phí Bảo hiểm Thân vỏ / Vật chất xe:** Tính toán tự động theo ma trận giá trị thị trường thực tế (VD: Tỷ lệ phí ~1.30% x Giá trị xe). Trả về mức phí so sánh của 9 hãng bảo hiểm đối tác (Bảo Việt, PVI, Liberty, PJICO, MIC...).
 - **Chuyển đổi Web-to-App:** Nút CTA **[Mua Bảo Hiểm Nhận GCN Điện Tử 30s]** kích hoạt Dynamic QR Code Modal (Desktop) hoặc Appsflyer Onelink Deep Link (Mobile) mở trực tiếp màn hình In-App với đầy đủ thông tin xe pre-filled.
 
-#### B. Khối 2 (P0 Core): Danh Sách Tên Xe & Biến Thể Chi Tiết (Car Trim Catalog)
+#### B. Khối 2 (Core Module): Danh Sách Tên Xe & Biến Thể Chi Tiết (Car Trim Catalog)
 - **Dữ liệu nạp:** Truy xuất trực tiếp từ Master Catalog 1,534 biến thể xe ô tô (`Car Data.xlsx`).
 - **Nội dung hiển thị:**
   - Liệt kê toàn bộ các biến thể con (Trims/Variants) thuộc Dòng xe đang xem (VD với VinFast VF3: `VF3 Plus`, `VF3 Base`...).
@@ -922,8 +922,8 @@ Chuyên trang Chi Tiết Dòng Xe (`momo.vn/tien-ich-giao-thong/hang-xe/[brand]/
 #### D. Cấu Trúc Giao Diện 8 Block Chuẩn Hóa (Page Block Architecture)
 Toàn bộ chuyên trang Chi Tiết Dòng Xe (`/hang-xe/[brand]/[model]`) được quy hoạch cấu trúc 8 Block Section dọc:
 1. **Block 1 (Hero Section):** Ảnh xe, Hãng xe, Dòng xe, Badge Phân khúc, Selector Chọn năm sản xuất (2017 - 2026).
-2. **Block 2 (P0 Core Widget Báo Giá Bảo Hiểm):** Widget tính phí Bảo hiểm TNDS Bắt buộc & Phí Thân vỏ real-time 9 hãng (API `/quote`).
-3. **Block 3 (P0 Core Catalog Biến Thể Chi Tiết):** Bảng danh sách các phiên bản con (Trims) kèm số chỗ, động cơ, giá 2026 & phí BH tối thiểu.
+2. **Block 2 (Core Widget Báo Giá Bảo Hiểm):** Widget tính phí Bảo hiểm TNDS Bắt buộc & Phí Thân vỏ real-time 9 hãng (API `/quote`).
+3. **Block 3 (Core Catalog Biến Thể Chi Tiết):** Bảng danh sách các phiên bản con (Trims) kèm số chỗ, động cơ, giá 2026 & phí BH tối thiểu.
 4. **Block 4 (Máy Tính Giá Lăn Bánh):** Dự toán tổng chi phí đăng ký xe mới (Thuế trước bạ, biển số, bảo hiểm, đường bộ).
 5. **Block 5 (Widget Dự Toán Chi Phí Nuôi Xe):** Pre-filled Card tính 8 khoản chi phí nuôi xe hàng tháng.
 6. **Block 6 (Bản Đồ Định Vị Dịch Vụ):** Định vị Trạm sạc EV (với xe điện) hoặc Gara sửa chữa chính hãng (với xe xăng/dầu) gần nhất.
@@ -990,11 +990,11 @@ Dự án áp dụng mô hình hợp tác song phương (Bilateral) với đầu 
 
 | Nhóm Công Việc | Web Platform | InsurTech Cell |
 | :--- | :--- | :--- |
-| **Sản phẩm (UI/UX)** | **Chủ trì (A/R):** Xây dựng toàn bộ giao diện Web, luồng UI/UX và phễu Onelink W2A. | **Nghiệm thu (QC):** QC nghiệm thu chất lượng sản phẩm cuối trước khi Go-live. |
-| **Sản xuất Nội dung** | **Chủ trì (A/R):** Lên Content Plan và trực tiếp sản xuất bài viết (Content Production). | **Nghiệm thu (QC):** QC nội dung, kiểm duyệt độ chính xác luật và nghiệp vụ. |
-| **Hạ tầng Dữ liệu (API)** | **Hỗ trợ (C):** Phối hợp tích hợp và render API lên giao diện Web. | **Chủ trì (A/R):** Cung cấp API (nếu có) và Database liên quan (Giá xăng, Trạm sạc...). |
-| **Đo lường (Tracking)** | **Chủ trì Web (A/R):** Thiết lập DataLayer, tracking luồng hành vi trên Web. | **Chủ trì In-App (A/R):** Theo dõi luồng in-app và tỷ lệ rớt phễu thanh toán. |
-| **Growth Plan** | **Hỗ trợ (C):** Đẩy mạnh SEO để hứng Organic Search Traffic. | **Chủ trì (A/R):** Lên Growth Plan tổng thể, hoạch định chiến lược và In-app Marketing. |
+| **Sản phẩm (UI/UX)** | **điều phối (A/R):** Xây dựng toàn bộ giao diện Web, luồng UI/UX và phễu Onelink W2A. | **Nghiệm thu (QC):** QC nghiệm thu chất lượng sản phẩm cuối trước khi Go-live. |
+| **Sản xuất Nội dung** | **điều phối (A/R):** Lên Content Plan và trực tiếp sản xuất bài viết (Content Production). | **Nghiệm thu (QC):** QC nội dung, kiểm duyệt độ chính xác luật và nghiệp vụ. |
+| **Hạ tầng Dữ liệu (API)** | **Hỗ trợ (C):** Phối hợp tích hợp và render API lên giao diện Web. | **điều phối (A/R):** Cung cấp API (nếu có) và Database liên quan (Giá xăng, Trạm sạc...). |
+| **Đo lường (Tracking)** | **điều phối Web (A/R):** Thiết lập DataLayer, tracking luồng hành vi trên Web. | **điều phối In-App (A/R):** Theo dõi luồng in-app và tỷ lệ rớt phễu thanh toán. |
+| **Growth Plan** | **Hỗ trợ (C):** Đẩy mạnh SEO để hứng Organic Search Traffic. | **điều phối (A/R):** Lên Growth Plan tổng thể, hoạch định chiến lược và In-app Marketing. |
 
 ---
 
@@ -1013,7 +1013,7 @@ Dự án áp dụng mô hình hợp tác song phương (Bilateral) với đầu 
 | **v8.23** | 2026-09-08 | Web Product Lead | **Bổ Sung Kiến Trúc Schema JSON-LD & Script Mẫu Chuẩn Cho Từng Trang (Mục 3.16 & Sheet Mới Trong Excel):** Bổ sung Mục 3.16 đặc tả toàn diện kiến trúc Schema JSON-LD cấu trúc `@graph` hợp nhất cho toàn bộ các trang đã go-live và sắp triển khai (Master Hub, Giá Xăng, Cây Xăng, Trạm Sạc EV, Phạt Nguội, Định Giá Xe, Xăng E10, ePass, Đăng Kiểm, Bãi Đỗ, Cứu Hộ, Bảo Hiểm). Đồng thời bổ sung sheet 'Schema Specs & Scripts' trong vehicle-hub-roadmap.xlsx cung cấp mã JSON-LD chuẩn để Web Frontend và SEO Team nhúng trực tiếp. |
 | **v8.22** | 2026-09-08 | Web Product Lead | **Hợp Nhất Hoàn Toàn Lộ Trình Tháng 9 Vào Sheet Roadmap Duy Nhất (Single SSOT):** Xóa bỏ tab phân mảnh 'Lộ Trình Tháng 9', tích hợp toàn bộ phạm vi kỹ thuật, dữ liệu API cần hỗ trợ (Dependencies) và cơ chế chuyển đổi Web-to-App (W2A Hook) vào một Sheet 'Roadmap' duy nhất trong file Excel vehicle-hub-roadmap.xlsx; bao phủ liền mạch từ Phase 1.0 (Tháng 8/2026), Phase 1.1 & Phase 1.2 (Tháng 9/2026) đến Phase 2 (Tháng 10/2026). Loại bỏ hoàn toàn sự trùng lặp và chồng chéo tài liệu. |
 | **v8.21** | 2026-09-08 | Web Product Lead | **Tái Cấu Trúc Sheet Market Sizing Trực Tiếp Theo Thị Trường (Bỏ Chia Cụm Chiến Lược):** Chuyển đổi toàn bộ cấu trúc bảng Market Sizing từ 5 cụm chiến lược trừu tượng sang phân loại trực tiếp theo 19 Thị Trường Ngành (bắt đầu bằng Giá Xăng 10.5M, Trạm Sạc EV 1.2M, Cây Xăng 550K, Phạt Nguội 6.5M...). Giúp bảng trực quan, thực tế, dễ tra cứu và bám sát trực tiếp vào sản phẩm. Đồng bộ đồng thời Mục 2.1 trong BRD và Sheet Market Sizing & Opportunities trong file Excel Roadmap. |
-| **v8.20** | 2026-09-08 | Web Product Lead | **Đại Tu & Đồng Bộ Toàn Bộ Sheet Market Sizing (23.2M Search/Tháng):** Cập nhật toàn bộ 24 chủ đề tiện ích thuộc 5 cụm chiến lược, lấp đầy các mã STT bị khuyết, chuẩn hóa URL slugs, phân rã chính xác nhu cầu VETC Hook (1.2M), Cứu hộ 24/7 (788K), Xăng E10 (85K), Phạt nguội 63 tỉnh/thành (450K), Định giá xe (16.1K), Bảo hiểm (116K); tích hợp công thức tính tỷ trọng động và liên kết trực tiếp với cơ chế Next Best Action của PO Mini App. Đồng bộ Mục 2.1 trong BRD và Sheet Market Sizing & Opportunities trong file Excel Roadmap. |
+| **v8.20** | 2026-09-08 | Web Product Lead | **Đại Tu & Đồng Bộ Toàn Bộ Sheet Market Sizing (23.2M Search/Tháng):** Cập nhật toàn bộ 24 chủ đề tiện ích thuộc 5 cụm chiến lược, lấp đầy các mã STT bị khuyết, chuẩn hóa URL slugs, cơ cấu chính xác nhu cầu VETC Hook (1.2M), Cứu hộ 24/7 (788K), Xăng E10 (85K), Phạt nguội 63 tỉnh/thành (450K), Định giá xe (16.1K), Bảo hiểm (116K); tích hợp công thức tính tỷ trọng động và liên kết trực tiếp với cơ chế Next Best Action của PO Mini App. Đồng bộ Mục 2.1 trong BRD và Sheet Market Sizing & Opportunities trong file Excel Roadmap. |
 | **v8.19** | 2026-09-08 | Web Product Lead | **Đồng Bộ Hoàn Chỉnh Lộ Trình Tháng 9 Theo Sprint Sheet Mới: Bổ Sung Chuyên Đề Xăng E10, Bộ Tiện Ích Xăng Dầu & Revamp Tra Cứu Phạt Nguội 2 Nhánh:** Bổ sung Mục 3.14 (Chuyên đề Xăng E10 `/xang-e10`, Tra cứu xe tương thích E10, Gợi ý cây xăng tuyến A ➔ B); Bổ sung Mục 3.15 (Revamp UI Phạt Nguội 2 nhánh trả kết quả gắn liền Touchpoint Nộp phạt In-App qua MoMo, Mapping blog mã lỗi theo Nghị định 100/123/NĐ-CP, Đăng ký cảnh báo phạt nguội định kỳ và Cổng Programmatic SEO 63 Tỉnh/Thành gắn điểm nóng camera giám sát). Cập nhật bảng Roadmap Mục 4.2 và loại bỏ trùng lặp bảng Change Log cũ. |
 | **v8.18** | 2026-09-08 | Web Product Lead | **Điều Chỉnh Roadmap Tháng 9 - Ưu Tiên Chuyên Trang Định Giá Xe Thông Minh (/dinh-gia-xe), Tạm Hoãn Bãi Đỗ Xe & Đăng Kiểm Sang Phase 2:** Bổ sung Mục 3.13 đặc tả kỹ thuật chi tiết chuyên trang Định Giá Xe tích hợp gọi API trực tiếp từ hệ sinh thái In-App Vehicle Center Mini App; hỗ trợ 2 luồng tra cứu (Biển số xe / Thủ công 4 bước); hiển thị 4 khối thông tin chuẩn hóa (Thẻ nhận diện xe, Khung giá thị trường [Mua vào - Bán lẻ] kèm giá khuyến nghị, Biểu đồ khấu hao 3 năm kèm cảnh báo ODO, Khối chuyển đổi Lead Gói vay mua xe & Bảo hiểm Thân vỏ 9 hãng). Tuân thủ tuyệt đối quy tắc ẩn 100% PII. Cập nhật đồng bộ toàn bộ 4 sheet trong vehicle-hub-roadmap.xlsx (Roadmap, Subpages Directory, Content Structure, Utilities & Formula Specs). |
 | **v8.17** | 2026-09-04 | Web Product Lead | **Chuẩn Hóa Toàn Diện Hệ Thống Web Event Tracking Theo Template SSOT:** Đọc và áp dụng 100% quy chuẩn từ file template DA (web-event-tracking-template.xlsx) vào vehicle-hub-roadmap.xlsx: Thiết lập page_name = 'vehiclehub', tái cấu trúc thành 3 Tab chuẩn hóa (Event Tracking Flow, Bộ Param Master Registry, Tracking Class & HTML Specs), chuẩn hóa cú pháp Event (web_vehiclehub_[object]_[action]) và Class HTML (vehiclehub-tracking-[action]-[target]). |
@@ -1023,15 +1023,15 @@ Dự án áp dụng mô hình hợp tác song phương (Bilateral) với đầu 
 | **v8.13** | 2026-09-03 | Web Product Lead | **Khóa Toàn Bộ Quy Chuẩn URL & Bộ Nguyên Tắc Chống Trùng Lặp (Mục 3.10):** Khẳng định dứt điểm: Trang Giá Xăng (/gia-xang) và Đăng Kiểm (/dang-kiem) là 1 trang duy nhất, tuyệt đối KHÔNG tạo trang con theo tỉnh/thành (tránh lỗi Duplicate Content). Chốt chặn ranh giới số lượng trang con cho Cây Xăng (10 trang) và Trạm Sạc (6 trang). Thiết lập 4 rào chắn kỹ thuật chống thuật toán Doorway Pages của Google. |
 | **v8.12** | 2026-09-03 | Web Product Lead | **Chuẩn Hóa Đặc Tả Chuyên Trang Trạm Sạc EV (/tram-sac) & Utility Duy Nhất:** Loại bỏ hoàn toàn trang sạc xe máy điện; quy hoạch 7 trang trọng điểm tập trung vào ô tô điện (1 Master, 1 VinFast brand, 1 Cao tốc, 4 Tỉnh/Thành lớn). Khóa duy nhất 1 Utility lõi: Máy tính Thời gian & Chi phí sạc pin xe điện (EV Charging & Cost Estimator) với đầy đủ Database dung lượng pin và công thức tính tiền/thời gian sạc. |
 | **v8.11** | 2026-09-03 | Web Product Lead | **Chuẩn Hóa 2 Yêu Cầu Kỹ Thuật Bắt Buộc Cho Cụm Cây Xăng:** Bổ sung vào Mục 3.8.C: (1) Năng lực Component phải hỗ trợ lọc động kết hợp (Multi-facet) theo mọi properties (Khu vực, Thương hiệu, Mở cửa 24/24, Thanh toán MoMo, Loại xăng dầu Euro 5); (2) Chiến lược Content SEO/GEO chuyên sâu (Schema LocalBusiness, FAQPage, Dynamic Metadata, bài viết Onpage Local). |
-| **v8.10** | 2026-09-03 | Web Product Lead | **Quy Hoạch Chi Tiết Chuyên Trang Cây Xăng & 10 Trang Con Local SEO:** Trang chính tập trung vào 'Cây xăng gần đây' & 'Cây xăng 24/24'. Quy hoạch chính xác cụm 10 trang con có Volume lớn nhất (4 Tỉnh/Thành: TP.HCM, Hà Nội, Đà Nẵng, Bình Dương; 6 Quận/Tuyến đường: Q.1, Q.7, Thủ Đức, Cầu Giấy, Đống Đa, Quốc Lộ 1A) để thâu tóm Local Search Traffic. |
+| **v8.10** | 2026-09-03 | Web Product Lead | **Quy Hoạch Chi Tiết Chuyên Trang Cây Xăng & 10 Trang Con Local SEO:** Trang chính tập trung vào 'Cây xăng gần đây' & 'Cây xăng 24/24'. Quy hoạch chính xác cụm 10 trang con có Volume lớn nhất (4 Tỉnh/Thành: TP.HCM, Hà Nội, Đà Nẵng, Bình Dương; 6 Quận/Tuyến đường: Q.1, Q.7, Thủ Đức, Cầu Giấy, Đống Đa, Quốc Lộ 1A) để bao phủ Local Search Traffic. |
 | **v8.9** | 2026-09-03 | Web Product Lead | **Cập Nhật Toàn Bộ Danh Mục Nhiên Liệu Mới Nhất:** Chuẩn hóa danh mục 7 mặt hàng xăng dầu theo biểu giá điều hành chính thức của Petrolimex/PVOil. Bổ sung dầu cao cấp DO 0,001S-V (Euro 5) bắt buộc cho ô tô máy dầu đời mới, phân định rõ chuẩn Euro 5 và Euro 2/3 (RON 95-V vs RON 95-III), dầu Mazut và sẵn sàng cho xăng sinh học E10. |
 | **v8.8** | 2026-09-03 | Web Product Lead | **Chi Tiết Hóa Toàn Bộ Công Thức Tính Toán Trang Giá Xăng:** Chuẩn hóa hệ thống biến số toán học ($P_{curr}, P_{prev}, \Delta P, V_{tank}, FC, D$), quy chuẩn công thức chi tiết cho 3 chế độ (Theo Lít, Theo Loại Xe/Đầy Bình, Theo Khoảng Cách/Lộ Trình), bổ sung bảng tham chiếu dung tích bình xăng chuẩn và quy tắc validation làm tròn tiền VNĐ. |
 | **v8.7** | 2026-09-03 | Web Product Lead | **Đặc Tả Chi Tiết Chuyên Trang Giá Xăng & Cây Xăng (/gia-xang):** Chuẩn hóa chi tiết 3 Components động cốt lõi: Bảng giá xăng realtime kèm Chart biến động; Bản đồ GPS định vị cây xăng dual-view (bản đồ + danh sách); Bộ máy tính nhiên liệu đa năng 3 chế độ (Tính theo Lít, Tính theo Loại xe/Đầy bình, Tính theo Khoảng cách/Lộ trình). |
 | **v8.6** | 2026-09-02 | Web Product Lead | **Bổ sung tính năng Phong Thủy Biển Số:** Tái tích hợp tiện ích `/phong-thuy-bien-so` vào Nhóm Pháp lý & Hồ sơ nhằm đẩy mạnh khả năng hứng Traffic (ước tính 989K search volume). Cập nhật đặc tả kỹ thuật thuật toán xử lý dữ liệu tĩnh tĩnh (Chia 80 Dịch Lý, Quét Regex cặp số đẹp). |
-| **v8.5** | 2026-08-28 | Web Product Lead | **Bổ sung Nhóm Kế Hoạch Growth & Truyền Thông vào RACI:** Bổ sung Nhóm VI vào ma trận RACI nhằm đảm bảo sản phẩm sau khi Go-live có kế hoạch truyền thông (GTM) rõ ràng. Web Platform chủ trì SEO/Inbound & Tracking Web; InsurTech Cell chủ trì ngân sách Paid Ads & In-App Marketing. Hai bên đồng sở hữu khâu Đánh giá CR và Cải tiến liên tục. |
+| **v8.5** | 2026-08-28 | Web Product Lead | **Bổ sung Nhóm Kế Hoạch Growth & Truyền Thông vào RACI:** Bổ sung Nhóm VI vào ma trận RACI nhằm đảm bảo sản phẩm sau khi Go-live có kế hoạch truyền thông (GTM) rõ ràng. Web Platform điều phối SEO/Inbound & Tracking Web; InsurTech Cell điều phối ngân sách Paid Ads & In-App Marketing. Hai bên đồng sở hữu khâu Đánh giá CR và Cải tiến liên tục. |
 | **v8.4** | 2026-08-28 | Web Product Lead | **Lược bỏ VTTI khỏi RACI Matrix:** Chuyển đổi RACI về cơ chế hợp tác song phương (Bilateral) giữa 2 đơn vị nòng cốt: **Web Platform** và **InsurTech Cell**. FS/InsurTech sẽ đóng vai trò là đầu mối (Proxy) duy nhất để làm việc, điều phối API và Data từ VTTI, giúp Web Platform không cần giao tiếp chéo nhiều bên gây chậm trễ tiến độ. |
 | **v8.3** | 2026-08-28 | Web Product Lead | **Tiếp Tục Tinh Gọn Kênh Pháp Lý & Biển Số:** Lược bỏ 5 trang tiện ích ngách (`/ho-so-xe`, `/diem-gplx`, `/sang-ten-xe`, `/bien-so-xe`, `/bien-so-dep`) để dồn trọng tâm vào luồng chuyển đổi lõi. Sitemap tổng nội khu vực giảm xuống còn **21 URLs**. |
-| **v8.2** | 2026-08-26 | Web Product Lead | **Tinh Gọn Ma Trận RACI Chỉ Gồm 3 Đơn Vị Nòng Cốt:** Bỏ Content Team khỏi ma trận RACI; quy hoạch toàn bộ ma trận chỉ gồm **2 đơn vị nòng cốt: Web Platform và InsurTech Cell**; Web Platform chủ trì xây dựng cổng cẩm nang giao thông & FAQ trên Web. |
+| **v8.2** | 2026-08-26 | Web Product Lead | **Tinh Gọn Ma Trận RACI Chỉ Gồm 3 Đơn Vị Nòng Cốt:** Bỏ Content Team khỏi ma trận RACI; quy hoạch toàn bộ ma trận chỉ gồm **2 đơn vị nòng cốt: Web Platform và InsurTech Cell**; Web Platform điều phối xây dựng cổng cẩm nang giao thông & FAQ trên Web. |
 | **v8.1** | 2026-08-26 | Web Product Lead | **Loại Bỏ Tiện Ích Metro Khỏi Phạm Vi Vehicle Hub:** Loại bỏ trang `/metro` (Lịch trình & Giá vé Metro) và từ khóa liên quan; chuẩn hóa Sitemap toàn bộ hệ sinh thái thành **32 URLs** và dung lượng tìm kiếm toàn thị trường thành **20.106.020 lượt/tháng (20 Chủ đề)**. |
 | **v8.0** | 2026-08-26 | Web Product Lead | **Loại Bỏ Hoàn Toàn FS/FinHub & Chuẩn Hóa Nhóm IV Cho InsurTech:** Khẳng định dự án chỉ gồm **2 đơn vị nòng cốt: Web Platform và InsurTech Cell** (phối hợp Content Team); Nhóm IV quy hoạch thành **Bộ công cụ dự toán chi phí & chuyển tiếp Lead cho InsurTech** (Auto-fill Bảo hiểm Thân vỏ & TNDS). |
 

@@ -1,55 +1,276 @@
 {
-  "generated_at": "2026-10-31T14:03:29+00:00",
+  "generated_at": "2026-11-06T04:24:11+00:00",
   "items": [
     {
-      "id": "595031",
-      "title": "Spam Guide Update, Restaurant Controls & AI Mode Revenue - SEO Pulse",
-      "title_en": "Spam Guide Update, Restaurant Controls & AI Mode Revenue - SEO Pulse",
-      "summary": "Search Engine Journal cập nhật ngày 2026-10-31. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "id": "596010",
+      "title": "FTC Unseals Details In Amazon Ads Auction Surcharge Suit",
+      "title_en": "FTC Unseals Details In Amazon Ads Auction Surcharge Suit",
+      "summary": "Search Engine Journal cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
       "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/seo-pulse-spam-guide-restaurant-controls-ai-mode-revenue/595031/",
-      "published_at": "2026-10-31",
-      "category": "ai_search",
-      "impact": "medium",
-      "tags": [
-        "ai mode"
-      ],
-      "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
-    },
-    {
-      "id": "595379",
-      "title": "Shopify CEO: Peer Ratings On AI Use ‘Didn’t Matter’",
-      "title_en": "Shopify CEO: Peer Ratings On AI Use ‘Didn’t Matter’",
-      "summary": "Search Engine Journal cập nhật ngày 2026-10-31. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/shopify-ceo-ai-peer-review-ratings/595379/",
-      "published_at": "2026-10-31",
+      "url": "https://www.searchenginejournal.com/ftc-unseals-details-amazon-ads-auction-surcharge-suit/596010/",
+      "published_at": "2026-11-05",
       "category": "industry",
       "impact": "low",
       "tags": [],
       "action": ""
     },
     {
-      "id": "595397",
-      "title": "Big Brands Dominate AI Search But Leave Openings For Smaller Sites",
-      "title_en": "Big Brands Dominate AI Search But Leave Openings For Smaller Sites",
-      "summary": "Search Engine Journal cập nhật ngày 2026-10-31. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "id": "595485",
+      "title": "Google Search Queries Hit A 5-Year High, And Search Revenue Didn’t Follow",
+      "title_en": "Google Search Queries Hit A 5-Year High, And Search Revenue Didn’t Follow",
+      "summary": "Search Engine Journal cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
       "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/big-brands-dominate-ai-search-but-leave-openings-for-smaller-sites/595397/",
-      "published_at": "2026-10-31",
+      "url": "https://www.searchenginejournal.com/google-search-queries-hit-a-5-year-high-and-search-revenue-didnt-follow/595485/",
+      "published_at": "2026-11-05",
       "category": "ai_search",
       "impact": "low",
-      "tags": [],
+      "tags": [
+        "ai mode"
+      ],
       "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
     },
     {
-      "id": "595268",
-      "title": "Google Opens Connected Apps Preview For AI Mode & Gemini",
-      "title_en": "Google Opens Connected Apps Preview For AI Mode & Gemini",
-      "summary": "Search Engine Journal cập nhật ngày 2026-10-31. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "id": "openai-updates-chatgpt-ads-bidding-options-42470",
+      "title": "OpenAI Updates ChatGPT Ads Bidding Options For Max Bid or Max CPC",
+      "title_en": "OpenAI Updates ChatGPT Ads Bidding Options For Max Bid or Max CPC",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/openai-updates-chatgpt-ads-bidding-options-42470.html",
+      "published_at": "2026-11-05",
+      "category": "ai_search",
+      "impact": "low",
+      "tags": [
+        "chatgpt"
+      ],
+      "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
+    },
+    {
+      "id": "595834",
+      "title": "November Click Spikes In Google Search Console Are Bot Traffic - How To Filter Your Reports",
+      "title_en": "November Click Spikes In Google Search Console Are Bot Traffic - How To Filter Your Reports",
+      "summary": "Search Engine Journal cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
       "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/google-connected-apps-preview-ai-mode-gemini/595268/",
-      "published_at": "2026-10-31",
+      "url": "https://www.searchenginejournal.com/november-click-spikes-in-google-search-console-are-bot-traffic-how-to-filter-your-reports/595834/",
+      "published_at": "2026-11-05",
+      "category": "technical",
+      "impact": "medium",
+      "tags": [
+        "search console"
+      ],
+      "action": "Kiểm tra lại crawl/index/sitemap cho các Hub trọng điểm để đảm bảo không thất thoát lưu lượng organic."
+    },
+    {
+      "id": "595984",
+      "title": "Ads In Google AI Answers Concentrate In Apparel & Electronics",
+      "title_en": "Ads In Google AI Answers Concentrate In Apparel & Electronics",
+      "summary": "Search Engine Journal cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/google-ai-answer-ads-apparel-electronics-report/595984/",
+      "published_at": "2026-11-05",
+      "category": "ai_search",
+      "impact": "medium",
+      "tags": [
+        "ai overview",
+        "ai mode",
+        "chatgpt"
+      ],
+      "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
+    },
+    {
+      "id": "594569",
+      "title": "How To Optimize For Better Campaign Leads, Not Just Conversions - Ask A PPC",
+      "title_en": "How To Optimize For Better Campaign Leads, Not Just Conversions - Ask A PPC",
+      "summary": "Search Engine Journal cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/ask-a-ppc-how-to-optimize-for-better-outcomes-not-just-conversions/594569/",
+      "published_at": "2026-11-05",
+      "category": "industry",
+      "impact": "low",
+      "tags": [],
+      "action": ""
+    },
+    {
+      "id": "recap-11-05-2026-42466",
+      "title": "Daily Search Forum Recap: November 5, 2026",
+      "title_en": "Daily Search Forum Recap: November 5, 2026",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/recap-11-05-2026-42466.html",
+      "published_at": "2026-11-05",
+      "category": "industry",
+      "impact": "low",
+      "tags": [],
+      "action": ""
+    },
+    {
+      "id": "facebook-answers-google-42467",
+      "title": "Facebook Answers AI-Generated 6 Million Pages Is Google Scaled Content Abuse",
+      "title_en": "Facebook Answers AI-Generated 6 Million Pages Is Google Scaled Content Abuse",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/facebook-answers-google-42467.html",
+      "published_at": "2026-11-05",
+      "category": "technical",
+      "impact": "medium",
+      "tags": [],
+      "action": "Kiểm tra lại crawl/index/sitemap cho các Hub trọng điểm để đảm bảo không thất thoát lưu lượng organic."
+    },
+    {
+      "id": "595730",
+      "title": "GEO Isn’t A Distraction - Referral Data Misses Where AI Shapes Buying Decisions",
+      "title_en": "GEO Isn’t A Distraction - Referral Data Misses Where AI Shapes Buying Decisions",
+      "summary": "Search Engine Journal cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/geo-isnt-a-distraction-referral-data-misses-where-ai-shapes-buying-decisions/595730/",
+      "published_at": "2026-11-05",
+      "category": "ai_search",
+      "impact": "low",
+      "tags": [
+        "geo",
+        "chatgpt"
+      ],
+      "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
+    },
+    {
+      "id": "google-ads-expands-ai-content-label-disclosure-42461",
+      "title": "Google Ads Expands AI Content Disclosure Label To More Regions",
+      "title_en": "Google Ads Expands AI Content Disclosure Label To More Regions",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/google-ads-expands-ai-content-label-disclosure-42461.html",
+      "published_at": "2026-11-05",
+      "category": "industry",
+      "impact": "low",
+      "tags": [],
+      "action": ""
+    },
+    {
+      "id": "google-ads-pmax-channel-report-search-42454",
+      "title": "Google Ads PMax Channel Report Definitions Coming To Search & Shopping",
+      "title_en": "Google Ads PMax Channel Report Definitions Coming To Search & Shopping",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/google-ads-pmax-channel-report-search-42454.html",
+      "published_at": "2026-11-05",
+      "category": "google_update",
+      "impact": "low",
+      "tags": [],
+      "action": "Rà soát tác động xếp hạng toàn bộ URL tài chính YMYL trên momo.vn trong Search Console ngay sau khi update kết thúc."
+    },
+    {
+      "id": "google-ai-mode-home-services-booking-42459",
+      "title": "Google AI Mode Integrates With Home Services Booking",
+      "title_en": "Google AI Mode Integrates With Home Services Booking",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/google-ai-mode-home-services-booking-42459.html",
+      "published_at": "2026-11-05",
+      "category": "ai_search",
+      "impact": "low",
+      "tags": [
+        "ai mode"
+      ],
+      "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
+    },
+    {
+      "id": "595967",
+      "title": "Google Explains How Redirects Affect Ranking Signals",
+      "title_en": "Google Explains How Redirects Affect Ranking Signals",
+      "summary": "Search Engine Journal cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/google-explains-how-redirects-affect-ranking-signals/595967/",
+      "published_at": "2026-11-05",
+      "category": "technical",
+      "impact": "low",
+      "tags": [],
+      "action": "Kiểm tra lại crawl/index/sitemap cho các Hub trọng điểm để đảm bảo không thất thoát lưu lượng organic."
+    },
+    {
+      "id": "google-protected-important-urls-index-42464",
+      "title": "Google Can Temporarily Protect Important URLs From Being Deindexed",
+      "title_en": "Google Can Temporarily Protect Important URLs From Being Deindexed",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/google-protected-important-urls-index-42464.html",
+      "published_at": "2026-11-05",
+      "category": "technical",
+      "impact": "high",
+      "tags": [],
+      "action": "Kiểm tra lại crawl/index/sitemap cho các Hub trọng điểm để đảm bảo không thất thoát lưu lượng organic."
+    },
+    {
+      "id": "google-business-profiles-car-dealership-inventory-42465",
+      "title": "Google Business Profiles Car Dealership Inventory Limited Pilot",
+      "title_en": "Google Business Profiles Car Dealership Inventory Limited Pilot",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/google-business-profiles-car-dealership-inventory-42465.html",
+      "published_at": "2026-11-05",
+      "category": "industry",
+      "impact": "low",
+      "tags": [],
+      "action": ""
+    },
+    {
+      "id": "google-search-profiles-adds-linkedin-42458",
+      "title": "Google Search Profiles Spotted Adding LinkedIn",
+      "title_en": "Google Search Profiles Spotted Adding LinkedIn",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/google-search-profiles-adds-linkedin-42458.html",
+      "published_at": "2026-11-05",
+      "category": "industry",
+      "impact": "low",
+      "tags": [],
+      "action": ""
+    },
+    {
+      "id": "google-ads-telemedicine-certification-42460",
+      "title": "Google Ads Gains A New Telemedicine Certification Option",
+      "title_en": "Google Ads Gains A New Telemedicine Certification Option",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/google-ads-telemedicine-certification-42460.html",
+      "published_at": "2026-11-05",
+      "category": "industry",
+      "impact": "high",
+      "tags": [],
+      "action": ""
+    },
+    {
+      "id": "595959",
+      "title": "SERP Data Providers Say Google Is Throttling Goto Result Links",
+      "title_en": "SERP Data Providers Say Google Is Throttling Goto Result Links",
+      "summary": "Search Engine Journal cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/google-goto-result-links-throttling/595959/",
+      "published_at": "2026-11-05",
+      "category": "industry",
+      "impact": "low",
+      "tags": [],
+      "action": ""
+    },
+    {
+      "id": "594163",
+      "title": "AI Visibility vs. Search Rankings: Is Your Agency Measuring the Wrong Thing For 2027?",
+      "title_en": "AI Visibility vs. Search Rankings: Is Your Agency Measuring the Wrong Thing For 2027?",
+      "summary": "Search Engine Journal cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/ai-visibility-vs-search-rankings-is-your-agency-measuring-the-wrong-thing-for-2027-spa/594163/",
+      "published_at": "2026-11-05",
+      "category": "geo",
+      "impact": "high",
+      "tags": [],
+      "action": "Chuẩn hóa entity, schema và off-web citation để cải thiện tỉ lệ xuất hiện trong AI Overviews."
+    },
+    {
+      "id": "595882",
+      "title": "Google Brings UCP Direct Checkout To AI Mode In Canada",
+      "title_en": "Google Brings UCP Direct Checkout To AI Mode In Canada",
+      "summary": "Search Engine Journal cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/google-brings-ucp-direct-checkout-to-ai-mode-in-canada/595882/",
+      "published_at": "2026-11-05",
       "category": "ai_search",
       "impact": "low",
       "tags": [
@@ -59,152 +280,67 @@
       "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
     },
     {
-      "id": "595270",
-      "title": "Reddit CEO Says Google’s AI Mode ‘Does Not Drive Traffic’",
-      "title_en": "Reddit CEO Says Google’s AI Mode ‘Does Not Drive Traffic’",
-      "summary": "Search Engine Journal cập nhật ngày 2026-10-30. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/reddit-to-test-login-only-mode-as-google-search-traffic-drops/595270/",
-      "published_at": "2026-10-30",
-      "category": "ai_search",
-      "impact": "medium",
-      "tags": [
-        "ai overview",
-        "ai mode"
-      ],
-      "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
-    },
-    {
-      "id": "593881",
-      "title": "The AI Search Measurement Gap Brands Must Close In 2027 And Beyond",
-      "title_en": "The AI Search Measurement Gap Brands Must Close In 2027 And Beyond",
-      "summary": "Search Engine Journal cập nhật ngày 2026-10-30. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/the-ai-search-measurement-gap-brands-must-close-in-2027-and-beyond/593881/",
-      "published_at": "2026-10-30",
-      "category": "ai_search",
-      "impact": "low",
-      "tags": [],
-      "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
-    },
-    {
-      "id": "google-ai-training-control-42430",
-      "title": "Google Adopts New AI Training Control",
-      "title_en": "Google Adopts New AI Training Control",
-      "summary": "Search Engine Roundtable cập nhật ngày 2026-10-30. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "id": "google-ads-search-terms-match-type-keywords-42463",
+      "title": "Google Ads Explains Difference With Search Terms Match Type (Keywords)",
+      "title_en": "Google Ads Explains Difference With Search Terms Match Type (Keywords)",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-11-04. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
       "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/google-ai-training-control-42430.html",
-      "published_at": "2026-10-30",
+      "url": "https://www.seroundtable.com/google-ads-search-terms-match-type-keywords-42463.html",
+      "published_at": "2026-11-04",
       "category": "industry",
       "impact": "low",
       "tags": [],
       "action": ""
     },
     {
-      "id": "595224",
-      "title": "Discord To Put Public Chats On Pages Search Engines Can Show",
-      "title_en": "Discord To Put Public Chats On Pages Search Engines Can Show",
-      "summary": "Search Engine Journal cập nhật ngày 2026-10-30. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/discord-public-server-chats-search-engines/595224/",
-      "published_at": "2026-10-30",
-      "category": "industry",
-      "impact": "low",
-      "tags": [],
-      "action": ""
-    },
-    {
-      "id": "microsoft-bing-ai-controls-42429",
-      "title": "Microsoft Bing New AI New Controls With AI Training From AI Search Grounding",
-      "title_en": "Microsoft Bing New AI New Controls With AI Training From AI Search Grounding",
-      "summary": "Search Engine Roundtable cập nhật ngày 2026-10-30. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "id": "google-email-site-reputation-policy-eea-42462",
+      "title": "Google Emails: Site Reputation Policy Manual Actions No Longer Impact EEA",
+      "title_en": "Google Emails: Site Reputation Policy Manual Actions No Longer Impact EEA",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-11-04. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
       "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/microsoft-bing-ai-controls-42429.html",
-      "published_at": "2026-10-30",
-      "category": "ai_search",
-      "impact": "low",
-      "tags": [],
-      "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
-    },
-    {
-      "id": "594544",
-      "title": "Shopify Now Lets Stores Pay The Company Behind Your AI Shopping Agent",
-      "title_en": "Shopify Now Lets Stores Pay The Company Behind Your AI Shopping Agent",
-      "summary": "Search Engine Journal cập nhật ngày 2026-10-30. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/shopify-now-lets-stores-pay-the-company-behind-your-ai-shopping-agent/594544/",
-      "published_at": "2026-10-30",
-      "category": "industry",
-      "impact": "low",
-      "tags": [],
-      "action": ""
-    },
-    {
-      "id": "chatgpt-ads-update-42427",
-      "title": "ChatGPT Gets Wider Ads, Multi-Image Ads Expands, Expansion & More",
-      "title_en": "ChatGPT Gets Wider Ads, Multi-Image Ads Expands, Expansion & More",
-      "summary": "Search Engine Roundtable cập nhật ngày 2026-10-30. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/chatgpt-ads-update-42427.html",
-      "published_at": "2026-10-30",
-      "category": "ai_search",
-      "impact": "low",
-      "tags": [
-        "chatgpt"
-      ],
-      "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
-    },
-    {
-      "id": "593932",
-      "title": "The Link Building Graveyard: What To Bury & What Still Wins",
-      "title_en": "The Link Building Graveyard: What To Bury & What Still Wins",
-      "summary": "Search Engine Journal cập nhật ngày 2026-10-30. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/the-link-building-graveyard-what-to-bury-what-still-wins-recap/593932/",
-      "published_at": "2026-10-30",
-      "category": "industry",
-      "impact": "low",
-      "tags": [],
-      "action": ""
-    },
-    {
-      "id": "595117",
-      "title": "ChatGPT Ads Turns On Automatic Ad Changes By Default",
-      "title_en": "ChatGPT Ads Turns On Automatic Ad Changes By Default",
-      "summary": "Search Engine Journal cập nhật ngày 2026-10-30. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/chatgpt-ads-turns-on-automatic-ad-changes-by-default/595117/",
-      "published_at": "2026-10-30",
-      "category": "ai_search",
-      "impact": "low",
-      "tags": [
-        "chatgpt"
-      ],
-      "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
-    },
-    {
-      "id": "595016",
-      "title": "What Search Console Can Still Tell You When Indexing Data Lags",
-      "title_en": "What Search Console Can Still Tell You When Indexing Data Lags",
-      "summary": "Search Engine Journal cập nhật ngày 2026-10-30. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/what-search-console-can-still-tell-you-when-indexing-data-lags/595016/",
-      "published_at": "2026-10-30",
+      "url": "https://www.seroundtable.com/google-email-site-reputation-policy-eea-42462.html",
+      "published_at": "2026-11-04",
       "category": "technical",
-      "impact": "medium",
+      "impact": "high",
       "tags": [
         "search console"
       ],
       "action": "Kiểm tra lại crawl/index/sitemap cho các Hub trọng điểm để đảm bảo không thất thoát lưu lượng organic."
     },
     {
-      "id": "recap-10-30-2026-42424",
-      "title": "Daily Search Forum Recap: October 30, 2026",
-      "title_en": "Daily Search Forum Recap: October 30, 2026",
-      "summary": "Search Engine Roundtable cập nhật ngày 2026-10-30. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/recap-10-30-2026-42424.html",
-      "published_at": "2026-10-30",
+      "id": "595935",
+      "title": "Reddit Begins Testing Ads In Its Own Search Results",
+      "title_en": "Reddit Begins Testing Ads In Its Own Search Results",
+      "summary": "Search Engine Journal cập nhật ngày 2026-11-04. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/reddit-begins-testing-ads-in-its-own-search-results/595935/",
+      "published_at": "2026-11-04",
+      "category": "industry",
+      "impact": "low",
+      "tags": [],
+      "action": ""
+    },
+    {
+      "id": "595483",
+      "title": "Businesses Treat Your AI Agent 3 Different Ways",
+      "title_en": "Businesses Treat Your AI Agent 3 Different Ways",
+      "summary": "Search Engine Journal cập nhật ngày 2026-11-04. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/businesses-treat-your-ai-agent-3-different-ways/595483/",
+      "published_at": "2026-11-04",
+      "category": "industry",
+      "impact": "low",
+      "tags": [],
+      "action": ""
+    },
+    {
+      "id": "595871",
+      "title": "Google Adds Home Service Booking & Quote Links To AI Mode",
+      "title_en": "Google Adds Home Service Booking & Quote Links To AI Mode",
+      "summary": "Search Engine Journal cập nhật ngày 2026-11-04. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/google-ai-mode-home-services-booking-quote-links/595871/",
+      "published_at": "2026-11-04",
       "category": "ai_search",
       "impact": "low",
       "tags": [
@@ -213,133 +349,280 @@
       "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
     },
     {
-      "id": "595082",
-      "title": "Google’s Q3 Earnings Call Casts Shadow Over Classic Search",
-      "title_en": "Google’s Q3 Earnings Call Casts Shadow Over Classic Search",
-      "summary": "Search Engine Journal cập nhật ngày 2026-10-30. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/googles-q3-earnings-call-casts-shadow-over-classic-search/595082/",
-      "published_at": "2026-10-30",
+      "id": "search-central-live-zurich-2026",
+      "title": "Search Central Live in Zurich is back!",
+      "title_en": "Search Central Live in Zurich is back!",
+      "summary": "Google Search Central cập nhật ngày 2026-11-04. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Google Search Central",
+      "url": "https://developers.google.com/search/blog/2026/11/search-central-live-zurich-2026",
+      "published_at": "2026-11-04",
       "category": "industry",
       "impact": "low",
       "tags": [],
       "action": ""
     },
     {
-      "id": "594102",
-      "title": "Google Says Changing tCPA & Budgets Won’t Reset Learning - 6 BFCM Takeaways",
-      "title_en": "Google Says Changing tCPA & Budgets Won’t Reset Learning - 6 BFCM Takeaways",
-      "summary": "Search Engine Journal cập nhật ngày 2026-10-30. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/google-ads-product-manager-revealed-details-that-matter-before-black-friday/594102/",
-      "published_at": "2026-10-30",
-      "category": "industry",
-      "impact": "low",
-      "tags": [],
-      "action": ""
-    },
-    {
-      "id": "video-10-30-2026-42418",
-      "title": "Search News Buzz Video Recap: Google Volatility X2, Spam Updates, AI Overviews Everywhere, Blending Ads & Organic, Google & Microsoft Earnings",
-      "title_en": "Search News Buzz Video Recap: Google Volatility X2, Spam Updates, AI Overviews Everywhere, Blending Ads & Organic, Google & Microsoft Earnings",
-      "summary": "Search Engine Roundtable cập nhật ngày 2026-10-30. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "id": "google-ai-made-bot-impersonation-worse-42422",
+      "title": "Cảnh Báo An Ninh: Làn Sóng Bot AI Giả Mạo Googlebot (Bot Impersonation)",
+      "title_en": "Gary Illyes From Google: AI Made Bot Impersonation Worse",
+      "summary": "Chi tiết bản tin: Gary Illyes cảnh báo các công ty AI cào dữ liệu huấn luyện mô hình đang ồ ạt đổi chuỗi User-Agent để giả danh Googlebot nhằm vượt qua tường lửa. Điều này gây quá tải CPU, cạn kiệt băng thông và làm sập máy chủ gốc. robots.txt không thể ngăn chặn các bot độc hại. Quản trị viên bắt buộc phải cấu hình xác thực kép bằng Reverse DNS (rDNS) hoặc đối chiếu dải IP chính thức của...",
       "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/video-10-30-2026-42418.html",
-      "published_at": "2026-10-30",
-      "category": "google_update",
-      "impact": "high",
+      "url": "https://www.seroundtable.com/google-ai-made-bot-impersonation-worse-42422.html",
+      "published_at": "2026-11-03",
+      "category": "technical",
+      "impact": "medium",
       "tags": [
-        "spam update",
+        "robots.txt"
+      ],
+      "action": ""
+    },
+    {
+      "id": "chatgpt-ads-update-42427",
+      "title": "OpenAI Mở Rộng ChatGPT Ads: Định Dạng Thẻ Ngang & Tích Hợp Shopify Toàn Cầu",
+      "title_en": "ChatGPT Gets Wider Ads, Multi-Image Ads Expands",
+      "summary": "Chi tiết bản tin: OpenAI mở rộng quảng cáo ChatGPT sang 89 quốc gia với định dạng thẻ rộng (Wider Standard Ad Unit) chiếm trọn chiều ngang khung chat desktop, mở beta quảng cáo nhiều ảnh (Multi-image Ads) và tích hợp danh mục sản phẩm từ các cửa hàng Shopify quốc tế.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/chatgpt-ads-update-42427.html",
+      "published_at": "2026-11-03",
+      "category": "ai_search",
+      "impact": "medium",
+      "tags": [
+        "chatgpt"
+      ],
+      "action": ""
+    },
+    {
+      "id": "google-search-100-search-results-parameter-back-42423",
+      "title": "Google Thử Nghiệm Phục Hồi Tham Số 100 Kết Quả (num=100)",
+      "title_en": "Google Search May Be Bringing Back 100 Search Results Parameter",
+      "summary": "Chi tiết bản tin: Nhờ cơ chế bọc liên kết google.com/goto đã kiểm soát được việc cào dữ liệu tự động, Google đang thử nghiệm mở lại tham số num=100 cho người dùng chuyên sâu trên desktop.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/google-search-100-search-results-parameter-back-42423.html",
+      "published_at": "2026-11-03",
+      "category": "industry",
+      "impact": "medium",
+      "tags": [
+        "seo",
+        "geo",
+        "aeo"
+      ],
+      "action": ""
+    },
+    {
+      "id": "google-ai-overviews-brands-right-42440",
+      "title": "Google Di Chuyển AI Overviews Cho Từ Khóa Thương Hiệu Sang Cột Phải Desktop",
+      "title_en": "Google AI Overviews For Brands Move To Right Column",
+      "summary": "Chi tiết bản tin: Chuyên gia Chris Long và David McSweeney ghi nhận Google đã thay đổi cách hiển thị AI Overviews cho các truy vấn thương hiệu: thay vì xuất hiện ở đầu hoặc giữa trang đè bẹp kết quả tự nhiên, AI Overviews nay được cố định ở cột bên phải (thay thế Knowledge Panel). Tác động đến Brand: Website chính thức của thương hiệu cùng dàn sitelinks tự nhiên đã lấy lại vị trí Top 1 bên...",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/google-ai-overviews-brands-right-42440.html",
+      "published_at": "2026-11-03",
+      "category": "ai_search",
+      "impact": "medium",
+      "tags": [
         "ai overview"
       ],
-      "action": "Rà soát tác động xếp hạng toàn bộ URL tài chính YMYL trên momo.vn trong Search Console ngay sau khi update kết thúc."
+      "action": ""
     },
     {
-      "id": "google-ai-overviews-mode-ctr-42421",
-      "title": "Google AI Overviews & AI Mode 0.9% Click-Through Rate, Opt Out Study Says",
-      "title_en": "Google AI Overviews & AI Mode 0.9% Click-Through Rate, Opt Out Study Says",
-      "summary": "Search Engine Roundtable cập nhật ngày 2026-10-30. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "id": "november-2026-google-webmaster-report-42431",
+      "title": "Báo Cáo Google Webmaster Tháng 11/2026 & Tiêu Chuẩn EOT/SA (Subject Alignment)",
+      "title_en": "November 2026 Google Webmaster Report",
+      "summary": "Cơ chế vận hành: Google chính thức bổ sung các mục Extent of Topic (Độ bao phủ chủ đề) và Subject Alignment (Tính đồng nhất lĩnh vực) vào tài liệu Helpful Content. Các website cố tình xuất bản bài viết ngoài trục giá trị chuyên môn cốt lõi (ví dụ: web tài chính/fintech nhưng viết bài du lịch, phong thủy) để \"bào\" traffic sẽ bị hệ thống đánh tụt chất lượng toàn trang (Site-wide Demotion).",
       "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/google-ai-overviews-mode-ctr-42421.html",
-      "published_at": "2026-10-30",
+      "url": "https://www.seroundtable.com/november-2026-google-webmaster-report-42431.html",
+      "published_at": "2026-11-03",
+      "category": "google_update",
+      "impact": "medium",
+      "tags": [
+        "seo",
+        "geo",
+        "aeo"
+      ],
+      "action": ""
+    },
+    {
+      "id": "google-ai-opt-out-test-organic-clicks-drop-499898",
+      "title": "Cú Sốc Sụt Giảm Click Truyền Thống Khi Opt-Out Khỏi Google AI... (Search Engine Land)",
+      "title_en": "Google AI opt-out test finds unexpected drop in organic clicks",
+      "summary": "Chi tiết bản tin: Thử nghiệm trên website khi chủ động sử dụng các thẻ chặn AI hiển thị: Lượt hiển thị (Impressions) trên AI Overviews giảm ngay về 0, nhưng lượng click tự nhiên ở 10 liên kết xanh truyền thống bên dưới cũng sụt giảm theo. Cơ chế tâm lý: Dù CTR trực tiếp của AI Overviews chỉ khoảng 0,9%, nhưng việc xuất hiện trong khối AI đóng vai trò như một chứng thực xã hội (Social Proof)....",
+      "source": "Search Engine Land",
+      "url": "https://searchengineland.com/google-ai-opt-out-test-organic-clicks-drop-499898",
+      "published_at": "2026-11-01",
+      "category": "ai_search",
+      "impact": "medium",
+      "tags": [
+        "ai overview"
+      ],
+      "action": ""
+    },
+    {
+      "id": "google-ai-mode-ads-earn-less-42417",
+      "title": "Cú Sốc Sụt Giảm Click Truyền Thống Khi Opt-Out Khỏi Google... (Search Engine Roundtable)",
+      "title_en": "Cú Sốc Sụt Giảm Click Truyền Thống Khi Opt-Out Khỏi Google... (Search Engine Roundtable)",
+      "summary": "Chi tiết bản tin: Thử nghiệm trên website khi chủ động sử dụng các thẻ chặn AI hiển thị: Lượt hiển thị (Impressions) trên AI Overviews giảm ngay về 0, nhưng lượng click tự nhiên ở 10 liên kết xanh truyền thống bên dưới cũng sụt giảm theo. Cơ chế tâm lý: Dù CTR trực tiếp của AI Overviews chỉ khoảng 0,9%, nhưng việc xuất hiện trong khối AI đóng vai trò như một chứng thực xã hội (Social Proof)....",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/google-ai-mode-ads-earn-less-42417.html",
+      "published_at": "2026-11-01",
+      "category": "ai_search",
+      "impact": "medium",
+      "tags": [
+        "ai overview"
+      ],
+      "action": ""
+    },
+    {
+      "id": "googlecomgotoinmydataforseodata0of71531",
+      "title": "Đợt Bọc Liên Kết google.com/goto Gây Xáo Trộn Dữ Liệu Rank Tracking",
+      "title_en": "google.com/goto in my DataForSEO data",
+      "summary": "Bản chất vấn đề: Google bọc 54,8% đến 84,7% liên kết tự nhiên thành URL trung gian https://google.com/goto?url=... (trường domain trả về \"google.com\"). Áp dụng cơ chế điều tiết (throttling): trễ từ 40s đến 120s đối với các công cụ quét liên tiếp.",
+      "source": "Reddit r/TechSEO",
+      "url": "https://www.reddit.com/r/TechSEO/comments/1xk4ktz/googlecomgoto_in_my_dataforseo_data_0_of_71531/",
+      "published_at": "2026-11-01",
+      "category": "technical",
+      "impact": "medium",
+      "tags": [
+        "seo",
+        "geo",
+        "aeo"
+      ],
+      "action": "",
+      "insight": {
+        "status": "watch",
+        "finding": "Dữ liệu sau mốc 1/11 mới có 2/7 ngày: số URL có impressions trong GSC giảm 0,8% tạm tính so với 2 ngày liền trước.",
+        "evidence": [
+          {
+            "label": "URL có impressions trong GSC (proxy index coverage)",
+            "value": "5.2K",
+            "delta_pct": -0.8,
+            "source": "GSC",
+            "period": "2 ngày sau vs 2 ngày trước 1/11 (chưa đủ 7 ngày dữ liệu sau mốc)"
+          }
+        ],
+        "next_step": "Chạy lại kiểm tra sau 8/11 khi đủ 7 ngày dữ liệu; đối chiếu Pages report.",
+        "data_as_of": "2026-11-03"
+      }
+    },
+    {
+      "id": "google-also-gives-publishers-more-control-over-how-ai-uses-their-content-499971",
+      "title": "Chuẩn Hóa Kiểm Soát AI Toàn Cầu: Bước Tiến Từ IETF AIPREF",
+      "title_en": "Google also gives publishers more control over how AI uses their content",
+      "summary": "Chi tiết bản tin: Các ông lớn AI cam kết hỗ trợ token tiêu chuẩn từ nhóm làm việc AIPREF thuộc IETF. Phân định rõ ràng giữa Model Training Opt-out (ngăn đào tạo mô hình nền tảng) và Search Grounding Allow (cho phép trích dẫn trong câu trả lời tìm kiếm).",
+      "source": "Search Engine Land",
+      "url": "https://searchengineland.com/google-also-gives-publishers-more-control-over-how-ai-uses-their-content-499971",
+      "published_at": "2026-10-31",
       "category": "ai_search",
       "impact": "medium",
       "tags": [
         "ai overview",
-        "ai mode"
+        "gemini"
       ],
-      "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
+      "action": "",
+      "insight": {
+        "status": "watch",
+        "finding": "Dữ liệu Bing AI sau mốc 31/10 mới có 1/7 ngày: lượt trích dẫn momo.vn giảm 48,5% tạm tính so với 1 ngày liền trước.",
+        "evidence": [
+          {
+            "label": "Lượt trích dẫn momo.vn trên Bing AI (TB/ngày)",
+            "value": "4K",
+            "delta_pct": -48.5,
+            "source": "Bing AI Performance",
+            "period": "1 ngày sau vs 1 ngày trước 31/10 (chưa đủ 7 ngày dữ liệu sau mốc)"
+          },
+          {
+            "label": "Page được Bing AI trích dẫn (TB/ngày)",
+            "value": "255",
+            "delta_pct": -21.1,
+            "source": "Bing AI Performance",
+            "period": "1 ngày sau vs 1 ngày trước 31/10 (chưa đủ 7 ngày dữ liệu sau mốc)"
+          }
+        ],
+        "next_step": "Theo dõi citations đến 7/11 khi đủ 7 ngày dữ liệu sau mốc.",
+        "data_as_of": "2026-11-01"
+      }
     },
     {
-      "id": "bing-ads-copilot-ai-overviews-42416",
-      "title": "Bing Showing Ads Within AI Overviews",
-      "title_en": "Bing Showing Ads Within AI Overviews",
-      "summary": "Search Engine Roundtable cập nhật ngày 2026-10-30. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/bing-ads-copilot-ai-overviews-42416.html",
-      "published_at": "2026-10-30",
+      "id": "google-ai-overviews-are-pushing-news-boxes-out-of-search-results-study-499348",
+      "title": "AI Overviews Soán Ngôi News Boxes (Top Stories)",
+      "title_en": "Google AI Overviews are pushing News Boxes out of search results",
+      "summary": "Tác động: Khối AI Overview tổng hợp trực tiếp thông tin sự kiện và đẩy khối Top Stories xuống dưới màn hình đầu tiên, làm giảm mạnh CTR của các bài viết tin tức ngắn.",
+      "source": "Search Engine Land",
+      "url": "https://searchengineland.com/google-ai-overviews-are-pushing-news-boxes-out-of-search-results-study-499348",
+      "published_at": "2026-10-31",
       "category": "ai_search",
       "impact": "medium",
       "tags": [
         "ai overview"
       ],
-      "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
+      "action": "",
+      "insight": {
+        "status": "watch",
+        "finding": "Dữ liệu Bing AI sau mốc 31/10 mới có 1/7 ngày: lượt trích dẫn momo.vn giảm 48,5% tạm tính so với 1 ngày liền trước.",
+        "evidence": [
+          {
+            "label": "Lượt trích dẫn momo.vn trên Bing AI (TB/ngày)",
+            "value": "4K",
+            "delta_pct": -48.5,
+            "source": "Bing AI Performance",
+            "period": "1 ngày sau vs 1 ngày trước 31/10 (chưa đủ 7 ngày dữ liệu sau mốc)"
+          },
+          {
+            "label": "Page được Bing AI trích dẫn (TB/ngày)",
+            "value": "255",
+            "delta_pct": -21.1,
+            "source": "Bing AI Performance",
+            "period": "1 ngày sau vs 1 ngày trước 31/10 (chưa đủ 7 ngày dữ liệu sau mốc)"
+          }
+        ],
+        "next_step": "Theo dõi citations đến 7/11 khi đủ 7 ngày dữ liệu sau mốc.",
+        "data_as_of": "2026-11-01"
+      }
     },
     {
-      "id": "google-bing-halloween-search-easter-eggs-42415",
-      "title": "Google & Bing Halloween Search Easter (Pumpkin) Eggs",
-      "title_en": "Google & Bing Halloween Search Easter (Pumpkin) Eggs",
-      "summary": "Search Engine Roundtable cập nhật ngày 2026-10-30. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "id": "recap-10-30-2026-42424",
+      "title": "Biến Động Cuối Tháng 10 (\"Halloween Volatility Chatter\")",
+      "title_en": "Daily Search Forum Recap",
+      "summary": "Diễn biến: SERP ghi nhận các đợt rung lắc ngầm tập trung thanh lọc các website affiliate mỏng và điều chỉnh trọng số cho các trang sản phẩm trực tiếp.",
       "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/google-bing-halloween-search-easter-eggs-42415.html",
-      "published_at": "2026-10-30",
-      "category": "ai_search",
-      "impact": "low",
+      "url": "https://www.seroundtable.com/recap-10-30-2026-42424.html",
+      "published_at": "2026-10-31",
+      "category": "industry",
+      "impact": "medium",
       "tags": [
-        "ai mode"
+        "seo",
+        "geo",
+        "aeo"
       ],
-      "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
+      "action": ""
     },
     {
-      "id": "google-ai-made-bot-impersonation-worse-42422",
-      "title": "Google's Gary Illyes: AI Made Bot Impersonation Worse",
-      "title_en": "Google's Gary Illyes: AI Made Bot Impersonation Worse",
-      "summary": "Search Engine Roundtable cập nhật ngày 2026-10-30. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/google-ai-made-bot-impersonation-worse-42422.html",
-      "published_at": "2026-10-30",
+      "id": "core-web-vitals-optimization-waste-time-499366",
+      "title": "Hiệu Quả Biên Của Core Web Vitals Đạt Ngưỡng Bão Hòa",
+      "title_en": "Core Web Vitals optimization can be a waste of time",
+      "summary": "Bản chất: Core Web Vitals chỉ là điều kiện đạt/không đạt (Pass/Fail). Khi đã đạt chuẩn \"Good\", việc ép thêm mili-giây không đem lại bất kỳ sự gia tăng thứ hạng nào.",
+      "source": "Search Engine Land",
+      "url": "https://searchengineland.com/core-web-vitals-optimization-waste-time-499366",
+      "published_at": "2026-10-31",
       "category": "technical",
       "impact": "medium",
-      "tags": [],
-      "action": "Kiểm tra lại crawl/index/sitemap cho các Hub trọng điểm để đảm bảo không thất thoát lưu lượng organic."
-    },
-    {
-      "id": "gemini-utm-parameters-42399",
-      "title": "Google Gemini Stopped Attaching UTM Parameters To Cited URLs",
-      "title_en": "Google Gemini Stopped Attaching UTM Parameters To Cited URLs",
-      "summary": "Search Engine Roundtable cập nhật ngày 2026-10-30. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/gemini-utm-parameters-42399.html",
-      "published_at": "2026-10-30",
-      "category": "ai_search",
-      "impact": "low",
       "tags": [
-        "gemini"
+        "core web vitals"
       ],
-      "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
-    },
-    {
-      "id": "google-search-100-search-results-parameter-back-42423",
-      "title": "Google Search May Be Bringing Back 100 Search Results Parameter",
-      "title_en": "Google Search May Be Bringing Back 100 Search Results Parameter",
-      "summary": "Search Engine Roundtable cập nhật ngày 2026-10-30. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/google-search-100-search-results-parameter-back-42423.html",
-      "published_at": "2026-10-30",
-      "category": "technical",
-      "impact": "medium",
-      "tags": [],
-      "action": "Kiểm tra lại crawl/index/sitemap cho các Hub trọng điểm để đảm bảo không thất thoát lưu lượng organic."
+      "action": "",
+      "insight": {
+        "status": "watch",
+        "finding": "Dữ liệu sau mốc 31/10 mới có 3/7 ngày: số URL có impressions trong GSC giảm 2,2% tạm tính so với 3 ngày liền trước.",
+        "evidence": [
+          {
+            "label": "URL có impressions trong GSC (proxy index coverage)",
+            "value": "6.3K",
+            "delta_pct": -2.2,
+            "source": "GSC",
+            "period": "3 ngày sau vs 3 ngày trước 31/10 (chưa đủ 7 ngày dữ liệu sau mốc)"
+          }
+        ],
+        "next_step": "Chạy lại kiểm tra sau 7/11 khi đủ 7 ngày dữ liệu; đối chiếu Pages report.",
+        "data_as_of": "2026-11-03"
+      }
     },
     {
       "id": "ai-training-control",
@@ -354,22 +637,114 @@
       "tags": [
         "robots.txt"
       ],
-      "action": "Kiểm tra lại crawl/index/sitemap cho các Hub trọng điểm để đảm bảo không thất thoát lưu lượng organic."
+      "action": "Kiểm tra lại crawl/index/sitemap cho các Hub trọng điểm để đảm bảo không thất thoát lưu lượng organic.",
+      "insight": {
+        "status": "watch",
+        "finding": "Dữ liệu sau mốc 30/10 mới có 4/7 ngày: số URL có impressions trong GSC giảm 0,7% tạm tính so với 4 ngày liền trước.",
+        "evidence": [
+          {
+            "label": "URL có impressions trong GSC (proxy index coverage)",
+            "value": "7.2K",
+            "delta_pct": -0.7,
+            "source": "GSC",
+            "period": "4 ngày sau vs 4 ngày trước 30/10 (chưa đủ 7 ngày dữ liệu sau mốc)"
+          }
+        ],
+        "next_step": "Chạy lại kiểm tra sau 6/11 khi đủ 7 ngày dữ liệu; đối chiếu Pages report.",
+        "data_as_of": "2026-11-03"
+      }
     },
     {
-      "id": "594971",
-      "title": "Google Reveals How AI Search Is Reshaping What Users Query",
-      "title_en": "Google Reveals How AI Search Is Reshaping What Users Query",
-      "summary": "Search Engine Journal cập nhật ngày 2026-10-29. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/google-search-behavior-shifts-2027-ads-strategy/594971/",
-      "published_at": "2026-10-29",
-      "category": "ai_search",
-      "impact": "low",
+      "id": "ai-traffic-drives-more-revenue-per-visit-adobe-499713",
+      "title": "Adobe: Khách Hàng Từ AI Chi Tiêu Vượt Trội (+83% RPV, +90% CR)",
+      "title_en": "AI traffic drives 83% more revenue per visit for retailers: Adobe",
+      "summary": "Chi tiết bản tin: Khách hàng từ AI có RPV cao hơn 83%, tỷ lệ chuyển đổi cao hơn 90%, thêm giỏ hàng cao hơn 53% và ở lại trang lâu hơn 73%. Dự báo mùa mua sắm cuối năm 2026: AI traffic tăng +159% ngày Lễ Tạ ơn và +95% ngày Black Friday.",
+      "source": "Search Engine Land",
+      "url": "https://searchengineland.com/ai-traffic-drives-more-revenue-per-visit-adobe-499713",
+      "published_at": "2026-10-30",
+      "category": "industry",
+      "impact": "medium",
       "tags": [
-        "ai mode"
+        "seo",
+        "geo",
+        "aeo"
       ],
-      "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
+      "action": ""
+    },
+    {
+      "id": "google-ai-mode-product-links-google-shopping-study-499887",
+      "title": "Nghiên Cứu Findrix: Sự Thống Trị Của Google Shopping Trong AI Mode",
+      "title_en": "Google AI Mode sends 57% of product links to Google Shopping",
+      "summary": "Chi tiết bản tin: 57% link sản phẩm trong AI Mode trỏ về Google Shopping; 46,5% câu trả lời không có link ngoài. Ngược lại, ChatGPT dẫn tới ~25 liên kết ngoài mỗi câu trả lời và trích dẫn Reddit trong 35,6% trường hợp.",
+      "source": "Search Engine Land",
+      "url": "https://searchengineland.com/google-ai-mode-product-links-google-shopping-study-499887",
+      "published_at": "2026-10-30",
+      "category": "ai_search",
+      "impact": "medium",
+      "tags": [
+        "ai mode",
+        "chatgpt"
+      ],
+      "action": "",
+      "insight": {
+        "status": "watch",
+        "finding": "Dữ liệu Bing AI sau mốc 30/10 mới có 2/7 ngày: lượt trích dẫn momo.vn giảm 32,5% tạm tính so với 2 ngày liền trước.",
+        "evidence": [
+          {
+            "label": "Lượt trích dẫn momo.vn trên Bing AI (TB/ngày)",
+            "value": "4.7K",
+            "delta_pct": -32.5,
+            "source": "Bing AI Performance",
+            "period": "2 ngày sau vs 2 ngày trước 30/10 (chưa đủ 7 ngày dữ liệu sau mốc)"
+          },
+          {
+            "label": "Page được Bing AI trích dẫn (TB/ngày)",
+            "value": "270",
+            "delta_pct": -22.9,
+            "source": "Bing AI Performance",
+            "period": "2 ngày sau vs 2 ngày trước 30/10 (chưa đủ 7 ngày dữ liệu sau mốc)"
+          }
+        ],
+        "next_step": "Theo dõi citations đến 6/11 khi đủ 7 ngày dữ liệu sau mốc.",
+        "data_as_of": "2026-11-01"
+      }
+    },
+    {
+      "id": "citations-cards-google-ai-overviews-42413",
+      "title": "Thử Nghiệm Gỡ Bỏ Citation Cards Trong AI Overviews",
+      "title_en": "Google Testing Dropping Citations Cards From AI Overviews",
+      "summary": "Tác động: Khi khối thẻ trích dẫn bị loại bỏ, người dùng ít có xu hướng click vào nguồn ngoài, gây sụt giảm mạnh lượng click tự nhiên.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/citations-cards-google-ai-overviews-42413.html",
+      "published_at": "2026-10-30",
+      "category": "ai_search",
+      "impact": "medium",
+      "tags": [
+        "ai overview"
+      ],
+      "action": "",
+      "insight": {
+        "status": "watch",
+        "finding": "Dữ liệu Bing AI sau mốc 30/10 mới có 2/7 ngày: lượt trích dẫn momo.vn giảm 32,5% tạm tính so với 2 ngày liền trước.",
+        "evidence": [
+          {
+            "label": "Lượt trích dẫn momo.vn trên Bing AI (TB/ngày)",
+            "value": "4.7K",
+            "delta_pct": -32.5,
+            "source": "Bing AI Performance",
+            "period": "2 ngày sau vs 2 ngày trước 30/10 (chưa đủ 7 ngày dữ liệu sau mốc)"
+          },
+          {
+            "label": "Page được Bing AI trích dẫn (TB/ngày)",
+            "value": "270",
+            "delta_pct": -22.9,
+            "source": "Bing AI Performance",
+            "period": "2 ngày sau vs 2 ngày trước 30/10 (chưa đủ 7 ngày dữ liệu sau mốc)"
+          }
+        ],
+        "next_step": "Theo dõi citations đến 6/11 khi đủ 7 ngày dữ liệu sau mốc.",
+        "data_as_of": "2026-11-01"
+      }
     },
     {
       "id": "recap-10-20-2026-42334",
@@ -384,7 +759,29 @@
       "tags": [
         "geo"
       ],
-      "action": ""
+      "action": "",
+      "insight": {
+        "status": "watch",
+        "finding": "Lượt trích dẫn momo.vn trên Bing AI giảm 5,9% trong 7 ngày sau 21/10 so với 7 ngày trước đó, dưới ngưỡng 10%.",
+        "evidence": [
+          {
+            "label": "Lượt trích dẫn momo.vn trên Bing AI (TB/ngày)",
+            "value": "5.5K",
+            "delta_pct": -5.9,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 21/10"
+          },
+          {
+            "label": "Page được Bing AI trích dẫn (TB/ngày)",
+            "value": "327",
+            "delta_pct": 2.0,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 21/10"
+          }
+        ],
+        "next_step": "Theo dõi citations thêm 7 ngày; kiểm tra page được trích dẫn nếu mức giảm mở rộng.",
+        "data_as_of": "2026-11-01"
+      }
     },
     {
       "id": "chatgpt-appears-to-drop-utm-tracking-making-ai-referral-traffic-harder-to-measur",
@@ -399,7 +796,29 @@
       "tags": [
         "chatgpt"
       ],
-      "action": ""
+      "action": "",
+      "insight": {
+        "status": "watch",
+        "finding": "Lượt trích dẫn momo.vn trên Bing AI giảm 5,9% trong 7 ngày sau 21/10 so với 7 ngày trước đó, dưới ngưỡng 10%.",
+        "evidence": [
+          {
+            "label": "Lượt trích dẫn momo.vn trên Bing AI (TB/ngày)",
+            "value": "5.5K",
+            "delta_pct": -5.9,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 21/10"
+          },
+          {
+            "label": "Page được Bing AI trích dẫn (TB/ngày)",
+            "value": "327",
+            "delta_pct": 2.0,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 21/10"
+          }
+        ],
+        "next_step": "Theo dõi citations thêm 7 ngày; kiểm tra page được trích dẫn nếu mức giảm mở rộng.",
+        "data_as_of": "2026-11-01"
+      }
     },
     {
       "id": "google-expands-financial-services-ad-verification-to-the-us-and-canada-497503",
@@ -431,7 +850,29 @@
       "tags": [
         "ai overview"
       ],
-      "action": ""
+      "action": "",
+      "insight": {
+        "status": "watch",
+        "finding": "Lượt trích dẫn momo.vn trên Bing AI giảm 5,9% trong 7 ngày sau 21/10 so với 7 ngày trước đó, dưới ngưỡng 10%.",
+        "evidence": [
+          {
+            "label": "Lượt trích dẫn momo.vn trên Bing AI (TB/ngày)",
+            "value": "5.5K",
+            "delta_pct": -5.9,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 21/10"
+          },
+          {
+            "label": "Page được Bing AI trích dẫn (TB/ngày)",
+            "value": "327",
+            "delta_pct": 2.0,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 21/10"
+          }
+        ],
+        "next_step": "Theo dõi citations thêm 7 ngày; kiểm tra page được trích dẫn nếu mức giảm mở rộng.",
+        "data_as_of": "2026-11-01"
+      }
     },
     {
       "id": "content-pruning-case-study-cutting-33-percent-pages-496582",
@@ -476,7 +917,7 @@
           }
         ],
         "next_step": "Theo dõi thêm 7 ngày tiếp theo trên GSC; nếu mức giảm vượt 10% thì rà top URL.",
-        "data_as_of": "2026-10-28"
+        "data_as_of": "2026-11-03"
       }
     },
     {
@@ -494,7 +935,29 @@
         "chatgpt",
         "perplexity"
       ],
-      "action": ""
+      "action": "",
+      "insight": {
+        "status": "watch",
+        "finding": "Lượt trích dẫn momo.vn trên Bing AI giảm 8,8% trong 7 ngày sau 20/10 so với 7 ngày trước đó, dưới ngưỡng 10%.",
+        "evidence": [
+          {
+            "label": "Lượt trích dẫn momo.vn trên Bing AI (TB/ngày)",
+            "value": "5.4K",
+            "delta_pct": -8.8,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 20/10"
+          },
+          {
+            "label": "Page được Bing AI trích dẫn (TB/ngày)",
+            "value": "327",
+            "delta_pct": 1.8,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 20/10"
+          }
+        ],
+        "next_step": "Theo dõi citations thêm 7 ngày; kiểm tra page được trích dẫn nếu mức giảm mở rộng.",
+        "data_as_of": "2026-11-01"
+      }
     },
     {
       "id": "geo-strategy",
@@ -509,7 +972,29 @@
       "tags": [
         "geo"
       ],
-      "action": ""
+      "action": "",
+      "insight": {
+        "status": "watch",
+        "finding": "Lượt trích dẫn momo.vn trên Bing AI giảm 8,8% trong 7 ngày sau 20/10 so với 7 ngày trước đó, dưới ngưỡng 10%.",
+        "evidence": [
+          {
+            "label": "Lượt trích dẫn momo.vn trên Bing AI (TB/ngày)",
+            "value": "5.4K",
+            "delta_pct": -8.8,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 20/10"
+          },
+          {
+            "label": "Page được Bing AI trích dẫn (TB/ngày)",
+            "value": "327",
+            "delta_pct": 1.8,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 20/10"
+          }
+        ],
+        "next_step": "Theo dõi citations thêm 7 ngày; kiểm tra page được trích dẫn nếu mức giảm mở rộng.",
+        "data_as_of": "2026-11-01"
+      }
     },
     {
       "id": "best-generative-engine-optimization-tools",
@@ -524,7 +1009,29 @@
       "tags": [
         "geo"
       ],
-      "action": ""
+      "action": "",
+      "insight": {
+        "status": "watch",
+        "finding": "Lượt trích dẫn momo.vn trên Bing AI giảm 8,8% trong 7 ngày sau 20/10 so với 7 ngày trước đó, dưới ngưỡng 10%.",
+        "evidence": [
+          {
+            "label": "Lượt trích dẫn momo.vn trên Bing AI (TB/ngày)",
+            "value": "5.4K",
+            "delta_pct": -8.8,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 20/10"
+          },
+          {
+            "label": "Page được Bing AI trích dẫn (TB/ngày)",
+            "value": "327",
+            "delta_pct": 1.8,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 20/10"
+          }
+        ],
+        "next_step": "Theo dõi citations thêm 7 ngày; kiểm tra page được trích dẫn nếu mức giảm mở rộng.",
+        "data_as_of": "2026-11-01"
+      }
     },
     {
       "id": "google-updates",
@@ -567,7 +1074,7 @@
           }
         ],
         "next_step": "Theo dõi thêm 7 ngày tiếp theo trên GSC; nếu mức giảm vượt 10% thì rà top URL.",
-        "data_as_of": "2026-10-28"
+        "data_as_of": "2026-11-03"
       }
     },
     {
@@ -583,7 +1090,29 @@
       "tags": [
         "geo"
       ],
-      "action": ""
+      "action": "",
+      "insight": {
+        "status": "watch",
+        "finding": "Lượt trích dẫn momo.vn trên Bing AI giảm 8,8% trong 7 ngày sau 20/10 so với 7 ngày trước đó, dưới ngưỡng 10%.",
+        "evidence": [
+          {
+            "label": "Lượt trích dẫn momo.vn trên Bing AI (TB/ngày)",
+            "value": "5.4K",
+            "delta_pct": -8.8,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 20/10"
+          },
+          {
+            "label": "Page được Bing AI trích dẫn (TB/ngày)",
+            "value": "327",
+            "delta_pct": 1.8,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 20/10"
+          }
+        ],
+        "next_step": "Theo dõi citations thêm 7 ngày; kiểm tra page được trích dẫn nếu mức giảm mở rộng.",
+        "data_as_of": "2026-11-01"
+      }
     },
     {
       "id": "step-by-step-guide-to-geo-2026",
@@ -598,7 +1127,29 @@
       "tags": [
         "geo"
       ],
-      "action": ""
+      "action": "",
+      "insight": {
+        "status": "watch",
+        "finding": "Lượt trích dẫn momo.vn trên Bing AI giảm 8,8% trong 7 ngày sau 20/10 so với 7 ngày trước đó, dưới ngưỡng 10%.",
+        "evidence": [
+          {
+            "label": "Lượt trích dẫn momo.vn trên Bing AI (TB/ngày)",
+            "value": "5.4K",
+            "delta_pct": -8.8,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 20/10"
+          },
+          {
+            "label": "Page được Bing AI trích dẫn (TB/ngày)",
+            "value": "327",
+            "delta_pct": 1.8,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 20/10"
+          }
+        ],
+        "next_step": "Theo dõi citations thêm 7 ngày; kiểm tra page được trích dẫn nếu mức giảm mở rộng.",
+        "data_as_of": "2026-11-01"
+      }
     },
     {
       "id": "google-search-ranking-volatility-chatter-42317",
@@ -614,7 +1165,29 @@
         "ai mode",
         "search console"
       ],
-      "action": ""
+      "action": "",
+      "insight": {
+        "status": "watch",
+        "finding": "Lượt trích dẫn momo.vn trên Bing AI giảm 10,3% trong 7 ngày sau 19/10 so với 7 ngày trước đó, dưới ngưỡng 10%.",
+        "evidence": [
+          {
+            "label": "Lượt trích dẫn momo.vn trên Bing AI (TB/ngày)",
+            "value": "5.3K",
+            "delta_pct": -10.3,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 19/10"
+          },
+          {
+            "label": "Page được Bing AI trích dẫn (TB/ngày)",
+            "value": "325",
+            "delta_pct": 2.9,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 19/10"
+          }
+        ],
+        "next_step": "Theo dõi citations thêm 7 ngày; kiểm tra page được trích dẫn nếu mức giảm mở rộng.",
+        "data_as_of": "2026-11-01"
+      }
     },
     {
       "id": "google-ask-maps-make-your-business-easier-to-recommend-496672",
@@ -629,7 +1202,29 @@
       "tags": [
         "geo"
       ],
-      "action": ""
+      "action": "",
+      "insight": {
+        "status": "watch",
+        "finding": "Lượt trích dẫn momo.vn trên Bing AI giảm 10,3% trong 7 ngày sau 19/10 so với 7 ngày trước đó, dưới ngưỡng 10%.",
+        "evidence": [
+          {
+            "label": "Lượt trích dẫn momo.vn trên Bing AI (TB/ngày)",
+            "value": "5.3K",
+            "delta_pct": -10.3,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 19/10"
+          },
+          {
+            "label": "Page được Bing AI trích dẫn (TB/ngày)",
+            "value": "325",
+            "delta_pct": 2.9,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 19/10"
+          }
+        ],
+        "next_step": "Theo dõi citations thêm 7 ngày; kiểm tra page được trích dẫn nếu mức giảm mở rộng.",
+        "data_as_of": "2026-11-01"
+      }
     },
     {
       "id": "google-merchant-center-adds-warranty-attribute-for-product-listings-496994",
@@ -644,7 +1239,29 @@
       "tags": [
         "ai overview"
       ],
-      "action": ""
+      "action": "",
+      "insight": {
+        "status": "watch",
+        "finding": "Lượt trích dẫn momo.vn trên Bing AI giảm 10,3% trong 7 ngày sau 19/10 so với 7 ngày trước đó, dưới ngưỡng 10%.",
+        "evidence": [
+          {
+            "label": "Lượt trích dẫn momo.vn trên Bing AI (TB/ngày)",
+            "value": "5.3K",
+            "delta_pct": -10.3,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 19/10"
+          },
+          {
+            "label": "Page được Bing AI trích dẫn (TB/ngày)",
+            "value": "325",
+            "delta_pct": 2.9,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 19/10"
+          }
+        ],
+        "next_step": "Theo dõi citations thêm 7 ngày; kiểm tra page được trích dẫn nếu mức giảm mở rộng.",
+        "data_as_of": "2026-11-01"
+      }
     },
     {
       "id": "chatgpt-ads-introduces-new-measurement-tools-and-visual-ad-formats-496998",
@@ -660,7 +1277,29 @@
         "ai mode",
         "chatgpt"
       ],
-      "action": ""
+      "action": "",
+      "insight": {
+        "status": "watch",
+        "finding": "Lượt trích dẫn momo.vn trên Bing AI giảm 10,3% trong 7 ngày sau 19/10 so với 7 ngày trước đó, dưới ngưỡng 10%.",
+        "evidence": [
+          {
+            "label": "Lượt trích dẫn momo.vn trên Bing AI (TB/ngày)",
+            "value": "5.3K",
+            "delta_pct": -10.3,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 19/10"
+          },
+          {
+            "label": "Page được Bing AI trích dẫn (TB/ngày)",
+            "value": "325",
+            "delta_pct": 2.9,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 19/10"
+          }
+        ],
+        "next_step": "Theo dõi citations thêm 7 ngày; kiểm tra page được trích dẫn nếu mức giảm mở rộng.",
+        "data_as_of": "2026-11-01"
+      }
     },
     {
       "id": "video-09-16-2026-42313",
@@ -676,7 +1315,29 @@
         "ai mode",
         "search console"
       ],
-      "action": ""
+      "action": "",
+      "insight": {
+        "status": "watch",
+        "finding": "Lượt trích dẫn momo.vn trên Bing AI giảm 10,3% trong 7 ngày sau 19/10 so với 7 ngày trước đó, dưới ngưỡng 10%.",
+        "evidence": [
+          {
+            "label": "Lượt trích dẫn momo.vn trên Bing AI (TB/ngày)",
+            "value": "5.3K",
+            "delta_pct": -10.3,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 19/10"
+          },
+          {
+            "label": "Page được Bing AI trích dẫn (TB/ngày)",
+            "value": "325",
+            "delta_pct": 2.9,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 19/10"
+          }
+        ],
+        "next_step": "Theo dõi citations thêm 7 ngày; kiểm tra page được trích dẫn nếu mức giảm mở rộng.",
+        "data_as_of": "2026-11-01"
+      }
     },
     {
       "id": "seo",
@@ -719,7 +1380,7 @@
           }
         ],
         "next_step": "Theo dõi thêm 7 ngày tiếp theo trên GSC; nếu mức giảm vượt 10% thì rà top URL.",
-        "data_as_of": "2026-10-28"
+        "data_as_of": "2026-11-03"
       }
     },
     {
@@ -737,7 +1398,29 @@
         "gemini",
         "e-e-a-t"
       ],
-      "action": ""
+      "action": "",
+      "insight": {
+        "status": "watch",
+        "finding": "Lượt trích dẫn momo.vn trên Bing AI giảm 10,3% trong 7 ngày sau 19/10 so với 7 ngày trước đó, dưới ngưỡng 10%.",
+        "evidence": [
+          {
+            "label": "Lượt trích dẫn momo.vn trên Bing AI (TB/ngày)",
+            "value": "5.3K",
+            "delta_pct": -10.3,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 19/10"
+          },
+          {
+            "label": "Page được Bing AI trích dẫn (TB/ngày)",
+            "value": "325",
+            "delta_pct": 2.9,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 19/10"
+          }
+        ],
+        "next_step": "Theo dõi citations thêm 7 ngày; kiểm tra page được trích dẫn nếu mức giảm mở rộng.",
+        "data_as_of": "2026-11-01"
+      }
     },
     {
       "id": "canonicalization-seo-448161",
@@ -753,7 +1436,29 @@
         "robots.txt",
         "cannibalization"
       ],
-      "action": ""
+      "action": "",
+      "insight": {
+        "status": "watch",
+        "finding": "Lượt trích dẫn momo.vn trên Bing AI giảm 10,3% trong 7 ngày sau 19/10 so với 7 ngày trước đó, dưới ngưỡng 10%.",
+        "evidence": [
+          {
+            "label": "Lượt trích dẫn momo.vn trên Bing AI (TB/ngày)",
+            "value": "5.3K",
+            "delta_pct": -10.3,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 19/10"
+          },
+          {
+            "label": "Page được Bing AI trích dẫn (TB/ngày)",
+            "value": "325",
+            "delta_pct": 2.9,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 19/10"
+          }
+        ],
+        "next_step": "Theo dõi citations thêm 7 ngày; kiểm tra page được trích dẫn nếu mức giảm mở rộng.",
+        "data_as_of": "2026-11-01"
+      }
     },
     {
       "id": "google-updates-links-in-ai-mode-and-ai-overviews-again-42308",
@@ -770,7 +1475,29 @@
         "ai mode",
         "search console"
       ],
-      "action": ""
+      "action": "",
+      "insight": {
+        "status": "watch",
+        "finding": "Lượt trích dẫn momo.vn trên Bing AI giảm 13,6% trong 7 ngày sau 18/10 so với 7 ngày trước đó, dưới ngưỡng 10%.",
+        "evidence": [
+          {
+            "label": "Lượt trích dẫn momo.vn trên Bing AI (TB/ngày)",
+            "value": "5.1K",
+            "delta_pct": -13.6,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 18/10"
+          },
+          {
+            "label": "Page được Bing AI trích dẫn (TB/ngày)",
+            "value": "330",
+            "delta_pct": 3.6,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 18/10"
+          }
+        ],
+        "next_step": "Theo dõi citations thêm 7 ngày; kiểm tra page được trích dẫn nếu mức giảm mở rộng.",
+        "data_as_of": "2026-11-01"
+      }
     },
     {
       "id": "google-app-new-search-bar-42267",
@@ -785,7 +1512,29 @@
       "tags": [
         "ai mode"
       ],
-      "action": ""
+      "action": "",
+      "insight": {
+        "status": "watch",
+        "finding": "Lượt trích dẫn momo.vn trên Bing AI giảm 13,6% trong 7 ngày sau 18/10 so với 7 ngày trước đó, dưới ngưỡng 10%.",
+        "evidence": [
+          {
+            "label": "Lượt trích dẫn momo.vn trên Bing AI (TB/ngày)",
+            "value": "5.1K",
+            "delta_pct": -13.6,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 18/10"
+          },
+          {
+            "label": "Page được Bing AI trích dẫn (TB/ngày)",
+            "value": "330",
+            "delta_pct": 3.6,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 18/10"
+          }
+        ],
+        "next_step": "Theo dõi citations thêm 7 ngày; kiểm tra page được trích dẫn nếu mức giảm mở rộng.",
+        "data_as_of": "2026-11-01"
+      }
     },
     {
       "id": "google-begins-testing-ads-in-ai-mode-for-users-with-personal-intelligence-enable",
@@ -800,7 +1549,29 @@
       "tags": [
         "ai mode"
       ],
-      "action": ""
+      "action": "",
+      "insight": {
+        "status": "watch",
+        "finding": "Lượt trích dẫn momo.vn trên Bing AI giảm 13,6% trong 7 ngày sau 18/10 so với 7 ngày trước đó, dưới ngưỡng 10%.",
+        "evidence": [
+          {
+            "label": "Lượt trích dẫn momo.vn trên Bing AI (TB/ngày)",
+            "value": "5.1K",
+            "delta_pct": -13.6,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 18/10"
+          },
+          {
+            "label": "Page được Bing AI trích dẫn (TB/ngày)",
+            "value": "330",
+            "delta_pct": 3.6,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 18/10"
+          }
+        ],
+        "next_step": "Theo dõi citations thêm 7 ngày; kiểm tra page được trích dẫn nếu mức giảm mở rộng.",
+        "data_as_of": "2026-11-01"
+      }
     },
     {
       "id": "utm-parameters-missing-chatgpt-42299",
@@ -815,7 +1586,29 @@
       "tags": [
         "chatgpt"
       ],
-      "action": ""
+      "action": "",
+      "insight": {
+        "status": "watch",
+        "finding": "Lượt trích dẫn momo.vn trên Bing AI giảm 13,6% trong 7 ngày sau 18/10 so với 7 ngày trước đó, dưới ngưỡng 10%.",
+        "evidence": [
+          {
+            "label": "Lượt trích dẫn momo.vn trên Bing AI (TB/ngày)",
+            "value": "5.1K",
+            "delta_pct": -13.6,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 18/10"
+          },
+          {
+            "label": "Page được Bing AI trích dẫn (TB/ngày)",
+            "value": "330",
+            "delta_pct": 3.6,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 18/10"
+          }
+        ],
+        "next_step": "Theo dõi citations thêm 7 ngày; kiểm tra page được trích dẫn nếu mức giảm mở rộng.",
+        "data_as_of": "2026-11-01"
+      }
     },
     {
       "id": "google-updates-indexing-api-quota-information-42316",
@@ -858,7 +1651,7 @@
           }
         ],
         "next_step": "Theo dõi thêm 7 ngày tiếp theo trên GSC; nếu mức giảm vượt 10% thì rà top URL.",
-        "data_as_of": "2026-10-28"
+        "data_as_of": "2026-11-03"
       }
     },
     {
@@ -876,7 +1669,29 @@
         "chatgpt",
         "gemini"
       ],
-      "action": ""
+      "action": "",
+      "insight": {
+        "status": "watch",
+        "finding": "Lượt trích dẫn momo.vn trên Bing AI giảm 13,6% trong 7 ngày sau 18/10 so với 7 ngày trước đó, dưới ngưỡng 10%.",
+        "evidence": [
+          {
+            "label": "Lượt trích dẫn momo.vn trên Bing AI (TB/ngày)",
+            "value": "5.1K",
+            "delta_pct": -13.6,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 18/10"
+          },
+          {
+            "label": "Page được Bing AI trích dẫn (TB/ngày)",
+            "value": "330",
+            "delta_pct": 3.6,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 18/10"
+          }
+        ],
+        "next_step": "Theo dõi citations thêm 7 ngày; kiểm tra page được trích dẫn nếu mức giảm mở rộng.",
+        "data_as_of": "2026-11-01"
+      }
     },
     {
       "id": "gated-content-enemy-ai-search-495201",
@@ -892,7 +1707,29 @@
         "schema",
         "perplexity"
       ],
-      "action": ""
+      "action": "",
+      "insight": {
+        "status": "watch",
+        "finding": "Lượt trích dẫn momo.vn trên Bing AI giảm 13,6% trong 7 ngày sau 18/10 so với 7 ngày trước đó, dưới ngưỡng 10%.",
+        "evidence": [
+          {
+            "label": "Lượt trích dẫn momo.vn trên Bing AI (TB/ngày)",
+            "value": "5.1K",
+            "delta_pct": -13.6,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 18/10"
+          },
+          {
+            "label": "Page được Bing AI trích dẫn (TB/ngày)",
+            "value": "330",
+            "delta_pct": 3.6,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 18/10"
+          }
+        ],
+        "next_step": "Theo dõi citations thêm 7 ngày; kiểm tra page được trích dẫn nếu mức giảm mở rộng.",
+        "data_as_of": "2026-11-01"
+      }
     },
     {
       "id": "audit-off-page-ai-search-visibility-90-day-plan-494866",
@@ -909,7 +1746,29 @@
         "perplexity",
         "backlink"
       ],
-      "action": ""
+      "action": "",
+      "insight": {
+        "status": "watch",
+        "finding": "Lượt trích dẫn momo.vn trên Bing AI giảm 13,6% trong 7 ngày sau 18/10 so với 7 ngày trước đó, dưới ngưỡng 10%.",
+        "evidence": [
+          {
+            "label": "Lượt trích dẫn momo.vn trên Bing AI (TB/ngày)",
+            "value": "5.1K",
+            "delta_pct": -13.6,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 18/10"
+          },
+          {
+            "label": "Page được Bing AI trích dẫn (TB/ngày)",
+            "value": "330",
+            "delta_pct": 3.6,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 18/10"
+          }
+        ],
+        "next_step": "Theo dõi citations thêm 7 ngày; kiểm tra page được trích dẫn nếu mức giảm mở rộng.",
+        "data_as_of": "2026-11-01"
+      }
     },
     {
       "id": "itestedwhoaisearchcitesformyproduct",
@@ -926,7 +1785,29 @@
         "perplexity",
         "backlink"
       ],
-      "action": ""
+      "action": "",
+      "insight": {
+        "status": "watch",
+        "finding": "Lượt trích dẫn momo.vn trên Bing AI giảm 13,6% trong 7 ngày sau 18/10 so với 7 ngày trước đó, dưới ngưỡng 10%.",
+        "evidence": [
+          {
+            "label": "Lượt trích dẫn momo.vn trên Bing AI (TB/ngày)",
+            "value": "5.1K",
+            "delta_pct": -13.6,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 18/10"
+          },
+          {
+            "label": "Page được Bing AI trích dẫn (TB/ngày)",
+            "value": "330",
+            "delta_pct": 3.6,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 18/10"
+          }
+        ],
+        "next_step": "Theo dõi citations thêm 7 ngày; kiểm tra page được trích dẫn nếu mức giảm mở rộng.",
+        "data_as_of": "2026-11-01"
+      }
     },
     {
       "id": "google-september-2026-spam-update-done-42235",
@@ -970,7 +1851,7 @@
           }
         ],
         "next_step": "Rà soát /nap-xu-tiktok và 4 URL còn lại trong danh sách affected trên GSC (on-page, internal link, trạng thái index) trước khi kết luận.",
-        "data_as_of": "2026-10-28",
+        "data_as_of": "2026-11-03",
         "affected": [
           {
             "name": "/nap-xu-tiktok",
@@ -1015,7 +1896,29 @@
         "ai mode",
         "schema"
       ],
-      "action": ""
+      "action": "",
+      "insight": {
+        "status": "not_affected",
+        "finding": "Lượt trích dẫn momo.vn trên Bing AI tăng 18,1% trong 7 ngày sau 12/10 so với 7 ngày trước đó, không vượt ngưỡng 5%.",
+        "evidence": [
+          {
+            "label": "Lượt trích dẫn momo.vn trên Bing AI (TB/ngày)",
+            "value": "5.9K",
+            "delta_pct": 18.1,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 12/10"
+          },
+          {
+            "label": "Page được Bing AI trích dẫn (TB/ngày)",
+            "value": "321",
+            "delta_pct": 6.3,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 12/10"
+          }
+        ],
+        "next_step": "Không cần hành động; duy trì theo dõi citations định kỳ.",
+        "data_as_of": "2026-11-01"
+      }
     },
     {
       "id": "ai-optimization-guide",
@@ -1033,7 +1936,29 @@
         "aeo",
         "schema"
       ],
-      "action": ""
+      "action": "",
+      "insight": {
+        "status": "not_affected",
+        "finding": "Lượt trích dẫn momo.vn trên Bing AI tăng 13,6% trong 7 ngày sau 11/10 so với 7 ngày trước đó, không vượt ngưỡng 5%.",
+        "evidence": [
+          {
+            "label": "Lượt trích dẫn momo.vn trên Bing AI (TB/ngày)",
+            "value": "5.9K",
+            "delta_pct": 13.6,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 11/10"
+          },
+          {
+            "label": "Page được Bing AI trích dẫn (TB/ngày)",
+            "value": "316",
+            "delta_pct": 3.5,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 11/10"
+          }
+        ],
+        "next_step": "Không cần hành động; duy trì theo dõi citations định kỳ.",
+        "data_as_of": "2026-11-01"
+      }
     },
     {
       "id": "575026",
@@ -1051,7 +1976,29 @@
         "aeo",
         "schema"
       ],
-      "action": ""
+      "action": "",
+      "insight": {
+        "status": "not_affected",
+        "finding": "Lượt trích dẫn momo.vn trên Bing AI tăng 13,6% trong 7 ngày sau 11/10 so với 7 ngày trước đó, không vượt ngưỡng 5%.",
+        "evidence": [
+          {
+            "label": "Lượt trích dẫn momo.vn trên Bing AI (TB/ngày)",
+            "value": "5.9K",
+            "delta_pct": 13.6,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 11/10"
+          },
+          {
+            "label": "Page được Bing AI trích dẫn (TB/ngày)",
+            "value": "316",
+            "delta_pct": 3.5,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 11/10"
+          }
+        ],
+        "next_step": "Không cần hành động; duy trì theo dõi citations định kỳ.",
+        "data_as_of": "2026-11-01"
+      }
     },
     {
       "id": "231109735v3",
@@ -1069,7 +2016,29 @@
         "perplexity",
         "gemini"
       ],
-      "action": ""
+      "action": "",
+      "insight": {
+        "status": "not_affected",
+        "finding": "Lượt trích dẫn momo.vn trên Bing AI tăng 13,6% trong 7 ngày sau 11/10 so với 7 ngày trước đó, không vượt ngưỡng 5%.",
+        "evidence": [
+          {
+            "label": "Lượt trích dẫn momo.vn trên Bing AI (TB/ngày)",
+            "value": "5.9K",
+            "delta_pct": 13.6,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 11/10"
+          },
+          {
+            "label": "Page được Bing AI trích dẫn (TB/ngày)",
+            "value": "316",
+            "delta_pct": 3.5,
+            "source": "Bing AI Performance",
+            "period": "7 ngày sau vs 7 ngày trước 11/10"
+          }
+        ],
+        "next_step": "Không cần hành động; duy trì theo dõi citations định kỳ.",
+        "data_as_of": "2026-11-01"
+      }
     },
     {
       "id": "seo-learning-paths",
@@ -1099,7 +2068,7 @@
           }
         ],
         "next_step": "Không cần hành động; duy trì theo dõi index coverage định kỳ.",
-        "data_as_of": "2026-10-28"
+        "data_as_of": "2026-11-03"
       }
     },
     {
@@ -1144,7 +2113,7 @@
           }
         ],
         "next_step": "Không cần hành động ngay; duy trì theo dõi GSC định kỳ.",
-        "data_as_of": "2026-10-28"
+        "data_as_of": "2026-11-03"
       }
     },
     {
@@ -1175,7 +2144,7 @@
           }
         ],
         "next_step": "Không cần hành động; duy trì theo dõi index coverage định kỳ.",
-        "data_as_of": "2026-10-28"
+        "data_as_of": "2026-11-03"
       }
     },
     {

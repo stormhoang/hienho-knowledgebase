@@ -13,7 +13,7 @@ PPTX View dùng lại các component của Dashboard Điều Hành. Sửa dashbo
 | 1 | Bìa | Web Platform - Báo cáo Điều hành Tháng 10/2026 |
 | 2 | Khung 3 Trụ Cột | Web Platform - Báo cáo Điều hành Tháng 10/2026 |
 | 3 | Hiệu suất kinh doanh | Traffic Tháng 10 đạt 98,3% target dù kênh trả phí giảm sâu (-60,4% MoM), kênh tự nhiên tiếp tục giữ đà tăng trưởng tốt (+13,5% MoM) |
-| 4 | Cinema Hub | Cinema Hub vượt kế hoạch đạt 1,13M Pageviews (101,4% Target); Non-Paid đạt đỉnh 86,4% bù đắp 93% Paid Ads cắt giảm |
+| 4 | Cinema Hub | Cinema Hub vượt kế hoạch đạt 1,13M Pageviews (101,4% Target); Non-Paid chạm mốc kỷ lục 86,4% bù đắp 93% Paid Ads cắt giảm |
 | 5 | Financial Hub | Financial Hub đạt 274K PV (+9,6% MoM) nhưng chưa bền vững: Phụ thuộc 37% Paid Ads, 77% traffic dồn vào 3 SP tín chấp |
 | 6 | Phễu Web-to-App | Phễu New User tăng gấp đôi từ T7 đến T10, lập kỷ lục 2.389 liên kết ngân hàng (+152%); sẵn sàng đón mục tiêu 30K Install Q4 |
 | 7 | Thư viện Công cụ Tiện ích | Chưa có headline trong Pyramid, cần bổ sung |
@@ -56,3 +56,9 @@ Thay đổi so với bản cũ:
 - Target T10 của Referral (438.235) là số gộp tạm từ target cũ của Referral và "Kênh tự nhiên khác", chưa có nguồn chính thức.
 - Financial Hub: Pyramid ghi 274K PV, weekly W44 ghi 254.077 PV.
 - `executive_pillars` trong `monthly_report_2026_10.json` chưa khớp nội dung đang hiển thị trên dashboard.
+
+## 5. Cập nhật 06/11/2026: ngân sách Pilot Off-Page Cinema
+
+- BU Movies tài trợ 100% ngân sách 125M. Bỏ phương án cũ (Movies 80% hoặc 100M, Web Platform đối ứng 20% hoặc 25M).
+- Đã sửa trên dashboard/deck (slide 3, 4, Next Actions Cinema) và `report-thang-10-2026-board.md`.
+- `Web_Platform_Thang_10_2026_Pyramid.pptx` đã sửa slide 2, 3, 4, 11 (cả bản trong repo `public/reports/`).

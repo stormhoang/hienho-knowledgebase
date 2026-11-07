@@ -127,7 +127,7 @@
 #### Đề Xuất 1: Kích hoạt Dự Án Thử Nghiệm Pilot Off-Page SEO Cho Cinema Hub Mùa Phim Tết 2027
 - **Bối cảnh & Điểm nghẽn:** BU Movies đã chủ động cắt 93% Ads phim lẻ. Các từ khóa cụm rạp đối tác (CGV, Lotte, Lịch chiếu) đang dao động ở Top 6 - 12 do thiếu hụt liên kết thẩm quyền ngoài app. Nếu không chuẩn bị từ tháng 11, Web sẽ chậm chân trước mùa phim Tết 2027 (giai đoạn đóng góp 40% doanh thu rạp cả năm).
 - **Đề xuất Ban Giám Đốc phê duyệt:**
-  - Kích hoạt dự án thử nghiệm Pilot Off-Page SEO trong 3 tháng cho Cinema Hub với ngân sách 125 triệu VNĐ (trong đó BU Movies tài trợ 80%, Web Platform phụ trách 20%).
+  - Kích hoạt dự án thử nghiệm Pilot Off-Page SEO trong 3 tháng cho Cinema Hub với ngân sách 125 triệu VNĐ (BU Movies tài trợ 100%, Web Platform phụ trách triển khai).
   - Mục tiêu: Đưa các từ khóa cụm rạp lên Top 3 - 5 Google Search và tối ưu hiện diện trên AI Overviews trước mùa phim Tết 2027.
 
 #### Đề Xuất 2: Phê Duyệt Mở Rộng Mô Hình Gamification Quiz Sang Giáo Dục Tài Chính & Điểm Tín Dụng CIC

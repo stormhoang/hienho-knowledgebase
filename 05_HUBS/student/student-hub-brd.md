@@ -104,7 +104,7 @@
 2. **Trang thông tin & Khám phá (Discovery Hub):** Nơi sinh viên tra cứu cẩm nang, dùng công cụ tính tiền trọ, xem bảng xếp hạng Review Trường học và các gói ưu đãi.
 
 ### 2.3 Comprehensive Service Ecosystem
-Hệ sinh thái tiện ích "Bạn đồng hành MoMo" dành cho sinh viên được phân rã chi tiết thành 11 Use Cases dịch vụ độc lập:
+Hệ sinh thái tiện ích "Bạn đồng hành MoMo" dành cho sinh viên được cơ cấu chi tiết thành 11 Use Cases dịch vụ độc lập:
 
 <table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
   <thead>
@@ -286,7 +286,7 @@ Mục này mô tả việc xây dựng các trang trường học chi tiết (`m
 
 ### 4.1 Unauthenticated Web-to-App Acquisition Funnel
 1. **Khám phá trên Web (`momo.vn/sinh-vien`):** Sinh viên truy cập đọc cẩm nang, dùng micro-tool tính tiền trọ, xem Review Trường học và các gói ưu đãi hoàn toàn công khai, không cần đăng nhập hay xác thực.
-2. **Điều hướng chuyển đổi:** Khi sinh viên bấm nút CTA "Nhận ưu đãi" hoặc "Xác thực ngay", hệ thống kích hoạt đường dẫn **OneLink** mở ứng dụng MoMo.
+2. **Điều hướng chuyển đổi:** Khi sinh viên nhấp vào nút "Nhận ưu đãi" hoặc "Xác thực ngay", hệ thống kích hoạt đường dẫn **OneLink** mở ứng dụng MoMo.
 3. **Thực hiện In-App:** Sinh viên hoàn tất xác thực Thẻ Sinh Viên Số và nhận các ưu đãi tài chính trực tiếp bên trong App MoMo.
 
 ### 4.2 Monetization & Financial Cross-Sell
@@ -309,7 +309,7 @@ Mục này mô tả việc xây dựng các trang trường học chi tiết (`m
   * **Phase 2 (Mở rộng Programmatic Sub-Pages):** Các đường dẫn trang con chuyên biệt (`/sinh-vien/[ten-truong]/nha-tro`, `/ambassador`, `/workshop`, `/review`) sẽ được mở rộng trong Phase 2 khi quy mô traffic tự nhiên tăng trưởng.
  & URL Hierarchy
 
-Cấu trúc đường dẫn URL tổng thể (Site Map Architecture) của Student Hub được thiết kế theo chuẩn phân cấp Subdirectory phân rã từ gốc `/sinh-vien`:
+Cấu trúc đường dẫn URL tổng thể (Site Map Architecture) của Student Hub được thiết kế theo chuẩn phân cấp Subdirectory cơ cấu từ gốc `/sinh-vien`:
 
 ```
 momo.vn/sinh-vien (Trang chủ Student Hub / Discovery Hub)
@@ -383,10 +383,10 @@ Bố cục chi tiết 12 khối thành phần giao diện & nội dung hiển th
    * Lưới icon điều hướng 1-touch truy cập nhanh 6 dịch vụ tiện ích sinh viên cố định: Đóng học phí, Cổng đăng ký tín chỉ (deep-link hệ thống trường), Vay nhanh sinh viên, Ví Trả Sau 0% lãi suất, Túi Thần Tài tích lũy sinh lời, Gói Student Pass đặc quyền và Đặt vé xem phim.
 
 3. **Utility Tính Học Phí:**
-   * Công cụ giả lập tài chính độc lập: Thanh trượt số lượng tín chỉ linh hoạt (12 - 30 tín chỉ), tự động giả lập tổng tiền học phí theo từng ngành học/kỳ, phân rã chi phí chi tiết kèm nút CTA *"Nộp học phí ngay"* (OneLink mở phễu nộp học phí In-App).
+   * Công cụ giả lập tài chính độc lập: Thanh trượt số lượng tín chỉ linh hoạt (12 - 30 tín chỉ), tự động giả lập tổng tiền học phí theo từng ngành học/kỳ, cơ cấu chi phí chi tiết kèm nút CTA *"Nộp học phí ngay"* (OneLink mở phễu nộp học phí In-App).
 
 4. **Tuyến Xe Buýt:**
-   * Phân hệ tra cứu phương tiện công cộng chuyên biệt: Hiển thị danh sách các tuyến xe buýt đi qua từng cơ sở trường ĐH (VD: tuyến 139, 34, 38, 56...), thời gian di chuyển ước tính, vị trí trạm đón/trả, giá vé (thẻ UniPass 2.000đ/lượt TDTU, ĐHQG Bus).
+   * Tính năng tra cứu phương tiện công cộng chuyên biệt: Hiển thị danh sách các tuyến xe buýt đi qua từng cơ sở trường ĐH (VD: tuyến 139, 34, 38, 56...), thời gian di chuyển ước tính, vị trí trạm đón/trả, giá vé (thẻ UniPass 2.000đ/lượt TDTU, ĐHQG Bus).
 
 5. **Tin Tức & Sự Kiện:**
    * Khối tin tức nổi bật 30-60 ngày gần nhất thu thập từ website chính thức của trường (Thông báo lịch thi, ngày hội việc làm, lễ tốt nghiệp, thành tích nổi bật) dạng card bài viết (Tiêu đề, ảnh đại diện, ngày đăng, tóm tắt).
@@ -396,7 +396,7 @@ Bố cục chi tiết 12 khối thành phần giao diện & nội dung hiển th
 
 7. **Ngành Đào Tạo:**
    * Danh sách khối ngành đào tạo kèm Học phí (VNĐ/năm hoặc tín chỉ), Điểm đầu vào, Thời gian học (4 năm).
-   * **Modal Popup / Chi tiết Ngành (Phase 1):** Phân rã Lộ trình học 7-8 học kỳ (~120-142 tín chỉ), Mục tiêu đào tạo, Chuẩn đầu ra ngoại ngữ (TOEIC/IELTS), Cơ hội nghề nghiệp & Bảng mức lương khởi điểm vs 3 năm kinh nghiệm.
+   * **Modal Popup / Chi tiết Ngành (Phase 1):** cơ cấu Lộ trình học 7-8 học kỳ (~120-142 tín chỉ), Mục tiêu đào tạo, Chuẩn đầu ra ngoại ngữ (TOEIC/IELTS), Cơ hội nghề nghiệp & Bảng mức lương khởi điểm vs 3 năm kinh nghiệm.
 
 8. **Học Bổng:**
    * Danh sách card học bổng trường & quỹ doanh nghiệp tài trợ (Tên học bổng, Giá trị VNĐ hoặc % học phí, Đối tượng áp dụng).
@@ -412,7 +412,7 @@ Bố cục chi tiết 12 khối thành phần giao diện & nội dung hiển th
     * **Modal Popup / Chi tiết Việc Làm (Phase 1):** Mô tả công việc chuẩn TopCV (JD, Yêu cầu ứng viên, Quyền lợi, Địa điểm mini-map, Thông tin công ty & CTA Ứng tuyển).
 
 11. **Đánh Giá & Review UGC:**
-    * Bài viết đánh giá ẩn danh từ sinh viên thực tế phân rã 5 tiêu chí (*Khuôn viên, Thư viện, Canteen, Nhà xe/An ninh, Trọ/KTX*).
+    * Bài viết đánh giá ẩn danh từ sinh viên thực tế cơ cấu 5 tiêu chí (*Khuôn viên, Thư viện, Canteen, Nhà xe/An ninh, Trọ/KTX*).
     * Bộ 5-8 cụm từ gợi ý chọn nhanh (*"Cơ sở vật chất tốt", "Giảng viên tận tâm", "Học phí hợp lý"*...).
 
 12. **FAQs Sinh Viên:**

@@ -1,11 +1,11 @@
 # TỔNG QUAN TÀI NGUYÊN TỪ KHÓA & TOPIC CLUSTERS WEB PLATFORM (SSOT INVENTORY V2)
 
 Dữ liệu được trích xuất, lọc nhiễu tự động và bảo vệ chống ăn thịt từ khóa (Cannibalization Shield) từ kho `05_HUBS/inventory/`.
-- **Tổng số Themes:** 161
-- **Tổng số từ khóa theo dõi:** 292,880
-- **Tổng số từ khóa trùng Intent được gom cụm (Shielded):** 138,637
+- **Tổng số Themes:** 163
+- **Tổng số từ khóa theo dõi:** 293,076
+- **Tổng số từ khóa trùng Intent được gom cụm (Shielded):** 138,702
 - **Tổng số từ khóa nhiễu bị loại bỏ:** 2,830
-- **Tổng dung lượng tìm kiếm thị trường:** 1,671,908,690 lượt/tháng
+- **Tổng dung lượng tìm kiếm thị trường:** 1,671,931,820 lượt/tháng
 
 ---
 
@@ -25,6 +25,7 @@ Dữ liệu được trích xuất, lọc nhiễu tự động và bảo vệ ch
 | telco | 8 | 13,872 | 7,666 | 3,680,410 |
 | insurtech | 8 | 12,534 | 7,234 | 1,599,990 |
 | trust | 2 | 343 | 206 | 30,190 |
+| brand | 2 | 196 | 65 | 23,130 |
 
 ---
 
