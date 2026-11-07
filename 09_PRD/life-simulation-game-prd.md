@@ -31,19 +31,19 @@
 
 Sản phẩm này tái định nghĩa trải nghiệm giáo dục tài chính trên Web Platform bằng việc chuyển hóa mô hình mô phỏng nhân khẩu học toàn cầu nổi tiếng **1 in 8 Billion (`1in8b.life`)** thành một **Trò chơi Giả lập Vòng đời & Sinh tồn Dòng tiền Thuần Web (Standalone Life & Financial Survival Simulator)**:
 - Người chơi bắt đầu bằng việc rơi ngẫu nhiên vào một số phận (ngẫu nhiên tại 141 quốc gia hoặc chế độ Chuyên sâu Việt Nam: 63 tỉnh thành).
-- Trải qua 100 năm cuộc đời (tương ứng 2–3 phút tương tác nhanh trên Web).
+- Trải qua 100 năm cuộc đời (tương ứng 2-3 phút tương tác nhanh trên Web).
 - Đưa ra các quyết định quan trọng về học vấn, công việc, chi tiêu, tích lũy, đầu tư và đối mặt với bão giá lạm phát, tai nạn, dịch bệnh và biến cố kinh tế.
 - Tất cả dựa trên **dữ liệu thống kê có thật 100%** từ Liên Hợp Quốc (UN), Ngân hàng Thế giới (World Bank), Tổ chức Y tế Thế giới (WHO) và Tổng cục Thống kê Việt Nam (GSO).
 - **Trải nghiệm độc lập 100% trên Web:** Không yêu cầu tải ứng dụng, không có phễu ép chuyển đổi sang App, giữ trọn vẹn giá trị nguyên bản của một công cụ mô phỏng tri thức công cộng miễn phí.
 
 ### 1.2 Hành Trình Tái Thiết Dòng Tiền & Vòng Đời Trải Nghiệm Thuần Web (Pure Web Financial Life Reset Loop)
 
-> **Luồng Trải Nghiệm Vòng Đời:** `Hàng Dài Đầu Thai & Chén Canh Mạnh Bà (Ước Mơ Làm Lại)` ➔ `Lọt Lòng Mở Mắt Trong Hình Hài Em Bé (Reborn)` ➔ `Mô Phỏng Trải Nghiệm Sinh Tồn (Kho 24 Mốc Quyết Định)` ➔ `Điểm Dừng Cuộc Đời (Sống Thọ hoặc Tạ Thế Sớm)` ➔ `Trạm Chiêm Nghiệm & Soi Chiếu Dòng Tiền` ➔ `Tái Thiết Vận Mệnh Mới Kế Thừa Trí Tuệ`
+> **Luồng Trải Nghiệm Vòng Đời:** `Không Gian Khởi Tạo & Thiết Lập Mục Tiêu Ban Đầu` ➔ `Lọt Lòng Mở Mắt Trong Hình Hài Em Bé (Reborn)` ➔ `Mô Phỏng Trải Nghiệm Sinh Tồn (Kho 24 Mốc Quyết Định)` ➔ `Điểm Dừng Cuộc Đời (Sống Thọ hoặc Kết Thúc Sớm)` ➔ `Trạm Chiêm Nghiệm & Soi Chiếu Dòng Tiền` ➔ `Tái Thiết Vận Mệnh Mới Kế Thừa Trí Tuệ`
 
-1. **Điểm chạm Web & Mở Màn Điện Ảnh (Cinematic Hook):** Người dùng bước ngay vào không gian huyền ảo của hàng dài đầu thai bên bến luân hồi, đón nhận chén canh Mạnh Bà với ước mơ làm lại cuộc đời, sau đó bừng tỉnh mở mắt trong hình hài một đứa trẻ đỏ hỏn tại trần thế. Toàn bộ trải nghiệm hoàn toàn tự do trên trình duyệt, không cần tải ứng dụng, không quảng cáo.
+1. **Điểm chạm Web & Mở Màn Điện Ảnh (Cinematic Hook):** Người dùng bước vào không gian mở đầu giàu cảm xúc, lựa chọn mục tiêu tài chính cốt lõi cho vòng đời, sau đó mở mắt trong hình hài một đứa trẻ đỏ hỏn tại trần thế. Toàn bộ trải nghiệm hoàn toàn tự do trên trình duyệt, không cần tải ứng dụng, không quảng cáo.
 2. **Khoảnh khắc Bừng tỉnh (Aha-Moment):** Nhận ra tiền mặt để yên sẽ bị lạm phát nuốt chửng; không có quỹ dự phòng sẽ vỡ nợ khi gặp biến cố; gánh nợ vì nể nang sẽ chôn vùi an toàn tài chính gia đình.
 3. **Cơ Chế Tái Thiết Kế Thừa Trí Tuệ (Metaprogression Engine):** Khi kết thúc một vòng đời (do tuổi già tự nhiên hoặc tử vong sớm vì kiệt quệ tài chính / bạo bệnh), trò chơi không kết thúc vô nghĩa (Dead End). Người chơi bước vào **Trạm Chiêm Nghiệm & Soi Chiếu Dòng Tiền** để phân tích quyết định sai lầm then chốt của vòng đời vừa qua, chọn một **"Bài Học Trí Tuệ Kế Thừa" (Financial Wisdom Legacy Perk)** mang sang vòng đời tiếp theo.
-4. **Giá trị Giữ chân & Lan tỏa:** Xuất bản Giấy Chứng Nhận Cuộc Đời (Life Certificate Card với 2 biến thể: Sống trọn vẹn và Tạ thế sớm) cùng Biên Niên Sử Vòng Đời (Multi-Life Chronicle) để chia sẻ mạng xã hội, thúc đẩy người chơi bấm "Bắt Đầu Cuộc Đời Mới" để chinh phục các tầng số phận cao hơn.
+4. **Giá trị Giữ chân & Lan tỏa:** Xuất bản Giấy Chứng Nhận Cuộc Đời (Life Certificate Card với 2 biến thể: Sống trọn vẹn và Kết thúc sớm) cùng Biên Niên Sử Vòng Đời (Multi-Life Chronicle) để chia sẻ mạng xã hội, thúc đẩy người chơi bấm "Bắt Đầu Cuộc Đời Mới" để chinh phục các tầng số phận cao hơn.
 
 ---
 
@@ -56,7 +56,7 @@ Hệ thống kế thừa bộ dữ liệu từ 141 quốc gia của `1in8b.life`
 | :--- | :--- | :--- | :--- |
 | `b` | Số ca sinh hàng năm (Annual Births) | UN World Population Prospects | Trọng số xác suất sinh ra tại quốc gia |
 | `le` | Kỳ vọng sống lúc sinh (Life Expectancy) | WHO Global Health Observatory | Tính xác suất tử vong tự nhiên theo độ tuổi |
-| `u5` | Tỷ lệ tử vong trẻ dưới 5 tuổi (Under-5 Mortality) | UNICEF Child Mortality Report | Xác suất vượt qua giai đoạn 0–5 tuổi |
+| `u5` | Tỷ lệ tử vong trẻ dưới 5 tuổi (Under-5 Mortality) | UNICEF Child Mortality Report | Xác suất vượt qua giai đoạn 0-5 tuổi |
 | `ppp` | GDP bình quân theo sức mua tương đương | World Bank ICP Database | Quy đổi mức thu nhập cơ bản và sức mua |
 | `gi` | Hệ số bất bình đẳng thu nhập (Gini Index) | World Bank Poverty and Inequality | Độ lệch tài sản giữa 5 tầng lớp gia đình |
 | `urb` | Tỷ lệ đô thị hóa (Urban Population %) | UN World Urbanization Prospects | Xác suất sinh ra ở thành thị hay nông thôn |
@@ -66,7 +66,7 @@ Hệ thống kế thừa bộ dữ liệu từ 141 quốc gia của `1in8b.life`
 ### 2.2 Module Bản Địa Hóa Việt Nam (Vietnam Demographic Deep-Dive)
 Người chơi có thể chọn chế độ mặc định **"Sinh ra tại Việt Nam"** để tăng độ gắn kết văn hóa:
 - **Phân bổ Vùng miền & Tỉnh thành:** Hà Nội, TP. Hồ Chí Minh, Đà Nẵng, Đồng bằng Sông Hồng, Tây Nguyên, Đồng bằng Sông Cửu Long, Miền núi phía Bắc.
-- **Dữ liệu thực tế GSO 2024–2026:**
+- **Dữ liệu thực tế GSO 2024-2026:**
   - Thu nhập bình quân đầu người theo vùng (Ví dụ: TP.HCM ~8.9 triệu/tháng, Hà Nội ~8.5 triệu/tháng, vùng nông thôn ~4.8 triệu/tháng).
   - Tỷ lệ đô thị hóa tại Việt Nam: ~42.5%.
   - Tỷ lệ học đại học: ~28.6% thanh niên trong độ tuổi.
@@ -118,7 +118,7 @@ interface CharacterState {
     }>;
   };
   
-  // Ước Mơ Tiền Kiếp Bên Chén Canh Mạnh Bà (Karmic Vow & Seal of Destiny)
+  // Mục Tiêu Tài Chính Khởi Đầu (Life Goal & Commitment Seal)
   karmicVow: {
     id: 'profit_growth' | 'emergency_buffer' | 'no_cosign_debt' | 'peaceful_aging';
     title: string;                  // Tên ước mơ đã chọn: "Tiền của tôi phải sinh lời" | ...
@@ -188,60 +188,60 @@ Nhằm khắc phục triệt để lỗi logic nợ phình to vô hạn và phá
    - Thay vào đó, người chơi tự động kích hoạt chế độ "thắt chặt chi tiêu":
      - Cắt giảm 20% chi phí sinh hoạt cá nhân (trừ `-4` điểm Hạnh phúc `h`).
      - Trích tối đa 50% thu nhập hàng năm để trả nợ.
-     - Tự động giãn thêm kỳ hạn vay từ 1–3 năm để giảm áp lực dòng tiền hàng năm.
+     - Tự động giãn thêm kỳ hạn vay từ 1-3 năm để giảm áp lực dòng tiền hàng năm.
 
 4. **Tái Cơ Cấu Nợ Sau Phá Sản (Debt Restructuring):**
    - Khi nhân vật rơi vào trạng thái mất khả năng thanh toán, hệ thống chuyển khoản nợ sang diện "Tái cơ cấu": Đóng băng lãi phạt, áp dụng mức lãi suất tái cơ cấu ưu đãi cố định 5%/năm, tạo điều kiện cho người chơi làm lại từ đầu.
 
 5. **Độ Co Giãn Giá Mua Căn Hộ (Housing Price Elasticity):**
-   - Giá căn hộ không cố định 2,4 tỷ đồng. Tại mốc quyết định mua nhà ở tuổi 31–35, giá trị căn hộ tự động co giãn theo số vốn đối ứng 30% mà người chơi tích lũy được:
+   - Giá căn hộ không cố định 2,4 tỷ đồng. Tại mốc quyết định mua nhà ở tuổi 31-35, giá trị căn hộ tự động co giãn theo số vốn đối ứng 30% mà người chơi tích lũy được:
      $$\text{Giá căn hộ} = \min(2.400.000.000, \max(900.000.000, \frac{\text{Vốn tích lũy}}{0,3}))$$
    - Biên độ dao động từ 900 triệu (căn hộ nhỏ / nhà ở xã hội) đến 2,4 tỷ (chung cư thương mại), đảm bảo người chơi có tích lũy đều có thể mở khóa lựa chọn an cư.
 
 6. **Hiệu Chỉnh Trần Tài Sản Ròng Về Già:**
-   - Điều chỉnh hệ số thu nhập giai đoạn 50–65 tuổi và chi phí chăm sóc sức khỏe tuổi già, đưa mức tài sản ròng trung vị của nhóm chọn toàn phương án tốt về vùng **4,2 – 5,0 tỷ VNĐ danh nghĩa** (tương đương sức mua thực tế ~1,0 – 1,3 tỷ VNĐ ở hiện giá).
-   - Thẻ kết quả hiển thị minh bạch các chỉ số tài chính: Tổng tài sản ròng tích lũy (VNĐ), Dư nợ còn lại (VNĐ), và tình trạng hoàn thành Khế ước tiền kiếp.
+   - Điều chỉnh hệ số thu nhập giai đoạn 50-65 tuổi và chi phí chăm sóc sức khỏe tuổi già, đưa mức tài sản ròng trung vị của nhóm chọn toàn phương án tốt về vùng **4,2 - 5,0 tỷ VNĐ danh nghĩa** (tương đương sức mua thực tế ~1,0 - 1,3 tỷ VNĐ ở hiện giá).
+   - Thẻ kết quả hiển thị minh bạch các chỉ số tài chính: Tổng tài sản ròng tích lũy (VNĐ), Dư nợ còn lại (VNĐ), và tình trạng hoàn thành Mục tiêu tài chính ban đầu.
 
 ### 3.4 Cơ Chế Xác Suất & Kích Hoạt Tử Vong Sớm (Early Death Engine)
 
-Để khắc phục việc ép sống thọ đến 81–100 tuổi, hệ thống xây dựng mô hình tử vong sớm dựa trên nguyên nhân tài chính và sức khỏe thực tế:
+Để khắc phục việc ép sống thọ đến 81-100 tuổi, hệ thống xây dựng mô hình tử vong sớm dựa trên nguyên nhân tài chính và sức khỏe thực tế:
 
 1. **Công Thức Kích Hoạt Tử Vong Sớm:**
-   - **Trường hợp 1 (Đột quỵ vì kiệt sức gánh nợ - `debt_exhaustion`):** Nếu tỷ lệ nợ trên thu nhập $\frac{\text{debt}}{\text{income}} > 1.0$ kéo dài liên tiếp $\ge 3$ năm, nhân vật bị trừ $-15$ điểm Sức khỏe (`hl`) mỗi năm do stress và làm việc quá sức. Khi chỉ số $\text{hl} \le 0$, kích hoạt đột quỵ/tử vong sớm ở độ tuổi 35–45 (ví dụ: mất năm 38 tuổi vì kiệt sức gánh nợ bảo lãnh người thân).
-   - **Trường hợp 2 (Bạo bệnh không có quỹ phòng thân - `medical_emergency_death`):** Tại mốc biến cố y tế (`ills`), nếu chi phí điều trị vượt quá tổng tiền mặt và Quỹ khẩn cấp (`money + emergencyFund`), đồng thời trần nợ CIC chạm ngưỡng không thể vay tiếp, chỉ số $\text{hl}$ rơi thẳng về $0$, kích hoạt tử vong sớm ở độ tuổi 50–60 (ví dụ: mất năm 52 tuổi do bạo bệnh sau khi vỡ nợ hụi).
+   - **Trường hợp 1 (Đột quỵ vì kiệt sức gánh nợ - `debt_exhaustion`):** Nếu tỷ lệ nợ trên thu nhập $\frac{\text{debt}}{\text{income}} > 1.0$ kéo dài liên tiếp $\ge 3$ năm, nhân vật bị trừ $-15$ điểm Sức khỏe (`hl`) mỗi năm do stress và làm việc quá sức. Khi chỉ số $\text{hl} \le 0$, kích hoạt đột quỵ/tử vong sớm ở độ tuổi 35-45 (ví dụ: mất năm 38 tuổi vì kiệt sức gánh nợ bảo lãnh người thân).
+   - **Trường hợp 2 (Bạo bệnh không có quỹ phòng thân - `medical_emergency_death`):** Tại mốc biến cố y tế (`ills`), nếu chi phí điều trị vượt quá tổng tiền mặt và Quỹ khẩn cấp (`money + emergencyFund`), đồng thời trần nợ CIC chạm ngưỡng không thể vay tiếp, chỉ số $\text{hl}$ rơi thẳng về $0$, kích hoạt tử vong sớm ở độ tuổi 50-60 (ví dụ: mất năm 52 tuổi do bạo bệnh sau khi vỡ nợ hụi).
 
 2. **Cơ Chế Ngắt Hàng Đợi Sự Kiện (Queue Interruption):**
    - Khi điều kiện tử vong sớm thỏa mãn, hệ thống thực thi hàm `triggerEarlyDeath(age, cause)`:
      - Lập tức ngắt toàn bộ các sự kiện còn lại trong hàng đợi `S.queue`.
      - Bỏ qua toàn bộ các mốc tuổi tiếp theo.
-     - Chuyển hướng người chơi trực tiếp sang **Giấy Chứng Nhận Cuộc Đời (Biến Thể Tạ Thế Sớm)** và tiếp tục dẫn vào **Trạm Chiêm Nghiệm Cuộc Đời**.
+     - Chuyển hướng người chơi trực tiếp sang **Giấy Chứng Nhận Cuộc Đời (Biến Thể Kết Thúc Sớm)** và tiếp tục dẫn vào **Trạm Chiêm Nghiệm Cuộc Đời**.
 
-### 3.5 Cảnh Mở Màn Điện Ảnh: Cầu Nại Hà, Quán Canh Mạnh Bà & Ước Mơ Tiền Kiếp (The Reincarnation Prologue & Karmic Vow)
+### 3.5 Cảnh Mở Màn Điện Ảnh: Khởi Tạo Vòng Đời & Cam Kết Mục Tiêu Tài Chính (The Prologue & Life Goal Commitment)
 
-Trò chơi khởi đầu bằng trường đoạn điện ảnh tiền kiếp (Prologue Cinematic) 4 cảnh giàu hình tượng và xúc cảm, gắn liền với cơ chế **Ước Mơ Tiền Kiếp (The Karmic Vow)** định hình mục tiêu sinh tồn xuyên suốt vòng đời:
+Trò chơi khởi đầu bằng trường đoạn mở màn điện ảnh (Prologue Cinematic) 4 cảnh giàu cảm xúc, gắn liền với cơ chế **Cam Kết Mục Tiêu Cuộc Đời (The Life Goal Commitment)** định hình các quyết định tài chính xuyên suốt vòng đời:
 
 #### 3.5.1 Kịch Bản 4 Cảnh Mở Màn Chi Tiết
 
-##### Cảnh 1: Cầu Nại Hà, Canh Ba
-- **Không gian & Thị giác:** Đêm chàm tím huyền ảo, làn sương mỏng trôi lờ lững trên mặt nước sâu không đáy. Những đốm lửa ma trơi nhỏ bay là là lên không trung, rặng đèn lồng đỏ chập chờn lay động trong gió lạnh.
-- **Nhân vật:** Một hàng dài những linh hồn lặng lẽ nối đuôi nhau bước qua cầu đá cổ. Linh hồn của người chơi phát sáng mờ ảo và được gắn nhãn định danh màu vàng ấm: **“Bạn”**.
+##### Cảnh 1: Ngưỡng Cửa Khởi Nguyên
+- **Không gian & Thị giác:** Không gian chàm tím nghệ thuật, ánh sáng mờ dần dẫn dắt người chơi bước vào hành trình một đời người.
+- **Nhân vật:** Nhân vật của người chơi được định danh nổi bật giữa màn hình với nhãn màu vàng ấm: **“Bạn”**.
 - **Tương tác nút bấm:** Nút bấm nổi bật giữa màn hình: **“Bước lên phía trước”**.
 
-##### Cảnh 2: Quán Canh Mạnh Bà
-- **Không gian & Nhân vật:** Đi hết nhịp cầu, hiện ra một mái quán tranh cổ kính với tấm biển gỗ treo dọc khắc 4 chữ thư pháp: **“Canh Mạnh Bà”**. Một bà cụ già tóc bạc phơ, gương mặt hiền từ cầm chiếc muôi gỗ múc từng muôi canh từ chiếc nồi đồng màu xanh ngọc bích đang bốc khói mỏng nghi ngút.
+##### Cảnh 2: Lựa Chọn Ước Mơ Đầu Đời
+- **Không gian & Nhân vật:** Màn hình hiển thị bảng câu hỏi dẫn nhập sâu sắc, thôi thúc người chơi suy ngẫm về giá trị quan trọng nhất mà mình muốn đạt được trong đời.
 - **Lời thoại dẫn dắt:**
-  > *“Uống đi con. Uống rồi quên hết, mà đi cho nhẹ.”*
-- **Tương tác nút bấm:** Nút bấm trung tâm: **“Đỡ lấy chén canh”**.
+  > *“Mỗi người chỉ có một đời để sống. Điều gì là quan trọng nhất với bạn?”*
+- **Tương tác nút bấm:** Nút bấm trung tâm: **“Xác nhận mục tiêu”**.
 
-##### Cảnh 3: Uống Canh & Khắc Sâu Ước Mơ
-- **Thị giác & Dẫn nhập:** Màn hình chuyển góc nhìn cận cảnh chén canh men sành sóng sánh dòng nước trong hai bàn tay bạn. Dòng chữ tự sự hiện lên mờ ảo:
-  > *“Ký ức kiếp trước tan dần như sương… Chỉ còn một ước mơ bám lại.”*
-- **Tương tác lựa chọn:** Người chơi chọn 1 trong 4 Ước Mơ Tiền Kiếp để mang theo vào vòng đời mới:
+##### Cảnh 3: Khắc Sâu Mục Tiêu Tài Chính
+- **Thị giác & Dẫn nhập:** Màn hình chuyển góc nhìn tập trung vào mục tiêu được chọn cùng dòng thông điệp:
+  > *“Dù cuộc đời biến động ra sao, hãy kiên định với mục tiêu bạn đã chọn.”*
+- **Tương tác lựa chọn:** Người chơi chọn 1 trong 4 Mục Tiêu Tài Chính Khởi Đầu để mang theo vào vòng đời mới:
   1. *“Tiền của tôi phải sinh lời”*
   2. *“Tôi phải có quỹ phòng thân”*
   3. *“Tôi không gánh nợ vì nể nang”*
   4. *“Tôi muốn già đi trong an yên”*
-- **Hiệu ứng chuyển cảnh:** Ngay khi người chơi nhấp chọn ước mơ, chén canh tự động nghiêng dần như đang được uống cạn vào lòng rồi biến mất vào khoảng không mờ sương.
+- **Hiệu ứng chuyển cảnh:** Ngay khi người chơi nhấp chọn, mục tiêu được lưu giữ và tạo hiệu ứng chuyển tiếp vào chương đầu tiên của cuộc đời.
 
 ##### Cảnh 4: Mở Mắt & Cất Tiếng Khóc Chào Đời (Reborn)
 - **Hiệu ứng thị giác:** Màn hình lóa sáng trắng toàn phần (Whiteout Flash), sau đó hai vệt mí mắt đen khép hờ chớp chớp 2 lần rồi từ từ hé mở. Tầm nhìn mờ nhòe của trẻ sơ sinh chuyển dần sang rõ nét.
@@ -251,15 +251,15 @@ Trò chơi khởi đầu bằng trường đoạn điện ảnh tiền kiếp (P
 
 ---
 
-#### 3.5.2 Cơ Chế Ước Mơ Tiền Kiếp: Con Dấu "ĐÃ GIỮ LỜI" & "CHƯA TRỌN"
+#### 3.5.2 Cơ Chế Mục Tiêu Tài Chính Khởi Đầu: Con Dấu "ĐÃ GIỮ LỜI" & "CHƯA TRỌN"
 
-Ước mơ được chọn bên chén canh Mạnh Bà **không phải dòng chữ trang trí đơn thuần**, mà là **Khế Ước Tiền Kiếp (Karmic Contract)** chi phối toàn bộ logic đánh giá khi vòng đời khép lại:
+Mục tiêu tài chính được chọn ban đầu **không phải dòng chữ trang trí đơn thuần**, mà là **Cam Kết Cuộc Đời (Life Financial Contract)** định hướng toàn bộ đánh giá khi tổng kết vòng đời:
 
 - **Cơ chế đánh giá cuối đời:** Khi nhân vật kết thúc vòng đời (sống thọ đến già hoặc tử vong sớm), hệ thống kiểm tra toàn bộ nhật ký tài chính và đóng con dấu tròn mực đỏ nổi bật lên **Giấy Chứng Nhận Cuộc Đời**:
-  - Dấu **“ĐÃ GIỮ LỜI”**: Người chơi đã kiên định sống đúng với lời hứa tiền kiếp.
+  - Dấu **“ĐÃ GIỮ LỜI”**: Người chơi đã kiên định sống đúng với mục tiêu đã cam kết.
   - Dấu **“CHƯA TRỌN”**: Người chơi lại một lần nữa để dòng đời xô đẩy và thất hứa với chính mình.
 
-| Ước Mơ Tiền Kiếp | Được Tính Là Giữ Lời (Đóng Dấu "ĐÃ GIỮ LỜI") | Bị Tính Là Chưa Trọn (Đóng Dấu "CHƯA TRỌN") | Ý Nghĩa Giáo Dục Tài Chính |
+| Mục Tiêu Tài Chính Khởi Đầu | Được Tính Là Giữ Lời (Đóng Dấu "ĐÃ GIỮ LỜI") | Bị Tính Là Chưa Trọn (Đóng Dấu "CHƯA TRỌN") | Ý Nghĩa Giáo Dục Tài Chính |
 | :--- | :--- | :--- | :--- |
 | **Tiền của tôi phải sinh lời** | Không để tiền nằm yên: Luôn phân bổ dòng tiền vào các tài sản sinh lời (Quỹ khẩn cấp sinh lời, Hũ chi tiêu, Quỹ đầu tư tích sản), sức mua thực tế (`purchasingPower`) không bị lạm phát bào mòn quá 30% tại bất kỳ thời điểm nào. | Để tiền mặt nhàn rỗi nằm yên trong tài khoản thanh toán trên 70% tổng tài sản liên tục 10 năm hoặc bị lạm phát ăn mòn trên 40% sức mua. | Rèn luyện phản xạ tích sản, không để tiền mặt bốc hơi trước trượt giá. |
 | **Tôi phải có quỹ phòng thân** | Trả được toàn bộ viện phí cấp cứu năm 50 tuổi bằng Quỹ dự phòng khẩn cấp tích lũy mà không phải bán tháo tài sản gia đình, không phải vay nóng, không nợ viện phí. | Đến mốc tai biến sức khỏe tuổi 50 không có đủ tiền dự phòng, phải bán tháo xe/nhà hoặc vay nóng nợ nần để chạy chữa. | Biến việc lập quỹ dự phòng khẩn cấp thành chiếc khiên bảo vệ sống còn. |
@@ -268,15 +268,15 @@ Trò chơi khởi đầu bằng trường đoạn điện ảnh tiền kiếp (P
 
 ---
 
-#### 3.5.3 Vòng Lặp Về Lại Cầu Nại Hà (The Return Loop)
+#### 3.5.3 Vòng Lặp Tái Thiết Vận Mệnh (The Replay Loop)
 
 Tại màn hình cuối đời (Giấy Chứng Nhận Cuộc Đời hoặc Trạm Chiêm Nghiệm), nút hành động kết thúc được chuẩn hóa thành:
 
 > **Nút bấm chính:** **“Về lại cầu Nại Hà”**
 
-- **Hành vi chuyển cảnh:** Khi người chơi nhấp nút, màn hình chuyển sang làn sương chàm tím quen thuộc, đưa người chơi quay trở lại Cảnh 1 (Cầu Nại Hà, canh ba) với nhãn tiến trình cập nhật:
-  > **“Lần đầu thai thứ [N]”** *(Ví dụ: Lần đầu thai thứ 2, Lần đầu thai thứ 3...)*
-- Linh hồn của bạn lại tiếp tục phát sáng với nhãn **“Bạn”** và nút **“Bước lên phía trước”**, cho phép người chơi tiếp tục chọn một ước mơ mới hoặc kiên trì hoàn thành ước mơ còn dở dang ở kiếp trước.
+- **Hành vi chuyển cảnh:** Khi người chơi nhấp nút, màn hình chuyển tiếp mượt mà đưa người chơi quay trở lại điểm khởi đầu để bắt đầu một vòng đời mới:
+  > **“Lần chơi thứ [N]”** *(Ví dụ: Lần chơi thứ 2, Lần chơi thứ 3...)*
+- Nhân vật được tái thiết lập với nhãn **“Bạn”** và nút **“Bắt đầu hành trình mới”**, cho phép người chơi thử nghiệm các chiến lược tài chính khác nhau.
 
 ---
 
@@ -286,7 +286,7 @@ Tại màn hình cuối đời (Giấy Chứng Nhận Cuộc Đời hoặc Trạ
 | :--- | :--- | :--- |
 | **Tên & Giới Tính** | Sinh ngẫu nhiên theo Dynamic Naming Engine đa tầng (Mục 3.6). | Nguyễn Văn Hưng (Biệt danh: Cún) - Nam / Lê Thị Mai (Biệt danh: Bống) - Nữ |
 | **Nơi Sinh Ra** | Tỉnh thành, địa danh cụ thể và phân loại thành thị / nông thôn. | Xã Ba Tri, Bến Tre (Nông thôn ven biển) / Phường An Phú, Thuận An, Bình Dương (Xóm trọ đô thị) |
-| **Độ Tuổi Của Cha Mẹ** | Dựa trên độ tuổi kết hôn và sinh con trung bình tại địa phương (Mẹ: 19–38 tuổi, Bố: 21–45 tuổi, có xác suất mẹ đơn thân). | Mẹ 23 tuổi · Bố 26 tuổi (hoặc: Mẹ đơn thân 21 tuổi) |
+| **Độ Tuổi Của Cha Mẹ** | Dựa trên độ tuổi kết hôn và sinh con trung bình tại địa phương (Mẹ: 19-38 tuổi, Bố: 21-45 tuổi, có xác suất mẹ đơn thân). | Mẹ 23 tuổi · Bố 26 tuổi (hoặc: Mẹ đơn thân 21 tuổi) |
 | **Nghề Nghiệp Cha Mẹ** | Bốc ngẫu nhiên từ kho nghề nghiệp phù hợp với vùng miền và tầng lớp thu nhập. | Mẹ: Công nhân may xưởng gia giày · Bố: Thợ hàn xì công trình (hoặc: Mẹ: Làm nông cấy lúa · Bố: Đi biển đánh cá xa bờ) |
 | **Nhà Ở Ban Đầu** | Loại hình nhà gắn liền với bối cảnh kinh tế gia đình lúc mới sinh. | Phòng trọ thuê 12m2 lợp tôn xi-măng / Nhà cấp 4 ba gian lợp ngói cũ / Căn hộ tập thể tầng 3 |
 | **Tầng Lớp Kinh Tế** | 5 chấm tròn đồ họa (`qdots`) đại diện cho 5 phân vị thu nhập (Quintiles) từ nghèo nhất đến giàu nhất. | Phân vị 1/5 (Thuộc nhóm 20% hộ gia đình thu nhập thấp nhất khu vực) |
@@ -314,9 +314,9 @@ Nhằm xóa bỏ sự lặp lại đơn điệu khi người chơi tái sinh nhi
 
 Hệ thống kịch bản chia làm 6 giai đoạn cuộc đời với các bộ câu hỏi tình huống (Quizzes) và dữ liệu thực chứng (Facts).
 
-### 4.1 Giai Đoạn 1: Sơ Sinh & Tuổi Thơ (0 – 12 Tuổi) - Điểm Tựa Ký Ức & Cội Nguồn Tâm Lý Tài Chính
+### 4.1 Giai Đoạn 1: Sơ Sinh & Tuổi Thơ (0 - 12 Tuổi) - Điểm Tựa Ký Ức & Cội Nguồn Tâm Lý Tài Chính
 
-Giai đoạn 0–12 tuổi được thiết kế như chiếc neo cảm xúc (Emotional Anchor) của toàn bộ trò chơi. Khi bắt đầu hoặc chơi lại, hệ thống không chạy một kịch bản đơn điệu mà ngẫu nhiên phân bổ nhân vật vào **1 trong 5 Bối Cảnh Xuất Thân Tuổi Thơ** kết hợp cùng **Ma Trận Biến Cố Đầu Đời**, định hình "Vết Hằn Ký Ức" chi phối hành vi tài chính khi trưởng thành.
+Giai đoạn 0-12 tuổi được thiết kế như chiếc neo cảm xúc (Emotional Anchor) của toàn bộ trò chơi. Khi bắt đầu hoặc chơi lại, hệ thống không chạy một kịch bản đơn điệu mà ngẫu nhiên phân bổ nhân vật vào **1 trong 5 Bối Cảnh Xuất Thân Tuổi Thơ** kết hợp cùng **Ma Trận Biến Cố Đầu Đời**, định hình "Vết Hằn Ký Ức" chi phối hành vi tài chính khi trưởng thành.
 
 #### 4.1.1 Bảng 5 Bối Cảnh Xuất Thân Tuổi Thơ Điển Hình (Childhood Origins)
 
@@ -328,9 +328,9 @@ Giai đoạn 0–12 tuổi được thiết kế như chiếc neo cảm xúc (Em
 | `highland_village`<br>**Bản Làng Vùng Cao** | Mái nhà gỗ cheo leo sườn núi (Hà Giang / Sơn La / Kon Tum). Bếp củi đỏ lửa xua tan giá rét mùa đông, đôi chân trần nứt nẻ đi bộ 5 cây số đường đèo đến điểm trường, tiếng suối reo giữa đại ngàn. | Nghị lực sinh tồn phi thường (`grit` cao); đồng tiền cực kỳ hiếm hoi và thiêng liêng, chủ yếu sống tự cung tự cấp. Giấc mơ lớn nhất là có đủ cơm trắng ăn no quanh năm. |
 | `market_trader`<br>**Con Nhà Tiểu Thương** | Gầm sạp vải, sạp cá ở chợ đầu mối truyền thống. Tiếng mặc cả ồn ào từ 4 giờ sáng, mùi tanh nồng của chợ sớm, tiếng đếm tiền lẻ sột soạt, bữa cơm ăn vội trên thùng carton đựng hàng. | Biết thối tiền cho khách từ năm 7 tuổi, nhạy bén với giá cả và cơ hội; sớm chứng kiến sự khắc nghiệt của nợ nần, giật hụi và sự phập phồng của buôn bán mùa Tết. |
 
-#### 4.1.2 Ma Trận Kịch Bản & Các Lựa Chọn Tuổi Thơ Đa Chiều (0 – 12 Tuổi)
+#### 4.1.2 Ma Trận Kịch Bản & Các Lựa Chọn Tuổi Thơ Đa Chiều (0 - 12 Tuổi)
 
-##### Mốc 1 (3 – 4 Tuổi): Tiếng Gọi Đầu Đời & Người Nuôi Dưỡng
+##### Mốc 1 (3 - 4 Tuổi): Tiếng Gọi Đầu Đời & Người Nuôi Dưỡng
 - **Tình huống 1.1A (Xóm Trọ Công Nhân):** Bố mẹ đi làm ca đêm, gửi bạn cho bà chủ nhà trọ trông cùng 4 đứa trẻ khác. Bạn bập bẹ gọi tên "mẹ" khi nhìn thấy bóng người phụ nữ mặc áo công nhân bước qua cửa sổ phòng trọ lợp tôn xi-măng.
   - *Lựa chọn 1:* Chạy ùa ra cửa ôm chầm lấy chân mẹ -> Tăng Hạnh phúc (`h` +4), khắc sâu nỗi sợ chia xa (`memory: 'cling_mom'`).
   - *Lựa chọn 2:* Ngoan ngoãn ngồi im chia đồ chơi cho bạn nhỏ khác -> Tăng Xã hội (`so` +3), rèn tính tự lập sớm.
@@ -344,7 +344,7 @@ Giai đoạn 0–12 tuổi được thiết kế như chiếc neo cảm xúc (Em
   - *Lựa chọn 1:* Nằm ngoan ngủ say sưa giữa tiếng mặc cả ồn ào -> Tăng Khả năng thích nghi môi trường (`grit` +2).
   - *Lựa chọn 2:* Khóc quấy đòi mẹ ẵm bồng -> Mẹ phải bỏ dở phiên buôn để vỗ về (`so` +3, `memory: 'market_cradle'`).
 
-##### Mốc 2 (6 – 7 Tuổi): Ngưỡng Cửa Lớp 1, Tết Nguyên Đán & Đồng Tiền Đầu Đời
+##### Mốc 2 (6 - 7 Tuổi): Ngưỡng Cửa Lớp 1, Tết Nguyên Đán & Đồng Tiền Đầu Đời
 - **Tình huống 1.2A (Tiền Thối Mua Nước Mắm - Đứa trẻ xóm chợ / phố thị):** Mẹ đưa 20.000 đồng sai đi mua chai nước tương, thừa 3.000 đồng tiền thối. Trên đường về, bạn đi ngang qua quầy kẹo kéo ngọt lịm.
   - *Lựa chọn 1:* Mua que kẹo ăn vụng và nói dối mẹ là tiệm tạp hóa tăng giá -> Tăng Hạnh phúc tức thời (`h` +3), gieo mầm thói quen giấu giếm chi tiêu (`memory: 'secret_spending'`).
   - *Lựa chọn 2:* Đưa đủ tiền thối cho mẹ. Mẹ xoa đầu khen ngoan và thưởng 1.000 đồng bỏ vào ống heo đất -> Hình thành thói quen minh bạch tài chính (`memory: 'piggy_bank'`), tăng Gắn kết (`so` +4).
@@ -359,7 +359,7 @@ Giai đoạn 0–12 tuổi được thiết kế như chiếc neo cảm xúc (Em
   - *Lựa chọn 2:* Bỏ 5.000 đồng vào hộp bánh quy gỉ sét để dành tiền mua cuốn truyện tranh Doraemon -> Tăng Kiên trì tích lũy (`grit` +2), rèn tính trì hoãn sự sung sướng (`memory: 'comic_savings'`).
 - **Dữ liệu thực tế đi kèm (Fact):** Khảo sát hành vi tài chính của Đại học Cambridge chỉ ra rằng các thói quen cốt lõi về tiền bạc (trì hoãn sự sung sướng, tiết kiệm, chia sẻ) được định hình vững chắc trong não bộ của trẻ trước năm 7 tuổi.
 
-##### Mốc 3 (9 – 10 Tuổi): Va Vấp Tài Chính & Thử Thách Vùng Miền
+##### Mốc 3 (9 - 10 Tuổi): Va Vấp Tài Chính & Thử Thách Vùng Miền
 - **Tình huống 1.3A (Giấy Báo Thu Tiền Đầu Năm & Nỗi Xấu Hổ Trước Bạn Bè):** Giờ sinh hoạt lớp, cô giáo gõ thước lên bảng, đọc tên những bạn chưa nộp tiền học phí và tiền sách vở đầu năm, yêu cầu đứng lên trước lớp. Bạn cúi gằm mặt xuống ngăn bàn, hai tai đỏ bừng vì xấu hổ khi bạn bè cùng lớp quay lại nhìn.
   - *Lựa chọn 1:* Về nhà giấu nhẹm giấy báo vì sợ bố mẹ thêm lo, tự đi lượm ve chai và mò cua bắt ốc gom từng đồng tiền lẻ nộp bổ sung -> Tăng Tự lập sớm, gánh nặng tâm lý tuổi thơ (`h` -5), hình thành nỗi ám ảnh sợ nợ nần (`memory: 'debt_shame'`).
   - *Lựa chọn 2:* Đưa giấy báo cho mẹ. Nhìn thấy giọt nước mắt lăn trên gò má sạm đen của mẹ khi lục tìm từng tờ tiền lẻ dưới đáy hòm gỗ -> Tăng Thấu hiểu đức hy sinh của cha mẹ (`so` +5), (`memory: 'mom_tears'`).
@@ -373,11 +373,11 @@ Giai đoạn 0–12 tuổi được thiết kế như chiếc neo cảm xúc (Em
   - *Lựa chọn 1:* Cắn răng vượt đèo đến lớp, ngồi sưởi ấm đôi bàn tay nứt nẻ bên bếp than của thầy cô -> Tăng Nghị lực phi thường (`grit` +4), gieo ý chí vươn lên bằng con chữ (`memory: 'mountain_will'`).
   - *Lựa chọn 2:* Quay về giúp bố mẹ cắt cỏ cho trâu và gùi củi khô -> Giữ gìn thể lực trước giá rét (`hl` +2), gắn bó với ruộng nương.
 
-##### Mốc 4 (11 – 12 Tuổi): Sự Đánh Đổi Giữa Ước Mơ & Cơm Áo Gạo Tiền
+##### Mốc 4 (11 - 12 Tuổi): Sự Đánh Đổi Giữa Ước Mơ & Cơm Áo Gạo Tiền
 - **Tình huống 1.4A (Chiếc Đàn Ghi-ta / Hộp Màu Vẽ Năng Khiếu):** Thầy giáo phát hiện bạn có năng khiếu âm nhạc/hội họa nổi bật và khuyên gia đình cho theo học lớp năng khiếu ở thị xã. Chi phí một khóa học bằng tiền mua cả tạ gạo của cả nhà trong 3 tháng.
   - *Lựa chọn 1:* Tự cất lời khen của thầy vào ngăn kéo, nói với bố mẹ "con không thích học" để gia đình đỡ tốn tiền -> Hy sinh đam mê vì sinh kế (`memory: 'buried_dream'`), tăng Trưởng thành thực tế.
   - *Lựa chọn 2:* Bố mẹ quyết định thắt lưng buộc bụng cho đi học, bố nhận thêm việc bốc vác đêm để trang trải -> Mở khóa nhánh tài năng (`arts` +5), nhưng chịu áp lực kỳ vọng nặng nề (`memory: 'heavy_hope'`).
-- **Tình huống 1.4B (Tấm Giấy Khen Trên Vách Nứa):** Bạn đạt giải học sinh giỏi toàn huyện. Phần thưởng là 5 cuốn vở ô ly và một chiếc bút máy. Bố cẩn thận lấy đinh đóng tấm giấy khen lên vách nứa đơn sơ. Mâm cơm tối hôm đó có thêm đĩa trứng rán ăn mừng — bữa cơm ngon nhất trong năm.
+- **Tình huống 1.4B (Tấm Giấy Khen Trên Vách Nứa):** Bạn đạt giải học sinh giỏi toàn huyện. Phần thưởng là 5 cuốn vở ô ly và một chiếc bút máy. Bố cẩn thận lấy đinh đóng tấm giấy khen lên vách nứa đơn sơ. Mâm cơm tối hôm đó có thêm đĩa trứng rán ăn mừng  -  bữa cơm ngon nhất trong năm.
   - *Lựa chọn 1:* Hứa với bố mẹ sẽ đỗ đại học để đổi đời -> Tăng Trí tuệ (`sm` +4), gieo mầm khát vọng vươn lên (`memory: 'certificate_pride'`).
   - *Lựa chọn 2:* Đề nghị nghỉ học sớm để đi làm phụ bố mẹ -> Mở ra nhánh lao động sớm, tăng Gắn kết gia đình (`so` +4).
 - **Tình huống 1.4C (Gánh Hàng Chợ Phiên Cùng Mẹ & Chiếc Cân Đồng):** Mẹ bị sốt phát ban đúng phiên chợ Tết đông khách nhất năm. Một mình bạn ngồi trông sạp hàng rau quả, tay thoăn thoắt bấm máy tính, cân từng mớ rau và thối tiền lẻ cho khách mua hàng tấp nập.
@@ -386,11 +386,11 @@ Giai đoạn 0–12 tuổi được thiết kế như chiếc neo cảm xúc (Em
 
 #### 4.1.3 Cơ Chế "Hộp Ký Ức Tuổi Thơ" & Tiếng Vọng Khi Trưởng Thành (Adult Echoes)
 
-Toàn bộ các lựa chọn trong giai đoạn 0–12 tuổi sẽ được hệ thống mã hóa và lưu vào mảng `childhoodMemories`. Khi nhân vật bước sang tuổi trưởng thành, các quyết định tài chính lớn sẽ tự động kích hoạt **Tiếng Vọng Ký Ức (Flashback Echo)**:
+Toàn bộ các lựa chọn trong giai đoạn 0-12 tuổi sẽ được hệ thống mã hóa và lưu vào mảng `childhoodMemories`. Khi nhân vật bước sang tuổi trưởng thành, các quyết định tài chính lớn sẽ tự động kích hoạt **Tiếng Vọng Ký Ức (Flashback Echo)**:
 
-1. **Khi tích lũy mua được tài sản lớn đầu tiên (Xe máy mới / Đất nền / Căn hộ) ở tuổi 24–35:**
+1. **Khi tích lũy mua được tài sản lớn đầu tiên (Xe máy mới / Đất nền / Căn hộ) ở tuổi 24-35:**
    - *Nếu có cờ `wire_slippers` (Đôi dép tổ ong) hoặc `mountain_will` (Cơm độn ngô vượt đèo):* Màn hình khẽ chuyển tông màu hoài niệm kèm dòng chữ: *"Chạm tay vào tài sản lớn đầu tiên tích lũy bằng mồ hôi nước mắt, bạn bỗng nhớ về bàn chân nứt nẻ lội bùn năm 7 tuổi với đôi dép xiên dây kẽm."*
-2. **Khi đối mặt với việc chi tiêu hoang phí ở tuổi 23–25:**
+2. **Khi đối mặt với việc chi tiêu hoang phí ở tuổi 23-25:**
    - *Nếu có cờ `secret_spending` (Ăn vụng tiền thối):* Game đưa ra cảnh báo tâm lý: *"Cảm giác chi tiêu bốc đồng hôm nay gợi lại vị ngọt cay đắng của que kẹo năm 6 tuổi giấu mẹ."*
    - *Nếu có cờ `comic_savings` (Nhịn kem mút gom tiền mua truyện):* Game kích hoạt phản xạ giữ tiền: *"Thói quen chắt chiu từ chiếc hộp bánh quy tuổi thơ mách bảo bạn hãy dừng tay trước khi quẹt thẻ bốc đồng."*
 3. **Khi chuẩn bị trích lập quỹ dự phòng ở tuổi 30:**
@@ -404,14 +404,14 @@ Từ nền tảng xuất thân và các quyết định ở tuổi 12, nhân v�
 
 | Trục Vận Mệnh | Điều Kiện Kích Hoạt Ban Đầu | Hành Trình Cuộc Đời Điển Hình | Bài Toán Dòng Tiền & Cú Sốc Lớn Nhất |
 | :--- | :--- | :--- | :--- |
-| **Trục 1: Xa Xứ & Kiều Hối**<br>(`export_labor`) | Xuất thân `mekong_water` hoặc `slum_worker`, Phân vị 1–2, **và người chơi chọn nhánh Đi XKLĐ ở tuổi 18–22**. (Nếu chọn học Đại học trong nước, hệ thống bắt buộc phân luồng sang Trục 2 hoặc Trục 3 để tránh lỗi người đi học ĐH nhưng lại nhận biến cố hồi hương sau năm tháng xa xứ). | Nghỉ học sớm hoặc tốt nghiệp cấp 3 ➔ Vay 150 triệu đi XKLĐ (Nhật/Hàn/Đài) ➔ Gửi tiền về xây nhà cho bố mẹ ở quê ➔ Hồi hương tái hòa nhập ở tuổi 36 tìm vốn mở xưởng. | Gánh nợ ban đầu; rủi ro dồn hết tiền gửi về quê xây nhà mà bản thân không giữ lại đồng vốn nào phòng thân. |
+| **Trục 1: Xa Xứ & Kiều Hối**<br>(`export_labor`) | Xuất thân `mekong_water` hoặc `slum_worker`, Phân vị 1-2, **và người chơi chọn nhánh Đi XKLĐ ở tuổi 18-22**. (Nếu chọn học Đại học trong nước, hệ thống bắt buộc phân luồng sang Trục 2 hoặc Trục 3 để tránh lỗi người đi học ĐH nhưng lại nhận biến cố hồi hương sau năm tháng xa xứ). | Nghỉ học sớm hoặc tốt nghiệp cấp 3 ➔ Vay 150 triệu đi XKLĐ (Nhật/Hàn/Đài) ➔ Gửi tiền về xây nhà cho bố mẹ ở quê ➔ Hồi hương tái hòa nhập ở tuổi 36 tìm vốn mở xưởng. | Gánh nợ ban đầu; rủi ro dồn hết tiền gửi về quê xây nhà mà bản thân không giữ lại đồng vốn nào phòng thân. |
 | **Trục 2: Công Sở & Bẫy Đô Thị**<br>(`corporate_clerk`) | Xuất thân `alley_city`, Phân vị 3, theo học Đại học. *(Fallback routing: Nếu nhân vật thành thị chọn bỏ đại học đi làm sớm ở tuổi 18, hệ thống tự động bẻ luồng sang **Trục 3: Thương Trường & Tự Do** với vai trò nhân viên bán hàng / kinh doanh tự do).* | Học đại học ➔ Làm nhân viên công sở ➔ Cám dỗ chi tiêu cảm xúc ➔ Vay mua nhà trả góp 20 năm ➔ Khủng hoảng tuổi 36 cắt giảm biên chế. | Bẫy nợ tín dụng ngắn hạn; áp lực dòng tiền trả nợ thế chấp nhà khi thu nhập bị gián đoạn đột ngột. |
-| **Trục 3: Thương Trường & Tự Do**<br>(`merchant_trader`) | Xuất thân `market_trader`, Phân vị 3–4. | Bỏ ngang đại học ➔ Mở quán/buôn hàng online ➔ Dòng tiền mùa vụ bấp bênh ➔ Phá sản lần đầu vì đọng vốn ➔ Gầy dựng lại thương hiệu. | Quản trị vốn lưu động (Working Capital); rủi ro lấy tiền túi bù lỗ cho công việc kinh doanh dẫn đến vỡ nợ dây chuyền. |
-| **Trục 4: Đất Đai & Nông Nghiệp**<br>(`agriculture`) | Xuất thân `highland_village`, Phân vị 2–3. | Gắn bó với mảnh đất quê nhà ➔ Chuyển đổi cây trồng (cà phê, sầu riêng) ➔ Vượt qua hạn mặn / mất mùa ➔ Trở thành chủ nông trại bền vững. | Rủi ro thiên tai và biến động giá nông sản; thiếu thanh khoản tiền mặt khi tài sản phần lớn nằm ở đất và cây trồng. |
+| **Trục 3: Thương Trường & Tự Do**<br>(`merchant_trader`) | Xuất thân `market_trader`, Phân vị 3-4. | Bỏ ngang đại học ➔ Mở quán/buôn hàng online ➔ Dòng tiền mùa vụ bấp bênh ➔ Phá sản lần đầu vì đọng vốn ➔ Gầy dựng lại thương hiệu. | Quản trị vốn lưu động (Working Capital); rủi ro lấy tiền túi bù lỗ cho công việc kinh doanh dẫn đến vỡ nợ dây chuyền. |
+| **Trục 4: Đất Đai & Nông Nghiệp**<br>(`agriculture`) | Xuất thân `highland_village`, Phân vị 2-3. | Gắn bó với mảnh đất quê nhà ➔ Chuyển đổi cây trồng (cà phê, sầu riêng) ➔ Vượt qua hạn mặn / mất mùa ➔ Trở thành chủ nông trại bền vững. | Rủi ro thiên tai và biến động giá nông sản; thiếu thanh khoản tiền mặt khi tài sản phần lớn nằm ở đất và cây trồng. |
 
 ---
 
-### 4.2 Giai Đoạn 2: Thi Cử, Học Vấn & Ngã Rẽ Trưởng Thành (13 – 22 Tuổi)
+### 4.2 Giai Đoạn 2: Thi Cử, Học Vấn & Ngã Rẽ Trưởng Thành (13 - 22 Tuổi)
 
 #### Tình huống 2.1: Kỳ Thi Chuyển Cấp 3 (`school3`)
 - **Bối cảnh dẫn dắt (Narrative Vignette):** Mâm cơm tối mùa hè oi ả dưới ánh đèn tuýp nhấp nháy. Trên mặt bàn gỗ tróc sơn là tờ phiếu đăng ký nguyện vọng vào lớp 10. Bố ngồi trầm ngâm rít từng điếu thuốc lào, mắt nhìn đăm đăm vào khoảng sân tối. Mẹ cẩn thận vuốt thẳng từng nếp gấp của cuốn học bạ loại giỏi rồi khẽ thở dài: *"Nhà mình dạo này kẹt tiền quá con ơi, hay con tính đường học nghề cho đỡ học phí ba năm..."* Bạn nhìn vào mắt mẹ, nơi những vết chân chim hằn sâu nỗi âu lo sinh kế, lòng ngổn ngang giữa giấc mơ đèn sách và gánh nặng của gia đình.
@@ -421,7 +421,7 @@ Từ nền tảng xuất thân và các quyết định ở tuổi 12, nhân v�
   3. *Nộp đơn vào trường năng khiếu nghệ thuật / thể thao:* (Điều kiện: có chỉ số năng khiếu `arts >= 5` từ nhỏ). Dấn thân vào con đường nghệ thuật chông gai, chấp nhận chi phí đồ nghề đắt đỏ để nuôi dưỡng đam mê ấp ủ từ thuở bé (`arts` +5, `sm` +3).
   4. *Nghỉ học hẳn để đi làm phụ bố mẹ:* Gấp lại trang sách khi tuổi đời mới tròn 15. Bạn bắt đầu chuỗi ngày bươn chải tại xưởng gỗ hoặc phụ việc quán cơm, kiếm từng đồng tiền tươi gửi về đỡ đần đàn em thơ dại (`income` kích hoạt sớm, học vấn dừng lại ở THCS, `so` +5).
   5. *Học bổ túc văn hóa ban đêm vừa học vừa làm:* (Dành cho người từng nghỉ học ở tuổi 12). Ban ngày bốc vác mưu sinh, ban đêm cắp sách tới lớp học tình thương. Một con đường gian nan nhưng thắp lên cơ hội lấy bằng tốt nghiệp cấp 3 để cải thiện hệ số lương sau này (`grit` +4, `sm` +3).
-- **Dữ liệu thực tế đi kèm (Fact):** Tại Việt Nam, tỷ lệ phân luồng học sinh sau THCS vào học nghề hiện đạt khoảng 15–20%, trong khi mục tiêu giáo dục hướng tới 30% để đáp ứng nhu cầu thị trường lao động.
+- **Dữ liệu thực tế đi kèm (Fact):** Tại Việt Nam, tỷ lệ phân luồng học sinh sau THCS vào học nghề hiện đạt khoảng 15-20%, trong khi mục tiêu giáo dục hướng tới 30% để đáp ứng nhu cầu thị trường lao động.
 
 #### Tình huống 2.2: Cửa Ngõ Đại Học & Áp Lực Thi Lại (`college` & `retake`)
 - **Bối cảnh dẫn dắt (Narrative Vignette):** Tiếng loa phát thanh bến xe miền Tây ồn ã xen lẫn mùi khói xăng dầu nồng nặc. Bác bưu tá đạp xe vào tận ngõ đưa tận tay phong bì kết quả thi tốt nghiệp THPT: bạn thiếu đúng 0,5 điểm để chạm vào cánh cổng trường đại học mơ ước. Ba đứng tựa cửa nhìn ra ngõ, mẹ lặng lẽ mở chiếc hòm gỗ cũ kỹ dưới đáy giường kiểm tra xem còn bao nhiêu chỉ vàng tích cóp từ ngày cưới. Không gian gia đình chùng xuống trong sự im lặng nghẹt thở.
@@ -440,7 +440,7 @@ Từ nền tảng xuất thân và các quyết định ở tuổi 12, nhân v�
 - **Dữ liệu thực tế đi kèm (Fact):** Theo báo cáo an toàn tài chính số, sinh viên và lao động trẻ từ 18 đến 24 tuổi chiếm hơn 45% nạn nhân của các vụ lừa đảo việc làm online và bẫy tín dụng đen qua app tại các đô thị lớn.
 
 #### Tình huống 2.4: Mối Tình Đầu Đời & Chi Phí Hẹn Hò Tuổi 20 (`first_love`)
-- **Bối cảnh dẫn dắt (Narrative Vignette):** Tuổi 20 rực rỡ với mối tình đầu trong sáng. Bạn đem lòng yêu một người bạn cùng khóa có gia cảnh khá giả. Ngày sinh nhật người yêu cận kề, bạn bè rủ rê tổ chức tiệc tại một nhà hàng sang trọng và gợi ý món quà tặng hàng hiệu trị giá 2 triệu đồng — bằng toàn bộ tiền ăn một tháng rưỡi của bạn. Đứng trước cửa hàng lung linh ánh đèn, bạn nhìn lại chiếc ví da sờn rách chỉ còn vài tờ tiền lẻ.
+- **Bối cảnh dẫn dắt (Narrative Vignette):** Tuổi 20 rực rỡ với mối tình đầu trong sáng. Bạn đem lòng yêu một người bạn cùng khóa có gia cảnh khá giả. Ngày sinh nhật người yêu cận kề, bạn bè rủ rê tổ chức tiệc tại một nhà hàng sang trọng và gợi ý món quà tặng hàng hiệu trị giá 2 triệu đồng  -  bằng toàn bộ tiền ăn một tháng rưỡi của bạn. Đứng trước cửa hàng lung linh ánh đèn, bạn nhìn lại chiếc ví da sờn rách chỉ còn vài tờ tiền lẻ.
 - **Lựa chọn:**
   1. *Vay nóng tiền bạn bè để mua quà đắt tiền và chi trả bữa tiệc xa hoa:* Thỏa mãn sĩ diện tuổi trẻ trước nhóm bạn (`so` +3). Nhưng bạn phải ăn mì gói liên tục 40 ngày sau đó và hình thành thói quen chi tiêu vượt quá năng lực tài chính (`debt` +3 triệu, `hl` -4).
   2. *Thành thật chia sẻ hoàn cảnh và tự tay làm một món quà kỷ niệm ý nghĩa:* Đưa người yêu đi ăn quán chè quen thuộc ven đường. Người bạn đời xúc động trước sự chân thành, cả hai cùng thấu hiểu và trân trọng giá trị đích thực của tình cảm (`so` +6, `h` +5, tiết kiệm dòng tiền).
@@ -448,10 +448,10 @@ Từ nền tảng xuất thân và các quyết định ở tuổi 12, nhân v�
 
 ---
 
-### 4.3 Giai Đoạn 3: Lập Nghiệp, Dòng Tiền & Cám Dỗ Chi Tiêu (23 – 30 Tuổi)
+### 4.3 Giai Đoạn 3: Lập Nghiệp, Dòng Tiền & Cám Dỗ Chi Tiêu (23 - 30 Tuổi)
 
 #### Tình huống 3.1: Nhận Tháng Lương Đầu Tiên & Phân Bổ Ngân Sách
-- **Bối cảnh dẫn dắt (Narrative Vignette):** Chuông điện thoại rung lên lúc 17h30 ngày làm việc cuối tháng. Màn hình sáng lên thông báo biến động số dư: +10.000.000 VNĐ — khoản tiền lương chính thức đầu tiên trong cuộc đời sau bao năm tháng thử việc và mài đũng quần trên ghế nhà trường. Tiếng hò reo của nhóm đồng nghiệp rủ nhau đi ăn lẩu nướng ăn mừng; trên bản tin mạng xã hội tràn ngập hình ảnh chiếc điện thoại thông minh đời mới kèm lời mời chào: *"Sở hữu ngay chỉ với 0 đồng trả trước, duyệt hồ sơ tín dụng trong 5 phút"*.
+- **Bối cảnh dẫn dắt (Narrative Vignette):** Chuông điện thoại rung lên lúc 17h30 ngày làm việc cuối tháng. Màn hình sáng lên thông báo biến động số dư: +10.000.000 VNĐ  -  khoản tiền lương chính thức đầu tiên trong cuộc đời sau bao năm tháng thử việc và mài đũng quần trên ghế nhà trường. Tiếng hò reo của nhóm đồng nghiệp rủ nhau đi ăn lẩu nướng ăn mừng; trên bản tin mạng xã hội tràn ngập hình ảnh chiếc điện thoại thông minh đời mới kèm lời mời chào: *"Sở hữu ngay chỉ với 0 đồng trả trước, duyệt hồ sơ tín dụng trong 5 phút"*.
 - **Lựa chọn:**
   1. *Tự thưởng chiếc điện thoại trả góp đời mới & liên hoan thâu đêm:* Cảm giác thỏa mãn tức thời khi cầm món đồ công nghệ sang trọng trên tay (`h` +6). Nhưng ngay tháng sau, thông báo trừ nợ 3 triệu đồng/tháng khiến dòng tiền sinh hoạt co thắt nghẹt thở, mở đầu cho chuỗi ngày trả góp mệt mỏi (`debt` +18 triệu, `purchasingPower` giảm).
   2. *Áp dụng nghiêm ngặt nguyên tắc 3 hũ ngân sách (50/30/20):* Trích ngay 2 triệu gửi về quê biếu bố mẹ mua thuốc, 2 triệu nạp vào Quỹ khẩn cấp sinh lời, 5 triệu chi tiêu tiền trọ ăn uống, 1 triệu duy trì quan hệ bạn bè. Bạn làm chủ đồng tiền ngay từ tháng đầu đi làm (`assets.emergencyFund` +2 triệu, hình thành phản xạ tài chính an toàn).
@@ -465,7 +465,7 @@ Từ nền tảng xuất thân và các quyết định ở tuổi 12, nhân v�
   1. *Vay tiêu dùng mua xe tay ga cao cấp (trả góp 24 tháng):* Tự tin lướt đi trên phố, nâng cao diện mạo cá nhân khi gặp gỡ đối tác (`so` +3). Nhưng bạn phải gánh mức lãi suất thực tế 22%/năm; mỗi tháng tiền gốc và lãi nuốt trọn 25% thu nhập của bạn.
   2. *Mua một chiếc xe số cũ thanh lý bằng tiền tích lũy cá nhân:* Dáng vẻ bình dân, trầy xước vài chỗ nhưng máy móc bền bỉ. Bạn trả dứt điểm trong một lần, không nợ một đồng lãi suất nào, giữ trọn tiền mặt để chuẩn bị cho những bước ngoặt lớn hơn (`money` trừ nhẹ, không phát sinh nợ).
   3. *Tiếp tục đi xe buýt công cộng và xe ôm công nghệ:* Tiết kiệm chi phí đầu tư phương tiện, nhưng phải dậy từ 5h30 sáng mỗi ngày, mất 3 tiếng di chuyển khiến năng lượng làm việc bị bào mòn (`hl` -2, thời gian cá nhân co hẹp).
-- **Dữ liệu thực tế đi kèm (Fact):** Nợ tiêu dùng không kiểm soát ở độ tuổi 22–27 là nguyên nhân chính khiến điểm tín dụng cá nhân bị xếp vào nhóm nợ chú ý hoặc nợ xấu trên hệ thống CIC.
+- **Dữ liệu thực tế đi kèm (Fact):** Nợ tiêu dùng không kiểm soát ở độ tuổi 22-27 là nguyên nhân chính khiến điểm tín dụng cá nhân bị xếp vào nhóm nợ chú ý hoặc nợ xấu trên hệ thống CIC.
 
 #### Tình huống 3.3: Lập Gia Đình, Tổ Chức Hôn Lễ Hay Duy Trì Độc Thân (`wedding`)
 - **Bối cảnh dẫn dắt (Narrative Vignette):** Buổi gặp gỡ dạm ngõ giữa hai bên gia đình trong một phòng ăn nhỏ ấm cúng. Sau những câu chuyện hỏi thăm sức khỏe, câu chuyện chuyển dần sang khâu chuẩn bị hôn lễ. Mẹ bạn đời khẽ đặt chén trà xuống, giọng trầm ngâm: *"Cả đời con gái người ta chỉ có một lần, họ hàng ở quê trông vào nhiều lắm, làm sơ sài quá thì tội nghiệp cho cháu..."* Bạn và người yêu nắm chặt tay nhau dưới gầm bàn; trong tài khoản chung hai đứa tích cóp bấy lâu mới gom được vỏn vẹn 80 triệu đồng.
@@ -478,7 +478,7 @@ Từ nền tảng xuất thân và các quyết định ở tuổi 12, nhân v�
 #### Tình huống 3.4: Bão Sa Thải, Xưởng Đóng Cửa & Lựa Chọn Chuyển Nghề (`layoff_pivot`)
 - **Bối cảnh dẫn dắt (Narrative Vignette):** Tuổi 26, làn sóng kinh tế suy thoái ập đến. Doanh nghiệp cắt giảm 40% nhân sự hoặc xưởng may gia công thiếu đơn hàng đột ngột đóng cửa. Bạn cầm quyết định chấm dứt hợp đồng lao động cùng 1 tháng trợ cấp thôi việc. Tiền thuê phòng trọ và hóa đơn sinh hoạt tháng tới vẫn gõ cửa đúng hẹn. Trong tay bạn là số tiền tích lũy ít ỏi vừa đủ sống cầm cự trong 45 ngày.
 - **Lựa chọn:**
-  1. *Rút toàn bộ bảo hiểm xã hội 1 lần để trang trải chi tiêu trước mắt:* Có ngay một khoản tiền mặt 30–40 triệu đồng để giải quyết khó khăn tức thời. Tuy nhiên, bạn tự tay xóa bỏ quyền lợi an sinh xã hội tích lũy bấy lâu và mất đi điểm tựa hưu trí sau này (`money` tăng ngắn hạn, mất điểm tựa an sinh dài hạn).
+  1. *Rút toàn bộ bảo hiểm xã hội 1 lần để trang trải chi tiêu trước mắt:* Có ngay một khoản tiền mặt 30-40 triệu đồng để giải quyết khó khăn tức thời. Tuy nhiên, bạn tự tay xóa bỏ quyền lợi an sinh xã hội tích lũy bấy lâu và mất đi điểm tựa hưu trí sau này (`money` tăng ngắn hạn, mất điểm tựa an sinh dài hạn).
   2. *Trích tiền trợ cấp đăng ký khóa học nghề thực chiến (lập trình, tiếng Hàn, kỹ thuật số):* Chấp nhận thắt lưng buộc bụng ăn cơm hộp qua ngày trong 6 tháng để nâng cấp kỹ năng chuyên môn. Sau khi tốt nghiệp, bạn tìm được công việc mới với mức thu nhập tăng 40% (`sm` +6, `income` tăng trưởng bền vững).
   3. *Đăng ký chạy xe công nghệ / giao hàng để duy trì dòng tiền sống sót hàng ngày:* Lấy công làm lời, làm việc 12 tiếng mỗi ngày để không phải vay nợ ai. Bạn giữ vững tinh thần tự lập trong khi kiên nhẫn nộp hồ sơ tìm kiếm công việc chính thức (`grit` +4, `hl` -3).
 - **Dữ liệu thực tế đi kèm (Fact):** Báo cáo thị trường lao động của Tổng Liên đoàn Lao động cho thấy khi xảy ra biến cố mất việc, hơn 70% lao động trẻ dưới 30 tuổi có xu hướng rút BHXH 1 lần thay vì bảo lưu thời gian đóng để hưởng lương hưu.
@@ -493,12 +493,12 @@ Từ nền tảng xuất thân và các quyết định ở tuổi 12, nhân v�
 
 ---
 
-### 4.4 Giai Đoạn 4: Hôn Nhân, Nhà Cửa & Biến Cố Dòng Tiền (31 – 45 Tuổi)
+### 4.4 Giai Đoạn 4: Hôn Nhân, Nhà Cửa & Biến Cố Dòng Tiền (31 - 45 Tuổi)
 
 #### Tình huống 4.1: Mua Nhà Đất Hay Thuê Nhà Dài Hạn (`house`)
 - **Bối cảnh dẫn dắt (Narrative Vignette):** Đêm mùa hè oi ả trong căn phòng trọ 18m2, tiếng quạt trần quay kẽo kẹt không xua nổi hơi nóng hầm hập phả xuống từ mái tôn xi-măng. Đứa con nhỏ khóc ngặt nghẽo vì rôm sảy, vợ bạn thức trắng đêm bế con đi đi lại lại trong phòng. Sáng hôm sau, chủ nhà trọ gõ cửa đưa thông báo tháng tới tăng giá điện và tiền phòng. Hai vợ chồng nhìn nhau lặng thinh, trên bàn là tập hồ sơ dự án căn hộ chung cư kèm dòng cam kết từ ngân hàng: *"Chỉ cần thanh toán trước 30%, thời hạn vay vốn lên tới 20 năm"*.
 - **Lựa chọn:**
-  1. *Ký hợp đồng vay thế chấp 70% ngân hàng trong 15–20 năm (áp dụng dư nợ giảm dần):* Khoảnh khắc tra chiếc chìa khóa vào cánh cửa căn nhà đầu tiên của đời mình xúc động đến nghẹn ngào (`h` +8). Nhưng từ đây, bạn bước vào chuỗi ngày không được phép ốm, không được phép mất việc, trích đều đặn 35% thu nhập hàng tháng để trả nợ gốc và lãi.
+  1. *Ký hợp đồng vay thế chấp 70% ngân hàng trong 15-20 năm (áp dụng dư nợ giảm dần):* Khoảnh khắc tra chiếc chìa khóa vào cánh cửa căn nhà đầu tiên của đời mình xúc động đến nghẹn ngào (`h` +8). Nhưng từ đây, bạn bước vào chuỗi ngày không được phép ốm, không được phép mất việc, trích đều đặn 35% thu nhập hàng tháng để trả nợ gốc và lãi.
   2. *Tiếp tục thuê căn hộ dịch vụ tiện nghi và đem toàn bộ tiền tích lũy đi đầu tư sinh lời:* Dòng tiền linh hoạt, không chịu áp lực nợ nần đè nặng mỗi sớm mai thức dậy. Tuy nhiên, bạn phải đối mặt với cảm giác bất an mỗi khi chủ nhà thông báo lấy lại nhà để bán hoặc tăng giá thuê đột ngột.
 - **Tiếng vọng ký ức (Echo Trigger):** Nếu có cờ `storm_roof` (Đêm bão tốc mái năm 9 tuổi), game hiện dòng hoài niệm: *"Đứng giữa căn nhà kiên cố của chính mình, bạn rưng rưng nhớ về góc tường ẩm ướt đêm mưa bão năm 9 tuổi bên bố mẹ."*
 - **Dữ liệu thực tế đi kèm (Fact):** Tỷ lệ nợ trên thu nhập (DTI - Debt-to-Income) an toàn được các chuyên gia tài chính khuyến nghị là dưới 35% tổng thu nhập hàng tháng để tránh nguy cơ mất thanh khoản khi lãi suất thả nổi tăng.
@@ -515,11 +515,11 @@ Từ nền tảng xuất thân và các quyết định ở tuổi 12, nhân v�
 - **Bối cảnh dẫn dắt (Narrative Vignette):** Cơn mưa chiều mịt mù trút xuống hiên nhà. Người anh em ruột thịt / họ hàng thân thiết bước vào với gương mặt hốc hác, quầng mắt thâm đen vì chuỗi ngày trốn nợ. Người ấy ngồi thụp xuống ghế, nắm chặt tay bạn van lơn: *"Công việc làm ăn của em vỡ lở rồi anh ơi, chủ nợ kéo đến tận nhà đập phá dọa nạt vợ con. Ngân hàng chỉ chịu giải ngân cho em đảo nợ nếu có người thân đứng tên bảo lãnh tín dụng 200 triệu đồng. Em xin anh cứu mạng gia đình em lần này, em cày cuốc trả đúng từng tháng không để anh chịu thiệt một đồng..."*
 - **Lựa chọn:**
   1. *Đặt bút ký bảo lãnh vì nể nang tình máu mủ ruột rà:* Giữ trọn thể diện và chữ tình trong dòng họ (`so` +5), người thân cảm kích rơi nước mắt. Nhưng 8 tháng sau, điện thoại bạn liên tục réo vang từ bộ phận thu hồi nợ: người vay đã cắt liên lạc, và toàn bộ khoản nợ 200 triệu kèm lãi phạt chuyển thẳng sang tên bạn gánh chịu.
-  2. *Khéo léo từ chối ký giấy bảo lãnh, nhưng hỗ trợ 10–20 triệu tiền mặt trong khả năng:* Người thân trách móc xa lánh, không khí gia đình rạn nứt tạm thời (`so` -3). Nhưng bạn bảo vệ nguyên vẹn sự an toàn tài chính của vợ con mình trước cơn bão nợ nần không đáy của người khác.
+  2. *Khéo léo từ chối ký giấy bảo lãnh, nhưng hỗ trợ 10-20 triệu tiền mặt trong khả năng:* Người thân trách móc xa lánh, không khí gia đình rạn nứt tạm thời (`so` -3). Nhưng bạn bảo vệ nguyên vẹn sự an toàn tài chính của vợ con mình trước cơn bão nợ nần không đáy của người khác.
 - **Dữ liệu thực tế đi kèm (Fact):** Hơn 70% các trường hợp đứng tên bảo lãnh vay hộ giữa người thân kết thúc bằng tranh chấp tài chính và rạn nứt quan hệ gia đình khi có nợ quá hạn.
 
 #### Tình huống 4.4: Chi Phí Cho Con Ăn Học - Trường Công Hay Song Ngữ Quốc Tế (`child_education`)
-- **Bối cảnh dẫn dắt (Narrative Vignette):** Đứa con đầu lòng chuẩn bị bước vào lớp 1. Bạn bè đồng trang lứa xung quanh rôm rả khoe hồ sơ nộp vào các trường quốc tế, trường song ngữ chất lượng cao với các lớp năng khiếu tiếng Anh bản ngữ. Học phí trường song ngữ lên tới 15 triệu/tháng — ngốn đứt 40% thu nhập của cả hai vợ chồng. Trên bàn ăn tối, vợ bạn thở dài nhìn con: *"Cả đời mình đã chịu khổ vì thiếu thốn rồi, giờ có thắt lưng buộc bụng cũng phải cho con học trường tốt nhất để sau này không thua sút bạn bè..."*
+- **Bối cảnh dẫn dắt (Narrative Vignette):** Đứa con đầu lòng chuẩn bị bước vào lớp 1. Bạn bè đồng trang lứa xung quanh rôm rả khoe hồ sơ nộp vào các trường quốc tế, trường song ngữ chất lượng cao với các lớp năng khiếu tiếng Anh bản ngữ. Học phí trường song ngữ lên tới 15 triệu/tháng  -  ngốn đứt 40% thu nhập của cả hai vợ chồng. Trên bàn ăn tối, vợ bạn thở dài nhìn con: *"Cả đời mình đã chịu khổ vì thiếu thốn rồi, giờ có thắt lưng buộc bụng cũng phải cho con học trường tốt nhất để sau này không thua sút bạn bè..."*
 - **Lựa chọn:**
   1. *Cắn răng cho con học trường song ngữ quốc tế:* Rạng danh gia đình, con được tiếp cận môi trường giáo dục tân tiến (`so` +4). Nhưng hai vợ chồng rơi vào guồng quay tăng ca nghẹt thở, không dám nghỉ ốm hay du lịch, tài chính gia đình luôn ở mức báo động đỏ (`money` kiệt quệ, `h` -4).
   2. *Chọn trường công lập chất lượng tốt, trích 20% lập Quỹ giáo dục đầu tư sinh lời cho con:* Giữ vững cấu trúc dòng tiền an toàn. Bạn dành thời gian buổi tối cùng con đọc sách và rèn tính tự lập; số tiền tiết kiệm được phân bổ vào quỹ tích sản để sẵn sàng cho con học đại học hoặc du học sau này (`assets` tăng bền vững, gia đình đầm ấm).
@@ -531,11 +531,11 @@ Từ nền tảng xuất thân và các quyết định ở tuổi 12, nhân v�
 - **Lựa chọn:**
   1. *Ngồi lại đối thoại thẳng thắn, công khai minh bạch tài chính gia đình:* Thống nhất hạn mức chi tiêu cá nhân và quy chế hỗ trợ hai bên nội ngoại bằng tài khoản chung. Hôn nhân vượt qua thử thách, niềm tin được hàn gắn vững chắc hơn xưa (`so` +6, `h` +5, ổn định dòng tiền).
   2. *Quyết định ly hôn, phân chia đôi tài sản và quyền nuôi con:* Bán vội căn nhà chung để chia tiền mặt, gánh nặng án phí và chi phí cấp dưỡng hàng tháng khiến tài sản tích lũy 15 năm bị phân tán phân nửa, con cái chịu tổn thương tâm lý (`money` giảm 50%, `h` -8, `so` -5).
-- **Dữ liệu thực tế đi kèm (Fact):** Thống kê tư pháp chỉ ra rằng hơn 60% các vụ ly hôn ở độ tuổi 35–45 tại Việt Nam có nguyên nhân bắt nguồn trực tiếp từ mâu thuẫn quản trị tài chính và thiếu minh bạch dòng tiền trong gia đình.
+- **Dữ liệu thực tế đi kèm (Fact):** Thống kê tư pháp chỉ ra rằng hơn 60% các vụ ly hôn ở độ tuổi 35-45 tại Việt Nam có nguyên nhân bắt nguồn trực tiếp từ mâu thuẫn quản trị tài chính và thiếu minh bạch dòng tiền trong gia đình.
 
 ---
 
-### 4.5 Giai Đoạn 5: Khủng Hoảng Trung Niên, Sức Khỏe & Tích Sản (46 – 65 Tuổi)
+### 4.5 Giai Đoạn 5: Khủng Hoảng Trung Niên, Sức Khỏe & Tích Sản (46 - 65 Tuổi)
 
 #### Tình huống 5.1: Cú Sốc Viện Phí Cấp Cứu Nửa Đêm & Tấm Khiên Tiền Mặt Khẩn Cấp (`ills`)
 - **Bối cảnh dẫn dắt (Narrative Vignette):** 2 giờ sáng, tiếng còi xe cấp cứu xé toang màn đêm tĩnh mịch. Cơn đau thắt ngực dữ dội khiến bạn ngã quỵ trên nền gạch hoa, mồ hôi vã ra như tắm, hơi thở đứt quãng. Tại phòng cấp cứu bệnh viện, bác sĩ trực bước nhanh ra hành lang đưa phiếu chỉ định mổ gấp: *"Bệnh nhân bị nhồi máu cơ tim, phải can thiệp đặt stent ngay lập tức để cứu tính mạng. Người nhà nộp ngay 50 triệu đồng tiền tạm ứng viện phí tại quầy thu ngân"*. Giữa đêm hôm khuya khoắt, vợ bạn run rẩy đứng trước cửa quầy thu ngân sáng đèn lạnh lẽo.
@@ -553,7 +553,7 @@ Từ nền tảng xuất thân và các quyết định ở tuổi 12, nhân v�
 - **Dữ liệu thực tế đi kèm (Fact):** Việt Nam đang là một trong những quốc gia có tốc độ già hóa dân số nhanh nhất thế giới. Dự kiến đến năm 2036, Việt Nam sẽ chính thức bước vào giai đoạn dân số già, tạo áp lực lớn lên hệ thống an sinh xã hội nếu người lao động không tự chuẩn bị tài chính hưu trí.
 
 #### Tình huống 5.3: Hợp Đồng Bảo Hiểm Nhân Thọ & Bẫy Tư Vấn Nhập Nhằng (`insurance_trap`)
-- **Bối cảnh dẫn dắt (Narrative Vignette):** Năm 50 tuổi, các dấu hiệu thoái hóa xương khớp và huyết áp bắt đầu xuất hiện. Một người quen làm đại lý bảo hiểm đến nhà chơi, nhiệt tình chào mời gói bảo hiểm liên kết đầu tư với cam kết vừa bảo vệ sinh mạng vừa sinh lời 10–12%/năm, phí đóng 40 triệu/năm trong 15 năm. Người quen thúc giục bạn ký ngay để kịp hưởng khuyến mãi trong tháng.
+- **Bối cảnh dẫn dắt (Narrative Vignette):** Năm 50 tuổi, các dấu hiệu thoái hóa xương khớp và huyết áp bắt đầu xuất hiện. Một người quen làm đại lý bảo hiểm đến nhà chơi, nhiệt tình chào mời gói bảo hiểm liên kết đầu tư với cam kết vừa bảo vệ sinh mạng vừa sinh lời 10-12%/năm, phí đóng 40 triệu/năm trong 15 năm. Người quen thúc giục bạn ký ngay để kịp hưởng khuyến mãi trong tháng.
 - **Lựa chọn:**
   1. *Ký hợp đồng vội vã vì nể nang người quen mà không đọc kỹ bảng minh họa:* Đóng phí đều đặn 5 năm, đến khi cần chi trả viện phí phẫu thuật thì bị từ chối do điều khoản loại trừ bệnh có sẵn bị giấu nhẹm; rút hợp đồng trước hạn bị trừ sạch 70% giá trị tích lũy (`money` mất oan tiền phí, `h` -6).
   2. *Nghiên cứu kỹ lưỡng, chỉ mua gói bảo hiểm sức khỏe thuần túy (Term Life / Bảo hiểm y tế bảo lãnh viện phí):* Tách bạch rõ ràng giữa bảo vệ rủi ro y tế và tích lũy đầu tư. Chi phí chỉ tốn 8 triệu/năm, phần tiền còn lại tiếp tục tự tích sản quỹ mở an toàn (`assets` tối ưu, được bảo vệ viện phí toàn diện).
@@ -566,11 +566,11 @@ Từ nền tảng xuất thân và các quyết định ở tuổi 12, nhân v�
   1. *Xin nghỉ việc sớm về quê trực tiếp chăm sóc cha mẹ già:* Đạo hiếu vẹn tròn, cha mẹ được con ruột chăm sóc chu đáo (`so` +6). Nhưng nguồn thu nhập chính của bản thân bị cắt đứt đột ngột, bạn phải tiêu lẹm dần vào số tiền tiết kiệm dưỡng già của chính mình (`money` giảm dần).
   2. *Đứng ra làm đầu mối, tổ chức họp gia đình thống nhất góp tiền thuê điều dưỡng chuyên môn tại nhà:* Bạn đóng góp phần nhiều hơn tương ứng với điều kiện tài chính, thuê điều dưỡng chuyên nghiệp chăm sóc vệ sinh và vật lý trị liệu cho bố mẹ. Bản thân vẫn duy trì được công việc và sự nghiệp (`so` +4, cân bằng hiếu nghĩa và dòng tiền).
   3. *Đùn đẩy trách nhiệm cho các anh chị em khác ở quê:* Tiết kiệm được chi phí nhưng tình cảm anh em ruột thịt rạn nứt sâu sắc, gánh nặng cắn rứt lương tâm đeo bám (`so` -6, `h` -5).
-- **Dữ liệu thực tế đi kèm (Fact):** Khảo sát dân số già hóa tại Việt Nam cho thấy hơn 70% người cao tuổi cần người hỗ trợ sinh hoạt hàng ngày, và chi phí chăm sóc y tế cho cha mẹ già bại liệt chiếm trung bình 30–50% thu nhập của thế hệ con cái ở tuổi trung niên.
+- **Dữ liệu thực tế đi kèm (Fact):** Khảo sát dân số già hóa tại Việt Nam cho thấy hơn 70% người cao tuổi cần người hỗ trợ sinh hoạt hàng ngày, và chi phí chăm sóc y tế cho cha mẹ già bại liệt chiếm trung bình 30-50% thu nhập của thế hệ con cái ở tuổi trung niên.
 
 ---
 
-### 4.6 Giai Đoạn 6: Tuổi Già, Di Sản & Giấy Chứng Nhận Cuộc Đời (66 – 100 Tuổi)
+### 4.6 Giai Đoạn 6: Tuổi Già, Di Sản & Giấy Chứng Nhận Cuộc Đời (66 - 100 Tuổi)
 
 #### Tình huống 6.1: Nơi Ở Tuổi Xế Chiều (`oldhome`)
 - **Bối cảnh dẫn dắt (Narrative Vignette):** Đôi bàn tay đã run rẩy, mắt đã mờ đục sau bảy thập kỷ phong trần. Những bậc cầu thang căn nhà cũ trở thành thử thách nặng nề mỗi ngày. Các con bạn đều bận rộn với guồng quay mưu sinh và nuôi dạy con cái, bữa cơm sum vầy thưa dần. Một buổi chiều ngồi bên khung cửa sổ nhìn lá vàng rơi, bạn tự hỏi bản thân muốn trải qua những năm tháng xế chiều như thế nào để giữ trọn sự tự tôn và an yên.
@@ -580,7 +580,7 @@ Từ nền tảng xuất thân và các quyết định ở tuổi 12, nhân v�
   3. *Tiếp tục ở lại nhà cũ và thuê người chăm sóc theo giờ:* Quen thuộc không gian sống gắn bó cả đời người, chi trả chi phí sinh hoạt từ nguồn thu nhập thụ động bền vững.
 
 #### Tình huống 6.2: Lập Di Chúc & Phân Chia Di Sản (`will`)
-- **Bối cảnh dẫn dắt (Narrative Vignette):** Nằm trên chiếc giường gỗ quen thuộc, ngoài sân tiếng chim hót líu lo dưới tán cây mà bạn đã tự tay vun trồng từ ba mươi năm trước. Trí tuệ vẫn còn sáng suốt, luật sư gia đình ngồi bên cạnh mở chiếc cặp tài liệu. Các con bạn tề tựu đông đủ ngoài hiên nhà. Bạn nhìn lại chặng đường một đời người đã qua — những thăng trầm cơm áo, những đêm mất ngủ vì nợ nần, những quyết định sáng suốt và cả những sai lầm đã tôi luyện nên bản lĩnh của bạn.
+- **Bối cảnh dẫn dắt (Narrative Vignette):** Nằm trên chiếc giường gỗ quen thuộc, ngoài sân tiếng chim hót líu lo dưới tán cây mà bạn đã tự tay vun trồng từ ba mươi năm trước. Trí tuệ vẫn còn sáng suốt, luật sư gia đình ngồi bên cạnh mở chiếc cặp tài liệu. Các con bạn tề tựu đông đủ ngoài hiên nhà. Bạn nhìn lại chặng đường một đời người đã qua  -  những thăng trầm cơm áo, những đêm mất ngủ vì nợ nần, những quyết định sáng suốt và cả những sai lầm đã tôi luyện nên bản lĩnh của bạn.
 - **Lựa chọn:**
   1. *Phân chia tài sản công khai, minh bạch và lập văn bản công chứng rõ ràng:* Không để lại bất kỳ kẽ hở nào cho sự tranh chấp giữa các con. Các thế hệ sau gắn kết yêu thương, gìn giữ hòa khí gia đình (`so` +6, di sản bình an).
   2. *Trích một phần tài sản thành lập Quỹ Khuyến Học mang tên dòng họ và đóng góp xã hội:* Phần còn lại chia đều cho con cái. Bạn khép lại vòng đời không chỉ bằng những con số tài sản, mà bằng một giá trị nhân văn trường tồn truyền cảm hứng cho thế hệ mai sau (`h` +8, Enlightenment Score đạt mức tối đa).
@@ -603,12 +603,12 @@ Từ nền tảng xuất thân và các quyết định ở tuổi 12, nhân v�
 
 ### 4.7 Bộ Sưu Tập Đoạn Văn Tự Sự Cuộc Đời (The Life Epilogues & Eulogy Generator)
 
-Khi nhân vật dừng bước (sống thọ trọn vẹn hoặc tạ thế sớm), màn hình **Giấy Chứng Nhận Cuộc Đời** sẽ hiển thị một đoạn tự sự đúc kết mang tính điện ảnh cao, được tạo tự động dựa trên toàn bộ nhật ký quyết định của người chơi:
+Khi nhân vật dừng bước (sống thọ trọn vẹn hoặc kết thúc sớm), màn hình **Giấy Chứng Nhận Cuộc Đời** sẽ hiển thị một đoạn tự sự đúc kết mang tính điện ảnh cao, được tạo tự động dựa trên toàn bộ nhật ký quyết định của người chơi:
 
-1. **Biến thể Tạ Thế Sớm Tuổi 38 (Kiệt sức gánh nợ vì bảo lãnh tín dụng):**
+1. **Biến thể Kết Thúc Sớm Tuổi 38 (Kiệt sức gánh nợ vì bảo lãnh tín dụng):**
    > *"Bạn ra đi vào một buổi chiều mưa tầm tã tuổi 38, trên chiếc bàn làm việc ngổn ngang những tờ giấy báo đòi nợ của người thân mà bạn từng đứng tên bảo lãnh. Một đời sống vì chữ tình và nể nang thể diện, bạn đã gánh trên vai món nợ không phải của mình cho đến hơi thở cuối cùng. Bài học để lại cho kiếp sau: Lòng tốt không đi kèm giới hạn tài chính sẽ trở thành bi kịch tự hủy diệt."*
 
-2. **Biến thể Tạ Thế Sớm Tuổi 52 (Bạo bệnh không có quỹ dự phòng sau khi vỡ nợ kinh doanh):**
+2. **Biến thể Kết Thúc Sớm Tuổi 52 (Bạo bệnh không có quỹ dự phòng sau khi vỡ nợ kinh doanh):**
    > *"Bạn nhắm mắt ở tuổi 52 tại căn gác trọ nhỏ ven đô. Cơn bạo bệnh ập đến đúng lúc công việc làm ăn đổ vỡ và tài khoản không còn một đồng dự phòng. Cả thanh xuân liều lĩnh chạy theo những thương vụ bấp bênh mà quên lập tấm khiên bảo vệ, bạn dừng bước khi bao ước mơ còn dang dở. Bài học để lại cho kiếp sau: Xây lâu đài cát mà không có móng, một con sóng dữ cũng đủ cuốn phăng tất cả."*
 
 3. **Biến thể Sống Thọ Tuổi 82 (An nhàn tự chủ nhờ quy tắc 50/30/20 và tích sản bền bỉ):**
@@ -634,7 +634,7 @@ Cơ chế Tái Thiết Cuộc Đời (Metaprogression Engine) trong "Một Đờ
 Khi nhân vật qua đời (do tuổi già tự nhiên hoặc tử vong sớm vì kiệt quệ tài chính / bạo bệnh), giao diện chuyển sang không gian tĩnh lặng màu xám khói sang trọng với các thành phần chính:
 1. **Nhãn Định Danh Vòng Đời:** Hiển thị rõ nét *"Vòng Đời Thứ [N]"* ở góc trên để người chơi nhận diện tiến trình lũy tiến của mình.
 2. **Tấm Gương Soi Chiếu Dòng Tiền (Financial Reflection Mirror):**
-   - Đúc kết tuổi thọ đạt được, di sản tài sản để lại và nguyên nhân dừng bước (Ví dụ: *Vòng đời thứ 1: Tạ thế tuổi 38 do đột quỵ vì kiệt sức gánh nợ bảo lãnh người thân*).
+   - Đúc kết tuổi thọ đạt được, di sản tài sản để lại và nguyên nhân dừng bước (Ví dụ: *Vòng đời thứ 1: Kết thúc sớm ở tuổi 38 do đột quỵ vì kiệt sức gánh nợ bảo lãnh người thân*).
    - Tóm tắt "Vết Thương Dòng Tiền Lớn Nhất": Phân tích chính xác quyết định tài chính sai lầm then chốt đã làm bẻ gãy quỹ đạo an toàn của vòng đời vừa qua.
 3. **Khai Mở & Lựa Chọn Bài Học Trí Tuệ Kế Thừa (Wisdom Legacy Perks):**
    - Dựa trên nguyên nhân dừng bước hoặc thành tựu nổi bật của vòng đời vừa kết thúc, hệ thống mở khóa Bài Học Trí Tuệ tương ứng.
@@ -645,16 +645,16 @@ Khi nhân vật qua đời (do tuổi già tự nhiên hoặc tử vong sớm v�
 | Tên Bài Học Kế Thừa | Điều Kiện Kích Hoạt Từ Vòng Đời Trước | Hiệu Ứng Thực Tế Ở Vòng Đời Kế Tiếp | Ý Nghĩa Giáo Dục Tài Chính |
 | :--- | :--- | :--- | :--- |
 | **Bản Lĩnh Vượt Bão Giá**<br>(`inflation_vigilance`) | Vòng đời trước bị hao mòn tài sản nghiêm trọng do duy trì tỷ lệ tiền mặt nhàn rỗi trên 70% trong 10 năm liên tiếp. | Từ năm 18 tuổi, tự động kích hoạt tính năng "Nhạy Bén Dòng Tiền"; giảm 20% mức trượt giá chi phí sinh hoạt qua các chu kỳ kinh tế. | Hiểu rõ tiền mặt không sinh lời là tài sản bốc hơi nhanh nhất theo thời gian. |
-| **Tỉnh Táo Trước Nể Nang**<br>(`cosign_immunity`) | Vòng đời trước từng gánh nợ thay hoặc rơi vào vỡ nợ do đứng tên vay hộ / bảo lãnh tín dụng cho người thân. | Tại tình huống nhờ bảo lãnh nợ ở tuổi 35–45, xuất hiện thêm lựa chọn "Khéo Léo Từ Chối Không Mất Lòng" mà không bị giảm điểm Quan hệ gia đình (`so` giữ nguyên). | Tách bạch ranh giới cảm xúc nể nang và an toàn tài chính cá nhân. |
+| **Tỉnh Táo Trước Nể Nang**<br>(`cosign_immunity`) | Vòng đời trước từng gánh nợ thay hoặc rơi vào vỡ nợ do đứng tên vay hộ / bảo lãnh tín dụng cho người thân. | Tại tình huống nhờ bảo lãnh nợ ở tuổi 35-45, xuất hiện thêm lựa chọn "Khéo Léo Từ Chối Không Mất Lòng" mà không bị giảm điểm Quan hệ gia đình (`so` giữ nguyên). | Tách bạch ranh giới cảm xúc nể nang và an toàn tài chính cá nhân. |
 | **Phản Xạ Lập Quỹ Phòng Thân**<br>(`buffer_instinct`) | Vòng đời trước từng phải bán tháo tài sản hoặc kiệt quệ tài chính khi gặp biến cố tai nạn / ốm đau do không có quỹ dự phòng. | Ngay tại mốc bắt đầu có nguồn thu nhập đầu tiên (`first_income_age`: 15, 18, 22 hoặc 23 tuổi), hệ thống tự động trích 15% thu nhập vào Quỹ khẩn cấp sinh lời; miễn dịch với bẫy chi tiêu cảm xúc tháng đầu. | Biến việc trích lập quỹ dự phòng khẩn cấp thành nguyên tắc bất di bất dịch trước khi chi tiêu. |
-| **Trân Trọng Bữa Cơm Nhà**<br>(`frugal_anchor`) | Vòng đời trước xuất thân nghèo khó hoặc từng mắc nợ thẻ tín dụng vượt quá 3 tháng lương vì lối sống hào nhoáng ở giai đoạn 20–30 tuổi. | Giảm 25% chi phí sinh hoạt phung phí ở giai đoạn 20–30 tuổi mà chỉ số Hạnh phúc (`h`) không bị giảm. | Thấu hiểu giá trị giản đơn, chủ động ngăn ngừa bẫy lạm phát lối sống. |
+| **Trân Trọng Bữa Cơm Nhà**<br>(`frugal_anchor`) | Vòng đời trước xuất thân nghèo khó hoặc từng mắc nợ thẻ tín dụng vượt quá 3 tháng lương vì lối sống hào nhoáng ở giai đoạn 20-30 tuổi. | Giảm 25% chi phí sinh hoạt phung phí ở giai đoạn 20-30 tuổi mà chỉ số Hạnh phúc (`h`) không bị giảm. | Thấu hiểu giá trị giản đơn, chủ động ngăn ngừa bẫy lạm phát lối sống. |
 | **Giữ Chặt Sổ Đỏ Gia Đình**<br>(`shield_heritage`) | Vòng đời trước từng đem giấy tờ nhà đất của bố mẹ thế chấp vay vốn khởi nghiệp dẫn đến mất tài sản gia đình. | Khi khởi nghiệp gặp rủi ro, tự động kích hoạt cơ chế "Khoanh Vùng Trách Nhiệm": Chỉ mất phần vốn tự có của bản thân, bảo toàn nguyên vẹn mái ấm của bố mẹ già. | Nguyên tắc quản trị rủi ro tối thượng: Tuyệt đối không đánh cược tài sản sinh tồn của gia đình. |
 | **Tâm An Vượt Nghịch Cảnh**<br>(`grit_heritage`) | Vòng đời trước kiên cường vượt qua nghịch cảnh thiên tai / hạn mặn tại bản làng vùng cao hoặc nông thôn miền Tây. | Chỉ số Kiên cường cơ bản (`grit`) cộng thêm +5 điểm vĩnh viễn; khi gặp biến cố mất mùa / dịch bệnh, tốc độ phục hồi Sức khỏe và Tinh thần nhanh gấp đôi. | Nội lực tinh thần vững vàng là bệ đỡ lớn nhất để tái thiết sản nghiệp. |
 
 #### 4.8.4 Biên Niên Sử Vòng Đời (The Multi-Life Chronicle)
 Hệ thống kết nối chuỗi các vòng đời thành **Biên Niên Sử Vòng Đời (Multi-Life Tree)** có thể chia sẻ:
 - **Phả Hệ Các Đời:** Hiển thị cây hành trình: *Vòng đời 1 (Nguyễn Văn An - Xóm trọ công nhân - Mất năm 38 tuổi vì bạo bệnh) ➔ Vòng đời 2 (Lê Thị Mai - Tiểu thương chợ phiên - Mất năm 52 tuổi vì vỡ nợ hụi) ➔ Vòng đời 3 (Trần Hữu Bình - Nhân viên công sở - Thọ 82 tuổi an nhàn hưu trí)*.
-- **Điểm Giác Ngộ Tài Chính (Enlightenment Score: 0 – 100):** Tính toán dựa trên số lượng Bài Học Trí Tuệ đã tích lũy và mức cải thiện tài sản ròng qua từng vòng đời.
+- **Điểm Giác Ngộ Tài Chính (Enlightenment Score: 0 - 100):** Tính toán dựa trên số lượng Bài Học Trí Tuệ đã tích lũy và mức cải thiện tài sản ròng qua từng vòng đời.
 - **Chia sẻ Mạng Xã Hội:** Người chơi có thể xuất ảnh phả hệ để chia sẻ lên Facebook, Threads, Zalo kèm câu hỏi kích thích tương tác tự nhiên: *"Tôi đã mất 3 vòng đời mới học được cách không bảo lãnh nợ thay người khác, còn bạn?"*.
 
 ---
@@ -665,8 +665,8 @@ Hệ thống kết nối chuỗi các vòng đời thành **Biên Niên Sử Vò
 
 ```mermaid
 graph TD
-    A["Mở Web Game momo.vn/game/mot-doi-nguoi"] --> B["Cảnh 1 & 2: Cầu Nại Hà & Quán Canh Mạnh Bà"]
-    B --> C["Cảnh 3: Uống Canh & Khắc Sâu 1 Trong 4 Ước Mơ Tiền Kiếp"]
+    A["Mở Web Game momo.vn/game/mot-doi-nguoi"] --> B["Cảnh 1 & 2: Khởi Tạo Vận Mệnh & Chọn Mục Tiêu"]
+    B --> C["Cảnh 3: Uống Canh & Khắc Sâu 1 Trong 4 Mục Tiêu Tài Chính Khởi Đầu"]
     C --> D["Cảnh 4: Mở Mắt Trong Hình Hài Em Bé (Reborn) & Giấy Khai Sinh"]
     D --> E["Vòng Lặp Sinh Tồn: Kho 24 Mốc Quyết Định Đa Nhánh Theo Vận Mệnh"]
     E --> F{"Kiểm Tra Điều Kiện Sinh Tồn & Biến Cố"}
@@ -675,7 +675,7 @@ graph TD
     G --> I["Giấy Chứng Nhận Cuộc Đời: Đóng Dấu ĐÃ GIỮ LỜI hoặc CHƯA TRỌN"]
     H --> I
     I --> J["Trạm Chiêm Nghiệm Cuộc Đời: Soi Chiếu Sai Lầm & Kế Thừa Trí Tuệ"]
-    J --> K["Nút Bấm: Về Lại Cầu Nại Hà (Bắt Đầu Lần Đầu Thai Thứ N)"]
+    J --> K["Nút Bấm: Bắt Đầu Vòng Đời Mới (Lần Chơi Thứ N)"]
     J --> L["Xuất Biên Niên Sử Vòng Đời & Chia Sẻ Mạng Xã Hội"]
     K --> B
 ```
@@ -684,12 +684,12 @@ graph TD
 
 | Bước | Tên Giai Đoạn | Trải Nghiệm Người Dùng (UX) | Hạ Tầng / Cơ Chế Kỹ Thuật | Nền Tảng |
 | :---: | :--- | :--- | :--- | :---: |
-| **1** | Cầu Nại Hà, Chén Canh Mạnh Bà & Ước Mơ Tái Sinh (Prologue & Reborn) | Trải qua 4 cảnh điện ảnh: Bước qua Cầu Nại Hà đêm chàm tím (nhãn "Bạn"), ghé Quán Canh Mạnh Bà nhận chén canh xanh ngọc, uống canh và chọn 1 trong 4 Ước Mơ Tiền Kiếp; mở mắt trong hình hài em bé với thị giác nhòe mờ chuyển rõ và bấm "Cất tiếng khóc chào đời" để mở Thẻ Giấy Khai Sinh. | Three.js Canvas, shader làm mờ Depth-of-Field nhãn quan sơ sinh, Web Audio API kích hoạt âm thanh tiếng khóc và quạt trần, engine sinh thẻ khai sinh Client-side. | Web |
+| **1** | Khởi Tạo Nhân Vật & Thiết Lập Mục Tiêu (Prologue & Reborn) | Trải qua 4 cảnh điện ảnh: Khởi tạo nhân vật (nhãn "Bạn"), xác nhận 1 trong 4 Mục Tiêu Tài Chính Khởi Đầu; mở mắt trong hình hài em bé với thị giác nhòe mờ chuyển rõ và bấm "Cất tiếng khóc chào đời" để mở Thẻ Giấy Khai Sinh. | Three.js Canvas, shader làm mờ Depth-of-Field nhãn quan sơ sinh, Web Audio API kích hoạt âm thanh tiếng khóc và quạt trần, engine sinh thẻ khai sinh Client-side. | Web |
 | **2** | Vòng Lặp Ra Quyết Định (Life Run: Kho 24 Mốc Đa Nhánh) | Chơi qua chuỗi quyết định chọn lọc từ kho 24 kịch bản tùy biến theo xuất thân và trục vận mệnh: Học vấn, bẫy việc làm sinh viên, chi phí hẹn hò, mua xe, kết hôn, bão sa thải, hụi đất nền, mua nhà, học phí trường tư của con, xung đột hôn nhân, khởi nghiệp, bảo hiểm, phụng dưỡng cha mẹ già bại liệt, lừa đảo công nghệ cao, sang tên sổ đỏ. Chi phí sinh hoạt và các hóa đơn leo thang tự nhiên phản ánh lạm phát thực tế. | Hàm `finances()` tính dư nợ giảm dần, State Management trong trình duyệt, hàng đợi sự kiện `S.queue`. | Web |
-| **3** | Xử Lý Biến Cố & Ngắt Hàng Đợi Tử Vong Sớm | Đối mặt bão giá, bệnh tật, bảo lãnh tín dụng. Nếu nợ nần kiệt quệ dẫn đến Sức khỏe rơi về 0, hệ thống kích hoạt tử vong sớm và ngắt toàn bộ các mốc tuổi còn lại. | Thuật toán ngắt hàng đợi `triggerEarlyDeath()`, tự động chuyển trạng thái sang Giấy Chứng Nhận Tạ Thế Sớm. | Web |
-| **4** | Giấy Chứng Nhận Cuộc Đời (Đóng Dấu "ĐÃ GIỮ LỜI" / "CHƯA TRỌN") | Xuất thẻ Certificate theo 2 biến thể: Sống thọ (tông sáng trang nhã) hoặc Tạ thế sớm (tông trầm slate); kiểm tra khế ước tiền kiếp và đóng con dấu tròn mực đỏ: **"ĐÃ GIỮ LỜI"** (nếu đạt chuẩn) hoặc **"CHƯA TRỌN"** (nếu thất hứa). | HTML5 Canvas to Image Export, logic kiểm tra điều kiện `karmicVow.isFulfilled`, tích hợp OpenGraph meta tags động theo từng biến thể. | Web |
+| **3** | Xử Lý Biến Cố & Ngắt Hàng Đợi Tử Vong Sớm | Đối mặt bão giá, bệnh tật, bảo lãnh tín dụng. Nếu nợ nần kiệt quệ dẫn đến Sức khỏe rơi về 0, hệ thống kích hoạt tử vong sớm và ngắt toàn bộ các mốc tuổi còn lại. | Thuật toán ngắt hàng đợi `triggerEarlyDeath()`, tự động chuyển trạng thái sang Giấy Chứng Nhận Kết Thúc Sớm. | Web |
+| **4** | Giấy Chứng Nhận Cuộc Đời (Đóng Dấu "ĐÃ GIỮ LỜI" / "CHƯA TRỌN") | Xuất thẻ Certificate theo 2 biến thể: Sống thọ (tông sáng trang nhã) hoặc Kết thúc sớm (tông trầm slate); kiểm tra mục tiêu tài chính ban đầu và đóng con dấu tròn mực đỏ: **"ĐÃ GIỮ LỜI"** (nếu đạt chuẩn) hoặc **"CHƯA TRỌN"** (nếu thất hứa). | HTML5 Canvas to Image Export, logic kiểm tra điều kiện `karmicVow.isFulfilled`, tích hợp OpenGraph meta tags động theo từng biến thể. | Web |
 | **5** | Tải Thẻ Kết Quả & Lan Tỏa Xã Hội (Social Share) | Tải thẻ kết quả có con dấu ước mơ hoặc xuất ảnh Phả Hệ Vòng Đời về máy, nhấp nút chia sẻ trực tiếp lên Facebook, Threads, Zalo để so sánh thành tích và số phận với bạn bè. | Web Share API tích hợp sẵn trên trình duyệt, fallback sang copy link kèm ảnh preview. | Web |
-| **6** | Về Lại Cầu Nại Hà & Vòng Lặp Tái Sinh (The Return Loop) | Nút bấm chính đổi thành **"Về lại cầu Nại Hà"**. Khi bấm, màn hình chuyển sang sương mờ chàm tím, đưa người chơi về Cảnh 1 với nhãn **"Lần đầu thai thứ [N]"**, linh hồn gắn nhãn **"Bạn"** và nút **"Bước lên phía trước"** để bắt đầu vòng đời mới. | Lưu trữ `multi_life_chronicle` trong `localStorage`, lưu phiên hiện tại trong `sessionStorage`, thực thi hàm `reincarnate()` reset RAM state dưới 50ms và tăng biến đếm `pastLivesCount + 1`. | Web |
+| **6** | Bắt Đầu Vòng Chơi Mới (The Replay Loop) | Nút bấm chính đổi thành **"Bắt đầu vòng đời mới"**. Khi bấm, màn hình chuyển sang sương mờ chàm tím, đưa người chơi về màn hình khởi đầu với nhãn **"Lần chơi thứ [N]"**, nhãn **"Bạn"** và nút **"Bắt đầu hành trình"** để thử nghiệm chiến lược mới. | Lưu trữ `multi_life_chronicle` trong `localStorage`, lưu phiên hiện tại trong `sessionStorage`, thực thi hàm `reincarnate()` reset RAM state dưới 50ms và tăng biến đếm `pastLivesCount + 1`. | Web |
 
 ---
 
@@ -728,7 +728,7 @@ Dù được thiết kế như một trải nghiệm thuần Web độc lập (S
    - Cơ chế xuất thẻ hình ảnh và Biên Niên Sử phả hệ tạo ra vòng lặp lan truyền tự nhiên (Viral Social Loop) trên Facebook, Threads và Zalo, kéo nguồn truy cập chất lượng cao trực tiếp về domain `momo.vn` mà không phụ thuộc vào chi phí quảng cáo trả phí (Paid Ads).
 
 2. **Kéo Dài Thời Gian Lưu Trang & Giữ Chân Người Dùng (Engagement & D1/D7 Retention):**
-   - Cơ chế kế thừa trí tuệ qua nhiều vòng đời biến một phiên chơi đơn lẻ 2–3 phút thành chuỗi trải nghiệm 10–15 phút. Người chơi có động lực quay lại nhiều lần để mở khóa đủ 6 Bài Học Kế Thừa và chinh phục Điểm Giác Ngộ Tài Chính cao nhất.
+   - Cơ chế kế thừa trí tuệ qua nhiều vòng đời biến một phiên chơi đơn lẻ 2-3 phút thành chuỗi trải nghiệm 10-15 phút. Người chơi có động lực quay lại nhiều lần để mở khóa đủ 6 Bài Học Kế Thừa và chinh phục Điểm Giác Ngộ Tài Chính cao nhất.
 
 3. **Cầu Nối Dẫn Dòng Tự Nhiên Sang Financial Hub (Contextual Bridge):**
    - Tại màn hình Trạm Chiêm Nghiệm, khi hệ thống phân tích "Vết thương dòng tiền lớn nhất", giao diện khéo léo hiển thị thẻ gợi ý công cụ tiện ích tương ứng thuộc **Financial Hub (`/tai-chinh/`)**:
@@ -750,7 +750,7 @@ Dù được thiết kế như một trải nghiệm thuần Web độc lập (S
 
 | Giai Đoạn | Thời Gian | Tên Giai Đoạn | Chi Tiết Triển Khai & Mục Tiêu |
 | :---: | :---: | :--- | :--- |
-| **Phase 1** | Tuần 1 – Tuần 2 | Data Modeling & Vietnamese Adaptation | Đóng gói bộ dữ liệu nhân khẩu học 141 nước và dữ liệu 63 tỉnh thành Việt Nam. Hoàn thiện bộ text Việt hóa cho 50 kịch bản quyết định cốt lõi. |
-| **Phase 2** | Tuần 3 – Tuần 4 | Interactive Engine & 3D Prototyping | Dựng nguyên mẫu WebGL/Three.js nhẹ (dung lượng < 1.2MB). Tích hợp logic tính lạm phát, thu nhập, lãi suất và kiểm thử FPS trên các dòng điện thoại phổ thông. |
+| **Phase 1** | Tuần 1 - Tuần 2 | Data Modeling & Vietnamese Adaptation | Đóng gói bộ dữ liệu nhân khẩu học 141 nước và dữ liệu 63 tỉnh thành Việt Nam. Hoàn thiện bộ text Việt hóa cho 50 kịch bản quyết định cốt lõi. |
+| **Phase 2** | Tuần 3 - Tuần 4 | Interactive Engine & 3D Prototyping | Dựng nguyên mẫu WebGL/Three.js nhẹ (dung lượng < 1.2MB). Tích hợp logic tính lạm phát, thu nhập, lãi suất và kiểm thử FPS trên các dòng điện thoại phổ thông. |
 | **Phase 3** | Tuần 5 | Social Share Engine & Canvas Optimization | Tích hợp Web Share API, tối ưu Canvas Image Generator xuất thẻ Certificate sắc nét cho mạng xã hội (Facebook, Threads, Zalo) và hoàn thiện bộ đếm vòng lặp chơi lại. |
 | **Phase 4** | Tuần 6 | Pilot, A/B Testing & Official Go-Live | Phát hành chính thức trên chuyên mục Game / Game Hub (`momo.vn/game/mot-doi-nguoi`), đo lường tỷ lệ hoàn thành lượt chơi, thời gian lưu trang và tỷ lệ chia sẻ mạng xã hội trước khi đẩy mạnh truyền thông. |

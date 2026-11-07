@@ -63,7 +63,7 @@ graph TD
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Điều Hướng Báo Giá 9 Hãng</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bấm nút CTA 'Xem báo giá 9 hãng', trang cuộn tới section #bao-gia.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhấp vào nút CTA 'Xem báo giá 9 hãng', trang cuộn tới section #bao-gia.</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Smooth Scroll `#bao-gia` + Bắn Event GA4 `cta_click`</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Platform</td>
     </tr>

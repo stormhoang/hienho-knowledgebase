@@ -27,7 +27,7 @@ Website `momo.vn` sở hữu lượng truy cập tự nhiên (Organic Traffic) k
 
 **Các vấn đề chính:**
 *   **Thiếu tính cá nhân hóa & Gắn kết (No Stickiness):** Mỗi lần người dùng vào web tra cứu phạt nguội, họ phải gõ lại biển số từ đầu. Merchant muốn xem tình trạng Soundbox phải đăng nhập App nặng nề, sinh viên muốn lấy code đặc quyền phải lặp lại các bước xác thực phức tạp.
-*   **Đứt gãy phễu chuyển đổi Web-to-App (W2A):** Người dùng nhập biển số ô tô trên Web, nhưng khi bấm nút "Nộp phạt qua MoMo" để mở App, dữ liệu biển số không được mang theo hoặc không khớp với tài khoản MoMo, bắt buộc người dùng nhập lại từ đầu trong App.
+*   **Đứt gãy phễu chuyển đổi Web-to-App (W2A):** Người dùng nhập biển số ô tô trên Web, nhưng khi nhấp chọn "Nộp phạt qua MoMo" để mở App, dữ liệu biển số không được mang theo hoặc không khớp với tài khoản MoMo, bắt buộc người dùng nhập lại từ đầu trong App.
 *   **Bỏ lỡ cơ hội tiếp cận chủ động (Proactive Engagement):** MoMo không thể chủ động gửi thông tin cập nhật (như có lỗi phạt nguội mới, loa bị ngắt kết nối, mã sinh viên hết hạn) trực tiếp lên trình duyệt hoặc kích hoạt thông báo ứng dụng do thiếu cơ chế mapping định danh web.
 
 ### 2. Mục tiêu dự án & Chỉ số đo lường (KPIs)

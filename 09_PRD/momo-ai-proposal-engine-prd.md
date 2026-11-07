@@ -138,7 +138,7 @@ $$\text{Output Data} \longrightarrow \text{Condition Evaluator} \longrightarrow 
       </td>
       <td style="border:1px solid #94a3b8; padding:6px;">
         - <em>Var 1:</em> "Nhìn lương Gross thì oai phong, nhìn thuế TNCN trừ tận {tax}đ thì muốn trầm cảm. Đóng thuế bằng cả tháng lương người ta thế này thì phải bắt tiền làm việc bù lại gấp!"<br/>
-        - <em>Var 2:</em> "Chào người hùng gánh còng lưng ngân sách! Để xoa dịu nỗi đau mất {tax}đ, mở ngay sổ tiết kiệm Bản Việt để lấy lại tiền lãi mỗi tháng nào."
+        - <em>Var 2:</em> "Chào người hùng gánh còng lưng ngân sách! Để bù đắp áp lực mất {tax}đ, mở ngay sổ tiết kiệm Bản Việt để lấy lại tiền lãi mỗi tháng nào."
       </td>
       <td style="border:1px solid #94a3b8; padding:6px;">
         <strong>Gửi Tiết Kiệm Bù Thuế (+0.2%)</strong><br/>
@@ -431,7 +431,7 @@ $$\text{Output Data} \longrightarrow \text{Condition Evaluator} \longrightarrow 
 MoMo AI được thiết kế theo kiến trúc **Mô-đun cắm rút dùng chung (Plug-and-Play Universal Engine)** cho **bất kỳ tiện ích tính toán nào (Utility Tool) thuộc mọi Hub**:
 - Mỗi Utility Tool khi được phát triển mới chỉ cần cung cấp:
   1. `toolId`: Định danh tiện ích (ví dụ: `vehicle-fine`, `vehicle-gas`, `finance-salary`, `insurtech-quote`...).
-  2. `hub`: Phân khối (`FINANCIAL`, `VEHICLE`, `INSURTECH`, `OTA`, `OTHER`).
+  2. `hub`: Khối nghiệp vụ (`FINANCIAL`, `VEHICLE`, `INSURTECH`, `OTA`, `OTHER`).
   3. `metrics`: Dữ liệu số liệu đầu ra của phép tính.
 - **Tự động thừa hưởng 2 tầng AI:**
   - *Tầng 1:* Chạy qua hàm đánh giá điều kiện nội bộ để xuất ngay nhận định dí dỏm + CTA deep link thích hợp (< 10ms).
@@ -504,7 +504,7 @@ export const getSalaryAiProposal = (params: SalaryParams, seed: number = 0): Pro
     if (mode === 'ROAST') {
       const quotes = [
         `Nhìn lương Gross thì oai phong, nhìn thuế TNCN trừ tận ${taxStr}đ thì muốn trầm cảm. Đóng thuế bạc triệu thế này thì phải bắt tiền làm việc bù lại gấp!`,
-        `Chào người hùng gánh còng lưng ngân sách! Để xoa dịu nỗi đau mất ${taxStr}đ, mở ngay sổ tiết kiệm Bản Việt để lấy lại tiền lãi mỗi tháng nào.`
+        `Chào người hùng gánh còng lưng ngân sách! Để bù đắp áp lực mất ${taxStr}đ, mở ngay sổ tiết kiệm Bản Việt để lấy lại tiền lãi mỗi tháng nào.`
       ];
       return {
         tag: "MOMO AI CÀ KHỊA",
@@ -780,7 +780,7 @@ Tuyệt đối không bịa số liệu, bám sát các chỉ số đầu vào v
       <td style="border:1px solid #94a3b8; padding:6px;"><code>{ tool: string, mode: 'GENTLE'|'ROAST', logic_tier: string }</code></td>
     </tr>
     <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:6px;">Bấm nút Lắc quẻ / Lời khuyên khác</td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Nhấp nút Lắc quẻ / Lời khuyên khác</td>
       <td style="border:1px solid #94a3b8; padding:6px;"><code>ai_proposal_reroll</code></td>
       <td style="border:1px solid #94a3b8; padding:6px;"><code>{ tool: string, seed: number }</code></td>
     </tr>
@@ -790,7 +790,7 @@ Tuyệt đối không bịa số liệu, bám sát các chỉ số đầu vào v
       <td style="border:1px solid #94a3b8; padding:6px;"><code>{ tool: string, next_mode: 'GENTLE'|'ROAST' }</code></td>
     </tr>
     <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:6px;">Bấm nút CTA điều hướng vào App</td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Nhấp nút CTA điều hướng vào App</td>
       <td style="border:1px solid #94a3b8; padding:6px;"><code>ai_proposal_click_cta</code></td>
       <td style="border:1px solid #94a3b8; padding:6px;"><code>{ tool: string, cta_text: string, deeplink: string }</code></td>
     </tr>

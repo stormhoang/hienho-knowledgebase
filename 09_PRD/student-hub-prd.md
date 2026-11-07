@@ -30,7 +30,7 @@
 * **Ma trận Nội dung theo Search Volume (Google Trends VN 12 tháng):** Sắp xếp ưu tiên hiển thị nội dung theo nhu cầu tìm kiếm thực tế của sinh viên (Điểm chuẩn, Học phí, Xe buýt, Việc làm sinh viên).
 
 ### 2.2 Trụ Cột 2: Phát Triển Hệ Sinh Thái Tiện Ích (Utility Tools Ecosystem)
-Tích hợp các công cụ giải quyết trực tiếp "nỗi đau" hàng ngày của sinh viên:
+Tích hợp các công cụ giải quyết trực tiếp rào cản và khó khăn hàng ngày của sinh viên:
 1. **Công cụ Tài chính Cá nhân (Tuition & Budget Calculator):**
    * *Utility Tính Học Phí Theo Tín Chỉ:* Công cụ giả lập tính tổng tiền học phí theo số lượng tín chỉ sinh viên chọn (12 - 30 tín chỉ), cơ cấu chi tiết học phí và kích hoạt CTA *"Nộp học phí ngay"* dẫn qua OneLink sang phễu thanh toán In-App.
    * *Công cụ Quản lý Ngân sách / Thu nhập:* Giúp sinh viên tính toán tiền sinh hoạt hàng tháng, điều hướng mở **Túi Thần Tài** (tích lũy sinh lời) hoặc **Ví Trả Sau 0%** (chi tiêu thiết bị học tập).
@@ -40,7 +40,7 @@ Tích hợp các công cụ giải quyết trực tiếp "nỗi đau" hàng ngà
    * Tích hợp API Tuyến xe buýt (Google Transit API & dữ liệu GTFS miễn phí từ Sở GTVT).
 3. **Cổng Việc Làm & Thực Tập (Jobs & Internship Gateway):**
    * Kết nối sinh viên tìm việc làm part-time / thực tập (hiển thị mức lương, địa điểm, đánh giá, CTA Ứng tuyển).
-   * Xử lý "nỗi đau" thiếu hụt nhân sự của các chuỗi nhà hàng, F&B, siêu thị đối tác thương mại của MoMo.
+   * Giải quyết bài toán thiếu hụt nhân sự của các chuỗi nhà hàng, F&B, siêu thị đối tác thương mại của MoMo.
 4. **Hệ thống Đánh giá UGC & Sự kiện (Review & Event Meetup Module):**
    * Đồng bộ API luồng đánh giá trường học 5 sao đa tiêu chí từ trong App ra ngoài Web.
    * Tính năng xem & đăng ký tham gia Webinar, AI talk, Workshop kỹ năng sinh viên (mô hình Meetup).
@@ -226,7 +226,7 @@ Lưới 6 icon điều hướng 1-touch truy cập nhanh các dịch vụ trọn
 * **Vai Trò Phân Phối Của Kênh Web (`momo.vn/sinh-vien/[ten-truong]`):**
   * **Cổng hiển thị công khai (Public Distribution Gateway):** Tiếp nhận dữ liệu review đã được xác thực từ Student Pass App, hiển thị công khai trên Web không cần đăng nhập nhằm đón lượng truy cập tìm kiếm tự nhiên từ Google Search và AI Search (GEO).
   * **Tối ưu SEO/GEO Schema Markup:** Khai báo cấu trúc dữ liệu chuẩn `AggregateRating` và `Review` theo Google Rich Snippets để hiển thị trực tiếp số sao trung bình, số lượng đánh giá trên trang kết quả tìm kiếm Google cho từ khóa `review trường [tên trường]`.
-  * **Đòn bẩy lòng tin (Verified Student Trust Layer):** Hiển thị rõ nhãn "Sinh viên đã xác thực" (Verified Student Badge) kèm logo trường trên từng bài review để khẳng định tính khách quan, khác biệt hoàn toàn với các diễn đàn review không xác thực hiện nay.
+  * **Cơ chế bảo chứng uy tín (Verified Student Trust Layer):** Hiển thị rõ nhãn "Sinh viên đã xác thực" (Verified Student Badge) kèm logo trường trên từng bài review để khẳng định tính khách quan, khác biệt hoàn toàn với các diễn đàn review không xác thực hiện nay.
 
 * **cơ cấu 5 Tiêu Chí Đánh Giá Cốt Lõi (Multi-Criteria Rating):**
   1. Khuôn viên & Cảnh quan trường (Campus Environment)

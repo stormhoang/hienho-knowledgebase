@@ -227,6 +227,46 @@ RULES = [
         "replacement": "lợi thế phòng thủ dữ liệu, rào cản cạnh tranh, hoặc Data Moat",
         "auto_fix": "lợi thế phòng thủ dữ liệu",
     },
+    {
+        "id": "NOI_DAU",
+        "pattern": r"(?i)\bnỗi\s+đau(\s+(của\s+)?(người\s+dùng|khách\s+hàng|sinh\s+viên|lớn\s+nhất))?\b",
+        "flags": 0,
+        "desc": "Dịch thô từ pain points, sến súa và thiếu tính kỹ thuật",
+        "replacement": "rào cản thao tác, điểm nghẽn trải nghiệm, hoặc khó khăn của người dùng",
+        "auto_fix": "rào cản người dùng",
+    },
+    {
+        "id": "CHI_TIEU_TRA_THU",
+        "pattern": r"(?i)\bchi\s+tiêu\s+trả\s+thù\b",
+        "flags": 0,
+        "desc": "Dịch thô từ Revenge Spending",
+        "replacement": "chi tiêu bù đắp quá độ, hoặc mua sắm giải tỏa tâm lý",
+        "auto_fix": "chi tiêu bù đắp quá độ",
+    },
+    {
+        "id": "MUC_TIEU_TOI_THUONG",
+        "pattern": r"(?i)\bmục\s+tiêu\s+tối\s+thượng\b",
+        "flags": 0,
+        "desc": "Văn phong triết lý, thổi phồng",
+        "replacement": "mục tiêu kinh doanh cốt lõi (Primary Business Objective)",
+        "auto_fix": "mục tiêu cốt lõi",
+    },
+    {
+        "id": "BAY_KIET_SUC",
+        "pattern": r"(?i)\bbẫy\s+kiệt\s+sức\b",
+        "flags": 0,
+        "desc": "Dịch thô từ Burnout trap",
+        "replacement": "ngưỡng áp lực tài chính, hoặc kiệt quệ tâm lý do tiết kiệm quá mức",
+        "auto_fix": "ngưỡng áp lực tài chính",
+    },
+    {
+        "id": "TA_THE",
+        "pattern": r"(?i)\btạ\s+thế(\s+sớm)?\b",
+        "flags": 0,
+        "desc": "Văn phong cáo phó cổ trang phong kiến",
+        "replacement": "kịch bản kết thúc sớm, hoặc mô phỏng rủi ro đột ngột",
+        "auto_fix": "kịch bản kết thúc sớm",
+    },
 ]
 
 class VocabularyGuard:
