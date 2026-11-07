@@ -14,7 +14,7 @@
 
 ## I. TÀI LIỆU LIÊN QUAN (References)
 *   **Kiến trúc định danh cơ sở (MoSpark):** [mospark_user_identity_tracking.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/04_MOSPARK_PLATFORM/mospark_user_identity_tracking.md)
-*   **Tài liệu nghiệp vụ Vehicle Hub:** [vehicle-hub-brd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS/vehicle-hub-brd.md) | [vehicle-hub-prd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/09_PRD/vehicle-hub-prd.md)
+*   **Tài liệu nghiệp vụ Vehicle Hub:** [vehicle-hub-brd.md](../05_HUBS/vehicle/vehicle-hub-brd.md) | [vehicle-hub-prd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/09_PRD/vehicle-hub-prd.md)
 *   **Tài liệu nghiệp vụ Soundbox:** [soundbox-brd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/06_USE_CASE_MOMO/soundbox-brd.md)
 *   **Tài liệu định hướng U18 & Student Pass:** [user-growth-u18-brd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/06_USE_CASE_MOMO/user-growth-u18-brd.md)
 

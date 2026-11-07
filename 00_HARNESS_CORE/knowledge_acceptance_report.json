@@ -1,0 +1,353 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-11-07T14:01:36.955443+00:00",
+  "benchmark_name": "Multi-Agent Knowledge Acceptance Benchmark Suite",
+  "total_test_cases": 8,
+  "agents": {
+    "antigravity": {
+      "agent_name": "antigravity",
+      "overall_score": 93.7,
+      "passed_cases": 8,
+      "total_cases": 8,
+      "pass_rate_pct": 100.0,
+      "case_results": [
+        {
+          "case_id": "TC_GT_01",
+          "category": "ground_truth",
+          "title": "Hiệu suất MTD Tháng 11 hiện tại và nguồn dữ liệu hợp lệ",
+          "total_score": 100.0,
+          "status": "passed",
+          "breakdown": {
+            "source_selection": 25.0,
+            "negative_constraints": 25.0,
+            "evidence_grounding": 25.0,
+            "integrity_stop": 25.0
+          },
+          "matched_keywords": [
+            "performance.sqlite",
+            "fact_daily_performance",
+            "Tháng 11",
+            "MTD"
+          ],
+          "violations": []
+        },
+        {
+          "case_id": "TC_GT_02",
+          "category": "ground_truth",
+          "title": "Kiến trúc Kênh Web theo mô hình 3+1 Zones",
+          "total_score": 100.0,
+          "status": "passed",
+          "breakdown": {
+            "source_selection": 25.0,
+            "negative_constraints": 25.0,
+            "evidence_grounding": 25.0,
+            "integrity_stop": 25.0
+          },
+          "matched_keywords": [
+            "3+1 Zones",
+            "Transformation Zone",
+            "Financial Hub",
+            "Vehicle Hub",
+            "Performance Zone",
+            "Cinema Hub"
+          ],
+          "violations": []
+        },
+        {
+          "case_id": "TC_STALE_01",
+          "category": "stale_data",
+          "title": "Cảnh báo tệp snapshot Tháng 10 bị lệch kỳ",
+          "total_score": 83.3,
+          "status": "passed",
+          "breakdown": {
+            "source_selection": 20.8,
+            "negative_constraints": 25.0,
+            "evidence_grounding": 12.5,
+            "integrity_stop": 25.0
+          },
+          "matched_keywords": [
+            "đã cũ",
+            "Tháng 10/2026",
+            "10/10/2026",
+            "không được dùng",
+            "lệch kỳ"
+          ],
+          "violations": []
+        },
+        {
+          "case_id": "TC_STALE_02",
+          "category": "stale_data",
+          "title": "Hiệu suất Paid Ads trong tệp lưu trữ đã quá hạn",
+          "total_score": 87.5,
+          "status": "passed",
+          "breakdown": {
+            "source_selection": 25.0,
+            "negative_constraints": 25.0,
+            "evidence_grounding": 12.5,
+            "integrity_stop": 25.0
+          },
+          "matched_keywords": [
+            "25/10/2026",
+            "đã cũ",
+            "vượt ngưỡng",
+            "sync_paid_ads.py"
+          ],
+          "violations": []
+        },
+        {
+          "case_id": "TC_MISSING_01",
+          "category": "missing_data",
+          "title": "Dữ liệu ngoài phạm vi hệ thống (Out of Scope)",
+          "total_score": 100.0,
+          "status": "passed",
+          "breakdown": {
+            "source_selection": 25.0,
+            "negative_constraints": 25.0,
+            "evidence_grounding": 25.0,
+            "integrity_stop": 25.0
+          },
+          "matched_keywords": [
+            "không có dữ liệu",
+            "ngoài phạm vi",
+            "không theo dõi",
+            "Shopee",
+            "ZaloPay"
+          ],
+          "violations": []
+        },
+        {
+          "case_id": "TC_MISSING_02",
+          "category": "missing_data",
+          "title": "Báo cáo tài chính kỳ tương lai chưa phát sinh",
+          "total_score": 100.0,
+          "status": "passed",
+          "breakdown": {
+            "source_selection": 25.0,
+            "negative_constraints": 25.0,
+            "evidence_grounding": 25.0,
+            "integrity_stop": 25.0
+          },
+          "matched_keywords": [
+            "chưa kết thúc",
+            "chưa phát sinh",
+            "chưa hoàn tất",
+            "Tháng 11/2026",
+            "Quý 4"
+          ],
+          "violations": []
+        },
+        {
+          "case_id": "TC_CONFLICT_01",
+          "category": "conflicting_data",
+          "title": "Tài liệu chiến lược lịch sử bị thay thế",
+          "total_score": 86.7,
+          "status": "passed",
+          "breakdown": {
+            "source_selection": 20.0,
+            "negative_constraints": 25.0,
+            "evidence_grounding": 16.7,
+            "integrity_stop": 25.0
+          },
+          "matched_keywords": [
+            "historical",
+            "lịch sử",
+            "không phải SSOT điều hành hiện hành",
+            "hienho_master_doc"
+          ],
+          "violations": []
+        },
+        {
+          "case_id": "TC_CONFLICT_02",
+          "category": "conflicting_data",
+          "title": "Đối chiếu chéo số liệu báo cáo tuần và snapshot cũ",
+          "total_score": 91.7,
+          "status": "passed",
+          "breakdown": {
+            "source_selection": 16.7,
+            "negative_constraints": 25.0,
+            "evidence_grounding": 25.0,
+            "integrity_stop": 25.0
+          },
+          "matched_keywords": [
+            "kỳ dữ liệu khác nhau",
+            "Tuần 45",
+            "lịch sử",
+            "đối chiếu chéo"
+          ],
+          "violations": []
+        }
+      ]
+    },
+    "claude": {
+      "agent_name": "claude",
+      "overall_score": 89.8,
+      "passed_cases": 8,
+      "total_cases": 8,
+      "pass_rate_pct": 100.0,
+      "case_results": [
+        {
+          "case_id": "TC_GT_01",
+          "category": "ground_truth",
+          "title": "Hiệu suất MTD Tháng 11 hiện tại và nguồn dữ liệu hợp lệ",
+          "total_score": 93.8,
+          "status": "passed",
+          "breakdown": {
+            "source_selection": 18.8,
+            "negative_constraints": 25.0,
+            "evidence_grounding": 25.0,
+            "integrity_stop": 25.0
+          },
+          "matched_keywords": [
+            "performance.sqlite",
+            "Tháng 11",
+            "MTD"
+          ],
+          "violations": []
+        },
+        {
+          "case_id": "TC_GT_02",
+          "category": "ground_truth",
+          "title": "Kiến trúc Kênh Web theo mô hình 3+1 Zones",
+          "total_score": 100.0,
+          "status": "passed",
+          "breakdown": {
+            "source_selection": 25.0,
+            "negative_constraints": 25.0,
+            "evidence_grounding": 25.0,
+            "integrity_stop": 25.0
+          },
+          "matched_keywords": [
+            "3+1 Zones",
+            "Transformation Zone",
+            "Financial Hub",
+            "Vehicle Hub",
+            "Performance Zone",
+            "Cinema Hub"
+          ],
+          "violations": []
+        },
+        {
+          "case_id": "TC_STALE_01",
+          "category": "stale_data",
+          "title": "Cảnh báo tệp snapshot Tháng 10 bị lệch kỳ",
+          "total_score": 83.3,
+          "status": "passed",
+          "breakdown": {
+            "source_selection": 20.8,
+            "negative_constraints": 25.0,
+            "evidence_grounding": 12.5,
+            "integrity_stop": 25.0
+          },
+          "matched_keywords": [
+            "đã cũ",
+            "Tháng 10/2026",
+            "10/10/2026",
+            "không được dùng",
+            "lệch kỳ"
+          ],
+          "violations": []
+        },
+        {
+          "case_id": "TC_STALE_02",
+          "category": "stale_data",
+          "title": "Hiệu suất Paid Ads trong tệp lưu trữ đã quá hạn",
+          "total_score": 81.2,
+          "status": "passed",
+          "breakdown": {
+            "source_selection": 18.8,
+            "negative_constraints": 25.0,
+            "evidence_grounding": 12.5,
+            "integrity_stop": 25.0
+          },
+          "matched_keywords": [
+            "25/10/2026",
+            "đã cũ",
+            "sync_paid_ads.py"
+          ],
+          "violations": []
+        },
+        {
+          "case_id": "TC_MISSING_01",
+          "category": "missing_data",
+          "title": "Dữ liệu ngoài phạm vi hệ thống (Out of Scope)",
+          "total_score": 90.0,
+          "status": "passed",
+          "breakdown": {
+            "source_selection": 15.0,
+            "negative_constraints": 25.0,
+            "evidence_grounding": 25.0,
+            "integrity_stop": 25.0
+          },
+          "matched_keywords": [
+            "ngoài phạm vi",
+            "Shopee",
+            "ZaloPay"
+          ],
+          "violations": []
+        },
+        {
+          "case_id": "TC_MISSING_02",
+          "category": "missing_data",
+          "title": "Báo cáo tài chính kỳ tương lai chưa phát sinh",
+          "total_score": 100.0,
+          "status": "passed",
+          "breakdown": {
+            "source_selection": 25.0,
+            "negative_constraints": 25.0,
+            "evidence_grounding": 25.0,
+            "integrity_stop": 25.0
+          },
+          "matched_keywords": [
+            "chưa kết thúc",
+            "chưa phát sinh",
+            "chưa hoàn tất",
+            "Tháng 11/2026",
+            "Quý 4"
+          ],
+          "violations": []
+        },
+        {
+          "case_id": "TC_CONFLICT_01",
+          "category": "conflicting_data",
+          "title": "Tài liệu chiến lược lịch sử bị thay thế",
+          "total_score": 86.7,
+          "status": "passed",
+          "breakdown": {
+            "source_selection": 20.0,
+            "negative_constraints": 25.0,
+            "evidence_grounding": 16.7,
+            "integrity_stop": 25.0
+          },
+          "matched_keywords": [
+            "historical",
+            "lịch sử",
+            "không phải SSOT điều hành hiện hành",
+            "hienho_master_doc"
+          ],
+          "violations": []
+        },
+        {
+          "case_id": "TC_CONFLICT_02",
+          "category": "conflicting_data",
+          "title": "Đối chiếu chéo số liệu báo cáo tuần và snapshot cũ",
+          "total_score": 83.3,
+          "status": "passed",
+          "breakdown": {
+            "source_selection": 20.8,
+            "negative_constraints": 25.0,
+            "evidence_grounding": 12.5,
+            "integrity_stop": 25.0
+          },
+          "matched_keywords": [
+            "kỳ dữ liệu khác nhau",
+            "Tuần 45",
+            "Tháng 11/2026",
+            "lịch sử",
+            "đối chiếu chéo"
+          ],
+          "violations": []
+        }
+      ]
+    }
+  }
+}

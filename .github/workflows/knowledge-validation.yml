@@ -1,0 +1,69 @@
+name: Validate Knowledge Registry
+
+on:
+  pull_request:
+    paths:
+      - '00_HARNESS_CORE/**'
+      - 'scripts/validate_knowledge_registry.py'
+      - 'scripts/inventory_knowledge_base.py'
+      - 'scripts/detect_knowledge_conflicts.py'
+      - 'scripts/triage_knowledge_conflicts.py'
+      - 'scripts/check_knowledge_freshness.py'
+      - 'scripts/generate_knowledge_provenance.py'
+      - 'scripts/evaluate_agent_acceptance.py'
+      - 'scripts/export_agent_context.py'
+      - 'scripts/tests/test_knowledge_paths.py'
+      - 'scripts/tests/test_knowledge_freshness.py'
+      - 'scripts/tests/test_knowledge_provenance.py'
+      - 'scripts/tests/test_knowledge_acceptance.py'
+  push:
+    branches: [main]
+    paths:
+      - '00_HARNESS_CORE/**'
+      - 'scripts/validate_knowledge_registry.py'
+      - 'scripts/inventory_knowledge_base.py'
+      - 'scripts/detect_knowledge_conflicts.py'
+      - 'scripts/triage_knowledge_conflicts.py'
+      - 'scripts/check_knowledge_freshness.py'
+      - 'scripts/generate_knowledge_provenance.py'
+      - 'scripts/evaluate_agent_acceptance.py'
+      - 'scripts/export_agent_context.py'
+      - 'scripts/tests/test_knowledge_paths.py'
+      - 'scripts/tests/test_knowledge_freshness.py'
+      - 'scripts/tests/test_knowledge_provenance.py'
+      - 'scripts/tests/test_knowledge_acceptance.py'
+  workflow_dispatch:
+
+jobs:
+  observe:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install registry dependency
+        run: |
+          python -m venv .venv
+          ./.venv/bin/python -m pip install pyyaml
+      - name: Validate registry
+        continue-on-error: true
+        run: ./.venv/bin/python scripts/validate_knowledge_registry.py
+      - name: Build inventory, conflict, triage, freshness and provenance reports
+        run: |
+          ./.venv/bin/python scripts/inventory_knowledge_base.py --json-out /tmp/knowledge_inventory.json --md-out /tmp/knowledge_inventory.md
+          ./.venv/bin/python scripts/detect_knowledge_conflicts.py --output /tmp/knowledge_conflicts.json --markdown-output /tmp/knowledge_conflicts.md
+          ./.venv/bin/python scripts/triage_knowledge_conflicts.py --input /tmp/knowledge_conflicts.json --json-output /tmp/knowledge_conflict_triage.json --yaml-output /tmp/knowledge_conflict_triage.yaml
+          ./.venv/bin/python scripts/check_knowledge_freshness.py --json-out /tmp/knowledge_freshness.json --md-out /tmp/knowledge_freshness.md
+          ./.venv/bin/python scripts/generate_knowledge_provenance.py --json-out /tmp/knowledge_provenance.json --md-out /tmp/knowledge_provenance.md
+          ./.venv/bin/python scripts/evaluate_agent_acceptance.py --json-out /tmp/knowledge_acceptance_report.json --md-out /tmp/knowledge_acceptance_report.md
+      - name: Verify provenance integrity
+        run: ./.venv/bin/python scripts/generate_knowledge_provenance.py --verify --json-out /tmp/knowledge_provenance.json
+      - name: Test path resolution, conflict triage, freshness, provenance and agent acceptance
+        run: ./.venv/bin/python -m unittest scripts.tests.test_knowledge_paths scripts.tests.test_knowledge_freshness scripts.tests.test_knowledge_provenance scripts.tests.test_knowledge_acceptance -v
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: knowledge-observe-reports
+          path: /tmp/knowledge_*

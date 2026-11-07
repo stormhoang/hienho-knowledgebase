@@ -529,8 +529,8 @@ flowchart TD
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">M</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Senior Manager \</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoSpark Owner</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoSpark Platform (All Projects)</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Quản lý toàn bộ SE Team và lộ trình phát triển MoSpark (CMS V2, Ads Manager, LDP Builder, Widget Store).</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoSpark Platform</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Quản lý toàn bộ SE Team và định hướng nền tảng MoSpark.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Đặng Hoài Anh</strong></td>
@@ -572,10 +572,10 @@ flowchart TD
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Lộc Lê</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Senior FE Developer \</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Dev Ops</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">DevOps Lead</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hạ tầng & DevOps</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiệu suất & Hạ tầng website, Access Control</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">DevOps: chịu trách nhiệm hiệu suất và hiệu năng website, hạ tầng, quản lý phân quyền (MoSpark Auth, CMS Access), xử lý các rủi ro kỹ thuật.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">DevOps Lead: chịu trách nhiệm toàn diện hiệu suất và hiệu năng website, hạ tầng, CI/CD, quản lý phân quyền (MoSpark Auth, CMS Access), xử lý các rủi ro kỹ thuật.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Hiếu Nguyễn</strong></td>
@@ -613,7 +613,7 @@ flowchart TD
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Hiến Hồ</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">T5/2026</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chịu trách nhiệm toàn bộ dự án trên kênh Web (không giới hạn theo từng Hub). Xây dựng Platform MoSpark: PLG Project, Editor, Microsite, Utility. Follow Dashboard Tracking cùng Data Analyst (Hải). Tư vấn các Cell Team triển khai dự án trên Web. Set standard Technical SEO/GEO.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chịu trách nhiệm tăng trưởng Pageviews thông qua các Strategic Projects; bảo đảm hiệu suất sản phẩm và quản trị toàn diện danh mục Product Line. Xây dựng Platform MoSpark: PLG Project, Editor, Microsite, Utility. Chốt chặn Gatekeeper ký duyệt Product Sign-off toàn bộ sản phẩm trước khi Go-Live Production. Follow Dashboard Tracking cùng Data Analyst (Hải). Tư vấn các Cell Team triển khai dự án trên Web. Set standard Technical SEO/GEO.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Senior Product Marketing</td>
@@ -2827,7 +2827,7 @@ MoSpark không còn là CMS đơn thuần mà là một sản phẩm phần mề
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ghi chú</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiến own Skill Hub (prompts, checklist) - Trọng implement vào platform. Align qua Bảo hoặc trực tiếp khi có spec từ Hiến. Xem OKRs & Kế hoạch chi tiết tại <a href="file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/Member/trong.md">trong.md</a></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiến own Skill Hub (prompts, checklist) - Trọng implement vào platform. Align qua Bảo hoặc trực tiếp khi có spec từ Hiến. Tài liệu OKRs cá nhân cũ đã được loại bỏ khỏi KB hiện hành.</td>
     </tr>
   </tbody>
 </table>

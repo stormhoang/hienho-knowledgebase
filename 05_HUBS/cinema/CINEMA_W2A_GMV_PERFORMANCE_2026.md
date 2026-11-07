@@ -35,39 +35,49 @@ Trong 8 tháng đầu năm 2026, kênh Web-to-App (người dùng từ Website M
 
 ---
 
-## 2. BÁO CÁO GIAO DỊCH THỰC THU (SUCCESS IN-APP TRANSACTIONS) - CẬP NHẬT THÁNG 10 VÀ QUÝ 4/2026
+## 2. BÁO CÁO GIAO DỊCH THỰC THU (SUCCESS IN-APP TRANSACTIONS) - CẬP NHẬT THÁNG 9, THÁNG 10 VÀ QUÝ 4/2026
 
-Dữ liệu ghi nhận từ hệ thống Dashboard vận hành bán vé in-app (`SUCCESS IN-APP TRANSACTIONS`) phản ánh số liệu giao dịch chốt đơn thực tế của người dùng từ Web chuyển sang App:
+Dữ liệu ghi nhận trực tiếp từ hệ thống Dashboard vận hành bán vé in-app (`SUCCESS IN-APP TRANSACTIONS`) phản ánh số liệu giao dịch chốt đơn thực tế của người dùng từ Web chuyển sang App:
 
-### A. Kết quả thực tế Tháng 10/2026 (Realtime Dashboard)
-* **Số giao dịch thành công (Transactions):** **12,547 đơn** (Tăng trưởng **+20.1%** so với tháng 9).
-* **Số người dùng giao dịch thành công (Transacting Users):** **11,457 người** (Tăng trưởng **+20.7%** so với tháng 9).
-* **Số lượng vé bán ra (Tickets):** **26,789 vé** (Tăng trưởng **+18.8%** so với tháng 9).
-* **Doanh thu GMV thực thu:** **2,572,135,000 đồng (2.57 tỷ đồng)** (dựa trên AoV chuẩn 205,000 đồng/đơn).
+### A. Kết quả thực tế Tháng 9/2026 (Realtime Dashboard)
+* **Số giao dịch thành công (Transactions):** **9,807 đơn** (Tăng trưởng bùng nổ **+144.2%** so với tháng 8).
+* **Số người dùng giao dịch thành công (Transacting Users):** **8,927 người** (Tăng trưởng **+137.6%** so với tháng 8).
+* **Số lượng vé bán ra (Tickets):** **20,983 vé** (Tăng trưởng **+139.7%** so với tháng 8).
+* **Doanh thu GMV thực thu Tháng 9:** **2,010,435,000 đồng (2.01 tỷ đồng)** (dựa trên AoV chuẩn 205,000 đồng/đơn).
+* **Bóc tách chỉ số hành vi người dùng:**
+  * **Tần suất mua hàng:** 9,807 / 8,927 = **1.098 đơn/người** trong tháng.
+  * **Số vé bình quân trên mỗi đơn:** 20,983 / 9,807 = **2.140 vé/đơn** (chuẩn hành vi xem phim 2 người).
+  * **Giá vé bình quân thực tế:** 2,010,435,000 / 20,983 = **95,813 đồng/vé**.
+
+### B. Kết quả thực tế Tháng 10/2026 (Realtime Dashboard)
+* **Số giao dịch thành công (Transactions):** **12,547 đơn** (Tăng trưởng **+20.1%** trên Dashboard; tăng **+27.9%** so với 9,807 đơn của tháng 9).
+* **Số người dùng giao dịch thành công (Transacting Users):** **11,457 người** (Tăng trưởng **+20.7%** trên Dashboard; tăng **+28.3%** so với 8,927 người của tháng 9).
+* **Số lượng vé bán ra (Tickets):** **26,789 vé** (Tăng trưởng **+18.8%** trên Dashboard; tăng **+27.7%** so với 20,983 vé của tháng 9).
+* **Doanh thu GMV thực thu Tháng 10:** **2,572,135,000 đồng (2.57 tỷ đồng)**.
 * **Bóc tách chỉ số hành vi người dùng:**
   * **Tần suất mua hàng:** 12,547 / 11,457 = **1.095 đơn/người** trong tháng.
-  * **Số vé bình quân trên mỗi đơn:** 26,789 / 12,547 = **2.135 vé/đơn** (hành vi đi xem phim theo cặp đôi hoặc bạn bè).
-  * **Giá vé bình quân thực tế:** 2,572,135,000 / 26,789 = **96,014 đồng/vé** (khớp sát với mặt bằng giá vé rạp phim hiện tại).
+  * **Số vé bình quân trên mỗi đơn:** 26,789 / 12,547 = **2.135 vé/đơn**.
+  * **Giá vé bình quân thực tế:** 2,572,135,000 / 26,789 = **96,014 đồng/vé**.
 
-### B. Dữ liệu suy luận Tháng 9/2026 (Truy ngược từ tăng trưởng MoM Tháng 10)
-Từ tỷ lệ tăng trưởng so với tháng trước của Tháng 10, chỉ số Tháng 9/2026 được xác định:
-* **Transactions Tháng 9:** 12,547 / 1.201 = **10,447 đơn hàng**.
-* **Transacting Users Tháng 9:** 11,457 / 1.207 = **9,492 người dùng**.
-* **Tickets Tháng 9:** 26,789 / 1.188 = **22,550 vé**.
-* **GMV thực thu Tháng 9:** 10,447 * 205,000 = **2,141,635,000 đồng (~2.14 tỷ đồng)**.
-* **Tổng doanh thu thực thu 2 tháng Q4 (Tháng 9 và Tháng 10):** Đạt **22,994 đơn hàng**, tương ứng **4.71 tỷ đồng GMV**.
+### C. Khớp số Tháng 8/2026 từ tỷ lệ tăng trưởng MoM Tháng 9 (100% Khớp SSOT)
+Từ tỷ lệ tăng trưởng so với tháng trước của Tháng 9:
+* **Users Tháng 8:** 8,927 / (1 + 1.376) = **3,757 người dùng** (Khớp chính xác 100% với số liệu W2A MAU Tháng 8/2026 trong file `MOVIES DATA SUMMARY.xlsx` và sheet `ALL Channel `).
+* **Transactions Tháng 8:** 9,807 / (1 + 1.442) = **4,016 đơn hàng**.
+* **Tickets Tháng 8:** 20,983 / (1 + 1.397) = **8,754 vé**.
+* **GMV thực thu Tháng 8:** 4,016 * 205,000 = **823,280,000 đồng (0.82 tỷ đồng)**.
 
-### C. Bảng đối soát Giao dịch Thực thu và Doanh thu Lũy kế 10 Tháng 2026
+### D. Bảng đối soát Giao dịch Thực thu và Doanh thu Lũy kế 10 Tháng 2026
 
 | Kỳ Báo Cáo | Transacting Users | Transactions (Đơn) | Tickets (Vé) | GMV Thực Thu (VND) | Tăng trưởng MoM | Vé / Đơn | Ghi Chú Nguồn Dữ Liệu |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Năm 2025 (Cả năm)** | 93,758 (MAU) | 52,311 | 111,422 | 10,723,755,000 đ | - | 2.13 | Sheet REPORT 2025 (Inbound) |
-| **8 Tháng đầu 2026 (Ước tính)** | 49,282 (MAU) | 27,494 | 58,562 | 5,636,270,000 đ | - | 2.13 | Áp dụng tỷ lệ CR 55.79% trên MAU |
-| **Tháng 9/2026** | 9,492 | 10,447 | 22,550 | 2,141,635,000 đ | - | 2.16 | Truy ngược từ tăng trưởng MoM |
-| **Tháng 10/2026 (Thực tế)** | 11,457 | 12,547 | 26,789 | 2,572,135,000 đ | +20.1% | 2.13 | Dashboard In-App |
-| **Lũy kế 10 Tháng 2026** | **70,231** | **50,488** | **107,901** | **10,350,040,000 đ** | - | **2.14** | **Tổng hợp 8T ước tính + T9 + T10 thực tế** |
+| **7 Tháng đầu 2026 (Ước tính)** | 45,525 (MAU) | 25,398 | 54,100 | 5,206,590,000 đ | - | 2.13 | Áp dụng tỷ lệ CR 55.79% trên MAU |
+| **Tháng 8/2026** | 3,757 | 4,016 | 8,754 | 823,280,000 đ | - | 2.18 | Khớp số từ MoM T9 (+144.2%) |
+| **Tháng 9/2026 (Thực tế)** | 8,927 | 9,807 | 20,983 | 2,010,435,000 đ | +144.2% | 2.14 | Dashboard In-App |
+| **Tháng 10/2026 (Thực tế)** | 11,457 | 12,547 | 26,789 | 2,572,135,000 đ | +27.9% | 2.13 | Dashboard In-App |
+| **Lũy kế 10 Tháng 2026** | **69,666** | **51,768** | **110,626** | **10,612,440,000 đ** | - | **2.14** | **Tổng hợp 7T ước tính + T8 + T9 + T10 thực tế** |
 
-* **Đánh giá hiệu quả kinh doanh:** Chỉ trong 10 tháng năm 2026, lượng giao dịch Web-to-App đã đạt **50,488 đơn** (~10.35 tỷ đồng GMV thực thu), tương đương **96.5% tổng doanh thu cả năm 2025** (52,311 đơn, 10.72 tỷ đồng). Riêng Tháng 10 đạt 12,547 đơn (gấp gần 3 lần mức trung bình 4,359 đơn/tháng của năm 2025), khẳng định kênh Web-to-App đang tăng trưởng vượt bậc trong quý 4/2026.
+* **Đánh giá hiệu quả kinh doanh:** Chỉ trong 10 tháng năm 2026, lượng giao dịch Web-to-App đã đạt **51,768 đơn** (~10.61 tỷ đồng GMV thực thu), tương đương **99.0% tổng doanh thu cả năm 2025** (52,311 đơn, 10.72 tỷ đồng). Riêng 2 tháng gần nhất (Tháng 9 và Tháng 10) đã đóng góp **22,354 đơn hàng** và **4.58 tỷ đồng GMV**, khẳng định bước nhảy vọt về hiệu quả chuyển đổi từ Web sang App.
 
 ---
 

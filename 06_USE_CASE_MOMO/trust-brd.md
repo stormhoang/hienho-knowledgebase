@@ -5,8 +5,8 @@
 > - **Division:** Risk & Security (GPD Web Platform)
 > - **Version:** 1.3 · Tháng 6/2026
 > - **Status:** Active (Scope: Landing Page báo cáo, Form nhập tay tĩnh & Bản tin ATBM Quý - S-P-A Framework)
-> - **PRD Specs (Report Scam):** [08_PRD/trust-prd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/08_PRD/trust-prd.md)
-> - **PRD Specs (Bản tin ATBM):** [08_PRD/ban-tin-atbm-prd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/08_PRD/ban-tin-atbm-prd.md)
+> - **PRD Specs (Report Scam):** [09_PRD/trust-prd.md](../09_PRD/trust-prd.md)
+> - **PRD Specs (Bản tin ATBM):** [09_PRD/ban-tin-atbm-prd.md](../09_PRD/ban-tin-atbm-prd.md)
 
 ---
 
@@ -122,7 +122,7 @@ Xây dựng niềm tin số toàn diện từ trong ra ngoài (Inside out) dựa
 ### 3.1 Giai đoạn 1: reSearch (Khảo sát & Thiết kế)
 *   **Nhiệm vụ chi tiết:**
     1.  **Phân tích Landing Page Mẫu:** Khảo sát cấu trúc giao diện file mẫu [An Toan MoMo - Landing](file:///Users/hienhv/Downloads/An%20Toan%20MoMo%20-%20Landing%20%28standalone%29%20%281%29.html) để đồng nhất ngôn ngữ thiết kế thương hiệu (Brand Guidelines), các thành phần Call-to-Action (CTA) kêu gọi gửi thông tin.
-    2.  **Chuẩn hóa các trường thông tin Form:** Thống nhất với Risk và CS về các trường dữ liệu tối thiểu bắt buộc để có thể thực hiện hậu kiểm (ví dụ: SĐT/STK kẻ lừa đảo, Tên ngân hàng). Các trường khác như Số tiền, nội dung mô tả sẽ ở dạng tùy chọn để giảm ma sát điền form.
+    2.  **Chuẩn hóa các trường thông tin Form:** Thống nhất với Risk và CS về các trường dữ liệu tối thiểu bắt buộc để có thể thực hiện hậu kiểm (ví dụ: SĐT/STK kẻ lừa đảo, Tên ngân hàng). Các trường khác như Số tiền, nội dung mô tả sẽ ở dạng tùy chọn để giảm rào cản thao tác điền form.
     3.  **Compliance Legal:** Thiết kế nội dung tuyên bố miễn trừ trách nhiệm và các điều khoản đồng thuận tự nguyện theo Nghị định 13/2023/NĐ-CP khi người dùng gửi báo cáo ẩn danh.
 
 ### 3.2 Giai đoạn 2: Pilot (Thử nghiệm MVP)

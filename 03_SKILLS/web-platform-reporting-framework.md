@@ -31,7 +31,7 @@ Theo chỉ dẫn tại `AGENTS.md`, mọi báo cáo của Web Platform bắt bu�
 | :--- | :--- | :--- |
 | **Nhịp độ & Khung thời gian** | 7 ngày (Tuần hiện tại & 7 ngày tới) | 30 ngày (Tháng hiện tại & 30-90 ngày tới) |
 | **Trọng tâm quản trị** | Vận hành thực thi, tiến độ tính năng, tháo gỡ điểm nghẽn kỹ thuật, quản trị ngân sách và A/B testing. | Sức khỏe động cơ tăng trưởng, danh mục 4 Zone, phân tích Cohort giữ chân, thị phần và chiến lược điểm đến Web Destination. |
-| **Mức độ chi tiết số liệu** | Biến động tuần (WoW), số lượng ticket CS, tốc độ tải P90, CVR từng biến thể A/B, tiến độ rollout tính năng. | Chuỗi thời gian 6-12 tháng, Cohort Retention (M0-M11), phân rã First-service 15+ dịch vụ, tiến độ 3 kịch bản Traffic (4M-5M-6M). |
+| **Mức độ chi tiết số liệu** | Biến động tuần (WoW), số lượng ticket CS, tốc độ tải P90, CVR từng biến thể A/B, tiến độ rollout tính năng. | Chuỗi thời gian 6-12 tháng, Cohort Retention (M0-M11), cơ cấu First-service 15+ dịch vụ, tiến độ 3 kịch bản Traffic (4M-5M-6M). |
 | **Cấu trúc Ưu tiên (Priorities)** | 1. Sửa lỗi & Phát hành (Hotfix & Delivery)<br/>2. Đánh giá A/B Testing<br/>3. Phối hợp liên đội ngũ (Sync) | 1. Vùng Hiệu suất (Performance Scaling)<br/>2. Vùng Chuyển đổi & Ươm tạo (Transformation/Incubation)<br/>3. Nền tảng & AI (Platform & AI Adoption) |
 
 ---
@@ -62,7 +62,7 @@ $$\text{Số liệu đạt được (Biên độ WoW/MoM)} \longrightarrow \text
 ---
 
 ### 3.2. Công thức viết khối "Cross-team Collaboration & Support Needed"
-Phân rã rõ ràng theo từng đội ngũ đối tác kèm yêu cầu định lượng:
+Bóc tách chi tiết rõ ràng theo từng đội ngũ đối tác kèm yêu cầu định lượng:
 
 - **Đội ngũ Business Units (Cinema, VTTI, FS, SPS, Student Pass):**
   - "Phối hợp với BU tương ứng để chốt bộ quy tắc nghiệp vụ (Domain Knowledge), tích hợp API sản phẩm và thống nhất ngân sách truyền thông Off-page."
@@ -182,7 +182,7 @@ Phân rã rõ ràng theo từng đội ngũ đối tác kèm yêu cầu định 
 ## 4. PHỐI HỢP LIÊN PHÒNG BAN & HỖ TRỢ CHIẾN LƯỢC (CROSS-TEAM COLLABORATION)
 
 - **Executive Leadership / Ban Giám Đốc:** Định hướng phê duyệt chủ trương liên kết dữ liệu với C08 và Cổng Dịch vụ công Quốc gia để xử lý luồng nộp phạt vi phạm giao thông và xuất biên lai điện tử.
-- **Inbound Team (BMC):** Tiếp nhận vai trò chủ trì và chịu trách nhiệm toàn diện về chất lượng nội dung, phê duyệt xuất bản theo mô hình Agency nội bộ.
+- **Inbound Team (BMC):** Tiếp nhận vai trò điều phối và chịu trách nhiệm toàn diện về chất lượng nội dung, phê duyệt xuất bản theo mô hình Agency nội bộ.
 - **Các Business Units (BUs):** Đăng ký chỉ tiêu kinh doanh cụ thể (Single Ownership KPI) trước khi yêu cầu triển khai các dự án Custom Landing Page.
 
 ---
@@ -203,7 +203,7 @@ Phân rã rõ ràng theo từng đội ngũ đối tác kèm yêu cầu định 
 ## 7. BỘ FRAMEWORK QUẢN TRỊ KỊCH BẢN 4M PAGE VIEWS & BỘ CHỈ SỐ QUẢN TRỊ
 
 > **Mục tiêu North Star:** Kịch bản bứt phá tổng lưu lượng Web Platform về mốc **4.000.000 Page Views vào Tháng 12/2026**.
-> **Tài liệu SSOT Bảng tính:** [web_performance_tracking_framework.xlsx](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/sheets/web_performance_tracking_framework.xlsx) & [full_month_performance_template.csv](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/sheets/full_month_performance_template.csv).
+> **Mẫu bảng tính tham khảo:** [full_month_performance_template.csv](../07_REPORTS/templates/sheets/full_month_performance_template.csv). Workbook framework cũ đã được loại bỏ, không còn là nguồn bắt buộc.
 
 Mọi bài báo cáo Weekly cho Executive Leadership và Monthly cho Ban Giám Đốc **BẮT BUỘC phải áp dụng bộ chỉ số phễu 3 tầng hoàn chỉnh**:
 
@@ -217,7 +217,7 @@ Mọi bài báo cáo Weekly cho Executive Leadership và Monthly cho Ban Giám �
 | | **4. Net Add (Lưu Lượng Mới)** | `Current Month PV - Previous Month PV` | Chỉ báo nỗ lực tạo ra giá trị tăng trưởng mới. |
 | | **5. Growth Rate (%)** | `Net Add / Previous Month PV` | Tốc độ tăng trưởng MoM/WoW. |
 | | **6. Phân Bổ Kênh (Source Breakdown)** | Tỷ trọng 6 nhóm kênh: Organic, Paid, Direct, Cross, Referral Domain, Others. | Phân định kênh sức mạnh chủ lực và kênh suy giảm. |
-| | **7. Phân Rã Theo Dự Án / Use Case** | Phân bổ theo Cinema Hub, Financial Hub, Vehicle Hub, Home Page, TikTok... | Xác định use case tạo lực đẩy và use case cần tối ưu. |
+| | **7. Cơ Cấu Theo Dự Án / Use Case** | Phân bổ theo Cinema Hub, Financial Hub, Vehicle Hub, Home Page, TikTok... | Xác định use case tạo lực đẩy và use case cần tối ưu. |
 | **Giữa Phễu (Intent & CTA)** | **8. Click-to-App** | Tổng lượt nhấp vào các nút CTA mở App MoMo. | Đo lường ý định chuyển đổi sang ứng dụng. |
 | | **9. Tỷ Lệ %CTR** | `= Click-to-App / Tổng Page Views` | Hiệu quả của thông điệp và vị trí nút bấm CTA. |
 | **Cuối Phễu (App Conversion & Growth)** | **10. Login App (Khách Cũ)** | Sự kiện xác thực mở App thành công từ Web. | Mức độ tái kích hoạt người dùng hiện hữu. |

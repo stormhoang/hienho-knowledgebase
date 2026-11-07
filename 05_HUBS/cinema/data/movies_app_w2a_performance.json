@@ -451,15 +451,6 @@
       "transactions_per_user": 1.095,
       "source": "Internal In-App Dashboard (SUCCESS IN-APP TRANSACTIONS)"
     },
-    "september_2026_derived": {
-      "users": 9492,
-      "transactions": 10447,
-      "tickets": 22550,
-      "actual_gmv_vnd": 2141635000,
-      "tickets_per_transaction": 2.158,
-      "avg_ticket_price_vnd": 94973,
-      "note": "Derived from October MoM growth"
-    },
     "full_year_2025_actual": {
       "in_app_traffic": 78735,
       "w2a_mau": 93758,
@@ -470,12 +461,33 @@
       "source": "MOVIES DATA SUMMARY.xlsx (REPORT 2025 Inbound)"
     },
     "cumulative_10m_2026_estimate_and_actual": {
-      "transactions_8m_estimated": 27494,
-      "transactions_sep_derived": 10447,
+      "transactions_7m_estimated": 25398,
+      "transactions_aug_derived": 4016,
+      "transactions_sep_actual": 9807,
       "transactions_oct_actual": 12547,
-      "total_transactions_10m": 50488,
-      "total_actual_gmv_vnd": 10350040000,
-      "pacing_vs_2025_full_year": "96.5% of 2025 full year in 10 months"
+      "total_transactions_10m": 51768,
+      "total_actual_gmv_vnd": 10612440000,
+      "pacing_vs_2025_full_year": "99.0% of 2025 full year in 10 months"
+    },
+    "september_2026_actual": {
+      "users": 8927,
+      "users_mom_growth": "+137.6%",
+      "transactions": 9807,
+      "transactions_mom_growth": "+144.2%",
+      "tickets": 20983,
+      "tickets_mom_growth": "+139.7%",
+      "actual_gmv_vnd": 2010435000,
+      "tickets_per_transaction": 2.14,
+      "avg_ticket_price_vnd": 95813,
+      "transactions_per_user": 1.098,
+      "source": "Internal In-App Dashboard (SUCCESS IN-APP TRANSACTIONS)"
+    },
+    "august_2026_derived": {
+      "users": 3757,
+      "transactions": 4016,
+      "tickets": 8754,
+      "actual_gmv_vnd": 823280000,
+      "note": "Derived from September MoM growth (+144.2%), perfectly matching August MAU 3,757 (100% exact match)"
     }
   }
 }

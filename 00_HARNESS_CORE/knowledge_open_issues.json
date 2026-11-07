@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "mode": "observe",
+  "issues": [
+    {
+      "id": "vehicle_navigation_historical_reference",
+      "source": "05_HUBS/vehicle/vehicle-hub-brd.md",
+      "section": "Changelog v8.30",
+      "reference": "05_HUBS/vehicle-hub-navigation.md",
+      "status": "historical_source_unavailable",
+      "evidence": "Exact filename absent from working tree and exact-path Git history search returned no result.",
+      "handling": "Preserve historical changelog. Do not use this reference as an active source or infer current navigation requirements from it.",
+      "resolution_condition": "Identify original document or approve a replacement specification with the domain owner."
+    }
+  ]
+}

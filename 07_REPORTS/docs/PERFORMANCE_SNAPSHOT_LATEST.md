@@ -1,7 +1,7 @@
 # BẢN GHI TÓM TẮT HIỆU SUẤT MỚI NHẤT (PERFORMANCE SNAPSHOT SSOT)
 
-> **Cập nhật:** 10/10/2026 17:45 | **Kỳ dữ liệu:** Tháng 10/2026 (MTD 9 ngày: 01/10 – 09/10/2026)  
-> **Nguồn:** `07_REPORTS/data/summary.json` & `07_REPORTS/data/monthly_10_2026_mtd_9d.json`  
+> **Cập nhật:** 10/10/2026 17:45 | **Kỳ dữ liệu:** Tháng 10/2026 (MTD 9 ngày: 01/10 - 09/10/2026)  
+> **Nguồn:** `07_REPORTS/data/summary.json` & `07_REPORTS/data/history/monthly_snapshots/monthly_10_2026_mtd_9d.json`
 > **Mục đích:** File SSOT tinh gọn (Low-token) giúp AI Agents và quy trình tự động đọc số liệu nhanh mà không cần tải toàn bộ 47KB tài liệu lịch sử.
 
 ---
@@ -41,19 +41,19 @@
 | **Transformation** | **New User Hub** | 22.259 | 300.000 | 76.670 | **25.5%** |
 | **Incubator** | **Student Hub** | 467 | 100.000 | 1.609 | **1.6%** |
 
-### Phân Rã Sub-pages Cinema Hub (Quy Chuẩn Tracking Mới):
-- **Trang Rạp phim (`Cinema_Cineplex`):** **238.254 PVs** (60.79% Hub) — Organic chiếm 97.1%.
-- **Trang phim chi tiết (`Cinema_Page`):** **135.729 PVs** (34.63% Hub) — Organic chiếm 89.0%.
-- **Cinema_Home Page (Trang chủ Cinema):** **11.839 PVs** (3.02% Hub) — Cổng vào tổng quan Hub.
-- **Cinema_Blog:** **5.083 PVs** (1.30% Hub) — Bài viết review điện ảnh GenAI.
-- **Tin tức (`Cinema_News`):** **996 PVs** (0.25% Hub) — Tin tức, khuyến mãi phim.
-- **Cinema_Landing Page:** **24 PVs** (0.01% Hub) — Landing page sự kiện cũ.
+### Cơ Cấu Sub-pages Cinema Hub (Quy Chuẩn Tracking Mới):
+- **Trang Rạp phim (`Cinema_Cineplex`):** **238.254 PVs** (60.79% Hub): Organic chiếm 97.1%.
+- **Trang phim chi tiết (`Cinema_Page`):** **135.729 PVs** (34.63% Hub): Organic chiếm 89.0%.
+- **Cinema_Home Page (Trang chủ Cinema):** **11.839 PVs** (3.02% Hub): Cổng vào tổng quan Hub.
+- **Cinema_Blog:** **5.083 PVs** (1.30% Hub): Bài viết review điện ảnh GenAI.
+- **Tin tức (`Cinema_News`):** **996 PVs** (0.25% Hub): Tin tức, khuyến mãi phim.
+- **Cinema_Landing Page:** **24 PVs** (0.01% Hub): Landing page sự kiện cũ.
 
 ---
 
 ## 4. TÍN HIỆU KỸ THUẬT & HỒ SƠ TÊN MIỀN (TECHNICAL SEO SIGNALS)
 
-- **GSC Crawl Stats (01/10 – 06/10/2026):**
+- **GSC Crawl Stats (01/10 - 06/10/2026):**
   * Tốc độ: **14.850 req/ngày** (sụt giảm **-29.7%** so với Tháng 9; Download giảm -72%).
   * Mã trạng thái: 200 OK đạt 94.11%; **404 Not Found chiếm 4.14%** (lãng phí ~860 req/ngày).
   * Mục đích: Refresh 95.97% / **Discovery chỉ 4.03%** (bị chèn ép nội dung mới).

@@ -1,0 +1,281 @@
+{
+  "thongTinChung": {
+    "tenDanhSach": "Sổ Tác Vụ Điều Phối Web Platform",
+    "thoiGianDongBo": "07/11/2026 18:39",
+    "nguonBaoCao": "weekly-report-2026-11-02-11-08.md",
+    "nguoiDieuPhoi": "Hiến Hồ (Web Product Lead)",
+    "tongSoDauViec": 15
+  },
+  "danhSachDauViec": [
+    {
+      "tenDauViec": "Cinema Hub: Theo dõi sát nhịp lưu lượng và tỷ lệ hoàn tất quiz của Minigame Bò Sữa Bay trong 3...",
+      "duAn": "Cinema Hub",
+      "nguoiPhuTrach": "Hùng",
+      "vaiTro": "Front-end Team Lead",
+      "banLamViec": "Bàn 01",
+      "nguoiDieuPhoi": "Hiến Hồ (Web Product Lead)",
+      "trangThai": "Đang thực hiện",
+      "mucTieu": "",
+      "viecCanLam": "Theo dõi sát nhịp lưu lượng và tỷ lệ hoàn tất quiz của Minigame Bò Sữa Bay trong 3 ngày cuối tuần mở màn (06/11 - 08/11) để tối ưu luồng chuyển đổi OneLink sang App. Phối hợp Procurement hoàn tất thủ tục hợp đồng và khởi động dự án SEO Off-Page với đối tác đã chọn. Mở rộng gắn Schema Person cho thêm 200 hồ sơ nghệ sĩ quốc tế và Việt Nam mới.",
+      "phoiHop": "**BU Movies:** Phối hợp điều phối banner truyền thông tại các rạp đối tác và theo dõi số lượng vé bán ra từ luồng Cinetour / Minigame. **Phòng Mua Hàng (Procurement):** Hoàn thiện ký kết hợp đồng dịch vụ SEO Off-page.",
+      "dieuKienGoLive": "Bắt buộc có Meta Data, SEO keyword, Long Content từ Hoan và ký duyệt Product Sign-off từ Hiến trước khi Go-Live Production.",
+      "thoiGianCapNhat": "07/11/2026 18:39",
+      "nhatKyXuLy": [
+        "[07/11/2026 18:39] Hiến Hồ giao việc và làm rõ phạm vi kết quả mong đợi.",
+        "[07/11/2026 18:39] Hùng đã tiếp nhận và đang triển khai tại Bàn 01."
+      ]
+    },
+    {
+      "tenDauViec": "Financial Hub: Research nhu cầu và dựng công cụ Chia hóa đơn & Quỹ nhóm (`/tai-chinh/cong-cu/chia...",
+      "duAn": "Financial Hub",
+      "nguoiPhuTrach": "Nhật",
+      "vaiTro": "Senior Front-end",
+      "banLamViec": "Bàn 01",
+      "nguoiDieuPhoi": "Hiến Hồ (Web Product Lead)",
+      "trangThai": "Đang thực hiện",
+      "mucTieu": "",
+      "viecCanLam": "Research nhu cầu và dựng công cụ Chia hóa đơn & Quỹ nhóm (`/tai-chinh/cong-cu/chia-tien-du-lich`) kèm Simulator và CTA in-app; nghiên cứu cấu trúc trang Hub Công Cụ (`/tai-chinh/cong-cu`); mở rộng các trang tỷ giá đảo VND sang ngoại tệ.",
+      "phoiHop": "Phối hợp **BU Tài chính (Financial Services)** duyệt nội dung trang Chứng Chỉ Quỹ để đưa lên Production và review công thức bộ đôi Mini Web Thuế (TNCN, Hộ kinh doanh).",
+      "dieuKienGoLive": "Bắt buộc có Meta Data, SEO keyword, Long Content từ Hoan và ký duyệt Product Sign-off từ Hiến trước khi Go-Live Production.",
+      "thoiGianCapNhat": "07/11/2026 18:39",
+      "nhatKyXuLy": [
+        "[07/11/2026 18:39] Hiến Hồ giao việc và làm rõ phạm vi kết quả mong đợi.",
+        "[07/11/2026 18:39] Nhật đã tiếp nhận và đang triển khai tại Bàn 01."
+      ]
+    },
+    {
+      "tenDauViec": "Vehicle Hub: Gỡ nút thử nghiệm để phát hành chính thức trang Gara (`/tien-ich-giao-thong/garage`)",
+      "duAn": "Vehicle Hub",
+      "nguoiPhuTrach": "Thuận",
+      "vaiTro": "Senior Front-end",
+      "banLamViec": "Bàn 01",
+      "nguoiDieuPhoi": "Hiến Hồ (Web Product Lead)",
+      "trangThai": "Đang thực hiện",
+      "mucTieu": "",
+      "viecCanLam": "Gỡ nút thử nghiệm để phát hành chính thức trang Gara (`/tien-ich-giao-thong/garage`); chạy lại 28 gara đối tác báo lỗi và rà soát 10 nhóm gara trùng tên/địa chỉ.",
+      "phoiHop": "Phối hợp **BU Phụ trách Dịch vụ Xe / Giao thông** duyệt phương án gộp các gara trùng lặp và gắn công cụ danh sách gara vào luồng mua bảo hiểm ô tô.",
+      "dieuKienGoLive": "Bắt buộc có Meta Data, SEO keyword, Long Content từ Hoan và ký duyệt Product Sign-off từ Hiến trước khi Go-Live Production.",
+      "thoiGianCapNhat": "07/11/2026 18:39",
+      "nhatKyXuLy": [
+        "[07/11/2026 18:39] Hiến Hồ giao việc và làm rõ phạm vi kết quả mong đợi.",
+        "[07/11/2026 18:39] Thuận đã tiếp nhận và đang triển khai tại Bàn 01."
+      ]
+    },
+    {
+      "tenDauViec": "Insurtech Hub: Phát hành chính thức công cụ mức khấu trừ lên trang `/bao-hiem-o-to/vat-chat-xe`",
+      "duAn": "Insurtech Hub",
+      "nguoiPhuTrach": "Hiến",
+      "vaiTro": "Web Product Lead · Điều phối",
+      "banLamViec": "Bàn 02",
+      "nguoiDieuPhoi": "Hiến Hồ (Web Product Lead)",
+      "trangThai": "Đang thực hiện",
+      "mucTieu": "",
+      "viecCanLam": "Phát hành chính thức công cụ mức khấu trừ lên trang `/bao-hiem-o-to/vat-chat-xe`; hoàn thiện nội dung text các khối trên trang chủ Bảo hiểm.",
+      "phoiHop": "Phối hợp **BU Bảo hiểm (Insurtech)** duyệt nội dung text trang chủ [momo.vn/bao-hiem](https://www.momo.vn/bao-hiem) và xác nhận mức % giảm phí của từng nấc khấu trừ.",
+      "dieuKienGoLive": "",
+      "thoiGianCapNhat": "07/11/2026 18:39",
+      "nhatKyXuLy": [
+        "[07/11/2026 18:39] Hiến Hồ giao việc và làm rõ phạm vi kết quả mong đợi.",
+        "[07/11/2026 18:39] Hiến đã tiếp nhận và đang triển khai tại Bàn 02."
+      ]
+    },
+    {
+      "tenDauViec": "New User Hub: Hoàn thiện khối hiển thị đánh giá của người dùng (Social Proof) và chính sách quà ...",
+      "duAn": "New User Hub",
+      "nguoiPhuTrach": "Hiến",
+      "vaiTro": "Web Product Lead · Điều phối",
+      "banLamViec": "Bàn 02",
+      "nguoiDieuPhoi": "Hiến Hồ (Web Product Lead)",
+      "trangThai": "Đang thực hiện",
+      "mucTieu": "",
+      "viecCanLam": "Hoàn thiện khối hiển thị đánh giá của người dùng (Social Proof) và chính sách quà tặng tân thủ trên trang `/tai-app`; theo dõi lưu lượng chuyển đổi W2A và CTR cài đặt ứng dụng (App Install).",
+      "phoiHop": "Phối hợp **Growth Team / Media Team** đối soát lượng click OneLink từ các chiến dịch Paid Ads và tối ưu thông điệp mở ứng dụng (App Open) sau cài đặt để giảm tỷ lệ rơi rụng.",
+      "dieuKienGoLive": "",
+      "thoiGianCapNhat": "07/11/2026 18:39",
+      "nhatKyXuLy": [
+        "[07/11/2026 18:39] Hiến Hồ giao việc và làm rõ phạm vi kết quả mong đợi.",
+        "[07/11/2026 18:39] Hiến đã tiếp nhận và đang triển khai tại Bàn 02."
+      ]
+    },
+    {
+      "tenDauViec": "Lottery Hub: Tiến hành build và kiểm thử toàn diện trên Staging",
+      "duAn": "Lottery Hub",
+      "nguoiPhuTrach": "Duy",
+      "vaiTro": "Senior Back-end",
+      "banLamViec": "Bàn 01",
+      "nguoiDieuPhoi": "Hiến Hồ (Web Product Lead)",
+      "trangThai": "Đang thực hiện",
+      "mucTieu": "",
+      "viecCanLam": "Tiến hành build và kiểm thử toàn diện trên Staging; giám sát tốc độ tải trang dưới 1,5 giây giờ quay số mở thưởng 18h00 - 18h30.",
+      "phoiHop": "Phối hợp **PO Vé số (Lottery)** hướng dẫn sử dụng MoSpark CMS để chủ động thay đổi nội dung chữ, banner khuyến mãi mà không phụ thuộc dev can thiệp code.",
+      "dieuKienGoLive": "",
+      "thoiGianCapNhat": "07/11/2026 18:39",
+      "nhatKyXuLy": [
+        "[07/11/2026 18:39] Hiến Hồ giao việc và làm rõ phạm vi kết quả mong đợi.",
+        "[07/11/2026 18:39] Duy đã tiếp nhận và đang triển khai tại Bàn 01."
+      ]
+    },
+    {
+      "tenDauViec": "Chatbot AI & Hệ Thống Cơ Sở Tri Thức: Tạm thời dừng triển khai các hạng mục tiếp theo của Phạt Nguội để tập trung toàn b...",
+      "duAn": "Chatbot AI & Hệ Thống Cơ Sở Tri Thức",
+      "nguoiPhuTrach": "Duy",
+      "vaiTro": "Senior Back-end",
+      "banLamViec": "Bàn 01",
+      "nguoiDieuPhoi": "Hiến Hồ (Web Product Lead)",
+      "trangThai": "Đang thực hiện",
+      "mucTieu": "- Thiết lập cổng kiểm soát phương tiện độc lập ở tầng hệ thống nhằm loại bỏ 100% rủi ro chatbot trả lời sai loại xe khi tài liệu pháp lý không đề cập.",
+      "viecCanLam": "Tạm thời dừng triển khai các hạng mục tiếp theo của Phạt Nguội để tập trung toàn bộ nguồn lực cho Chatbot Cinema Phase 1. Thống nhất danh mục phạm vi câu hỏi Chatbot Cinema có thể hỗ trợ và chưa hỗ trợ; rà soát bổ sung các bài viết nghiệp vụ còn thiếu về giá vé, quy định đổi/hủy vé phòng vé.",
+      "phoiHop": "Phối hợp **AI Team (phuc.pham6)** cấp khóa truy cập MoMo LLM Gateway; **Web Platform Team (hoan.tran2, hung.nguyen9)** rà soát dữ liệu nghiệp vụ và sitemap Cinema.",
+      "dieuKienGoLive": "",
+      "thoiGianCapNhat": "07/11/2026 18:39",
+      "nhatKyXuLy": [
+        "[07/11/2026 18:39] Hiến Hồ giao việc và làm rõ phạm vi kết quả mong đợi.",
+        "[07/11/2026 18:39] Duy đã tiếp nhận và đang triển khai tại Bàn 01."
+      ]
+    },
+    {
+      "tenDauViec": "Admin Panel: Tiến hành build Production Phase 2 vào ngày 02/11/2026",
+      "duAn": "Admin Panel",
+      "nguoiPhuTrach": "Duy",
+      "vaiTro": "Senior Back-end",
+      "banLamViec": "Bàn 01",
+      "nguoiDieuPhoi": "Hiến Hồ (Web Product Lead)",
+      "trangThai": "Đang thực hiện",
+      "mucTieu": "Nghiệm thu và phát hành Phase 2 lên Production đúng hạn (02/11/2026); rút ngắn 50% thời gian biên tập cho khối BMC nhờ hợp nhất màn hình soạn thảo; loại bỏ triệt để lỗi mất nút mở ứng dụng (App Open CTA) do quên cấu hình tham số `featureCode` / deeplink.",
+      "viecCanLam": "Tiến hành build Production Phase 2 vào ngày 02/11/2026; theo dõi vận hành sau phát hành và giám sát độ ổn định của All-in-One Editor.",
+      "phoiHop": "Phối hợp **Khối BMC (Brand & Marketing Communications)** và các **Cell Team** nghiệm thu thực tế, hướng dẫn sử dụng các khối nội dung In-App mới và tiếp nhận phản hồi cải tiến.",
+      "dieuKienGoLive": "",
+      "thoiGianCapNhat": "07/11/2026 18:39",
+      "nhatKyXuLy": [
+        "[07/11/2026 18:39] Hiến Hồ giao việc và làm rõ phạm vi kết quả mong đợi.",
+        "[07/11/2026 18:39] Duy đã tiếp nhận và đang triển khai tại Bàn 01."
+      ]
+    },
+    {
+      "tenDauViec": "User Engagement: Theo dõi số liệu sử dụng thẻ chuyển tiền nhanh qua số điện thoại và tỷ lệ click ba...",
+      "duAn": "User Engagement",
+      "nguoiPhuTrach": "Hiến",
+      "vaiTro": "Web Product Lead · Điều phối",
+      "banLamViec": "Bàn 02",
+      "nguoiDieuPhoi": "Hiến Hồ (Web Product Lead)",
+      "trangThai": "Đang thực hiện",
+      "mucTieu": "Chuyển đổi trang tìm kiếm từ trang hiển thị kết quả tĩnh thành cửa ngõ kích hoạt giao dịch P2P; thúc đẩy tỷ lệ mở app MoMo từ các truy vấn số điện thoại và tăng chuyển đổi kéo người dùng mới qua banner ưu đãi tân thủ.",
+      "viecCanLam": "Theo dõi số liệu sử dụng thẻ chuyển tiền nhanh qua số điện thoại và tỷ lệ click banner người dùng mới trên [momo.vn/tim-kiem](https://www.momo.vn/tim-kiem) môi trường Production.",
+      "phoiHop": "Phối hợp **Data / Analytics Team** bóc tách tỷ lệ chuyển đổi từ ô tìm kiếm website dẫn vào app MoMo thực hiện giao dịch chuyển tiền.",
+      "dieuKienGoLive": "",
+      "thoiGianCapNhat": "07/11/2026 18:39",
+      "nhatKyXuLy": [
+        "[07/11/2026 18:39] Hiến Hồ giao việc và làm rõ phạm vi kết quả mong đợi.",
+        "[07/11/2026 18:39] Hiến đã tiếp nhận và đang triển khai tại Bàn 02."
+      ]
+    },
+    {
+      "tenDauViec": "Hồ Danh Mục URL Toàn Website: Triển khai Giai đoạn 1 của Hồ danh mục URL: tạo bảng cơ sở dữ liệu trên môi trường...",
+      "duAn": "Hồ Danh Mục URL Toàn Website",
+      "nguoiPhuTrach": "Hiến",
+      "vaiTro": "Web Product Lead · Điều phối",
+      "banLamViec": "Bàn 02",
+      "nguoiDieuPhoi": "Hiến Hồ (Web Product Lead)",
+      "trangThai": "Đang thực hiện",
+      "mucTieu": "Thiết lập kho dữ liệu chuẩn trung tâm (Single Source of Truth) quản trị tập trung 100% đường dẫn URL toàn Kênh Website; tự động hóa việc xuất bản Dynamic Sitemap theo từng phân khối và cấp danh mục link sạch cho Cổng tìm kiếm lẫn Chatbot AI.",
+      "viecCanLam": "Triển khai Giai đoạn 1 của Hồ danh mục URL: tạo bảng cơ sở dữ liệu trên môi trường dev và nạp danh mục 51 trang tìm kiếm ưu tiên để đối chiếu dữ liệu.",
+      "phoiHop": "Phối hợp **Đội ngũ AI / Chatbot** và **SEO Team** thống nhất cấu trúc metadata và taxonomy phân cấp dự án trước khi mở rộng ra toàn bộ URL website.",
+      "dieuKienGoLive": "",
+      "thoiGianCapNhat": "07/11/2026 18:39",
+      "nhatKyXuLy": [
+        "[07/11/2026 18:39] Hiến Hồ giao việc và làm rõ phạm vi kết quả mong đợi.",
+        "[07/11/2026 18:39] Hiến đã tiếp nhận và đang triển khai tại Bàn 02."
+      ]
+    },
+    {
+      "tenDauViec": "Security: Trình duyệt giải pháp nâng cấp dữ liệu",
+      "duAn": "Security",
+      "nguoiPhuTrach": "Hiến",
+      "vaiTro": "Web Product Lead · Điều phối",
+      "banLamViec": "Bàn 02",
+      "nguoiDieuPhoi": "Hiến Hồ (Web Product Lead)",
+      "trangThai": "Đang thực hiện",
+      "mucTieu": "Khắc phục triệt để lỗ hổng Pentest; đóng hoàn toàn cổng đọc trực tiếp từ trình duyệt (`anon read`); chuyển đổi toàn bộ 19 trang web sang gọi qua máy chủ trung gian (BFF) bảo mật nhiều lớp; tự động hóa 100% cảnh báo lỗi CronJob về Google Chat.",
+      "viecCanLam": "Trình duyệt giải pháp nâng cấp dữ liệu; triển khai Giai đoạn 1 (thu hồi quyền đọc public anon, dựng máy chủ BFF qua role mini_web_server, chuyển đổi 19 trang gọi qua BFF); đưa Cron Job lên môi trường dev nội bộ.",
+      "phoiHop": "Phối hợp **ITC Security Team** đặt lịch Pentest lại (Giai đoạn 3) và thẩm định các API public mới; phối hợp **DevOps Team** cấu hình cổng API, tường lửa và chuẩn bị đóng hoàn toàn cổng public Supabase.",
+      "dieuKienGoLive": "",
+      "thoiGianCapNhat": "07/11/2026 18:39",
+      "nhatKyXuLy": [
+        "[07/11/2026 18:39] Hiến Hồ giao việc và làm rõ phạm vi kết quả mong đợi.",
+        "[07/11/2026 18:39] Hiến đã tiếp nhận và đang triển khai tại Bàn 02."
+      ]
+    },
+    {
+      "tenDauViec": "MoBase Design System: Kiểm tra tính tương thích, responsive và hiệu năng trên môi trường Staging ([momo-stg",
+      "duAn": "MoBase Design System",
+      "nguoiPhuTrach": "Hiến",
+      "vaiTro": "Web Product Lead · Điều phối",
+      "banLamViec": "Bàn 02",
+      "nguoiDieuPhoi": "Hiến Hồ (Web Product Lead)",
+      "trangThai": "Đang thực hiện",
+      "mucTieu": "Nâng cấp thanh điều hướng trang chủ momo.vn lên chuẩn Navigation 2 tầng mới của MoBase Design System; cho phép cấu hình linh hoạt menu chính, menu phụ, icon dịch vụ và banner chiến dịch từ MoSpark CMS mà không cần can thiệp code.",
+      "viecCanLam": "Kiểm tra tính tương thích, responsive và hiệu năng trên môi trường Staging ([momo-stg.mservice.io](https://momo-stg.mservice.io/)); chuẩn bị kế hoạch phát hành lên trang chủ chính thức.",
+      "phoiHop": "Phối hợp **Web Platform** và **Design System Team (MoBase)** review giao diện và trải nghiệm điều hướng trước khi On Production.",
+      "dieuKienGoLive": "",
+      "thoiGianCapNhat": "07/11/2026 18:39",
+      "nhatKyXuLy": [
+        "[07/11/2026 18:39] Hiến Hồ giao việc và làm rõ phạm vi kết quả mong đợi.",
+        "[07/11/2026 18:39] Hiến đã tiếp nhận và đang triển khai tại Bàn 02."
+      ]
+    },
+    {
+      "tenDauViec": "Web Performance GA4 & GSC: Kết nối bảng hiển thị số liệu GA4 & Google Search Console vào MoSpark Admin ngay k...",
+      "duAn": "Web Performance GA4 & GSC",
+      "nguoiPhuTrach": "Hiến",
+      "vaiTro": "Web Product Lead · Điều phối",
+      "banLamViec": "Bàn 02",
+      "nguoiDieuPhoi": "Hiến Hồ (Web Product Lead)",
+      "trangThai": "Đang thực hiện",
+      "mucTieu": "Đưa bảng số liệu truy cập GA4 và từ khóa Google Search Console vào thẳng MoSpark Admin để PM và các BU tự theo dõi hiệu suất dịch vụ của mình, vận hành trên máy chủ riêng cách ly an toàn dữ liệu nội bộ.",
+      "viecCanLam": "Kết nối bảng hiển thị số liệu GA4 & Google Search Console vào MoSpark Admin ngay khi máy chủ riêng sẵn sàng; kiểm thử phân quyền xem theo từng BU/PM.",
+      "phoiHop": "Phối hợp **DevOps Team** dựng máy chủ riêng, cấu hình mở quyền truy cập và gỡ bỏ các API key cũ để bảo đảm an toàn dữ liệu.",
+      "dieuKienGoLive": "",
+      "thoiGianCapNhat": "07/11/2026 18:39",
+      "nhatKyXuLy": [
+        "[07/11/2026 18:39] Hiến Hồ giao việc và làm rõ phạm vi kết quả mong đợi.",
+        "[07/11/2026 18:39] Hiến đã tiếp nhận và đang triển khai tại Bàn 02."
+      ]
+    },
+    {
+      "tenDauViec": "Utility Tool & Quiz: Chạy thử nghiệm widget Quiz trên bài blog thật",
+      "duAn": "Utility Tool & Quiz",
+      "nguoiPhuTrach": "Hiến",
+      "vaiTro": "Web Product Lead · Điều phối",
+      "banLamViec": "Bàn 02",
+      "nguoiDieuPhoi": "Hiến Hồ (Web Product Lead)",
+      "trangThai": "Đang thực hiện",
+      "mucTieu": "Nhúng công cụ trắc nghiệm tương tác vào thân bài viết blog để kéo dài thời gian lưu trang (Time on Page); tạo phễu chuyển đổi dẫn dắt người đọc bấm mở app đăng ký mở thẻ tín dụng hoặc kiểm tra điểm tín dụng CIC.",
+      "viecCanLam": "Chạy thử nghiệm widget Quiz trên bài blog thật; hoàn tất bộ kiểm thử 13 trường hợp (test cases) đa thiết bị trước khi phát hành chính thức.",
+      "phoiHop": "Phối hợp **Financial BU / Growth Team** đối soát tỷ lệ tương tác (Time on Page) và tỷ lệ nhấp vào CTA mở thẻ tín dụng / tra cứu điểm tín dụng sau khi hoàn thành quiz.",
+      "dieuKienGoLive": "",
+      "thoiGianCapNhat": "07/11/2026 18:39",
+      "nhatKyXuLy": [
+        "[07/11/2026 18:39] Hiến Hồ giao việc và làm rõ phạm vi kết quả mong đợi.",
+        "[07/11/2026 18:39] Hiến đã tiếp nhận và đang triển khai tại Bàn 02."
+      ]
+    },
+    {
+      "tenDauViec": "MoSpark CMS & Platform: Hoàn thiện bộ tài liệu TDD kỹ thuật, thiết kế CSDL và FSM Engine",
+      "duAn": "MoSpark CMS & Platform",
+      "nguoiPhuTrach": "Duy",
+      "vaiTro": "Senior Back-end",
+      "banLamViec": "Bàn 01",
+      "nguoiDieuPhoi": "Hiến Hồ (Web Product Lead)",
+      "trangThai": "Đang thực hiện",
+      "mucTieu": "Rút ngắn thời gian sản xuất bài viết (Lead Time) từ 18 ngày xuống dưới 7 ngày; tái cấu trúc khối Blog trên Microsite MoSpark hỗ trợ tự động hiển thị bài mới xuất bản mà không cần chỉnh sửa trang thủ công.",
+      "viecCanLam": "Hoàn thiện bộ tài liệu TDD kỹ thuật, thiết kế CSDL và FSM Engine; theo dõi giai đoạn dùng thử nội bộ khối Blog trên UAT và nghiệm thu hiển thị giao diện khối Blog cùng Web Frontend Team.",
+      "phoiHop": "Phối hợp **SEO Strategy Lead**, **Ban Biên tập / QA (Managing Editor)** và **Web Frontend Team (hung.nguyen9)** triển khai và nghiệm thu.",
+      "dieuKienGoLive": "",
+      "thoiGianCapNhat": "07/11/2026 18:39",
+      "nhatKyXuLy": [
+        "[07/11/2026 18:39] Hiến Hồ giao việc và làm rõ phạm vi kết quả mong đợi.",
+        "[07/11/2026 18:39] Duy đã tiếp nhận và đang triển khai tại Bàn 01."
+      ]
+    }
+  ]
+}

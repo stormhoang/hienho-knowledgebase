@@ -317,45 +317,54 @@ Dữ liệu ghi nhận từ hệ thống vận hành bán vé in-app (`SUCCESS I
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.13</td>
     </tr>
     <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">8 Tháng đầu 2026 (Ước tính)</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">49,282 (MAU)</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">27,494</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">58,562</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">5,636,270,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">7 Tháng đầu 2026 (Ước tính)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">45,525 (MAU)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">25,398</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">54,100</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">5,206,590,000 đ</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">-</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.13</td>
     </tr>
     <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 9/2026 (Truy ngược)</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">9,492</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">10,447</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">22,550</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">2,141,635,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 8/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">3,757</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">4,016</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">8,754</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">823,280,000 đ</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">-</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.16</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.18</td>
     </tr>
     <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 9/2026 (Thực tế)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">8,927</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">9,807</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">20,983</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">2,010,435,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">+144.2%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.14</td>
+    </tr>
+    <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 10/2026 (Thực tế)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">11,457</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">12,547</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">26,789</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">2,572,135,000 đ</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">+20.1%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">+27.9%</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.13</td>
     </tr>
     <tr style="background-color:#e2e8f0;">
       <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:left;"><strong>Lũy kế 10 Tháng 2026</strong></td>
-      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:center;"><strong>70,231</strong></td>
-      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:center;"><strong>50,488</strong></td>
-      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:center;"><strong>107,901</strong></td>
-      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:right;"><strong>10,350,040,000 đ</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:center;"><strong>69,666</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:center;"><strong>51,768</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:center;"><strong>110,626</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:right;"><strong>10,612,440,000 đ</strong></td>
       <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:center;"><strong>-</strong></td>
       <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:center;"><strong>2.14</strong></td>
     </tr>
   </tbody>
 </table>
 
-* **Đánh giá tăng trưởng đột phá:** Riêng Tháng 10/2026 đạt **12,547 đơn hàng** và **2.57 tỷ đồng GMV**, tăng trưởng **+20.1%** so với tháng trước. Lũy kế 10 tháng năm 2026 đạt **50,488 đơn** (~10.35 tỷ đồng GMV thực thu), tương đương **96.5% tổng quy mô giao dịch cả năm 2025** (52,311 đơn, 10.72 tỷ đồng).
+* **Đánh giá tăng trưởng đột phá:** Riêng 2 tháng gần nhất (Tháng 9 và Tháng 10), kênh Web-to-App đã đóng góp **22,354 đơn hàng** và **4.58 tỷ đồng GMV thực thu**. Lũy kế 10 tháng năm 2026 đạt **51,768 đơn** (~10.61 tỷ đồng GMV thực thu), tương đương **99.0% tổng quy mô giao dịch cả năm 2025** (52,311 đơn, 10.72 tỷ đồng). Bước nhảy vọt từ Tháng 8 (4,016 đơn) lên Tháng 9 (9,807 đơn, tăng +144.2%) và Tháng 10 (12,547 đơn, tăng +27.9%) chứng minh sức bật bùng nổ của Kênh Web khi bước vào mùa phim cao điểm.
 
 #### C. Phễu Chuyển Đổi Inbound Toàn Diện & Phân Tích Điểm Nghẽn OneLink
 

@@ -31,8 +31,8 @@ flowchart TD
     end
 
     subgraph S5["TẦNG 5: THANH TOÁN & DOANH THU GMV (TRANSACTION & REVENUE)"]
-        E1["Giao dịch mua vé thành công<br/>52,311 đơn (Năm 2025)<br/>12,547 đơn (Tháng 10/2026)<br/>50,488 đơn lũy kế 10T/2026<br/>(Tỷ lệ chốt đơn In-App: 66.44%)"]
-        E2["Doanh thu GMV Thực Thu<br/>10.72 tỷ đồng (Năm 2025)<br/>2.57 tỷ đồng (Tháng 10/2026)<br/>10.35 tỷ đồng (10T/2026)<br/>(Công thức: Transactions x 205,000 đ)"]
+        E1["Giao dịch mua vé thành công<br/>52,311 đơn (Năm 2025)<br/>9,807 đơn (Tháng 9/2026)<br/>12,547 đơn (Tháng 10/2026)<br/>51,768 đơn lũy kế 10T/2026<br/>(Tỷ lệ chốt đơn In-App: 66.44%)"]
+        E2["Doanh thu GMV Thực Thu<br/>10.72 tỷ đồng (Năm 2025)<br/>2.01 tỷ đồng (Tháng 9/2026)<br/>2.57 tỷ đồng (Tháng 10/2026)<br/>10.61 tỷ đồng (10T/2026)<br/>(Công thức: Transactions x 205,000 đ)"]
     end
 
     subgraph S6["TẦNG 6: GIỮ CHÂN & VÒNG LẶP KHÁCH HÀNG (RETENTION & COMMUNITY)"]

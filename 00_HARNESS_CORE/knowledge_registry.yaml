@@ -1,0 +1,352 @@
+version: "1.0"
+mode: observe
+repository_boundary: "."
+entries:
+  # ==============================================================================
+  # DOMAIN: AGENT GOVERNANCE (QUẢN TRỊ TÁC TỬ & PHÂN CÔNG TRÁCH NHIỆM)
+  # ==============================================================================
+  - id: agent_operating_contract
+    path: AGENT_OPERATING_CONTRACT.md
+    domain: agent_governance
+    type: operating_contract
+    authority: primary
+    status: active
+    owner: Web Product Lead
+    system_of_record: "Antigravity Harness Governance"
+    generator_script: "manual_authoring"
+    used_for: [agent_execution, safety, output]
+    cross_check_with: [agent_safety_contract, agent_output_contract]
+
+  - id: agent_capabilities
+    path: 00_HARNESS_CORE/AGENT_CAPABILITIES.yaml
+    domain: agent_governance
+    type: capability_registry
+    authority: primary
+    status: active
+    owner: Web Product Lead
+    system_of_record: "Antigravity Harness Governance"
+    generator_script: "manual_authoring"
+    used_for: [capability_selection]
+    schema_version: "1.0"
+
+  - id: agent_safety_contract
+    path: 00_HARNESS_CORE/AGENT_SAFETY_CONTRACT.yaml
+    domain: agent_governance
+    type: safety_contract
+    authority: primary
+    status: active
+    owner: Web Product Lead
+    system_of_record: "Antigravity Harness Governance"
+    generator_script: "manual_authoring"
+    used_for: [approval, external_write, worktree_safety]
+
+  - id: agent_output_contract
+    path: 00_HARNESS_CORE/AGENT_OUTPUT_CONTRACT.md
+    domain: agent_governance
+    type: output_contract
+    authority: primary
+    status: active
+    owner: Web Product Lead
+    system_of_record: "Antigravity Harness Governance"
+    generator_script: "manual_authoring"
+    used_for: [answer_packaging, evidence]
+
+  - id: evidence_contract
+    path: 00_HARNESS_CORE/EVIDENCE_CONTRACT.md
+    domain: evidence
+    type: evidence_contract
+    authority: primary
+    status: active
+    owner: Web Product Lead
+    system_of_record: "Antigravity Evidence Verification System"
+    generator_script: "manual_authoring"
+    used_for: [claim_validation, freshness, conflict]
+
+  - id: team_scope_of_work
+    path: 00_HARNESS_CORE/team_scope_of_work.md
+    domain: agent_governance
+    type: scope_of_work_ssot
+    authority: primary
+    status: active
+    owner: Web Product Lead
+    system_of_record: "Web Platform Organizational Charter"
+    generator_script: "manual_authoring"
+    used_for: [task_routing, role_boundaries, quality_gates, go_live_approval]
+    cross_check_with: [codebase_manifest, dispatch_readme]
+    notes: SSOT ranh giới trách nhiệm, 4 Key Owner trực tiếp và 3 Quality Gates của 12 nhân sự Web Platform
+
+  - id: hienho_master_doc
+    path: 00_HARNESS_CORE/hienho_master_doc.md
+    domain: agent_governance
+    type: ecosystem_master_doc
+    authority: reference
+    status: active
+    owner: Web Product Lead
+    system_of_record: "Product Architecture & Strategy Master"
+    generator_script: "manual_authoring"
+    used_for: [strategic_context, architecture_overview, historical_alignment]
+    cross_check_with: [team_scope_of_work, performance_tracking_master]
+
+  # ==============================================================================
+  # DOMAIN: KNOWLEDGE ROUTING & ARCHITECTURE (ĐỊNH TUYẾN TRI THỨC)
+  # ==============================================================================
+  - id: knowledge_routing
+    path: 00_HARNESS_CORE/KNOWLEDGE_ROUTING.md
+    domain: knowledge_routing
+    type: routing_policy
+    authority: primary
+    status: active
+    owner: Web Product Lead
+    system_of_record: "Antigravity Knowledge Routing Policy"
+    generator_script: "manual_authoring"
+    used_for: [source_selection, context_loading]
+
+  - id: codebase_manifest
+    path: CODEBASE_MANIFEST.md
+    domain: knowledge_routing
+    type: repository_manifest
+    authority: primary
+    status: active
+    owner: Web Product Lead
+    system_of_record: "Git Repository & Codebase Manifest"
+    generator_script: "manual_authoring"
+    used_for: [repository_onboarding, source_discovery]
+    cross_check_with: [knowledge_routing]
+
+  # ==============================================================================
+  # DOMAIN: ORCHESTRATION & DISPATCH (ĐIỀU PHỐI TÁC VỤ & FSM ENGINE)
+  # ==============================================================================
+  - id: orchestrator_engine
+    path: 00_HARNESS_CORE/orchestrator_engine.md
+    domain: orchestration
+    type: workflow_policy
+    authority: primary
+    status: active
+    owner: Web Product Lead
+    system_of_record: "Antigravity Orchestration Engine"
+    generator_script: "manual_authoring"
+    used_for: [project_lifecycle, gate_review]
+
+  - id: dispatch_readme
+    path: 15_DISPATCH/README.md
+    domain: orchestration
+    type: dispatch_policy
+    authority: primary
+    status: active
+    owner: Web Product Lead
+    system_of_record: "Antigravity Task Dispatch Protocol"
+    generator_script: "manual_authoring"
+    used_for: [task_dispatch, task_lifecycle]
+
+  # ==============================================================================
+  # DOMAIN: LANGUAGE GOVERNANCE (QUẢN TRỊ THUẬT NGỮ & NGÔN TỪ)
+  # ==============================================================================
+  - id: vocabulary_glossary
+    path: 03_SKILLS/momo-reporting-glossary.md
+    domain: language_governance
+    type: glossary
+    authority: primary
+    status: active
+    owner: Web Product Lead
+    system_of_record: "MoMo Reporting Glossary SSOT"
+    generator_script: "manual_authoring"
+    used_for: [document_writing, vocabulary_validation]
+
+  # ==============================================================================
+  # DOMAIN: PERFORMANCE & DATA (HIỆU SUẤT TRUY CẬP, RUN-RATE & ADS)
+  # ==============================================================================
+  - id: performance_tracking_master
+    path: 07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md
+    domain: performance
+    type: operational_ssot
+    authority: primary
+    status: active
+    owner: Web Platform
+    system_of_record: "Google Sheets Cloud SSOT (1JaaYv2MnDy-dfBdC3P-GMB6SFgjez2VowdjX9PjmPYU) & BigQuery"
+    generator_script: "scripts/sync_tracking_report.py"
+    freshness_days: 7
+    used_for: [weekly_report, monthly_report, performance_analysis]
+    cross_check_with: [performance_data_mart, performance_snapshot_latest]
+
+  - id: performance_data_mart
+    path: 07_REPORTS/data/cache/performance.sqlite
+    domain: performance
+    type: analytical_data_mart
+    authority: primary
+    status: active
+    owner: Web Platform
+    system_of_record: "GA4 Data API (270743103) & GSC Search Analytics"
+    generator_script: "scripts/build_full_funnel_matrix.py"
+    freshness_days: 7
+    used_for: [performance_analysis, anomaly_detection, analytics_query]
+
+  - id: performance_snapshot_latest
+    path: 07_REPORTS/docs/PERFORMANCE_SNAPSHOT_LATEST.md
+    domain: performance
+    type: operational_snapshot
+    authority: primary
+    status: active
+    owner: Web Platform
+    system_of_record: "GA4 Data API & Local History Snapshot"
+    generator_script: "scripts/sync_ga4_master.py"
+    freshness_days: 7
+    used_for: [fast_performance_lookup, mtd_summary]
+    cross_check_with: [performance_tracking_master, performance_data_mart]
+
+  - id: paid_ads_performance
+    path: 07_REPORTS/data/analytics/paid_ads_performance.json
+    domain: performance
+    type: paid_ads_ssot
+    authority: primary
+    status: active
+    owner: Web Platform
+    system_of_record: "GA4 Data API (Property 270743103) Paid Media Channels"
+    generator_script: "scripts/sync_paid_ads.py"
+    freshness_days: 7
+    used_for: [paid_ads_analysis, media_channels, campaign_tracking]
+    cross_check_with: [performance_tracking_master]
+
+  - id: theme_seasonality
+    path: 07_REPORTS/data/theme_seasonality.json
+    domain: performance
+    type: seasonality_index
+    authority: secondary
+    status: active
+    owner: Web Platform
+    system_of_record: "Google Trends API (pytrends VN)"
+    generator_script: "scripts/cron_theme_seasonality.py"
+    freshness_days: 30
+    used_for: [seasonality_forecast, trend_analysis]
+
+  # ==============================================================================
+  # DOMAIN: DECISIONS & ROADMAP (SỔ CÁI QUYẾT ĐỊNH & LỘ TRÌNH PHÁT HÀNH)
+  # ==============================================================================
+  - id: decision_log
+    path: 08_DECISION_LOG/decision_log.md
+    domain: decisions
+    type: decision_log
+    authority: primary
+    status: active
+    owner: Web Product Lead
+    system_of_record: "Executive Leadership Alignment & Product Decision Log"
+    generator_script: "manual_authoring"
+    used_for: [strategic_context, decision_audit]
+
+  - id: roadmap_releases
+    path: 14_ROADMAP/ship_releases.json
+    domain: roadmap
+    type: release_registry
+    authority: primary
+    status: active
+    owner: Web Platform
+    system_of_record: "Engineering Releases & Ship Tracker"
+    generator_script: "manual_authoring"
+    used_for: [shipment_status, project_state]
+    schema_version: "1.0"
+
+  # ==============================================================================
+  # DOMAIN: TRACKING (ĐO LƯỜNG SỰ KIỆN & UMAMI)
+  # ==============================================================================
+  - id: utility_tracking
+    path: 04_MOSPARK_PLATFORM/umami_utility_tracking.md
+    domain: tracking
+    type: tracking_ssot
+    authority: primary
+    status: active
+    owner: SE Team / Thuận
+    system_of_record: "Umami Analytics Cloud Instance & MoSpark Tracking Specification"
+    generator_script: "manual_authoring"
+    used_for: [event_tracking, utility_tracking]
+
+  # ==============================================================================
+  # DOMAIN: STRATEGIC HUBS (CÁC MẢNG SẢN PHẨM CHIẾN LƯỢC)
+  # ==============================================================================
+  - id: cinema_hub_brd
+    path: 05_HUBS/cinema/cinema-hub-brd.md
+    domain: hubs_cinema
+    type: business_requirement_document
+    authority: primary
+    status: active
+    owner: Cinema Hub Team
+    system_of_record: "Cinema Hub Business Requirement Document"
+    generator_script: "manual_authoring"
+    used_for: [cinema_strategy, movie_features, cinema_roadmap]
+    cross_check_with: [cinema_funnel_architecture, team_scope_of_work]
+
+  - id: cinema_funnel_architecture
+    path: 05_HUBS/cinema/CINEMA_FUNNEL_ARCHITECTURE.md
+    domain: hubs_cinema
+    type: funnel_architecture
+    authority: primary
+    status: active
+    owner: Cinema Hub Team
+    system_of_record: "Cinema Hub Web-to-App Funnel Architecture"
+    generator_script: "manual_authoring"
+    used_for: [cinema_conversion, web_to_app_funnel, onelink_tracking]
+    cross_check_with: [cinema_hub_brd]
+
+  - id: vehicle_hub_brd
+    path: 05_HUBS/vehicle/vehicle-hub-brd.md
+    domain: hubs_vehicle
+    type: business_requirement_document
+    authority: primary
+    status: active
+    owner: Vehicle Hub Team
+    system_of_record: "Vehicle Hub Business Requirement Document"
+    generator_script: "manual_authoring"
+    used_for: [vehicle_strategy, traffic_tools, garage_directory, penalty_lookup]
+    cross_check_with: [team_scope_of_work]
+
+  - id: financial_hub_brd
+    path: 05_HUBS/financial/financial-hub-brd.md
+    domain: hubs_financial
+    type: business_requirement_document
+    authority: primary
+    status: active
+    owner: Financial Hub Team
+    system_of_record: "Financial Hub Business Requirement Document"
+    generator_script: "manual_authoring"
+    used_for: [financial_strategy, tax_calculators, investment_tools]
+    cross_check_with: [team_scope_of_work]
+
+  # ==============================================================================
+  # DOMAIN: PLATFORM & FRAMEWORKS (HẠ TẦNG NỀN TẢNG & QUY TRÌNH SEO)
+  # ==============================================================================
+  - id: mospark_rag_knowledge_base
+    path: 04_MOSPARK_PLATFORM/mospark_rag_knowledge_base.md
+    domain: mospark_platform
+    type: platform_architecture
+    authority: primary
+    status: active
+    owner: SE Team / Duy
+    system_of_record: "MoSpark Platform Architecture & Knowledge Base"
+    generator_script: "manual_authoring"
+    used_for: [rag_knowledge_base, smart_search, platform_architecture]
+    cross_check_with: [team_scope_of_work]
+
+  - id: seo_execution_sop
+    path: 02_FRAMEWORKS/seo-execution-sop.md
+    domain: frameworks_seo
+    type: standard_operating_procedure
+    authority: primary
+    status: active
+    owner: SEO Team
+    system_of_record: "SEO Execution Standard Operating Procedure"
+    generator_script: "manual_authoring"
+    used_for: [seo_execution, ymyl_gate, content_quality]
+    cross_check_with: [vocabulary_glossary]
+
+  # ==============================================================================
+  # DOMAIN: HISTORICAL STRATEGY (TÀI LIỆU CHIẾN LƯỢC LỊCH SỬ)
+  # ==============================================================================
+  - id: web_growth_strategy_historical
+    path: 01_STRATEGIC_PLAN/web_growth_strategy_brd.md
+    domain: strategic_plan
+    type: historical_strategy_brd
+    authority: reference
+    status: historical
+    owner: Web Product Lead
+    system_of_record: "Historical Web Growth BRD Archive"
+    generator_script: "manual_authoring"
+    used_for: [historical_context, phase_comparison]
+    notes: BRD chiến lược tăng trưởng ban đầu, làm nền tảng tham chiếu lịch sử

@@ -2,6 +2,10 @@
 
 Tài liệu định nghĩa kiến trúc **Tầng Knowledge (Knowledge Layer)** của hệ thống codebase. Thay vì chỉ phân loại câu hỏi (Prompt classification) bề nổi, Tầng Knowledge vận hành như một bộ máy định tuyến tri thức đa lớp (Multi-layer Knowledge Routing Pipeline) để đảm bảo mọi vấn đề người đặt ra đều nhận được **Câu trả lời Tối ưu (Optimal Answer)** chuẩn xác, trung thực và sát bối cảnh kinh doanh.
 
+## Registry tương thích đa Agent
+
+`knowledge_registry.yaml` là lớp metadata bổ sung cho Claude, Antigravity và các Agent khác. Registry không thay thế tài liệu gốc, không khóa quyền đọc trực tiếp và đang vận hành ở chế độ `observe`. Validator tương ứng là `scripts/validate_knowledge_registry.py`; manifest chỉ đọc có thể xuất bằng `scripts/export_agent_context.py`.
+
 ---
 
 ## 1. KHUNG KIẾN TRÚC 5 TẦNG KNOWLEDGE (5-LAYER KNOWLEDGE PIPELINE)
@@ -45,7 +49,7 @@ Sau khi định tuyến tri thức, Agent phải tra `AGENT_CAPABILITIES.yaml` �
 ### Tầng 1: Context Memory Layer (Tầng Bối Cảnh Lịch Sử & Chỉ Đạo - Kích Hoạt Có Điều Kiện)
 Chỉ kích hoạt khi thực hiện bài toán Chiến lược cấp cao, Viết báo cáo Lãnh đạo hoặc Lập PRD mới. Đối với các tác vụ kỹ thuật, code review, tra cứu nhanh, Agent bỏ qua Tầng 1 và đi thẳng vào Tầng 3 (SSOT Domain):
 - [`MEETING_RECAPS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/MEETING_RECAPS.md): Chỉ đạo chiến lược của Ban Giám đốc (chỉ đọc mục gần nhất liên quan đến chủ đề).
-- [`07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md): Memory SSOT Hiệu suất — dữ liệu Performance thực tế, Run-rate Target và phân rã Kênh/Hubs.
+- [`07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md): Memory SSOT Hiệu suất: dữ liệu Performance thực tế, Run-rate Target và cơ cấu Kênh/Hubs.
 - [`08_DECISION_LOG/decision_log.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/08_DECISION_LOG/decision_log.md): Nhật ký các quyết định kiến trúc và nghiệp vụ đã chốt.
 - [`00_HARNESS_CORE/hienho_master_doc.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/00_HARNESS_CORE/hienho_master_doc.md): Tổng quan toàn bộ hệ thống Web Platform & MoSpark (chỉ tham chiếu khi cần đối soát kiến trúc tổng thể).
 
