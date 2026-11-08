@@ -96,8 +96,8 @@ class KnowledgeAcceptanceTests(unittest.TestCase):
         md = render_markdown(suite_res)
         self.assertNotIn("\u2013", md)  # No En Dash
         self.assertNotIn("\u2014", md)  # No Em Dash
-        self.assertIn("BÁO CÁO NGHIỆM THU ĐA TÁC TỬ", md)
-        self.assertIn("🟢 Cả hai đạt chuẩn", md)
+        self.assertIn("Mode: fixture", md)
+        self.assertIn("does not verify independent Agent execution", md)
 
 
 if __name__ == "__main__":

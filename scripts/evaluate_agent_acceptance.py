@@ -186,11 +186,12 @@ def evaluate_response(case: dict[str, Any], response_text: str) -> dict[str, Any
     }
 
 
-def run_acceptance_suite(cases_path: Path) -> dict[str, Any]:
+def run_acceptance_suite(cases_path: Path, responses_all=None) -> dict[str, Any]:
     """Chạy toàn bộ bộ câu hỏi kiểm thử đối soát cho cả Claude và Antigravity."""
     cases_data = json.loads(cases_path.read_text(encoding="utf-8"))
     test_cases = cases_data.get("test_cases", [])
-    responses_all = get_agent_responses()
+    fixture_mode = responses_all is None
+    responses_all = get_agent_responses() if fixture_mode else responses_all
     now_utc = datetime.now(timezone.utc).isoformat()
 
     agent_evaluations: dict[str, Any] = {}
@@ -217,6 +218,8 @@ def run_acceptance_suite(cases_path: Path) -> dict[str, Any]:
 
     return {
         "version": "1.0",
+        "evaluation_mode": "fixture" if fixture_mode else "submitted_responses",
+        "independent_agent_execution_verified": False,
         "generated_at": now_utc,
         "benchmark_name": cases_data.get("benchmark_name"),
         "total_test_cases": len(test_cases),
@@ -225,6 +228,15 @@ def run_acceptance_suite(cases_path: Path) -> dict[str, Any]:
 
 
 def render_markdown(payload: dict[str, Any]) -> str:
+    lines = ['# Acceptance evaluation', '',
+             f"Mode: {payload.get('evaluation_mode', 'unknown')}", '',
+             'Keyword scoring does not verify independent Agent execution or factual correctness.', '']
+    for name, result in payload['agents'].items():
+        lines.append(f"- {name}: {result['passed_cases']}/{result['total_cases']} cases passed keyword checks.")
+    return '\n'.join(lines) + '\n'
+
+
+def legacy_render_markdown(payload: dict[str, Any]) -> str:
     """Tạo báo cáo Markdown nghiệm thu đa tác tử chuẩn mực 3 tầng."""
     gen_at = payload["generated_at"]
     agents = payload["agents"]
@@ -316,6 +328,7 @@ def render_markdown(payload: dict[str, Any]) -> str:
 def main() -> int:
     parser = argparse.ArgumentParser(description="Đánh giá và nghiệm thu đa tác tử tri thức (Multi-Agent Acceptance)")
     parser.add_argument("--cases", default=str(CASES_PATH), help="Đường dẫn acceptance_test_cases.json")
+    parser.add_argument('--responses', help='JSON mapping agent names to case IDs and response text; omitted runs fixtures only')
     parser.add_argument("--json-out", default=str(DEFAULT_JSON_OUT), help="Đường dẫn xuất tệp JSON")
     parser.add_argument("--md-out", default=str(DEFAULT_MD_OUT), help="Đường dẫn xuất tệp Markdown")
     args = parser.parse_args()
@@ -325,7 +338,8 @@ def main() -> int:
         print(f"Lỗi: Không tìm thấy tệp kịch bản tại {cases_file}", file=sys.stderr)
         return 1
 
-    payload = run_acceptance_suite(cases_file)
+    responses = json.loads(Path(args.responses).read_text(encoding='utf-8')) if args.responses else None
+    payload = run_acceptance_suite(cases_file, responses)
 
     json_path = Path(args.json_out)
     json_path.parent.mkdir(parents=True, exist_ok=True)

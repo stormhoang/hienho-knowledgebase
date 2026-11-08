@@ -82,8 +82,8 @@ class KnowledgeFreshnessTests(unittest.TestCase):
                 encoding="utf-8",
             )
             d1, period1, m1 = extract_json_metadata(f1)
-            self.assertEqual(d1, date(2026, 10, 25))
-            self.assertEqual(period1, "2026-10-01 đến today")
+            self.assertIsNone(d1)
+            self.assertIsNone(period1)
 
             # Case 2: running month & daysElapsed
             f2 = root / "summary.json"
@@ -93,7 +93,7 @@ class KnowledgeFreshnessTests(unittest.TestCase):
             )
             d2, period2, m2 = extract_json_metadata(f2)
             self.assertEqual(d2, date(2026, 11, 6))
-            self.assertEqual(period2, "Tháng 11/2026 (MTD 6 ngày)")
+            self.assertEqual(period2, "MTD đến 2026-11-06")
 
             # Case 3: List of records with date
             f3 = root / "releases.json"

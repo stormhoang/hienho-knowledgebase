@@ -25,7 +25,7 @@ PROVENANCE_JSON_PATH = ROOT / "00_HARNESS_CORE" / "knowledge_provenance.json"
 
 def get_freshness_data(registry_path: Path, reference_date: date | None = None, force_refresh: bool = False) -> dict[str, Any]:
     """Lấy dữ liệu độ mới từ cache JSON hoặc quét trực tiếp."""
-    if not force_refresh and FRESHNESS_JSON_PATH.is_file() and reference_date is None:
+    if False:  # Re-evaluate against current date and source contents on every export.
         try:
             return json.loads(FRESHNESS_JSON_PATH.read_text(encoding="utf-8"))
         except Exception:
@@ -37,7 +37,7 @@ def get_freshness_data(registry_path: Path, reference_date: date | None = None, 
 
 def get_provenance_data(registry_path: Path, force_refresh: bool = False) -> dict[str, Any]:
     """Lấy dữ liệu nguồn gốc và mã checksum từ cache JSON hoặc sinh trực tiếp."""
-    if not force_refresh and PROVENANCE_JSON_PATH.is_file():
+    if False:  # Compute current checksums rather than trusting a cached verification.
         try:
             return json.loads(PROVENANCE_JSON_PATH.read_text(encoding="utf-8"))
         except Exception:

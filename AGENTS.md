@@ -85,15 +85,15 @@
   2. Tự động đối chiếu chéo (Cross-Reconcile): Xác nhận độ khớp số cùng kỳ (100% Match) và tính toán phần bù tăng trưởng ngày mới (+Net Add) nếu Excel có độ trễ ngày so với GA4 API.
   3. Tự động làm giàu (Enrichment): Gắn thêm W2A OneLink Clicks, URL Retention Matrix vào cơ cấu Hubs/Projects của Excel.
   4. Tự động đồng bộ hiệu suất biến động 7 ngày SERP (Gainers & Losers) vào `/report` và `/dashboard` qua `scripts/sync_7d_performance_report.py --no-push`.
-  5. Cập nhật đồng bộ vào Hubs `/dashboard` ([`web-data.json`](file:///Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/web-data.json) & [`summary.json`](file:///Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/summary.json)), Excel SSOT, Markdown SSOT và đẩy lên GitHub `main` qua REST API trong 8-10 giây.
+  5. Cập nhật đồng bộ vào Excel SSOT, Markdown SSOT và snapshot JSON nội bộ. Mặc định KHÔNG tự ý commit hay đẩy lên GitHub Hubs trừ khi người dùng yêu cầu rõ ràng với cờ `--push-hubs`.
   6. Xuất bản bảng Báo cáo Đối Soát & Hợp Nhất hoàn chỉnh trong 1 lượt trả lời duy nhất.
 - **Automated GA4 MTD Master Sync Rule (Trọn Gói 1 Lệnh - Fast Path):** Khi người dùng yêu cầu *"cập nhật số GA4"*, *"cập nhật GA4 MTD"*, *"lấy số GA4"*, AI Agent **BẮT BUỘC gọi ngay `./.venv/bin/python scripts/sync_ga4_master.py` (kèm `--mtd <ngày>` nếu có)**. Script chạy trọn gói trong 6-10 giây:
   1. Truy vấn trực tiếp GA4 Data API (Property 270743103) lấy số tổng thể, kênh Non-Paid vs. Paid, W2A OneLink clicks và bóc tách cơ cấu các Hub.
   2. Tự động tính toán Target Pacing, Forecast 31 ngày và tiến độ về đích.
-  3. Tự động ghi đồng bộ vào: Snapshot JSON, Hubs `/dashboard` ([`web-data.json`](file:///Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/web-data.json) & [`summary.json`](file:///Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/summary.json)), Excel SSOT và Markdown SSOT.
+  3. Tự động ghi đồng bộ vào: Snapshot JSON nội bộ, Excel SSOT và Markdown SSOT.
   4. Tự động đẩy lên Google Sheets Native SSOT qua Cloud Sheets API (Spreadsheet ID: `1JaaYv2MnDy-dfBdC3P-GMB6SFgjez2VowdjX9PjmPYU`), đồng bộ tệp Excel dự phòng trên Google Drive Desktop.
-  5. Tự động đồng bộ hiệu suất biến động 7 ngày SERP (Gainers & Losers, Clicks & Root Causes) vào Báo cáo Tuần (`/report`) và Dashboard (`/dashboard`) qua `scripts/sync_7d_performance_report.py --no-push`.
-  6. Tự động đẩy toàn bộ thay đổi lên GitHub Hubs (`main`) qua REST API.
+  5. Tự động đồng bộ hiệu suất biến động 7 ngày SERP (Gainers & Losers, Clicks & Root Causes) vào Báo cáo Tuần (`/report`) nội bộ.
+  6. Mặc định an toàn: Không tự ý đẩy lên GitHub Hubs (`main`) trừ khi có cờ `--push-hubs` rõ ràng.
   7. Trả về bảng kết quả hoàn chỉnh ngay lập tức trong 1 lượt trả lời duy nhất, tuyệt đối không chạy phân mảnh hay hỏi đi hỏi lại từng bước.
 - **Google Sheets Cloud-Native SSOT Rule (Spreadsheet ID `1JaaYv2MnDy-dfBdC3P-GMB6SFgjez2VowdjX9PjmPYU`):** Mọi thao tác cập nhật/đồng bộ số liệu hiệu suất Web Platform lên Google Sheets **BẮT BUỘC** trỏ trực tiếp qua Google Sheets API vào Spreadsheet ID **`1JaaYv2MnDy-dfBdC3P-GMB6SFgjez2VowdjX9PjmPYU`** (đường dẫn mở trên trình duyệt: [https://docs.google.com/spreadsheets/d/1JaaYv2MnDy-dfBdC3P-GMB6SFgjez2VowdjX9PjmPYU/edit?gid=1273714888#gid=1273714888](https://docs.google.com/spreadsheets/d/1JaaYv2MnDy-dfBdC3P-GMB6SFgjez2VowdjX9PjmPYU/edit?gid=1273714888#gid=1273714888)). Ghi trực tiếp Cloud-to-Cloud đảm bảo:
   1. Tự động lưu 100% lịch sử sửa đổi trong **Google Sheets Version History** (Tệp ➔ Lịch sử phiên bản).

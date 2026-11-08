@@ -187,7 +187,7 @@ def fetch_ga4_mtd(days):
         "total_w2a": sum(w2a_map.values())
     }
 
-def run_hybrid_sync(force_mtd=None, no_push=False):
+def run_hybrid_sync(force_mtd=None, push_hubs=False):
     start_time = time.time()
     print("=" * 80)
     print("KHỞI CHẠY HỆ THỐNG ĐỐI SOÁT & HỢP NHẤT DỮ LIỆU KÉP (HYBRID DATA SYNC)")
@@ -377,16 +377,17 @@ def run_hybrid_sync(force_mtd=None, no_push=False):
     except Exception as e:
         print(f"[Auto-7D-SERP] Lưu ý đồng bộ 7D SERP: {e}")
 
-    # 5. Push GitHub qua REST API
-    if not no_push:
-        print("[5/5] Tự động đẩy dữ liệu hợp nhất lên GitHub Hubs...")
+    # 5. Push GitHub qua REST API (Mặc định không đẩy trừ khi có push_hubs=True)
+    if push_hubs:
+        print("[5/5] Tự động đẩy dữ liệu hợp nhất lên GitHub Hubs (--push-hubs)...")
         push_script = BASE_DIR / "scripts" / "push_to_hubs_api.py"
         subprocess.run([
             sys.executable, str(push_script),
+            "--commit-local",
             "-m", f"data(hybrid-sync): reconcile Excel MTD {excel_days}d vs GA4 MTD {target_api_days}d ({api_latest['total_pv']:,} PV)"
         ], check=True)
     else:
-        print("[5/5] Chế độ no-push: Bỏ qua đẩy GitHub.")
+        print("[5/5] Mặc định an toàn (No-Push): Bỏ qua đẩy GitHub.")
 
     elapsed = time.time() - start_time
     print("=" * 80)
@@ -396,7 +397,7 @@ def run_hybrid_sync(force_mtd=None, no_push=False):
     print(f"- Trạng thái đối soát      : {reconciliation['status']}")
     if incremental_net_add > 0:
         print(f"- Phần bù ngày mới (Net add): +{incremental_net_add:,} PV (Cập nhật từ ngày {excel_days + 1} đến {target_api_days})")
-    print(f"- Dự phóng 31 ngày         : {forecast_31d:,.0f} PV ({forecast_pct}% Target {TARGET_OCT:,})")
+    print(f"- Dự báo 31 ngày           : {forecast_31d:,.0f} PV ({forecast_pct}% Target {TARGET_OCT:,})")
     print("=" * 80)
 
     return snapshot_payload
@@ -404,6 +405,6 @@ def run_hybrid_sync(force_mtd=None, no_push=False):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--mtd", type=int, default=None)
-    parser.add_argument("--no-push", action="store_true")
+    parser.add_argument("--push-hubs", action="store_true", default=False, help="Cho phép đẩy lên GitHub Hubs")
     args = parser.parse_args()
-    run_hybrid_sync(force_mtd=args.mtd, no_push=args.no_push)
+    run_hybrid_sync(force_mtd=args.mtd, push_hubs=args.push_hubs)

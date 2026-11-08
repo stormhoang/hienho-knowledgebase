@@ -71,8 +71,24 @@ def extract_json_metadata(file_path: Path) -> tuple[date | None, str | None, str
     try:
         raw = json.loads(file_path.read_text(encoding="utf-8"))
         if isinstance(raw, dict):
+            for key in ('data_as_of',):
+                d = parse_date_str(raw.get(key))
+                if d:
+                    return d, d.isoformat(), f'json_key:{key}'
+            dr = raw.get('date_range', {})
+            if isinstance(dr, dict):
+                d = parse_date_str(dr.get('end_date') or dr.get('end'))
+                if d:
+                    return d, f"{dr.get('start_date', dr.get('start', ''))} đến {d.isoformat()}", 'json:date_range.end'
+            if isinstance(raw.get('running'), dict):
+                run = raw['running']
+                try:
+                    d = date.fromisoformat(f"{run['month']}-{int(run['daysElapsed']):02d}")
+                    return d, f'MTD đến {d.isoformat()}', 'json:running.daysElapsed'
+                except (KeyError, ValueError, TypeError):
+                    pass
             # 1. Trường updated_at / generated_at / snapshot_date
-            for key in ("updated_at", "generated_at", "snapshot_date", "as_of"):
+            for key in ("snapshot_date", "as_of"):
                 if key in raw and isinstance(raw[key], str):
                     d = parse_date_str(raw[key])
                     if d:

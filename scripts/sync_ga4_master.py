@@ -272,7 +272,8 @@ def main():
     parser = argparse.ArgumentParser(description="Sync GA4 MTD All-In-One")
     parser.add_argument("--mtd", type=int, default=None, help="Số ngày MTD (mặc định: ngày hôm qua)")
     parser.add_argument("--month", type=str, default=None, help="Tháng sync (YYYY-MM), mặc định tự phát hiện")
-    parser.add_argument("--no-push", action="store_true", help="Không tự động push sang Hubs GitHub")
+    parser.add_argument("--push-hubs", action="store_true", default=False, help="Tường minh cho phép đẩy dữ liệu sang Hubs GitHub qua REST API (mặc định: False)")
+    parser.add_argument("--local-only", action="store_true", help="Chỉ cập nhật snapshot và Excel SSOT trong repo hiện tại")
     args = parser.parse_args()
 
     # Xác định tháng và số ngày MTD
@@ -305,18 +306,28 @@ def main():
     closed = days_elapsed >= days_in_month
     report_name = f"monthly_{month_val:02d}_{year_val}_consolidated.json" if closed else f"monthly_{month_val:02d}_{year_val}_mtd_{days_elapsed}d.json"
 
-    web_data_path = HUBS_REPO / "lib" / "dashboard" / "web-data.json"
-    if not web_data_path.exists():
-        sys.exit(f"Không thấy {web_data_path}: cần repo Hubs để lấy target tháng và ghi dashboard.")
-    with open(web_data_path, "r", encoding="utf-8") as f:
-        web_data = json.load(f)
-    target_pv = web_data.get("monthTargets", {}).get(month_str)
+    if args.local_only:
+        prior_snapshots = sorted((BASE_DIR / "07_REPORTS" / "data").glob(f"monthly_{month_val:02d}_{year_val}_mtd_*d.json"))
+        if not prior_snapshots:
+            sys.exit(f"Không có snapshot MTD {month_str} trong repo để lấy target tháng.")
+        with open(prior_snapshots[-1], "r", encoding="utf-8") as f:
+            prior_snapshot = json.load(f)
+        target_pv = prior_snapshot.get("target_pv")
+        hub_targets = {name: values.get("target") for name, values in prior_snapshot.get("hubs", {}).items()}
+    else:
+        web_data_path = HUBS_REPO / "lib" / "dashboard" / "web-data.json"
+        if not web_data_path.exists():
+            sys.exit(f"Không thấy {web_data_path}: cần repo Hubs để lấy target tháng và ghi dashboard.")
+        with open(web_data_path, "r", encoding="utf-8") as f:
+            web_data = json.load(f)
+        target_pv = web_data.get("monthTargets", {}).get(month_str)
     if not target_pv:
         print(f"⚠ Chưa có target {month_str} trong web-data.json monthTargets: bỏ qua các chỉ số % target.")
     # Target hub: lấy của tháng sync, chưa có thì dùng tháng gần nhất trước đó
-    hub_targets_all = web_data.get("hubTargets", {})
-    hub_target_month = max((m for m in hub_targets_all if m <= month_str), default=None)
-    hub_targets = hub_targets_all.get(hub_target_month, {}) if hub_target_month else {}
+    if not args.local_only:
+        hub_targets_all = web_data.get("hubTargets", {})
+        hub_target_month = max((m for m in hub_targets_all if m <= month_str), default=None)
+        hub_targets = hub_targets_all.get(hub_target_month, {}) if hub_target_month else {}
 
     print("=" * 75)
     print(f"KHỞI CHẠY PIPELINE GA4 ALL-IN-ONE (CHU KỲ: {start_date} -> {end_date})")
@@ -555,6 +566,17 @@ def main():
     with open(consolidated_path, "w", encoding="utf-8") as f:
         json.dump(snapshot_payload, f, ensure_ascii=False, indent=2)
 
+    if args.local_only:
+        bq_excel = BASE_DIR / "07_REPORTS" / "web_performance_tracking.xlsx"
+        if bq_excel.exists():
+            patch_excel_dynamic(
+                str(bq_excel), month_str, target_pv, days_elapsed, total_pv,
+                organic_pv, paid_pv, direct_pv, referral_pv, others_pv,
+                non_paid_pv, hubs_pv, cinema_sub,
+            )
+        print(f"Đã cập nhật dữ liệu MTD {month_str} đến ngày {days_elapsed} trong repo hiện tại: {total_pv:,} PV.")
+        return
+
     # 5.2 Web-data.json cho /dashboard
     months = web_data["months"]
     if month_str not in months:
@@ -726,23 +748,24 @@ def main():
     except Exception as e:
         print(f"[Auto-7D-SERP] Lưu ý đồng bộ 7D SERP: {e}")
 
-    # 6. Push GitHub REST API
-    if not args.no_push:
-        print("[6/6] Tự động đẩy dữ liệu sang GitHub Hubs qua REST API...")
+    # 6. Push GitHub REST API (Mặc định không đẩy trừ khi có --push-hubs)
+    if args.push_hubs:
+        print("[6/6] Tự động đẩy dữ liệu sang GitHub Hubs qua REST API (--push-hubs)...")
         push_script = BASE_DIR / "scripts" / "push_to_hubs_api.py"
         subprocess.run([
             sys.executable, str(push_script),
+            "--commit-local",
             "-m", f"data(ga4): automated all-in-one sync MTD {days_elapsed}d ({total_pv:,} PV)"
         ], check=True)
     else:
-        print("[6/6] Chế độ no-push: Bỏ qua đẩy GitHub.")
+        print("[6/6] Mặc định an toàn (No-Push): Bỏ qua đẩy GitHub Hubs.")
 
     elapsed = time.time() - start_time
     print("=" * 75)
     print(f"HOÀN THÀNH TOÀN BỘ PIPELINE TRONG {elapsed:.1f} GIÂY")
     target_txt = f"{target_pv:,} ({progress_pct}%)" if target_pv else "chưa có target"
     print(f"- Lũy kế MTD {month_str}: {total_pv:,} PV / Target: {target_txt}")
-    print(f"- Nhịp chạy : {daily_pace:,.0f} PV/ngày | Dự phóng {days_in_month}d: {forecast_31d:,.0f} ({forecast_pct}%)")
+    print(f"- Nhịp chạy : {daily_pace:,.0f} PV/ngày | Dự báo {days_in_month}d: {forecast_31d:,.0f} ({forecast_pct}%)")
     print(f"- Non-Paid  : {non_paid_pv:,} PV ({non_paid_pv/total_pv*100:.1f}%) | Paid: {paid_pv:,} PV ({paid_pv/total_pv*100:.1f}%)")
     print("=" * 75)
 
