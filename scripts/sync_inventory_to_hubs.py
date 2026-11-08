@@ -627,7 +627,7 @@ def _raw_tokens(text):
     text = unicodedata.normalize('NFC', (text or '').lower())
     out = []
     for w in text.split():
-        w = w.strip('.,;:!?()[]{}"\'/\\-–—“”‘’…&+*')
+        w = w.strip('.,;:!?()[]{}"\'/\\-\u2013\u2014“”‘’…&+*')
         if w:
             out.append(w)
     return out
@@ -845,67 +845,20 @@ def select_pillar_keyword(canonical_clusters, usecase_slug, usecase_name, raw_ke
 
 
 def build_adaptive_clusters(canonical_clusters, sector=None, usecase_slug=None, usecase_name=None, top_n_clusters=5):
+    """Gom cụm thích ứng 3 tầng (Adaptive Clustering v2): Intent -> Entity -> Residual.
+
+    Tự động bóc tách thực thể thương hiệu, triệt tiêu lỗi đổ rác vào rules[-1].
     """
-    Gom cụm các Canonical Leaders theo các nhóm thực thể chủ đạo chuẩn ngữ nghĩa phân tách theo Use Case hoặc Sector
-    """
-    clusters = defaultdict(list)
     rules = USECASE_SPECIFIC_RULES.get(usecase_slug) or SECTOR_SPECIFIC_RULES.get(sector, [])
-
-    for item in canonical_clusters:
-        kw = item['keyword'].lower()
-        matched = False
-        for rule in rules:
-            topic_name, triggers = rule[0], rule[1]
-            if any(tr in kw for tr in triggers):
-                clusters[topic_name].append(item)
-                matched = True
-                break
-        if not matched:
-            if rules:
-                # Nếu có rules cụ thể (use case hoặc sector), gom vào rule cuối (chủ đề mở rộng)
-                # để tránh sinh các cụm fallback generic bị trùng tên giữa các use case
-                clusters[rules[-1][0]].append(item)
-            else:
-                intent = item['intent']
-                suffix = f" {usecase_name}" if usecase_name else ""
-                intent_fallback_names = {
-                    'Tool/Calculator': f'Công cụ & Tra cứu{suffix}',
-                    'Commercial': f'So sánh & Đánh giá{suffix}',
-                    'Transactional': f'Đăng ký & Giao dịch{suffix}',
-                    'Informational': f'Cẩm nang & Hướng dẫn{suffix}',
-                    'Navigational': f'Cổng dịch vụ & Liên hệ{suffix}'
-                }
-                fb_name = intent_fallback_names.get(intent, f'Chủ đề liên quan{suffix}')
-                clusters[fb_name].append(item)
-
-    result_clusters = []
-    sorted_clusters = sorted(clusters.items(), key=lambda x: sum(k['total_cluster_volume'] for k in x[1]), reverse=True)
-
-    for cluster_name, items in sorted_clusters[:top_n_clusters]:
-        tot_vol = sum(k['total_cluster_volume'] for k in items)
-        top_kws = sorted(items, key=lambda x: (x['opportunity_score'], x['volume']), reverse=True)[:15]
-        result_clusters.append({
-            'cluster_name': cluster_name,
-            'count': len(items),
-            'total_volume': tot_vol,
-            'top_keywords': [
-                {
-                    'keyword': k['keyword'],
-                    'volume': k['volume'],
-                    'cluster_volume': k['total_cluster_volume'],
-                    'cpc': k.get('cpc', 0.0),
-                    'competition': k.get('competition', 'Low'),
-                    'kd': k.get('kd', calculate_kd(k.get('competition', 'Low'), k['volume'], k.get('cpc', 0.0))),
-                    'trending': k.get('trending', False),
-                    'intent': k['intent'],
-                    'score': k['opportunity_score'],
-                    'quadrant': k.get('quadrant', 'Supporting'),
-                    'secondary_synonyms': k.get('secondary_keywords', [])[:3]
-                } for k in top_kws
-            ]
-        })
-
-    return result_clusters
+    from scripts.lib.adaptive_clustering import build_adaptive_clusters_v2
+    return build_adaptive_clusters_v2(
+        canonical_clusters,
+        sector=sector,
+        usecase_slug=usecase_slug,
+        usecase_name=usecase_name,
+        rules=rules,
+        top_n_clusters=top_n_clusters
+    )
 
 def process_csv_paths(csv_paths, sector, canonical_slug):
     usecase_slug = canonical_slug
@@ -1242,16 +1195,16 @@ def main():
     qw_md_path = os.path.join(BASE_DIR, "07_REPORTS", "QUICK_WINS_PORTFOLIO.md")
     qw_md = f"""# DANH MỤC TỪ KHÓA QUICK WINS TOÀN WEB PLATFORM (HIGH ROI OPPORTUNITIES)
 
-Tập hợp các từ khóa có **Search Volume cao ($\\\\ge 1.500$) và Mức độ Cạnh tranh Thấp (Low PPC Competition)** trên toàn bộ {len(all_usecases)} Use Cases của Web Platform. Đây là các chủ đề ưu tiên P0 mang lại lưu lượng truy cập nhanh nhất với chi phí nội dung tối thiểu.
+Tập hợp các từ khóa có **Search Volume cao ($\\\\ge 1.500$) và Mức độ Cạnh tranh Thấp (Low PPC Competition)** trên toàn bộ {len(all_usecases)} Use Cases của Web Platform. Đây là các chủ đề ưu tiên hàng đầu mang lại lưu lượng truy cập nhanh nhất với chi phí nội dung tối thiểu.
 
 - **Tổng số từ khóa Quick Wins phát hiện:** {len(all_quick_wins):,} từ khóa
 - **Tổng dung lượng tìm kiếm Quick Wins:** {sum(x['volume'] for x in all_quick_wins):,} lượt/tháng
 
 ---
 
-## TOP 50 TỪ KHÓA QUICK WINS ƯU TIÊN SẢN XUẤT P0
+## TOP 50 TỪ KHÓA QUICK WINS ƯU TIÊN SẢN XUẤT HÀNG ĐẦU
 
-| STT | Từ Khóa Quick Win | Search Volume | Search Intent | Điểm Cơ Hội | Use Case | Phân Khối Ngành | Biến Thể Đồng Nghĩa Đã Gom Cụm |
+| STT | Từ Khóa Quick Win | Search Volume | Search Intent | Điểm Cơ Hội | Use Case | Khối Ngành | Biến Thể Đồng Nghĩa Đã Gom Cụm |
 | :---: | :--- | :---: | :---: | :---: | :--- | :--- | :--- |
 """
     for idx, qw in enumerate(all_quick_wins[:50], 1):
@@ -1420,7 +1373,7 @@ Dữ liệu được trích xuất, lọc nhiễu tự động và bảo vệ ch
                     shutil.rmtree(item_path)
                     print(f"Đã tự động xóa thư mục ngành mồ côi không còn trong inventory: {item_path}")
 
-        print(f"Đã phân rã và xuất bản thành công {chunk_count} Modular Chunks tại {modular_dir}/<sector>/<id>.json!")
+        print(f"Đã bóc tách chi tiết và xuất bản thành công {chunk_count} Modular Chunks tại {modular_dir}/<sector>/<id>.json!")
     else:
         print(f"Cảnh báo: Không tìm thấy hubs-momo tại {HUBS_REPO}")
 

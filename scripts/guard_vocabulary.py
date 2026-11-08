@@ -76,6 +76,14 @@ RULES = [
         "auto_fix": "cơ cấu",
     },
     {
+        "id": "PHAT_HANH_FEATURE",
+        "pattern": r"(?i)\b(phát\s+hành(\s+chính\s+thức)?\s+(lên\s+production|trên\s+production|trang|công\s+cụ|tính\s+năng|phase|giao\s+diện|tiện\s+ích|web)|kế\s+hoạch\s+phát\s+hành|sau\s+khi\s+phát\s+hành|sau\s+phát\s+hành)\b",
+        "flags": 0,
+        "desc": "Từ 'phát hành' là từ ngành báo chí/in ấn/vé số, không phải thuật ngữ Product",
+        "replacement": "Ra mắt (Launch), Chính thức Go-live, Triển khai lên Production (Deploy), hoặc Đưa vào hoạt động",
+        "auto_fix": "Go-live",
+    },
+    {
         "id": "TRAM_TAI_APP",
         "pattern": r"(?i)\btrạm\s+(tải\s+app|chuyển\s+đổi)\b",
         "flags": 0,

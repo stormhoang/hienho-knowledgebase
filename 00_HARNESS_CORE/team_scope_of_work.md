@@ -40,25 +40,26 @@ Tài liệu này xác lập ranh giới trách nhiệm, phạm vi đảm nhiệm
 
 ### 3. Hiếu Nguyễn (Back-end Team Lead)
 *   **Vị trí bàn:** Bàn 01
-*   **Dự án sở hữu:** Tracking Pipeline & Cung ứng API
+*   **Dự án sở hữu:** Quản trị API Toàn diện, Web Overall (Tìm Kiếm, Tải App), Database Liên thông & Tracking Pipeline
 *   **Phạm vi đảm nhiệm (In-scope):**
-    *   Trưởng nhóm Backend; bảo đảm tính toàn vẹn của luồng tracking (OneLink, GA4, GTM, Umami).
-    *   Đối soát dữ liệu truy cập và chuyển đổi với BigQuery SSOT; quản lý định danh người dùng đa nền tảng (Cross-platform Identity).
-    *   Hỗ trợ kiến trúc API cho Payment Hub và Financial Hub.
-*   **Không phụ trách (Out-of-scope):** Không viết component giao diện web, không chạy chiến dịch paid marketing.
-*   **Điểm bàn giao & Phối hợp:** Bàn giao tiêu chuẩn tracking và API cho FE dev; phối hợp cùng Data Analyst (Hải Huỳnh) đối soát số liệu báo cáo tuần/tháng.
+    *   **Quản trị API & Đầu mối Hạ tầng:** Đầu mối kỹ thuật trung tâm quản trị toàn bộ các API tích hợp hai chiều (từ ứng dụng MoMo vào Web và từ Web ra ngoài ứng dụng); trực tiếp làm việc với khối hạ tầng (Infra/DevOps) để thiết lập, vận hành và bảo đảm thông suốt luồng kết nối.
+    *   **Dự án Web Toàn trang (Web Overall):** Chịu trách nhiệm kỹ thuật backend cho các sản phẩm, trang chức năng tổng thể trên `momo.vn` gồm: Trang Tìm Kiếm (`/tim-kiem`), Trang Tải Ứng Dụng (`/tai-app`) và các cổng tiện ích dùng chung.
+    *   **Quản trị Cơ sở Dữ liệu Liên thông (Database Governance):** Quản trị và đồng bộ cấu trúc cơ sở dữ liệu xuyên suốt giữa MoSpark CMS, hệ thống Admin Tool và nền tảng MoSpark, bảo đảm tính toàn vẹn dữ liệu.
+    *   **Chuỗi Dữ liệu Tracking:** Bảo đảm tính toàn vẹn kỹ thuật của luồng đo lường (OneLink, GA4, GTM, Umami); đối soát dữ liệu truy cập và chuyển đổi với BigQuery SSOT; quản lý định danh người dùng đa nền tảng (Cross-platform Identity).
+*   **Không phụ trách (Out-of-scope):** Không viết component giao diện web Front-end, không chạy chiến dịch Paid Marketing, không trực tiếp biên tập nội dung bài viết.
+*   **Điểm bàn giao & Phối hợp:** Bàn giao API kết nối và tiêu chuẩn dữ liệu cho đội ngũ Front-end (Hùng, Nhật, Thuận, Trọng); phối hợp Lộc (DevOps Lead) về hạ tầng mạng; phối hợp Data Analyst đối soát số liệu báo cáo; nhận định hướng sản phẩm Web Overall trực tiếp từ Hiến.
 
 ---
 
 ### 4. Duy Trần (Senior Back-end Developer)
 *   **Vị trí bàn:** Bàn 01
-*   **Dự án sở hữu:** RAG Knowledge Base, Vé Số, BMC Campaign
+*   **Dự án sở hữu:** RAG Knowledgebase (Platform Chatbot) & Admin Tool BMC Webview
 *   **Phạm vi đảm nhiệm (In-scope):**
-    *   Lập trình backend và API cho Vé Số và các chiến dịch BMC (Ví Trả Sau, Vay Nhanh).
-    *   Xây dựng pipeline đồng bộ dữ liệu từ MoSpark sang hệ thống RAG Knowledge Base phục vụ tìm kiếm thông minh.
-    *   Backend API cho các microsite vệ tinh.
-*   **Không phụ trách (Out-of-scope):** Không quản lý hạ tầng máy chủ gốc (DevOps Lộc đảm nhiệm), không soạn thảo nội dung tri thức.
-*   **Điểm bàn giao & Phối hợp:** Nhận nội dung chuẩn từ Hoan/Hiến để nạp vào RAG; bàn giao API cho Front-end tích hợp.
+    *   **Về mặt Platform:** Quản trị toàn diện hệ thống RAG Knowledgebase phục vụ các dự án Chatbot cho toàn bộ các Dự án Chiến lược (Strategic Projects: Chatbot Cinema, Chatbot Phạt Nguội, v.v.).
+    *   **Công cụ Vận hành:** Cải tiến và tối ưu hóa Admin Tool cho khối BMC (Brand & Marketing Communications) để vận hành cấu hình Webview (luồng in/out App, deeplink, All-in-One Editor và cấu hình tham số `featureCode` mở ứng dụng).
+    *   Xây dựng backend API và pipeline đồng bộ dữ liệu tri thức từ MoSpark sang hệ thống RAG Knowledgebase; hỗ trợ backend cho Hub Vé Số.
+*   **Không phụ trách (Out-of-scope):** Không quản lý hạ tầng máy chủ gốc (DevOps Lộc đảm nhiệm), không trực tiếp sáng tạo nội dung tri thức (Hoan đảm nhiệm).
+*   **Điểm bàn giao & Phối hợp:** Nhận nội dung chuẩn từ Hoan/Hiến để nạp vào RAG Knowledgebase; bàn giao API Chatbot cho Front-end tích hợp; bàn giao và hỗ trợ Admin Tool cho khối BMC vận hành Webview in/out App.
 
 ---
 
@@ -85,7 +86,7 @@ Tài liệu này xác lập ranh giới trách nhiệm, phạm vi đảm nhiệm
 *   **Điểm bàn giao & Phối hợp:** 
     *   Tiếp nhận luồng sản phẩm trực tiếp từ Hiến (khi không qua Product Design) hoặc bản thiết kế UI/UX từ Tữ.
     *   Chịu trách nhiệm hoàn thiện giao diện và tính năng trên môi trường Staging.
-    *   Phối hợp cùng Hoan hoàn thiện đầy đủ Meta Data, bộ từ khóa SEO và Long Content chuẩn E-E-A-T trước khi phát hành lên Production.
+    *   Phối hợp cùng Hoan hoàn thiện đầy đủ Meta Data, bộ từ khóa SEO và Long Content chuẩn E-E-A-T trước khi triển khai lên Production.
     *   Bàn giao sản phẩm hoàn thiện cho Hiến ký duyệt Product Sign-off để chính thức Go-Live.
 
 ---

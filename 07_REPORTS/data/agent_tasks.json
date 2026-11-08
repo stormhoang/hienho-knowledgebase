@@ -44,25 +44,28 @@
       ]
     },
     {
-      "tenDauViec": "Vehicle Hub: Gỡ nút thử nghiệm để phát hành chính thức trang Gara (`/tien-ich-giao-thong/garage`)",
+      "tenDauViec": "Vehicle Hub: Vận hành hậu Go-Live trang Gara (`/tien-ich-giao-thong/garage`), làm sạch dữ liệu 28 gara lỗi và gắn vào phễu Bảo hiểm",
       "duAn": "Vehicle Hub",
       "nguoiPhuTrach": "Thuận",
       "vaiTro": "Senior Front-end",
       "banLamViec": "Bàn 01",
       "nguoiDieuPhoi": "Hiến Hồ (Web Product Lead)",
       "trangThai": "Đang thực hiện",
-      "mucTieu": "",
-      "viecCanLam": "Gỡ nút thử nghiệm để phát hành chính thức trang Gara (`/tien-ich-giao-thong/garage`); chạy lại 28 gara đối tác báo lỗi và rà soát 10 nhóm gara trùng tên/địa chỉ.",
+      "mucTieu": "Trang Gara đã Go-Live chính thức trên Production; hoàn thiện chất lượng dữ liệu và nhúng vào phễu mua bảo hiểm vật chất xe.",
+      "viecCanLam": "Chạy lại dữ liệu cho 28 gara đối tác báo lỗi; rà soát xử lý 10 nhóm gara trùng tên/địa chỉ; gắn công cụ danh sách gara theo đối tác bảo hiểm vào luồng mua bảo hiểm ô tô (`/bao-hiem-o-to/vat-chat-xe`).",
       "phoiHop": "Phối hợp **BU Phụ trách Dịch vụ Xe / Giao thông** duyệt phương án gộp các gara trùng lặp và gắn công cụ danh sách gara vào luồng mua bảo hiểm ô tô.",
-      "dieuKienGoLive": "Bắt buộc có Meta Data, SEO keyword, Long Content từ Hoan và ký duyệt Product Sign-off từ Hiến trước khi Go-Live Production.",
-      "thoiGianCapNhat": "07/11/2026 18:39",
+      "dieuKienGoLive": "Trang đã Go-Live trên Production (momo.vn/tien-ich-giao-thong/garage); tiếp tục tối ưu dữ liệu đối tác.",
+      "thoiGianCapNhat": "08/11/2026 09:36",
       "nhatKyXuLy": [
         "[07/11/2026 18:39] Hiến Hồ giao việc và làm rõ phạm vi kết quả mong đợi.",
+        "[08/11/2026 09:36] Xác nhận trang Gara đã Go-Live Production; chuyển trọng tâm sang làm sạch dữ liệu đối tác và nhúng vào phễu bảo hiểm."
+      ]
+    },
         "[07/11/2026 18:39] Thuận đã tiếp nhận và đang triển khai tại Bàn 01."
       ]
     },
     {
-      "tenDauViec": "Insurtech Hub: Phát hành chính thức công cụ mức khấu trừ lên trang `/bao-hiem-o-to/vat-chat-xe`",
+      "tenDauViec": "Insurtech Hub: Chính thức Go-live công cụ mức khấu trừ lên trang `/bao-hiem-o-to/vat-chat-xe`",
       "duAn": "Insurtech Hub",
       "nguoiPhuTrach": "Hiến",
       "vaiTro": "Web Product Lead · Điều phối",
@@ -70,7 +73,7 @@
       "nguoiDieuPhoi": "Hiến Hồ (Web Product Lead)",
       "trangThai": "Đang thực hiện",
       "mucTieu": "",
-      "viecCanLam": "Phát hành chính thức công cụ mức khấu trừ lên trang `/bao-hiem-o-to/vat-chat-xe`; hoàn thiện nội dung text các khối trên trang chủ Bảo hiểm.",
+      "viecCanLam": "Chính thức Go-live công cụ mức khấu trừ lên trang `/bao-hiem-o-to/vat-chat-xe`; hoàn thiện nội dung text các khối trên trang chủ Bảo hiểm.",
       "phoiHop": "Phối hợp **BU Bảo hiểm (Insurtech)** duyệt nội dung text trang chủ [momo.vn/bao-hiem](https://www.momo.vn/bao-hiem) và xác nhận mức % giảm phí của từng nấc khấu trừ.",
       "dieuKienGoLive": "",
       "thoiGianCapNhat": "07/11/2026 18:39",
@@ -141,8 +144,8 @@
       "banLamViec": "Bàn 01",
       "nguoiDieuPhoi": "Hiến Hồ (Web Product Lead)",
       "trangThai": "Đang thực hiện",
-      "mucTieu": "Nghiệm thu và phát hành Phase 2 lên Production đúng hạn (02/11/2026); rút ngắn 50% thời gian biên tập cho khối BMC nhờ hợp nhất màn hình soạn thảo; loại bỏ triệt để lỗi mất nút mở ứng dụng (App Open CTA) do quên cấu hình tham số `featureCode` / deeplink.",
-      "viecCanLam": "Tiến hành build Production Phase 2 vào ngày 02/11/2026; theo dõi vận hành sau phát hành và giám sát độ ổn định của All-in-One Editor.",
+      "mucTieu": "Nghiệm thu và triển khai Phase 2 lên Production đúng hạn (02/11/2026); rút ngắn 50% thời gian biên tập cho khối BMC nhờ hợp nhất màn hình soạn thảo; loại bỏ triệt để lỗi mất nút mở ứng dụng (App Open CTA) do quên cấu hình tham số `featureCode` / deeplink.",
+      "viecCanLam": "Tiến hành build Production Phase 2 vào ngày 02/11/2026; theo dõi vận hành sau Go-live và giám sát độ ổn định của All-in-One Editor.",
       "phoiHop": "Phối hợp **Khối BMC (Brand & Marketing Communications)** và các **Cell Team** nghiệm thu thực tế, hướng dẫn sử dụng các khối nội dung In-App mới và tiếp nhận phản hồi cải tiến.",
       "dieuKienGoLive": "",
       "thoiGianCapNhat": "07/11/2026 18:39",
@@ -214,7 +217,7 @@
       "nguoiDieuPhoi": "Hiến Hồ (Web Product Lead)",
       "trangThai": "Đang thực hiện",
       "mucTieu": "Nâng cấp thanh điều hướng trang chủ momo.vn lên chuẩn Navigation 2 tầng mới của MoBase Design System; cho phép cấu hình linh hoạt menu chính, menu phụ, icon dịch vụ và banner chiến dịch từ MoSpark CMS mà không cần can thiệp code.",
-      "viecCanLam": "Kiểm tra tính tương thích, responsive và hiệu năng trên môi trường Staging ([momo-stg.mservice.io](https://momo-stg.mservice.io/)); chuẩn bị kế hoạch phát hành lên trang chủ chính thức.",
+      "viecCanLam": "Kiểm tra tính tương thích, responsive và hiệu năng trên môi trường Staging ([momo-stg.mservice.io](https://momo-stg.mservice.io/)); chuẩn bị kế hoạch triển khai lên trang chủ chính thức.",
       "phoiHop": "Phối hợp **Web Platform** và **Design System Team (MoBase)** review giao diện và trải nghiệm điều hướng trước khi On Production.",
       "dieuKienGoLive": "",
       "thoiGianCapNhat": "07/11/2026 18:39",
