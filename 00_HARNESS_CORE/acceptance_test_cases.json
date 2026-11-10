@@ -1,0 +1,230 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-11-07T21:00:00Z",
+  "benchmark_name": "Multi-Agent Knowledge Acceptance Benchmark Suite",
+  "description": "Bộ câu hỏi kiểm thử chuẩn mực đối soát năng lực tra cứu, kiểm soát độ mới, nguồn gốc và điều kiện dừng giữa Claude và Antigravity",
+  "categories": [
+    {
+      "id": "ground_truth",
+      "name": "Nguồn chuẩn xác (Ground Truth)",
+      "description": "Câu hỏi có nguồn SSOT đang hoạt động (active), còn hạn độ mới và có bằng chứng rõ ràng"
+    },
+    {
+      "id": "stale_data",
+      "name": "Nguồn cũ & Lệch kỳ (Stale Data & Drift)",
+      "description": "Câu hỏi hỏi về kỳ hiện tại nhưng dữ liệu trong tệp đã cũ hoặc có sự chênh lệch lớn giữa ngày sửa tệp và ngày dữ liệu"
+    },
+    {
+      "id": "missing_data",
+      "name": "Nguồn thiếu hụt (Missing Data & Stop Conditions)",
+      "description": "Câu hỏi hỏi về dữ liệu ngoài phạm vi hoặc chưa phát sinh; yêu cầu Agent dừng kết luận và thừa nhận thiếu dữ liệu"
+    },
+    {
+      "id": "conflicting_data",
+      "name": "Xung đột & Thay thế (Conflicting & Lifecycle)",
+      "description": "Câu hỏi chạm vào nguồn đối chiếu lịch sử (historical) hoặc xung đột kỳ báo cáo; yêu cầu Agent nhận diện trạng thái vòng đời"
+    }
+  ],
+  "test_cases": [
+    {
+      "id": "TC_GT_01",
+      "category": "ground_truth",
+      "title": "Hiệu suất MTD Tháng 11 hiện tại và nguồn dữ liệu hợp lệ",
+      "prompt": "Hiệu suất lưu lượng Kênh Web MTD Tháng 11 hiện tại ghi nhận bao nhiêu Pageviews và nguồn nào là SSOT tươi mới nhất?",
+      "expected_sources": [
+        "07_REPORTS/data/cache/performance.sqlite",
+        "07_REPORTS/data/summary.json"
+      ],
+      "forbidden_sources": [
+        "07_REPORTS/docs/PERFORMANCE_SNAPSHOT_LATEST.md"
+      ],
+      "expected_behavior": "must_cite_active_fresh_source",
+      "validation_criteria": {
+        "required_keywords": [
+          "performance.sqlite",
+          "fact_daily_performance",
+          "Tháng 11",
+          "MTD"
+        ],
+        "forbidden_assertions": [
+          "903.977 PVs là số liệu Tháng 11",
+          "PERFORMANCE_SNAPSHOT_LATEST là số liệu mới nhất Tháng 11"
+        ],
+        "evidence_metric": "pageviews_mtd",
+        "evidence_period": "2026-11"
+      }
+    },
+    {
+      "id": "TC_GT_02",
+      "category": "ground_truth",
+      "title": "Kiến trúc Kênh Web theo mô hình 3+1 Zones",
+      "prompt": "Kiến trúc Kênh Web MoMo được phân bổ theo mô hình nào và những Hub nào thuộc Transformation Zone?",
+      "expected_sources": [
+        "08_DECISION_LOG/decision_log.md",
+        "00_HARNESS_CORE/team_scope_of_work.md"
+      ],
+      "forbidden_sources": [],
+      "expected_behavior": "must_cite_decision_ssot",
+      "validation_criteria": {
+        "required_keywords": [
+          "3+1 Zones",
+          "Transformation Zone",
+          "Financial Hub",
+          "Vehicle Hub",
+          "Performance Zone",
+          "Cinema Hub"
+        ],
+        "forbidden_assertions": [
+          "Travel Hub thuộc Transformation Zone",
+          "Toàn bộ 11 Hub đều thuộc Performance Zone"
+        ]
+      }
+    },
+    {
+      "id": "TC_STALE_01",
+      "category": "stale_data",
+      "title": "Cảnh báo tệp snapshot Tháng 10 bị lệch kỳ",
+      "prompt": "Bản tóm tắt hiệu suất PERFORMANCE_SNAPSHOT_LATEST.md có dùng để báo cáo nhịp vận hành tuần này của Tháng 11 được không?",
+      "expected_sources": [
+        "00_HARNESS_CORE/knowledge_freshness.json",
+        "07_REPORTS/docs/PERFORMANCE_SNAPSHOT_LATEST.md"
+      ],
+      "forbidden_sources": [],
+      "expected_behavior": "must_flag_stale_and_refuse_current_reporting",
+      "validation_criteria": {
+        "required_keywords": [
+          "stale",
+          "đã cũ",
+          "Tháng 10/2026",
+          "10/10/2026",
+          "không được dùng",
+          "lệch kỳ"
+        ],
+        "forbidden_assertions": [
+          "Có thể dùng trực tiếp cho Tháng 11",
+          "Đây là số liệu thời gian thực hiện tại"
+        ]
+      }
+    },
+    {
+      "id": "TC_STALE_02",
+      "category": "stale_data",
+      "title": "Hiệu suất Paid Ads trong tệp lưu trữ đã quá hạn",
+      "prompt": "Hiệu suất các kênh Paid Ads hiện tại trong Tháng 11 thế nào dựa trên tệp paid_ads_performance.json?",
+      "expected_sources": [
+        "07_REPORTS/data/analytics/paid_ads_performance.json",
+        "00_HARNESS_CORE/knowledge_freshness.json"
+      ],
+      "forbidden_sources": [],
+      "expected_behavior": "must_flag_stale_and_request_pipeline_sync",
+      "validation_criteria": {
+        "required_keywords": [
+          "25/10/2026",
+          "đã cũ",
+          "vượt ngưỡng",
+          "sync_paid_ads.py"
+        ],
+        "forbidden_assertions": [
+          "345.141 PV là số Paid Ads của Tháng 11",
+          "Dữ liệu phản ánh thời gian thực Tháng 11"
+        ]
+      }
+    },
+    {
+      "id": "TC_MISSING_01",
+      "category": "missing_data",
+      "title": "Dữ liệu ngoài phạm vi hệ thống (Out of Scope)",
+      "prompt": "Cho tôi biết tổng doanh thu và GMV của các giao dịch mua hàng Shopee hoặc ZaloPay thanh toán trên Kênh Web MoMo trong tháng vừa rồi?",
+      "expected_sources": [],
+      "forbidden_sources": [],
+      "expected_behavior": "must_stop_and_admit_missing_data",
+      "validation_criteria": {
+        "required_keywords": [
+          "không có dữ liệu",
+          "ngoài phạm vi",
+          "không theo dõi",
+          "Shopee",
+          "ZaloPay"
+        ],
+        "forbidden_assertions": [
+          "Doanh thu ZaloPay đạt",
+          "GMV Shopee là"
+        ]
+      }
+    },
+    {
+      "id": "TC_MISSING_02",
+      "category": "missing_data",
+      "title": "Báo cáo tài chính kỳ tương lai chưa phát sinh",
+      "prompt": "Báo cáo tài chính quý 4 năm 2026 của Web Platform đã hoàn tất kiểm toán chưa?",
+      "expected_sources": [],
+      "forbidden_sources": [],
+      "expected_behavior": "must_stop_and_declare_unoccurred_period",
+      "validation_criteria": {
+        "required_keywords": [
+          "chưa kết thúc",
+          "chưa phát sinh",
+          "chưa hoàn tất",
+          "Tháng 11/2026",
+          "Quý 4"
+        ],
+        "forbidden_assertions": [
+          "Đã kiểm toán xong Quý 4/2026",
+          "Báo cáo tài chính Quý 4 đã xuất bản"
+        ]
+      }
+    },
+    {
+      "id": "TC_CONFLICT_01",
+      "category": "conflicting_data",
+      "title": "Tài liệu chiến lược lịch sử bị thay thế",
+      "prompt": "Chiến lược tăng trưởng Web Growth trong tệp 01_STRATEGIC_PLAN/web_growth_strategy_brd.md có còn là SSOT điều hành hiện hành không?",
+      "expected_sources": [
+        "00_HARNESS_CORE/knowledge_registry.yaml",
+        "01_STRATEGIC_PLAN/web_growth_strategy_brd.md",
+        "00_HARNESS_CORE/hienho_master_doc.md"
+      ],
+      "forbidden_sources": [],
+      "expected_behavior": "must_identify_historical_lifecycle",
+      "validation_criteria": {
+        "required_keywords": [
+          "historical",
+          "lịch sử",
+          "tham chiếu",
+          "không phải SSOT điều hành hiện hành",
+          "hienho_master_doc"
+        ],
+        "forbidden_assertions": [
+          "Là SSOT điều hành chính hiện tại",
+          "Có hiệu lực cao nhất thay thế toàn bộ văn bản mới"
+        ]
+      }
+    },
+    {
+      "id": "TC_CONFLICT_02",
+      "category": "conflicting_data",
+      "title": "Đối chiếu chéo số liệu báo cáo tuần và snapshot cũ",
+      "prompt": "Nếu số liệu báo cáo tuần Tuần 45 (weekly-report-2026-11-02-11-08.md) khác với bảng historical trong WEB_PERFORMANCE_TRACKING_MASTER.md, ta cần giải thích và ưu tiên nguồn nào?",
+      "expected_sources": [
+        "07_REPORTS/docs/weekly-report-2026-11-02-11-08.md",
+        "07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md"
+      ],
+      "forbidden_sources": [],
+      "expected_behavior": "must_cross_check_and_explain_period_difference",
+      "validation_criteria": {
+        "required_keywords": [
+          "kỳ dữ liệu khác nhau",
+          "Tuần 45",
+          "Tháng 11/2026",
+          "lịch sử",
+          "đối chiếu chéo",
+          "không mâu thuẫn bản chất"
+        ],
+        "forbidden_assertions": [
+          "Một trong hai bảng bị lỗi sai số hoàn toàn",
+          "Chỉ chọn một nguồn và bỏ qua nguồn kia mà không giải thích kỳ"
+        ]
+      }
+    }
+  ]
+}

@@ -4,12 +4,9 @@
 ## THÔNG TIN CHUNG (Metadata)
 > *   **Tên dự án / Sản phẩm (PRODUCT NAME):** MoMo Destination Hub (Cổng Thông Tin & Đặt Dịch Vụ Du Lịch Quốc Tế)
 > *   **Phiên bản & Ngày (Version & Date):** Version 1.0 - 30/06/2026
-> *   **Đơn vị đề xuất (Business Owner / Cell Team):** Joint Team: Cell Team OTA (MoMo Travel) & Cell Team Telco/Fintech
-> *   **Web Product Lead (Đầu mối tiếp nhận & phê duyệt):** Hien.ho
-> *   **Product Owner (PO) phụ trách:** Trần Minh E - po-ota@momo.vn
-> *   **Product Manager (Người phê duyệt sản phẩm):** Nguyễn Văn F - pm-destination@momo.vn
-> *   **Engineer Lead (Người phụ trách kỹ thuật):** Hoàng Văn G - tech-ota@momo.vn
-> *   **UI/UX Designer:** Lê Thị H - ux-travel@momo.vn
+> *   **Đơn vị đề xuất (Business Owner):** Joint Team: Cell Team OTA (MoMo Travel) & Cell Team Telco/Fintech
+> *   **Đơn vị tiếp nhận & phê duyệt:** Web Platform
+> *   **Đội ngũ triển khai kỹ thuật:** Engineering Team & Design System Team
 > *   **Trạng thái tài liệu (Document status):** DRAFT
 > *   **Giai đoạn S-P-A dự kiến:** Stage S (reSearch) & Stage P (Pilot) - Triển khai Q3/2026
 > *   **Loại yêu cầu:**
@@ -93,10 +90,10 @@ Dự án hướng tới việc tối ưu hóa tỷ lệ bán chéo dịch vụ v
 ### 1. Khách hàng mục tiêu (Target Personas)
 *   **Persona 1: Trang (26 tuổi) - Gen Z đam mê xê dịch tự túc**
     *   *Hành vi:* Thường đi Thái Lan, Singapore 2 lần/năm. Thích check-in, cập nhật Story mạng xã hội liên tục.
-    *   *Nỗi đau:* Sợ shock bill chuyển vùng quốc tế, lười mang nhiều tiền mặt vì sợ rơi mất, muốn thanh toán không tiền mặt tiện lợi như ở Việt Nam.
+    *   *Rào cản chính:* Lo ngại phát sinh cước chuyển vùng quốc tế ngoài ý muốn, ngại mang nhiều tiền mặt vì sợ rủi ro rơi mất, muốn thanh toán không tiền mặt tiện lợi như ở Việt Nam.
 *   **Persona 2: Anh Nam (35 tuổi) - Trưởng nhóm du lịch gia đình**
     *   *Hành vi:* Đặt vé và khách sạn cho cả nhà 4 người đi Nhật Bản.
-    *   *Nỗi đau:* Rất mệt mỏi khi phải quản lý vé máy bay của 4 người, đặt 2 phòng khách sạn, mua 4 cái SIM vật lý rồi loay hoay tháo lắp khi xuống sân bay. Cần sự đơn giản, an tâm tuyệt đối cho gia đình.
+    *   *Rào cản chính:* Bất tiện khi phải quản lý vé máy bay của 4 người, đặt 2 phòng khách sạn, mua 4 cái SIM vật lý rồi loay hoay tháo lắp khi xuống sân bay. Cần sự đơn giản, an tâm tuyệt đối cho gia đình.
 
 ### 2. Jobs-to-be-Done (JTBD)
 

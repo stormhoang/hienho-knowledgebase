@@ -1,0 +1,16 @@
+{
+  "reviewed_at": "2026-11-07",
+  "mode": "observe",
+  "scope": "10 internal reference occurrences remaining after initial cleanup",
+  "items": [
+    {"reference": "data/seo-clusters/index.json", "disposition": "downstream_export", "evidence": "scripts/sync_inventory_to_hubs.py:1318 documents modular export", "next_action": "Validate downstream only when repository access is authorized"},
+    {"reference": "Member/trong.md", "disposition": "missing_unresolved", "evidence": "Referenced by master document; no matching file in repository file inventory", "next_action": "Source owner must identify or restore original OKR document; team scope is not an equivalent replacement"},
+    {"reference": "03_SKILLS/momo-merchant-page-prompt.md", "disposition": "missing_unresolved", "evidence": "SEO SOP references prompt; no matching file in repository file inventory", "next_action": "Recover original prompt or explicitly retire dependency with content owner"},
+    {"reference": "03_SKILLS/momo-blog-prompt-1-outline.md", "disposition": "missing_unresolved", "evidence": "SEO SOP references outline prompt; no matching file in repository file inventory", "next_action": "Recover original prompt or explicitly retire dependency with content owner"},
+    {"reference": "07_REPORTS/sheets/web_performance_tracking_framework.xlsx", "disposition": "missing_unresolved", "evidence": "Reporting framework references workbook; no matching filename in repository file inventory", "next_action": "Identify original workbook; CSV template does not establish workbook equivalence"},
+    {"reference": "05_HUBS/vehicle-hub-navigation.md", "disposition": "historical_reference_unresolved", "evidence": "Vehicle BRD changelog v8.30 records creation; no matching filename in repository file inventory", "next_action": "Preserve changelog; locate original document before adding replacement link"},
+    {"reference": "data/content-plan-data.json", "disposition": "downstream_candidate_unverified", "evidence": "KEYWORD_REALLOCATION_REVIEW section 4 describes silo plan edits", "next_action": "Determine producing system before treating as missing local input"},
+    {"reference": "lib/dashboard/web-data.json", "occurrences": 2, "disposition": "downstream_reference", "evidence": "Dashboard architecture and intake documentation describe destination data", "next_action": "Keep separate from local missing sources; external target not inspected"},
+    {"reference": "05_HUBS/vehicle-hub-brd.md", "disposition": "fixed", "target": "05_HUBS/vehicle/vehicle-hub-brd.md", "evidence": "Existing Vehicle Hub BRD matches referenced domain; link corrected in web-identity-mapping-prd.md"}
+  ]
+}

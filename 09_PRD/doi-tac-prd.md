@@ -3,31 +3,31 @@
 > - **Use Case:** Merchant Pages
 > - **Main URL:** momo.vn/merchant / momo.vn/merchant/{slug}
 > - **BRD Ref:** 06_USE_CASE_MOMO/doi-tac-brd.md
-> - **Owner:** Web Product Lead (Hiến)
-> - **Engineering Lead:** Nhật
-> - **Architecture:** Hoài Anh (MoSpark integration)
+> - **Owner:** Web Platform
+> - **Engineering Lead:** Web Platform Engineering Team
+> - **Architecture:** Platform Architecture Team (MoSpark integration)
 > - **Version:** 0.3 - 2026-06-10
-> - **Status:** [PHASE I COMPLETED] - Pilot 39 merchants LIVE. Luồng Auto-creation & UI Templates DONE. Bàn giao Listing cho Nhật.
+> - **Status:** [Giai đoạn 1 Hoàn Thành] - Thử nghiệm 39 đối tác chính thức. Luồng tự động tạo trang và giao diện chuẩn đã hoàn tất. Bàn giao phân trang danh mục.
 
 ---
 
-## 1. Overview
+## 1. Tổng Quan Dự Án
 
-### 1.1 Problem Statement
+### 1.1 Khái Quát Vấn Đề
 
-85K organic traffic/quý đang đổ vào 2 legacy systems không có conversion goal:
-- `/thanh-toan-momo-{merchant}` (18K/quý): content outdated 5-7 năm, không có O2O angle
-- `/page/{id}` (67K/quý): thin content, thông tin sai (quán đóng cửa), crawl budget waste
+Lưu lượng tự nhiên 85.000 lượt truy cập/quý đang đổ về 2 hệ thống cũ nhưng không có mục tiêu chuyển đổi cụ thể:
+- `/thanh-toan-momo-{merchant}` (18.000 lượt/quý): Nội dung đã lỗi thời 5-7 năm, thiếu luồng kết nối từ Web sang cửa hàng thực tế (O2O).
+- `/page/{id}` (67.000 lượt/quý): Nội dung sơ sài, thông tin sai lệch (nhiều quán đã đóng cửa), gây lãng phí tài nguyên thu thập dữ liệu của công cụ tìm kiếm.
 
-User search "{Merchant} có nhận Ví Trả Sau không" là nhóm highest purchase intent - đã chọn merchant, đã chọn payment method, chỉ cần xác nhận. Không có trang nào serve được intent này ở cấp merchant cụ thể.
+Nhóm người dùng tìm kiếm cụm từ "{Tên đối tác} có nhận Ví Trả Sau không" là nhóm khách hàng có ý định mua sắm cao nhất: đã chọn xong điểm bán, đã chọn phương thức thanh toán, chỉ cần xác nhận trước khi đến. Tuy nhiên, hiện tại chưa có trang đích nào đáp ứng chính xác nhu cầu này cho từng đối tác cụ thể.
 
-Phía SME: merchant nhỏ hoàn toàn vô hình trên Google Search và AI engine. Không có website, không có ngân sách digital marketing, không có điểm tiếp xúc digital với khách ngoài mạng xã hội cá nhân.
+Về phía doanh nghiệp vừa và nhỏ (SME): Các hộ kinh doanh nhỏ gần như chưa có hiện diện trực tuyến (Digital Presence) trên Google Search và các công cụ AI. Họ không có website riêng, không có ngân sách tiếp thị số, và thiếu điểm chạm trực tuyến với khách hàng ngoài mạng xã hội cá nhân.
 
-### 1.2 Objective
+### 1.2 Mục Tiêu Dự Án
 
-Biến `momo.vn/merchant/{slug}` thành **SME Digital Presence product** - không phải trang thông tin - phục vụ đồng thời 2 jobs: (1) SME có Digital Presence miễn phí trên Search + AI, (2) Consumer xác nhận và kích hoạt O2O trong 3 bước.
+Chuyển đổi `momo.vn/merchant/{slug}` thành **Nền tảng Hiện diện Số cho Doanh nghiệp (SME Digital Presence)**: không chỉ là trang thông tin tĩnh, mà giải quyết đồng thời 2 mục tiêu: (1) Cung cấp sự hiện diện số miễn phí cho đối tác trên Google Search và công cụ AI, (2) Giúp người tiêu dùng xác nhận thông tin và kích hoạt luồng kết nối O2O trong 3 bước thuận tiện.
 
-**Primary objective:** Convert 85K legacy traffic thành O2O activation sessions; onboard SME vào ecosystem Soundbox + VTS thông qua Digital Presence miễn phí.
+**Mục tiêu cốt lõi:** Chuyển đổi 85.000 lượt truy cập cũ thành các phiên kích hoạt O2O thực tế; tiếp cận và đưa đối tác SME vào hệ sinh thái Soundbox và Ví Trả Sau MoMo thông qua giải pháp hiện diện số miễn phí.
 
 **Success metrics:**
 
@@ -204,7 +204,7 @@ Khách scan QR tại quầy / Soundbox
 - [ ] **Hiển thị đúng trên mobile:** responsive, primary breakpoint 375px.
 - [ ] **Schema LocalBusiness inject đầy đủ:** name, address, telephone (lưu ý schema khai báo số điện thoại đầy đủ để bot cào, nhưng frontend render ẩn), openingHours, geo coordinates.
 
-**Priority:** P0
+**Hạng mục:** Thiết yếu (Giai đoạn 1)
 
 **Notes:** NAP sai = direct trust damage + LocalBusiness schema invalid = mất GEO citation. Không cho phép edit thủ công field này.
 
@@ -221,7 +221,7 @@ Khách scan QR tại quầy / Soundbox
 - [ ] Không có badge = không hiển thị section (không để trống gây nhầm lẫn)
 - [ ] Click VTS badge -> scroll to VTS module (smooth scroll)
 
-**Priority:** P0
+**Hạng mục:** Thiết yếu (Giai đoạn 1)
 
 **Notes:** VTS badge là YMYL - sai data = legal risk. Gate cứng với PO VTS verification.
 
@@ -242,7 +242,7 @@ Khách scan QR tại quầy / Soundbox
 - [ ] **Soundbox CTA:** **[TẠM HOÃN / SHELVED]** (Hiện tại chưa triển khai gì về Soundbox trên Web).
 - [ ] Module nào không đủ điều kiện hiển thị thì ẩn hoàn toàn (không placeholder)
 
-**Priority:** P0
+**Hạng mục:** Thiết yếu (Giai đoạn 1)
 
 ---
 
@@ -258,7 +258,7 @@ Khách scan QR tại quầy / Soundbox
 - [ ] FAQPage Schema inject với `mainEntity` array
 - [ ] Không duplicate generic FAQ từ trang khác (content unique per merchant)
 
-**Priority:** P0 (bắt buộc cho GEO citation + AI Overview eligibility)
+**Hạng mục thiết yếu:** Bắt buộc cho GEO citation và AI Overview eligibility
 
 ---
 
@@ -275,7 +275,7 @@ Khách scan QR tại quầy / Soundbox
 - [ ] UTM structure: `utm_source=web&utm_medium=organic&utm_campaign=merchant-page&utm_content={merchant_id}`
 - [ ] Sticky CTA bar trên mobile (bottom of viewport) khi user scroll qua hero section
 
-**Priority:** P0
+**Hạng mục:** Thiết yếu (Giai đoạn 1)
 
 ---
 
@@ -297,7 +297,7 @@ Khách scan QR tại quầy / Soundbox
 - [ ] Dynamic Filters: Tỉnh/TP, Quận/Huyện, "Có nhận VTS", "Đang có Cashback"
 - [ ] Top Merchants module (by rating / transaction volume)
 
-**Priority:** P1 (Phase I basic), P2 (Phase II full)
+**Triển khai:** Giai đoạn 1 cơ bản, Giai đoạn 2 nâng cao
 
 ---
 
@@ -328,7 +328,7 @@ Khách scan QR tại quầy / Soundbox
   * Listing POI / Địa điểm: `Trang chủ > Tìm đối tác > {Tỉnh} > {Quận} > {Tên Địa Điểm}`
 - [ ] **Internal linking mesh:** cross-link giữa Hub, Listing pages (admin & POIs), và Merchant Detail pages.
 
-**Priority:** P2 (Phase II)
+**Triển khai:** Giai đoạn 2
 
 ---
 
@@ -344,7 +344,7 @@ Khách scan QR tại quầy / Soundbox
 - [ ] Không để trạng thái: cả redirect lẫn sitemap cùng tồn tại
 - [ ] GSC: verify coverage report sau 2 tuần live
 
-**Priority:** P0
+**Hạng mục:** Thiết yếu (Giai đoạn 1)
 
 ---
 
@@ -440,7 +440,7 @@ graph TD
   - **Cảnh báo Vàng (Yellow Alert):** Hiển thị dạng chú thích (tooltip/note) nếu lượng tìm kiếm (Search Volume) của merchant bằng 0, giúp PM cân nhắc mức độ ưu tiên làm nội dung.
   - **Nút Action:** Cung cấp hai nút lựa chọn rõ ràng: `Hủy & Sửa đổi` (quay lại bước nhập liệu) hoặc `Kích hoạt Tạo trang` (bắt đầu chạy GenAI).
 
-**Priority:** P1 (Phase II)
+**Triển khai:** Giai đoạn 2
 
 ---
 
@@ -456,7 +456,7 @@ graph TD
   - **Hình ảnh Social Share:** Đạt chuẩn kích thước **1200x630 px** (phục vụ hiển thị link og:image).
 - [ ] **Định hướng tương lai:** Mở rộng khả năng tự động xử lý và retouch cho bất kỳ hình ảnh nào được tải lên trực tiếp thông qua trình soạn thảo CMS Page Editor.
 
-**Priority:** P1 (Phase II)
+**Triển khai:** Giai đoạn 2
 
 ---
 
@@ -484,7 +484,7 @@ graph TD
   - Emits custom events to Umami/GA4: `swipe_right`, `swipe_left`, `swipe_info` with `merchant_id` and `category` parameters.
   - Updates Local Storage `momo_user_interests` with the swiped merchant's category to feed the Ads Manager targeting engine.
 
-**Priority:** P1 (Phase III)
+**Triển khai:** Giai đoạn 3
 
 ---
 
@@ -508,7 +508,7 @@ graph TD
   - The feed must support sponsored cards injected dynamically by the MoSpark Ads Manager.
   - Injection rule: 1 sponsored ad card for every 5 organic merchant cards. Sponsored cards must be clearly labelled "Sponsored/Tài trợ" and support distinct tracker parameters.
 
-**Priority:** P1 (Phase III)
+**Triển khai:** Giai đoạn 3
 
 ---
 
@@ -527,7 +527,7 @@ graph TD
 - [ ] **Behavior Tracking:**
   - Emits custom events to Umami/GA4: `social_feed_click`, `trending_merchant_click`, `qna_recommendation_click` with `merchant_id` and `category` parameters.
 
-**Priority:** P1 (Phase III)
+**Triển khai:** Giai đoạn 3
 
 ---
 
@@ -556,7 +556,7 @@ graph TD
   - Only the primary `/merchant/{slug}` URL is added to the sitemap XML.
   - The canonical link tag on `/merchant/{slug}` must be self-referencing. No canonical tags are generated for sub-pages since they redirect.
 
-**Priority:** P1 (Deferred / Shelved)
+**Trạng thái:** Tạm hoãn (Deferred)
 
 ---
 
@@ -635,7 +635,7 @@ graph TD
 - [ ] Mỗi card trong rail phải có internal link đúng về `/merchant/{slug}` tương ứng - đóng góp internal linking mesh
 - [ ] Không hiển thị merchant đang xem trong rail (tự recommend chính mình)
 
-**Priority:** P2 (Phase II - Sprint 4)
+**Triển khai:** Giai đoạn 2 (Sprint 4)
 
 ---
 

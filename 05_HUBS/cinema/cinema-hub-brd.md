@@ -31,9 +31,9 @@
 * **Resolution (Giải pháp H2/2026):** Tái cấu trúc toàn diện và chuyển dịch hạ tầng sang nền tảng **MoSpark**, xây dựng **Cinema Hub** theo mô hình Product-Led Growth (PLG) & Hub-and-Spoke. Triển khai **Native Web Payment**, ứng dụng **GenAI Content** tự động hóa vòng đời phim và điều hướng sang các dịch vụ xem phim OTT.
 
 ### 1.3 Product-Led Growth (PLG) Drivers
-Cơ chế PLG của Cinema Hub dựa trên 5 Phễu Mồi Câu (Acquisition & Engagement Hooks) giải quyết tức thời nhu cầu tìm kiếm trên Open Web:
+Cơ chế PLG của Cinema Hub dựa trên 5 Điểm Chạm Kích Hoạt (Acquisition & Engagement Hooks) giải quyết tức thời nhu cầu tìm kiếm trên Open Web:
 
-1. **Phễu Tra Cứu Lịch Chiếu Realtime (Acquisition Gate):** Hứng nhu cầu tìm "lịch chiếu phim [tên phim] [tỉnh thành]"  ➔  Hiển thị suất chiếu của 13 chuỗi rạp đối tác (CGV, Lotte Cinema, Galaxy Cinema, BHD Star, Beta Cinemas, Cinestar, Mega GS, Cinemax, DCINE, Starlight, Rio Cinemas, Trung Tâm Chiếu Phim Quốc Gia, AEON Beta) theo vị trí GPS realtime.
+1. **Phễu Tra Cứu Lịch Chiếu Realtime (Acquisition Gate):** Đón nhận nhu cầu tìm "lịch chiếu phim [tên phim] [tỉnh thành]"  ➔  Hiển thị suất chiếu của 13 chuỗi rạp đối tác (CGV, Lotte Cinema, Galaxy Cinema, BHD Star, Beta Cinemas, Cinestar, Mega GS, Cinemax, DCINE, Starlight, Rio Cinemas, Trung Tâm Chiếu Phim Quốc Gia, AEON Beta) theo vị trí GPS realtime.
 2. **Phễu Báo Giá & Ưu Đãi Cụm Rạp (Retention Magnet):** Tra cứu bảng giá vé, chương trình khuyến mãi theo từng rạp  ➔  Gợi ý Combo Bỏng Nước & Thẻ quà tặng ưu đãi độc quyền MoMo.
 3. **Phễu Bách Khoa Toàn Thư Điện Ảnh & Review (Topical Authority Hook):** Đón đầu nhu cầu tìm trailer, diễn viên, đạo diễn, điểm IMDb/Rotten Tomatoes  ➔  Kích hoạt tính năng đánh giá/review từ cộng đồng người xem MoMo.
 4. **Phễu Native Web Payment (Conversion Hook):** Cho phép đặt ghế và thanh toán trực tiếp trên Web không cần mở App đối với khách hàng mới/Non-App.
@@ -59,7 +59,7 @@ Cơ chế PLG của Cinema Hub dựa trên 5 Phễu Mồi Câu (Acquisition & En
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Total Organic Web Traffic</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tổng số lượt truy cập tự nhiên từ Google Search và AI Search vào Cinema Hub trên Kênh Web mỗi tháng.</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>>4.020.082 Visits/H2</strong> <em>(Uplift 100%)</em></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mục tiêu cốt lõi: Hứng trọn nhu cầu tìm kiếm điện ảnh ngoài Open Web, mở rộng tệp Acquisition.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mục tiêu cốt lõi: Đón nhận trọn vẹn nhu cầu tìm kiếm điện ảnh ngoài Open Web, mở rộng tệp Acquisition.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>In-App & Web Booking</strong> <em>(Secondary Layer)</em></td>
@@ -133,16 +133,44 @@ Cơ chế PLG của Cinema Hub dựa trên 5 Phễu Mồi Câu (Acquisition & En
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>4.37%</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>≥ 4.50%+</strong></td>
     </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">W2A MAU (Web in App)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">93,758</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">25,012</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">43,262</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>>60,000</strong></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">W2A MEU (Web in App)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">264,178</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">71,692</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">123,581</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>>180,000</strong></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>GMV Quy Đổi Web-to-App (MAU x 205.000đ)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>19.22 tỷ đ</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>5.13 tỷ đ</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>8.87 tỷ đ</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>>12.30 tỷ đ</strong></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GMV Theo Giao Dịch Thực Thu (Txn x 205.000đ)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">10.72 tỷ đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.89 tỷ đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">10.01 tỷ đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>>20.00 tỷ đ</strong></td>
+    </tr>
   </tbody>
 </table>
 
 ### 1.5 Báo Cáo Hiệu Suất Chốt Sổ Tháng 9/2026 (Full Month 30d) & Tiến Độ Thực Thi Sản Phẩm
 
 #### A. Dữ Liệu Hiệu Suất Vận Hành Trọn Tháng 9/2026 (01/09 - 30/09/2026)
-* **Lưu lượng Chốt Sổ Trọn Tháng 9:** Đạt **1.220.075 Pageviews** (chiếm **30,88% tổng lưu lượng Kênh Web**), giữ vững vị thế động cơ kéo traffic số 1 toàn sàn.
+* **Lưu lượng Chốt Sổ Trọn Tháng 9:** Đạt **1.220.075 Pageviews** (chiếm **30,88% tổng lưu lượng Kênh Web**), giữ vững vị thế động cơ kéo traffic số 1 toàn Kênh Web.
 * **Tỷ lệ hoàn thành Target:** Đạt **126,51% Target Tháng 9** (964.394 PVs) - **VƯỢT TARGET HUB CHÍNH THỨC +26,5% ~ +255.681 PVs** (Cán mốc kỷ lục lịch sử >1.22 triệu PVs).
 * **Tốc độ vận hành (Daily Pace):** Đạt **40.669 PV/ngày**.
-* **Phân rã theo Sub-pages Full Month T9 (Quy chuẩn Tracking mới):**
+* **Bóc tách chi tiết theo Sub-pages Full Month T9 (Quy chuẩn Tracking mới):**
   - Trang phim chi tiết (`Cinema_Page`): **670.360 PVs** (54,9% Hub)
   - Trang Rạp phim (`Cinema_Cineplex`): **448.653 PVs** (36,8% Hub)
   - `Cinema_Blog`: **46.732 PVs** (3,8% Hub)
@@ -153,6 +181,219 @@ Cơ chế PLG của Cinema Hub dựa trên 5 Phễu Mồi Câu (Acquisition & En
 * **Tự Chủ Sản Xuất Content:** Web Platform Team chủ động 100% quy trình sản xuất nội dung review/tin tức điện ảnh qua MoSpark GenAI Pipeline, tự chủ vận hành không lệ thuộc vào nguồn lực Cell Team.
 * **Thử Nghiệm UI/UX Trang Rạp Mới (NCC Pilot):** Đã Go-live giao diện UI/UX trang rạp mới, đang áp dụng thử nghiệm tại **Trung Tâm Chiếu Phim Quốc Gia (NCC)** để đo lường hiệu suất Impression/Click CTR trước khi roll-out toàn bộ, bảo vệ lưu lượng của các cụm rạp best-performing (CGV, Lotte, Galaxy, BHD).
 * **Reusable Mini Game Framework:** Hoạch định xây dựng 1 mô-đun Mini Game đơn giản áp dụng đồng loạt cho tất cả các đầu phim chiếu rạp để bứt phá CVR ngoài Web.
+
+### 1.6 Phễu Chuyển Đổi Web-to-App & Báo Cáo Quy Đổi Doanh Thu GMV (Chuỗi 2025 - 2026 MTD 10T)
+
+Căn cứ dữ liệu đối soát chính thức từ tệp [`MOVIES DATA SUMMARY.xlsx`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS/cinema/data/MOVIES_DATA_SUMMARY.xlsx) tiếp nhận từ BU Movies và số liệu giao dịch in-app thực tế từ Dashboard vận hành (`SUCCESS IN-APP TRANSACTIONS`), hiệu suất chuyển đổi từ Kênh Web sang ứng dụng MoMo (Web-to-App) và doanh thu được xác lập theo hai công thức chuẩn hóa:
+* **GMV Thực Thu (Actual GMV - Tiêu chuẩn tài chính SSOT):**
+  $$\text{GMV Thực Thu} = \text{Success Transactions} \times \text{AoV (205,000 VND)}$$
+* **GMV Tiềm Năng Quy Đổi (Potential Reach GMV):**
+  $$\text{GMV Tiềm Năng} = \text{W2A MAU} \times \text{AoV (205,000 VND)}$$
+*(Quy chuẩn AoV: 205,000 đồng/đơn hàng, trung bình 2.13 vé/giao dịch, tương đương ~96,000 đồng/vé).*
+
+#### A. Bảng Theo Dõi GMV Web-to-App 8 Tháng Đầu Năm 2026 So Với Cùng Kỳ 2025
+
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tháng</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">2026 W2A MAU</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">2026 W2A MEU</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:right; font-weight:700;">GMV W2A 2026 (VND)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">2025 W2A MAU</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:right; font-weight:700;">GMV W2A 2025 (VND)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Tăng Trưởng YoY GMV (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">5,362</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">20,258</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1,099,210,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2,687</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">550,835,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">+99.6%</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 2 (Tết)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">10,922</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">27,595</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">2,239,010,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">9,090</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1,863,450,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">+20.2%</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">8,728</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">23,839</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1,789,240,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">4,963</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1,017,415,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">+75.9%</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">7,300</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">20,020</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1,496,500,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">8,855</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1,815,275,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">-17.6%</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">5,141</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">15,823</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1,053,905,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">5,285</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1,083,425,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">-2.7%</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 6</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">5,809</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">16,046</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1,190,845,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2,667</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">546,735,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">+117.8%</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 7</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2,263</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">7,806</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">463,915,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">4,880</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1,000,400,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">-53.6%</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 8</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">3,757</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">12,962</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">770,185,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">16,541</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">3,390,905,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">-77.3%</td>
+    </tr>
+    <tr style="background-color:#e2e8f0;">
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:left;"><strong>Lũy kế 8 Tháng</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:center;"><strong>49,282</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:center;"><strong>144,349</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:right;"><strong>10,102,810,000 đ</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:center;"><strong>54,968</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:right;"><strong>11,268,440,000 đ</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:center;"><strong>-10.3%</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+#### B. Báo Cáo Giao Dịch Thực Thu Tháng 10/2026 & Lũy Kế 10 Tháng (Realtime In-App Dashboard)
+
+Dữ liệu ghi nhận từ hệ thống vận hành bán vé in-app (`SUCCESS IN-APP TRANSACTIONS`) phản ánh số lượng đơn hàng chốt thành công và doanh thu thực tế từ Kênh Web-to-App:
+
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Kỳ Báo Cáo</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Transacting Users</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Transactions (Đơn)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Tickets (Vé)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:right; font-weight:700;">GMV Thực Thu (VND)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Tăng Trưởng MoM</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Vé / Đơn</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Năm 2025 (Cả năm)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">93,758 (MAU)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">52,311</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">111,422</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">10,723,755,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">-</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.13</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">7 Tháng đầu 2026 (Ước tính)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">45,525 (MAU)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">25,398</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">54,100</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">5,206,590,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">-</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.13</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 8/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">3,757</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">4,016</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">8,754</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">823,280,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">-</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.18</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 9/2026 (Thực tế)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">8,927</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">9,807</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">20,983</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">2,010,435,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">+144.2%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.14</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 10/2026 (Thực tế)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">11,457</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">12,547</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">26,789</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">2,572,135,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">+27.9%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.13</td>
+    </tr>
+    <tr style="background-color:#e2e8f0;">
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:left;"><strong>Lũy kế 10 Tháng 2026</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:center;"><strong>69,666</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:center;"><strong>51,768</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:center;"><strong>110,626</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:right;"><strong>10,612,440,000 đ</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:center;"><strong>-</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:center;"><strong>2.14</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+* **Đánh giá tăng trưởng đột phá:** Riêng 2 tháng gần nhất (Tháng 9 và Tháng 10), kênh Web-to-App đã đóng góp **22,354 đơn hàng** và **4.58 tỷ đồng GMV thực thu**. Lũy kế 10 tháng năm 2026 đạt **51,768 đơn** (~10.61 tỷ đồng GMV thực thu), tương đương **99.0% tổng quy mô giao dịch cả năm 2025** (52,311 đơn, 10.72 tỷ đồng). Bước nhảy vọt từ Tháng 8 (4,016 đơn) lên Tháng 9 (9,807 đơn, tăng +144.2%) và Tháng 10 (12,547 đơn, tăng +27.9%) chứng minh sức bật bùng nổ của Kênh Web khi bước vào mùa phim cao điểm.
+
+#### C. Phễu Chuyển Đổi Inbound Toàn Diện & Phân Tích Điểm Nghẽn OneLink
+
+Hành trình chuyển đổi từ tìm kiếm tự nhiên ngoài Open Web vào App và tạo ra doanh thu thực tế được chuẩn hóa qua 5 tầng:
+
+```
+[Tầng 1: Google Search Impressions] (282.9M lượt hiển thị)
+              |
+              v (CTR Google: 4.39%)
+[Tầng 2: Total Web Pageviews] (12.4M PV)
+              |
+              v (CTR Booking: 2.14%)
+[Tầng 3: Booking Clicks trên Web] (266,258 clicks)
+              |
+              v <--- ĐIỂM GÃY RÒ RỈ LỚN NHẤT: Rơi rớt 70.43% ở bước OneLink!
+[Tầng 4: Traffic vào App thực tế] (78,735 lượt vào App / 93,758 W2A MAU)
+              |
+              v <--- CHẤT LƯỢNG CHUYỂN ĐỔI CAO: 66.44% chốt đơn!
+[Tầng 5: Đơn hàng hoàn tất & GMV] (52,311 đơn hàng ~ 10.72 tỷ đ thực thu / 19.22 tỷ đ GMV quy đổi)
+```
+
+* **Điểm sáng:** Khách hàng từ Web vào App có tỷ lệ chốt đơn mua vé đạt **66.44%** (cứ 3 người vào App từ Web thì có 2 người thanh toán vé thành công), khẳng định chất lượng traffic Inbound rất cao.
+* **Điểm gãy cốt lõi:** Cứ 100 người nhấp nút "Đặt vé" trên Web, có tới **70 người bị rơi rớt dọc đường**, chỉ có gần 30 người mở được App thành công (%W2A CVR đạt 29.57%).
+* **Định lượng cơ hội (Opportunity Sizing):** Nếu nâng tỷ lệ chuyển tiếp %W2A từ 29.57% lên **45.0%** thông qua Smart Bridge Page và QR động, doanh thu GMV quy đổi sẽ tăng từ 19.22 tỷ đồng lên **29.25 tỷ đồng/năm** (tăng thêm **+10.03 tỷ đồng GMV/năm** cho BU Movies mà không tốn thêm chi phí kéo traffic).
+
+*Chi tiết báo cáo và bảng tính đối soát được lưu trữ tại:*
+* Báo cáo chuyên sâu: [`CINEMA_W2A_GMV_PERFORMANCE_2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS/cinema/CINEMA_W2A_GMV_PERFORMANCE_2026.md)
+* Kiến trúc Phễu: [`CINEMA_FUNNEL_ARCHITECTURE.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS/cinema/CINEMA_FUNNEL_ARCHITECTURE.md)
+* File Excel SSOT: [`cinema_hub_roadmap_drive_sync.xlsx`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS/cinema/cinema_hub_roadmap_drive_sync.xlsx) (Sheet: `W2A & GMV 2026`)
 
 ## II. Market Context & Strategy
 
@@ -677,7 +918,7 @@ Bảng chuẩn hóa các Nhóm Trải Nghiệm Sản Phẩm Cốt Lõi (Product 
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Phễu Tra Cứu Lịch Chiếu & Đặt Vé Rạp</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tra cứu suất chiếu realtime 13 chuỗi rạp, sơ đồ giữ ghế, mua combo bắp nước & thanh toán Native Web Checkout.</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tra cứu suất chiếu & mua vé rạp gần bạn nhất.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>>214.292 Vé bán ra</strong>; Tỷ lệ chuyển đổi <strong>CR ≥ 4.50%</strong>.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>>214.292 Vé bán ra</strong>; Tỷ lệ chuyển đổi <strong>CR ≥ 4.50%</strong>; <strong>GMV Web-to-App >15.0 tỷ đ/H2</strong>.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>2</strong></td>
@@ -691,7 +932,7 @@ Bảng chuẩn hóa các Nhóm Trải Nghiệm Sản Phẩm Cốt Lõi (Product 
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Phễu Khám Phá Rạp Chi Tiết & Local GEO</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trang thông tin 13 chuỗi rạp đối tác (CGV, Galaxy, Lotte...) và pSEO 120+ chi nhánh rạp local kèm chỉ đường Google Maps.</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tìm vị trí rạp gần nhà, bảng giá vé & ưu đãi rạp.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Thâu tóm tệp từ khóa Rạp Local (4.63M volume)</strong>; phủ 120+ chi nhánh rạp.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Bao phủ tệp từ khóa Rạp Local (4.63M volume)</strong>; phủ 120+ chi nhánh rạp.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>4</strong></td>

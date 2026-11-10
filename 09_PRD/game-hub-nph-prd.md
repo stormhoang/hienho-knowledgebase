@@ -17,7 +17,7 @@
 | Thứ Tự | Giai Đoạn | Trách Nhiệm Hệ Thống | Mô Tả Chi Tiết Hành Vi |
 | :--- | :--- | :--- | :--- |
 | **1** | Tra cứu mệnh giá | **Web MoMo** | Game thủ xem bảng niêm yết mệnh giá và tỷ giá quy đổi tại trang `/nap-the-game/{tên-nph}`. |
-| **2** | Thao tác chọn | **Web MoMo** | Game thủ bấm nút `[ Mua Thẻ 100k Trên NaptheNgay ]` tại mốc mệnh giá tương ứng. |
+| **2** | Thao tác chọn | **Web MoMo** | Game thủ nhấp vào nút `[ Mua Thẻ 100k Trên NaptheNgay ]` tại mốc mệnh giá tương ứng. |
 | **3** | Đóng gói & Bắn Param | **Web MoMo** | Web MoMo đóng gói dữ liệu theo đúng Param Spec của NaptheNgay (`partner`, `card`, `amount`, `email`...) và bắn URL target. |
 | **4** | Mở Tab Chuyển Hướng | **Trình Duyệt** | Mở tab mới với liên kết HTML `target="_blank" rel="noopener noreferrer nofollow"`. |
 | **5** | Parse Parameter | **NaptheNgay** | Website `napthengay.vn` trích xuất các tham số từ URL ngay khi DOM Ready. |
@@ -28,7 +28,7 @@
 
 | Bước | Tên Giai Đoạn | Trải Nghiệm Người Dùng (UX) | Hạ Tầng / Cơ Chế Kỹ Thuật | Nền Tảng |
 | :--- | :--- | :--- | :--- | :--- |
-| **Bước 1** | Chọn Mệnh Giá Trên MoMo | Tra cứu bảng giá và bấm nút `[ Mua Thẻ 100k Trên NaptheNgay ]` tại trang `/nap-the-game/{tên-nph}`. | Event Listener bắt sự kiện Click, trích xuất mã NPH và mốc mệnh giá. | Web MoMo |
+| **Bước 1** | Chọn Mệnh Giá Trên MoMo | Tra cứu bảng giá và nhấp vào nút `[ Mua Thẻ 100k Trên NaptheNgay ]` tại trang `/nap-the-game/{tên-nph}`. | Event Listener bắt sự kiện Click, trích xuất mã NPH và mốc mệnh giá. | Web MoMo |
 | **Bước 2** | Ghép & Bắn Params | Hệ thống Web MoMo ghép các tham số do NaptheNgay quy định vào đường dẫn target. | Dynamic Target URL Builder Engine (MoMo Web). | Web MoMo |
 | **Bước 3** | Chuyển Hướng Tab Mới | Trình duyệt mở tab mới dẫn sang địa chỉ website `napthengay.vn` kèm tham số. | Link HTML `target="_blank" rel="noopener noreferrer nofollow"`. | Trình duyệt Web |
 | **Bước 4** | Tiếp Nhận Param Spec | Trang `napthengay.vn` tải giao diện và trích xuất các tham số `partner`, `card`, `amount`, `email`. | Client-side URL SearchParams Parser (DOM Ready). | Napthengay.vn |

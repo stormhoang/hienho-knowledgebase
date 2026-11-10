@@ -47,7 +47,7 @@
   - Điểm chạm Online: Footer toàn bộ hệ thống website `momo.vn`, bio mạng xã hội (Facebook Fanpage, TikTok Channel, YouTube), tin nhắn SMS Brandname CSKH, email marketing, bài viết PR báo chí và hệ thống đối tác liên kết.
 - **Thực trạng kỹ thuật:** Trang này hiện chỉ vận hành như một đoạn mã JavaScript chuyển hướng thô sơ (User-Agent Sniffing). Trang hoàn toàn thiếu lớp trải nghiệm sản phẩm, không có khả năng nhận diện trạng thái cài đặt của người dùng, không có giao diện fallback và không ghi nhận bất kỳ dữ liệu phân tích nào trước khi đẩy người dùng sang Store.
 
-### 2.2. Bốn Nỗi Đau Trọng Yếu & Thất Thoát Kinh Doanh (Core Pain Points)
+### 2.2. Bốn Rào Cản Trọng Yếu & Thất Thoát Kinh Doanh (Core Pain Points)
 1. **Thất thoát Người dùng Mới (New User Drop-off):** Người dùng mới click vào link bị đẩy thẳng sang giao diện App Store / Google Play mặc định. Trải nghiệm thiếu hoàn toàn thông điệp giá trị (Value Proposition), không thấy gói quà chào mừng người dùng mới (Welcome Gift Package), làm giảm động lực tải và đăng ký tài khoản.
 2. **Trải nghiệm gãy khúc với Người dùng Đã Cài App (Existing Users):** Người dùng đã có app MoMo trên máy khi click vào link vẫn bị ép văng ra Store chỉ để nhìn thấy nút "Cập nhật" hoặc "Mở". Đây là trải nghiệm thừa thãi, gây ức chế và làm gián đoạn hành vi giao dịch tức thời.
 3. **Lỗ hổng Trải nghiệm Desktop (Desktop Dead-end):** Người dùng truy cập bằng máy tính bàn / laptop bị rơi vào nhánh xử lý sai (mặc định chuyển hướng sang Google Play Store) hoặc màn hình trắng, thay vì cung cấp mã QR để dùng điện thoại quét tải app ngay lập tức.
@@ -328,7 +328,7 @@ graph TD
   <tbody>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xây dựng UI Desktop QR & In-App Bouncer Page</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>R (Chủ trì)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>R (Đầu mối thực thi)</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">I (Thông báo)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">C (Góp ý)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">C (Review Tagging)</td>
@@ -337,13 +337,13 @@ graph TD
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cấu hình OneLink AppsFlyer Template cho Web</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">C (Phối hợp)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">C (Cấu hình)</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>R (Chủ trì)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>R (Đầu mối thực thi)</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">C (Kiểm tra)</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cấu hình AASA & Android Digital Asset Links</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">C (Domain Web)</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>R (Chủ trì)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>R (Đầu mối thực thi)</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">I (Thông báo)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">I (Thông báo)</td>
     </tr>
@@ -351,13 +351,13 @@ graph TD
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thiết kế Custom Product Pages & Custom Store Listings</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">I (Thông báo)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">I (Thông báo)</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>R (Chủ trì)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>R (Đầu mối thực thi)</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">C (A/B Test)</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xử lý Deferred Deep Link Onboarding In-App</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">C (Gửi Payload)</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>R (Chủ trì)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>R (Đầu mối thực thi)</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">C (Thiết kế quà)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">C (Đo Activation)</td>
     </tr>
@@ -366,12 +366,12 @@ graph TD
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">C (Cung cấp Data Web)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">C (Data App)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">C (Yêu cầu KPI)</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>R (Chủ trì)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>R (Đầu mối thực thi)</strong></td>
     </tr>
   </tbody>
 </table>
 
-> *Ghi chú ma trận RACI:* **R** = Responsible (Chủ trì thực thi), **A** = Accountable (Chịu trách nhiệm phê duyệt), **C** = Consulted (Tư vấn chuyên môn), **I** = Informed (Nhận thông tin cập nhật).
+> *Ghi chú ma trận RACI:* **R** = Responsible (Đầu mối thực thi), **A** = Accountable (Chịu trách nhiệm phê duyệt), **C** = Consulted (Tư vấn chuyên môn), **I** = Informed (Nhận thông tin cập nhật).
 
 ---
 

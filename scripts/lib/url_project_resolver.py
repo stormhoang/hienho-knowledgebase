@@ -197,7 +197,7 @@ def load_inferred_rules(dim_rules: list = None) -> list:
 
 
 def normalize_url(url: str) -> str:
-    """Chuẩn hóa URL để so khớp: bỏ scheme khác biệt, www, query, fragment, trailing slash."""
+    """Chuẩn hóa URL để so khớp: bỏ scheme khác biệt, www, query, fragment, trailing slash, unquote, lowercase."""
     if not url:
         return ""
     u = url.strip()
@@ -211,8 +211,18 @@ def normalize_url(url: str) -> str:
     host = p.netloc.lower()
     if host.startswith("www."):
         host = host[4:]
-    path = (p.path or "").rstrip("/")
-    return f"{host}{path}".lower()
+    raw_path = urllib.parse.unquote(p.path or "")
+    clean_path = re.sub(r"/+", "/", raw_path).rstrip("/")
+    clean_path = re.sub(r"/index\.(html?|php)$", "", clean_path, flags=re.I)
+    return f"{host}{clean_path}".lower()
+
+
+def _project_slug(name: str) -> str:
+    import unicodedata
+    t = str(name).replace("đ", "d").replace("Đ", "D")
+    t = unicodedata.normalize("NFKD", t).encode("ascii", "ignore").decode("utf-8")
+    t = re.sub(r"[^\w\s-]", "", t).strip().lower()
+    return re.sub(r"[-\s]+", "-", t)
 
 
 def _rule_to_regex(rule: str):
@@ -328,11 +338,20 @@ def resolve(url: str, rules: list, inferred_rules: list = None) -> dict:
         return unmatched
 
     projects = sorted({r["project"] for r in matches})
-    # Nhiều Project cùng khớp: URL được khai báo tay vào Project ngách là tín hiệu mạnh hơn Project bao trùm,
-    # nên chọn Project ít rule nhất trong cùng section (vd bài "top nhà xe" /blog/*-c101dt*: Vé Xe 21 rule,
-    # OTA 386 rule -> Vé Xe; tin khuyến mãi eSIM: Esim thay vì Sim). Hòa thì theo tên.
-    owners = _section_owners(rules).get(_section(nurl), Counter())
-    primary = sorted(projects, key=lambda p: (owners.get(p, 0), p))[0]
+    # Nhiều Project cùng khớp:
+    # 1. Nếu tên Project có slug khớp trực tiếp với section của URL (vd 'Internet' với section 'internet',
+    #    'Nạp tiền điện thoại' với 'nap-tien-dien-thoai', 'Nhận Tiền Quốc Tế' với 'nhan-tien-quoc-te'),
+    #    ưu tiên Project chuyên biệt này trước các nhóm bao trùm như 'Billpay', 'Data', 'P2P'.
+    # 2. Ngược lại (như trong /blog/*), chọn Project ngách có ít rule nhất trong section. Hòa thì theo tên.
+    sec = _section(nurl)
+    owners = _section_owners(rules).get(sec, Counter())
+
+    def _p_tiebreak(p):
+        p_slug = _project_slug(p)
+        exact_sec_match = 0 if (p_slug == sec or p_slug.replace("-", "") == sec.replace("-", "")) else 1
+        return (exact_sec_match, owners.get(p, 0), p)
+
+    primary = sorted(projects, key=_p_tiebreak)[0]
     return {
         "url": url,
         "normalized": nurl,

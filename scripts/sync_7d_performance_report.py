@@ -352,7 +352,7 @@ Toàn Website ghi nhận chu kỳ 7 ngày gần nhất ({r_start} đến {r_end}
         elif "chi-chi-em-em" in c["url"]:
             cmt = "Keywords: `chị chị em em 3` (Top 4.8). Rank Top đón sóng truyền thông chiếu sớm, clicks tăng +129%."
         elif "bao-hiem-y-te" in c["url"]:
-            cmt = "Keywords: `tra cứu bảo hiểm y tế bằng cccd` (Top 2.6). Đạt đỉnh 3.874 clicks SERP."
+            cmt = "Keywords: `tra cứu bảo hiểm y tế bằng cccd` (Top 2.6). Chạm mốc 3.874 clicks SERP."
         elif "cny" in c["url"]:
             cmt = "Keywords: `1 nhân dân tệ vnd`, `tỷ giá cny`. Clicks SERP tăng gần 9 lần khi trang lên Top 7."
         elif "krw" in c["url"]:
@@ -368,9 +368,9 @@ Toàn Website ghi nhận chu kỳ 7 ngày gần nhất ({r_start} đến {r_end}
 #### d. Đánh Giá Bản Chất & 3 Đòn Bẩy Chiếm Lĩnh Clicks Từ Google SERP
 
 - **Đòn bẩy 1: Khắc phục điểm rơi thứ hạng cụm rạp CGV (`/cinema/rap/cgv`):** 
-  Từ khóa `lịch chiếu phim cgv` và `cgv lịch chiếu` đang bị lùi từ Top 5.4 xuống Top 6.6 - 7.0, làm mất gần 3.000 clicks/tuần. Cần cập nhật tự động lịch chiếu hôm nay, bổ sung Schema MovieTheater và tối ưu Title tag động để giành lại vị trí Top 3–5 SERP trước dịp cuối tuần.
+  Từ khóa `lịch chiếu phim cgv` và `cgv lịch chiếu` đang bị lùi từ Top 5.4 xuống Top 6.6 - 7.0, làm mất gần 3.000 clicks/tuần. Cần cập nhật tự động lịch chiếu hôm nay, bổ sung Schema MovieTheater và tối ưu Title tag động để giành lại vị trí Top 3-5 SERP trước dịp cuối tuần.
 - **Đòn bẩy 2: Tối ưu Title Tag động cho Cụm Tỷ Giá (`/tai-chinh/ty-gia/*`):** 
-  Toàn cụm tỷ giá đang là cỗ máy tạo hiển thị lớn nhất toàn Web (+440.000 impressions mới trong 7 ngày), nhưng CTR còn thấp (0.1% - 0.2%) do nằm ở vị trí Top 6–8 SERP. Đây là cơ hội số 1: Tối ưu Title hiển thị tỷ giá live (VD: `Tỷ giá Won hôm nay 1 KRW = ... VND [Cập nhật Live]`) và schema FAQ để đưa cụm này lên **Top 1-3 SERP**, thu về thêm **9.000 - 15.000 clicks tự nhiên từ SERP mỗi tuần**.
+  Toàn cụm tỷ giá đang là cỗ máy tạo hiển thị lớn nhất toàn Web (+440.000 impressions mới trong 7 ngày), nhưng CTR còn thấp (0.1% - 0.2%) do nằm ở vị trí Top 6-8 SERP. Đây là cơ hội số 1: Tối ưu Title hiển thị tỷ giá live (VD: `Tỷ giá Won hôm nay 1 KRW = ... VND [Cập nhật Live]`) và schema FAQ để đưa cụm này lên **Top 1-3 SERP**, thu về thêm **9.000 - 15.000 clicks tự nhiên từ SERP mỗi tuần**.
 - **Đòn bẩy 3: Khai phá khoảng trống từ khóa chung của trang BHYT CCCD:** 
   Trang BHYT đang đạt kỷ lục 3.874 clicks/tuần nhờ query cụ thể `tra cứu bảo hiểm y tế bằng cccd` đứng **Top 2.6 (CTR 5.3%)**. Tuy nhiên, query ngắn volume khổng lồ `tra cứu bảo hiểm y tế` (42.800 imp) vẫn đang kẹt ở **Top 5.4 (CTR 0.8%)**. Tối ưu lại cấu trúc H2 và internal anchor text để đẩy query này vào Top 3 SERP sẽ mang lại thêm **+1.500 - 2.500 clicks/tuần**.
 """
@@ -404,10 +404,10 @@ def push_to_github():
         return False
     return True
 
-def sync_7d_performance(no_push: bool = False, json_only: bool = False) -> dict:
+def sync_7d_performance(push_hubs: bool = False, json_only: bool = False) -> dict:
     """
     Thực hiện quy trình phân tích và đồng bộ hiệu suất 7 ngày SERP.
-    - no_push: Nếu True, bỏ qua commit và đẩy GitHub (dành cho khi được gọi lồng trong pipeline MTD).
+    - push_hubs: Nếu True, thực hiện commit và đẩy GitHub Hubs. Mặc định False (an toàn).
     - json_only: Nếu True, chỉ cập nhật file JSON SSOT.
     """
     print("=" * 65)
@@ -476,11 +476,11 @@ def sync_7d_performance(no_push: bool = False, json_only: bool = False) -> dict:
     hub_web_data = os.path.join(HUBS_REPO, "lib", "dashboard", "web-data.json")
     update_dashboard_web_data(hub_web_data, data)
     
-    if no_push:
-        print("\n[no-push] Bỏ qua commit và đẩy GitHub (điều phối bởi pipeline chính).")
+    if not push_hubs:
+        print("\n[Mặc định an toàn] Bỏ qua commit và đẩy GitHub Hubs (chỉ đẩy khi có cờ --push-hubs).")
         return data
 
-    # 7. Git commit trên Hub
+    # 7. Git commit trên Hub (chỉ khi có --push-hubs)
     print("\n7. Đang commit thay đổi trên react-web-momo...")
     own_files = [
         os.path.relpath(hub_json, HUBS_REPO),
@@ -504,11 +504,11 @@ def sync_7d_performance(no_push: bool = False, json_only: bool = False) -> dict:
 
 def main():
     parser = argparse.ArgumentParser(description="Đồng bộ hiệu suất biến động 7 ngày GSC lên /report và /dashboard.")
-    parser.add_argument("--no-push", action="store_true", help="Không commit và không đẩy lên GitHub")
+    parser.add_argument("--push-hubs", action="store_true", default=False, help="Cho phép commit và đẩy lên GitHub Hubs")
     parser.add_argument("--json-only", action="store_true", help="Chỉ xuất JSON SSOT, không sửa markdown/dashboard")
     args = parser.parse_args()
 
-    sync_7d_performance(no_push=args.no_push, json_only=args.json_only)
+    sync_7d_performance(push_hubs=args.push_hubs, json_only=args.json_only)
 
 if __name__ == "__main__":
     main()

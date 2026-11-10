@@ -2,7 +2,7 @@
 
 > - **Tên Sản Phẩm:** Dynamic Stock Ticker Profiles & Cổng Chứng Khoán Master Hub
 > - **URL Chuẩn:** `/tai-chinh/chung-khoan` (Cổng Tổng Quan) & `/tai-chinh/chung-khoan/[ticker]` (Dynamic Ticker Profile)
-> - **Phân Khối Phụ Trách:** Growth Platform Division x Financial Services Division (CreditTech x CVS Partnership)
+> - **Khối Phụ Trách:** Growth Platform Division x Financial Services Division (CreditTech x CVS Partnership)
 > - **Đội Ngũ Triển Khai:** Web Development Team, Backend Team, SEO & Content Team, Product Growth Team
 > - **Phiên Bản:** v1.0 - Tháng 10/2026
 > - **Trạng Thái:** Production Blueprint & Technical Specification
@@ -11,9 +11,9 @@
 
 ## 1. ĐỊNH VỊ CHIẾN LƯỢC: TÍCH SẢN CỔ PHIẾU LÔ LẺ DÀNH CHO 95% DÂN SỐ ĐẠI CHÚNG
 
-### 1.1 Khái Quát Vấn Đề & Bẫy Cạnh Tranh Thị Trường
-- **Dung lượng thị trường:** Nhu cầu tìm kiếm về "Chứng Khoán" và "Cổ Phiếu" đạt hơn 4.103.880 lượt tìm kiếm/tháng tại Việt Nam (trong đó Chứng Khoán 3.026.340 lượt/tháng, Cổ Phiếu 1.077.540 lượt/tháng), thuộc nhóm Big Bet lớn nhất của Phân khối Tài chính.
-- **Bẫy cạnh tranh hiện hữu:** Các nền tảng chứng khoán truyền thống (SSI, VPS, VNDirect, TCBS) thiết kế website và ứng dụng phục vụ nhà đầu tư chuyên nghiệp: ngập tràn thuật ngữ phức tạp, đồ thị nến kỹ thuật nhảy giật từng giây, tập trung vào lướt sóng ngắn hạn (Day-trading, T+2.5) và đòn bẩy Margin cao.
+### 1.1 Khái Quát Vấn Đề & Thách Thức Cạnh Tranh Thị Trường
+- **Dung lượng thị trường:** Nhu cầu tìm kiếm về "Chứng Khoán" và "Cổ Phiếu" đạt hơn 4,1 triệu lượt tìm kiếm/tháng tại Việt Nam (trong đó Chứng Khoán 3,02 triệu lượt/tháng, Cổ Phiếu 1,07 triệu lượt/tháng), thuộc nhóm sáng kiến trọng điểm lớn nhất của Khối Tài chính.
+- **Điểm bất lợi của các giải pháp hiện hữu:** Các nền tảng chứng khoán truyền thống (SSI, VPS, VNDirect, TCBS) thiết kế website và ứng dụng phục vụ nhà đầu tư chuyên nghiệp: ngập tràn thuật ngữ phức tạp, đồ thị nến kỹ thuật nhảy giật từng giây, tập trung vào lướt sóng ngắn hạn (Day-trading, T+2.5) và đòn bẩy Margin cao.
 - **Rào cản người mới (Mass Retail / F0):** 95% người dùng phổ thông cảm thấy chứng khoán là cờ bạc rủi ro cao, thiếu kiến thức phân tích báo cáo tài chính, và bị chặn bởi quy định lô chẵn 100 cổ phiếu (ví dụ: mua 100 cổ phiếu FPT hoặc VCB cần từ 10 đến 14 triệu đồng, vượt quá khả năng tích lũy hàng tháng của người lao động trẻ).
 
 ### 1.2 Lối Đi Riêng Biệt Của MoMo (The MoMo Unique Path)

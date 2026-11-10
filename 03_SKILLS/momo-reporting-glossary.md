@@ -1,34 +1,39 @@
-# 📖 BẢNG TỪ ĐIỂN & QUY CHUẨN THUẬT NGỮ BÁO CÁO (MOMO REPORTING GLOSSARY)
+# 📖 TỪ ĐIỂN THUẬT NGỮ & QUY CHUẨN TÀI LIỆU WEB PLATFORM (MOMO WEB PLATFORM MASTER GLOSSARY)
 
-> **Mục đích:** Bộ chuẩn hóa duy nhất (SSOT) về ngôn ngữ, thuật ngữ, từ viết tắt và chỉ số khi xây dựng slide, báo cáo tuần (Weekly - anh Công), báo cáo tháng (Monthly - anh Tường/BOM) và tài liệu nội bộ Web Platform.
-> **Nguyên tắc cốt lõi:** Loại bỏ triệt để việc "viết tùm lum", dùng từ vô căn cứ, chắp vá Anh - Việt lộn xộn, gọi sai tên chỉ số hoặc nhầm lẫn bản chất kênh.
-> **Hiệu lực:** Áp dụng song hành cùng [`03_SKILLS/momo-reporting-guidelines.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS/momo-reporting-guidelines.md) và [`03_SKILLS/web-platform-reporting-framework.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS/web-platform-reporting-framework.md).
+> **Mục đích:** Bộ chuẩn hóa duy nhất (SSOT) về ngôn ngữ, thuật ngữ, từ viết tắt và quy chuẩn hành văn cho **TOÀN BỘ tài liệu của Web Platform** (gồm BRD, PRD, Tài liệu Chiến lược, Kiến trúc Kỹ thuật, Quyết định và Báo cáo quản trị).
+> **Nguyên tắc cốt lõi:** Loại bỏ triệt để việc "viết tùm lum", lạm dụng văn mẫu AI sáo rỗng, dịch thô ngô nghê, chắp vá Anh - Việt cẩu thả, hoặc dùng từ lóng kỹ thuật trong văn bản kinh doanh.
+> **Cơ cấu phân tầng áp dụng (2 Tầng chuẩn hóa):**
+> 1. **Tầng Dùng Chung (Universal Document Standards):** Bắt buộc áp dụng trên 100% tài liệu (BRD, PRD, Architecture, Strategy, Frameworks, Reports).
+> 2. **Tầng Đặc Thù C-Suite (Executive Reporting Layer):** Chuẩn hóa ngôn ngữ kinh doanh cấp cao dành riêng cho Báo cáo Tuần (anh Công), Báo cáo Tháng và Slide trình chiếu Ban Giám Đốc (BOM, anh Tường).
+> **Hiệu lực:** Áp dụng bắt buộc song hành cùng [`AGENTS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/AGENTS.md) và được giám sát tự động qua [`scripts/guard_vocabulary.py`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/scripts/guard_vocabulary.py).
 
 ---
 
-## 1. BẢNG CẤM KỴ & THAY THẾ BẮT BUỘC (STRICT DO'S & DON'TS)
+## 1. TẦNG ĐẶC THÙ C-SUITE: QUY CHUẨN BÁO CÁO BAN GIÁM ĐỐC (EXECUTIVE REPORTING DO'S & DON'TS)
 
-Bảng này giải quyết trực diện các lỗi hành văn phổ biến gây mất tính chuyên nghiệp khi trình bày trước Ban Giám Đốc.
+Bảng này quy định cách hành văn khi làm việc với C-Suite (BOM, CEO anh Tường, COO anh Công). Khi báo cáo lãnh đạo cấp cao, ngôn ngữ phải chuyển đổi từ góc nhìn vận hành/kỹ thuật vi mô sang góc nhìn kết quả kinh doanh, tác động thực chất và chiến lược tăng trưởng:
 
-| Thành phần / Ngữ cảnh | Cấm viết (Viết tùm lum ❌) | Bắt buộc viết (Chuẩn mực ✅) | Lý do & Quy chuẩn |
+| Thành phần / Ngữ cảnh | Cấm viết (Viết tùm lum / Lóng Dev ❌) | Bắt buộc viết (Chuẩn C-Suite & Leadership ✅) | Lý do & Quy chuẩn Quản trị |
 | :--- | :--- | :--- | :--- |
 | **Định danh Nền tảng** | Sàn Web, Sàn MoMo, Web con, Trang Web MoMo | **Nền tảng Web**, **Kênh Web**, **Web Platform**, **momo.vn** | MoMo là ứng dụng tài chính & hệ sinh thái số, không phải "sàn thương mại điện tử". |
-| **Định danh Nhân sự** | Tên cá nhân / PIC (Hiến, Bảo, Trọng, Thuận, Duy, Nam...) | **Tên đội ngũ chuyên môn** (`Web Dev`, `Content Team`, `SEO Vendor`, `Media Team`, `Backend Team`...) | Báo cáo gửi Executive Leadership phản ánh năng lực và trách nhiệm của tổ chức, không quy về cá nhân. |
+| **Định danh Nhân sự** | Tên cá nhân / PIC (Hiến, Bảo, Trọng, Thuận, Duy, Nam...) | **Tên đội ngũ chuyên môn** (`Web Platform`, `Web Dev`, `Content Team`, `SEO Vendor`, `Media Team`, `Backend Team`...) | Báo cáo gửi Executive Leadership phản ánh năng lực và trách nhiệm của tổ chức, không quy về cá nhân. |
+| **Trạng thái Triển khai** | "On Prod cộc lốc", "On-air", "Phát hành tính năng/web" | **Triển khai lên Production**, **Chính thức Go-live**, **Ra mắt**, **Xuất bản** (đối với nội dung/trang/báo cáo), **Đưa vào vận hành** | Diễn đạt câu hoàn chỉnh bằng thuật ngữ Product/Tech chuẩn mực. Với bài viết, trang nội dung, báo cáo dùng "Xuất bản" (Publish). Tuyệt đối không dùng "phát hành" cho phần mềm/tính năng (phát hành là từ ngành in ấn, tài chính). |
+| **Thuật ngữ Kỹ thuật Chuẩn (Technical Terms)** | Gượng ép dịch thô sang tiếng Việt ("sân khấu", "thử đâm thủng", "giao diện lập trình") | **Giữ nguyên thuật ngữ kỹ thuật quốc tế:**<br>`Pentest`, `môi trường Staging`, `Production`, `BFF`, `API`, `OneLink`, `DeepLink`, `Schema JSON-LD` | Thuật ngữ kỹ thuật chuyên ngành bắt buộc giữ nguyên tính chính xác, không dịch thô gượng ép làm sai lệch bản chất hệ thống. |
 | **Trang trí / Biểu cảm** | Dùng Emoji, Icon (🚀, 🔥, ⚠️, ❌, ✅, 📈, 🎯, 💡) trong slide | **Văn bản thuần túy**, dùng nhãn phân loại `[R]`, `[D]`, `[F]` hoặc thẻ trạng thái `[Hoàn thành]`, `[Chậm tiến độ]` | Quy chuẩn công ty cấm 100% emoji trong slide báo cáo quản trị. |
 | **Cơ cấu Kênh Traffic** | Đặt Paid ngang hàng, hoặc tách thêm kênh Others rời rạc | **Gom 2 khối lớn chuẩn Monthly Report:**<br>1. **KÊNH TỰ NHIÊN (NON-PAID)** gồm đúng 4 kênh: `Organic`, `Direct`, `AI Traffic (GEO)`, `Referral`<br>2. **KÊNH TRẢ PHÍ (PAID ADS)** | Phân định rõ chất lượng tăng trưởng hữu cơ; toàn bộ nguồn vãng lai/nguồn khác được gộp trọn vẹn vào Referral. |
+| **Định vị Kênh Paid** | "Paid tăng trưởng mạnh là điểm sáng", "Dùng Paid cứu target" | **Ghi nhận thực tế, cảnh báo rủi ro:**<br>"Paid tăng đột biến trong khi Organic chững lại phản ánh rủi ro phụ thuộc ngân sách ngắn hạn" | Organic là cốt lõi của Web Platform. Paid chỉ đóng vai trò kích mồi (seeding) và hỗ trợ chiến dịch. |
 | **Quy ước Chữ hoa (Title)** | Viết hoa chữ cái đầu từng từ (Title Case): *Báo Cáo Hiệu Suất Tháng 9* | **Sentence case (chỉ viết hoa chữ đầu câu):**<br>*Báo cáo hiệu suất tháng 9* | Trong văn bản tiếng Việt, Title Case làm giảm tốc độ đọc của người xem. |
 | **Bullet Lead-ins** | Tiếng Anh chắp vá: *Key Highlights:*, *Lowlights:*, *Next Actions:* | **Tiếng Việt ngắn gọn:**<br>`Điểm nổi bật:`, `Vấn đề cần cải thiện:`, `Động lực chính:`, `Việc tiếp theo:` | Báo cáo tiếng Việt phải đồng nhất ngôn ngữ, chỉ giữ tiếng Anh cho tên chỉ số kỹ thuật. |
-| **Định vị Kênh Paid** | "Paid tăng trưởng mạnh là điểm sáng", "Dùng Paid cứu target" | **Ghi nhận thực tế, cảnh báo rủi ro:**<br>"Paid tăng đột biến trong khi Organic chững lại phản ánh rủi ro phụ thuộc ngân sách ngắn hạn" | Organic là cốt lõi của Web Platform. Paid chỉ đóng vai trò kích mồi (seeding) và hỗ trợ chiến dịch. |
 | **Báo cáo Tháng (Kỳ số liệu)** | "Báo cáo tháng 10" (khi họp vào tháng 10 nhưng số liệu là của tháng 9) | **"Báo cáo tháng 9/2026"** | Tháng báo cáo tính theo **kỳ dữ liệu phát sinh**, không tính theo ngày gửi hay ngày tổ chức họp. |
 | **Chỉ số đứng trần** | Đưa số liệu không có so sánh: "Đạt 4.5M lượt xem" | **Luôn kèm mốc so sánh & việc tiếp theo:**<br>"Đạt 4.5M Pageviews (96% target tháng, +12% MoM), phần thiếu 4% đến từ biến động thuật toán Google, cần tập trung tối ưu 15 bài trụ cột" | Con số đứng một mình là con số chết. |
+| **Khái niệm Sản phẩm Kêu** | "Master Discovery Gateway", "Topical Authority" | **Cổng tra cứu & khám phá trung tâm**, **Độ uy tín chuyên môn theo chủ đề trên Google** | Đơn giản hóa, giúp lãnh đạo nắm ngay giá trị thực tế mang lại cho khách hàng. |
 
 ---
 
-## 2. BẢNG KHỬ TỪ SÁO RỖNG & TIÊU CHUẨN HÓA VĂN PHONG AI (AI-ISMS & MACHINE-TRANSLATION CLEANUP)
+## 2. TẦNG DÙNG CHUNG: BẢNG KHỬ TỪ SÁO RỖNG, DỊCH THÔ & VĂN PHONG AI (UNIVERSAL VOCABULARY STANDARDS)
 
-Khi AI tham gia viết báo cáo, PRD hoặc slide, các mô hình ngôn ngữ (LLM) thường dịch thô (literal translation) các thuật ngữ tiếng Anh sang Hán-Việt cổ kính hoặc từ ngữ cơ khí, vật lý nghe rất ngô nghê, thiếu tính nghiệp vụ sản phẩm.
-
-Bảng dưới đây chuẩn hóa triệt để các "tật" hành văn của AI:
+> **Phạm vi áp dụng:** Bắt buộc tuân thủ trên **100% tài liệu của Web Platform** (gồm BRD, PRD, Kiến trúc Kỹ thuật, Kế hoạch Chiến lược, Frameworks và Báo cáo).
+> Khi viết tài liệu, các mô hình ngôn ngữ (LLM) hoặc người dịch thường dịch thô (literal translation) các thuật ngữ tiếng Anh sang Hán-Việt cổ kính hoặc từ ngữ cơ khí, giật gân, thiếu tính chuyên môn sản phẩm. Bảng dưới đây chuẩn hóa triệt để:
 
 | Từ ngữ AI tự viết (Dịch thô ❌) | Thuật ngữ gốc tiếng Anh | Chuẩn hóa MoMo Tech / Product Lead ✅ | Ngữ cảnh & Ví dụ chỉnh sửa thực tế |
 | :--- | :--- | :--- | :--- |
@@ -64,6 +69,12 @@ Bảng dưới đây chuẩn hóa triệt để các "tật" hành văn của AI
 | **Phân Khối Phụ Trách** | Division in charge | **Khối phụ trách**, **Đơn vị phụ trách** | ❌ *"Phân Khối Phụ Trách: Growth Platform Division"*<br>✅ *"Khối phụ trách: Khối Nền tảng Tăng trưởng (Growth Platform Division)"*<br>*(Dịch thô ngô nghê từ Division, gây liên tưởng đến phân khối xe máy).* |
 | **Bữa tối gia đình test** | Aha moment / Mass-market simplicity | **Tiêu chuẩn trải nghiệm đột phá (Aha Moment)**, **Tiêu chuẩn đơn giản cho người dùng đại chúng** | ❌ *"Passed 'Bữa tối gia đình test' (của A.Tường)"*<br>✅ *"Đạt tiêu chuẩn trải nghiệm trực quan, dễ hiểu ngay cho người dùng đại chúng."*<br>*(Khẩu ngữ trao đổi nội bộ, không đưa nguyên văn vào tài liệu BRD/PRD chính thức).* |
 | **Văn Hiến sign-off** | Team approval / Sign-off | **Web Platform phê duyệt**, **Web Platform sign-off** | ❌ *"Editorial Gate (Văn Hiến sign-off)"*<br>✅ *"Cổng kiểm soát nội dung (Web Platform phê duyệt)"*<br>*(Vi phạm nguyên tắc ghi nhận năng lực và trách nhiệm tập thể, không gán đích danh cá nhân).* |
+| **Nỗi đau / Nỗi đau người dùng** | Pain point / Customer pain point | **Rào cản thao tác**, **Điểm nghẽn trải nghiệm**, **Khó khăn của người dùng** | ❌ *"Nỗi đau lớn nhất của người dùng", "Xử lý nỗi đau"*<br>✅ *"Rào cản lớn nhất của người dùng", "Giải quyết điểm nghẽn trải nghiệm"*<br>*(Từ "nỗi đau" là dịch thô sến súa, bi kịch hóa; trong sản phẩm dùng "rào cản", "điểm nghẽn" hoặc giữ Customer Pain Points).* |
+| **Chi tiêu trả thù** | Revenge spending | **Chi tiêu bù đắp quá độ**, **Mua sắm giải tỏa áp lực** | ❌ *"Rơi vào bẫy chi tiêu trả thù"*<br>✅ *"Tâm lý chi tiêu bù đắp quá độ sau giai đoạn thắt lưng buộc bụng"*<br>*(Dịch cơ học từ Revenge Spending, nghe như trả đũa thù hằn cá nhân).* |
+| **Mục tiêu tối thượng** | Primary objective / North Star | **Mục tiêu kinh doanh cốt lõi**, **Mục tiêu trọng tâm** | ❌ *"Mục tiêu tối thượng của dự án"*<br>✅ *"Mục tiêu kinh doanh cốt lõi của dự án"*<br>*(Từ "tối thượng" là văn phong triết học, thổi phồng).* |
+| **Bẫy kiệt sức** | Burnout trap | **Ngưỡng áp lực tài chính**, **Kiệt quệ tâm lý do tiết kiệm quá mức** | ❌ *"Cân bằng giữa tiết kiệm và bẫy kiệt sức"*<br>✅ *"Cân bằng giữa tiết kiệm kỷ luật và ngưỡng áp lực tài chính"*<br>*(Tránh dùng từ bẫy lạm dụng).* |
+| **Phát hành** *(Khi dùng cho tính năng, website, phần mềm)* | Launch / Go-live / Deploy / Publish / Release | **Ra mắt** (Launch), **Chính thức Go-live**, **Triển khai lên Production** (Deploy to Prod), **Xuất bản** (Publish - chuẩn mực cho nội dung, bài viết, báo cáo, trang đích CMS), **Đưa vào hoạt động**, **Cập nhật phiên bản mới** | ❌ *"Phát hành tính năng mới", "Phát hành trang Gara", "Lộ trình phát hành", "Kế hoạch phát hành công cụ"*<br>✅ *"Ra mắt tính năng mới", "Chính thức Go-live trang Gara", "Xuất bản bài viết / báo cáo mới", "Lộ trình triển khai", "Kế hoạch đưa công cụ lên trang"*<br>*(Từ "phát hành" thuộc ngành in ấn xuất bản sách báo, rạp phim hoặc nghiệp vụ tài chính như phát hành tiền/thẻ/cổ phiếu/voucher. Với phần mềm/tính năng dùng "Ra mắt", "Go-live", "Triển khai". Với nội dung, bài viết, landing page, báo cáo dùng chuẩn "Xuất bản" (Publish). Ngoại lệ hợp lệ: Nhà phát hành game (NPH), phát hành thẻ tín dụng, phát hành hóa đơn điện tử, phát hành voucher).* |
+| **Tạ thế / Tạ thế sớm** | Early mortality / Game over | **Kịch bản kết thúc sớm**, **Dừng cuộc chơi sớm** | ❌ *"Biến thể tạ thế sớm"*<br>✅ *"Kịch bản kết thúc vòng đời sớm do rủi ro tài chính đột ngột"*<br>*(Từ "tạ thế" là văn phong cáo phó cổ trang, không dùng trong game mô phỏng).* |
 | **Mức nền vận hành tiêu chuẩn** | Operating Baseline | **Mức nền vận hành tiêu chuẩn**, **Mức nền cơ sở** | ✅ *"Paid Traffic đạt 473.481 PVs (-60,4% MoM), quay về mức nền vận hành tiêu chuẩn tương đương Tháng 7 và Tháng 8 sau khi kết thúc các chiến dịch cao điểm mùa lễ và tựu trường."* |
 | **Kênh tự nhiên gánh vác / Tự chủ quy mô** | Organic Self-Sufficiency | **Tự chủ quy mô**, **Kênh tự nhiên gánh vác** | ✅ *"Việc traffic tổng thể vẫn đạt 98,3% Target thể hiện sự tự chủ rất lớn khi hầu như toàn bộ quy mô truy cập tháng này đều do kênh tự nhiên gánh vác (chiếm 86,86%)."* |
 | **Đảo chiều tăng trưởng** | Reversal / Rebound | **Đảo chiều tăng trở lại**, **Phục hồi tăng trưởng** | ✅ *"Điểm sáng là Organic Search đã đảo chiều tăng trở lại đạt 1,72M PVs (+5,7%), cho thấy nội lực từ nội dung và tiện ích trên trang đang giúp phục hồi tốt sau giai đoạn xây dựng nền tảng trong Q3."* |

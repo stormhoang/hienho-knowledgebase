@@ -15,7 +15,7 @@
 Các Business Unit (BU) cần các công cụ tương tác động (máy tính lãi suất, giả lập đầu tư, form khảo sát) trên Web để giữ chân khách hàng và tạo chuyển đổi Web-to-App (W2A). Hiện tại, mỗi công cụ phải được lập trình (hardcode) riêng lẻ, tốn nhiều tuần phát triển, không thể tái sử dụng, và rời rạc về mặt kiến trúc dữ liệu.
 
 ### 1.2 Giải pháp & Định nghĩa Widget (Product Vision & Widget Definition)
-Tầm nhìn sản phẩm là xây dựng **Widget Store Platform** — một **Nền tảng Tương tác Tăng trưởng (PLG Growth Platform) hợp nhất**. Nền tảng này đóng vai trò hạ tầng lõi giúp xây dựng, chuẩn hóa, quản lý và phân phối các Utility Tools (Simulator, Component, Lookup) có tính tương tác cao cho toàn bộ Web Channel của MoMo, trực tiếp thúc đẩy các chỉ số **MEU (Monthly Earning Users)** và **Login App (DLU/MLU)** theo định hướng **Product-Led Growth (PLG)**.
+Tầm nhìn sản phẩm là xây dựng **Widget Store Platform** - một **Nền tảng Tương tác Tăng trưởng (PLG Growth Platform) hợp nhất**. Nền tảng này đóng vai trò hạ tầng lõi giúp xây dựng, chuẩn hóa, quản lý và phân phối các Utility Tools (Simulator, Component, Lookup) có tính tương tác cao cho toàn bộ Web Channel của MoMo, trực tiếp thúc đẩy các chỉ số **MEU (Monthly Earning Users)** và **Login App (DLU/MLU)** theo định hướng **Product-Led Growth (PLG)**.
 
 Để giúp các Stakeholders hiểu rõ định hướng, Product Vision của Nền tảng được chia nhỏ (break down) cụ thể như sau:
 

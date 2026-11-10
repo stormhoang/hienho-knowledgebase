@@ -14,9 +14,9 @@
 
 ## I. TÀI LIỆU LIÊN QUAN (References)
 *   **Đặc tả định danh Web-to-App:** [mospark_user_identity_tracking.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/04_MOSPARK_PLATFORM/mospark_user_identity_tracking.md)
-*   **PRD Trang Đối Tác (SME detail page):** [doi-tac-prd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/08_PRD/doi-tac-prd.md)
+*   **PRD Trang Đối Tác (SME detail page):** [doi-tac-prd.md](doi-tac-prd.md)
 *   **BRD Merchant Page (MMP):** [doi-tac-brd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/06_USE_CASE_MOMO/doi-tac-brd.md)
-*   **PRD Web Identity Mapping (Use Cases):** [web-identity-mapping-prd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/08_PRD/web-identity-mapping-prd.md)
+*   **PRD Web Identity Mapping (Use Cases):** [web-identity-mapping-prd.md](web-identity-mapping-prd.md)
 
 ---
 

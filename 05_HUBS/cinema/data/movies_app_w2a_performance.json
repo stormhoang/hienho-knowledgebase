@@ -1,0 +1,493 @@
+{
+  "title": "Cinema Hub - Báo Cáo Hiệu Suất Web-to-App & Quy Đổi Doanh Thu GMV 2025-2026",
+  "formula_ssot": "GMV = MAU * AoV (205,000 VND)",
+  "aov_standard_vnd": 205000,
+  "summary_8m_comparison": {
+    "w2a_mau_2025_8m": 54968.0,
+    "w2a_mau_2026_8m": 49282.0,
+    "w2a_meu_2025_8m": 151560.0,
+    "w2a_meu_2026_8m": 144349.0,
+    "w2a_gmv_2025_8m_vnd": 11268440000.0,
+    "w2a_gmv_2026_8m_vnd": 10102810000.0,
+    "yoy_gmv_8m_pct": -10.34,
+    "yoy_gmv_8m_diff_vnd": -1165630000.0
+  },
+  "monthly_performance_2026": [
+    {
+      "month": "2026-01",
+      "w2a_mau": 5362.0,
+      "w2a_meu": 20258.0,
+      "w2a_gmv_vnd": 1099210000.0,
+      "native_mau": 551299.0,
+      "native_meu": 2003209.0,
+      "native_gmv_vnd": 113016295000.0,
+      "w2a_gmv_share_pct": 0.97,
+      "yoy_w2a_mau_pct": 99.55,
+      "yoy_w2a_meu_pct": 221.35,
+      "yoy_w2a_gmv_pct": 99.55
+    },
+    {
+      "month": "2026-02",
+      "w2a_mau": 10922.0,
+      "w2a_meu": 27595.0,
+      "w2a_gmv_vnd": 2239010000.0,
+      "native_mau": 1155490.0,
+      "native_meu": 2854680.0,
+      "native_gmv_vnd": 236875450000.0,
+      "w2a_gmv_share_pct": 0.95,
+      "yoy_w2a_mau_pct": 20.15,
+      "yoy_w2a_meu_pct": 36.6,
+      "yoy_w2a_gmv_pct": 20.15
+    },
+    {
+      "month": "2026-03",
+      "w2a_mau": 8728.0,
+      "w2a_meu": 23839.0,
+      "w2a_gmv_vnd": 1789240000.0,
+      "native_mau": 938124.0,
+      "native_meu": 2655953.0,
+      "native_gmv_vnd": 192315420000.0,
+      "w2a_gmv_share_pct": 0.93,
+      "yoy_w2a_mau_pct": 75.86,
+      "yoy_w2a_meu_pct": 89.5,
+      "yoy_w2a_gmv_pct": 75.86
+    },
+    {
+      "month": "2026-04",
+      "w2a_mau": 7300.0,
+      "w2a_meu": 20020.0,
+      "w2a_gmv_vnd": 1496500000.0,
+      "native_mau": 127367.0,
+      "native_meu": 2435431.0,
+      "native_gmv_vnd": 26110235000.0,
+      "w2a_gmv_share_pct": 5.73,
+      "yoy_w2a_mau_pct": -17.56,
+      "yoy_w2a_meu_pct": -39.76,
+      "yoy_w2a_gmv_pct": -17.56
+    },
+    {
+      "month": "2026-05",
+      "w2a_mau": 5141.0,
+      "w2a_meu": 15823.0,
+      "w2a_gmv_vnd": 1053905000.0,
+      "native_mau": 0.0,
+      "native_meu": 2279812.0,
+      "native_gmv_vnd": 0,
+      "w2a_gmv_share_pct": 0,
+      "yoy_w2a_mau_pct": -2.72,
+      "yoy_w2a_meu_pct": 14.2,
+      "yoy_w2a_gmv_pct": -2.72
+    },
+    {
+      "month": "2026-06",
+      "w2a_mau": 5809.0,
+      "w2a_meu": 16046.0,
+      "w2a_gmv_vnd": 1190845000.0,
+      "native_mau": 0.0,
+      "native_meu": 0.0,
+      "native_gmv_vnd": 0,
+      "w2a_gmv_share_pct": 0,
+      "yoy_w2a_mau_pct": 117.81,
+      "yoy_w2a_meu_pct": 146.79,
+      "yoy_w2a_gmv_pct": 117.81
+    },
+    {
+      "month": "2026-07",
+      "w2a_mau": 2263.0,
+      "w2a_meu": 7806.0,
+      "w2a_gmv_vnd": 463915000.0,
+      "native_mau": 0.0,
+      "native_meu": 0.0,
+      "native_gmv_vnd": 0,
+      "w2a_gmv_share_pct": 0,
+      "yoy_w2a_mau_pct": -53.63,
+      "yoy_w2a_meu_pct": -42.74,
+      "yoy_w2a_gmv_pct": -53.63
+    },
+    {
+      "month": "2026-08",
+      "w2a_mau": 3757.0,
+      "w2a_meu": 12962.0,
+      "w2a_gmv_vnd": 770185000.0,
+      "native_mau": 0.0,
+      "native_meu": 0.0,
+      "native_gmv_vnd": 0,
+      "w2a_gmv_share_pct": 0,
+      "yoy_w2a_mau_pct": -77.29,
+      "yoy_w2a_meu_pct": -71.36,
+      "yoy_w2a_gmv_pct": -77.29
+    }
+  ],
+  "monthly_performance_2025": [
+    {
+      "month": "2025-01",
+      "w2a_mau": 2687.0,
+      "w2a_meu": 6304.0,
+      "w2a_gmv_vnd": 550835000.0,
+      "native_mau": 314058.0,
+      "native_meu": 1541931.0,
+      "native_gmv_vnd": 64381890000.0,
+      "w2a_gmv_share_pct": 0.86
+    },
+    {
+      "month": "2025-02",
+      "w2a_mau": 9090.0,
+      "w2a_meu": 20202.0,
+      "w2a_gmv_vnd": 1863450000.0,
+      "native_mau": 855966.0,
+      "native_meu": 2626236.0,
+      "native_gmv_vnd": 175473030000.0,
+      "w2a_gmv_share_pct": 1.06
+    },
+    {
+      "month": "2025-03",
+      "w2a_mau": 4963.0,
+      "w2a_meu": 12580.0,
+      "w2a_gmv_vnd": 1017415000.0,
+      "native_mau": 434516.0,
+      "native_meu": 1891927.0,
+      "native_gmv_vnd": 89075780000.0,
+      "w2a_gmv_share_pct": 1.14
+    },
+    {
+      "month": "2025-04",
+      "w2a_mau": 8855.0,
+      "w2a_meu": 33232.0,
+      "w2a_gmv_vnd": 1815275000.0,
+      "native_mau": 453568.0,
+      "native_meu": 1977581.0,
+      "native_gmv_vnd": 92981440000.0,
+      "w2a_gmv_share_pct": 1.95
+    },
+    {
+      "month": "2025-05",
+      "w2a_mau": 5285.0,
+      "w2a_meu": 13856.0,
+      "w2a_gmv_vnd": 1083425000.0,
+      "native_mau": 561569.0,
+      "native_meu": 1705741.0,
+      "native_gmv_vnd": 115121645000.0,
+      "w2a_gmv_share_pct": 0.94
+    },
+    {
+      "month": "2025-06",
+      "w2a_mau": 2667.0,
+      "w2a_meu": 6502.0,
+      "w2a_gmv_vnd": 546735000.0,
+      "native_mau": 287509.0,
+      "native_meu": 1518319.0,
+      "native_gmv_vnd": 58939345000.0,
+      "w2a_gmv_share_pct": 0.93
+    },
+    {
+      "month": "2025-07",
+      "w2a_mau": 4880.0,
+      "w2a_meu": 13632.0,
+      "w2a_gmv_vnd": 1000400000.0,
+      "native_mau": 379264.0,
+      "native_meu": 1813677.0,
+      "native_gmv_vnd": 77749120000.0,
+      "w2a_gmv_share_pct": 1.29
+    },
+    {
+      "month": "2025-08",
+      "w2a_mau": 16541.0,
+      "w2a_meu": 45252.0,
+      "w2a_gmv_vnd": 3390905000.0,
+      "native_mau": 725956.0,
+      "native_meu": 2312501.0,
+      "native_gmv_vnd": 148820980000.0,
+      "w2a_gmv_share_pct": 2.28
+    },
+    {
+      "month": "2025-09",
+      "w2a_mau": 14952.0,
+      "w2a_meu": 40414.0,
+      "w2a_gmv_vnd": 3065160000.0,
+      "native_mau": 676630.0,
+      "native_meu": 2246436.0,
+      "native_gmv_vnd": 138709150000.0,
+      "w2a_gmv_share_pct": 2.21
+    },
+    {
+      "month": "2025-10",
+      "w2a_mau": 6092.0,
+      "w2a_meu": 21627.0,
+      "w2a_gmv_vnd": 1248860000.0,
+      "native_mau": 348812.0,
+      "native_meu": 1731118.0,
+      "native_gmv_vnd": 71506460000.0,
+      "w2a_gmv_share_pct": 1.75
+    },
+    {
+      "month": "2025-11",
+      "w2a_mau": 7314.0,
+      "w2a_meu": 19767.0,
+      "w2a_gmv_vnd": 1499370000.0,
+      "native_mau": 414509.0,
+      "native_meu": 1807121.0,
+      "native_gmv_vnd": 84974345000.0,
+      "w2a_gmv_share_pct": 1.76
+    },
+    {
+      "month": "2025-12",
+      "w2a_mau": 10432.0,
+      "w2a_meu": 30810.0,
+      "w2a_gmv_vnd": 2138560000.0,
+      "native_mau": 519192.0,
+      "native_meu": 2280659.0,
+      "native_gmv_vnd": 106434360000.0,
+      "w2a_gmv_share_pct": 2.01
+    }
+  ],
+  "inbound_funnel_2025": [
+    {
+      "month": "Tháng 1",
+      "impressions": 22180000.0,
+      "total_traffic": 832440.0,
+      "organic_traffic": 492400.0,
+      "booking_clicks": 12673.0,
+      "ctr_pct": 1.52,
+      "traffic_in_app": 4233.0,
+      "w2a_conversion_rate_pct": 33.4,
+      "transactions": 2656.0,
+      "in_app_cvr_pct": 62.75,
+      "gmv_by_transactions_vnd": 544480000.0
+    },
+    {
+      "month": "Tháng 2",
+      "impressions": 32340000.0,
+      "total_traffic": 1709600.0,
+      "organic_traffic": 949000.0,
+      "booking_clicks": 35925.0,
+      "ctr_pct": 2.1,
+      "traffic_in_app": 11624.0,
+      "w2a_conversion_rate_pct": 32.36,
+      "transactions": 7670.0,
+      "in_app_cvr_pct": 65.98,
+      "gmv_by_transactions_vnd": 1572350000.0
+    },
+    {
+      "month": "Tháng 3",
+      "impressions": 17050000.0,
+      "total_traffic": 841000.0,
+      "organic_traffic": 445500.0,
+      "booking_clicks": 13704.0,
+      "ctr_pct": 1.63,
+      "traffic_in_app": 5255.0,
+      "w2a_conversion_rate_pct": 38.35,
+      "transactions": 3267.0,
+      "in_app_cvr_pct": 62.17,
+      "gmv_by_transactions_vnd": 669735000.0
+    },
+    {
+      "month": "Tháng 4",
+      "impressions": 19680000.0,
+      "total_traffic": 943000.0,
+      "organic_traffic": 506700.0,
+      "booking_clicks": 19409.0,
+      "ctr_pct": 2.06,
+      "traffic_in_app": 5694.0,
+      "w2a_conversion_rate_pct": 29.34,
+      "transactions": 3293.0,
+      "in_app_cvr_pct": 57.83,
+      "gmv_by_transactions_vnd": 675065000.0
+    },
+    {
+      "month": "Tháng 5",
+      "impressions": 24850000.0,
+      "total_traffic": 1017000.0,
+      "organic_traffic": 524000.0,
+      "booking_clicks": 19343.0,
+      "ctr_pct": 1.9,
+      "traffic_in_app": 6297.0,
+      "w2a_conversion_rate_pct": 32.55,
+      "transactions": 4443.0,
+      "in_app_cvr_pct": 70.56,
+      "gmv_by_transactions_vnd": 910815000.0
+    },
+    {
+      "month": "Tháng 6",
+      "impressions": 16430000.0,
+      "total_traffic": 721000.0,
+      "organic_traffic": 360300.0,
+      "booking_clicks": 9922.0,
+      "ctr_pct": 1.38,
+      "traffic_in_app": 3298.0,
+      "w2a_conversion_rate_pct": 33.24,
+      "transactions": 2226.0,
+      "in_app_cvr_pct": 67.5,
+      "gmv_by_transactions_vnd": 456330000.0
+    },
+    {
+      "month": "Tháng 7",
+      "impressions": 28460000.0,
+      "total_traffic": 1082000.0,
+      "organic_traffic": 573000.0,
+      "booking_clicks": 15553.0,
+      "ctr_pct": 1.44,
+      "traffic_in_app": 4579.0,
+      "w2a_conversion_rate_pct": 29.44,
+      "transactions": 3110.0,
+      "in_app_cvr_pct": 67.92,
+      "gmv_by_transactions_vnd": 637550000.0
+    },
+    {
+      "month": "Tháng 8",
+      "impressions": 37560000.0,
+      "total_traffic": 1687000.0,
+      "organic_traffic": 889000.0,
+      "booking_clicks": 46581.0,
+      "ctr_pct": 2.76,
+      "traffic_in_app": 13009.0,
+      "w2a_conversion_rate_pct": 27.93,
+      "transactions": 8652.0,
+      "in_app_cvr_pct": 66.51,
+      "gmv_by_transactions_vnd": 1773660000.0
+    },
+    {
+      "month": "Tháng 9",
+      "impressions": 32800000.0,
+      "total_traffic": 1449000.0,
+      "organic_traffic": 693000.0,
+      "booking_clicks": 45903.0,
+      "ctr_pct": 3.17,
+      "traffic_in_app": 12263.0,
+      "w2a_conversion_rate_pct": 26.72,
+      "transactions": 8184.0,
+      "in_app_cvr_pct": 66.74,
+      "gmv_by_transactions_vnd": 1677720000.0
+    },
+    {
+      "month": "Tháng 10",
+      "impressions": 18390000.0,
+      "total_traffic": 700000.0,
+      "organic_traffic": 311800.0,
+      "booking_clicks": 13447.0,
+      "ctr_pct": 1.92,
+      "traffic_in_app": 3426.0,
+      "w2a_conversion_rate_pct": 25.48,
+      "transactions": 2377.0,
+      "in_app_cvr_pct": 69.38,
+      "gmv_by_transactions_vnd": 487285000.0
+    },
+    {
+      "month": "Tháng 11",
+      "impressions": 15600000.0,
+      "total_traffic": 655000.0,
+      "organic_traffic": 293000.0,
+      "booking_clicks": 12966.0,
+      "ctr_pct": 1.98,
+      "traffic_in_app": 3561.0,
+      "w2a_conversion_rate_pct": 27.46,
+      "transactions": 2606.0,
+      "in_app_cvr_pct": 73.18,
+      "gmv_by_transactions_vnd": 534230000.0
+    },
+    {
+      "month": "Tháng 12",
+      "impressions": 17600000.0,
+      "total_traffic": 788000.0,
+      "organic_traffic": 350000.0,
+      "booking_clicks": 20832.0,
+      "ctr_pct": 2.64,
+      "traffic_in_app": 5496.0,
+      "w2a_conversion_rate_pct": 26.38,
+      "transactions": 3827.0,
+      "in_app_cvr_pct": 69.63,
+      "gmv_by_transactions_vnd": 784535000.0
+    }
+  ],
+  "opportunity_sizing": {
+    "baseline_w2a_conversion_rate_pct": 29.57,
+    "annual_booking_clicks_baseline": 266258,
+    "scenarios": [
+      {
+        "name": "Kịch bản Cơ sở (Hiện tại - 29.6% W2A)",
+        "w2a_rate_pct": 29.57,
+        "traffic_in_app": 78735,
+        "estimated_mau": 93758,
+        "estimated_gmv_vnd": 19220390000,
+        "gmv_lift_vnd": 0
+      },
+      {
+        "name": "Kịch bản Tối ưu OneLink & Bridge UX (40.0% W2A)",
+        "w2a_rate_pct": 40.0,
+        "traffic_in_app": 106503,
+        "estimated_mau": 126829,
+        "estimated_gmv_vnd": 25999851201,
+        "gmv_lift_vnd": 6779461201
+      },
+      {
+        "name": "Kịch bản Tối ưu Cao cấp + Chatbot Deeplink (45.0% W2A)",
+        "w2a_rate_pct": 45.0,
+        "traffic_in_app": 119816,
+        "estimated_mau": 142682,
+        "estimated_gmv_vnd": 29249832601,
+        "gmv_lift_vnd": 10029442601
+      },
+      {
+        "name": "Kịch bản Đột phá Toàn diện (50.0% W2A)",
+        "w2a_rate_pct": 50.0,
+        "traffic_in_app": 133129,
+        "estimated_mau": 158536,
+        "estimated_gmv_vnd": 32499814001,
+        "gmv_lift_vnd": 13279424001
+      }
+    ]
+  },
+  "formula_actual_gmv": "GMV Thuc Thu = Success In-App Transactions * AoV (205,000 VND)",
+  "actual_in_app_transactions": {
+    "october_2026_actual": {
+      "users": 11457,
+      "users_mom_growth": "+20.7%",
+      "transactions": 12547,
+      "transactions_mom_growth": "+20.1%",
+      "tickets": 26789,
+      "tickets_mom_growth": "+18.8%",
+      "actual_gmv_vnd": 2572135000,
+      "tickets_per_transaction": 2.135,
+      "avg_ticket_price_vnd": 96014,
+      "transactions_per_user": 1.095,
+      "source": "Internal In-App Dashboard (SUCCESS IN-APP TRANSACTIONS)"
+    },
+    "full_year_2025_actual": {
+      "in_app_traffic": 78735,
+      "w2a_mau": 93758,
+      "transactions": 52311,
+      "actual_gmv_vnd": 10723755000,
+      "conversion_rate_on_in_app_traffic": "66.44%",
+      "conversion_rate_on_w2a_mau": "55.79%",
+      "source": "MOVIES DATA SUMMARY.xlsx (REPORT 2025 Inbound)"
+    },
+    "cumulative_10m_2026_estimate_and_actual": {
+      "transactions_7m_estimated": 25398,
+      "transactions_aug_derived": 4016,
+      "transactions_sep_actual": 9807,
+      "transactions_oct_actual": 12547,
+      "total_transactions_10m": 51768,
+      "total_actual_gmv_vnd": 10612440000,
+      "pacing_vs_2025_full_year": "99.0% of 2025 full year in 10 months"
+    },
+    "september_2026_actual": {
+      "users": 8927,
+      "users_mom_growth": "+137.6%",
+      "transactions": 9807,
+      "transactions_mom_growth": "+144.2%",
+      "tickets": 20983,
+      "tickets_mom_growth": "+139.7%",
+      "actual_gmv_vnd": 2010435000,
+      "tickets_per_transaction": 2.14,
+      "avg_ticket_price_vnd": 95813,
+      "transactions_per_user": 1.098,
+      "source": "Internal In-App Dashboard (SUCCESS IN-APP TRANSACTIONS)"
+    },
+    "august_2026_derived": {
+      "users": 3757,
+      "transactions": 4016,
+      "tickets": 8754,
+      "actual_gmv_vnd": 823280000,
+      "note": "Derived from September MoM growth (+144.2%), perfectly matching August MAU 3,757 (100% exact match)"
+    }
+  }
+}

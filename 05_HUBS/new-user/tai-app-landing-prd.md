@@ -3,7 +3,7 @@
 > - **Dự án:** New User Hub & Web-to-App Acquisition - Web Platform
 > - **Đơn vị phụ trách:** Web Platform Team x Growth Platform Division (GPD)
 > - **Đường dẫn chuẩn (URL Schema):** `momo.vn/tai-app`
-> - **Trạng thái:** P0 Priority Sprint (Tháng 10/2026)
+> - **Trạng thái:** Hạng mục trọng tâm Sprint (Tháng 10/2026)
 > - **Mục tiêu:** Thuần túy là Trung tâm Tiện ích Tải Ứng dụng (Utility Software Download Center), tách biệt hoàn toàn với trang Tiếp thị Khuyến mãi / Thẻ quà
 
 ---
@@ -229,7 +229,7 @@ Tuân thủ chuẩn SSOT `04_MOSPARK_PLATFORM/umami_utility_tracking.md`:
 
 | Tên sự kiện (Event Name) | Loại sự kiện | Tham số ghi nhận (Custom Parameters) | Mục đích đo lường |
 | :--- | :--- | :--- | :--- |
-| `tai_app_page_view` | Pageview | `device: desktop \| ios \| android`, `referrer` | Đo lường lưu lượng truy cập phân rã theo thiết bị. |
+| `tai_app_page_view` | Pageview | `device: desktop \| ios \| android`, `referrer` | Đo lường lưu lượng truy cập bóc tách theo thiết bị. |
 | `click_store_download` | Click | `store: appstore \| googleplay \| direct_apk` | Đo lường tỷ lệ nhấp nút tải về Store / APK (New User intent). |
 | `click_open_existing_app` | Click | `target: deeplink_open`, `device_os: ios \| android` | Đo lường tỷ lệ nhấp mở ứng dụng của người dùng đã có app (Existing User intent). |
 | `desktop_qr_scan_intent` | Interaction | `trigger: impression \| view_duration` | Đo lường số lượt hiển thị và tương tác mã Dynamic QR trên máy tính. |

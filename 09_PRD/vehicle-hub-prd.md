@@ -125,7 +125,7 @@ Hàng triệu chủ xe ô tô và xe máy tại Việt Nam đang bị phân mả
 
 ### 2.3 User Pain Points & Search Demand Inventory
 
-#### A. Nỗi đau lớn nhất của người dùng (User Pain Points)
+#### A. Rào cản lớn nhất của người dùng (User Pain Points)
 1. **Trải nghiệm phân mảnh:** Phải gõ lại biển số xe và thông tin cá nhân nhiều lần trên nhiều website độc lập.
 2. **Lo sợ vi phạm phạt nguội:** Không biết xe mình có bị dính lỗi phạt nguội hay không cho đến khi đi đăng kiểm.
 3. **Thiếu thông tin tư vấn giao thông:** Thiếu nguồn bài viết tư vấn luật giao thông và mẹo bảo dưỡng xe đáng tin cậy.

@@ -1,3 +1,16 @@
 {
-    "git.ignoreLimitWarning": true
+  "git.ignoreLimitWarning": true,
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/.venv/**": true,
+    "**/graphify-out/**": true,
+    "**/07_REPORTS/data/cache/**": true,
+    "**/.claude/worktrees/**": true
+  },
+  "search.exclude": {
+    "**/.venv": true,
+    "**/graphify-out": true,
+    "**/07_REPORTS/data/cache": true
+  }
 }

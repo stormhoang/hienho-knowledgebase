@@ -16,6 +16,7 @@ Cập nhật các tệp đích:
 import os
 import sys
 import json
+import argparse
 import subprocess
 from pathlib import Path
 from collections import defaultdict
@@ -29,6 +30,10 @@ sys.path.insert(0, str(BASE_DIR))
 import scripts.lib.url_project_resolver as upr
 
 def main():
+    parser = argparse.ArgumentParser(description="Đồng bộ dữ liệu sang Hubs /dashboard.")
+    parser.add_argument("--push-hubs", action="store_true", default=False, help="Cho phép đẩy lên GitHub Hubs qua REST API")
+    args = parser.parse_args()
+
     print("=" * 70)
     print("BẮT ĐẦU ĐỒNG BỘ DỮ LIỆU SANG HUBS /DASHBOARD")
     print("=" * 70)
@@ -161,14 +166,21 @@ def main():
         json.dump(w2a_data, f, ensure_ascii=False, indent=2)
     print("  ✓ Đã cập nhật ga4-w2a-attribution.json")
 
-    # 8. Đẩy lên GitHub Hubs qua REST API
-    print("[5/5] Tự động commit và đẩy dữ liệu lên GitHub Hubs qua REST API...")
-    push_script = BASE_DIR / "scripts" / "push_to_hubs_api.py"
-    if push_script.exists():
-        res = subprocess.run([sys.executable, str(push_script), "--message", "feat: sync financial and vehicle hub breakdown and GSC metrics to dashboard"], capture_output=True, text=True)
-        print(res.stdout)
-        if res.stderr:
-            print(res.stderr)
+    # 8. Đẩy lên GitHub Hubs qua REST API (Mặc định không đẩy trừ khi có --push-hubs)
+    if args.push_hubs:
+        print("[5/5] Tự động commit và đẩy dữ liệu lên GitHub Hubs qua REST API (--push-hubs)...")
+        push_script = BASE_DIR / "scripts" / "push_to_hubs_api.py"
+        if push_script.exists():
+            res = subprocess.run([
+                sys.executable, str(push_script),
+                "--commit-local",
+                "--message", "feat: sync financial and vehicle hub breakdown and GSC metrics to dashboard"
+            ], capture_output=True, text=True)
+            print(res.stdout)
+            if res.stderr:
+                print(res.stderr)
+    else:
+        print("[5/5] Mặc định an toàn (No-Push): Bỏ qua đẩy GitHub Hubs.")
 
     print("=" * 70)
     print("ĐỒNG BỘ THÀNH CÔNG DỮ LIỆU SANG /DASHBOARD TRÊN HUBS!")
