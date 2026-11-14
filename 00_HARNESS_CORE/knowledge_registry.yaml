@@ -214,7 +214,7 @@ entries:
     status: active
     owner: Web Platform
     system_of_record: "Google Trends API (pytrends VN)"
-    generator_script: "scripts/cron_theme_seasonality.py"
+    generator_script: "scripts/theme_seasonality.py"
     freshness_days: 30
     used_for: [seasonality_forecast, trend_analysis]
 

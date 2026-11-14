@@ -1,24 +1,9 @@
 {
   "version": "1.0",
-  "generated_at": "2026-11-07T13:12:54.475235+00:00",
+  "generated_at": "2026-11-14T06:58:30.506521+00:00",
   "mode": "observe",
   "resolved": false,
   "items": [
-    {
-      "reference": "graphify-out/wiki/index.md",
-      "sources": [
-        ".agents/rules/graphify.md"
-      ],
-      "original_kind": "skill_asset_reference",
-      "line": 12,
-      "raw_reference": "graphify-out/wiki/index.md",
-      "reason": "skill_package_reference",
-      "category": "skill_asset_review",
-      "proposed_action": "verify_skill_package_base",
-      "confidence": "low",
-      "status": "pending_review",
-      "do_not_edit_source": true
-    },
     {
       "reference": "react-web-momo/data/seo-news.json",
       "sources": [
@@ -39,13 +24,13 @@
       "sources": [
         "00_HARNESS_CORE/KEYWORD_CLUSTERING_OPTIMIZATION_SPEC.md"
       ],
-      "original_kind": "broken_reference",
+      "original_kind": "external_reference",
       "line": 50,
       "raw_reference": "data/seo-clusters/index.json",
-      "reason": "unresolved_internal_path",
-      "category": "missing_source",
-      "proposed_action": "identify_generator_or_mark_legacy",
-      "confidence": "medium",
+      "reason": "cross_repository_data_dependency",
+      "category": "external_reference",
+      "proposed_action": "review_repository_boundary",
+      "confidence": "high",
       "status": "pending_review",
       "do_not_edit_source": true
     },
@@ -144,13 +129,13 @@
       "sources": [
         "04_MOSPARK_PLATFORM/QUIZ_FLOW_SPECIFICATION_FOR_DEV.md"
       ],
-      "original_kind": "code_path_reference",
+      "original_kind": "external_reference",
       "line": 233,
       "raw_reference": "./lib/data/quiz_catalog.json",
-      "reason": "code_runtime_or_generated_path",
-      "category": "code_path_review",
-      "proposed_action": "verify_input_or_generated_output",
-      "confidence": "low",
+      "reason": "cross_repository_data_dependency",
+      "category": "external_reference",
+      "proposed_action": "review_repository_boundary",
+      "confidence": "high",
       "status": "pending_review",
       "do_not_edit_source": true
     },
@@ -200,17 +185,17 @@
       "do_not_edit_source": true
     },
     {
-      "reference": "05_HUBS/vehicle-hub-navigation.md",
+      "reference": "lib/dashboard/hub-map.json",
       "sources": [
-        "05_HUBS/vehicle/vehicle-hub-brd.md"
+        "05_HUBS/HUB_CLASSIFICATION_SSOT.md"
       ],
-      "original_kind": "broken_reference",
-      "line": 1006,
-      "raw_reference": "05_HUBS/vehicle-hub-navigation.md",
-      "reason": "unresolved_internal_path",
-      "category": "broken_internal_reference",
-      "proposed_action": "manual_source_review",
-      "confidence": "low",
+      "original_kind": "external_reference",
+      "line": 120,
+      "raw_reference": "lib/dashboard/hub-map.json",
+      "reason": "cross_repository_data_dependency",
+      "category": "external_reference",
+      "proposed_action": "review_repository_boundary",
+      "confidence": "high",
       "status": "pending_review",
       "do_not_edit_source": true
     },
@@ -264,13 +249,13 @@
       "sources": [
         "07_REPORTS/KEYWORD_REALLOCATION_REVIEW.md"
       ],
-      "original_kind": "broken_reference",
+      "original_kind": "external_reference",
       "line": 160,
       "raw_reference": "data/content-plan-data.json",
-      "reason": "unresolved_internal_path",
-      "category": "missing_source",
-      "proposed_action": "identify_generator_or_mark_legacy",
-      "confidence": "medium",
+      "reason": "cross_repository_data_dependency",
+      "category": "external_reference",
+      "proposed_action": "review_repository_boundary",
+      "confidence": "high",
       "status": "pending_review",
       "do_not_edit_source": true
     },
@@ -279,13 +264,43 @@
       "sources": [
         "07_REPORTS/docs/monthly-reporting-tool-architecture.md"
       ],
-      "original_kind": "broken_reference",
+      "original_kind": "external_reference",
       "line": 106,
       "raw_reference": "lib/dashboard/web-data.json",
+      "reason": "cross_repository_data_dependency",
+      "category": "external_reference",
+      "proposed_action": "review_repository_boundary",
+      "confidence": "high",
+      "status": "pending_review",
+      "do_not_edit_source": true
+    },
+    {
+      "reference": "docs/Spec_Driven-Graph_Matrix-Development/README-V1.md",
+      "sources": [
+        "07_REPORTS/docs/weekly-report-2026-11-02-11-08.md"
+      ],
+      "original_kind": "broken_reference",
+      "line": 297,
+      "raw_reference": "docs/Spec_Driven-Graph_Matrix-Development/README-V1.md",
       "reason": "unresolved_internal_path",
-      "category": "missing_source",
-      "proposed_action": "identify_generator_or_mark_legacy",
-      "confidence": "medium",
+      "category": "broken_internal_reference",
+      "proposed_action": "manual_source_review",
+      "confidence": "low",
+      "status": "pending_review",
+      "do_not_edit_source": true
+    },
+    {
+      "reference": "momo.cms/docs/features/FEAT-MOMATRIX-CORE-AND-DOCS-API.md",
+      "sources": [
+        "07_REPORTS/docs/weekly-report-2026-11-02-11-08.md"
+      ],
+      "original_kind": "broken_reference",
+      "line": 298,
+      "raw_reference": "momo.cms/docs/features/FEAT-MOMATRIX-CORE-AND-DOCS-API.md",
+      "reason": "unresolved_internal_path",
+      "category": "broken_internal_reference",
+      "proposed_action": "manual_source_review",
+      "confidence": "low",
       "status": "pending_review",
       "do_not_edit_source": true
     },
@@ -294,70 +309,10 @@
       "sources": [
         "13_INTAKE/README.md"
       ],
-      "original_kind": "broken_reference",
+      "original_kind": "external_reference",
       "line": 78,
       "raw_reference": "lib/dashboard/web-data.json",
-      "reason": "unresolved_internal_path",
-      "category": "missing_source",
-      "proposed_action": "identify_generator_or_mark_legacy",
-      "confidence": "medium",
-      "status": "pending_review",
-      "do_not_edit_source": true
-    },
-    {
-      "reference": "/Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/web-data.json",
-      "sources": [
-        "AGENTS.md"
-      ],
-      "original_kind": "external_reference",
-      "line": 88,
-      "raw_reference": "file:///Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/web-data.json",
-      "reason": "cross_repository_reference",
-      "category": "external_reference",
-      "proposed_action": "review_repository_boundary",
-      "confidence": "high",
-      "status": "pending_review",
-      "do_not_edit_source": true
-    },
-    {
-      "reference": "/Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/summary.json",
-      "sources": [
-        "AGENTS.md"
-      ],
-      "original_kind": "external_reference",
-      "line": 88,
-      "raw_reference": "file:///Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/summary.json",
-      "reason": "cross_repository_reference",
-      "category": "external_reference",
-      "proposed_action": "review_repository_boundary",
-      "confidence": "high",
-      "status": "pending_review",
-      "do_not_edit_source": true
-    },
-    {
-      "reference": "/Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/web-data.json",
-      "sources": [
-        "AGENTS.md"
-      ],
-      "original_kind": "external_reference",
-      "line": 93,
-      "raw_reference": "file:///Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/web-data.json",
-      "reason": "cross_repository_reference",
-      "category": "external_reference",
-      "proposed_action": "review_repository_boundary",
-      "confidence": "high",
-      "status": "pending_review",
-      "do_not_edit_source": true
-    },
-    {
-      "reference": "/Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/summary.json",
-      "sources": [
-        "AGENTS.md"
-      ],
-      "original_kind": "external_reference",
-      "line": 93,
-      "raw_reference": "file:///Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/summary.json",
-      "reason": "cross_repository_reference",
+      "reason": "cross_repository_data_dependency",
       "category": "external_reference",
       "proposed_action": "review_repository_boundary",
       "confidence": "high",
@@ -376,6 +331,111 @@
       "category": "code_path_review",
       "proposed_action": "verify_input_or_generated_output",
       "confidence": "low",
+      "status": "pending_review",
+      "do_not_edit_source": true
+    },
+    {
+      "reference": "Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md",
+      "sources": [
+        "scripts/archive/oneoff-2026-11/scratch_fix_platform.py"
+      ],
+      "original_kind": "external_reference",
+      "line": 84,
+      "raw_reference": "Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md",
+      "reason": "cross_repository_reference",
+      "category": "external_reference",
+      "proposed_action": "review_repository_boundary",
+      "confidence": "high",
+      "status": "pending_review",
+      "do_not_edit_source": true
+    },
+    {
+      "reference": "Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md",
+      "sources": [
+        "scripts/archive/oneoff-2026-11/scratch_fix_v2.py"
+      ],
+      "original_kind": "external_reference",
+      "line": 31,
+      "raw_reference": "Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md",
+      "reason": "cross_repository_reference",
+      "category": "external_reference",
+      "proposed_action": "review_repository_boundary",
+      "confidence": "high",
+      "status": "pending_review",
+      "do_not_edit_source": true
+    },
+    {
+      "reference": "Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md",
+      "sources": [
+        "scripts/archive/oneoff-2026-11/scratch_human_report.py"
+      ],
+      "original_kind": "external_reference",
+      "line": 324,
+      "raw_reference": "Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md",
+      "reason": "cross_repository_reference",
+      "category": "external_reference",
+      "proposed_action": "review_repository_boundary",
+      "confidence": "high",
+      "status": "pending_review",
+      "do_not_edit_source": true
+    },
+    {
+      "reference": "Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md",
+      "sources": [
+        "scripts/archive/oneoff-2026-11/scratch_strict_audit_report.py"
+      ],
+      "original_kind": "external_reference",
+      "line": 290,
+      "raw_reference": "Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md",
+      "reason": "cross_repository_reference",
+      "category": "external_reference",
+      "proposed_action": "review_repository_boundary",
+      "confidence": "high",
+      "status": "pending_review",
+      "do_not_edit_source": true
+    },
+    {
+      "reference": "react-web-momo/data/analytics/monthly-report-2026-10.json",
+      "sources": [
+        "scripts/archive/oneoff-2026-11/update_all_october_reports_30d.py"
+      ],
+      "original_kind": "external_reference",
+      "line": 12,
+      "raw_reference": "react-web-momo/data/analytics/monthly-report-2026-10.json",
+      "reason": "cross_repository_reference",
+      "category": "external_reference",
+      "proposed_action": "review_repository_boundary",
+      "confidence": "high",
+      "status": "pending_review",
+      "do_not_edit_source": true
+    },
+    {
+      "reference": "react-web-momo/data/reports/monthly-index.json",
+      "sources": [
+        "scripts/archive/oneoff-2026-11/update_all_october_reports_30d.py"
+      ],
+      "original_kind": "external_reference",
+      "line": 13,
+      "raw_reference": "react-web-momo/data/reports/monthly-index.json",
+      "reason": "cross_repository_reference",
+      "category": "external_reference",
+      "proposed_action": "review_repository_boundary",
+      "confidence": "high",
+      "status": "pending_review",
+      "do_not_edit_source": true
+    },
+    {
+      "reference": "react-web-momo/data/reports/report-thang-10-2026-board.md",
+      "sources": [
+        "scripts/archive/oneoff-2026-11/update_all_october_reports_30d.py"
+      ],
+      "original_kind": "external_reference",
+      "line": 16,
+      "raw_reference": "react-web-momo/data/reports/report-thang-10-2026-board.md",
+      "reason": "cross_repository_reference",
+      "category": "external_reference",
+      "proposed_action": "review_repository_boundary",
+      "confidence": "high",
       "status": "pending_review",
       "do_not_edit_source": true
     },
@@ -455,9 +515,69 @@
       "do_not_edit_source": true
     },
     {
+      "reference": "cache/performance.sqlite",
+      "sources": [
+        "scripts/detect_knowledge_conflicts.py"
+      ],
+      "original_kind": "code_path_reference",
+      "line": 152,
+      "raw_reference": "cache/performance.sqlite",
+      "reason": "code_runtime_or_generated_path",
+      "category": "code_path_review",
+      "proposed_action": "verify_input_or_generated_output",
+      "confidence": "low",
+      "status": "pending_review",
+      "do_not_edit_source": true
+    },
+    {
+      "reference": "Idea/react-web-momo/lib/dashboard/hub-map.json",
+      "sources": [
+        "scripts/export_3m_urls_to_sheet.py"
+      ],
+      "original_kind": "external_reference",
+      "line": 175,
+      "raw_reference": "Idea/react-web-momo/lib/dashboard/hub-map.json",
+      "reason": "cross_repository_reference",
+      "category": "external_reference",
+      "proposed_action": "review_repository_boundary",
+      "confidence": "high",
+      "status": "pending_review",
+      "do_not_edit_source": true
+    },
+    {
+      "reference": "react-web-momo/data/analytics/SPEC-page-mtd.md",
+      "sources": [
+        "scripts/export_page_mtd.py"
+      ],
+      "original_kind": "external_reference",
+      "line": 6,
+      "raw_reference": "react-web-momo/data/analytics/SPEC-page-mtd.md",
+      "reason": "cross_repository_reference",
+      "category": "external_reference",
+      "proposed_action": "review_repository_boundary",
+      "confidence": "high",
+      "status": "pending_review",
+      "do_not_edit_source": true
+    },
+    {
+      "reference": "Idea/react-web-momo/data/analytics/page_mtd.json",
+      "sources": [
+        "scripts/export_page_mtd.py"
+      ],
+      "original_kind": "external_reference",
+      "line": 30,
+      "raw_reference": "Idea/react-web-momo/data/analytics/page_mtd.json",
+      "reason": "cross_repository_reference",
+      "category": "external_reference",
+      "proposed_action": "review_repository_boundary",
+      "confidence": "high",
+      "status": "pending_review",
+      "do_not_edit_source": true
+    },
+    {
       "reference": "07_REPORTS/data/gsc_cannibalization_matrix.json",
       "sources": [
-        "scripts/cron_gsc_cannibalization.py"
+        "scripts/gsc_cannibalization.py"
       ],
       "original_kind": "code_path_reference",
       "line": 9,
@@ -472,7 +592,7 @@
     {
       "reference": "07_REPORTS/data/gsc_crawl_stats.json",
       "sources": [
-        "scripts/cron_gsc_crawl_stats.py"
+        "scripts/gsc_crawl_stats.py"
       ],
       "original_kind": "code_path_reference",
       "line": 8,
@@ -487,7 +607,7 @@
     {
       "reference": "07_REPORTS/data/gsc_keyword_ranking.json",
       "sources": [
-        "scripts/cron_gsc_keyword_ranking.py"
+        "scripts/gsc_keyword_ranking.py"
       ],
       "original_kind": "code_path_reference",
       "line": 9,
@@ -500,32 +620,17 @@
       "do_not_edit_source": true
     },
     {
-      "reference": "cache/performance.sqlite",
-      "sources": [
-        "scripts/detect_knowledge_conflicts.py"
-      ],
-      "original_kind": "code_path_reference",
-      "line": 144,
-      "raw_reference": "cache/performance.sqlite",
-      "reason": "code_runtime_or_generated_path",
-      "category": "code_path_review",
-      "proposed_action": "verify_input_or_generated_output",
-      "confidence": "low",
-      "status": "pending_review",
-      "do_not_edit_source": true
-    },
-    {
       "reference": "lib/dashboard/web-data.json",
       "sources": [
         "scripts/intake.py"
       ],
-      "original_kind": "code_path_reference",
+      "original_kind": "external_reference",
       "line": 225,
       "raw_reference": "lib/dashboard/web-data.json",
-      "reason": "code_runtime_or_generated_path",
-      "category": "code_path_review",
-      "proposed_action": "verify_input_or_generated_output",
-      "confidence": "low",
+      "reason": "cross_repository_data_dependency",
+      "category": "external_reference",
+      "proposed_action": "review_repository_boundary",
+      "confidence": "high",
       "status": "pending_review",
       "do_not_edit_source": true
     },
@@ -534,13 +639,13 @@
       "sources": [
         "scripts/lib/hubs_dashboard.py"
       ],
-      "original_kind": "code_path_reference",
+      "original_kind": "external_reference",
       "line": 3,
       "raw_reference": "lib/dashboard/web-data.json",
-      "reason": "code_runtime_or_generated_path",
-      "category": "code_path_review",
-      "proposed_action": "verify_input_or_generated_output",
-      "confidence": "low",
+      "reason": "cross_repository_data_dependency",
+      "category": "external_reference",
+      "proposed_action": "review_repository_boundary",
+      "confidence": "high",
       "status": "pending_review",
       "do_not_edit_source": true
     },
@@ -552,66 +657,6 @@
       "original_kind": "external_reference",
       "line": 32,
       "raw_reference": "Idea/react-web-momo/lib/dashboard/hub-map.json",
-      "reason": "cross_repository_reference",
-      "category": "external_reference",
-      "proposed_action": "review_repository_boundary",
-      "confidence": "high",
-      "status": "pending_review",
-      "do_not_edit_source": true
-    },
-    {
-      "reference": "Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md",
-      "sources": [
-        "scripts/scratch_fix_platform.py"
-      ],
-      "original_kind": "external_reference",
-      "line": 84,
-      "raw_reference": "Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md",
-      "reason": "cross_repository_reference",
-      "category": "external_reference",
-      "proposed_action": "review_repository_boundary",
-      "confidence": "high",
-      "status": "pending_review",
-      "do_not_edit_source": true
-    },
-    {
-      "reference": "Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md",
-      "sources": [
-        "scripts/scratch_fix_v2.py"
-      ],
-      "original_kind": "external_reference",
-      "line": 31,
-      "raw_reference": "Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md",
-      "reason": "cross_repository_reference",
-      "category": "external_reference",
-      "proposed_action": "review_repository_boundary",
-      "confidence": "high",
-      "status": "pending_review",
-      "do_not_edit_source": true
-    },
-    {
-      "reference": "Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md",
-      "sources": [
-        "scripts/scratch_human_report.py"
-      ],
-      "original_kind": "external_reference",
-      "line": 324,
-      "raw_reference": "Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md",
-      "reason": "cross_repository_reference",
-      "category": "external_reference",
-      "proposed_action": "review_repository_boundary",
-      "confidence": "high",
-      "status": "pending_review",
-      "do_not_edit_source": true
-    },
-    {
-      "reference": "Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md",
-      "sources": [
-        "scripts/scratch_strict_audit_report.py"
-      ],
-      "original_kind": "external_reference",
-      "line": 290,
-      "raw_reference": "Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md",
       "reason": "cross_repository_reference",
       "category": "external_reference",
       "proposed_action": "review_repository_boundary",
@@ -639,13 +684,13 @@
       "sources": [
         "scripts/sync_7d_performance_report.py"
       ],
-      "original_kind": "code_path_reference",
+      "original_kind": "external_reference",
       "line": 17,
       "raw_reference": "data/reports/index.json",
-      "reason": "code_runtime_or_generated_path",
-      "category": "code_path_review",
-      "proposed_action": "verify_input_or_generated_output",
-      "confidence": "low",
+      "reason": "cross_repository_data_dependency",
+      "category": "external_reference",
+      "proposed_action": "review_repository_boundary",
+      "confidence": "high",
       "status": "pending_review",
       "do_not_edit_source": true
     },
@@ -655,7 +700,7 @@
         "scripts/sync_7d_performance_report.py"
       ],
       "original_kind": "external_reference",
-      "line": 263,
+      "line": 265,
       "raw_reference": "react-web-momo/data/reports/index.json",
       "reason": "cross_repository_reference",
       "category": "external_reference",
@@ -669,13 +714,13 @@
       "sources": [
         "scripts/sync_all_data.py"
       ],
-      "original_kind": "code_path_reference",
+      "original_kind": "external_reference",
       "line": 10,
       "raw_reference": "data/seo-news.json",
-      "reason": "code_runtime_or_generated_path",
-      "category": "code_path_review",
-      "proposed_action": "verify_input_or_generated_output",
-      "confidence": "low",
+      "reason": "cross_repository_data_dependency",
+      "category": "external_reference",
+      "proposed_action": "review_repository_boundary",
+      "confidence": "high",
       "status": "pending_review",
       "do_not_edit_source": true
     },
@@ -684,13 +729,13 @@
       "sources": [
         "scripts/sync_all_data.py"
       ],
-      "original_kind": "code_path_reference",
-      "line": 130,
+      "original_kind": "external_reference",
+      "line": 132,
       "raw_reference": "data/seo-news.json",
-      "reason": "code_runtime_or_generated_path",
-      "category": "code_path_review",
-      "proposed_action": "verify_input_or_generated_output",
-      "confidence": "low",
+      "reason": "cross_repository_data_dependency",
+      "category": "external_reference",
+      "proposed_action": "review_repository_boundary",
+      "confidence": "high",
       "status": "pending_review",
       "do_not_edit_source": true
     },
@@ -699,13 +744,13 @@
       "sources": [
         "scripts/sync_all_data.py"
       ],
-      "original_kind": "code_path_reference",
-      "line": 141,
+      "original_kind": "external_reference",
+      "line": 143,
       "raw_reference": "data/ga4/landing-pages.json",
-      "reason": "code_runtime_or_generated_path",
-      "category": "code_path_review",
-      "proposed_action": "verify_input_or_generated_output",
-      "confidence": "low",
+      "reason": "cross_repository_data_dependency",
+      "category": "external_reference",
+      "proposed_action": "review_repository_boundary",
+      "confidence": "high",
       "status": "pending_review",
       "do_not_edit_source": true
     },
@@ -714,13 +759,13 @@
       "sources": [
         "scripts/sync_breakout_to_hubs.py"
       ],
-      "original_kind": "code_path_reference",
+      "original_kind": "external_reference",
       "line": 14,
       "raw_reference": "data/analytics/gsc_breakout_pages_7d.json",
-      "reason": "code_runtime_or_generated_path",
-      "category": "code_path_review",
-      "proposed_action": "verify_input_or_generated_output",
-      "confidence": "low",
+      "reason": "cross_repository_data_dependency",
+      "category": "external_reference",
+      "proposed_action": "review_repository_boundary",
+      "confidence": "high",
       "status": "pending_review",
       "do_not_edit_source": true
     },
@@ -729,13 +774,13 @@
       "sources": [
         "scripts/sync_breakout_to_hubs.py"
       ],
-      "original_kind": "code_path_reference",
+      "original_kind": "external_reference",
       "line": 17,
       "raw_reference": "data/reports/weekly-report-2026-10-26-11-01.md",
-      "reason": "code_runtime_or_generated_path",
-      "category": "code_path_review",
-      "proposed_action": "verify_input_or_generated_output",
-      "confidence": "low",
+      "reason": "cross_repository_data_dependency",
+      "category": "external_reference",
+      "proposed_action": "review_repository_boundary",
+      "confidence": "high",
       "status": "pending_review",
       "do_not_edit_source": true
     },
@@ -834,13 +879,13 @@
       "sources": [
         "scripts/sync_ga4_to_hubs.py"
       ],
-      "original_kind": "code_path_reference",
+      "original_kind": "external_reference",
       "line": 5,
       "raw_reference": "data/ga4/landing-pages.json",
-      "reason": "code_runtime_or_generated_path",
-      "category": "code_path_review",
-      "proposed_action": "verify_input_or_generated_output",
-      "confidence": "low",
+      "reason": "cross_repository_data_dependency",
+      "category": "external_reference",
+      "proposed_action": "review_repository_boundary",
+      "confidence": "high",
       "status": "pending_review",
       "do_not_edit_source": true
     },
@@ -849,13 +894,13 @@
       "sources": [
         "scripts/sync_hybrid_report.py"
       ],
-      "original_kind": "code_path_reference",
-      "line": 312,
+      "original_kind": "external_reference",
+      "line": 313,
       "raw_reference": "lib/dashboard/summary.json",
-      "reason": "code_runtime_or_generated_path",
-      "category": "code_path_review",
-      "proposed_action": "verify_input_or_generated_output",
-      "confidence": "low",
+      "reason": "cross_repository_data_dependency",
+      "category": "external_reference",
+      "proposed_action": "review_repository_boundary",
+      "confidence": "high",
       "status": "pending_review",
       "do_not_edit_source": true
     },
@@ -864,13 +909,13 @@
       "sources": [
         "scripts/sync_inventory_to_hubs.py"
       ],
-      "original_kind": "code_path_reference",
-      "line": 1318,
+      "original_kind": "external_reference",
+      "line": 1273,
       "raw_reference": "data/seo-clusters/index.json",
-      "reason": "code_runtime_or_generated_path",
-      "category": "code_path_review",
-      "proposed_action": "verify_input_or_generated_output",
-      "confidence": "low",
+      "reason": "cross_repository_data_dependency",
+      "category": "external_reference",
+      "proposed_action": "review_repository_boundary",
+      "confidence": "high",
       "status": "pending_review",
       "do_not_edit_source": true
     },
@@ -909,55 +954,10 @@
       "sources": [
         "scripts/sync_seo_news.py"
       ],
-      "original_kind": "code_path_reference",
+      "original_kind": "external_reference",
       "line": 6,
       "raw_reference": "data/seo-news.json",
-      "reason": "code_runtime_or_generated_path",
-      "category": "code_path_review",
-      "proposed_action": "verify_input_or_generated_output",
-      "confidence": "low",
-      "status": "pending_review",
-      "do_not_edit_source": true
-    },
-    {
-      "reference": "react-web-momo/data/analytics/monthly-report-2026-10.json",
-      "sources": [
-        "scripts/update_all_october_reports_30d.py"
-      ],
-      "original_kind": "external_reference",
-      "line": 12,
-      "raw_reference": "react-web-momo/data/analytics/monthly-report-2026-10.json",
-      "reason": "cross_repository_reference",
-      "category": "external_reference",
-      "proposed_action": "review_repository_boundary",
-      "confidence": "high",
-      "status": "pending_review",
-      "do_not_edit_source": true
-    },
-    {
-      "reference": "react-web-momo/data/reports/monthly-index.json",
-      "sources": [
-        "scripts/update_all_october_reports_30d.py"
-      ],
-      "original_kind": "external_reference",
-      "line": 13,
-      "raw_reference": "react-web-momo/data/reports/monthly-index.json",
-      "reason": "cross_repository_reference",
-      "category": "external_reference",
-      "proposed_action": "review_repository_boundary",
-      "confidence": "high",
-      "status": "pending_review",
-      "do_not_edit_source": true
-    },
-    {
-      "reference": "react-web-momo/data/reports/report-thang-10-2026-board.md",
-      "sources": [
-        "scripts/update_all_october_reports_30d.py"
-      ],
-      "original_kind": "external_reference",
-      "line": 16,
-      "raw_reference": "react-web-momo/data/reports/report-thang-10-2026-board.md",
-      "reason": "cross_repository_reference",
+      "reason": "cross_repository_data_dependency",
       "category": "external_reference",
       "proposed_action": "review_repository_boundary",
       "confidence": "high",
