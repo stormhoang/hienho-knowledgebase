@@ -72,6 +72,7 @@
 | **Tài liệu Hub (Strategy, Navigation, Performance)** | [`05_HUBS/<hub-name>/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS/) | Chỉ đọc đúng thư mục Hub tương ứng. |
 | **Kiểm tra độ mới tri thức, Registry** | [`00_HARNESS_CORE/knowledge_freshness.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/00_HARNESS_CORE/knowledge_freshness.md) | Chạy `./.venv/bin/python scripts/check_knowledge_freshness.py`. |
 | **Đường dẫn tham chiếu lỗi, Link gãy trong repo** | [`00_HARNESS_CORE/knowledge_conflicts.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/00_HARNESS_CORE/knowledge_conflicts.md) | Chạy `./.venv/bin/python scripts/detect_knowledge_conflicts.py`. |
+| **Kiểm chứng số liệu, Evidence, Chống hallucination** | [`00_HARNESS_CORE/EVIDENCE_CONTRACT.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/00_HARNESS_CORE/EVIDENCE_CONTRACT.md) | Đọc khi trả lời có số liệu/kết luận thực tế quan trọng; validate evidence JSON qua `./.venv/bin/python scripts/validate_evidence.py`. |
 | **Báo cáo tuần W##, Báo cáo tháng, MBR Board** | [`07_REPORTS/docs/INDEX.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/INDEX.md) | Đọc INDEX trước để xác định đúng file theo kỳ (weekly-report-YYYY-MM-DD-..., report-thang-XX-2026-board.md); KHÔNG load toàn bộ `07_REPORTS/docs/`. Template: `07_REPORTS/templates/monthly_report_template.md`; chuẩn trình bày: skill `web-platform-reporting`. |
 | **Content Plan, Keyword Cluster, Content Inventory** | [`06_USE_CASE_MOMO/content-plans/INDEX.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/06_USE_CASE_MOMO/content-plans/INDEX.md) + [`05_HUBS/inventory/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS/inventory/) | Đọc INDEX chọn đúng use-case folder; keyword inventory đọc đúng CSV của Hub; skill `content-plan-architect` chứa quy chuẩn 7 tầng. |
 
@@ -89,9 +90,15 @@
   - "URL tăng/giảm, top pages, breakout" → GA4 `analyze_growth_urls_7d.py`; GSC/SERP `sync_7d_performance_report.py`; breakout→Hub `sync_breakout_to_hubs.py`.
   - "URL chết, mất impressions, 404/301" → `analyze_lost_impressions.py` → `analyze_gsc_zero_impressions.py` → `audit_actionable_urls.py`.
   - "sync hub / data hub / lệnh hub" → `sync_inventory_to_hubs.py` + `sync_data_to_hubs_dashboard.py`; `sync_<hub>_<ky>.py` chỉ khi user chỉ định đúng hub + kỳ.
+  - "kiểm chứng số liệu / evidence / fact-check" → đọc `00_HARNESS_CORE/EVIDENCE_CONTRACT.md`, build evidence JSON và chạy `./.venv/bin/python scripts/validate_evidence.py`.
   - Mặc định an toàn: không tự push GitHub Hubs (`main`) trừ khi có cờ `--push-hubs`.
 - **Hub Sync Safety:** Không chạy 2 tiến trình sync Hub song song; trước khi chạy check `git -C "/Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo" status` phải sạch. 5 orchestrator (`sync_ga4_master`, `sync_7d_performance_report`, `sync_hybrid_report`, `sync_data_to_hubs_dashboard`, `sync_all_data`) đã có lock `scripts/lib/hub_sync_lock.py` - tiến trình thứ 2 tự exit 2 (TTL 2h, lock file `07_REPORTS/data/cache/hub_sync.lock`). Lock chỉ phủ repo này; nếu user đang sửa tay repo React thì cảnh báo trước.
 - **Google Sheets SSOT:** Web Platform Report `1JaaYv2MnDy-dfBdC3P-GMB6SFgjez2VowdjX9PjmPYU`; Cinema Hub Roadmap `1YT2sdU-O4smoy6TUKBic6PTFBxUXNUVkd_S-tmjiplg`.
 - **Traffic SSOT:** Mọi báo cáo lưu lượng bắt buộc tách Non-Paid (`Organic`, `Direct`, `AI Traffic (GEO)`, `Referral`) vs Paid thành 2 dòng tổng kèm tỷ trọng %.
 - **Báo cáo Tuần/Tháng:** Chuẩn SSOT tại `.agents/skills/web-platform-reporting/SKILL.md` + `03_SKILLS/momo-reporting-guidelines.md` - lazy load khi cần.
+- **Anti-Hallucination (Bắt buộc):**
+  - Phân tầng nghiêm ngặt, không trộn: `fact` (truy được về file/số liệu gốc + kỳ dữ liệu) / `inference` (ghi rõ "suy luận từ...") / `recommendation`. Cấm nêu suy luận như fact.
+  - Mọi con số trong câu trả lời phải truy về source cụ thể (file JSON/MD/script output); không truy được → ghi `[cần verify]`, TUYỆT ĐỐI không bịa số, bịa hoàn cảnh, bịa diễn biến.
+  - Thiếu dữ liệu để kết luận → nói thẳng "không đủ dữ liệu, cần kiểm tra X" thay vì diễn giải.
+  - Câu trả lời/báo cáo chứa số liệu quan trọng: đóng gói evidence JSON theo `00_HARNESS_CORE/EVIDENCE_CONTRACT.md` và chạy `./.venv/bin/python scripts/validate_evidence.py` trước khi trình bày.
 - **Quản trị file này:** Routing table tối đa ~40 rows, row mới ≤2 dòng, ưu tiên gộp vào row hiện có; nếu file >24KB thì tách phần mở rộng sang file riêng và để pointer ở đây.
