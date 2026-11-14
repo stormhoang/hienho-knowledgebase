@@ -40,6 +40,7 @@ if not HUBS_REPO.exists():
 sys.path.insert(0, str(BASE_DIR))
 from scripts.sync_ga4_to_hubs import get_access_token, PROPERTY_ID, run_ga4_report
 from scripts.build_full_funnel_matrix import build_theme_matcher
+from scripts.lib.hub_sync_lock import hub_sync_lock
 
 NS_MAIN = "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
 ET.register_namespace("", NS_MAIN)
@@ -853,4 +854,5 @@ def main():
     print("=" * 75)
 
 if __name__ == "__main__":
-    main()
+    with hub_sync_lock("sync_ga4_master"):
+        main()

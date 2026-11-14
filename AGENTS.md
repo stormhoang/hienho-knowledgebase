@@ -45,7 +45,7 @@
 | **Tracking Umami, Event Name, Schema Params** | [`04_MOSPARK_PLATFORM/umami_utility_tracking.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/04_MOSPARK_PLATFORM/umami_utility_tracking.md) | Chỉ đọc file này khi hỏi về tracking/sự kiện tiện ích. |
 | **Tracking GTM, GTM Container, Event GTM/GA4** | [`04_MOSPARK_PLATFORM/WEB_EVENT_TRACKING_DICTIONARY.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/04_MOSPARK_PLATFORM/WEB_EVENT_TRACKING_DICTIONARY.md) | SSOT duy nhất: GTM-P9JDDJZ (web), GTM version, event schema GA4 Property 270743103. Không đọc file khác trừ khi hỏi riêng In-App GTM (GTM-5TCGRPX, xem `00_HARNESS_CORE/hienho_master_doc.md`). |
 | **Cấp quyền / Cấu hình GTM API, OAuth token** | [`scripts/auth_gtm.js`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/scripts/auth_gtm.js) | Chạy `node scripts/auth_gtm.js` khi cần cấp quyền GTM API hoặc làm mới `07_REPORTS/data/credentials/gtm-token.json`. |
-| **Sync GSC chuyên sâu (Keyword Ranking, Cannibalization, Crawl Stats)** | `scripts/cron_gsc_keyword_ranking.py`, `scripts/cron_gsc_cannibalization.py`, `scripts/cron_gsc_crawl_stats.py` | Chọn đúng 1 script theo intent; output SSOT tại `07_REPORTS/data/gsc_*.json`. Cảnh báo: `fetch_search_analytics.py` tên gây nhầm, thực chất là GA4 /tim-kiem, KHÔNG phải GSC. |
+| **Sync GSC chuyên sâu (Keyword Ranking, Cannibalization, Crawl Stats)** | `scripts/gsc_keyword_ranking.py`, `scripts/gsc_cannibalization.py`, `scripts/gsc_crawl_stats.py` | Chọn đúng 1 script theo intent; output SSOT tại `07_REPORTS/data/gsc_*.json`. Cả 3 là script manual (không cron), user tự command. Cảnh báo: `fetch_search_analytics.py` tên gây nhầm, thực chất là GA4 /tim-kiem, KHÔNG phải GSC. |
 | **Trích xuất URL tăng/giảm, Breakout, Lost Traffic** | GA4: `scripts/analyze_growth_urls_7d.py` - GSC SERP gainers/losers: `scripts/sync_7d_performance_report.py` - Breakout WoW đẩy Hub: `scripts/sync_breakout_to_hubs.py` | Chọn theo nguồn data user hỏi (GA4 hay GSC/SERP). |
 | **URL mất impressions, Zero impressions, Check 404/301/Redirect** | `scripts/analyze_lost_impressions.py` → `scripts/analyze_gsc_zero_impressions.py` → `scripts/audit_actionable_urls.py` | Chạy tuần tự: lost impressions → zero impressions → audit HTTP status (404/301). Audit đọc `07_REPORTS/data/gsc_lost_impressions_detail.json` nên phải chạy lost trước. |
 | **Sync/Data theo Hub (inventory, dashboard, per-hub)** | Tổng quát: `scripts/sync_inventory_to_hubs.py` (keywords→Hubs), `scripts/sync_data_to_hubs_dashboard.py` (dashboard), `scripts/sync_all_data.py` (full pipeline). Per-hub one-off: `scripts/sync_<hub>_<ky>.py` (vd `sync_vehicle_nov.py`, `sync_cinema_performance_nov.py`) | Hỏi "lệnh hub X" → ưu tiên pipeline tổng quát; script `*_nov`/`*_oct` là one-off theo kỳ, không phải lệnh chuẩn. |
@@ -60,40 +60,38 @@
 | **Mô phỏng Kịch bản What-If, Cắt giảm Ads, CTR Lift** | [`scripts/lib/scenario_simulator.py`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/scripts/lib/scenario_simulator.py) | Chạy `./.venv/bin/python scripts/lib/scenario_simulator.py`. |
 | **Dự báo Mùa vụ, Ngoại suy Đa kịch bản** | [`scripts/lib/forecast_engine.py`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/scripts/lib/forecast_engine.py) | Chạy `./.venv/bin/python scripts/lib/forecast_engine.py`. |
 | **Paid Ads, Kênh Media, UTM Campaigns** | [`07_REPORTS/data/analytics/paid_ads_performance.json`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/data/analytics/paid_ads_performance.json) | Đọc JSON SSOT hoặc chạy `./.venv/bin/python scripts/sync_paid_ads.py`. |
-| **Lịch mùa vụ, Phân tích Google Trends** | [`07_REPORTS/data/theme_seasonality.json`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/data/theme_seasonality.json) | Đọc JSON SSOT hoặc chạy cron script mùa vụ. |
+| **Lịch mùa vụ, Phân tích Google Trends** | [`07_REPORTS/data/theme_seasonality.json`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/data/theme_seasonality.json) | Đọc JSON SSOT hoặc chạy `./.venv/bin/python scripts/theme_seasonality.py`. |
 | **Báo cáo Tuần/Tháng, Hiệu suất MTD, Target** | [`07_REPORTS/docs/PERFORMANCE_SNAPSHOT_LATEST.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/PERFORMANCE_SNAPSHOT_LATEST.md) | Chỉ đọc khi cần làm báo cáo/phân tích số liệu kỳ hiện tại. |
 | **Tiêu chuẩn Báo cáo Tháng (Executive 6 Streams SSOT)** | [`.agents/skills/web-platform-reporting/SKILL.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/.agents/skills/web-platform-reporting/SKILL.md) | Đọc khi soạn thảo hoặc review báo cáo tháng cấp Ban Giám Đốc. |
 | **Quy chuẩn trình bày báo cáo, slide, agenda, tag R/D/F** | [`03_SKILLS/momo-reporting-guidelines.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS/momo-reporting-guidelines.md) | Đọc bắt buộc trước khi dựng slide/deck báo cáo cấp công ty. |
 | **Glossary Báo cáo, Chuẩn hóa Thuật ngữ** | [`03_SKILLS/momo-reporting-glossary.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS/momo-reporting-glossary.md) | Tra cứu từ điển thuật ngữ, chỉ số, cấm kỵ và quy chuẩn hành văn. |
-| **Chỉ đạo Lãnh đạo, Quyết định chiến lược** | [`MEETING_RECAPS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/MEETING_RECAPS.md) | Chỉ đọc mục gần nhất khi lập kế hoạch chiến lược mới. |
+| **Chỉ đạo Lãnh đạo, Quyết định chiến lược** | [`MEETING_RECAPS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/MEETING_RECAPS.md) + archive `MEETING_RECAPS_<year>-Q<quarter>.md` | File chính chỉ chứa quý hiện hành; chiến lược cũ hơn đọc đúng file archive theo quý. |
 | **Cinema Hub Roadmap, BU Movies Collab, Minigames** | [`scripts/sync_cinema_roadmap_sheet.py`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/scripts/sync_cinema_roadmap_sheet.py) | Chạy `./.venv/bin/python scripts/sync_cinema_roadmap_sheet.py` (Sheet ID `1YT2sdU-O4smoy6TUKBic6PTFBxUXNUVkd_S-tmjiplg`). |
 | **Pipeline Tác vụ Agent, Giao việc Hiến sang Hub /agent** | [`scripts/sync_agent_tasks.py`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/scripts/sync_agent_tasks.py) | Chạy `./.venv/bin/python scripts/sync_agent_tasks.py`. |
 | **BRD/PRD Use Case (Vay Nhanh, VTS, BHYT, eSIM...)** | [`06_USE_CASE_MOMO/<use-case>-brd.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/06_USE_CASE_MOMO/) | Chỉ đọc đúng file BRD của use case được hỏi. |
 | **Tài liệu Hub (Strategy, Navigation, Performance)** | [`05_HUBS/<hub-name>/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS/) | Chỉ đọc đúng thư mục Hub tương ứng. |
 | **Kiểm tra độ mới tri thức, Registry** | [`00_HARNESS_CORE/knowledge_freshness.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/00_HARNESS_CORE/knowledge_freshness.md) | Chạy `./.venv/bin/python scripts/check_knowledge_freshness.py`. |
 | **Đường dẫn tham chiếu lỗi, Link gãy trong repo** | [`00_HARNESS_CORE/knowledge_conflicts.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/00_HARNESS_CORE/knowledge_conflicts.md) | Chạy `./.venv/bin/python scripts/detect_knowledge_conflicts.py`. |
+| **Báo cáo tuần W##, Báo cáo tháng, MBR Board** | [`07_REPORTS/docs/INDEX.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/INDEX.md) | Đọc INDEX trước để xác định đúng file theo kỳ (weekly-report-YYYY-MM-DD-..., report-thang-XX-2026-board.md); KHÔNG load toàn bộ `07_REPORTS/docs/`. Template: `07_REPORTS/templates/monthly_report_template.md`; chuẩn trình bày: skill `web-platform-reporting`. |
+| **Content Plan, Keyword Cluster, Content Inventory** | [`06_USE_CASE_MOMO/content-plans/INDEX.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/06_USE_CASE_MOMO/content-plans/INDEX.md) + [`05_HUBS/inventory/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS/inventory/) | Đọc INDEX chọn đúng use-case folder; keyword inventory đọc đúng CSV của Hub; skill `content-plan-architect` chứa quy chuẩn 7 tầng. |
 
 ---
 
 ## ⚡ QUY CHUẨN KỸ THUẬT & TRUY XUẤT CỐT LÕI (SSOT POINTERS)
 
-- **Python Runtime & Environment SSOT:** Toàn bộ pipeline và script Python trong repo (`scripts/*.py`) được quản lý qua môi trường ảo [`./.venv`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/.venv) (Python 3.12). Khi chạy script, **BẮT BUỘC gọi trực tiếp `./.venv/bin/python <script_path>`**. Tuyệt đối không dùng lệnh `python3` trần.
-- **Quy chuẩn Kích hoạt Báo cáo Tự động (Automated Triggers):**
-  - *"Đọc tracking report mới nhất"*: Tự động chạy `./.venv/bin/python scripts/sync_tracking_report.py` để quét file Excel mới nhất từ `/Users/hienhv/Downloads/`.
-  - *"Cập nhật số GA4 / GA4 MTD"*: Tự động chạy `./.venv/bin/python scripts/sync_ga4_master.py` (kèm `--mtd <ngày>` nếu có) trong 6-10s để đồng bộ GA4, tính Target Pacing và cập nhật Google Sheets.
-  - *"Sync report / Đối chiếu report"*: Tự động chạy `./.venv/bin/python scripts/sync_hybrid_report.py` để đối soát chéo giữa BigQuery Excel và GA4 API.
-  - *"Sync GSC / Search Console"*: Xác định intent rồi chạy đúng 1 script: keyword ranking → `cron_gsc_keyword_ranking.py`, cannibalization → `cron_gsc_cannibalization.py`, crawl stats → `cron_gsc_crawl_stats.py` (cả 3 đều là GSC API chuyên biệt, không gọi chung `sync_all_data.py` trừ khi user yêu cầu full pipeline).
-  - *"Thiết lập GTM / Tracking GTM"*: Đọc `04_MOSPARK_PLATFORM/WEB_EVENT_TRACKING_DICTIONARY.md` làm SSOT; chỉ chạy `node scripts/auth_gtm.js` khi cần cấp quyền OAuth hoặc refresh token.
-  - *"URL tăng/giảm, top pages, breakout"*: GA4 → `analyze_growth_urls_7d.py`; GSC/SERP → `sync_7d_performance_report.py`; breakout đẩy Hub → `sync_breakout_to_hubs.py`.
-  - *"URL chết, mất impressions, check 404/301"*: Chạy chuỗi `analyze_lost_impressions.py` → `analyze_gsc_zero_impressions.py` → `audit_actionable_urls.py`.
-  - *"Sync hub / data hub / lệnh hub"*: Mặc định pipeline `sync_inventory_to_hubs.py` + `sync_data_to_hubs_dashboard.py`; chỉ chạy script `sync_<hub>_<ky>.py` khi user chỉ định đúng hub + kỳ.
-  - Mặc định an toàn: Không tự ý đẩy lên GitHub Hubs (`main`) trừ khi có cờ `--push-hubs` rõ ràng.
-- **Google Sheets Cloud-Native SSOT:**
-  - Báo cáo Hiệu suất Web Platform: Spreadsheet ID **`1JaaYv2MnDy-dfBdC3P-GMB6SFgjez2VowdjX9PjmPYU`**.
-  - Cinema Hub Roadmap & Minigames: Spreadsheet ID **`1YT2sdU-O4smoy6TUKBic6PTFBxUXNUVkd_S-tmjiplg`**.
-- **Traffic Source Classification SSOT (Non-Paid vs. Paid Dichotomy):**
-  Khi phân tích hay trình bày bất kỳ báo cáo lưu lượng nào, bắt buộc phân tách thành 2 nhóm lớn rõ rệt:
-  1. **Kênh Tự Nhiên (Non-Paid Traffic):** Động cơ tăng trưởng bền vững cốt lõi, bắt buộc gồm đúng 4 kênh con chuẩn hóa: `Organic`, `Direct`, `AI Traffic (GEO)`, `Referral`.
-  2. **Kênh Trả Phí (Paid Traffic / Paid Ads):** Paid Search, Google Ads, Campaign Ads.
-  Bảng biểu phải hiển thị 2 dòng tổng riêng biệt kèm tỷ trọng %, không để Paid nằm xen kẽ ngang hàng giữa các kênh tự nhiên.
-- **Tiêu chuẩn Báo cáo Tuần & Tháng:** Mọi chi tiết về cấu trúc Agenda 10 slide báo cáo tháng, nguyên tắc So What, bảng số liệu 6 dòng, quy chuẩn thư mục tuần đều được quy định SSOT tại [`.agents/skills/web-platform-reporting/SKILL.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/.agents/skills/web-platform-reporting/SKILL.md) và [`03_SKILLS/momo-reporting-guidelines.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS/momo-reporting-guidelines.md). AI Agent đọc các tài liệu này theo nhu cầu (Lazy Loading), không nhồi nhét vào prompt mặc định.
+- **Python Runtime SSOT:** Mọi script Python chạy qua `./.venv/bin/python <script>` (Python 3.12). Cấm `python3` trần.
+- **Automated Triggers:**
+  - "tracking report mới nhất" → `sync_tracking_report.py` (quét Excel mới nhất từ Downloads).
+  - "GA4 / GA4 MTD" → `sync_ga4_master.py` (kèm `--mtd <ngày>` nếu có).
+  - "sync report / đối chiếu report" → `sync_hybrid_report.py`.
+  - "sync GSC / Search Console" → chọn đúng 1: ranking `gsc_keyword_ranking.py`, cannibalization `gsc_cannibalization.py`, crawl `gsc_crawl_stats.py`.
+  - "thiết lập GTM / tracking GTM" → đọc `04_MOSPARK_PLATFORM/WEB_EVENT_TRACKING_DICTIONARY.md`; chỉ chạy `node scripts/auth_gtm.js` khi cần OAuth/refresh token.
+  - "URL tăng/giảm, top pages, breakout" → GA4 `analyze_growth_urls_7d.py`; GSC/SERP `sync_7d_performance_report.py`; breakout→Hub `sync_breakout_to_hubs.py`.
+  - "URL chết, mất impressions, 404/301" → `analyze_lost_impressions.py` → `analyze_gsc_zero_impressions.py` → `audit_actionable_urls.py`.
+  - "sync hub / data hub / lệnh hub" → `sync_inventory_to_hubs.py` + `sync_data_to_hubs_dashboard.py`; `sync_<hub>_<ky>.py` chỉ khi user chỉ định đúng hub + kỳ.
+  - Mặc định an toàn: không tự push GitHub Hubs (`main`) trừ khi có cờ `--push-hubs`.
+- **Hub Sync Safety:** Không chạy 2 tiến trình sync Hub song song; trước khi chạy check `git -C "/Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo" status` phải sạch. 5 orchestrator (`sync_ga4_master`, `sync_7d_performance_report`, `sync_hybrid_report`, `sync_data_to_hubs_dashboard`, `sync_all_data`) đã có lock `scripts/lib/hub_sync_lock.py` - tiến trình thứ 2 tự exit 2 (TTL 2h, lock file `07_REPORTS/data/cache/hub_sync.lock`). Lock chỉ phủ repo này; nếu user đang sửa tay repo React thì cảnh báo trước.
+- **Google Sheets SSOT:** Web Platform Report `1JaaYv2MnDy-dfBdC3P-GMB6SFgjez2VowdjX9PjmPYU`; Cinema Hub Roadmap `1YT2sdU-O4smoy6TUKBic6PTFBxUXNUVkd_S-tmjiplg`.
+- **Traffic SSOT:** Mọi báo cáo lưu lượng bắt buộc tách Non-Paid (`Organic`, `Direct`, `AI Traffic (GEO)`, `Referral`) vs Paid thành 2 dòng tổng kèm tỷ trọng %.
+- **Báo cáo Tuần/Tháng:** Chuẩn SSOT tại `.agents/skills/web-platform-reporting/SKILL.md` + `03_SKILLS/momo-reporting-guidelines.md` - lazy load khi cần.
+- **Quản trị file này:** Routing table tối đa ~40 rows, row mới ≤2 dòng, ưu tiên gộp vào row hiện có; nếu file >24KB thì tách phần mở rộng sang file riêng và để pointer ở đây.

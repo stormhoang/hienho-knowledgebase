@@ -35,6 +35,7 @@ sys.path.insert(0, str(BASE_DIR))
 from scripts.sync_ga4_to_hubs import get_access_token, PROPERTY_ID, run_ga4_report
 from scripts.build_full_funnel_matrix import build_theme_matcher
 from scripts.sync_ga4_master import patch_excel_dynamic
+from scripts.lib.hub_sync_lock import hub_sync_lock
 
 TARGET_OCT = 3665607
 
@@ -407,4 +408,5 @@ if __name__ == "__main__":
     parser.add_argument("--mtd", type=int, default=None)
     parser.add_argument("--push-hubs", action="store_true", default=False, help="Cho phép đẩy lên GitHub Hubs")
     args = parser.parse_args()
-    run_hybrid_sync(force_mtd=args.mtd, push_hubs=args.push_hubs)
+    with hub_sync_lock("sync_hybrid_report"):
+        run_hybrid_sync(force_mtd=args.mtd, push_hubs=args.push_hubs)

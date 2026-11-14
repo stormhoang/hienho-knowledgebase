@@ -28,6 +28,7 @@ if not HUBS_REPO.exists():
 
 sys.path.insert(0, str(BASE_DIR))
 import scripts.lib.url_project_resolver as upr
+from scripts.lib.hub_sync_lock import hub_sync_lock
 
 def main():
     parser = argparse.ArgumentParser(description="Đồng bộ dữ liệu sang Hubs /dashboard.")
@@ -187,4 +188,5 @@ def main():
     print("=" * 70)
 
 if __name__ == "__main__":
-    main()
+    with hub_sync_lock("sync_data_to_hubs_dashboard"):
+        main()
