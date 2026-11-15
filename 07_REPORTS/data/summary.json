@@ -1,52 +1,52 @@
 {
   "lastFull": {
     "month": "2026-10",
-    "pv": 3602023,
+    "pv": 3606502,
     "prevPv": 3952859,
     "target": 3665607
   },
   "running": {
     "month": "2026-11",
-    "daysElapsed": 13,
+    "daysElapsed": 14,
     "daysInMonth": 30,
-    "report": "monthly_11_2026_mtd_13d.json",
-    "pv": 3083024,
+    "report": "monthly_11_2026_mtd_14d.json",
+    "pv": 3208621,
     "target": 3829155,
-    "dailyPace": 237156,
-    "dailyNeeded": 43890,
-    "forecast": 7114671,
-    "forecastPct": 185.8
+    "dailyPace": 229187,
+    "dailyNeeded": 38783,
+    "forecast": 6875616,
+    "forecastPct": 179.56
   },
   "hubs": [
     {
       "id": "cinema",
       "name": "Cinema Hub",
-      "pv": 745200
+      "pv": 618292
     },
     {
       "id": "financial",
       "name": "Financial Hub",
-      "pv": 328170
+      "pv": 263423
     },
     {
       "id": "new_user",
       "name": "New User Hub",
-      "pv": 96738
+      "pv": 78362
     },
     {
       "id": "vehicle",
       "name": "Vehicle Hub",
-      "pv": 229148
+      "pv": 172982
     },
     {
       "id": "insurance",
       "name": "Insurance Hub",
-      "pv": 79506
+      "pv": 55644
     },
     {
       "id": "student",
       "name": "Student Hub",
-      "pv": 2699
+      "pv": 2070
     }
   ],
   "lastFullHubs": [
@@ -58,7 +58,7 @@
     {
       "id": "home",
       "name": "Home MoMo",
-      "pv": 537786
+      "pv": 422196
     },
     {
       "id": "download",
@@ -68,24 +68,24 @@
     {
       "id": "financial",
       "name": "Financial Hub",
-      "pv": 262871
+      "pv": 264516
     },
     {
       "id": "payment",
       "name": "Payment Hub",
-      "pv": 258609
+      "pv": 261922
     },
     {
       "id": "game",
       "name": "Game Hub",
-      "pv": 255227
+      "pv": 255337
     }
   ],
   "channels": {
-    "organic": 1433257,
-    "direct": 775066,
-    "referral": 128288,
-    "paid": 659848,
-    "others": 81468
+    "organic": 1161332,
+    "direct": 638636,
+    "referral": 111442,
+    "paid": 516528,
+    "others": 73997
   }
 }

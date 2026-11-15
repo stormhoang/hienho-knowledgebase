@@ -13,6 +13,7 @@ Thumbs.db
 *.swp
 *.log
 *.zip
+*.bak
 .claude/
 scratch/
 scripts/scratch_*.json
