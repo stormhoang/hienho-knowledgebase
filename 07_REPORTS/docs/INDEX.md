@@ -67,7 +67,7 @@
 
 | Kỳ báo cáo | Phạm vi thời gian | Tệp tin báo cáo | Trạng thái | Điểm nhấn chính |
 | :--- | :--- | :--- | :---: | :--- |
-| **Tuần 09/11 - 15/11/2026** | 09/11/2026 - 15/11/2026 | [`weekly-report-2026-11-09-11-15.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/weekly-report-2026-11-09-11-15.md) | `Active` | Báo cáo tuần 46 theo chuẩn InsurTech: Cú hích 11.11, Thuế TNCN Production, Phễu chuyển đổi 4 bước |
+| **Tuần 09/11 - 15/11/2026** | 09/11/2026 - 15/11/2026 | [`weekly-report-2026-11-09-11-15.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/weekly-report-2026-11-09-11-15.md) | `Active` | Báo cáo tiến độ tuần 46: Cú hích 11.11, Thuế TNCN & Hộ Kinh Doanh Production, Chatbot Cinema Phase 1 & 2 |
 | **Tuần 02/11 - 08/11/2026** | 02/11/2026 - 08/11/2026 | [`weekly-report-2026-11-02-11-08.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/weekly-report-2026-11-02-11-08.md) | `Archived` | Báo cáo tuần 45: Khởi chiếu Bò Sữa Bay, Suất chiếu Cinetour, Kiểm toán đóng góp code Matrix |
 | **Tuần 26/10 - 01/11/2026** | 26/10/2026 - 01/11/2026 | [`weekly-report-2026-10-26-11-01.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/weekly-report-2026-10-26-11-01.md) | `Archived` | Báo cáo tuần 44: Game Bò Sữa Bay, Quỹ Nhóm & Tách URL Thuế, Đóng gói Qwen 3.5 đa dự án |
 | **Tuần 21 - 27/10/2026** | 19/10/2026 - 26/10/2026 | [`weekly-report-2026-10-21-27.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/weekly-report-2026-10-21-27.md) | `Archived` | Báo cáo tuần 43 tổng hợp phân định 2 nhóm Strategic Projects & Platform Projects |
