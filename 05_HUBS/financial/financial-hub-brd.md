@@ -436,6 +436,73 @@ Bảng đối soát cơ cấu lưu lượng 6 tháng liên tiếp (Tháng 5 đ�
    * **Di Chuyển & 301 Redirect 7 Trang Standalone (Not Started):** Lập bảng ánh xạ và rule Edge CDN chuyển các trang standalone về cấu trúc chuẩn `/tai-chinh/*`.
 3. **Hạ Tầng Công Cụ Tiện Ích Dùng Chung (Embeddable Widgets):** Chuẩn hóa các bộ công cụ tính toán để nhúng linh hoạt vào mọi điểm chạm trên toàn bộ Kênh Web MoMo.
 
+### 3.6 Audit Click OneLink Utility Tools & W2A (Số Liệu MTD 14/11/2026)
+
+Căn cứ dữ liệu GA4 Property 270743103, kỳ báo cáo **MTD 01/11/2026 - 14/11/2026**, tổng hợp các sự kiện chuyển đổi Web-to-App (`click_to_app`, `click_outbound_link`, `click_link_url`, `click_cta`, `component_click_cta`) có `linkUrl`/`click_url` chứa OneLink, phân bổ về Project theo URL resolver SSOT (`web_dim_page_url.csv`). Phạm vi: toàn bộ 22 projects thuộc Financial Hub, loại trừ Bảo Hiểm Y Tế, Bảo Hiểm Xã Hội và Phạt Nguội (thuộc hub khác).
+
+**Tổng click OneLink Financial Hub MTD 14/11: 20.804 clicks** (trong đó 18.568 clicks trên trang tool/landing, ~2.236 clicks từ trang blog/hỏi đáp/tin tức vệ tinh).
+
+#### 3.6.1 Click OneLink Theo Công Cụ Tiện Ích (Utility Tools)
+
+| Công Cụ / Trang Đích | OneLink Đang Gắn | Clicks MTD | Trạng Thái Gắn Link |
+| :--- | :--- | ---: | :--- |
+| CIC - Điểm Tín Dụng (`/diem-tin-dung`) | `onelink.momo.vn/WZPv/6OKONic9` | 8.374 | Chuẩn: 1 tool - 1 OneLink riêng |
+| Trung Tâm Tài Chính (`/tai-chinh`) | `6OKONic9` + `68rtnbrt` (VTS) | 3.657 | Hub page dùng CTA CIC + VTS |
+| Ví Trả Sau (`/vi-tra-sau` + spoke) | `sP2W5Qui`, `PpuBkl2R`, `SnxpGPrG`, `3bW8pqmk` | ~3.900 | Chuẩn: mỗi spoke/use case 1 OneLink riêng |
+| Vay Nhanh (`/vay-nhanh` + amount pages) | `momoapp.onelink.me/7UUy/gb07c9la` (generic) | ~2.000 | Chưa có OneLink riêng cho tool vay |
+| Tỷ Giá (`/tai-chinh/ty-gia/*` - 15+ cặp tiền) | `onelink.momo.vn/WZPv/gmfyvcnA` | ~616 | Chuẩn tuyệt đối: mọi cặp tiền về 1 OneLink tool |
+| Tiết Kiệm (`/tai-chinh/gui-tiet-kiem`) | `WZPv/EoWoWJ1G` | 52 | Có OneLink riêng, volume thấp |
+| Lãi Suất (`/tai-chinh/lai-suat`) | `EoWoWJ1G` + `EowWdqm6` | 20 | Dùng chung OneLink nhóm tiết kiệm |
+| Tính Lương / Phân Bổ Lương 50/30/20 | `gb07c9la`, `EoWoWJ1G` | ~10 | Chưa có OneLink riêng cho calculator |
+| Giá Vàng (`/tai-chinh/gia-vang`) | `gb07c9la` (generic) | 65 | Chưa có OneLink riêng |
+| Chứng Chỉ Quỹ / Chứng Khoán / Sàn Đầu Tư | `6OKONic9`, `e15fJnQ1`, generic | <15 mỗi dự án | Gần như không đo được W2A theo tool |
+| Mở TK Ngân Hàng / Quỹ Nhóm / Túi Thần Tài | `obsim6ud`, `gb07c9la` | ~95 | Generic fallback |
+
+#### 3.6.2 Click OneLink Theo Dự Án (Financial Hub, MTD 14/11/2026)
+
+| Dự Án | Clicks | Ghi Chú |
+| :--- | ---: | :--- |
+| Điểm Tín Dụng | 8.769 | Áp đảo bởi CIC tool (`6OKONic9` = 8.448 clicks) |
+| Trung Tâm Tài Chính | 4.950 | Hub chứa cụm utility embed |
+| Ví Trả Sau | 3.953 | Onelink đa dạng nhất hub (30+ template) |
+| Vay Nhanh | 2.202 | ~70% click về generic new-user link, mất granularity intent |
+| Tỷ Giá | 616 | Gần như 100% về `gmfyvcnA` - đúng chuẩn 1 tool 1 OneLink |
+| Tiết Kiệm Online | 77 | |
+| Giá Vàng | 71 | Đang dùng generic link, chưa có OneLink tool riêng |
+| Mở TK Ngân Hàng | 48 | |
+| Quỹ Nhóm | 38 | |
+| Còn lại (<40 mỗi dự án) | ~160 | Lãi Suất, Túi Thần Tài, Quản Lý Chi Tiêu, Thanh Toán Thẻ TD, Trả Góp Apple, Mở Thẻ TD, Chứng Khoán, Sàn ĐT, Nhận Tiền QT, Thanh Toán Khoản Vay, Chứng Chỉ Quỹ |
+| **TỔNG** | **20.804** | |
+
+#### 3.6.3 Utility Engagement - Embed Widgets Theo Tool ID (`af_sub1`, MTD 14/11/2026)
+
+Bóc tách click OneLink phát sinh từ utility widget nhúng (tham số `af_sub1=<tool_id>&af_sub2=<placement>&c=embed`), đo được cả trên trang ads lẫn trang organic:
+
+| Tool ID (`af_sub1`) | Toàn Site | Trong Fin Hub | OneLink | Nhận Định |
+| :--- | ---: | ---: | :--- | :--- |
+| `cic_calc` | 9.649 | 9.053 | `WZPv/6OKONic9` | Embed engine lớn nhất toàn site, sống ở `/diem-tin-dung`, `/tai-chinh`, blog no-xau và cả trang game ads |
+| `pay_later` (VTS) | 1.395 | 492 | `7UUy/68rtnbrt` | Phân tán tốt nhiều placement ngoài Fin Hub (game, tiện ích giao thông) |
+| `salary_calc` | 1.104 | 168 | `WZPv/EoWoWJ1G` | Phần lớn click ở placement ngoài hub |
+| `saving_calc` | 877 | 86 | `EoWoWJ1G` / `9NCKFGgW` | Volume thấp trong hub |
+| `exchange_rate` | 501 | 465 | `WZPv/gmfyvcnA` | Gần như toàn bộ trong hub, đúng chuẩn |
+| `best_bank_saving` | 79 | 25 | `WZPv/EowWdqm6` | |
+| `bhxh_calc` | 70 | ~0 | `WZPv/J3hhwGSR` | Chủ yếu placement ngoài Fin Hub |
+| `fund_certificate` | 43 | 33 | - | Mới ở mức thử nghiệm |
+
+**Placements embed chính:** `/diem-tin-dung` (6.495), `/tai-chinh` (2.951), cụm `/tai-chinh/ty-gia/*` (~370), blog tài chính (~350), `/game/mot-mua-quyt` (~2.000 clicks utility finance từ trang ads).
+
+**Kết luận utility engagement:** Thực chất chỉ 3 nhóm tool tạo engagement đáng kể (`cic_calc`, `pay_later`, nhóm lương-kiệm-tỷ giá ~2.4K). 5 tool còn lại gần như không đo được click. Trang `/game/mot-mua-quyt` (Google Search Ads ~90K sessions) đồng thời là placement lớn cho ~2K clicks utility finance - ads budget Game Hub đang gián tiếp generate W2A cho Financial Hub.
+
+#### 3.6.4 Phân Tích & Hành Động Theo Dõi
+
+1. **Hai tool gánh gần hết click:** CIC (8,4K clicks riêng trang `/diem-tin-dung`) và cụm Vay/VTS/TTTC (~10K). Phần còn lại của 22 projects trong Financial Hub gần như không có click đo được theo use case.
+2. **Gap attribution cần đóng:** Vay Nhanh (priority CAO, SoV 6%) đang đẩy ~70% click qua `gb07c9la`/`obsim6ud` - OneLink generic new-user không tách được intent vay tiền vs cài app thường. Tương tự Giá Vàng, Chứng Khoán, Chứng Chỉ Quỹ, Tính Lương, Phân Bổ Lương chưa có OneLink riêng theo `mospark_tool_id`.
+3. **Chuẩn tham chiếu nội bộ:** Embed widget đã chuẩn hóa tốt với `af_sub1=<tool_id>&af_sub2=<placement>&c=embed` (chuẩn do CTA Builder/DA triển khai) - Tỷ Giá (`gmfyvcnA`) và các spoke Ví Trả Sau là mô hình đúng cần nhân rộng cho CTA dạng link tĩnh.
+4. **Blog vệ tinh:** 2.236 clicks MTD từ bài viết blog/tin tức tài chính, phần lớn là inline CTA generic trong article chứ không phải utility widget nhúng; content plan đã chuẩn hóa `btn_click` theo use case (xem `content_plan_config.py`).
+5. **Việc cần làm (đề xuất):** Web Platform cấp OneLink riêng cho Vay Nhanh CTA trong tool/simulation, Giá Vàng (`gold_price_lookup`), Chứng Khoán, Chứng Chỉ Quỹ theo `mospark_tool_id`; DA verify `gb07c9la`/`obsim6ud` có `deep_link_value`/`pid` phân biệt tool hay không.
+
+*Caveat dữ liệu: số liệu là GA4 event count, có thể dư nhẹ do event bắn đồng thời cả `linkUrl` lẫn `click_url`; event Umami `web_*_btn_click` không nằm trong GA4 nên chưa đối chiếu chéo được.*
+
 ---
 
 ## 4. MA TRẬN BỐI CẢNH (CONTEXT MATRIX)
