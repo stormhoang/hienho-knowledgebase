@@ -171,6 +171,8 @@ def main():
     # 3. Nạp bộ luật DIM SSOT
     print("-> Nạp bộ quy tắc phân loại DIM SSOT...")
     rules = upr.load_rules()
+    # Rule suy luận (blog theo mã chuyên mục, section) để URL chưa có trong DIM không rơi thẳng vào Others
+    inferred = upr.load_inferred_rules(rules)
 
     # 4. Gom nhóm theo clean path
     path_stats = defaultdict(lambda: {
@@ -215,7 +217,7 @@ def main():
         position = round(st["weighted_pos_sum"] / impressions, 1) if impressions > 0 else None
 
         full_url = "https://www.momo.vn" + cp
-        res = upr.resolve(full_url, rules)
+        res = upr.resolve(full_url, rules, inferred)
         proj = res.get("primary") or "Others"
 
         pages_list.append({

@@ -431,6 +431,7 @@ Tiktok,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/uu-dai-nap-xu-tiktok-g
 Tiktok,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/uu-dai-nap-xu-tiktok-hoan-tien-14000d-trong-ngay-7178
 Tiktok,Guide,Static,https://www.momo.vn/huong-dan/huong-dan-nap-xu-tiktok-qua-momo
 Game,Landing Page,Static,https://www.momo.vn/nap-the-game
+Game,Page,Dynamic,https://www.momo.vn/nap-the-game/*
 Game,Landing Page,Static,https://www.momo.vn/napthengayvn
 Game,Landing Page,Static,https://www.momo.vn/bonbon
 Game,Blog,Static,https://www.momo.vn/blog/game
