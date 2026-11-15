@@ -98,9 +98,10 @@ Bóc tách chi tiết rõ ràng theo từng đội ngũ đối tác kèm yêu c�
 > 2. **Mục I.3 Hub Targets:** Hiệu chỉnh mục tiêu sát thực tế vận hành và run-rate MTD.
 > 3. **Mục I.4 Funnel Progression:** Bảng theo dõi tiến trình phễu W2A đa tháng (từ Tháng 7 đến MTD hiện tại).
 > 4. **Mục II Tiêu đề Action Titles:** Bắt buộc thuần số liệu (PageViews, chuyển đổi, CVR), **tuyệt đối KHÔNG đưa tên tính năng hay công cụ vào tiêu đề** (tên tính năng và chi tiết kỹ thuật nằm ở thân bài).
-> 5. **Mục II Thân bài chuẩn 3 khối:** (a) Highlights & Business Impact (phễu 4 bước + mốc kỹ thuật + Lowlights trung thực), (b) Phối hợp liên đội ngũ (BU đối tác + ngân sách cụ thể), (c) Kế hoạch hành động 7 ngày tới (không gắn nhãn ưu tiên P-zero đến P-three).
-> 6. **Mục III Kết luận & Đề xuất hành động:** Bảng 3 cột khép kín: BÀI HỌC THỰC TẾ | BẰNG CHỨNG ĐỐI SOÁT | KẾ HOẠCH HÀNH ĐỘNG 7 NGÀY TỚI.
-> 7. **Quy chuẩn văn phong:** Dùng `PageViews` (không dùng từ ngữ dịch thô), dùng `Nghiệm thu kỹ thuật` / `UAT` / `test`, dùng `Gói Quà tự chọn cho người dùng mới`, không ký tự En Dash / Em Dash, không gắn nhãn P-zero đến P-three.
+> 5. **Mục II Thân bài chuẩn 3 khối:** (a) Highlights & Business Impact (phễu 4 bước + mốc kỹ thuật + Lowlights trung thực), (b) Phối hợp liên đội ngũ (BU đối tác + ngân sách cụ thể), (c) Kế hoạch hành động 7 ngày tới (không gắn nhãn ưu tiên dạng P kèm số 0-3).
+> 6. **Mục III Platform Projects:** Báo cáo tuần BẮT BUỘC có Mục III dành riêng cho các dự án Nền tảng và Năng lực kỹ thuật (MoBase Design System, MoSpark CMS, BFF & Security, Chatbot AI & MoMo LLM Gateway, URL Catalog, MoMatrix V1).
+> 7. **Mục IV Kết luận & Đề xuất hành động:** Bảng 3 cột khép kín: BÀI HỌC THỰC TẾ | BẰNG CHỨNG ĐỐI SOÁT | KẾ HOẠCH HÀNH ĐỘNG 7 NGÀY TỚI.
+> 8. **Quy chuẩn văn phong:** Dùng `PageViews` (không dùng từ ngữ dịch thô), dùng `Nghiệm thu kỹ thuật` / `UAT` / `test`, dùng `Gói Quà tự chọn cho người dùng mới`, không ký tự En Dash / Em Dash, không gắn nhãn ưu tiên dạng P kèm số 0-3.
 
 ```markdown
 # BÁO CÁO TIẾN ĐỘ TUẦN [Số tuần] ([Từ ngày] - [Đến ngày]): WEB PLATFORM
@@ -239,7 +240,44 @@ Bóc tách chi tiết rõ ràng theo từng đội ngũ đối tác kèm yêu c�
 
 ---
 
-## III. KẾT LUẬN & ĐỀ XUẤT HÀNH ĐỘNG TOÀN KÊNH WEB [D]
+## III. TIẾN ĐỘ THỰC TẾ CÁC DỰ ÁN NỀN TẢNG (PLATFORM PROJECTS)
+
+### 1. [Tên Dự Án Nền Tảng 1] (Ví dụ: MoBase Design System & Font MoMo Trust Sans)
+- **Key Owner:** [Tên PIC/LDAP] | **Phối hợp:** [Đội ngũ phối hợp]
+- **Liên kết Demo & Production:** [URL Staging, Production, hoặc mã nguồn]
+- **Mục tiêu & Tác động:** [Giải quyết bài toán kỹ thuật hoặc chuẩn hóa hệ thống nào].
+- **Tiến độ thực tế trong tuần:**
+  - [Đầu việc hoàn thành 1: Triển khai component, cập nhật font, tối ưu bundle].
+  - [Đầu việc hoàn thành 2: Nghiệm thu hiển thị đa thiết bị].
+- **Kế hoạch 7 ngày tới:** [Việc cần làm tiếp theo].
+- **Phối hợp liên đội ngũ:** [Phối hợp cùng Design System Team, Mobile Team...].
+
+---
+
+### 2. [Tên Dự Án Nền Tảng 2] (Ví dụ: Chatbot AI & MoMo LLM Gateway)
+- **Key Owner:** [Tên PIC/LDAP] | **Phối hợp:** [AI Team, BU đối tác]
+- **Liên kết Demo & Tài liệu:** [URL Admin, API Gateway, Staging]
+- **Mục tiêu & Tác động:** [Tối ưu chi phí gọi AI, nâng cao độ chính xác, chống ảo giác].
+- **Tiến độ thực tế trong tuần:**
+  - [Đầu việc hoàn thành 1: Tích hợp cổng AI nội bộ, kiểm soát dữ liệu đầu vào].
+  - [Đầu việc hoàn thành 2: Chuẩn bị dữ liệu phục vụ gợi ý tự động].
+- **Kế hoạch 7 ngày tới:** [Việc cần làm tiếp theo].
+- **Phối hợp liên đội ngũ:** [Phối hợp cùng AI Team, Data Team...].
+
+---
+
+### 3. [Tên Dự Án Nền Tảng 3] (Ví dụ: Security, BFF & Hạ Tầng MoMo API)
+- **Key Owner:** [Tên PIC/LDAP] | **Phối hợp:** [ITC Security, DevOps]
+- **Mục tiêu & Tác động:** [Bảo mật dữ liệu, đóng cổng truy cập trực tiếp, tự động hóa cảnh báo].
+- **Tiến độ thực tế trong tuần:**
+  - [Đầu việc hoàn thành 1: Chuyển đổi lệnh gọi qua BFF, cài đặt timeout và rate limit].
+  - [Đầu việc hoàn thành 2: Dựng Helm chart CronJob tự động cảnh báo sự cố].
+- **Kế hoạch 7 ngày tới:** [Việc cần làm tiếp theo].
+- **Phối hợp liên đội ngũ:** [Phối hợp cùng ITC Security, DevOps...].
+
+---
+
+## IV. KẾT LUẬN & ĐỀ XUẤT HÀNH ĐỘNG TOÀN KÊNH WEB [D]
 
 Kế hoạch hành động 7 ngày tới bám sát 3 bài học từ dữ liệu tuần:
 

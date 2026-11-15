@@ -81,12 +81,23 @@ Skill này cung cấp bộ khung chuẩn hóa, phương pháp luận bóc tách 
      - Danh sách việc cần làm cụ thể, thực thi ngay, sắp xếp theo logic tự nhiên.
      - **Tuyệt đối KHÔNG gắn nhãn mức độ ưu tiên (như chữ P kèm số từ 0 đến 3).**
 
-### 3.3. Bảo Chứng Dữ Liệu & Nguyên Tắc Chống Hallucination (Strict Data Integrity)
+### 3.3. Cấu trúc Mục III: Tiến Độ Thực Tế Các Dự Án Nền Tảng (Platform Projects)
+1. **Định vị & Phân định mục:** Phần III là khu vực bắt buộc dành riêng cho **Dự Án Nền Tảng (Platform Projects)** và **Năng Lực Kỹ Thuật Hệ Thống** (MoBase Design System, MoSpark CMS, BFF & API Security, Chatbot AI & MoMo LLM Gateway, URL Catalog, MoMatrix V1, và Hạ tầng ITC / Sự cố kỹ thuật).
+2. **Cấu trúc trình bày từng dự án nền tảng:**
+   - **Tiêu đề dự án:** [Tên Dự Án Nền Tảng]: [Cột mốc kỹ thuật & Trọng tâm vận hành trong tuần].
+   - **Key Owner & Phối hợp:** Ghi rõ nhân sự chịu trách nhiệm chính (`Key Owner`) và đội ngũ phối hợp chuyên môn.
+   - **Liên kết Demo & Production:** Các đường dẫn truy cập Staging, Production, hoặc tài liệu kiến trúc.
+   - **Mục tiêu & Tác động (Objectives & Impact):** Giải quyết bài toán kỹ thuật hoặc vận hành nào của hệ thống.
+   - **Tiến độ thực tế trong tuần (Tasks & Accomplishments):** Chi tiết các đầu việc kỹ thuật đã hoàn thành, đã nghiệm thu hoặc đưa lên Production.
+   - **Kế hoạch 7 ngày tới (Next Action):** Việc cần làm ngay tiếp theo.
+   - **Phối hợp liên đội ngũ (Cross-team Collaboration):** Phối hợp cùng ITC, DevOps, Security, AI Team hoặc các Cell Teams.
+
+### 3.4. Bảo Chứng Dữ Liệu & Nguyên Tắc Chống Hallucination (Strict Data Integrity)
 1. **Dữ liệu chuyển đổi Financial Hub:** Khi trích dẫn lượt click và chuyển tiếp OneLink của Financial Hub, bắt buộc lấy từ dữ liệu kiểm toán chính thức tại `05_HUBS/financial/financial-hub-brd.md` Mục 3.6 (20.804 clicks, CIC 8.769, TTTC 4.950, VTS 3.953, Vay Nhanh 2.202, CVR 13,7%). Tuyệt đối không suy đoán hoặc nhân tỷ lệ từ các công cụ khác.
 2. **Ưu tiên kỹ thuật Financial Hub:** Luôn có hạng mục phối hợp cùng BU Bank nghiệm thu kỹ thuật (UAT) 15 trang chi tiết ngân hàng.
 3. **Dự án New User:** Luôn bóc tách so sánh `/tai-app` vs `/download`, tỷ lệ quét Dynamic QR trên Desktop, tối ưu từ khóa tải APK, và kế hoạch triển khai "Gói Quà tự chọn cho người dùng mới" với ngân sách 50 triệu VNĐ.
 
-### 3.4. Cấu trúc Mục III: Bảng Kết Luận & Kế Hoạch Toàn Kênh (Action Matrix)
+### 3.5. Cấu trúc Mục IV: Bảng Kết Luận & Kế Hoạch Toàn Kênh (Action Matrix)
 Thay thế danh sách gạch đầu dòng bằng Bảng 3 cột quan hệ nhân quả khép kín:
 **BÀI HỌC (Insight thực tế) | BẰNG CHỨNG (Data Proof đối soát sạch) | KẾ HOẠCH HÀNH ĐỘNG 7 NGÀY TỚI**.
 Cuối báo cáo có ghi chú nguồn số liệu (kỳ chốt GA4, trễ đối soát AppsFlyer) và ngân sách Media rõ ràng.
