@@ -783,11 +783,6 @@ def main():
     if build_script.exists():
         subprocess.run([sys.executable, str(build_script)], check=False)
 
-    # 5.5b Dựng lại /dashboard web-data.json + summary.json từ Excel vừa patch (writer duy nhất)
-    sys.path.insert(0, str(BASE_DIR / "scripts" / "lib"))
-    from hubs_dashboard import rebuild_dashboard
-    rebuild_dashboard()
-
     # 5.6 Tự động đồng bộ lên Google Sheets Native SSOT qua Cloud Sheets API
     try:
         from scripts.sync_to_google_sheet_api import sync_google_sheet
@@ -814,6 +809,11 @@ def main():
     except Exception as e:
         print(f"[Sheets-API] Lưu ý đồng bộ Sheets API: {e}")
 
+    # 5.6b Dựng lại /dashboard web-data.json + summary.json từ Excel vừa co giãn MTD đa tháng (writer duy nhất)
+    sys.path.insert(0, str(BASE_DIR / "scripts" / "lib"))
+    from hubs_dashboard import rebuild_dashboard
+    rebuild_dashboard()
+
     # Đồng thời đồng bộ file Excel offline lên Google Drive Desktop
     gdrive_script = BASE_DIR / "scripts" / "upload_to_gdrive.py"
     if gdrive_script.exists():
@@ -831,6 +831,15 @@ def main():
             subprocess.run([sys.executable, str(sync_7d_script), "--no-push"], check=False)
     except Exception as e:
         print(f"[Auto-7D-SERP] Lưu ý đồng bộ 7D SERP: {e}")
+
+    # 5.8 Xuất số MTD theo URL (page_mtd.json) cùng ngày chốt, Hubs /dashboard đọc thẳng file này
+    try:
+        print(f"[Auto-Page-MTD] Đang xuất page_mtd.json tới {end_date}...")
+        page_mtd_script = BASE_DIR / "scripts" / "export_page_mtd.py"
+        if page_mtd_script.exists():
+            subprocess.run([sys.executable, str(page_mtd_script), "--end", end_date], check=False)
+    except Exception as e:
+        print(f"[Auto-Page-MTD] Lưu ý xuất page_mtd: {e}")
 
     # 6. Push GitHub REST API (Mặc định không đẩy trừ khi có --push-hubs)
     if args.push_hubs:
