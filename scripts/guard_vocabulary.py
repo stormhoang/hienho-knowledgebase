@@ -312,6 +312,14 @@ RULES = [
         "replacement": "nguyên tắc triển khai, phương thức thực thi, phát triển, hoặc triển khai kỹ thuật",
         "auto_fix": "triển khai",
     },
+    {
+        "id": "KIEM_THU_LAM_DUNG",
+        "pattern": r"(?i)\bkiểm\s+thử(\s+(kỹ\s+thuật|chức\s+năng|toàn\s+diện|hệ\s+thống|production|staging|uat))?\b",
+        "flags": 0,
+        "desc": "Từ 'kiểm thử' mang tính giáo trình sách vở/hành chính cũ; trong báo cáo và văn bản quản trị thay bằng 'nghiệm thu kỹ thuật', 'đánh giá chất lượng', hoặc giữ nguyên 'test', 'test cases', 'UAT'",
+        "replacement": "nghiệm thu kỹ thuật, đánh giá chất lượng, hoàn tất UAT, hoặc chạy test",
+        "auto_fix": "nghiệm thu kỹ thuật",
+    },
 ]
 
 
