@@ -29,12 +29,30 @@ import url_project_resolver as upr
 OUT_FILE = os.path.join(BASE_DIR, "07_REPORTS", "data", "analytics", "page_mtd.json")
 HUB_OUT_FILE = "/Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/data/analytics/page_mtd.json"
 
-CURR_START = "2026-11-01"
-CURR_END = "2026-11-13"
-PREV_START = "2026-10-01"
-PREV_END = "2026-10-13"
-GSC_START = "2026-11-01"
-GSC_END = "2026-11-10"
+# Kỳ số tự tính theo ngày chạy, để chạy lịch hằng ngày không phải sửa tay.
+# - GA4: từ ngày 1 tới hôm qua (ngày 1 đầu tháng thì ra trọn tháng trước).
+# - Cùng kỳ tháng trước: cùng số ngày, tháng ngắn hơn thì lấy hết tháng.
+# - GSC: trễ dữ liệu ~3 ngày nên chốt tới hôm nay - 3.
+# Ghi đè ngày chốt GA4: --end YYYY-MM-DD.
+def _periods(end_arg=None):
+    import calendar
+    from datetime import date, timedelta
+    end = date.fromisoformat(end_arg) if end_arg else date.today() - timedelta(days=1)
+    start = end.replace(day=1)
+    prev_last = start - timedelta(days=1)
+    prev_start = prev_last.replace(day=1)
+    prev_end = prev_start.replace(day=min(end.day, calendar.monthrange(prev_start.year, prev_start.month)[1]))
+    gsc_end = end - timedelta(days=2)
+    gsc_start = start if gsc_end >= start else gsc_end.replace(day=1)
+    return [d.isoformat() for d in (start, end, prev_start, prev_end, gsc_start, gsc_end)]
+
+def _end_arg():
+    import argparse
+    ap = argparse.ArgumentParser(description="Xuất page_mtd.json")
+    ap.add_argument("--end", help="Ngày chốt GA4 (YYYY-MM-DD), mặc định hôm qua")
+    return ap.parse_args().end
+
+CURR_START, CURR_END, PREV_START, PREV_END, GSC_START, GSC_END = _periods(_end_arg() if __name__ == "__main__" else None)
 
 def get_ga4_token():
     token_file = os.path.join(BASE_DIR, "07_REPORTS", "data", "credentials", "ga4-token.json")
