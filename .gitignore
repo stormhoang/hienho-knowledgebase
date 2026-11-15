@@ -73,6 +73,7 @@ graphify-out/
 07_REPORTS/data/momo_live_urls.json
 07_REPORTS/data/analytics/full_funnel_matrix.json
 07_REPORTS/data/analytics/page_retention_matrix.json
+07_REPORTS/data/w46_*.json
 *full_funnel_matrix.json
 *full-funnel-matrix.json
 /data/
