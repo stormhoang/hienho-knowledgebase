@@ -3403,5 +3403,7 @@ New User,Landing Page,Static,https://www.momo.vn/hellomomo
 New User,Landing Page,Dynamic,https://www.momo.vn/hellomomo/*
 New User,Landing Page,Dynamic,https://www.momo.vn/gioi-thieu-momo/*
 New User,Landing Page,Dynamic,https://www.momo.vn/lienkettaikhoan/*
+New User,Landing Page,Static,https://www.momo.vn/momo-junior
+New User,Landing Page,Dynamic,https://www.momo.vn/momo-junior/*
 New User,Landing Page,Static,https://www.momo.vn/qua-tang-ban-moi
 New User,Landing Page,Dynamic,https://www.momo.vn/qua-tang-ban-moi/*

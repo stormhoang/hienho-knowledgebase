@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T17:30:29",
+  "generated_at": "2026-11-15T17:36:35",
   "period": {
     "start": "2026-11-01",
     "end": "2026-11-14"
@@ -13101,7 +13101,7 @@
     },
     {
       "path": "/momo-junior",
-      "project": "Others",
+      "project": "New User",
       "pv": 97,
       "pv_prev": 2,
       "clicks": 22,
