@@ -320,6 +320,30 @@ RULES = [
         "replacement": "nghiệm thu kỹ thuật, đánh giá chất lượng, hoàn tất UAT, hoặc chạy test",
         "auto_fix": "nghiệm thu kỹ thuật",
     },
+    {
+        "id": "KIEM_THU_THAM_NHAP",
+        "pattern": r"(?i)\bkiểm\s+thử\s+thâm\s+nhập\b",
+        "flags": 0,
+        "desc": "Dịch thô thuật ngữ kỹ thuật 'Pentest'; bắt buộc giữ nguyên thuật ngữ quốc tế Pentest",
+        "replacement": "Pentest",
+        "auto_fix": "Pentest",
+    },
+    {
+        "id": "TOAN_SITE",
+        "pattern": r"(?i)\b(toàn\s+site|trên\s+site)\b",
+        "flags": 0,
+        "desc": "Dùng từ 'site' cộc lốc trong báo cáo tiếng Việt; thay bằng 'toàn Website' hoặc 'toàn Kênh Web'",
+        "replacement": "toàn Website hoặc toàn Kênh Web",
+        "auto_fix": "toàn Website",
+    },
+    {
+        "id": "LINK_GENERIC",
+        "pattern": r"(?i)\blink\s+generic\b",
+        "flags": 0,
+        "desc": "Dùng từ 'link generic' chắp vá tiếng Anh; thay bằng 'đường dẫn dùng chung' hoặc 'đường dẫn chung (Generic link)'",
+        "replacement": "đường dẫn dùng chung (Generic link)",
+        "auto_fix": "đường dẫn dùng chung",
+    },
     # ---------------------------------------------------------------
     # Nhóm CẢNH BÁO (severity: warn): không chặn commit, chỉ nhắc người viết rà lại.
     # Nguồn tham khảo mẫu: blader/humanizer (mục 17, 22, 23, 25 trong bảng 26 mẫu văn AI).
