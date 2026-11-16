@@ -74,11 +74,17 @@ def sync_all_mtd(days_elapsed=2, strict_momo=True, clean_incident=False):
             ch_q["dimensionFilter"] = {"filter": {"fieldName": "hostName", "stringFilter": {"value": "www.momo.vn"}}}
         res_ch = run_ga4_report(ga4_token, ch_q)
 
+        ai_sources = [
+            "chatgpt.com", "perplexity.ai", "gemini.google.com", 
+            "copilot.microsoft.com", "android-app://com.openai.chatgpt",
+            "claude.ai", "duck.ai", "deepseek"
+        ]
         org_pv = 0
         dir_pv = 0
         paid_pv = 0
         ref_pv = 0
         oth_pv = 0
+        ai_pv = 0
 
         for r in res_ch.get("rows", []):
             ch = r["dimensionValues"][0]["value"]
@@ -88,6 +94,9 @@ def sync_all_mtd(days_elapsed=2, strict_momo=True, clean_incident=False):
             cn = ch.lower()
             sn = src.lower()
 
+            if any(ai in sn for ai in ai_sources) or cn == "ai assistant":
+                ai_pv += pv
+
             if sn == "in_app" or sn.startswith("in_app"):
                 ref_pv += pv
             elif "organic search" in cn:
@@ -96,7 +105,7 @@ def sync_all_mtd(days_elapsed=2, strict_momo=True, clean_incident=False):
                 dir_pv += pv
             elif "referral" in cn:
                 ref_pv += pv
-            elif any(k in cn for k in ["paid", "cpc", "display"]):
+            elif any(k in cn for k in ["paid", "cpc", "display", "cross-network"]):
                 paid_pv += pv
             else:
                 oth_pv += pv
@@ -123,10 +132,10 @@ def sync_all_mtd(days_elapsed=2, strict_momo=True, clean_incident=False):
             dir_pv = round(dir_pv * scale)
             ref_pv = round(ref_pv * scale)
             oth_pv = round(oth_pv * scale)
+            ai_pv = round(ai_pv * scale)
 
-        s_ch = org_pv + dir_pv + paid_pv + ref_pv + oth_pv
-        if tot_pv != s_ch:
-            oth_pv += (tot_pv - s_ch)
+        merged_ref_pv = max(0, ref_pv + oth_pv - ai_pv)
+        non_paid_pv = org_pv + dir_pv + ai_pv + merged_ref_pv
 
         month_metrics[m_str] = {
             "total_pv": tot_pv,
@@ -135,11 +144,13 @@ def sync_all_mtd(days_elapsed=2, strict_momo=True, clean_incident=False):
             "organic": org_pv,
             "paid": paid_pv,
             "direct": dir_pv,
-            "referral": ref_pv,
+            "ai_traffic": ai_pv,
+            "referral": merged_ref_pv,
+            "raw_referral": ref_pv,
             "others": oth_pv,
-            "non_paid": org_pv + dir_pv + ref_pv + oth_pv
+            "non_paid": non_paid_pv
         }
-        print(f"  ✓ {m_str}: Total={tot_pv:,} | Org={org_pv:,} | Paid={paid_pv:,} | Dir={dir_pv:,} | Ref={ref_pv:,} | Oth={oth_pv:,}")
+        print(f"  ✓ {m_str}: Total={tot_pv:,} | Org={org_pv:,} | Paid={paid_pv:,} | Dir={dir_pv:,} | AI={ai_pv:,} | Ref={merged_ref_pv:,}")
 
     # 2. Đọc MTD Pivot từ Google Sheets và co giãn tỷ lệ tất cả các cột
     print(f"\n[2/5] Co giãn tỷ lệ MTD Pivot cho toàn bộ 7 cột tháng (Col D..J)...")
@@ -221,10 +232,10 @@ def sync_all_mtd(days_elapsed=2, strict_momo=True, clean_incident=False):
         "values": [[f"Update to: {days_elapsed}"]]
     })
 
-    # Row 5: Total PV
+    # Row 5: Total PV = Paid + Non-Paid
     updates.append({
         "range": "'Overall Performance'!O5:U5",
-        "values": [[f"=SUM({c}9:{c}13)" for c in mtd_cols]]
+        "values": [[f"={c}9+{c}10" for c in mtd_cols]]
     })
     # Row 6: Net add
     updates.append({
@@ -236,60 +247,89 @@ def sync_all_mtd(days_elapsed=2, strict_momo=True, clean_incident=False):
         "range": "'Overall Performance'!P7:U7",
         "values": [[f"=IFERROR(({mtd_cols[i]}5/{mtd_cols[i-1]}5)-1, 0)" for i in range(1, len(mtd_cols))]]
     })
+    # Row 8: blank
+    updates.append({
+        "range": "'Overall Performance'!O8:U8",
+        "values": [["" for _ in mtd_cols]]
+    })
 
-    # Rows 9..13: Kênh Organic, Paid, Direct, Referral, Others cho 7 tháng
+    # Rows 9..14: Paid, Non-Paid, Organic, Direct, AI Traffic, Referral cho 7 tháng
     for idx, (m_str, _, _) in enumerate(months):
         c_let = mtd_cols[idx]
         m_info = month_metrics[m_str]
         updates.append({
-            "range": f"'Overall Performance'!{c_let}9:{c_let}13",
+            "range": f"'Overall Performance'!{c_let}9:{c_let}14",
             "values": [
-                [m_info["organic"]],
                 [m_info["paid"]],
+                [f"=SUM({c_let}11:{c_let}14)"],
+                [m_info["organic"]],
                 [m_info["direct"]],
-                [m_info["referral"]],
-                [m_info["others"]]
+                [m_info["ai_traffic"]],
+                [m_info["referral"]]
             ]
         })
-        # Rows 15..20: Tỷ lệ %
+        # Row 15: blank
         updates.append({
-            "range": f"'Overall Performance'!{c_let}15:{c_let}20",
+            "range": f"'Overall Performance'!{c_let}15",
+            "values": [[""]]
+        })
+        # Rows 16..21: Tỷ lệ %
+        updates.append({
+            "range": f"'Overall Performance'!{c_let}16:{c_let}21",
             "values": [
-                [f"={c_let}9/${c_let}$5"],
-                [f"={c_let}10/${c_let}$5"],
-                [f"={c_let}11/${c_let}$5"],
-                [f"={c_let}12/${c_let}$5"],
-                [f"={c_let}13/${c_let}$5"],
-                [f"={c_let}15+{c_let}17+{c_let}18+{c_let}19"]
+                [f'=IFERROR({c_let}9/${c_let}$5, "")'],
+                [f'=IFERROR({c_let}10/${c_let}$5, "")'],
+                [f'=IFERROR({c_let}11/${c_let}$5, "")'],
+                [f'=IFERROR({c_let}12/${c_let}$5, "")'],
+                [f'=IFERROR({c_let}13/${c_let}$5, "")'],
+                [f'=IFERROR({c_let}14/${c_let}$5, "")']
             ]
+        })
+        # Row 22: blank
+        updates.append({
+            "range": f"'Overall Performance'!{c_let}22",
+            "values": [[""]]
         })
 
     # Cập nhật Full Month Nov (Cột L) trong Overall Performance
     m11_info = month_metrics["2026-11"]
     updates.append({
         "range": "'Overall Performance'!L5",
-        "values": [["=SUM(L9:L13)"]]
+        "values": [["=L9+L10"]]
     })
     updates.append({
-        "range": "'Overall Performance'!L9:L13",
+        "range": "'Overall Performance'!L8",
+        "values": [[""]]
+    })
+    updates.append({
+        "range": "'Overall Performance'!L9:L14",
         "values": [
-            [m11_info["organic"]],
             [m11_info["paid"]],
+            ["=SUM(L11:L14)"],
+            [m11_info["organic"]],
             [m11_info["direct"]],
-            [m11_info["referral"]],
-            [m11_info["others"]]
+            [m11_info["ai_traffic"]],
+            [m11_info["referral"]]
         ]
     })
     updates.append({
-        "range": "'Overall Performance'!L15:L20",
+        "range": "'Overall Performance'!L15",
+        "values": [[""]]
+    })
+    updates.append({
+        "range": "'Overall Performance'!L16:L21",
         "values": [
-            ["=L9/$L$5"],
-            ["=L10/$L$5"],
-            ["=L11/$L$5"],
-            ["=L12/$L$5"],
-            ["=L13/$L$5"],
-            ["=L15+L17+L18+L19"]
+            ['=IFERROR(L9/$L$5, "")'],
+            ['=IFERROR(L10/$L$5, "")'],
+            ['=IFERROR(L11/$L$5, "")'],
+            ['=IFERROR(L12/$L$5, "")'],
+            ['=IFERROR(L13/$L$5, "")'],
+            ['=IFERROR(L14/$L$5, "")']
         ]
+    })
+    updates.append({
+        "range": "'Overall Performance'!L22",
+        "values": [[""]]
     })
 
     # 3.3 Cập nhật PaidNonPaid
@@ -442,8 +482,50 @@ def sync_all_mtd(days_elapsed=2, strict_momo=True, clean_incident=False):
             for r_idx, row_vals in enumerate(new_pivot_data):
                 for c_idx, val in enumerate(row_vals):
                     ws_m.cell(r_idx + 1, c_idx + 1, val)
+        if "Overall Performance" in wb.sheetnames:
+            ws_ov = wb["Overall Performance"]
+            col_letter_to_idx = {c: openpyxl.utils.column_index_from_string(c) for c in mtd_cols + ["L"]}
+            for idx, (m_str, _, _) in enumerate(months):
+                c_let = mtd_cols[idx]
+                c_col = col_letter_to_idx[c_let]
+                m_info = month_metrics[m_str]
+                ws_ov.cell(5, c_col, f"={c_let}9+{c_let}10")
+                ws_ov.cell(8, c_col, None)
+                ws_ov.cell(9, c_col, m_info["paid"])
+                ws_ov.cell(10, c_col, f"=SUM({c_let}11:{c_let}14)")
+                ws_ov.cell(11, c_col, m_info["organic"])
+                ws_ov.cell(12, c_col, m_info["direct"])
+                ws_ov.cell(13, c_col, m_info["ai_traffic"])
+                ws_ov.cell(14, c_col, m_info["referral"])
+                ws_ov.cell(15, c_col, None)
+                ws_ov.cell(16, c_col, f'=IFERROR({c_let}9/${c_let}$5, "")')
+                ws_ov.cell(17, c_col, f'=IFERROR({c_let}10/${c_let}$5, "")')
+                ws_ov.cell(18, c_col, f'=IFERROR({c_let}11/${c_let}$5, "")')
+                ws_ov.cell(19, c_col, f'=IFERROR({c_let}12/${c_let}$5, "")')
+                ws_ov.cell(20, c_col, f'=IFERROR({c_let}13/${c_let}$5, "")')
+                ws_ov.cell(21, c_col, f'=IFERROR({c_let}14/${c_let}$5, "")')
+                ws_ov.cell(22, c_col, None)
+
+            # Col L (Nov Full Month)
+            c_col_l = col_letter_to_idx["L"]
+            ws_ov.cell(5, c_col_l, "=L9+L10")
+            ws_ov.cell(8, c_col_l, None)
+            ws_ov.cell(9, c_col_l, m11_info["paid"])
+            ws_ov.cell(10, c_col_l, "=SUM(L11:L14)")
+            ws_ov.cell(11, c_col_l, m11_info["organic"])
+            ws_ov.cell(12, c_col_l, m11_info["direct"])
+            ws_ov.cell(13, c_col_l, m11_info["ai_traffic"])
+            ws_ov.cell(14, c_col_l, m11_info["referral"])
+            ws_ov.cell(15, c_col_l, None)
+            ws_ov.cell(16, c_col_l, '=IFERROR(L9/$L$5, "")')
+            ws_ov.cell(17, c_col_l, '=IFERROR(L10/$L$5, "")')
+            ws_ov.cell(18, c_col_l, '=IFERROR(L11/$L$5, "")')
+            ws_ov.cell(19, c_col_l, '=IFERROR(L12/$L$5, "")')
+            ws_ov.cell(20, c_col_l, '=IFERROR(L13/$L$5, "")')
+            ws_ov.cell(21, c_col_l, '=IFERROR(L14/$L$5, "")')
+            ws_ov.cell(22, c_col_l, None)
         wb.save(local_excel)
-        print(f"  ✓ Đã lưu cập nhật MTD Pivot vào {local_excel}")
+        print(f"  ✓ Đã lưu cập nhật MTD Pivot và Overall Performance vào {local_excel}")
 
     print("\n" + "=" * 75)
     print(f"HOÀN TẤT ĐỒNG BỘ TOÀN BỘ CÁC THÁNG (T5 -> T11) THEO CHU KỲ MTD {days_elapsed} NGÀY!")

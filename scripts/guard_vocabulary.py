@@ -320,6 +320,50 @@ RULES = [
         "replacement": "nghiệm thu kỹ thuật, đánh giá chất lượng, hoàn tất UAT, hoặc chạy test",
         "auto_fix": "nghiệm thu kỹ thuật",
     },
+    # ---------------------------------------------------------------
+    # Nhóm CẢNH BÁO (severity: warn): không chặn commit, chỉ nhắc người viết rà lại.
+    # Nguồn tham khảo mẫu: blader/humanizer (mục 17, 22, 23, 25 trong bảng 26 mẫu văn AI).
+    # ---------------------------------------------------------------
+    {
+        "id": "NGUON_MUON_UY_QUYEN",
+        "severity": "warn",
+        "pattern": r"(?i)(các\s+chuyên\s+gia|nghiên\s+cứu\s+cho\s+thấy|nhiều\s+nguồn\s+cho\s+rằng|giới\s+chuyên\s+môn\s+cho\s+rằng|theo\s+các\s+nghiên\s+cứu)",
+        "exempt": r"\[cần\s+verify\]|https?://|\[\d+\]|\(nguồn",
+        "flags": 0,
+        "desc": "Quyền uy mượn: nêu 'chuyên gia / nghiên cứu' mà không có nguồn cụ thể. Số liệu và nhận định phải ghi nguồn hoặc đánh dấu [cần verify] (AGENTS.md, Zero-Hallucination)",
+        "replacement": "Ghi tên nguồn và năm cụ thể, hoặc đánh dấu [cần verify]",
+        "auto_fix": None,
+    },
+    {
+        "id": "TAN_DU_CHATBOT",
+        "severity": "warn",
+        "pattern": r"(?i)(dưới\s+đây\s+là\s+(bản\s+(tóm\s+tắt|nháp|trả\s+lời)|nội\s+dung\s+bạn\s+yêu\s+cầu)|hy\s+vọng\s+[^.]{0,30}hữu\s+ích|chắc\s+chắn\s+rồi)",
+        "exempt": None,
+        "flags": 0,
+        "desc": "Tàn dư giọng chatbot (lời mở đầu, lời kết kiểu trợ lý AI) trong tài liệu chính thức",
+        "replacement": "Bỏ lời dẫn, mở thẳng vào nội dung hoặc kết luận",
+        "auto_fix": None,
+    },
+    {
+        "id": "MIEN_TRU_KIEN_THUC",
+        "severity": "warn",
+        "pattern": r"(?i)(tính\s+đến\s+(thời\s+điểm|hiện\s+tại)|theo\s+(hiểu\s+biết|kiến\s+thức)\s+của\s+tôi|có\s+thể\s+không\s+chính\s+xác|tôi\s+không\s+chắc)",
+        "exempt": r"\d{1,2}/\d{1,2}(/\d{2,4})?",
+        "flags": 0,
+        "desc": "Miễn trừ kiến thức hoặc phỏng đoán thay vì chốt mốc thời gian và nguồn. Dòng có ngày cụ thể (dd/mm) được bỏ qua",
+        "replacement": "Ghi rõ mốc dữ liệu (dd/mm/yyyy) và nguồn, hoặc đánh dấu [cần verify]",
+        "auto_fix": None,
+    },
+    {
+        "id": "MO_TA_CHINH_TAI_LIEU",
+        "severity": "warn",
+        "pattern": r"(?i)((báo\s+cáo|tài\s+liệu|văn\s+bản)\s+này\s+(trình\s+bày|tổng\s+hợp|đề\s+cập|phân\s+tích|nhằm)|phần\s+dưới\s+đây\s+(trình\s+bày|tổng\s+hợp))",
+        "exempt": None,
+        "flags": 0,
+        "desc": "Mô tả chính tài liệu thay vì đi vào nội dung. Báo cáo cần đi thẳng vào kết luận, số liệu và việc tiếp theo",
+        "replacement": "Viết thẳng action title hoặc kết luận, bỏ câu mô tả tài liệu",
+        "auto_fix": None,
+    },
 ]
 
 
@@ -380,6 +424,12 @@ class VocabularyGuard:
                 # P0-P3 trong code fence (Mermaid node/subgraph ID, sơ đồ ASCII) là định danh, không phải nhãn ưu tiên
                 if rule["id"] == "PRIORITY_TAG" and in_fence:
                     continue
+                # Rule cảnh báo không quét trong code fence và bỏ qua dòng thuộc ngoại lệ (ngày, nguồn, link)
+                if rule.get("severity") == "warn":
+                    if in_fence:
+                        continue
+                    if rule.get("exempt") and re.search(rule["exempt"], line, flags=re.IGNORECASE):
+                        continue
                 pattern = rule["pattern"]
                 matches = list(re.finditer(pattern, line, flags=rule["flags"]))
                 for match in matches:
@@ -411,6 +461,7 @@ class VocabularyGuard:
                         "replacement": rule["replacement"],
                         "line_content": line.strip(),
                         "auto_fix": rule["auto_fix"],
+                        "severity": rule.get("severity", "block"),
                     })
 
         return violations
@@ -590,11 +641,31 @@ def main():
     total_violations = 0
     violations_by_file: Dict[str, List[Dict[str, Any]]] = {}
 
+    warnings_by_file: Dict[str, List[Dict[str, Any]]] = {}
+    total_warnings = 0
+
     for fp in files_to_check:
-        v_list = guard.check_file(fp)
-        if v_list:
-            violations_by_file[str(fp)] = v_list
-            total_violations += len(v_list)
+        all_v = guard.check_file(fp)
+        block_v = [v for v in all_v if v["severity"] != "warn"]
+        warn_v = [v for v in all_v if v["severity"] == "warn"]
+        if block_v:
+            violations_by_file[str(fp)] = block_v
+            total_violations += len(block_v)
+        if warn_v:
+            warnings_by_file[str(fp)] = warn_v
+            total_warnings += len(warn_v)
+
+    # Cảnh báo chỉ để người viết rà lại, không làm fail commit
+    if total_warnings:
+        print(f"⚠️ [VOCABULARY GUARD WARNINGS] {total_warnings} cảnh báo (không chặn commit):")
+        for f_path, w_list in warnings_by_file.items():
+            rel_path = Path(f_path).relative_to(guard.workspace_root) if Path(f_path).is_relative_to(guard.workspace_root) else f_path
+            print(f"\n📄 {rel_path} ({len(w_list)} cảnh báo):")
+            for v in w_list:
+                print(f"  • Dòng {v['line']}:{v['col']} [{v['rule_id']}] Cụm từ: \"{v['matched']}\"")
+                print(f"    ↳ Lý do: {v['desc']}")
+                print(f"    ↳ Gợi ý: {v['replacement']}")
+        print()
 
     if total_violations == 0:
         print(f"✅ [VOCABULARY GUARD PASSED] Toàn bộ {len(files_to_check)} files đã kiểm tra hoàn toàn sạch, đạt chuẩn mực!")

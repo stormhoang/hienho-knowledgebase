@@ -50,7 +50,7 @@ Hệ thống Web Platform quy định rạch ròi 2 tầng danh mục để ch�
 Để triệt tiêu toàn bộ lỗi hiển thị và đồng bộ 100% với Knowledge Base, bộ mã Hubs Dashboard cần áp dụng ngay 6 chuẩn hóa sau:
 
 1. **Tách biệt Download thành dự án và Hub độc lập:**
-   - **Quy chuẩn SSOT:** Toàn bộ trang tải ứng dụng (`/download*`, `/tai-app*`) được quy về dự án và Hub riêng mang tên `Download` (`download`), đạt 128.5K PV MTD. `New User Hub` (`new_user`) chuyên trách các chiến dịch thu hút khách hàng mới, liên kết tài khoản ngân hàng, giới thiệu bạn bè và quà tặng onboarding (`/gioi-thieu-momo*`, `/lienkettaikhoan*`, `/hellomomo*`, `/chaomomo*`, `/chao-ban-moi*`, `/qua-tang-ban-moi*`), đạt 96.5K PV MTD (+84.2% MoM).
+   - **Quy chuẩn SSOT:** Toàn bộ trang tải ứng dụng (`/download*`, `/tai-app*`) được quy về dự án và Hub riêng mang tên `Download` (`download`), đạt 128.5K PV MTD. `New User Hub` (`new_user`) chuyên trách các chiến dịch thu hút khách hàng mới, liên kết tài khoản ngân hàng, giới thiệu bạn bè, quà tặng onboarding và chiến dịch gamification kích hoạt bạn mới Một Mùa Quýt (`/gioi-thieu-momo*`, `/lienkettaikhoan*`, `/hellomomo*`, `/chaomomo*`, `/chao-ban-moi*`, `/qua-tang-ban-moi*`, `/game/mot-mua-quyt*`), đạt 192.2K PV MTD. Cụm `/game*` được loại khỏi Game Hub để trả về đúng dự án New User.
 2. **Chuyển `Cross Border` từ `Travel Hub` sang `Payment Hub`:**
    - **Thực trạng sai lệch:** Hub đang xếp `Cross Border` vào `Travel Hub`.
    - **Quy chuẩn SSOT:** Các trang `/thanh-toan-quoc-te`, `/vi-vu-quoc-te-cung-momo-x-alipay`, thanh toán Napas/Alipay+ là tính năng thanh toán quét mã quốc tế, bản chất nghiệp vụ 100% thuộc `Payment Hub`. `Travel Hub` chỉ quản lý cẩm nang du lịch và đặt vé di chuyển liên tỉnh (`OTA`, `Vé Xe`).
@@ -84,7 +84,7 @@ Hệ thống Web Platform quy định rạch ròi 2 tầng danh mục để ch�
 | **`cinema`** | Cinema Hub | **Performance** | 1.294.630 | `Cinema_Cineplex Page`<br>`Cinema_Page`<br>`Cinema_Home Page`<br>`Cinema_Blog`<br>`Cinema_News`<br>`Cinema_Landing Page` | `/cinema/rap/*`<br>`/cinema/*`<br>`/cinema`<br>`/cinema/blog/*`<br>`/cinema/khuyen-mai`<br>`/cinema/lp/*` |
 | **`financial`** | Financial Hub | **Transformation** | 700.000 | `Vay Nhanh`<br>`Ví Trả Sau`<br>`Điểm Tín Dụng`<br>`Túi Thần Tài`<br>`Trung Tâm Tài Chính`<br>`Mở Thẻ Tín Dụng`<br>`Tiết Kiệm Online`<br>`Chứng Khoán`<br>`Chứng Chỉ Quỹ`<br>`Quản Lý Chi Tiêu`<br>`Mở tài khoản ngân hàng`<br>`Trả Góp Apple`<br>`Thanh Toán Khoản Vay`<br>`Thanh Toán Thẻ Tín Dụng`<br>`Sàn Đầu Tư`<br>`Tiệm Vàng Online`<br>`Tỷ Giá`<br>`Giá Vàng`<br>`Quỹ`<br>`Lãi Suất`<br>`Nhận Tiền Quốc Tế`<br>`Quỹ Nhóm` | `/vay-nhanh*`<br>`/vi-tra-sau*`<br>`/diem-tin-dung*`<br>`/tui-than-tai*`<br>`/trung-tam-tai-chinh*`<br>`/mo-the-tin-dung*`<br>`/tiet-kiem-online*`<br>`/chung-khoan*`<br>`/chung-chi-quy*`<br>`/quan-ly-chi-tieu*`<br>`/tra-gop-apple*`<br>`/gia-vang*`<br>`/ty-gia*` |
 | **`vehicle`** | Vehicle Hub | **Transformation** | 100.000 | `Phạt Nguội`<br>`Nộp Phạt CSGT`<br>`Tiện Ích Giao Thông`<br>`Phí Không Dừng`<br>`Bảo Hiểm Ô Tô`<br>`Bảo Hiểm Xe Máy`<br>`Cây xăng`<br>`Giá xăng`<br>`Trạm sạc`<br>`Garage`<br>`Hãng Xe` | `/phat-nguoi*`<br>`/tien-ich-giao-thong/nop-phat-csgt*`<br>`/tien-ich-giao-thong*`<br>`/phi-khong-dung*`<br>`/bao-hiem-o-to*`<br>`/bao-hiem-xe-may*`<br>`/cay-xang*`<br>`/gia-xang*`<br>`/tram-sac*` |
-| **`new_user`** | New User Hub | **Transformation** | 300.000 | `New User` | `/gioi-thieu-momo*`<br>`/lienkettaikhoan*`<br>`/hellomomo*`<br>`/chaomomo*`<br>`/chao-ban-moi*`<br>`/qua-tang-ban-moi*` |
+| **`new_user** | New User Hub | **Transformation** | 300.000 | `New User` | `/gioi-thieu-momo*`<br>`/lienkettaikhoan*`<br>`/hellomomo*`<br>`/chaomomo*`<br>`/chao-ban-moi*`<br>`/qua-tang-ban-moi*`<br>`/game/mot-mua-quyt*` |
 | **`insurance`** | Insurance Hub | **Incubator** | 50.000 | `Bảo Hiểm Y Tế`<br>`Bảo Hiểm Sức Khỏe`<br>`Bảo Hiểm Xã Hội`<br>`Bảo Hiểm` | `/bao-hiem-y-te*`<br>`/bao-hiem-suc-khoe*`<br>`/bao-hiem-xa-hoi*`<br>`/bao-hiem*` |
 
 ---
@@ -94,12 +94,11 @@ Hệ thống Web Platform quy định rạch ròi 2 tầng danh mục để ch�
 | Hub ID | Tên Hub Hiển Thị | Vai Trò Nghiệp Vụ | Danh Sách Projects Trực Thuộc | Quy Tắc URL Tiêu Biểu |
 | :--- | :--- | :--- | :--- | :--- |
 | **`student`** | Student Hub | Cổng thông tin, tiện ích sinh viên & Student Pass | `Student Pass`<br>`Student Hub` | `/sinh-vien*`, `/student*`, `/student-pass*` |
-| :--- | :--- | :--- | :--- | :--- |
 | **`travel`** | Travel Hub | Cẩm nang du lịch & Đặt vé di chuyển | `OTA`<br>`Vé Xe` | `/ve-may-bay*`, `/khach-san*`<br>`/ve-xe*`, `/ve-xe-khach*`, `/ve-tau*` |
 | **`payment`** | Payment Hub | Cổng thanh toán, dịch vụ liên kết & chuyển tiền | `Tiktok`<br>`P2P`<br>`Hoàn Tiền Mua Sắm`<br>`Application Store`<br>`Dịch vụ liên kết`<br>`XU`<br>`Cross Border` *(Thanh toán quốc tế)* | `/thanh-toan-quoc-te*`<br>`/chuyen-tien*`<br>`/dich-vu-lien-ket*`<br>`/tiktok*`<br>`/app-store*` |
 | **`billpay`** | Billpay Hub | Thanh toán hóa đơn sinh hoạt | `Billpay`<br>`Điện`<br>`Nước`<br>`Internet`<br>`Truyền Hình`<br>`Chung Cư`<br>`Học Phí`<br>`Phí Xét Tuyển` | `/thanh-toan-hoa-don*`<br>`/dien*`<br>`/nuoc*`<br>`/internet*`<br>`/truyen-hinh*`<br>`/chung-cu*`<br>`/phi-xet-tuyen*`<br>`/thanh-toan-momo-the-hoc-duong-ssc` |
 | **`telco`** | Telco Hub | Viễn thông, SIM, Data 4G/5G | `Data`<br>`Sim`<br>`Esim`<br>`Airtime`<br>`Nạp tiền điện thoại` | `/nap-data*`<br>`/sim*`<br>`/esim*`<br>`/nap-tien-dien-thoai*` |
-| **`game`** | Game Hub | Nạp thẻ game & Cổng trò chơi | `Game`<br>`Nạp thẻ Game`<br>`Game Hub` | `/nap-the-game*`<br>`/game*` |
+| **`game`** | Game Hub | Dịch vụ Nạp thẻ game & Cổng trò chơi | `Game`<br>`Nạp thẻ Game` | `/nap-the-game*` |
 | **`lottery`** | Lottery Hub | Dịch vụ vé số điện toán & truyền thống | `Vé số` | `/ve-so*`, `/vietlott*`, `/xskt*` |
 | **`merchant`** | Merchant Hub | Trang đối tác doanh nghiệp & Landing page điểm bán | `Merchant` | `/doi-tac*` *(trang cha)*, `/thanh-toan-momo-*` *(173 trang đối tác con)*, `/page*` *(landing page điểm bán)* |
 | **`soundbox`** | Soundbox Hub | Thiết bị Loa thông báo chuyển khoản & Phần cứng POS | `Soundbox` | Các slug chứa `loa-thong-bao*`, `/loa-momo*`, các bài viết về loa thông báo |

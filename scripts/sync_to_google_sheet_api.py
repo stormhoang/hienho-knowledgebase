@@ -50,7 +50,8 @@ def sync_google_sheet(
     organic_pv, paid_pv, direct_pv, referral_pv, others_pv, non_paid_pv,
     hubs_pv, cinema_sub,
     spreadsheet_id=TARGET_SHEET_ID,
-    month="2026-11"
+    month="2026-11",
+    ai_traffic_pv=None
 ):
     """Cập nhật toàn bộ các sheet trong Google Sheet SSOT qua Sheets API."""
     token = get_sheets_token()
@@ -64,97 +65,111 @@ def sync_google_sheet(
     print(f"Spreadsheet ID: {spreadsheet_id}")
     print("=" * 70)
 
-    # Cấu hình cột theo tháng
+    # Cấu hình cột theo tháng:
+    # Full Month (B..M): Col L = Nov 26, Col K = Oct 26
+    # Month to Date (O..V): Col U = Nov 26 MTD, Col T = Oct 26 MTD
     if month == "2026-11":
-        col_mtd = "L"
-        col_full = "U"
+        col_full = "L"
+        col_mtd = "U"
         col_pivot = "J"
         col_pivot_idx = 9
         baseline_col_idx = 8
     else:
-        col_mtd = "K"
-        col_full = "T"
+        col_full = "K"
+        col_mtd = "T"
         col_pivot = "I"
         col_pivot_idx = 8
         baseline_col_idx = 7
 
+    # Xác định AI Traffic PV nếu chưa truyền vào
+    if ai_traffic_pv is None:
+        try:
+            m_parts = month.split("-")
+            cons_file = BASE_DIR / "07_REPORTS" / "data" / f"monthly_{m_parts[1]}_{m_parts[0]}_mtd_{days_elapsed}d.json"
+            if cons_file.exists():
+                with open(cons_file, "r", encoding="utf-8") as f:
+                    _cdata = json.load(f)
+                    ai_traffic_pv = _cdata.get("channels", {}).get("ai_traffic", {}).get("pv", 0)
+        except Exception:
+            ai_traffic_pv = 0
+    if ai_traffic_pv is None:
+        ai_traffic_pv = 0
+
+    merged_referral_pv = max(0, non_paid_pv - (organic_pv + direct_pv + ai_traffic_pv))
+
     # 1. Chuẩn bị Batch Update cho các cell chính
     updates = []
 
-    # Overall Performance: A1, MTD 5, 9:13, 15:20, Full Month 9:13, 15:19
+    # Overall Performance: A1, Row 5 (=col9+col10), Rows 9:14 (Paid, Non-Paid=SUM, Organic, Direct, AI Traffic, Referral), Rows 16:21 (% share)
     updates.append({
         "range": "'Overall Performance'!A1",
         "values": [[f"Update to: {days_elapsed}"]]
     })
-    updates.append({
-        "range": f"'Overall Performance'!{col_mtd}5",
-        "values": [[f"=SUM({col_mtd}9:{col_mtd}13)"]]
-    })
-    updates.append({
-        "range": f"'Overall Performance'!{col_mtd}9:{col_mtd}13",
-        "values": [
-            [organic_pv],
-            [paid_pv],
-            [direct_pv],
-            [referral_pv],
-            [others_pv]
-        ]
-    })
-    updates.append({
-        "range": f"'Overall Performance'!{col_mtd}15:{col_mtd}20",
-        "values": [
-            [f"={col_mtd}9/${col_mtd}$5"],
-            [f"={col_mtd}10/${col_mtd}$5"],
-            [f"={col_mtd}11/${col_mtd}$5"],
-            [f"={col_mtd}12/${col_mtd}$5"],
-            [f"={col_mtd}13/${col_mtd}$5"],
-            [f"={col_mtd}15+{col_mtd}17+{col_mtd}18+{col_mtd}19"]
-        ]
-    })
-    updates.append({
-        "range": f"'Overall Performance'!{col_full}9:{col_full}13",
-        "values": [
-            [organic_pv],
-            [paid_pv],
-            [direct_pv],
-            [referral_pv],
-            [others_pv]
-        ]
-    })
-    updates.append({
-        "range": f"'Overall Performance'!{col_full}15:{col_full}19",
-        "values": [
-            [f"={col_full}9/${col_full}$5"],
-            [f"={col_full}10/${col_full}$5"],
-            [f"={col_full}11/${col_full}$5"],
-            [f"={col_full}12/${col_full}$5"],
-            [f"={col_full}13/${col_full}$5"]
-        ]
-    })
 
-    # PaidNonPaid: A1, MTD 9:13
+    for c_col in [col_full, col_mtd]:
+        updates.append({
+            "range": f"'Overall Performance'!{c_col}5",
+            "values": [[f"={c_col}9+{c_col}10"]]
+        })
+        updates.append({
+            "range": f"'Overall Performance'!{c_col}8",
+            "values": [[""]]
+        })
+        updates.append({
+            "range": f"'Overall Performance'!{c_col}9:{c_col}14",
+            "values": [
+                [paid_pv],
+                [f"=SUM({c_col}11:{c_col}14)"],
+                [organic_pv],
+                [direct_pv],
+                [ai_traffic_pv],
+                [merged_referral_pv]
+            ]
+        })
+        updates.append({
+            "range": f"'Overall Performance'!{c_col}15",
+            "values": [[""]]
+        })
+        updates.append({
+            "range": f"'Overall Performance'!{c_col}16:{c_col}21",
+            "values": [
+                [f'=IFERROR({c_col}9/${c_col}$5, "")'],
+                [f'=IFERROR({c_col}10/${c_col}$5, "")'],
+                [f'=IFERROR({c_col}11/${c_col}$5, "")'],
+                [f'=IFERROR({c_col}12/${c_col}$5, "")'],
+                [f'=IFERROR({c_col}13/${c_col}$5, "")'],
+                [f'=IFERROR({c_col}14/${c_col}$5, "")']
+            ]
+        })
+        updates.append({
+            "range": f"'Overall Performance'!{c_col}22",
+            "values": [[""]]
+        })
+
+    # PaidNonPaid: A1, col_full & col_mtd 9:13
     updates.append({
         "range": "'PaidNonPaid'!A1",
         "values": [[f"Update to: {days_elapsed}"]]
     })
-    updates.append({
-        "range": f"'PaidNonPaid'!{col_mtd}9:{col_mtd}13",
-        "values": [
-            [organic_pv],
-            [direct_pv],
-            [referral_pv],
-            [others_pv],
-            [paid_pv]
-        ]
-    })
+    for c_pnp in [col_full, col_mtd]:
+        updates.append({
+            "range": f"'PaidNonPaid'!{c_pnp}9:{c_pnp}13",
+            "values": [
+                [organic_pv],
+                [direct_pv],
+                [referral_pv],
+                [others_pv],
+                [paid_pv]
+            ]
+        })
 
-    # Target: A1, MTD 10:14
+    # Target: A1, col_full 10:14
     updates.append({
         "range": "'Target'!A1",
         "values": [[f"Update to: {days_elapsed}"]]
     })
     updates.append({
-        "range": f"'Target'!{col_mtd}10:{col_mtd}14",
+        "range": f"'Target'!{col_full}10:{col_full}14",
         "values": [
             [organic_pv],
             [paid_pv],

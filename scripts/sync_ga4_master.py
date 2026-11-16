@@ -797,7 +797,8 @@ def main():
             non_paid_pv=non_paid_pv,
             hubs_pv=hubs_pv,
             cinema_sub=cinema_sub,
-            month=month_str
+            month=month_str,
+            ai_traffic_pv=ai_pv
         )
 
         # Đồng bộ bảng Click to app by Project trong Projects Detail Flow

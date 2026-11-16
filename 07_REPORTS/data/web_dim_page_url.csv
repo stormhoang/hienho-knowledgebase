@@ -3260,7 +3260,9 @@ Blog,Landing Page,Static,https://www.momo.vn/blog/mua-gi
 Guide,Landing Page,Static,https://www.momo.vn/huong-dan/huong-dan-lien-ket-vi-voi-tai-khoan-ngan-hang-timo
 Donation,Landing Page,Static,https://www.momo.vn/cong-dong/chung-tay-mang-den-co-hoi-song-cho-25-benh-nhi
 Guide,Landing Page,Static,https://www.momo.vn/huong-dan/lien-ket-vi-momo-vietinbank
-Game Hub,Mini Web,Dynamic,https://www.momo.vn/game/*
+New User,Landing Page,Dynamic,https://www.momo.vn/game/mot-mua-quyt*
+New User,Landing Page,Static,https://www.momo.vn/game/mot-mua-quyt
+Game,Landing Page,Static,https://www.momo.vn/game
 Ví Trả Sau,Home Page,Static,https://www.momo.vn/vi-tra-sau
 Trung Tâm Tài Chính,Service Page,Dynamic,https://www.momo.vn/tai-chinh/*
 Tỷ Giá,Tool Page,Static,https://www.momo.vn/tai-chinh/ty-gia

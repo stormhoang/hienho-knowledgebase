@@ -148,7 +148,7 @@ INFERRED_PREFIX = [
     (r"^momo\.vn/huong-dan(?:/.*)?$", "Guide", "Guide", "high"),
     (r"^momo\.vn/tin-tuc/khuyen-mai/.*(?:chaomomo|chao-momo|hellomomo|gioi-thieu-momo|chao-ban-moi|qua-tang-ban-moi).*$", "New User", "News", "high"),
     (r"^momo\.vn/tin-tuc(?:/.*)?$", "Tin Tức", "News", "high"),
-    (r"^momo\.vn/(?:gioi-thieu-momo|lienkettaikhoan|chao-ban-moi|hellomomo|chaomomo|chao-momo|welcome|curated-onboarding|qua-tang-ban-moi)(?:/.*)?$", "New User", "Landing Page", "high"),
+    (r"^momo\.vn/(?:gioi-thieu-momo|lienkettaikhoan|chao-ban-moi|hellomomo|chaomomo|chao-momo|welcome|curated-onboarding|qua-tang-ban-moi|game/mot-mua-quyt)(?:/.*)?$", "New User", "Landing Page", "high"),
     (r"^momo\.vn/download(?:/.*)?$", "Download", "Landing Page", "high"),
     (r"^momo\.vn/tai-app(?:/.*)?$", "Download", "Landing Page", "high"),
     (r"^momo\.vn/tim-kiem(?:/.*)?$", "Tìm Kiếm", "Mini Web", "high"),

@@ -13,10 +13,10 @@ REBUILD PROJECTS DETAIL FLOW V3 - FULL DETAILED BREAKDOWN
 - Mỗi Hub lớn có dòng tổng Hub (=SUM các sub-projects con)
 - Thiết lập 2 tầng Row Groups (Tier 1: Hub -> Sub-projects; Tier 2: Sub-project -> Kênh)
 - Cột so sánh:
-  + Cột J: T11 vs T10 (So sánh MTD Ngày 1 của T11 vs T10: =H - G)
-  + Cột K: % MoM MTD
-  + Cột L: W2A CVR (=G_click / G_proj)
-  + Cột V: T10 vs T9 (So sánh Full Month của T10 vs T9: =S - R)
+  + Cột J: T11 vs T10 (So sánh MTD Ngày 15 của T11 vs T10: =H - G)
+  + Cột K: % MoM MTD (Like-for-like 15 ngày)
+  + Cột L: W2A CVR T11 (=H_click / H_proj)
+  + Cột V: T11 vs T10 (So sánh Full Month của T11 vs T10: =T - S)
   + Cột W: % MoM Full Month
 - Phong cách tối giản ("Không màu mè"): Nền trắng sạch, viền xám mảnh, kênh canh phải màu xám #5F6368.
 - Đồng bộ trực tiếp Google Sheets Cloud SSOT và local Excel.
@@ -145,13 +145,15 @@ def fetch_clicks_from_ga4(ga4_token):
     rules = upr.load_rules()
     inferred = upr.load_inferred_rules(rules)
 
-    months_range = {
+    query_ranges = {
         "May": ("2026-05-01", "2026-05-31"),
         "Jun": ("2026-06-01", "2026-06-30"),
         "Jul": ("2026-07-01", "2026-07-31"),
         "Aug": ("2026-08-01", "2026-08-31"),
         "Sep": ("2026-09-01", "2026-09-30"),
-        "Oct": ("2026-10-01", "2026-10-31")
+        "Oct_Full": ("2026-10-01", "2026-10-31"),
+        "Oct_MTD": ("2026-10-01", "2026-10-15"),
+        "Nov_MTD": ("2026-11-01", "2026-11-15")
     }
 
     # Bảng ánh xạ alias sang tên chuẩn
@@ -164,8 +166,8 @@ def fetch_clicks_from_ga4(ga4_token):
         for a in aliases:
             alias_map[a.lower()] = p_name
 
-    clicks_by_month = {}
-    for m, (s, e) in months_range.items():
+    raw_mapped = {}
+    for m, (s, e) in query_ranges.items():
         print(f"    - Kéo clicks {m} ({s} -> {e})...")
         res = run_ga4_report(ga4_token, {
             "dateRanges": [{"startDate": s, "endDate": e}],
@@ -204,17 +206,35 @@ def fetch_clicks_from_ga4(ga4_token):
                 resolved = upr.resolve_primary("https://www.momo.vn" + lp, rules, inferred)
                 key = alias_map.get(resolved.lower(), resolved)
             mapped[key] += cnt
-        clicks_by_month[m] = mapped
+        raw_mapped[m] = mapped
         print(f"      ✓ {m}: {sum(mapped.values()):,} clicks")
 
-    return clicks_by_month
+    clicks_mtd = {
+        "May": raw_mapped["May"],
+        "Jun": raw_mapped["Jun"],
+        "Jul": raw_mapped["Jul"],
+        "Aug": raw_mapped["Aug"],
+        "Sep": raw_mapped["Sep"],
+        "Oct": raw_mapped["Oct_MTD"],
+        "Nov": raw_mapped["Nov_MTD"]
+    }
+    clicks_full = {
+        "May": raw_mapped["May"],
+        "Jun": raw_mapped["Jun"],
+        "Jul": raw_mapped["Jul"],
+        "Aug": raw_mapped["Aug"],
+        "Sep": raw_mapped["Sep"],
+        "Oct": raw_mapped["Oct_Full"],
+        "Nov": raw_mapped["Nov_MTD"]
+    }
+    return clicks_mtd, clicks_full
 
 def plan_layout():
     """Tính toán trước số dòng 1-based cố định cho mọi Hub, Sub-project và Dự án độc lập."""
     cur_row = 3 # Row 1: Header, Row 2: Grand Total Web
     hub_plans = []
     top_level_pv_rows = []
-    all_ck_oct_cells = []
+    all_ck_nov_cells = []
 
     for hub_name, sublist in HUB_STRUCTURE.items():
         r_hub = cur_row
@@ -234,7 +254,7 @@ def plan_layout():
                 "r_org": r_org,
                 "r_oth": r_oth
             })
-            all_ck_oct_cells.append(f"G{r_ck}")
+            all_ck_nov_cells.append(f"H{r_ck}")
             cur_row += 7
         hub_plans.append({
             "name": hub_name,
@@ -251,7 +271,7 @@ def plan_layout():
         r_ck = cur_row + 1
         r_org = cur_row + 2
         r_oth = cur_row + 6
-        all_ck_oct_cells.append(f"G{r_ck}")
+        all_ck_nov_cells.append(f"H{r_ck}")
         standalone_plans.append({
             "name": p_name,
             "aliases": aliases,
@@ -262,14 +282,13 @@ def plan_layout():
         })
         cur_row += 7
 
-    return hub_plans, standalone_plans, top_level_pv_rows, all_ck_oct_cells
+    return hub_plans, standalone_plans, top_level_pv_rows, all_ck_nov_cells
 
-def build_grid(clicks_by_month):
-    hub_plans, standalone_plans, top_level_pv_rows, all_ck_oct_cells = plan_layout()
+def build_grid(clicks_mtd, clicks_full):
+    hub_plans, standalone_plans, top_level_pv_rows, all_ck_nov_cells = plan_layout()
     grid = []
     project_meta = []
     channels = ["Organic", "Paid", "Direct", "Referral", "Others"]
-    m_keys = ["May", "Jun", "Jul", "Aug", "Sep", "Oct"]
 
     # ROW 1: Header Tháng & Chỉ số (Đã xóa Row 1 nhóm danh mục cũ)
     r1 = ["Chỉ số / Tên Dự Án"]
@@ -287,9 +306,9 @@ def build_grid(clicks_by_month):
         r2.append(f"=SUM({sum_args})")
     r2.append("=H2-G2")
     r2.append('=IF(AND(ISNUMBER(H2), ISNUMBER(G2), G2>0), (H2-G2)/G2, "")')
-    # CVR toàn web = Tổng Clicks của tất cả 65 projects / G2
-    all_ck_oct = ", ".join(all_ck_oct_cells)
-    r2.append(f"=IFERROR(SUM({all_ck_oct})/G2, \"\")")
+    # CVR toàn web = Tổng Clicks của tất cả 65 projects tháng 11 / H2
+    all_ck_nov = ", ".join(all_ck_nov_cells)
+    r2.append(f"=IFERROR(SUM({all_ck_nov})/H2, \"\")")
     r2.append("") # M
     for c_idx in range(8):
         c_let = chr(ord('N') + c_idx)
@@ -315,8 +334,8 @@ def build_grid(clicks_by_month):
             row_hub.append(f'=IF(SUM({sub_sum_args})>0, SUM({sub_sum_args}), "")')
         row_hub.append(f'=IF(AND(ISNUMBER(H{r_hub}), ISNUMBER(G{r_hub})), H{r_hub}-G{r_hub}, "")')
         row_hub.append(f'=IF(AND(ISNUMBER(H{r_hub}), ISNUMBER(G{r_hub}), G{r_hub}>0), (H{r_hub}-G{r_hub})/G{r_hub}, "")')
-        hub_ck_sum_args = ", ".join([f"G{r}" for r in sub_ck_rows])
-        row_hub.append(f'=IFERROR(SUM({hub_ck_sum_args})/G{r_hub}, "")')
+        hub_ck_nov_args = ", ".join([f"H{r}" for r in sub_ck_rows])
+        row_hub.append(f'=IFERROR(SUM({hub_ck_nov_args})/H{r_hub}, "")')
         row_hub.append("") # M
         # Full Month N..U: =SUM(các r_sub)
         for c_idx in range(8):
@@ -353,8 +372,8 @@ def build_grid(clicks_by_month):
             row_sub.append(f'=IF(AND(ISNUMBER(H{r_sub}), ISNUMBER(G{r_sub})), H{r_sub}-G{r_sub}, "")')
             # K: % MoM MTD
             row_sub.append(f'=IF(AND(ISNUMBER(H{r_sub}), ISNUMBER(G{r_sub}), G{r_sub}>0), (H{r_sub}-G{r_sub})/G{r_sub}, "")')
-            # L: CVR (=Clicks / PV tháng 10)
-            row_sub.append(f'=IFERROR(G{r_ck}/G{r_sub}, "")')
+            # L: CVR (=Clicks / PV tháng 11)
+            row_sub.append(f'=IFERROR(H{r_ck}/H{r_sub}, "")')
             # M: Blank
             row_sub.append("")
             # Full Month N..U: =SUM(N_org:N_oth)
@@ -369,17 +388,17 @@ def build_grid(clicks_by_month):
 
             # Dòng Total Clicks Sub-project
             row_ck = ["  Total Clicks"]
-            for m in m_keys:
-                c_val = clicks_by_month.get(m, {}).get(sub_name, 0)
+            for m in ["May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov"]:
+                c_val = clicks_mtd.get(m, {}).get(sub_name, 0)
                 row_ck.append(c_val if c_val > 0 else "")
-            row_ck.extend(["", ""]) # H, I
+            row_ck.append("") # I: Dec
             row_ck.append(f'=IF(AND(ISNUMBER(H{r_ck}), ISNUMBER(G{r_ck})), H{r_ck}-G{r_ck}, "")')
             row_ck.append(f'=IF(AND(ISNUMBER(H{r_ck}), ISNUMBER(G{r_ck}), G{r_ck}>0), (H{r_ck}-G{r_ck})/G{r_ck}, "")')
             row_ck.extend(["", ""]) # L, M
-            for m in m_keys:
-                c_val = clicks_by_month.get(m, {}).get(sub_name, 0)
+            for m in ["May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov"]:
+                c_val = clicks_full.get(m, {}).get(sub_name, 0)
                 row_ck.append(c_val if c_val > 0 else "")
-            row_ck.extend(["", ""]) # T, U
+            row_ck.append("") # U: Dec
             row_ck.append(f'=IF(AND(ISNUMBER(T{r_ck}), ISNUMBER(S{r_ck})), T{r_ck}-S{r_ck}, "")')
             row_ck.append(f'=IF(AND(ISNUMBER(T{r_ck}), ISNUMBER(S{r_ck}), S{r_ck}>0), (T{r_ck}-S{r_ck})/S{r_ck}, "")')
             grid.append(row_ck)
@@ -429,7 +448,7 @@ def build_grid(clicks_by_month):
             row_p.append(f'=IF(SUM({c_let}{r_org}:{c_let}{r_oth})>0, SUM({c_let}{r_org}:{c_let}{r_oth}), "")')
         row_p.append(f'=IF(AND(ISNUMBER(H{r_p}), ISNUMBER(G{r_p})), H{r_p}-G{r_p}, "")')
         row_p.append(f'=IF(AND(ISNUMBER(H{r_p}), ISNUMBER(G{r_p}), G{r_p}>0), (H{r_p}-G{r_p})/G{r_p}, "")')
-        row_p.append(f'=IFERROR(G{r_ck}/G{r_p}, "")')
+        row_p.append(f'=IFERROR(H{r_ck}/H{r_p}, "")')
         row_p.append("") # M
         for c_idx in range(8):
             c_let = chr(ord('N') + c_idx)
@@ -440,17 +459,17 @@ def build_grid(clicks_by_month):
 
         # Dòng Clicks
         row_ck = ["  Total Clicks"]
-        for m in m_keys:
-            c_val = clicks_by_month.get(m, {}).get(p_name, 0)
+        for m in ["May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov"]:
+            c_val = clicks_mtd.get(m, {}).get(p_name, 0)
             row_ck.append(c_val if c_val > 0 else "")
-        row_ck.extend(["", ""]) # H, I
+        row_ck.append("") # I: Dec
         row_ck.append(f'=IF(AND(ISNUMBER(H{r_ck}), ISNUMBER(G{r_ck})), H{r_ck}-G{r_ck}, "")')
         row_ck.append(f'=IF(AND(ISNUMBER(H{r_ck}), ISNUMBER(G{r_ck}), G{r_ck}>0), (H{r_ck}-G{r_ck})/G{r_ck}, "")')
         row_ck.extend(["", ""]) # L, M
-        for m in m_keys:
-            c_val = clicks_by_month.get(m, {}).get(p_name, 0)
+        for m in ["May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov"]:
+            c_val = clicks_full.get(m, {}).get(p_name, 0)
             row_ck.append(c_val if c_val > 0 else "")
-        row_ck.extend(["", ""]) # T, U
+        row_ck.append("") # U: Dec
         row_ck.append(f'=IF(AND(ISNUMBER(T{r_ck}), ISNUMBER(S{r_ck})), T{r_ck}-S{r_ck}, "")')
         row_ck.append(f'=IF(AND(ISNUMBER(T{r_ck}), ISNUMBER(S{r_ck}), S{r_ck}>0), (T{r_ck}-S{r_ck})/S{r_ck}, "")')
         grid.append(row_ck)
@@ -493,11 +512,11 @@ def run():
     sheets_token = get_sheets_token()
 
     # 1. Kéo clicks
-    clicks = fetch_clicks_from_ga4(ga4_token)
+    clicks_mtd, clicks_full = fetch_clicks_from_ga4(ga4_token)
 
     # 2. Xây dựng grid
     print("\n[2/4] Xây dựng cấu trúc ma trận 466 hàng...")
-    grid, meta = build_grid(clicks)
+    grid, meta = build_grid(clicks_mtd, clicks_full)
     total_rows = len(grid)
     print(f"  ✓ Đã sinh {total_rows} hàng, 23 cột hoàn chỉnh.")
 
@@ -663,7 +682,7 @@ def run():
 
     # Number Formats (Từ Row 2 trở xuống)
     num_fmt_int = {"type": "NUMBER", "pattern": "#,##0"}
-    num_fmt_diff = {"type": "NUMBER", "pattern": "#,##0;#,##0;0"}
+    num_fmt_diff = {"type": "NUMBER", "pattern": "+#,##0;-#,##0;0"}
     num_fmt_pct = {"type": "PERCENT", "pattern": "0.0%"}
 
     format_requests.append({

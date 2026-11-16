@@ -2599,6 +2599,12 @@
   },
   {
     "project_name": "Game",
+    "page_type": "Page",
+    "type": "Dynamic",
+    "page_rule": "https://www.momo.vn/nap-the-game/*"
+  },
+  {
+    "project_name": "Game",
     "page_type": "Landing Page",
     "type": "Static",
     "page_rule": "https://www.momo.vn/napthengayvn"
@@ -19566,10 +19572,22 @@
     "page_rule": "https://www.momo.vn/huong-dan/lien-ket-vi-momo-vietinbank"
   },
   {
-    "project_name": "Game Hub",
-    "page_type": "Mini Web",
+    "project_name": "New User",
+    "page_type": "Landing Page",
     "type": "Dynamic",
-    "page_rule": "https://www.momo.vn/game/*"
+    "page_rule": "https://www.momo.vn/game/mot-mua-quyt*"
+  },
+  {
+    "project_name": "New User",
+    "page_type": "Landing Page",
+    "type": "Static",
+    "page_rule": "https://www.momo.vn/game/mot-mua-quyt"
+  },
+  {
+    "project_name": "Game",
+    "page_type": "Landing Page",
+    "type": "Static",
+    "page_rule": "https://www.momo.vn/game"
   },
   {
     "project_name": "Ví Trả Sau",
@@ -20416,6 +20434,18 @@
     "page_type": "Landing Page",
     "type": "Dynamic",
     "page_rule": "https://www.momo.vn/lienkettaikhoan/*"
+  },
+  {
+    "project_name": "New User",
+    "page_type": "Landing Page",
+    "type": "Static",
+    "page_rule": "https://www.momo.vn/momo-junior"
+  },
+  {
+    "project_name": "New User",
+    "page_type": "Landing Page",
+    "type": "Dynamic",
+    "page_rule": "https://www.momo.vn/momo-junior/*"
   },
   {
     "project_name": "New User",
