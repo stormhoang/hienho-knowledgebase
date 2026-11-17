@@ -10,7 +10,7 @@
 
 ### 1.1. Điểm nổi bật (Highlights)
 - **Lưu lượng MTD 16 ngày đạt 44,3% target:** 1.696.417 Pageviews so với target 3,83M. Nhịp trung bình 106.026 PV/ngày; dự báo kết tháng ~3,18M PV (~83% target). Cần 152.338 PV/ngày trong 14 ngày còn lại (cao hơn nhịp hiện tại 44%).
-- **Vehicle Hub tăng mạnh:** 133.623 PVs, tăng so với 119.552 PVs ở báo cáo 15 ngày, nhờ tra cứu phạt nguội 0-CAPTCHA. Target Vehicle trong file là 100K, khác mốc 200K của báo cáo cũ [cần xác nhận].
+- **Vehicle Hub tăng mạnh:** 133.623 PVs, tăng so với 119.552 PVs ở báo cáo 15 ngày, nhờ tra cứu phạt nguội 0-CAPTCHA; đạt 66,8% target 200K sau 53% thời gian tháng.
 - **Cinema Hub đạt 31,8% target:** 411.350 PVs, trong đó cụm trang rạp phim chiếm 67,6% lưu lượng Hub.
 - **AI Traffic (GEO) đạt 12.550 PVs,** tiến độ 50,2% target 25K; chiếm 0,74% tổng lưu lượng.
 
@@ -67,13 +67,13 @@
 - **Công cụ tương tác:** Bộ đôi Thuế TNCN và Hộ KD đạt 30,5% tỷ lệ tương tác sau go-live. CIC dẫn đầu lượt click OneLink toàn Hub (số 15 ngày).
 - **Hành động tiếp theo:** Trình phê duyệt Quiz CIC (Mục 6.2); xác nhận target tháng 11 và định nghĩa Hub; chuẩn hóa OneLink cho Vay Nhanh, Giá vàng, Chứng khoán.
 
-### 3.3. Vehicle Hub (133.623 PVs - Đạt 133,6% Target 100K [cần xác nhận])
+### 3.3. Vehicle Hub (133.623 PVs - Đạt 66,8% Target 200K)
 - **Động lực tăng trưởng:** Tra cứu phạt nguội 0-CAPTCHA là điểm sáng chính. Ở báo cáo 15 ngày ghi nhận 88.160 PVs, 82.981 lượt tra cứu hoàn tất và 57.635 lượt mở app (69,5%).
 - **Hành động tiếp theo:** Bổ sung cảnh báo thời hạn nộp phạt để thúc đẩy thanh toán in-app.
 
-### 3.4. New User Hub (99.143 PVs - Đạt 33,1% Target 300K [cần xác nhận])
+### 3.4. New User Hub (99.143 PVs - Đạt 33,0% Target 300K)
 - **Minigame & chiến dịch:** Một Mùa Quýt là nội dung chính; Project Unbox (Gói Quà tự chọn) đã hoàn tất tài liệu nghiệp vụ, chờ build thử nghiệm A/B với ngân sách Media 50 triệu VNĐ.
-- **Mục target:** Target 300K trong file khác với mốc khoảng 150K ở báo cáo 15 ngày. Cần thống nhất trước khi công bố.
+- **Mục target:** Chốt target 300K (thay mốc khoảng 150K ở báo cáo 15 ngày); tiến độ 33,0% sau 53% thời gian tháng, cần 14.347 PV/ngày trong 14 ngày còn lại.
 
 ---
 
