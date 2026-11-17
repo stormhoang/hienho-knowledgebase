@@ -298,7 +298,7 @@ momo.vn không tổ chức theo BU mà theo Product/Search Ecosystem. 4 Pillars 
     *   Áp dụng chính sách quản lý AI Crawler (AI Crawler Policy) nâng cao nhằm kiểm soát ngân sách cào dữ liệu của AI Bots, hướng tới tối đa hóa citation rate của MoMo trong Google AI Overviews, ChatGPT và Perplexity.
 4.  **Enforce Tiêu chuẩn Quality Gate trên MoSpark CMS:**
     *   Sử dụng công thức chấm điểm 5-Block (100 điểm) trực tiếp trên CMS MoSpark. Thực thi hard block đối với các lỗi Core Web Vitals và kỹ thuật SEO nghiêm trọng trước khi xuất bản.
-5.  **Duy trì Vòng lặp Kiểm thử SPA (reSearch - Pilot - Action):**
+5.  **Duy trì Vòng lặp Test SPA (reSearch - Pilot - Action):**
     *   Bảo đảm mọi giải pháp và tính năng mới đều đi qua chu trình nghiên cứu chuyên sâu (Feasibility & Demand), thử nghiệm thực tế (Pilot), và sau đó mới scale-up trên diện rộng.
 6.  **Chuẩn bị cho Sự tiến hóa Agent-Led Search:**
     *   Tối ưu hóa momo.vn thành "Trusted Data Source" cho AI Agents thông qua việc tăng cường Brand Authority (xây dựng Entity, nâng cao E-E-A-T), chuẩn hóa Schema markup chuyên sâu, và cấu trúc nội dung giải quyết triệt để bài toán JTBD của người dùng với độ chính xác cao và thông tin luôn cập nhật (freshness).

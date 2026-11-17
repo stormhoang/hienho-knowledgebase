@@ -136,7 +136,7 @@ Tài liệu này xác lập ranh giới trách nhiệm, phạm vi đảm nhiệm
 *   **Điểm bàn giao & Phối hợp:** 
     *   Tiếp nhận luồng bài toán trực tiếp từ Hiến (khi không qua Product Design).
     *   Phối hợp cùng Hoan chuẩn hóa prompt và skill tự động hóa.
-    *   Kiểm thử chức năng và bàn giao cho Hiến ký duyệt Product Sign-off để phát hành Go-Live vận hành nội bộ.
+    *   Test chức năng và bàn giao cho Hiến ký duyệt Product Sign-off để phát hành Go-Live vận hành nội bộ.
     *   **Ngoại lệ Go-Live:** Vì là sản phẩm công cụ nội bộ (không phục vụ người dùng tìm kiếm trên Google), sản phẩm của Trọng được miễn trừ yêu cầu Meta Data, SEO Keywords và Long Content từ Hoan.
 
 ---
@@ -188,7 +188,7 @@ Tài liệu này xác lập ranh giới trách nhiệm, phạm vi đảm nhiệm
 2.  **Trục Điều Phối (Bàn 02) ➔ Trục Sản Xuất (Bàn 01):** 
     *   Hiến & Hoan định hình bài toán sản phẩm và nội dung tại Bàn 02.
     *   Bảo điều phối năng lực kỹ thuật và giải pháp kiến trúc cùng Hoài Anh.
-    *   Các kỹ sư tại Bàn 01 tập trung sản xuất, kiểm thử và bàn giao theo đúng tiêu chuẩn.
+    *   Các kỹ sư tại Bàn 01 tập trung sản xuất, test và bàn giao theo đúng tiêu chuẩn.
 3.  **Quy chuẩn nghiệm thu (3 Quality Gates bắt buộc):**
     *   *Gate 1 (Kỹ thuật & Hiệu năng):* Lộc / Hùng / Hoài Anh duyệt code và Core Web Vitals.
     *   *Gate 2 (Tracking & Dữ liệu):* Hiếu / Thuận kiểm tra OneLink và sự kiện Umami.
@@ -210,4 +210,4 @@ Tài liệu này xác lập ranh giới trách nhiệm, phạm vi đảm nhiệm
     *   **Ngoại lệ duy nhất (Exemption Rule · Trọng Trần):**
         *   Trừ Trọng Trần, toàn bộ sản phẩm của 3 Key Owner trên (Thuận, Hùng, Nhật) bắt buộc phải đáp ứng đủ 4 điều kiện trên.
         *   Các sản phẩm do Trọng phụ trách là hệ thống/công cụ vận hành nội bộ (Internal Tooling & Workflow Engine: GenAI Pipeline, MoSpark CMS Dashboard, Chatbot KB Parser), không phải là trang đích công khai phục vụ Google Search.
-        *   Do đó, sản phẩm của Trọng **được miễn trừ yêu cầu Meta Data, SEO Keywords và Long Content từ Hoan**. Trọng chỉ cần hoàn thành kiểm thử tính năng và nhận Product Sign-off kỹ thuật từ Hiến để chính thức Go-Live vận hành nội bộ.
+        *   Do đó, sản phẩm của Trọng **được miễn trừ yêu cầu Meta Data, SEO Keywords và Long Content từ Hoan**. Trọng chỉ cần hoàn thành test tính năng và nhận Product Sign-off kỹ thuật từ Hiến để chính thức Go-Live vận hành nội bộ.

@@ -157,4 +157,4 @@ Khi bắt tay vào code, Hoan cần đọc và kế thừa các file SSOT sau:
 - [ ] Chạy lệnh đơn giản phân tích 1 file CSV bất kỳ trong `05_HUBS/inventory/` trả ra kết quả trực quan ngay trên terminal trong < 5 giây.
 - [ ] Không còn lỗi lệch nghĩa ngữ nghĩa (Outliers được phát hiện và loại bỏ tự động).
 - [ ] Tính năng `--export` sinh ra file JSON hợp lệ, mở trên `KeywordExplorer.tsx` hiển thị mượt mà, đầy đủ Search Volume, KD, CPC, Intent, Google Trends 5Y Seasonality và danh sách từ khóa phụ.
-- [ ] Code tuân thủ chuẩn ESLint và kiểm thử thành công bằng `./.venv/bin/python`.
+- [ ] Code tuân thủ chuẩn ESLint và test thành công bằng `./.venv/bin/python`.

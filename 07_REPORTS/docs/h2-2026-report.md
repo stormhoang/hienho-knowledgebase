@@ -354,7 +354,7 @@ MoSpark Platform được phát triển các cấu phần thông minh nhằm đ�
 #### 2.2.2. Cell Team Self-Serve (Hỗ Trợ Tự Vận Hành & Thực Thi)
 Đây là các bộ tài nguyên, quy trình và môi trường do Web Platform cung cấp để Cell Teams chủ động triển khai sản phẩm/chiến dịch đúng tiêu chuẩn:
 *   *Platform Guidelines Specification:* **Quy chuẩn kỹ thuật đóng gói** - Cung cấp tài liệu quy chuẩn kỹ thuật đồng bộ (SEO/GEO standards, tracking rules, boilerplate mẫu) giúp các Cell Teams tự tin triển khai sản phẩm đúng hướng.
-*   *Vòng lặp Kiểm thử SPA (reSearch - Pilot - Action):* **Quy trình tối ưu hóa hiệu quả đầu tư sản phẩm** - Cung cấp môi trường sandbox/UAT preview và cố vấn chuyên sâu để Cell Teams chạy thử nghiệm quy mô nhỏ (Pilot) trước khi tiến hành scale-up diện rộng *(Lưu ý: Quy trình này chỉ áp dụng cho các dự án tăng trưởng PLG tích hợp công cụ tương tác/Widget; không áp dụng cho các Cell Teams triển khai Mini Web & Landing Page chiến dịch truyền thông/sự kiện)*.
+*   *Vòng lặp Test SPA (reSearch - Pilot - Action):* **Quy trình tối ưu hóa hiệu quả đầu tư sản phẩm** - Cung cấp môi trường sandbox/UAT preview và cố vấn chuyên sâu để Cell Teams chạy thử nghiệm quy mô nhỏ (Pilot) trước khi tiến hành scale-up diện rộng *(Lưu ý: Quy trình này chỉ áp dụng cho các dự án tăng trưởng PLG tích hợp công cụ tương tác/Widget; không áp dụng cho các Cell Teams triển khai Mini Web & Landing Page chiến dịch truyền thông/sự kiện)*.
 
 ---
 

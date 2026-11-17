@@ -1205,7 +1205,7 @@ graph TD
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giai đoạn 4</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">29/08 - 31/08/2026</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Kiểm thử tốc độ trang (PageSpeed), nạp data thật trên Staging và đối soát mã tracking UTM giữa Web và App</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Test tốc độ trang (PageSpeed), nạp data thật trên Staging và đối soát mã tracking UTM giữa Web và App</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web QA & Operations Team</td>
     </tr>
     <tr>

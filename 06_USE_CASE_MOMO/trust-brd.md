@@ -128,7 +128,7 @@ Xây dựng niềm tin số toàn diện từ trong ra ngoài (Inside out) dựa
 ### 3.2 Giai đoạn 2: Pilot (Thử nghiệm MVP)
 *   **Nhiệm vụ chi tiết:**
     1.  **Xây dựng Landing Page MVP:** Phát triển Landing Page giới thiệu tĩnh tích hợp Form nhập liệu tĩnh trực tiếp tại đường dẫn `/report-scam`.
-    2.  **Kiểm thử luồng submit:** Kết nối submit form về endpoint API tạm thời để kiểm tra tính ổn định của luồng truyền nhận file bằng chứng (ảnh chụp màn hình) và dữ liệu dạng text.
+    2.  **Test luồng submit:** Kết nối submit form về endpoint API tạm thời để kiểm tra tính ổn định của luồng truyền nhận file bằng chứng (ảnh chụp màn hình) và dữ liệu dạng text.
     3.  **Đo lường Pilot:** Chạy thử nghiệm trên nhóm nhỏ người dùng mẫu (~50-100 người) để đo lường tỷ lệ điền hết form (Completion Rate) và thu thập phản hồi về các rào cản trải nghiệm (UX Friction).
 
 ### 3.3 Giai đoạn 3: Action (Vận hành Rộng rãi)

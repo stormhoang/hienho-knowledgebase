@@ -96,7 +96,7 @@ Mỗi trang `/tai-chinh/chung-khoan/[ticker]` được cấu trúc đồng bộ 
 #### Input Tham Số:
 - `ticker`: Mã cổ phiếu (string, ví dụ: "FPT").
 - `monthlyAmount`: Số tiền tích lũy mỗi tháng (number, mặc định: 1.000.000 VND, min: 10.000 VND, bước nhảy: 500.000 VND).
-- `durationYears`: Khoảng thời gian kiểm thử (number, các tùy chọn: 1 năm, 3 năm, 5 năm; mặc định: 3 năm).
+- `durationYears`: Khoảng thời gian test (number, các tùy chọn: 1 năm, 3 năm, 5 năm; mặc định: 3 năm).
 - `investDay`: Ngày cố định tích sản hàng tháng (mặc định: Ngày 5 - ngày nhận lương phổ biến).
 
 #### Công Thức Tính Toán:

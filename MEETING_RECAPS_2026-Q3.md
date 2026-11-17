@@ -396,7 +396,7 @@ Dự án muốn đưa vào danh mục Strategic Project của Web Platform bắt
   * **Kế hoạch cũ:** API dự kiến sẵn sàng ngày 28/08/2026.
   * **Kế hoạch mới đã chốt:**
     * **11/09/2026:** Cell Team hoàn thành phát hành các API dữ liệu phục vụ Web.
-    * **11/09 - 25/09/2026 (2 tuần):** Tích hợp kỹ thuật Frontend - Backend và thực hiện kiểm thử chất lượng (QC/Test).
+    * **11/09 - 25/09/2026 (2 tuần):** Tích hợp kỹ thuật Frontend - Backend và thực hiện test chất lượng (QC/Test).
     * **25/09/2026:** Chính thức bàn giao và Go-live Phase 1.1.
 
 ---

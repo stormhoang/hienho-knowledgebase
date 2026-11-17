@@ -283,7 +283,7 @@ AI Agent (Antigravity) sẽ **luôn đọc file này** trước khi thực hiệ
 ---
 
 #### 3. Định Hướng Hạ Tầng LLM API Nội Bộ (Free Tier)
-- **Tiến Độ:** Kỹ sư Backend và SEO Vendor đang phối hợp đồng bộ và kiểm thử API LLM nội bộ (Mô hình công ty tự huấn luyện + Qwen 3.5).
+- **Tiến Độ:** Kỹ sư Backend và SEO Vendor đang phối hợp đồng bộ và test API LLM nội bộ (Mô hình công ty tự huấn luyện + Qwen 3.5).
 - **Mục Tiêu:** Thay thế dần các API thương mại có tính phí (OpenAI, Gemini) cho các tính năng AI trên Web Platform nhằm tối ưu chi phí vận hành.
 - **Phạm Vi Ứng Dụng:** MoMo AI gợi ý trên Utility Tools, RAG Knowledge Base, Tự động sinh Quiz cho bài viết Blog, cùng các tác vụ tối ưu SEO / GEO Direct Answers quy mô lớn.
 
@@ -300,7 +300,7 @@ AI Agent (Antigravity) sẽ **luôn đọc file này** trước khi thực hiệ
 
 #### 2. Các Sản Phẩm Đang On Demo / On UAT
 - **Trang Chứng Chỉ Quỹ (`/tai-chinh/chung-chi-quy`):** Đã hoàn thiện và đưa lên môi trường Demo (On Demo), tích hợp bảng giá NAV các quỹ mở và simulator tích sản SIP.
-- **Mega Menu Header Financial Hub (`/tai-chinh`):** Đang hoàn tất giai đoạn kiểm thử UX co giãn thông minh sang Top Menu cố định khi điều hướng trang con.
+- **Mega Menu Header Financial Hub (`/tai-chinh`):** Đang hoàn tất giai đoạn test UX co giãn thông minh sang Top Menu cố định khi điều hướng trang con.
 
 #### 3. Năng Lực Nền Tảng & Trải Nghiệm Mới
 - **Tích Hợp MoMo AI Gợi Ý Cho Utility Tools:** Đã tích hợp trợ lý MoMo AI với 2 chế độ (Mode): **Hài Hước** và **Nghiêm Túc**, đưa ra các lời khuyên tài chính cá nhân hóa và dí dỏm/chuyên nghiệp dựa trên kết quả tính toán của người dùng trên từng tiện ích.

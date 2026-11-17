@@ -170,6 +170,7 @@ entries:
 
   - id: performance_data_mart
     path: 07_REPORTS/data/cache/performance.sqlite
+    local_only: true  # gitignored (~120MB), chỉ có trên máy dev; CI không kiểm tra sự tồn tại
     domain: performance
     type: analytical_data_mart
     authority: primary

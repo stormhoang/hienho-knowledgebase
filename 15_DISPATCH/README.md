@@ -29,7 +29,7 @@ Công cụ: `node scripts/agent-queue.mjs` trong repo Hub (`react-web-momo`).
      * Trọng: GenAI Pipeline, MoSpark nodes, PLG Dashboard, Chatbot KB parser.
    - **Điều kiện tiên quyết để Go-Live đầy đủ lên Production:**
      * Trừ Trọng, các sản phẩm công khai của Thuận, Hùng, Nhật để Go-Live bắt buộc phải có phân công phối hợp: Meta Data, SEO Keywords, Long Content từ Hoan, và ký duyệt Product Sign-off từ Hiến.
-     * Sản phẩm của Trọng là công cụ vận hành nội bộ, được miễn trừ yêu cầu Meta Data, SEO Keywords và Long Content từ Hoan; chỉ cần hoàn thành kiểm thử tính năng và nhận Product Sign-off từ Hiến.
+     * Sản phẩm của Trọng là công cụ vận hành nội bộ, được miễn trừ yêu cầu Meta Data, SEO Keywords và Long Content từ Hoan; chỉ cần hoàn thành test tính năng và nhận Product Sign-off từ Hiến.
    - Đóng vai từng người: việc cụ thể, những gì người đó cần Hiến cung cấp, timeline có mốc và ngày YYYY-MM-DD (tính từ hôm nay, bỏ thứ Bảy, Chủ nhật), phụ thuộc, rủi ro.
    - Mốc của người cần đầu ra của người khác phải nằm sau mốc giao của người đó.
    - Lệnh mơ hồ ở điểm ảnh hưởng phân công thì ghi vào `cauHoiChoHien`, vẫn đưa phương án tốt nhất với giả định hợp lý.

@@ -19,7 +19,7 @@ Nền tảng Web duy trì nhịp vận hành ổn định trong tuần 43 với 
 
 ### 2. Cross-team Collaboration
 - **Movies Team:** Thống nhất danh mục phim bom tấn cuối năm, cơ chế voucher rạp từ mini game và kịch bản phát hành game Bò Sữa Bay tại cụm rạp đối tác.
-- **BU Dịch Vụ Tài Chính & Ngân Hàng:** BU Bank thẩm định UI/UX trang chi tiết 35 Ngân hàng trước ngày 30/10; Finhub thống nhất kế hoạch truyền thông, kiểm thử QC trang Chứng Chỉ Quỹ và cung cấp API NAV Quỹ mở.
+- **BU Dịch Vụ Tài Chính & Ngân Hàng:** BU Bank thẩm định UI/UX trang chi tiết 35 Ngân hàng trước ngày 30/10; Finhub thống nhất kế hoạch truyền thông, test QC trang Chứng Chỉ Quỹ và cung cấp API NAV Quỹ mở.
 - **VTTI BU:** Nghiệm thu bộ dữ liệu 41 hãng xe, danh mục gara đa hãng và rà soát luồng trang Nộp Phạt CSGT trực tuyến.
 - **Insurtech Team:** Nghiệm thu nội dung 13 trang bảo hiểm ô tô trên MoSpark CMS và phê duyệt layout Trang chủ Bảo hiểm mới (`/bao-hiem`).
 - **Growth Team:** Phối hợp thiết kế kịch bản A/B test tỷ lệ chuyển đổi tải app trên trang `/tai-app` bám sát mục tiêu 30.000 installs/tháng trong Q4/2026.
@@ -159,7 +159,7 @@ Nền tảng Web duy trì nhịp vận hành ổn định trong tuần 43 với 
 - **Đội ngũ phụ trách:** Insurtech Engineering & CMS Team  
 - **Tác động kinh doanh & Kết quả kỹ thuật:**
   - **Chuyển đổi hoàn tất 13 trang bảo hiểm ô tô sang MoSpark CMS:** Di chuyển 3 trang chủ lực (Trang chủ, Thân vỏ, Bắt buộc TNDS) và 9 trang đối tác (PVI, GIC, MIC, PJICO, Bảo Long, Liberty, PTI, Bảo Việt, DBV), bảo toàn 100% URL SEO, metadata và form báo giá tích hợp bảo vệ chống bot.
-  - **Đóng gói widget mua bảo hiểm dùng chung:** Hỗ trợ nhúng form mua bảo hiểm vào bất kỳ trang nào trên Web (widget ô tô đã live, widget y tế đã kiểm thử xong, widget xe máy đang lên phương án kỹ thuật).
+  - **Đóng gói widget mua bảo hiểm dùng chung:** Hỗ trợ nhúng form mua bảo hiểm vào bất kỳ trang nào trên Web (widget ô tô đã live, widget y tế đã test xong, widget xe máy đang lên phương án kỹ thuật).
   - **Hoàn thiện Trang chủ Bảo hiểm mới (`/bao-hiem`):** Gom 9 nhóm sản phẩm bảo hiểm có cấu trúc rõ ràng, ưu tiên bảo hiểm y tế, xã hội, ô tô và nhúng trực tiếp công cụ tra cứu BHYT.
 - **Phụ thuộc liên phòng ban & Bước tiếp theo:**
   - Insurtech BU duyệt nghiệm thu nội dung 13 trang bảo hiểm ô tô và layout trang chủ Bảo hiểm mới để phát hành chính thức.

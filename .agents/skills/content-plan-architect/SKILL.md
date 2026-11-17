@@ -110,7 +110,7 @@ Mã nguồn JSON-LD hoàn chỉnh sẵn sàng để `Web Dev` copy vào code:
 ./.venv/bin/python scripts/sync_inventory_to_hubs.py
 ```
 
-### 5. Kiểm thử toàn vẹn hệ thống (Audit Test Suite):
+### 5. Test toàn vẹn hệ thống (Audit Test Suite):
 ```bash
 ./.venv/bin/python scripts/validate_seo_pipeline.py
 ```
