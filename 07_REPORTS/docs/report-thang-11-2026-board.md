@@ -122,14 +122,22 @@
 
 ## 6. THEO DÕI ACTION KỲ TRƯỚC & CHỦ ĐỀ THẢO LUẬN BAN GIÁM ĐỐC [R][D]
 
-### 6.1. Đề xuất cần Ban Giám Đốc phê duyệt
+### 6.1. Chủ đề thảo luận và đề xuất cần Ban Giám Đốc quyết định
 
-**Gamification Quiz CIC: Mượn cơ chế minigame đã chứng minh để chuyển đổi người đọc thành người kiểm tra tín dụng** `[D]`
+**Chủ đề 1: Web Platform Direction 2027** `[D]`
 
-- **Vấn đề:** Thời gian lưu trang mảng bài viết tài chính và tra cứu CIC chỉ đạt 45 - 55 giây, tỷ lệ thoát trang trên 70%. Mảng CIC có hơn 90K PVs/tháng nhưng không chuyển đổi tương xứng sang app.
-- **Bối cảnh:** Minigame Một Mùa Quýt và Bò Sữa Bay kéo thời gian trên trang lên 2,5 - 3 phút (số nội bộ, chưa đối chiếu). Nền tảng game nội bộ sẵn có, chi phí bản quyền 0 VNĐ.
-- **Đề xuất:** Dựng game trên nền tảng game nội bộ: trả lời câu hỏi tín dụng nhận thưởng, kêu gọi kiểm tra CIC trên app. BU Financial Services cần thẩm định bộ câu hỏi nghiệp vụ (YMYL) trước khi build.
-- **Tác động:** Mục tiêu kéo dài thời gian trên Financial Hub +170% và thu hút thêm ~5.000 lượt kiểm tra điểm CIC mỗi tháng. Hai con số này chưa có căn cứ, cần kiểm chứng [cần verify].
-- **Phương án thay thế:** Quiz trắc nghiệm tĩnh (nhanh build nhưng tương tác kém hơn) hoặc giữ nguyên bài viết tĩnh (lãng phí trên 90K PVs/tháng mảng CIC).
-- **Đề nghị:** Phê duyệt chủ trương triển khai trước **20/11** để kịp build đón mùa quyết toán thuế cuối năm.
-- **Nếu không quyết định:** Financial Hub tiếp tục bỏ lỡ cơ hội chuyển đổi người dùng web sang sản phẩm tín dụng trên ứng dụng MoMo trong mùa cao điểm cuối năm.
+- **Vấn đề:** 2026 mới có 3 Hub live (Cinema, Vehicle, Financial); mục tiêu 2027 là 5+ Hub. SE Team 9 người chỉ đủ cho dedicated build có điều kiện. Web-attributed MAU 1.029/tháng (T8), Organic 50% lưu lượng.
+- **Đề xuất:** Dedicated Build cho 2-3 Hub ưu tiên (Cinema, Financial, Vehicle); các Hub còn lại tư vấn SEO/GEO (phương án A). Phương án B: Base Case, chỉ tư vấn, khó đạt mục tiêu install và MAU. Phương án C: dedicated build đồng thời nhiều Hub, SE Team quá tải.
+- **Tác động:** Mục tiêu 2027: install 20-30K/tháng, MAU web 5-10K, Organic từ 60%, 5.000+ AI citations, 5+ Hub live.
+- **Đề nghị Ban Giám Đốc:** Thống nhất 4 trụ cột 2027 và tiêu chí Scale/Stop cho từng Hub. BU đủ điều kiện (cam kết KPI, ngân sách, RACI) được cấp Growth Case.
+- **Hạn:** [cần xác nhận]
+- **Nếu không quyết định:** Mặc định Base Case; mục tiêu install và MAU 2027 khó đạt.
+
+**Chủ đề 2: Quiz CIC, cho phép Log in và Legal Policy theo User Flow của Course** `[D]`
+
+- **Vấn đề:** Bảng xếp hạng tháng và lưu tiến độ cần định danh người chơi; concept hiện chưa có bước đăng nhập. Thời gian lưu trang mảng tài chính và tra cứu CIC chỉ 45-55 giây, thoát trang trên 70%.
+- **Đề xuất:** Chơi thử không cần đăng nhập; đăng nhập tài khoản MoMo để lưu tiến độ và xếp hạng (phương án A). Phương án B: chơi ẩn danh, không xếp hạng, không đo được chuyển đổi. Phương án C: bắt buộc đăng nhập trước khi chơi, rào cản vào cao.
+- **Legal Policy đề xuất:** Điều khoản mô phỏng, không phải đề nghị vay; không dùng dữ liệu CIC thật; CIC và Legal duyệt nội dung nhóm nợ và lãi quá hạn trước khi build. User flow của Course chưa có trong bộ tài liệu, cần đối chiếu [cần verify].
+- **Tác động:** Đo được chuyển đổi người chơi sang app. Mục tiêu kéo dài thời gian trên Financial Hub +170% và thu hút ~5.000 lượt kiểm tra CIC mỗi tháng; hai con số này chưa có căn cứ [cần verify].
+- **Đề nghị Ban Giám Đốc:** Phê duyệt phương án A và giao Legal, CIC duyệt policy trước **20/11** để kịp build đón mùa quyết toán thuế cuối năm.
+- **Nếu không quyết định:** Build bị trễ, không có xếp hạng để đón mùa quyết toán; Financial Hub tiếp tục bỏ lỡ cơ hội chuyển người dùng web sang sản phẩm tín dụng trên app.
