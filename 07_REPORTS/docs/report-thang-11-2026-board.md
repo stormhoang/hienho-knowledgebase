@@ -16,7 +16,7 @@
 - **AI Traffic (GEO) đạt 12.550 PVs,** tiến độ 50,2% target 25K; chiếm 0,74% tổng lưu lượng.
 
 ### 1.2. Hợp tác liên phòng ban (Collaboration)
-- **BU Movies:** Pilot Off-Page SEO Cinema (125 triệu VNĐ, đã duyệt) đang thương lượng hợp đồng với vendor đã chọn; kick-off dự kiến trong tháng 11.
+- **BU Movies:** Pilot Off-Page SEO Cinema (125 triệu VNĐ, đã duyệt) đang triển khai với vendor đã chọn; kick-off trong tháng 11.
 - **BU Financial Services & Pháp chế:** Đang thẩm định bộ câu hỏi nghiệp vụ cho Quiz CIC, hạn trả kết luận 20/11.
 - **Media Team:** Ngân sách 50 triệu VNĐ cho Project Unbox (Gói Quà tự chọn người dùng mới) đã duyệt, chờ Web Platform build landing thử nghiệm A/B.
 
