@@ -1,5 +1,4 @@
 # BÁO CÁO KINH DOANH VÀ HIỆU SUẤT NỀN TẢNG WEB - THÁNG 11/2026
-> **Đối tượng:** Ban Giám Đốc / Hội đồng Quản trị
 > **Chu kỳ dữ liệu:** 01/11/2026 - 16/11/2026 (MTD 16 ngày, 53% thời gian tháng) và dự báo pacing 30 ngày
 > **Nguồn dữ liệu:** GA4 Data API (Property 270743103, hostName == www.momo.vn) kéo ngày 17/11/2026 lúc 07:43; AppsFlyer GPD Attribution (cắt 10/11); MoSpark CMS / Umami (lũy kế đến 10/11); `web_performance_tracking.xlsx`.
 > **Phương pháp số liệu:** Số PV trong báo cáo lấy từ lần kéo GA4 ngày 17/11 (PV/Session 1,55, không thấy lặp hit trong kỳ này). Lần kéo trước đó (ngày 16/11, 15 ngày đầu tháng) ghi 3.326.531 hits do lặp thẻ GTM giai đoạn 10-13/11, nên không dùng làm số chính. Web Dev cần xác nhận đã gỡ thẻ trùng.

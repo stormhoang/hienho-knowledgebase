@@ -1,5 +1,4 @@
 # BÁO CÁO KINH DOANH VÀ HIỆU SUẤT NỀN TẢNG WEB - THÁNG 10/2026
-> **Đối tượng:** Ban Giám Đốc / Hội đồng Quản trị
 > **Chu kỳ dữ liệu:** 01/10/2026 - 31/10/2026 (Chốt Full Month 31 ngày)
 > **Nguồn dữ liệu:** GA4 Data API (Property 270743103), BigQuery Data Warehouse, AppsFlyer GPD Attribution Engine, và chuẩn hóa bảng kênh theo `Web_Platform_Thang_10_2026_Pyramid.pptx`.
 > **Nguyên tắc báo cáo:** Báo cáo cung cấp bối cảnh chiến lược và số liệu kinh doanh [R]; Cuộc họp tập trung thảo luận và ra quyết định [D].

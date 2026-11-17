@@ -1,5 +1,4 @@
 # BÁO CÁO KINH DOANH VÀ HIỆU SUẤT NỀN TẢNG WEB - THÁNG 10/2026
-> **Đối tượng:** Ban Giám Đốc / Hội đồng Quản trị
 > **Chu kỳ dữ liệu:** 01/10/2026 - 31/10/2026 (31 ngày, chốt full month)
 > **Nguồn dữ liệu:** GA4 Data API (Property 270743103) cho tổng, kênh và New Users; Excel `web_performance_tracking.xlsx` (pivot Full month) cho Hub và project; AppsFlyer GPD cho Web-to-App.
 > **Lưu ý nguồn:** Một số số Hub đang lệch giữa GA4 và Excel. Xem mục 7.
