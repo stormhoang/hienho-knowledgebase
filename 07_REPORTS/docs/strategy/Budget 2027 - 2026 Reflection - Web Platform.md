@@ -129,7 +129,7 @@ Các bảng Hub dưới đây đọc theo phễu: Impression → PageView → ch
 
 - **Hiệu suất công cụ (tháng 10):** công cụ tương tác đạt CTR 33,7-43,8%, gồm Ước tính khoản vay 43,8%, Tra cứu CIC 38,6% và Tính lương Gross-Net 33,7%. Bảng tĩnh (giá vàng, tỷ giá, lãi suất) đạt 0% CTR.
 - **Tập trung:** ba công cụ trên chiếm 87,4% lượt tương tác công cụ của Hub (7.100 trên 8.120 lượt).
-- **Utility đã triển khai:** Tính lương Gross-Net, Tỷ giá, Giá vàng (từ T9), Chứng chỉ quỹ, Ước tính khoản vay, Tra cứu điểm CIC, Trả góp Ví Trả Sau, Lãi tiết kiệm và SIP, Chuyển đổi ngoại tệ, BHXH và lương hưu.
+- **Utility đã triển khai:** Tính lương Gross-Net, Tỷ giá, Giá vàng (từ T9), Chứng chỉ quỹ, Ước tính khoản vay, Tra cứu điểm CIC, Trả góp Ví Trả Sau, Lãi tiết kiệm, Chuyển đổi ngoại tệ, BHXH và lương hưu.
 - **Tiềm năng:** Tính Thuế TNCN và Thuế Hộ Kinh Doanh (go-live trước 10/11, mùa quyết toán thuế); gamification Điểm Tín Dụng CIC (tháng 11). Game Một Mùa Quýt có 7.097 người tham gia, 3.454 lượt click OneLink, trong đó 1.230 người dùng cài hoặc mở App.
 - **Điểm yếu:** Tiết kiệm (1,5K PageView) và Chứng chỉ quỹ (458 PageView) còn lưu lượng tự nhiên thấp, cần mở rộng danh mục công cụ.
 - **Cách đọc số:** bảng phân nhóm theo URL. Tháng 10 tổng theo báo cáo (273.705 PageView), phần 33.984 PageView chưa phân nhóm nằm trong Tài Chính. Ví Trả Sau tháng 10 theo báo cáo là 58.268 PageView, khác 76.224 PageView trong bảng.
