@@ -58,10 +58,12 @@
 ### 3.1. Cinema Hub (411.350 PVs - Đạt 31,8% Target 1,29M)
 - **Đóng góp quy mô:** Trang rạp phim đóng góp 278.017 PVs (67,6% lưu lượng Hub). Trang phim chi tiết đạt 89.505 PVs (21,8%). Trang chủ và Blog Cinema cộng thêm 42.130 PVs.
 - **Chất lượng chuyển đổi Web-to-App:** End-to-End CVR 12,1% (số 10 ngày từ AppsFlyer), cao nhất các nguồn Web-to-App.
+- **Trang review tương tác và trang diễn viên (GSC 01-15/11 so với 17-31/10):** 4 phim ưu tiên đạt 5.145 click, +671% (Sử Thi Ramayana +2.233%, Ngày Con Còn Mẹ +1.725%, Bò Sữa Bay +478%, Godzilla Trừ Không +398%). Trang /person đạt 399 click, +17,7%. Nguồn báo cáo ghi trang review có traffic gấp 48 lần review thường, chưa kiểm chứng lại.
 - **Hành động tiếp theo:** Kick-off Pilot Off-Page SEO 125 triệu VNĐ trong tháng 11; triển khai cụm trang Lịch chiếu theo tỉnh thành; gắn Chatbot Cinema lên `/cinema`; xử lý sự cố API lịch chiếu bị rớt.
 
 ### 3.2. Financial Hub (176.529 PVs - Đạt 25,2% Target 700K [cần xác nhận])
 - **Lưu lượng tăng so với số 15 ngày cũ (111.401 PVs):** +58,5%. Mức tăng này lớn bất thường, cần kiểm tra định nghĩa Hub trước khi công bố.
+- **Tỷ giá (GSC 01-15/11 so với 17-31/10):** 24 trang tỷ giá đạt 2.192 click (+101%), hiển thị 1.416.535 (+84,8%). Ngoại tệ sang VND: JPY +490%, THB +150%, CNY +91%, KRW +46%. Báo cáo 14 ngày ghi 151.548 PV và 23.130 click OneLink về app, khác mốc và số trong file 16 ngày; cần thống nhất trước khi công bố.
 - **Công cụ tương tác:** Bộ đôi Thuế TNCN và Hộ KD đạt 30,5% tỷ lệ tương tác sau go-live. CIC dẫn đầu lượt click OneLink toàn Hub (số 15 ngày).
 - **Hành động tiếp theo:** Trình phê duyệt Quiz CIC (Mục 6.2); xác nhận target tháng 11 và định nghĩa Hub; chuẩn hóa OneLink cho Vay Nhanh, Giá vàng, Chứng khoán.
 
