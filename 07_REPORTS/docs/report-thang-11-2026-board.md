@@ -62,8 +62,8 @@
 - **Hành động tiếp theo:** Kick-off Pilot Off-Page SEO 125 triệu VNĐ trong tháng 11; triển khai cụm trang Lịch chiếu theo tỉnh thành; gắn Chatbot Cinema lên `/cinema`; xử lý sự cố API lịch chiếu bị rớt.
 
 ### 3.2. Financial Hub (176.529 PVs - Đạt 25,2% Target 700K [cần xác nhận])
-- **Lưu lượng tăng so với số 15 ngày cũ (111.401 PVs):** +58,5%. Mức tăng này lớn bất thường, cần kiểm tra định nghĩa Hub trước khi công bố.
-- **Tỷ giá (GSC 01-15/11 so với 17-31/10):** 24 trang tỷ giá đạt 2.192 click (+101%), hiển thị 1.416.535 (+84,8%). Ngoại tệ sang VND: JPY +490%, THB +150%, CNY +91%, KRW +46%. Báo cáo 14 ngày ghi 151.548 PV và 23.130 click OneLink về app, khác mốc và số trong file 16 ngày; cần thống nhất trước khi công bố.
+- **Số thống nhất: 176.529 PVs (16 ngày, GA4 17/11).** W46 ghi 121.938 theo phạm vi tool khác và báo cáo Cinema & Financial Hub ghi 151.548 trong 14 ngày; hai số này không dùng cho báo cáo tháng. So với số 15 ngày cũ (111.401), tăng 58,5%, cần giải thích khi công bố.
+- **Tỷ giá (GSC 01-15/11 so với 17-31/10):** 24 trang tỷ giá đạt 2.192 click (+101%), hiển thị 1.416.535 (+84,8%). Ngoại tệ sang VND: JPY +490%, THB +150%, CNY +91%, KRW +46%. Báo cáo 14 ngày ghi 151.548 PV và 23.130 click OneLink về app, không dùng cho báo cáo tháng; số PV thống nhất là 176.529 (16 ngày).
 - **Công cụ tương tác:** Bộ đôi Thuế TNCN và Hộ KD đạt 30,5% tỷ lệ tương tác sau go-live. CIC dẫn đầu lượt click OneLink toàn Hub (số 15 ngày).
 - **Hành động tiếp theo:** Trình phê duyệt Quiz CIC (Mục 6.2); xác nhận target tháng 11 và định nghĩa Hub; chuẩn hóa OneLink cho Vay Nhanh, Giá vàng, Chứng khoán.
 
