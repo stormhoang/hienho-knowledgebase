@@ -107,7 +107,7 @@
 | 4 | **Giả lập điểm tín dụng CIC** | 528 | 116 | **22,0%** |
 | 5 | **Trả góp Ví Trả Sau** | 1.500 | 242 | **16,1%** |
 | 6 | **Tính BHXH & Lương Hưu** | 108 | 14 | **13,0%** |
-| 7 | **Máy tính Lãi Tiết Kiệm & SIP** | 1.500 | 182 | **12,5%** |
+| 7 | **Máy tính Lãi Tiết Kiệm** | 1.500 | 182 | **12,5%** |
 | 8 | **Chuyển đổi Ngoại tệ** | 1.900 | 178 | **9,2%** |
 | 9 | **Tính Thuế TNCN & Hộ KD** | - | - | Sắp go-live |
 | 10 | **Nhóm Bảng Biểu Tĩnh** (Giá vàng, Tỷ giá, Lãi suất) | 1.410 | **0** | **0,0%** |

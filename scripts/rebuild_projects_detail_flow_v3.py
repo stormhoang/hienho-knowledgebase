@@ -140,8 +140,11 @@ def make_filter(aliases, pivot_sheet="MTD Pivot"):
     terms = [f"('{pivot_sheet}'!$A$3:$A$400=\"{a}\")" for a in aliases]
     return f"({' + '.join(terms)} > 0)"
 
-def fetch_clicks_from_ga4(ga4_token):
-    print("  [GA4] Đang quét mapping rules và lấy Clicks cho 65 projects...")
+def fetch_clicks_from_ga4(ga4_token, days_elapsed=None):
+    if days_elapsed is None:
+        from datetime import datetime, timedelta
+        days_elapsed = max(1, (datetime.now() - timedelta(days=1)).day)
+    print(f"  [GA4] Đang quét mapping rules và lấy Clicks cho 65 projects (MTD Ngày {days_elapsed})...")
     rules = upr.load_rules()
     inferred = upr.load_inferred_rules(rules)
 
@@ -152,8 +155,8 @@ def fetch_clicks_from_ga4(ga4_token):
         "Aug": ("2026-08-01", "2026-08-31"),
         "Sep": ("2026-09-01", "2026-09-30"),
         "Oct_Full": ("2026-10-01", "2026-10-31"),
-        "Oct_MTD": ("2026-10-01", "2026-10-15"),
-        "Nov_MTD": ("2026-11-01", "2026-11-15")
+        "Oct_MTD": ("2026-10-01", f"2026-10-{days_elapsed:02d}"),
+        "Nov_MTD": ("2026-11-01", f"2026-11-{days_elapsed:02d}")
     }
 
     # Bảng ánh xạ alias sang tên chuẩn
@@ -503,16 +506,23 @@ def build_grid(clicks_mtd, clicks_full):
 
     return grid, project_meta
 
-def run():
+def run(days_elapsed=None):
+    if days_elapsed is None:
+        if len(sys.argv) > 1 and sys.argv[1].isdigit():
+            days_elapsed = int(sys.argv[1])
+        else:
+            from datetime import datetime, timedelta
+            days_elapsed = max(1, (datetime.now() - timedelta(days=1)).day)
+
     print("=" * 75)
-    print("TÁI THIẾT SHEET 'Projects Detail Flow' CHI TIẾT 100% CÁC USE CASES (V3)")
+    print(f"TÁI THIẾT SHEET 'Projects Detail Flow' CHI TIẾT 100% CÁC USE CASES (V3 - MTD {days_elapsed} NGÀY)")
     print("=" * 75)
 
     ga4_token = get_access_token()
     sheets_token = get_sheets_token()
 
     # 1. Kéo clicks
-    clicks_mtd, clicks_full = fetch_clicks_from_ga4(ga4_token)
+    clicks_mtd, clicks_full = fetch_clicks_from_ga4(ga4_token, days_elapsed=days_elapsed)
 
     # 2. Xây dựng grid
     print("\n[2/4] Xây dựng cấu trúc ma trận 466 hàng...")

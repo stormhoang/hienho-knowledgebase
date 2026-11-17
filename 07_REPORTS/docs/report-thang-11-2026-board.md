@@ -1,7 +1,7 @@
 # BÁO CÁO KINH DOANH VÀ HIỆU SUẤT NỀN TẢNG WEB - THÁNG 11/2026
 > **Chu kỳ dữ liệu:** 01/11/2026 - 16/11/2026 (MTD 16 ngày, 53% thời gian tháng) và dự báo pacing 30 ngày
-> **Nguồn dữ liệu:** GA4 Data API (Property 270743103, hostName == www.momo.vn) kéo ngày 17/11/2026 lúc 07:43; AppsFlyer GPD Attribution (cắt 10/11); MoSpark CMS / Umami (lũy kế đến 10/11); `web_performance_tracking.xlsx`.
-> **Phương pháp số liệu:** Số PV trong báo cáo lấy từ lần kéo GA4 ngày 17/11 (PV/Session 1,55, không thấy lặp hit trong kỳ này). Lần kéo trước đó (ngày 16/11, 15 ngày đầu tháng) ghi 3.326.531 hits do lặp thẻ GTM giai đoạn 10-13/11, nên không dùng làm số chính. Web Dev cần xác nhận đã gỡ thẻ trùng.
+> **Nguồn dữ liệu:** File `monthly_11_2026_mtd_16d.json` đọc lúc 17/11/2026 13:06 (chuẩn hóa BigQuery DWH SSOT `WEB_L4_EVENT_PAGE_MASTER` & GA4 Data API Property 270743103); AppsFlyer GPD Attribution (cắt 10/11); MoSpark CMS / Umami (lũy kế đến 10/11); `web_performance_tracking.xlsx`.
+> **Phương pháp số liệu:** Số PV lấy từ JSON 13:06 ngày 17/11 (2.861.286 PV, khử trùng lặp `event_id`, loại domain đối tác napthengay.vn). Số này thay thế 1.696.417 của lần kéo GA4 www.momo.vn trước đó. Chênh lệch chủ yếu do đổi phạm vi đo, không phải tăng trưởng thực; cần Web Dev xác nhận trước khi công bố.
 > **Nguyên tắc báo cáo:** Báo cáo cung cấp bối cảnh chiến lược và số liệu kinh doanh [R]; Cuộc họp tập trung thảo luận và ra quyết định [D].
 
 ---
@@ -9,10 +9,10 @@
 ## 1. ĐIỂM NỔI BẬT & ƯU TIÊN TRỌNG TÂM [R]
 
 ### 1.1. Điểm nổi bật (Highlights)
-- **Lưu lượng MTD 16 ngày đạt 44,3% target:** 1.696.417 Pageviews so với target 3,83M. Nhịp trung bình 106.026 PV/ngày; dự báo kết tháng ~3,18M PV (~83% target). Cần 152.338 PV/ngày trong 14 ngày còn lại (cao hơn nhịp hiện tại 44%).
-- **Vehicle Hub tăng mạnh:** 133.623 PVs, tăng so với 119.552 PVs ở báo cáo 15 ngày, nhờ tra cứu phạt nguội 0-CAPTCHA; đạt 66,8% target 200K sau 53% thời gian tháng.
-- **Cinema Hub đạt 31,8% target:** 411.350 PVs, trong đó cụm trang rạp phim chiếm 67,6% lưu lượng Hub.
-- **AI Traffic (GEO) đạt 12.550 PVs,** tiến độ 50,2% target 25K; chiếm 0,74% tổng lưu lượng.
+- **Lưu lượng MTD 16 ngày đạt 74,7% target:** 2.861.286 Pageviews so với target 3,83M. Nhịp trung bình 178.830 PV/ngày; dự báo kết tháng ~5,36M PV (~140% target). Cần 69.134 PV/ngày trong 14 ngày còn lại, thấp hơn nhịp hiện tại 61%.
+- **Vehicle Hub vượt target:** 225.172 PVs, đạt 112,6% target 200K sau 53% thời gian tháng, nhờ tra cứu phạt nguội 0-CAPTCHA (xem Mục 3.3 về target).
+- **Cinema Hub đạt 53,5% target:** 693.106 PVs, trong đó cụm trang rạp phim chiếm 67,6% lưu lượng Hub.
+- **AI Traffic (GEO) đạt 21.151 PVs,** tiến độ 84,6% target 25K; chiếm 0,74% tổng lưu lượng.
 
 ### 1.2. Hợp tác liên phòng ban (Collaboration)
 - **BU Movies:** Pilot Off-Page SEO Cinema (125 triệu VNĐ, đã duyệt) đang triển khai với vendor đã chọn; kick-off trong tháng 11.
@@ -29,51 +29,52 @@
 ## 2. HIỆU SUẤT NỀN TẢNG & KÊNH LƯU LƯỢNG [R]
 
 ### 2.1. 4 Thẻ Chỉ Số Điều Hành
-- **Quy mô lưu lượng:** **1.696.417 Pageviews** (44,3% Target tháng 3,83M; nhịp 106.026 PV/ngày; cần 152.338 PV/ngày cho 14 ngày còn lại).
-- **Chất lượng tự nhiên (Non-Paid):** **78,49% tỷ trọng** (1.331.532 PVs, tiến độ 41,74% target Non-Paid). Organic Search 775.481 PVs là kênh lớn nhất, đạt 46,16% target.
-- **Kênh trả phí (Paid Ads):** **364.885 PVs** (21,51% tổng), tiến độ 57,09% target Paid; dự báo kết tháng 107% target Paid.
-- **Lưu lượng tìm kiếm AI (GEO):** **12.550 PVs** (0,74% tổng), tiến độ 50,2% target 25K. Phần lớn đến từ ChatGPT.
+- **Quy mô lưu lượng:** **2.861.286 Pageviews** (74,7% Target tháng 3,83M; nhịp 178.830 PV/ngày; cần 69.134 PV/ngày cho 14 ngày còn lại).
+- **Chất lượng tự nhiên (Non-Paid):** **78,51% tỷ trọng** (2.246.310 PVs). Organic Search 1.307.096 PVs (45,68%) là kênh lớn nhất.
+- **Kênh trả phí (Paid Ads):** **614.976 PVs** (21,49% tổng).
+- **Lưu lượng tìm kiếm AI (GEO):** **21.151 PVs** (0,74% tổng), tiến độ 84,6% target 25K.
 
 ### 2.2. Bảng Pageviews Đa Tháng (T7 - T11, nguồn: web_performance_tracking.xlsx)
 
 | Chỉ số | T7/2026 (Full) | T8/2026 (Full) | T9/2026 (Full) | T10/2026 (Full) | T11/2026 (MTD 16d) |
 | :--- | ---: | ---: | ---: | ---: | ---: |
-| **Total Pageviews** | 3.167.821 | 3.465.363 | 3.950.763 | 3.602.023 | 1.696.417 |
-| **Non-Paid** | 2.669.863 | 2.820.824 | 2.753.670 | 3.128.542 | 1.331.532 |
-| **Paid** | 497.958 | 644.539 | 1.197.093 | 473.481 | 364.885 |
+| **Total Pageviews** | 3.167.821 | 3.465.363 | 3.950.763 | 3.602.023 | 2.861.286 |
+| **Non-Paid** | 2.669.863 | 2.820.824 | 2.753.670 | 3.128.542 | 2.246.310 |
+| **Paid** | 497.958 | 644.539 | 1.197.093 | 473.481 | 614.976 |
 | **MoM (Pageviews)** | -7,1% vs T6 | +9,4% vs T7 | +14,0% vs T8 | -8,8% vs T9 | - |
 | **Target** | - | - | 3.509.044 | 3.665.607 | 3.829.155 |
-| **% Target** | - | - | **112,6%** | **98,3%** | **44,3%** |
+| **% Target** | - | - | **112,6%** | **98,3%** | **74,7%** |
 
 ### 2.3. Phân Tích Nguyên Nhân Gốc & Yếu Tố Mùa Vụ
-- **Khoảng cách nằm ở nhịp:** Lưu lượng đạt 44,3% target sau 53% thời gian tháng. Để về đích, nhịp phải tăng từ 106.026 lên 152.338 PV/ngày (+44%).
-- **Kênh tự nhiên đang chậm hơn Paid:** Non-Paid đạt 41,74% tiến độ, Paid đạt 57,09%. Phần thiếu chủ yếu nằm ở Non-Paid. Paid tăng để phục vụ chiến dịch 11.11 và không phải tín hiệu nhu cầu mới.
-- **Referral và nguồn khác chậm nhất:** 121.597 PVs, đạt 24,08% tiến độ target nhóm này. Cần kiểm tra là lỗi tracking hay mất nguồn trước khi kết luận.
+- **Nhịp hiện tại đủ để về đích:** Lưu lượng đạt 74,7% target sau 53% thời gian tháng. Cần 69.134 PV/ngày trong 14 ngày còn lại, thấp hơn nhịp hiện tại 178.830 PV/ngày. Kết luận này phụ thuộc phạm vi đo mới, cần xác nhận trước khi công bố.
+- **Paid tăng mạnh so với lần kéo cũ:** 364.885 → 614.976 PVs. Theo báo cáo, phần tăng gắn với chiến dịch 11.11 và không phải tín hiệu nhu cầu mới [cần xác nhận]. Tiến độ theo target từng nhóm chưa có trong JSON mới, nên chưa so sánh được Non-Paid với Paid.
+- **Referral và nguồn khác:** 206.823 PVs (Referral 130.973 + Khác 75.850). Target nhóm này chưa có trong JSON mới; cần kiểm tra tracking trước khi đánh giá tiến độ.
 - **So sánh cùng kỳ tháng 10 chưa thực hiện:** Báo cáo tháng 10 chỉ có số 15 ngày, không cùng mốc 16 ngày. Mục này sẽ bổ sung khi có số cùng kỳ 16 ngày.
 
 ---
 
 ## 3. HIỆU SUẤT CÁC HUB TRỌNG ĐIỂM [R]
 
-### 3.1. Cinema Hub (411.350 PVs - Đạt 31,8% Target 1,29M)
-- **Đóng góp quy mô:** Trang rạp phim đóng góp 278.017 PVs (67,6% lưu lượng Hub). Trang phim chi tiết đạt 89.505 PVs (21,8%). Trang chủ và Blog Cinema cộng thêm 42.130 PVs.
+### 3.1. Cinema Hub (693.106 PVs - Đạt 53,5% Target 1,29M)
+- **Đóng góp quy mô:** Trang rạp phim đóng góp 468.528 PVs (67,6% lưu lượng Hub). Trang phim chi tiết đạt 150.609 PVs (21,7%). Trang chủ và Blog Cinema cộng thêm 71.108 PVs (10,3%).
 - **Chất lượng chuyển đổi Web-to-App:** End-to-End CVR 12,1% (số 10 ngày từ AppsFlyer), cao nhất các nguồn Web-to-App.
 - **Trang review tương tác và trang diễn viên (GSC 01-15/11 so với 17-31/10):** 4 phim ưu tiên đạt 5.145 click, +671% (Sử Thi Ramayana +2.233%, Ngày Con Còn Mẹ +1.725%, Bò Sữa Bay +478%, Godzilla Trừ Không +398%). Trang /person đạt 399 click, +17,7%. Nguồn báo cáo ghi trang review có traffic gấp 48 lần review thường, chưa kiểm chứng lại.
 - **Hành động tiếp theo:** Kick-off Pilot Off-Page SEO 125 triệu VNĐ trong tháng 11; triển khai cụm trang Lịch chiếu theo tỉnh thành; gắn Chatbot Cinema lên `/cinema`; xử lý sự cố API lịch chiếu bị rớt.
 
-### 3.2. Financial Hub (176.529 PVs - Đạt 25,2% Target 700K [cần xác nhận])
-- **Số thống nhất: 176.529 PVs (16 ngày, GA4 17/11).** W46 ghi 121.938 theo phạm vi tool khác và báo cáo Cinema & Financial Hub ghi 151.548 trong 14 ngày; hai số này không dùng cho báo cáo tháng. So với số 15 ngày cũ (111.401), tăng 58,5%, cần giải thích khi công bố.
-- **Tỷ giá (GSC 01-15/11 so với 17-31/10):** 24 trang tỷ giá đạt 2.192 click (+101%), hiển thị 1.416.535 (+84,8%). Ngoại tệ sang VND: JPY +490%, THB +150%, CNY +91%, KRW +46%. Báo cáo 14 ngày ghi 151.548 PV và 23.130 click OneLink về app, không dùng cho báo cáo tháng; số PV thống nhất là 176.529 (16 ngày).
+### 3.2. Financial Hub (297.482 PVs - Đạt 42,5% Target 700K [cần xác nhận])
+- **Số PV: 297.482 (16 ngày, JSON 17/11 13:06).** Cao hơn 68,5% so với mốc 176.529 đã thống nhất trước đó (GA4 www.momo.vn), nên cần chốt lại trước khi công bố. W46 (121.938) và báo cáo 14 ngày (151.548) dùng phạm vi cũ, không dùng cho báo cáo tháng.
+- **Tỷ giá (GSC 01-15/11 so với 17-31/10):** 24 trang tỷ giá đạt 2.192 click (+101%), hiển thị 1.416.535 (+84,8%). Ngoại tệ sang VND: JPY +490%, THB +150%, CNY +91%, KRW +46%. Báo cáo 14 ngày ghi 151.548 PV và 23.130 click OneLink về app, không dùng cho báo cáo tháng; số PV tháng là 297.482 (16 ngày, xem trên).
 - **Công cụ tương tác:** Bộ đôi Thuế TNCN và Hộ KD đạt 30,5% tỷ lệ tương tác sau go-live. CIC dẫn đầu lượt click OneLink toàn Hub (số 15 ngày).
 - **Hành động tiếp theo:** Trình phê duyệt Quiz CIC (Mục 6.2); xác nhận target tháng 11 và định nghĩa Hub; chuẩn hóa OneLink cho Vay Nhanh, Giá vàng, Chứng khoán.
 
-### 3.3. Vehicle Hub (133.623 PVs - Đạt 66,8% Target 200K)
+### 3.3. Vehicle Hub (225.172 PVs - Đạt 112,6% Target 200K [cần xác nhận])
+- **Target:** JSON 17/11 ghi 100K (tương đương 225,2%); báo cáo dùng 200K theo chốt target T11. Cần thống nhất trước khi công bố.
 - **Động lực tăng trưởng:** Tra cứu phạt nguội 0-CAPTCHA là điểm sáng chính. Ở báo cáo 15 ngày ghi nhận 88.160 PVs, 82.981 lượt tra cứu hoàn tất và 57.635 lượt mở app (69,5%).
 - **Hành động tiếp theo:** Bổ sung cảnh báo thời hạn nộp phạt để thúc đẩy thanh toán in-app.
 
-### 3.4. New User Hub (99.143 PVs - Đạt 33,0% Target 300K)
+### 3.4. New User Hub (167.037 PVs - Đạt 55,7% Target 300K)
 - **Minigame & chiến dịch:** Một Mùa Quýt là nội dung chính; Project Unbox (Gói Quà tự chọn) đã hoàn tất tài liệu nghiệp vụ, chờ build thử nghiệm A/B với ngân sách Media 50 triệu VNĐ.
-- **Mục target:** Chốt target 300K (thay mốc khoảng 150K ở báo cáo 15 ngày); tiến độ 33,0% sau 53% thời gian tháng, cần 14.347 PV/ngày trong 14 ngày còn lại.
+- **Mục target:** Chốt target 300K (thay mốc khoảng 150K ở báo cáo 15 ngày); tiến độ 55,7% sau 53% thời gian tháng, cần 9.497 PV/ngày trong 14 ngày còn lại.
 
 ---
 
@@ -104,20 +105,20 @@
 
 | STT | Tên Công Cụ / Tiện Ích | Lượt hiển thị | Lượt tương tác | Tỷ lệ tương tác |
 | :---: | :--- | :---: | :---: | :---: |
-| 1 | Ước tính khoản vay | 9.800 | 4.300 | **43,8%** |
-| 2 | Tra cứu điểm CIC | 4.800 | 1.800 | **38,6%** |
-| 3 | Tính Lương Gross sang Net | 3.100 | 1.000 | **33,7%** |
+| 1 | Ước tính khoản vay | 9.800 | 4.300 | **43,9%** |
+| 2 | Tra cứu điểm CIC | 4.800 | 1.800 | **37,5%** |
+| 3 | Tính Lương Gross sang Net | 3.100 | 1.000 | **32,3%** |
 | 4 | Giả lập điểm tín dụng CIC | 528 | 116 | **22,0%** |
 | 5 | Trả góp Ví Trả Sau | 1.500 | 242 | **16,1%** |
 | 6 | Tính BHXH & Lương Hưu | 108 | 14 | **13,0%** |
-| 7 | Máy tính Lãi Tiết Kiệm & SIP | 1.500 | 182 | **12,5%** |
-| 8 | Chuyển đổi Ngoại tệ | 1.900 | 178 | **9,2%** |
+| 7 | Máy tính Lãi Tiết Kiệm | 1.500 | 182 | **12,1%** |
+| 8 | Chuyển đổi Ngoại tệ | 1.900 | 178 | **9,4%** |
 | 9 | Tính Thuế TNCN & Hộ KD | 420 | 128 | **30,5%** |
 | 10 | Nhóm Bảng Biểu Tĩnh (Giá vàng, Tỷ giá, Lãi suất) | 1.410 | **0** | **0,0%** |
 
 ### 5.2. Nhận Định Điều Hành
-- **Đối lập rõ giữa bảng tĩnh (0% tương tác) và công cụ tương tác (33,7% - 43,8%):** Người dùng chỉ tương tác khi được cung cấp công cụ tự nhập số liệu.
-- **Cơ sở cho Quiz CIC:** Tỷ lệ 38,6% của Tra cứu CIC và 33,7% của Tính lương cho thấy nhu cầu công cụ tài chính tương tác lớn.
+- **Đối lập rõ giữa bảng tĩnh (0% tương tác) và công cụ tương tác (32,3% - 43,9%):** Người dùng chỉ tương tác khi được cung cấp công cụ tự nhập số liệu.
+- **Cơ sở cho Quiz CIC:** Tỷ lệ 37,5% của Tra cứu CIC và 32,3% của Tính lương cho thấy nhu cầu công cụ tài chính tương tác lớn.
 - **Việc cần làm:** Thay dần bảng biểu tĩnh bằng widget tương tác; cập nhật số công cụ theo lũy kế 16 ngày khi có export mới.
 
 ---

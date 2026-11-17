@@ -307,7 +307,7 @@ SoV = Impression của MoMo trên Google Search chia cho lượt tìm kiếm th�
   - Dẫn người xem lịch chiếu chưa có App sang cài đặt và liên kết ngân hàng.
 - **Financial Hub:** công cụ quản lý tài sản, phễu CIC → VTS → Vay Nhanh, GEO tài chính. Mục tiêu Top 3 cho từ khóa tài chính cá nhân trọng điểm và tăng SoV.
 - **Vehicle Hub:** mở rộng pSEO theo nhu cầu tìm kiếm, hoàn thiện hồ sơ phương tiện, bán chéo bảo hiểm. Mục tiêu 5% SoV trên thị trường 23,2 triệu lượt tìm kiếm.
-- **GEO dùng chung cho ba Hub:** bổ sung Schema, llms.txt và uy tín chủ đề cho toàn bộ Hub. Mục tiêu 5.000 trích dẫn từ AI cuối 2027 (hiện 660).
+- **GEO dùng chung cho ba Hub:** bổ sung Schema, llms.txt và uy tín chủ đề cho toàn bộ Hub. Mục tiêu 100.000 PageView mỗi tháng từ AI vào T12/2027 (T10/2026: 18.164; T11 MTD 1-16/11: 25.340).
 - **Đo lường:** theo dõi Impression (Google Search) và SoV theo từng Hub hằng tháng.
 
 **Trọng tâm 3: New User Engine và Web-to-App (từ thử nghiệm sang tăng trưởng có hệ thống)**
@@ -404,22 +404,21 @@ Mục tiêu 63,49M PageView, chia theo tháng theo kế hoạch ngân sách. Gi�
 
 Cài đặt mới tăng đều từ 20.000 (T1) lên 30.000 (T12), khớp KPI mục tiêu. Tương đương khoảng 0,4-0,5% PageView kế hoạch, cao hơn mức 0,31% của tháng 10/2026.
 
-So với 2026 (ước cả năm: tổng 40,69M, Paid 7,92M, Non-Paid 32,77M), Paid giữ nguyên 7,92M và Non-Paid tăng 22,80M (+70%); tỷ trọng Paid giảm từ 19,5% xuống 12,5%.
+So với 2026 (ước cả năm: tổng 40,69M, Paid 7,92M, Non-Paid 32,77M), mục tiêu Non-Paid tăng 22,80M (+70%), tương đương bình quân khoảng 5,7% mỗi tháng từ T1 đến T12/2027.
 
-Mức tăng dựa trên hai giả định: tháng 12/2026 đạt 4,00M PageView (Phụ lục A) và tỷ trọng Non-Paid tăng từ 80,5% lên 87,5%. Mức tăng chỉ đạt khi có đầu tư và chiến lược rõ ràng từ cả hai bên: Web Platform triển khai nội dung, công cụ và tối ưu trang (mục 3.3); BU đầu tư, phối hợp và cung cấp dữ liệu (mục 3.4 và 3.5).
+Non-Paid được đặt theo tốc độ tăng trưởng, không theo tỷ trọng, vì Paid do BU quyết định và thay đổi theo từng tháng nên không thuộc cam kết của Web Platform. Bảng trên giả định Paid giữ nguyên 7,92M và tháng 12/2026 đạt 4,00M PageView (Phụ lục A). Mức tăng Non-Paid chỉ đạt khi có đầu tư và chiến lược rõ ràng từ cả hai bên: Web Platform triển khai nội dung, công cụ và tối ưu trang (mục 3.3); BU đầu tư, phối hợp và cung cấp dữ liệu (mục 3.4 và 3.5).
 
 | Chỉ số | 2026 | Mục tiêu 2027 | Ghi chú |
 | :--- | :---: | :---: | :--- |
 | Lượt cài đặt mới mỗi tháng | 11.143 (T10) | 20.000 - 30.000 | |
-| Lưu lượng từ AI (PageView) | 70.758 (T1-T10) | Đặt sau khi có số cả năm 2026 | Kênh AI Assistant trên GA4 |
-| Trích dẫn từ AI | 660 (Phạt Nguội, 28 ngày đầu) | 5.000 trở lên | Tổng cả năm 2027 |
+| PageView từ AI mỗi tháng | 18.164 (T10); 25.340 (1-16/11) | 100.000 vào T12/2027 | Kênh AI Assistant trên GA4; ChatGPT chiếm khoảng 97% |
 | Lưu lượng CIC và Tích lũy | 0,63M (T1-T10 thực tế) | 3,2 - 4,0M cả năm | Tương đương khoảng 0,3M PageView mỗi tháng |
 | Cell Teams được hỗ trợ | 16 | 20 | Trong đó tự vận hành qua MoSpark CMS |
 | Strategic Hubs đang hoạt động | 3 (Cinema, Vehicle, Financial) | 5 trở lên | |
 
 **Rủi ro:**
 - **Lưu lượng Non-Paid không có ngân sách:** để đạt 55,57M PageView Non-Paid, ba dự án có ngân sách chỉ đóng góp khoảng 6,1-8,3M PageView (giả định phần tăng này là Non-Paid). Phần còn lại, khoảng 14,5-16,7M PageView Non-Paid, nằm ngoài các dự án được cấp vốn và chưa có kế hoạch riêng. Phần tăng Non-Paid chủ yếu đến từ Organic và người dùng quay lại (Direct), cần chỉ số retention để kiểm chứng. Organic đang tăng 5,7% MoM, nên mức tăng Non-Paid đòi hỏi cải thiện rõ so với xu hướng tháng 10.
-- **Paid giữ nguyên:** Paid đứng ở 7,92M, tỷ trọng giảm từ 19,5% xuống 12,5%. Nếu Paid được tăng để giữ tỷ trọng, mức chi sẽ cao hơn đáng kể.
+- **Paid do BU quyết định:** bảng giả định Paid giữ nguyên 7,92M. Nếu BU chạy thêm Paid, tổng PageView tăng nhưng mục tiêu Non-Paid không đổi.
 - **AI Search:** tiếp tục làm giảm lượt nhấp vào bài viết kiến thức chung. Cần bù bằng công cụ tương tác và dữ liệu thời gian thực.
 
 **Điều kiện từ BU:**

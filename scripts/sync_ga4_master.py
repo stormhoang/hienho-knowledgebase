@@ -277,6 +277,7 @@ def main():
     parser.add_argument("--all-hosts", action="store_true", default=False, help="Không lọc hostName, lấy toàn bộ Property (mặc định: False)")
     parser.add_argument("--push-hubs", action="store_true", default=False, help="Tường minh cho phép đẩy dữ liệu sang Hubs GitHub qua REST API (mặc định: False)")
     parser.add_argument("--clean", action="store_true", default=False, help="Chuẩn hóa dữ liệu sạch (loại trừ vòng lặp GTM 10x-20x và domain ngoại lai, mặc định: False)")
+    parser.add_argument("--override-pv", type=int, default=None, help="Ghi đè/chuẩn hóa tổng PV theo BigQuery SSOT")
     parser.add_argument("--local-only", action="store_true", help="Chỉ cập nhật snapshot và Excel SSOT trong repo hiện tại")
     args = parser.parse_args()
 
@@ -370,7 +371,19 @@ def main():
     total_duration = float(row_p["metricValues"][4]["value"])
 
     clean_scale = 1.0
-    if args.clean:
+    if args.override_pv:
+        print(f"[Override-Mode] Chuẩn hóa tổng PV theo BigQuery SSOT: {args.override_pv:,} PV (từ GA4 thô {total_pv:,} PV)...")
+        clean_scale = args.override_pv / total_pv if total_pv > 0 else 1.0
+        total_pv = args.override_pv
+    elif month_str == "2026-11" and days_elapsed >= 16:
+        # Tự động nạp Anchor BigQuery SSOT và cộng dồn lũy kế cho các ngày tiếp theo
+        from scripts.lib.baseline_anchor import compute_incremental_mtd
+        anchored_data = compute_incremental_mtd(month_str, days_elapsed, token, run_ga4_report)
+        if anchored_data:
+            clean_scale = anchored_data["total_pv"] / total_pv if total_pv > 0 else 1.0
+            total_pv = anchored_data["total_pv"]
+            print(f"[Anchor-Mode] Áp dụng mốc BigQuery SSOT MTD {days_elapsed}d: {total_pv:,} PV (Anchor 2.86M + Phát sinh {anchored_data['incremental_pv']:,} PV)")
+    elif args.clean:
         print("[Clean-Mode] Kích hoạt chuẩn hóa dữ liệu sạch (Khử vòng lặp GTM 10x-20x & Domain ngoại lai)...")
         daily_query = {
             "dateRanges": date_ranges,
@@ -382,16 +395,24 @@ def main():
             "orderBys": [{"dimension": {"dimensionName": "date"}}]
         }
         res_daily = run_ga4_report(token, daily_query)
+        daily_rows = []
+        for r in res_daily.get("rows", []):
+            daily_rows.append((
+                r["dimensionValues"][0]["value"],
+                int(r["metricValues"][0]["value"]),
+                int(r["metricValues"][1]["value"]),
+            ))
+        clean_pv_sum = sum(pv for _, pv, s in daily_rows if s > 0 and pv / s <= 2.0)
+        clean_sess_sum = sum(s for _, pv, s in daily_rows if s > 0 and pv / s <= 2.0)
+        normal_ratio = clean_pv_sum / clean_sess_sum if clean_sess_sum > 0 else 1.50
+        print(f"[Clean-Mode] Tỷ lệ PV/session chuẩn đo từ ngày sạch: {normal_ratio:.4f}")
         clean_total_pv = 0
         raw_total_pv = total_pv
-        for r in res_daily.get("rows", []):
-            d_str = r["dimensionValues"][0]["value"]
-            d_pv = int(r["metricValues"][0]["value"])
-            d_sess = int(r["metricValues"][1]["value"])
+        for d_str, d_pv, d_sess in daily_rows:
             ratio = d_pv / d_sess if d_sess > 0 else 1.0
-            if ratio > 2.0 or d_str in ["20261110", "20261111"]:
-                clean_d_pv = round(d_sess * 1.50)
-                print(f"  - Chuẩn hóa ngày {d_str}: {d_pv:,} PV (tỷ lệ {ratio:.2f}) -> {clean_d_pv:,} PV sạch (tỷ lệ 1.50)")
+            if ratio > 2.0:
+                clean_d_pv = round(d_sess * normal_ratio)
+                print(f"  - Chuẩn hóa ngày {d_str}: {d_pv:,} PV (tỷ lệ {ratio:.2f}) -> {clean_d_pv:,} PV sạch (tỷ lệ {normal_ratio:.2f})")
             else:
                 clean_d_pv = d_pv
             clean_total_pv += clean_d_pv
@@ -501,7 +522,7 @@ def main():
             others_pv += pv
             non_paid_pv += pv
 
-    if args.clean:
+    if args.clean or args.override_pv:
         organic_pv = round(organic_pv * clean_scale)
         paid_pv = round(paid_pv * clean_scale)
         direct_pv = round(direct_pv * clean_scale)
@@ -580,7 +601,7 @@ def main():
         else:
             hubs_pv["others"] += pv
 
-    if args.clean:
+    if args.clean or args.override_pv:
         for h in hubs_pv:
             hubs_pv[h] = round(hubs_pv[h] * clean_scale)
         for s in cinema_sub:
@@ -804,7 +825,7 @@ def main():
         # Đồng bộ bảng Click to app by Project trong Projects Detail Flow
         try:
             from scripts.sync_projects_detail_flow_clicks import sync_google_sheet_clicks
-            sync_google_sheet_clicks()
+            sync_google_sheet_clicks(days_elapsed=days_elapsed)
         except Exception as e:
             print(f"[Sheets-API] Lưu ý đồng bộ Click to app Projects Detail Flow: {e}")
     except Exception as e:

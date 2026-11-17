@@ -24,10 +24,11 @@ sys.path.insert(0, str(BASE_DIR))
 from scripts.sync_ga4_to_hubs import get_access_token, PROPERTY_ID, run_ga4_report
 from scripts.sync_to_google_sheet_api import get_sheets_token, TARGET_SHEET_ID
 
-def sync_all_mtd(days_elapsed=2, strict_momo=True, clean_incident=False):
+def sync_all_mtd(days_elapsed=2, strict_momo=True, clean_incident=False, override_m11_pv=None):
     print("=" * 75)
     mode_str = " (hostName == www.momo.vn)" if strict_momo else ""
-    print(f"KHỞI CHẠY ĐỒNG BỘ MTD {days_elapsed} NGÀY CHO TOÀN BỘ CÁC THÁNG (T5 -> T11){mode_str}")
+    ov_str = f" [Override T11 = {override_m11_pv:,} PV (BigQuery SSOT)]" if override_m11_pv else ""
+    print(f"KHỞI CHẠY ĐỒNG BỘ MTD {days_elapsed} NGÀY CHO TOÀN BỘ CÁC THÁNG (T5 -> T11){mode_str}{ov_str}")
     print(f"Spreadsheet ID: {TARGET_SHEET_ID}")
     print("=" * 75)
 
@@ -134,8 +135,39 @@ def sync_all_mtd(days_elapsed=2, strict_momo=True, clean_incident=False):
             oth_pv = round(oth_pv * scale)
             ai_pv = round(ai_pv * scale)
 
+        if m_str == "2026-11":
+            if override_m11_pv and override_m11_pv > 0:
+                scale = override_m11_pv / tot_pv if tot_pv > 0 else 1.0
+                print(f"  [Override-Mode] {m_str}: Chuẩn hóa tổng PV theo BigQuery SSOT {tot_pv:,} -> {override_m11_pv:,} (scale: {scale:.6f})")
+                tot_pv = override_m11_pv
+                org_pv = round(org_pv * scale)
+                paid_pv = round(paid_pv * scale)
+                dir_pv = round(dir_pv * scale)
+                ref_pv = round(ref_pv * scale)
+                oth_pv = round(oth_pv * scale)
+                ai_pv = round(ai_pv * scale)
+            elif days_elapsed >= 16:
+                # Tự động nạp Anchor BigQuery SSOT và cộng dồn lũy kế cho các ngày tiếp theo
+                from scripts.lib.baseline_anchor import compute_incremental_mtd
+                anchored_data = compute_incremental_mtd(m_str, days_elapsed, ga4_token, run_ga4_report)
+                if anchored_data:
+                    tot_pv = anchored_data["total_pv"]
+                    ch_d = anchored_data["channels"]
+                    org_pv = ch_d["organic"]
+                    paid_pv = ch_d["paid"]
+                    dir_pv = ch_d["direct"]
+                    ref_pv = ch_d["referral"]
+                    oth_pv = ch_d["others"]
+                    ai_pv = ch_d["ai_traffic"]
+                    merged_ref_pv = ch_d["merged_referral"]
+                    non_paid_pv = ch_d["non_paid"]
+
         merged_ref_pv = max(0, ref_pv + oth_pv - ai_pv)
         non_paid_pv = org_pv + dir_pv + ai_pv + merged_ref_pv
+        if m_str == "2026-11" and (override_m11_pv or days_elapsed >= 16):
+            diff = tot_pv - (paid_pv + non_paid_pv)
+            non_paid_pv += diff
+            merged_ref_pv += diff
 
         month_metrics[m_str] = {
             "total_pv": tot_pv,
@@ -533,5 +565,6 @@ def sync_all_mtd(days_elapsed=2, strict_momo=True, clean_incident=False):
     print("=" * 75)
 
 if __name__ == "__main__":
-    d = int(sys.argv[1]) if len(sys.argv) > 1 else 10
-    sync_all_mtd(days_elapsed=d)
+    d = int(sys.argv[1]) if len(sys.argv) > 1 and sys.argv[1].isdigit() else 16
+    ov = int(sys.argv[2]) if len(sys.argv) > 2 and sys.argv[2].isdigit() else None
+    sync_all_mtd(days_elapsed=d, override_m11_pv=ov)
