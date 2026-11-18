@@ -208,6 +208,52 @@ flowchart TD
 
 * **Phân định ranh giới đo lường (Measurement & Ownership Boundary):** Phễu chuyển đổi Web-to-App kết thúc tại **Tầng 5** khi đơn hàng và doanh thu GMV được ghi nhận thành công trên App MoMo. Toàn bộ các chỉ số về tỷ lệ quay lại mua vé sau đó (In-App MAU Retention 17% - 47%) thuộc hệ thống đo lường hành vi người dùng trong ứng dụng do **BU Movies** độc lập quản trị, Web Platform không đo lường và không nhận sở hữu chỉ số này để tránh gây hiểu nhầm về phạm vi dữ liệu.
 
+##### Bảng Full Funnel Hàng Tháng T1-T10/2026 (GA4 + AppsFlyer Proxy + BU Movies)
+
+Dữ liệu tổng hợp 3 nguồn: **GA4** (event `engage_product_funnel` với `funnel_step`, `funnel_start`, `funnel_complete`, `click_to_app`/`click_outbound_link` lọc `pagePath` chứa `/cinema`), **AppsFlyer proxy** (click link `momoapp.onelink.me` trên `/cinema`), và **BU Movies in-app dashboard** (W2A MAU/MEU/GMV thực thu). File SSOT: `07_REPORTS/data/analytics/cinema_product_funnel_jan_oct_2026.json`, `cinema_app_open_clicks_jan_oct_2026.json`, `05_HUBS/cinema/data/movies_app_w2a_performance.json`.
+
+**Bảng A - Phễu Web (GA4, unique users):**
+
+| Tháng | Pageviews | Users | Sessions | 1. Funnel Start | 2. Seat | 3. Popcorn & Drink | 4. Book Ticket (+QR) | Complete (Web txn) | CR Start → Complete |
+| :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| T1 | 582.291 | 199.461 | 325.631 | 36.024 | 9.903 | 8.160 | 6.007 | 6.006 | 16.7% |
+| T2 | 1.045.263 | 301.602 | 507.104 | 89.652 | 23.201 | 19.204 | 15.332 | 15.249 | 17.0% |
+| T3 | 760.095 | 248.209 | 430.011 | 53.475 | 16.152 | 13.518 | 10.389 | 10.365 | 19.4% |
+| T4 | 852.833 | 341.479 | 524.298 | 48.661 | 13.755 | 11.750 | 8.451 | 8.328 | 17.1% |
+| T5 | 975.269 | 439.354 | 627.127 | 58.683 | 13.590 | 11.299 | 8.077 | 7.996 | 13.6% |
+| T6 | 869.372 | 296.562 | 474.187 | 52.843 | 14.497 | 12.066 | 8.767 | 8.590 | 16.3% |
+| T7 | 808.140 | 331.927 | 493.143 | 56.944 | 13.523 | 10.852 | 7.971 | 7.729 | 13.6% |
+| T8 | 821.166 | 287.392 | 470.988 | 56.988 | 15.828 | 12.867 | 9.700 | 9.441 | 16.6% |
+| T9 | 1.210.595 | 534.011 | 779.655 | 68.039 | 20.434 | 17.074 | 13.171 | 13.164 | 19.4% |
+| T10 | 1.097.332 | 388.524 | 640.160 | 85.117 | 29.439 | 24.280 | 19.147 | 19.144 | **22.5%** |
+
+**Bảng B - Cầu nối Web-to-App và chuyển đổi In-App (AppsFlyer proxy + BU Movies):**
+
+| Tháng | OneLink Click Users (proxy) | W2A MAU | W2A MEU* | Transactions | Tickets | GMV Thực Thu (tỷ đ) |
+| :--- | ---: | ---: | ---: | ---: | ---: | ---: |
+| T1 | 0** | 5.362 | 20.258 | 5.889 | 12.643 | 1.21 |
+| T2 | 0** | 10.922 | 27.595 | 12.432 | 28.379 | 2.55 |
+| T3 | 0** | 8.728 | 23.839 | 9.881 | 20.600 | 2.03 |
+| T4 | 145.635** | 7.300 | 20.020 | 8.221 | 18.730 | 1.69 |
+| T5 | 2.516 | 5.141 | 15.823 | 5.777 | 12.561 | 1.18 |
+| T6 | 4.593 | 5.809 | 16.046 | 9.055 | 19.444 | 1.86 |
+| T7 | 5.259 | 2.263 | 7.806 | 2.425 | 5.211 | 0.50 |
+| T8 | 5.354 | 3.757 | 12.962 | 4.016 | 8.754 | 0.82 |
+| T9 | 5.828 | 8.927 | 26.698 | 9.807 | 20.983 | 2.01 |
+| T10 | 7.889 | 11.457 | 30.470 | 12.547 | 26.789 | 2.57 |
+| **Lũy kế 10T** | - | **69.666** | **201.517** | **80.050** | **174.094** | **14.28** |
+
+\* W2A MEU trong bảng này là **số lượt tương tác in-app** do BU Movies dashboard ghi nhận (hệ số ~2.5-3.8 lượt/MAU), không phải unique engaged users và không phải số lần mở app.
+
+\*\* Cảnh báo chất lượng dữ liệu tracking: (a) T1-T3 = 0 do param OneLink trên `click_to_app`/`click_outbound_link` của `/cinema` chưa được bắn, cần xác nhận với Web Platform; (b) T4 spike 145.635 users OneLink click là bất thường (nghi chiến dịch `/cinema/trai-buon-nguoi-24991/tang-3000-ve` hoặc tag bắn trùng), không dùng T4 làm baseline; (c) click OneLink chỉ là proxy cho "mở app", số mở app/install thật phải lấy từ AppsFlyer.
+
+**Nhận định nhanh từ funnel T1-T10:**
+
+* **Điểm nghẽn cố định ở bước 1 → 2 (Xem suất chiếu → Chọn ghế):** CR chỉ 23-30% quanh năm, T5 và T7 thấp nhất (~23%). Một khi user vào được màn chọn ghế, tỷ lệ đi đến Book Ticket ~72-79% và Complete ~97-100%, tức checkout web gần như không rò rỉ.
+* **CR Start → Complete cải thiện rõ ở T10:** đạt 22.5%, cao nhất 10 tháng, tương ứng Complete users 19.144 và W2A MAU in-app 11.457.
+* **T10 là tháng đỉnh:** Complete users +45% MoM so với T9 trong khi paid traffic giảm mạnh (349K PVs T9 chủ yếu organic/paid campaign, T10 paid chỉ ~27K), cho thấy chất lượng traffic và intent cải thiện.
+* **Bài toán tăng trưởng nằm ở tầng Consideration, không phải checkout:** tối ưu Show Time → Seat (relevance suất chiếu, rạp gần, giá vé, CTA nổi bật) sẽ có đòn bẩy lớn hơn sửa lỗi thanh toán.
+
 ##### 3. Phân Tích Hai Nút Thắt Quan Trọng Nhất Của Phễu Web-to-App
 
 * **Nút thắt 1: Rò rỉ lớn nhất ở bước chuyển Web sang App (Tầng 3 sang Tầng 4)**
