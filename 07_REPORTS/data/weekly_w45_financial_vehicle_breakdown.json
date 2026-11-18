@@ -1,0 +1,29 @@
+{
+  "source": "GA4 Data API, property 270743103, screenPageViews by landingPage",
+  "queried_on": "2026-11-10",
+  "periods": ["2026-10-01/2026-10-09", "2026-11-01/2026-11-09"],
+  "landing_page_limit_per_period": 10000,
+  "financial": {
+    "Ví Trả Sau": [24173, 23848],
+    "Vay Nhanh": [19767, 14761],
+    "Điểm Tín Dụng": [23833, 5068],
+    "Trung Tâm Tài Chính": [3162, 10490],
+    "Thanh toán hóa đơn và chuyển tiền": [16804, 21686],
+    "Dịch vụ khác": [8219, 6611],
+    "total": [95958, 82464]
+  },
+  "vehicle": {
+    "Phạt Nguội": [5562, 12213],
+    "Bảo Hiểm Ô Tô": [5059, 8199],
+    "Tiện ích giao thông, giá xăng và trạm sạc": [2044, 6372],
+    "Bảo Hiểm Xe Máy": [1246, 2328],
+    "Phí Không Dừng": [310, 157],
+    "Dịch vụ khác": [31, 32],
+    "total": [14252, 29301]
+  },
+  "grouping_notes": {
+    "financial_payment": "Nước, Điện, Internet, Billpay, P2P",
+    "vehicle_utilities": "Tiện Ích Giao Thông, Giá xăng, Cây xăng, Trạm sạc",
+    "other": "Remaining landing pages assigned to the Hub by the same classifier used for the November MTD snapshot"
+  }
+}

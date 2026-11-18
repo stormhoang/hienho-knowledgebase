@@ -59,19 +59,19 @@ Thiếu 1 trong các điều kiện sau - dừng lại không chuyển giai đo�
   </thead>
   <tbody>
     <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PC1</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">File Business Context (12 fields) phải được điền đầy đủ và duyệt</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bắt buộc trước Gate 1</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cell Team PO</td>
     </tr>
     <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PC2</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PO Cell Team ký cam kết dành tối thiểu 2 giờ/tuần duyệt content</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bắt buộc trước Gate 1</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cell Team PO</td>
     </tr>
     <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PC3</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ngân sách chạy Off-page/Vendor phải được phê duyệt</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bắt buộc trước Gate 2</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cell Team Head</td>
@@ -96,7 +96,7 @@ Thiếu 1 trong các điều kiện sau - dừng lại không chuyển giai đo�
   <tbody>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Functional</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cell Team cần biết Search Volume, Market Cap và dự phóng W2A của Use Case.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cell Team cần biết Search Volume, Market Cap và dự báo W2A của Use Case.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Emotional</td>

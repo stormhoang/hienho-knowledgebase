@@ -1,23 +1,27 @@
-# KẾ HOẠCH NỘI DUNG CHUẨN (CONTENT PLAN V2 - SHIELDED) - USE CASE: LICH PHIM
+# KẾ HOẠCH NỘI DUNG CHUẨN (CONTENT PLAN V2 - SHIELDED) - THEME: LỊCH CHIẾU PHIM RẠP
 
-- **Use Case:** Lich Phim
-- **Phân Khối Ngành:** cinema
+- **Theme:** Lịch Chiếu Phim Rạp
+- **Hub:** cinema
 - **URL Pillar Hub:** `/lich-phim/`
-- **Tổng từ khóa thô ban đầu:** 2,544 từ khóa
-- **Từ khóa nhiễu bị loại bỏ:** 0 từ khóa
-- **Từ khóa trùng Intent được gom cụm (Shielded):** 89 từ khóa
-- **Số lượng URLs phân bổ:** 3 URLs (1 Pillar Hub + 2 Cluster Pages)
+- **Tổng từ khóa thô ban đầu:** 2,559 từ khóa
+- **Từ khóa nhiễu bị loại bỏ:** 1 từ khóa
+- **Từ khóa nhường cho theme khác cùng Hub (chống trùng giữa các plan):** 100 từ khóa
+- **Từ khóa nhận từ CSV theme khác cùng Hub:** 91 từ khóa
+- **Từ khóa trùng Intent được gom cụm (Shielded):** 104 từ khóa
+- **Số lượng URLs phân bổ:** 5 URLs (1 Pillar Hub + 4 Cluster Pages)
 - **Quy tắc bảo vệ:** Mỗi URL giải quyết duy nhất 1 Intent độc lập. Các từ khóa cùng Intent đã được gom thành Secondary Synonyms (Zero Keyword Cannibalization).
 
 ---
 
 ## 1. BẢNG KẾ HOẠCH BÀI VIẾT CHI TIẾT (ACTIONABLE CONTENT PLAN)
 
-| STT | URL Slug | Tiêu Đề Bài Viết / Trang Đích | Primary Keyword | Secondary Synonyms (Đã Gom Chống Ăn Thịt) | Search Volume | Search Intent | Định Dạng Nội Dung | Phễu | Ưu Tiên | Điểm Chạm Web-to-App (CTA Hook) |
+| STT | URL Slug | Tiêu Đề Bài Viết / Trang Đích | Primary Keyword | Secondary Synonyms (Đã Gom Chống Ăn Thịt) | Search Volume | Search Intent | Định Dạng Nội Dung | Phễu | Đợt Sản Xuất | Điểm Chạm Web-to-App (CTA Hook) |
 | :---: | :--- | :--- | :--- | :--- | :---: | :---: | :--- | :---: | :---: | :--- |
-| 1 | `/lich-phim/` | Cẩm Nang & Bảng Tra Cứu Lịch Chiếu Phim Rạp Toàn Diện | `lịch chiếu phim` | lịch chiếu phim cgv, cgv lịch chiếu, lịch chiếu phim lotte | 74,000 | `Informational` | Pillar Hub Page + Interactive Widget | `TOFU` | `P0` | Tra Cứu Lịch Phim & Đặt Vé Tức Thì -> Deeplink: momo://cinema-booking -> Event: web_cinema_booking_btn_click |
-| 2 | `/lich-phim/lich-phim-theo-rap/` | Lịch Phim Theo Rạp CGV / Lotte / BHD Lịch Chiếu Phim Rạp: Hướng Dẫn & Tra Cứu Chi Tiết | `lich chiếu cgv` | rạp cgv, phim cgv, giá vé cgv | 116,710 | `Informational` | Educational Guide & FAQ | `TOFU` | `P1` | Tra Cứu Lịch Phim & Đặt Vé Tức Thì -> Deeplink: momo://cinema-booking -> Event: web_cinema_booking_btn_click |
-| 3 | `/lich-phim/cam-nang/` | Cẩm nang & Hỏi đáp Lịch Chiếu Phim Rạp: Hướng Dẫn & Tra Cứu Chi Tiết | `lịch phim` | chieuphimquocgia, lịch phim vincom, lịch phim beta | 27,820 | `Informational` | Educational Guide & FAQ | `TOFU` | `P0` | Tra Cứu Lịch Phim & Đặt Vé Tức Thì -> Deeplink: momo://cinema-booking -> Event: web_cinema_booking_btn_click |
+| 1 | `/lich-phim/` | Cẩm Nang & Bảng Tra Cứu Lịch Chiếu Phim Rạp Toàn Diện | `lịch chiếu phim` | lịch chiếu phim tuần này, lịch chiếu phim chủ nhật tuần này, lịch chiếu phim mới | 74,240 | `Informational` | Pillar Hub Page + Interactive Widget | `TOFU` | `Đợt 1` | Tra Cứu Lịch Phim & Đặt Vé Tức Thì -> Deeplink: momo://cinema-booking -> Event: web_cinema_booking_btn_click |
+| 2 | `/lich-phim/lich-phim-theo-cum-rap/` | Lịch Phim Theo Cụm Rạp Toàn Quốc Lịch Chiếu Phim Rạp: Hướng Dẫn & Tra Cứu Chi Tiết | `lịch chiếu phim cgv` | cgv lịch chiếu, lịch chiếu phim lotte, lịch chiếu phim galaxy | 396,730 | `Informational` | Educational Guide & FAQ | `TOFU` | `Đợt 2` | Tra Cứu Lịch Phim & Đặt Vé Tức Thì -> Deeplink: momo://cinema-booking -> Event: web_cinema_booking_btn_click |
+| 3 | `/lich-phim/thong-tin-suat-chieu-lich-rap/` | Thông Tin Suất Chiếu & Lịch Rạp Lịch Chiếu Phim Rạp: Hướng Dẫn & Tra Cứu Chi Tiết | `lịch phim` | lịch chiếu, lịch chiếu phim long an, lịch chiếu phim venus hải dương | 39,320 | `Informational` | Educational Guide & FAQ | `TOFU` | `Đợt 1` | Tra Cứu Lịch Phim & Đặt Vé Tức Thì -> Deeplink: momo://cinema-booking -> Event: web_cinema_booking_btn_click |
+| 4 | `/lich-phim/lich-chieu-hom-nay-cuoi-tuan/` | Lịch Chiếu Phim Hôm Nay & Cuối Tuần Lịch Chiếu Phim Rạp: Hướng Dẫn & Tra Cứu Chi Tiết | `phim chiếu rap hôm nay` | lịch chiếu phim hôm nay, phim rạp hôm nay, lịch chiếu phim rạp quốc gia hôm nay | 39,030 | `Informational` | Educational Guide & FAQ | `TOFU` | `Đợt 1` | Tra Cứu Lịch Phim & Đặt Vé Tức Thì -> Deeplink: momo://cinema-booking -> Event: web_cinema_booking_btn_click |
+| 5 | `/lich-phim/cam-nang/` | Cẩm nang & Hỏi đáp Lịch Chiếu Phim Rạp: Hướng Dẫn & Tra Cứu Chi Tiết | `lam sơn square` | moveek com, em và trịnh moveek, giá vé movie red | 1,000 | `Informational` | Educational Guide & FAQ | `TOFU` | `Đợt 2` | Tra Cứu Lịch Phim & Đặt Vé Tức Thì -> Deeplink: momo://cinema-booking -> Event: web_cinema_booking_btn_click |
 
 ---
 
@@ -51,48 +55,80 @@ Dưới đây là cấu trúc dàn ý chuẩn E-E-A-T và chỉ tiêu dung lư�
 - **URL Slug:** `/lich-phim/`
 - **Chỉ tiêu độ dài:** `2,500 - 3,500 từ` (Cấp bậc: `Master Hub Pillar`)
 - **Primary Keyword:** `lịch chiếu phim`
-- **Secondary Synonyms:** lịch chiếu phim cgv, cgv lịch chiếu, lịch chiếu phim lotte, lịch chiếu phim galaxy
+- **Secondary Synonyms:** lịch chiếu phim tuần này, lịch chiếu phim chủ nhật tuần này, lịch chiếu phim mới, lịch phim tuần này
 - **Dàn ý H2/H3 bắt buộc (SEO Entity Checklist):**
    - ## H2 1: Tổng quan & Khái niệm cốt lõi về lịch chiếu phim
    - ## H2 2: Chi tiết các tiêu chí & Bảng tổng hợp số liệu mới nhất
    - ## H2 3: 5 lưu ý quan trọng để đảm bảo an toàn và tối đa hóa quyền lợi
    - ## H2 4: Những sai lầm thường gặp và cách phòng tránh
    - ## H2 5: Câu hỏi thường gặp (FAQs) giải đáp thắc mắc về lịch chiếu phim
-   - ### H3 5.1: Lịch chiếu phim cgv?
-   - ### H3 5.2: Cgv lịch chiếu?
-   - ### H3 5.3: Lịch chiếu phim lotte?
+   - ### H3 5.1: Lịch chiếu phim tuần này?
+   - ### H3 5.2: Lịch chiếu phim chủ nhật tuần này?
+   - ### H3 5.3: Lịch chiếu phim mới?
    - ## H2 6: Giải pháp tối ưu quyền lợi và thao tác nhanh qua Ứng dụng MoMo
 
-### Bài 2: `Lịch Phim Theo Rạp CGV / Lotte / BHD Lịch Chiếu Phim Rạp: Hướng Dẫn & Tra Cứu Chi Tiết`
-- **URL Slug:** `/lich-phim/lich-phim-theo-rap/`
+### Bài 2: `Lịch Phim Theo Cụm Rạp Toàn Quốc Lịch Chiếu Phim Rạp: Hướng Dẫn & Tra Cứu Chi Tiết`
+- **URL Slug:** `/lich-phim/lich-phim-theo-cum-rap/`
 - **Chỉ tiêu độ dài:** `2,500 - 3,500 từ` (Cấp bậc: `Master Hub Pillar`)
-- **Primary Keyword:** `lich chiếu cgv`
-- **Secondary Synonyms:** rạp cgv, phim cgv, giá vé cgv, rạp lotte
+- **Primary Keyword:** `lịch chiếu phim cgv`
+- **Secondary Synonyms:** cgv lịch chiếu, lịch chiếu phim lotte, lịch chiếu phim galaxy, lịch chiếu phim rạp quốc gia
 - **Dàn ý H2/H3 bắt buộc (SEO Entity Checklist):**
-   - ## H2 1: Tổng quan & Khái niệm cốt lõi về lich chiếu cgv
+   - ## H2 1: Tổng quan & Khái niệm cốt lõi về lịch chiếu phim cgv
    - ## H2 2: Chi tiết các tiêu chí & Bảng tổng hợp số liệu mới nhất
    - ## H2 3: 5 lưu ý quan trọng để đảm bảo an toàn và tối đa hóa quyền lợi
    - ## H2 4: Những sai lầm thường gặp và cách phòng tránh
-   - ## H2 5: Câu hỏi thường gặp (FAQs) giải đáp thắc mắc về lich chiếu cgv
-   - ### H3 5.1: Rạp cgv?
-   - ### H3 5.2: Phim cgv?
-   - ### H3 5.3: Giá vé cgv?
+   - ## H2 5: Câu hỏi thường gặp (FAQs) giải đáp thắc mắc về lịch chiếu phim cgv
+   - ### H3 5.1: Cgv lịch chiếu?
+   - ### H3 5.2: Lịch chiếu phim lotte?
+   - ### H3 5.3: Lịch chiếu phim galaxy?
    - ## H2 6: Giải pháp tối ưu quyền lợi và thao tác nhanh qua Ứng dụng MoMo
 
-### Bài 3: `Cẩm nang & Hỏi đáp Lịch Chiếu Phim Rạp: Hướng Dẫn & Tra Cứu Chi Tiết`
-- **URL Slug:** `/lich-phim/cam-nang/`
+### Bài 3: `Thông Tin Suất Chiếu & Lịch Rạp Lịch Chiếu Phim Rạp: Hướng Dẫn & Tra Cứu Chi Tiết`
+- **URL Slug:** `/lich-phim/thong-tin-suat-chieu-lich-rap/`
 - **Chỉ tiêu độ dài:** `2,500 - 3,500 từ` (Cấp bậc: `Master Hub Pillar`)
 - **Primary Keyword:** `lịch phim`
-- **Secondary Synonyms:** chieuphimquocgia, lịch phim vincom, lịch phim beta, lịch phim starlight
+- **Secondary Synonyms:** lịch chiếu, lịch chiếu phim long an, lịch chiếu phim venus hải dương, lịch chiếu phim mạc ly
 - **Dàn ý H2/H3 bắt buộc (SEO Entity Checklist):**
    - ## H2 1: Tổng quan & Khái niệm cốt lõi về lịch phim
    - ## H2 2: Chi tiết các tiêu chí & Bảng tổng hợp số liệu mới nhất
    - ## H2 3: 5 lưu ý quan trọng để đảm bảo an toàn và tối đa hóa quyền lợi
    - ## H2 4: Những sai lầm thường gặp và cách phòng tránh
    - ## H2 5: Câu hỏi thường gặp (FAQs) giải đáp thắc mắc về lịch phim
-   - ### H3 5.1: Chieuphimquocgia?
-   - ### H3 5.2: Lịch phim vincom?
-   - ### H3 5.3: Lịch phim beta?
+   - ### H3 5.1: Lịch chiếu?
+   - ### H3 5.2: Lịch chiếu phim long an?
+   - ### H3 5.3: Lịch chiếu phim venus hải dương?
+   - ## H2 6: Giải pháp tối ưu quyền lợi và thao tác nhanh qua Ứng dụng MoMo
+
+### Bài 4: `Lịch Chiếu Phim Hôm Nay & Cuối Tuần Lịch Chiếu Phim Rạp: Hướng Dẫn & Tra Cứu Chi Tiết`
+- **URL Slug:** `/lich-phim/lich-chieu-hom-nay-cuoi-tuan/`
+- **Chỉ tiêu độ dài:** `2,500 - 3,500 từ` (Cấp bậc: `Master Hub Pillar`)
+- **Primary Keyword:** `phim chiếu rap hôm nay`
+- **Secondary Synonyms:** lịch chiếu phim hôm nay, phim rạp hôm nay, lịch chiếu phim rạp quốc gia hôm nay, lịch phim hôm nay
+- **Dàn ý H2/H3 bắt buộc (SEO Entity Checklist):**
+   - ## H2 1: Tổng quan & Khái niệm cốt lõi về phim chiếu rap hôm nay
+   - ## H2 2: Chi tiết các tiêu chí & Bảng tổng hợp số liệu mới nhất
+   - ## H2 3: 5 lưu ý quan trọng để đảm bảo an toàn và tối đa hóa quyền lợi
+   - ## H2 4: Những sai lầm thường gặp và cách phòng tránh
+   - ## H2 5: Câu hỏi thường gặp (FAQs) giải đáp thắc mắc về phim chiếu rap hôm nay
+   - ### H3 5.1: Lịch chiếu phim hôm nay?
+   - ### H3 5.2: Phim rạp hôm nay?
+   - ### H3 5.3: Lịch chiếu phim rạp quốc gia hôm nay?
+   - ## H2 6: Giải pháp tối ưu quyền lợi và thao tác nhanh qua Ứng dụng MoMo
+
+### Bài 5: `Cẩm nang & Hỏi đáp Lịch Chiếu Phim Rạp: Hướng Dẫn & Tra Cứu Chi Tiết`
+- **URL Slug:** `/lich-phim/cam-nang/`
+- **Chỉ tiêu độ dài:** `1,200 - 1,600 từ` (Cấp bậc: `Educational Spoke`)
+- **Primary Keyword:** `lam sơn square`
+- **Secondary Synonyms:** moveek com, em và trịnh moveek, giá vé movie red
+- **Dàn ý H2/H3 bắt buộc (SEO Entity Checklist):**
+   - ## H2 1: Tổng quan & Khái niệm cốt lõi về lam sơn square
+   - ## H2 2: Chi tiết các tiêu chí & Bảng tổng hợp số liệu mới nhất
+   - ## H2 3: 5 lưu ý quan trọng để đảm bảo an toàn và tối đa hóa quyền lợi
+   - ## H2 4: Những sai lầm thường gặp và cách phòng tránh
+   - ## H2 5: Câu hỏi thường gặp (FAQs) giải đáp thắc mắc về lam sơn square
+   - ### H3 5.1: Moveek com?
+   - ### H3 5.2: Em và trịnh moveek?
+   - ### H3 5.3: Giá vé movie red?
    - ## H2 6: Giải pháp tối ưu quyền lợi và thao tác nhanh qua Ứng dụng MoMo
 
 ---
@@ -122,7 +158,7 @@ Dưới đây là cấu trúc dàn ý chuẩn E-E-A-T và chỉ tiêu dung lư�
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Lich Phim",
+      "name": "Lịch Chiếu Phim Rạp",
       "item": "https://momo.vn/lich-phim"
     }
   ]
@@ -134,22 +170,30 @@ Dưới đây là cấu trúc dàn ý chuẩn E-E-A-T và chỉ tiêu dung lư�
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "name": "Hỏi đáp thường gặp về Lich Phim",
+  "name": "Hỏi đáp thường gặp về Lịch Chiếu Phim Rạp",
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Lịch Phim Theo Rạp CGV / Lotte / BHD Lịch Chiếu Phim Rạp: Hướng Dẫn & Tra Cứu Chi Tiết?",
+      "name": "Lịch Phim Theo Cụm Rạp Toàn Quốc Lịch Chiếu Phim Rạp: Hướng Dẫn & Tra Cứu Chi Tiết?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Thông tin chi tiết về lich chiếu cgv được cập nhật chính xác và minh bạch tại MoMo Web Platform. Người dùng có thể tra cứu và thực hiện tiện ích trực tiếp trên ứng dụng MoMo."
+        "text": "Thông tin chi tiết về lịch chiếu phim cgv được cập nhật chính xác và minh bạch tại MoMo Web Platform. Người dùng có thể tra cứu và thực hiện tiện ích trực tiếp trên ứng dụng MoMo."
       }
     },
     {
       "@type": "Question",
-      "name": "Cẩm nang & Hỏi đáp Lịch Chiếu Phim Rạp: Hướng Dẫn & Tra Cứu Chi Tiết?",
+      "name": "Thông Tin Suất Chiếu & Lịch Rạp Lịch Chiếu Phim Rạp: Hướng Dẫn & Tra Cứu Chi Tiết?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Thông tin chi tiết về lịch phim được cập nhật chính xác và minh bạch tại MoMo Web Platform. Người dùng có thể tra cứu và thực hiện tiện ích trực tiếp trên ứng dụng MoMo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Lịch Chiếu Phim Hôm Nay & Cuối Tuần Lịch Chiếu Phim Rạp: Hướng Dẫn & Tra Cứu Chi Tiết?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Thông tin chi tiết về phim chiếu rap hôm nay được cập nhật chính xác và minh bạch tại MoMo Web Platform. Người dùng có thể tra cứu và thực hiện tiện ích trực tiếp trên ứng dụng MoMo."
       }
     }
   ]
@@ -166,16 +210,16 @@ Phân tầng dòng chảy uy tín trang (PageRank) và định vị chuyên môn
 - **Trang Cột Trụ Cấp 1:** `[Tiện Ích Nền Tảng](/tien-ich)`
 - **Anchor Text Mỏ Neo:** `"Hệ sinh thái tiện ích Web MoMo"`
 
-### B. Liên kết ngang cùng ngành (Peer In-Silo):
-| Thứ tự | Use Case Bổ Trợ | Đường Dẫn Khuyến Nghị | Anchor Text Tự Nhiên | Độ Tương Đồng | Search Volume |
+### B. Liên kết ngang cùng Hub (Peer In-Silo):
+| Thứ tự | Theme Bổ Trợ | Đường Dẫn Khuyến Nghị | Anchor Text Tự Nhiên | Độ Tương Đồng | Search Volume |
 | :---: | :--- | :--- | :--- | :---: | :---: |
-| 1 | `Đặt Vé Phim Online` | `/dat-phim/` | `đặt vé cgv` | `0.158` | 14,050 |
-| 2 | `Rạp Chiếu Phim & Cụm Rạp` | `/rap/` | `phim chiếu rạp` | `0.105` | 1,229,160 |
-| 3 | `Phim Chiếu Rạp Mới Nhất` | `/phim/` | `phim` | `0.1` | 5,409,760 |
-| 4 | `Giá Vé Xem Phim & Khuyến Mãi` | `/ve-xem-phim/` | `vé xem phim` | `0.033` | 0 |
+| 1 | `Rạp Chiếu Phim & Cụm Rạp` | `/rap/` | `phim chiếu rạp` | `0.273` | 1,229,160 |
+| 2 | `Đặt Vé Phim Online` | `/dat-phim/` | `đặt vé cgv` | `0.16` | 14,050 |
+| 3 | `Phim Chiếu Rạp Mới Nhất` | `/phim/` | `phim` | `0.115` | 5,409,760 |
+| 4 | `Giá Vé Xem Phim & Khuyến Mãi` | `/ve-xem-phim/` | `vé xem phim` | `0.027` | 0 |
 
-### C. Cầu nối liên kết xuyên ngành (Cross-Silo Bridges):
-| Thứ tự | Use Case Đích | Phân Khối Ngành | Đường Dẫn Khuyến Nghị | Anchor Text Móc Nối | Search Volume |
+### C. Cầu nối liên kết xuyên Hub (Cross-Silo Bridges):
+| Thứ tự | Theme Đích | Hub | Đường Dẫn Khuyến Nghị | Anchor Text Móc Nối | Search Volume |
 | :---: | :--- | :--- | :--- | :--- | :---: |
 
 ---
@@ -185,14 +229,14 @@ Phân tầng dòng chảy uy tín trang (PageRank) và định vị chuyên môn
 Cung cấp sẵn khối thông tin trích dẫn phục vụ trực tiếp cho Google AI Overviews, SearchGPT, Perplexity và Gemini:
 
 ### A. Đoạn trích dẫn trực tiếp (Direct Answer Snippet - 40-60 từ):
-> "Lịch chiếu phim là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến lich phim một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút."
+> "Lịch chiếu phim là dịch vụ tổng hợp lịch chiếu, giá vé và sơ đồ ghế ngồi thời gian thực của toàn bộ các cụm rạp chiếu phim lớn trên cả nước (CGV, Lotte, Galaxy, BHD, Beta). Người xem có thể dễ dàng so sánh suất chiếu gần nhất, áp dụng mã giảm giá độc quyền và đặt vé trực tuyến nhận vé điện tử Smart Ticket vào thẳng phòng chiếu."
 
 ### B. Bảng thuộc tính thực thể (Entity Knowledge Graph Factsheet):
 | Thuộc Tính Thực Thể | Giá Trị Chuẩn Hóa |
 | :--- | :--- |
-| Phân loại giải pháp | Tiện ích Web Cinema - MoMo Web Platform |
-| Đối tượng áp dụng | Toàn bộ người dùng cá nhân có nhu cầu tra cứu và giao dịch trực tuyến |
-| Thời gian xử lý | Xử lý tức thì (Real-time), hỗ trợ 24/7 không phụ thuộc giờ hành chính |
-| Hạ tầng kỹ thuật | Kết nối API trực tiếp từ hệ thống đối tác liên kết chính thức |
-| Tiêu chuẩn bảo mật | Bảo mật đa tầng, đạt chứng chỉ bảo mật quốc tế PCI DSS Level 1 |
-| Kênh thao tác liền mạch | Trình duyệt Web (Desktop/Mobile) kết hợp chuyển tiếp Web-to-App MoMo |
+| Hệ thống chuỗi rạp liên kết | CGV Cinemas, Lotte Cinema, Galaxy, BHD Star, Beta Cinemas, Cinestar |
+| Khung phân loại độ tuổi khán giả | Nhãn P (Phổ biến), K (Dưới 13 tuổi có bảo trợ), T13, T16, T18 và C (Cấm) |
+| Cơ chế đồng bộ suất chiếu | Đồng bộ API thời gian thực với hệ thống bán vé của từng cụm rạp |
+| Hình thức vé vào phòng chiếu | Vé điện tử (Smart Ticket QR) quét mã vào thẳng rạp không cần in vé giấy |
+| Phụ thu định dạng trải nghiệm | Áp dụng định dạng 3D, IMAX, 4DX, ScreenX và các dòng ghế đôi Sweetbox/VIP |
+| Quy định pháp lý chuyên ngành | Luật Điện ảnh & Thông tư 05/2023/TT-BVHTTDL của Bộ Văn hóa, Thể thao và Du lịch |

@@ -124,7 +124,7 @@ Từ các buổi họp chiến lược và chỉ đạo thực tế (các phiên
 * **Bản chất tư duy:** Chấm dứt làm việc theo cảm tính (*gut feeling*). Doanh nghiệp tồn tại để tạo ra giá trị kinh tế và lợi nhuận. Mọi hành động kỹ thuật đều phải chứng minh được giá trị gia tăng thực chất.
 * **Ứng dụng thực thi:**
   * Luôn tự chất vấn 2 câu hỏi cốt lõi: *(1) Nếu mình không làm gì cả thì chỉ số sẽ tụt bao nhiêu? (2) Những hành động cụ thể đã làm đóng góp thêm chính xác bao nhiêu kết quả so với mức cơ sở đó?*
-  * Bóc tách phân rã đa chiều (Breakdown): Khi thị trường suy giảm (ví dụ ít phim hot, volume tìm kiếm giảm 50%), việc giữ vững hoặc tăng nhẹ traffic phải được chứng minh bằng từng trang mới làm thêm đóng góp bao nhiêu clicks.
+  * Bóc tách bóc tách đa chiều (Breakdown): Khi thị trường suy giảm (ví dụ ít phim hot, volume tìm kiếm giảm 50%), việc giữ vững hoặc tăng nhẹ traffic phải được chứng minh bằng từng trang mới làm thêm đóng góp bao nhiêu clicks.
 
 ### 10. Tư Duy Trực Tiếp Dấn Thân & Mở Rộng Vùng Năng Lực (Skin in the Game & Boundary Expansion)
 * **Bản chất tư duy:** Không bao giờ tự giới hạn bản thân bằng tư duy *"đây không phải năng lực lõi (Core Competency) của tôi/team tôi nên tôi không làm hoặc tuyển người khác làm thay"*.

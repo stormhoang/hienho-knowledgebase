@@ -62,7 +62,7 @@ _AUTO_CANONICAL = {}
 
 def _canonical_project(name: str, page_type: str = "") -> str:
     n = name.strip()
-    # Dự án Cinema: Phân rã theo page_type thành Cinema_Cineplex Page, Cinema_Page, ...
+    # Dự án Cinema: Bóc tách theo page_type thành Cinema_Cineplex Page, Cinema_Page, ...
     if n.lower() == "cinema":
         pt = (page_type or "").strip()
         if pt in ("Cineplex Page", "Page", "Home Page", "Blog", "News", "Landing Page"):
@@ -146,15 +146,32 @@ INFERRED_PREFIX = [
     (r"^momo\.vn/tien-ich-giao-thong(?:/.*)?$", "Tiện Ích Giao Thông", "Hub Page", "high"),
     (r"^momo\.vn/(?:hoi-dap|tro-giup|ho-tro)(?:/.*)?$", "Hỏi đáp", "FAQ", "high"),
     (r"^momo\.vn/huong-dan(?:/.*)?$", "Guide", "Guide", "high"),
+    (r"^momo\.vn/tin-tuc/khuyen-mai/.*(?:chaomomo|chao-momo|hellomomo|gioi-thieu-momo|chao-ban-moi|qua-tang-ban-moi).*$", "New User", "News", "high"),
     (r"^momo\.vn/tin-tuc(?:/.*)?$", "Tin Tức", "News", "high"),
-    (r"^momo\.vn/(?:chao-ban-moi|hellomomo|welcome|curated-onboarding)(?:/.*)?$", "New User", "Landing Page", "high"),
+    (r"^momo\.vn/(?:gioi-thieu-momo|lienkettaikhoan|chao-ban-moi|hellomomo|chaomomo|chao-momo|welcome|curated-onboarding|qua-tang-ban-moi|game/mot-mua-quyt)(?:/.*)?$", "New User", "Landing Page", "high"),
     (r"^momo\.vn/download(?:/.*)?$", "Download", "Landing Page", "high"),
     (r"^momo\.vn/tai-app(?:/.*)?$", "Download", "Landing Page", "high"),
+    (r"^momo\.vn/tim-kiem(?:/.*)?$", "Tìm Kiếm", "Mini Web", "high"),
     (r"^momo\.vn/?$", "Home MoMo", "Home Page", "high"),
+    (r"^momo\.vn/thanh-toan-hoa-don/dien(?:/.*)?$", "Điện", "Landing Page", "high"),
+    (r"^momo\.vn/thanh-toan-hoa-don/nuoc(?:/.*)?$", "Nước", "Landing Page", "high"),
+    (r"^momo\.vn/thanh-toan-hoa-don/internet(?:/.*)?$", "Internet", "Landing Page", "high"),
+    (r"^momo\.vn/thanh-toan-hoa-don/truyen-hinh(?:/.*)?$", "Truyền Hình", "Landing Page", "high"),
+    (r"^momo\.vn/thanh-toan-hoa-don/chung-cu(?:/.*)?$", "Chung Cư", "Landing Page", "high"),
+    (r"^momo\.vn/thanh-toan-hoa-don/hoc-phi(?:/.*)?$", "Học Phí", "Landing Page", "high"),
+    (r"^momo\.vn/thanh-toan-hoa-don/?$", "Billpay", "Landing Page", "high"),
+    (r"^momo\.vn/dien(?:/.*)?$", "Điện", "Landing Page", "high"),
+    (r"^momo\.vn/nuoc(?:/.*)?$", "Nước", "Landing Page", "high"),
     (r"^momo\.vn/internet(?:/.*)?$", "Internet", "Landing Page", "high"),
+    (r"^momo\.vn/truyen-hinh(?:/.*)?$", "Truyền Hình", "Landing Page", "high"),
+    (r"^momo\.vn/chung-cu(?:/.*)?$", "Chung Cư", "Landing Page", "high"),
+    (r"^momo\.vn/phi-xet-tuyen(?:/.*)?$", "Phí Xét Tuyển", "Landing Page", "high"),
+    (r"^momo\.vn/vien-thong-tien-ich(?:/.*)?$", "Billpay", "Landing Page", "high"),
+    (r"^momo\.vn/thanh-toan-momo-the-hoc-duong-ssc(?:/.*)?$", "Học Phí", "Landing Page", "high"),
     (r"^momo\.vn/nap-tien-dien-thoai(?:/.*)?$", "Nạp tiền điện thoại", "Landing Page", "high"),
     (r"^momo\.vn/(?:tuyen-dung|career)(?:/.*)?$", "Tuyển Dụng", "Career", "high"),
     (r"^momo\.vn/campaign(?:/.*)?$", "Campaign", "Campaign", "high"),
+    (r"^momo\.vn/tro-thu-tai-chinh(?:/.*)?$", "Campaign", "Campaign", "high"),
     (r"^momo\.vn/(?:chuong-trinh|voucher)(?:/.*)?$", "Khuyến mãi", "Promotion", "high"),
     (r"^momo\.vn/(?:lixi|nhat-ky-lacxi)(?:/.*)?$", "Game Hub", "Game", "high"),
     (r"^momo\.vn/an-to(?:a|à)n(?:[-/].*)?$", "Trust", "Trust", "high"),
@@ -168,6 +185,11 @@ INFERRED_PREFIX = [
     (r"^momo\.vn/xe(?:/.*)?$", "Vé Xe", "Page", "high"),
     (r"^momo\.vn/esim(?:[-/].*)?$", "Esim", "Landing Page", "high"),
     (r"^momo\.vn/bao-hiem(?:[-/].*)?$", "Bảo Hiểm", "Landing Page", "high"),
+    (r"^momo\.vn/.*loa-thong-bao.*$", "Soundbox", "Page", "high"),
+    (r"^momo\.vn/loa-momo(?:/.*)?$", "Soundbox", "Page", "high"),
+    (r"^momo\.vn/page(?:/.*)?$", "Merchant", "Page", "high"),
+    (r"^momo\.vn/doi-tac(?:/.*)?$", "Merchant", "Merchant Page", "high"),
+    (r"^momo\.vn/thanh-toan-momo-.*$", "Merchant", "Merchant Page", "high"),
 ]
 
 
@@ -197,7 +219,7 @@ def load_inferred_rules(dim_rules: list = None) -> list:
 
 
 def normalize_url(url: str) -> str:
-    """Chuẩn hóa URL để so khớp: bỏ scheme khác biệt, www, query, fragment, trailing slash."""
+    """Chuẩn hóa URL để so khớp: bỏ scheme khác biệt, www, query, fragment, trailing slash, unquote, lowercase."""
     if not url:
         return ""
     u = url.strip()
@@ -211,8 +233,18 @@ def normalize_url(url: str) -> str:
     host = p.netloc.lower()
     if host.startswith("www."):
         host = host[4:]
-    path = (p.path or "").rstrip("/")
-    return f"{host}{path}".lower()
+    raw_path = urllib.parse.unquote(p.path or "")
+    clean_path = re.sub(r"/+", "/", raw_path).rstrip("/")
+    clean_path = re.sub(r"/index\.(html?|php)$", "", clean_path, flags=re.I)
+    return f"{host}{clean_path}".lower()
+
+
+def _project_slug(name: str) -> str:
+    import unicodedata
+    t = str(name).replace("đ", "d").replace("Đ", "D")
+    t = unicodedata.normalize("NFKD", t).encode("ascii", "ignore").decode("utf-8")
+    t = re.sub(r"[^\w\s-]", "", t).strip().lower()
+    return re.sub(r"[-\s]+", "-", t)
 
 
 def _rule_to_regex(rule: str):
@@ -328,11 +360,20 @@ def resolve(url: str, rules: list, inferred_rules: list = None) -> dict:
         return unmatched
 
     projects = sorted({r["project"] for r in matches})
-    # Nhiều Project cùng khớp: URL được khai báo tay vào Project ngách là tín hiệu mạnh hơn Project bao trùm,
-    # nên chọn Project ít rule nhất trong cùng section (vd bài "top nhà xe" /blog/*-c101dt*: Vé Xe 21 rule,
-    # OTA 386 rule -> Vé Xe; tin khuyến mãi eSIM: Esim thay vì Sim). Hòa thì theo tên.
-    owners = _section_owners(rules).get(_section(nurl), Counter())
-    primary = sorted(projects, key=lambda p: (owners.get(p, 0), p))[0]
+    # Nhiều Project cùng khớp:
+    # 1. Nếu tên Project có slug khớp trực tiếp với section của URL (vd 'Internet' với section 'internet',
+    #    'Nạp tiền điện thoại' với 'nap-tien-dien-thoai', 'Nhận Tiền Quốc Tế' với 'nhan-tien-quoc-te'),
+    #    ưu tiên Project chuyên biệt này trước các nhóm bao trùm như 'Billpay', 'Data', 'P2P'.
+    # 2. Ngược lại (như trong /blog/*), chọn Project ngách có ít rule nhất trong section. Hòa thì theo tên.
+    sec = _section(nurl)
+    owners = _section_owners(rules).get(sec, Counter())
+
+    def _p_tiebreak(p):
+        p_slug = _project_slug(p)
+        exact_sec_match = 0 if (p_slug == sec or p_slug.replace("-", "") == sec.replace("-", "")) else 1
+        return (exact_sec_match, owners.get(p, 0), p)
+
+    primary = sorted(projects, key=_p_tiebreak)[0]
     return {
         "url": url,
         "normalized": nurl,

@@ -222,7 +222,7 @@ Nếu có điều kiện PHẢI giải quyết trước khi build → đưa vào
   </thead>
   <tbody>
     <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PC1</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Điều kiện]</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chưa giải quyết</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Owner]</td>
@@ -434,9 +434,9 @@ Từ keyword clusters, extract 3-6 Jobs có volume/impact cao nhất.
 
 **Project (Product/Feature):**
 - User Flow: Entry point, main screens, conversion point
-- Feature List với priority P1/P2/P3
+- Feature List chia theo Đợt 1/2/3
 
-**Priority rules:** P1 = launch blocker. P2 = quan trọng nhưng không block. P3 = nice-to-have.
+**Quy tắc chia đợt:** Đợt 1 = bắt buộc trước Go-live (launch blocker). Đợt 2 = quan trọng nhưng không chặn Go-live. Đợt 3 = bổ sung sau (nice-to-have). Không gắn nhãn ưu tiên dạng chữ P kèm số.
 
 ---
 
@@ -626,7 +626,7 @@ Sau khi đọc input, xác định gap. Hỏi **tối đa 1 lần**, gom tất c
 
 ### Tone & Format
 
-- **Tiếng Việt chuyên nghiệp.** Giữ thuật ngữ kỹ thuật (SEO, JTBD, CTA, W2A, GSC, Appsflyer, P1...)
+- **Tiếng Việt chuyên nghiệp.** Giữ thuật ngữ kỹ thuật (SEO, JTBD, CTA, W2A, GSC, Appsflyer...)
 - **Senior-level, trực tiếp.** Không fluff, không mở đầu rườm rà. Mỗi câu phải có purpose.
 - **Data-driven.** Mọi claim phải có source (GSC, Keyword research, competitor data)
 - **Table > Prose.** Dùng table khi có 3+ items để so sánh hoặc list structured data

@@ -1,17 +1,17 @@
 # BRD: eSIM Du Lịch
 
-> - **Project:** eSIM Du Lịch - Web Growth & SEO/GEO
-> - **Main URL:** momo.vn/esim-du-lich
-> - **Division:** PS (Payment Services) - Telco
-> - **Version:** 1.4 · Tháng 6/2026
-> - **Status:** Active (Scope: Outbound & Media Team eSIM - Migration to MoSpark)
+> - **Dự án:** eSIM Du Lịch - Web Growth & SEO/GEO
+> - **URL chính:** momo.vn/esim-du-lich
+> - **Khối phụ trách:** PS (Payment Services) - Telco
+> - **Phiên bản:** 1.4 · Tháng 6/2026
+> - **Trạng thái:** Active (Scope: Outbound & Media Team eSIM - Migration to MoSpark)
 
 ---
 
 ## 1. Executive Summary
 
 ### 1.1 Elegant Problem Framing
-- **Vấn đề cốt lõi:** Khi chuẩn bị đi du lịch nước ngoài, người Việt cực kỳ sợ bị "mù internet" khi hạ cánh, hoặc sợ "shock bill" roaming. Mua SIM vật lý thì rườm rà, cài eSIM quốc tế (Airalo) thì rào cản ngôn ngữ và khó thanh toán.
+- **Vấn đề cốt lõi:** Khi chuẩn bị đi du lịch nước ngoài, người Việt cực kỳ sợ bị "mất kết nối mạng" khi hạ cánh, hoặc sợ "phát sinh cước ngoài ý muốn" roaming. Mua SIM vật lý thì rườm rà, cài eSIM quốc tế (Airalo) thì rào cản ngôn ngữ và khó thanh toán.
 - **Giải pháp (The "What"):** Biến MoMo thành kênh mua eSIM du lịch "Nhanh - Tiện - An Tâm". Thanh toán 1-chạm bằng ví, nhận mã QR và cài đặt ngay tại nhà, xuống máy bay là có mạng.
 
 ### 1.2 Situation & Complication
@@ -1941,7 +1941,7 @@ Xây dựng cluster web eSIM Du Lịch thành kênh organic acquisition hiệu q
 *Baseline measurement: đo toàn bộ metrics ngay sau khi publish Hub + 2 destination pages đầu tiên.*
 
 ### 8.1 Mandatory Tracking & AB Test Hypothesis (MoSpark Standard)
-- **Hypothesis (Giả thuyết test):** Nếu đặt "Bảng so sánh chi phí eSIM MoMo vs Roaming" ở First Fold thay vì liệt kê gói data thông thường, W2A Conversion sẽ tăng ít nhất 40% vì đánh trúng tâm lý sợ Shock Bill (Fear-driven intent).
+- **Hypothesis (Giả thuyết test):** Nếu đặt "Bảng so sánh chi phí eSIM MoMo vs Roaming" ở First Fold thay vì liệt kê gói data thông thường, W2A Conversion sẽ tăng ít nhất 40% vì đánh trúng tâm lý sợ Phát Sinh Cước Ngoài Ý Muốn (Fear-driven intent).
 - **Tracking Event Schema:** Bắt buộc track `esim_compare_view`, `esim_cta_click`, `esim_deeplink_click` đổ về GA4 và Appsflyer để đo Funnel drop-off.
 
 ### 8.2 GA4 Events

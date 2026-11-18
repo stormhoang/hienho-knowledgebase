@@ -1,13 +1,13 @@
 # BRD: Tra Cứu Phạt Nguội
 
-> - **Project:** Tra Cứu Phạt Nguội Web Growth
-> - **Main URL:** momo.vn/phat-nguoi
-> - **Division:** PS (Payment Services)
+> - **Dự án:** Tra Cứu Phạt Nguội Web Growth
+> - **URL chính:** momo.vn/phat-nguoi
+> - **Khối phụ trách:** PS (Payment Services)
 > - **Use Case:** Phạt Nguội
 > - **Owner:** Web Platform
-> - **Governance:** Web Product Lead
-> - **Version:** 5.0 - 2026-08-19
-> - **Status:** Aligned 19/08/2026 - Tái cấu trúc luồng kết quả tra cứu (Single Page Inline Section), phân 2 nhánh trả kết quả (Có vi phạm: Nộp phạt In-App + Content Block cẩm nang; Không vi phạm: Cross-sell Bảo hiểm & Gói đăng ký thông báo Phạt nguội tự động), áp dụng GenAI Content QC & mapping tự động.
+> - **Phê duyệt:** Web Product Lead
+> - **Phiên bản:** 5.0 - 2026-08-19
+> - **Trạng thái:** Aligned 19/08/2026 - Tái cấu trúc luồng kết quả tra cứu (Single Page Inline Section), phân 2 nhánh trả kết quả (Có vi phạm: Nộp phạt In-App + Content Block cẩm nang; Không vi phạm: Cross-sell Bảo hiểm & Gói đăng ký thông báo Phạt nguội tự động), áp dụng GenAI Content QC & mapping tự động.
 
 ---
 
@@ -516,7 +516,7 @@ Mỗi trang khu vực mới được khởi tạo và publish thông qua quy tr�
 2.  **Xác Thực Dữ Liệu Thực Tế (Cell Team):** Xác minh thủ công danh sách camera phạt nguội (tọa độ GPS), địa chỉ kho bạc nhà nước tiếp nhận nộp phạt, và cơ quan CSGT địa phương chịu trách nhiệm xử lý.
 3.  **GenAI Draft Content (MoSpark CMS):** Sử dụng các mô hình Claude 3.5 Sonnet trong module GenAI để sinh bài viết chi tiết dựa trên dữ liệu đã xác thực, cung cấp thông tin hữu ích về luật và quy định xử phạt (Nghị định 168).
 4.  **Tích hợp Widget & Bản đồ (Product/Tech Cell):** Nhúng bản đồ tọa độ camera phạt nguội thực tế và bảng đối chiếu mức tiền phạt nhanh cho các lỗi vi phạm phổ biến tại khu vực đó.
-5.  **Editorial Gate (Văn Hiến sign-off):** PM kiểm tra và phê duyệt chất lượng nội dung cùng độ chính xác của dữ liệu trước khi bấm nút Publish trực tuyến.
+5.  **Editorial Gate (Web Platform phê duyệt):** PM kiểm tra và phê duyệt chất lượng nội dung cùng độ chính xác của dữ liệu trước khi nhấp vào nút Publish trực tuyến.
 
 #### 3. Quản Trị Link Equity & Tránh Chồng Chéo Từ Khóa (Silo Control)
 *   **Breadcrumb Phân Cấp:** Thiết lập breadcrumb có logic cha-con rõ ràng để Googlebot/AI hiểu sơ đồ tri thức (Ví dụ: `Trang chủ -> TP.HCM -> Quận Bình Thạnh -> Ngã tư Hàng Xanh`).
@@ -753,7 +753,7 @@ Mỗi cluster chỉ được gán một Canonical URL - áp dụng Cannibalizati
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Volume/tháng</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Intent Stage</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Loại Content</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Priority</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Đợt Triển Khai</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Canonical URL</th>
     </tr>
   </thead>
@@ -764,7 +764,7 @@ Mỗi cluster chỉ được gán một Canonical URL - áp dụng Cannibalizati
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~1.05M+</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Stage 1</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Landing page (pSEO/Mini Web)</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P0</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 1</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/phat-nguoi</td>
     </tr>
     <tr style="background-color:#f8fafc;">
@@ -773,7 +773,7 @@ Mỗi cluster chỉ được gán một Canonical URL - áp dụng Cannibalizati
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~70K+</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Stage 2</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Landing page (pSEO/Mini Web)</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 2</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/phat-nguoi/o-to, /phat-nguoi/xe-may, /phat-nguoi/xe-may-dien</td>
     </tr>
     <tr>
@@ -782,7 +782,7 @@ Mỗi cluster chỉ được gán một Canonical URL - áp dụng Cannibalizati
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~40K+</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Stage 4</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 2</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/phat-nguoi/blog/nghi-dinh-168-*</td>
     </tr>
     <tr style="background-color:#f8fafc;">
@@ -791,7 +791,7 @@ Mỗi cluster chỉ được gán một Canonical URL - áp dụng Cannibalizati
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~20K+</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Stage 2</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Landing page (pSEO/Mini Web)</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 2</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/phat-nguoi/camera-giao-thong</td>
     </tr>
     <tr>
@@ -800,7 +800,7 @@ Mỗi cluster chỉ được gán một Canonical URL - áp dụng Cannibalizati
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~20K+</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Stage 4</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 3</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/phat-nguoi/blog/loi-*</td>
     </tr>
     <tr style="background-color:#f8fafc;">
@@ -809,7 +809,7 @@ Mỗi cluster chỉ được gán một Canonical URL - áp dụng Cannibalizati
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~15K+ aggregate</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Stage 2</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Landing page (pSEO/Mini Web)</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 3</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/phat-nguoi/[tinh-thanh]</td>
     </tr>
     <tr>
@@ -818,13 +818,13 @@ Mỗi cluster chỉ được gán một Canonical URL - áp dụng Cannibalizati
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~10K+</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Stage 3</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 4</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/phat-nguoi/blog/nop-phat-nguoi</td>
     </tr>
   </tbody>
 </table>
 
-**Nguyên tắc phân bổ:** P0 = Production ngay. P1 = Batch 1-2 (Phase 1-2). P2 = Scale Phase 2. P3 = Phase 3 trở đi.
+**Nguyên tắc phân bổ:** Đợt 1 = Production ngay. Đợt 2 = Batch 1-2 (Phase 1-2). Đợt 3 = Scale Phase 2. Đợt 4 = Phase 3 trở đi.
 
 ---
 
@@ -1179,7 +1179,7 @@ Theo Foundation Checklist chuẩn SEO Inventory. Mọi bài blog Phạt Nguội 
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-08-19</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">v5.0</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cập nhật chiến lược & luồng trải nghiệm theo biên bản họp 19/08/2026: (1) Tái cấu trúc màn hình kết quả tra cứu Phạt Nguội từ popup sang Single Page Inline Section; (2) Phân rã 2 nhánh kết quả: Có vi phạm (CTA Nộp phạt In-App + Inline Content Block giải thích lỗi theo Nghị định), Không vi phạm (Cross-sell Bảo hiểm Ô tô/Xe máy & Gói đăng ký thông báo Phạt nguội tự động Tháng/Năm); (3) Cập nhật ngân sách SEM Q3/2026 ở mức 70 triệu VNĐ, dồn lực tối ưu W2A Login CTR & Transactions trên organic/paid traffic hiện có; (4) Chuẩn hóa quy trình sản xuất cẩm nang GenAI, bắt buộc QC 100% tính pháp lý và gắn bảng mã map lỗi vi phạm để nhúng bài viết tự động.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cập nhật chiến lược & luồng trải nghiệm theo biên bản họp 19/08/2026: (1) Tái cấu trúc màn hình kết quả tra cứu Phạt Nguội từ popup sang Single Page Inline Section; (2) Bóc tách 2 nhánh kết quả: Có vi phạm (CTA Nộp phạt In-App + Inline Content Block giải thích lỗi theo Nghị định), Không vi phạm (Cross-sell Bảo hiểm Ô tô/Xe máy & Gói đăng ký thông báo Phạt nguội tự động Tháng/Năm); (3) Cập nhật ngân sách SEM Q3/2026 ở mức 70 triệu VNĐ, dồn lực tối ưu W2A Login CTR & Transactions trên organic/paid traffic hiện có; (4) Chuẩn hóa quy trình sản xuất cẩm nang GenAI, bắt buộc QC 100% tính pháp lý và gắn bảng mã map lỗi vi phạm để nhúng bài viết tự động.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-07-07</td>
@@ -1209,7 +1209,7 @@ Theo Foundation Checklist chuẩn SEO Inventory. Mọi bài blog Phạt Nguội 
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-05-25</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">v3.5</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thêm Section 9 - SEO/GEO Content Engine GenAI Production Plan. Tích hợp SEO Inventory v4.7 framework: phân loại Mass Traffic/DVC, Keyword Cluster Priority Map (7 clusters/P0-P3), GenAI Production Plan 3 phases (Batch 1 done/Batch 2 T6/Pháp 2 pSEO), Content Quality Gate 6 cổng, SoV Tracking Plan với milestones T6-T12/2026.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thêm Section 9 - SEO/GEO Content Engine GenAI Production Plan. Tích hợp SEO Inventory v4.7 framework: phân loại Mass Traffic/DVC, Keyword Cluster Priority Map (7 clusters/Đợt 1-4), GenAI Production Plan 3 phases (Batch 1 done/Batch 2 T6/Pháp 2 pSEO), Content Quality Gate 6 cổng, SoV Tracking Plan với milestones T6-T12/2026.</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-05 (đầu tháng)</td>

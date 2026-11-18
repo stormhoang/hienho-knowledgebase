@@ -1,0 +1,39 @@
+{
+  "month": "2026-11",
+  "anchor_day": 16,
+  "anchor_date": "2026-11-16",
+  "anchor_pv": 2861286,
+  "anchor_source": "BigQuery DWH SSOT (momovn-prod.TEAM_PRODUCT_OPTS.WEB_L4_EVENT_PAGE_MASTER)",
+  "raw_ga4_16d_pv": 3460782,
+  "clean_scale": 0.8267740673062388,
+  "channels": {
+    "organic": 1307096,
+    "direct": 732391,
+    "paid": 614976,
+    "referral": 130973,
+    "others": 75850,
+    "merged_referral": 185672,
+    "ai_traffic": 21151,
+    "non_paid": 2246310
+  },
+  "hubs": {
+    "cinema": 693106,
+    "financial": 297482,
+    "vehicle": 225172,
+    "new_user": 167037,
+    "insurance": 70864,
+    "student": 2476,
+    "others": 1405149
+  },
+  "cinema_breakdown": {
+    "Trang Rạp phim": 468528,
+    "Trang phim chi tiết": 150609,
+    "Cinema_Home Page": 44177,
+    "Cinema_Blog": 26931,
+    "Cinema_Landing Page": 2328,
+    "Tin tức": 533,
+    "Others": 0
+  },
+  "policy": "incremental_add",
+  "instructions": "Số liệu MTD Ngày 1..16 chốt cứng theo BigQuery SSOT 2.861.286 PV. Từ Ngày 17 trở đi, lưu lượng phát sinh từng ngày mới sẽ được cộng dồn lũy kế trực tiếp vào mốc 2.861.286 PV này."
+}

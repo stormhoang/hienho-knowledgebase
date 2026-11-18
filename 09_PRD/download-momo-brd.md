@@ -2,9 +2,9 @@
 # TÁI THIẾT KẾ CỔNG CHUYỂN ĐỔI OUT-APP DOWNLOAD MOMO (MOMO.VN/DOWNLOAD)
 
 > **Mã tài liệu:** BRD-W2A-DOWNLOAD-2026-V1  
-> **Trạng thái tài liệu:** DRAFT - PENDING APPROVAL  
-> **Quản trị dự án:** Web Product Lead x Mobile Platform Team x Growth Marketing Team x Data Analytics Team  
-> **Mốc tiến độ dự kiến:** Kick-off: 10/10/2026 | Staging Test: 24/10/2026 | Pilot Rollout: 31/10/2026 | Full Go-Live: 07/11/2026  
+> **Trạng thái:** DRAFT - PENDING APPROVAL  
+> **Phê duyệt:** Web Product Lead x Mobile Platform Team x Growth Marketing Team x Data Analytics Team  
+> **Tiến độ:** Kick-off: 10/10/2026 | Staging Test: 24/10/2026 | Pilot Rollout: 31/10/2026 | Full Go-Live: 07/11/2026  
 
 ---
 
@@ -47,7 +47,7 @@
   - Điểm chạm Online: Footer toàn bộ hệ thống website `momo.vn`, bio mạng xã hội (Facebook Fanpage, TikTok Channel, YouTube), tin nhắn SMS Brandname CSKH, email marketing, bài viết PR báo chí và hệ thống đối tác liên kết.
 - **Thực trạng kỹ thuật:** Trang này hiện chỉ vận hành như một đoạn mã JavaScript chuyển hướng thô sơ (User-Agent Sniffing). Trang hoàn toàn thiếu lớp trải nghiệm sản phẩm, không có khả năng nhận diện trạng thái cài đặt của người dùng, không có giao diện fallback và không ghi nhận bất kỳ dữ liệu phân tích nào trước khi đẩy người dùng sang Store.
 
-### 2.2. Bốn Nỗi Đau Trọng Yếu & Thất Thoát Kinh Doanh (Core Pain Points)
+### 2.2. Bốn Rào Cản Trọng Yếu & Thất Thoát Kinh Doanh (Core Pain Points)
 1. **Thất thoát Người dùng Mới (New User Drop-off):** Người dùng mới click vào link bị đẩy thẳng sang giao diện App Store / Google Play mặc định. Trải nghiệm thiếu hoàn toàn thông điệp giá trị (Value Proposition), không thấy gói quà chào mừng người dùng mới (Welcome Gift Package), làm giảm động lực tải và đăng ký tài khoản.
 2. **Trải nghiệm gãy khúc với Người dùng Đã Cài App (Existing Users):** Người dùng đã có app MoMo trên máy khi click vào link vẫn bị ép văng ra Store chỉ để nhìn thấy nút "Cập nhật" hoặc "Mở". Đây là trải nghiệm thừa thãi, gây ức chế và làm gián đoạn hành vi giao dịch tức thời.
 3. **Lỗ hổng Trải nghiệm Desktop (Desktop Dead-end):** Người dùng truy cập bằng máy tính bàn / laptop bị rơi vào nhánh xử lý sai (mặc định chuyển hướng sang Google Play Store) hoặc màn hình trắng, thay vì cung cấp mã QR để dùng điện thoại quét tải app ngay lập tức.
@@ -115,30 +115,6 @@
 Thay vì một trang chuyển hướng mù (blind redirect), `momo.vn/download` được tái thiết kế thành **Trang Đích Giới Thiệu Giá Trị & Kích Hoạt Chuyển Đổi**:
 - **Nguyên tắc Above the Fold (Action-First):** Ngay khi truy cập, người dùng nhìn thấy ngay lý do phải tải (Gói quà người dùng mới) và nút CTA hành động trực tiếp mà không cần cuộn trang.
 - **Nguyên tắc Below the Fold (Educate-Next):** Khi cuộn trang, người dùng được khám phá hệ sinh thái dịch vụ toàn diện của MoMo theo dạng khối trực quan, cô đọng (TLDR), giải quyết thắc mắc "MoMo có gì cho tôi?".
-
-### 4.2. Bố Cục Giao Diện & Khối Nội Dung (Information Architecture & Wireframe Spec)
-
-1. **Khối 1: Hero Section (Above the Fold)**
-   - **Headline & Value Proposition:** Thông điệp ngắn gọn, trực diện (Ví dụ: *"MoMo - Trợ thủ tài chính và thanh toán hàng ngày của hơn 30 triệu người Việt"*).
-   - **Gói quà Người dùng mới (New User) (Welcome Incentive Badge):** Nổi bật thông điệp tặng gói quà voucher trải nghiệm (500.000đ - 1.000.000đ) khi đăng ký tài khoản mới.
-   - **Khối Nút CTA Thích Ứng Theo Thiết Bị (Adaptive CTA Cluster):**
-     - *Trên iOS:* Nút chính `Tải trên App Store` (kèm icon Apple) + Nút phụ `Đã có MoMo? Mở Ứng Dụng`.
-     - *Trên Android:* Nút chính `Tải trên Google Play` (kèm icon Google Play) + Nút phụ `Đã có MoMo? Mở Ứng Dụng`.
-     - *Trên Desktop:* Khối hiển thị **Mã QR Động (Dynamic QR Code)** quét để tải app ngay trên điện thoại + 2 nút Store phụ.
-
-2. **Khối 2: Ecosystem Education (MoMo Có Gì Cho Bạn? - 4 Trụ Cột Cốt Lõi)**
-   - *Trụ cột 1 - Thanh toán & Chuyển tiền tiện lợi:* Chuyển tiền 24/7 miễn phí mọi ngân hàng, quét mã QR thanh toán tại hàng triệu điểm ăn uống, mua sắm.
-   - *Trụ cột 2 - Trung tâm Tài chính số:* Dùng trước trả sau với Ví Trả Sau, gửi tiết kiệm sinh lời mỗi ngày từ số vốn nhỏ, tra cứu điểm tín dụng CIC miễn phí, gói vay tiêu dùng giải ngân nhanh.
-   - *Trụ cột 3 - Giải trí & Đời sống:* Đặt vé xem phim toàn bộ cụm rạp CGV/Lotte/BHD/Beta/NCC, mua vé máy bay, vé xe khách, nạp data 3G/4G, nạp game chiết khấu cao.
-   - *Trụ cột 4 - Tiện ích Dân sinh & Giao thông:* Tra cứu và nộp phạt nguội toàn quốc, thanh toán hóa đơn điện/nước/internet tự động nhắc cước, mua bảo hiểm xe máy/ô tô/y tế trực tuyến.
-
-3. **Khối 3: Social Proof & Security Foundation (Bảo Chứng Thương Hiệu)**
-   - Quy mô cộng đồng: Hơn 30 triệu người dùng tin tưởng sử dụng thường xuyên.
-   - Tiêu chuẩn bảo mật: Chứng chỉ bảo mật quốc tế cấp độ cao nhất PCI DSS Level 1, cơ chế sinh trắc học Face ID / Fingerprint, bảo chứng pháp lý từ Ngân hàng Nhà nước Việt Nam.
-   - Hệ thống liên kết đối tác: Logo mạng lưới ngân hàng nội địa (Vietcombank, Techcombank, BIDV, Agribank, VPBank...) và các đối tác toàn cầu (Apple, Google, TikTok).
-
-4. **Khối 4: Sticky Floating CTA (Nút Hành Động Nổi Chân Trang)**
-   - Khi người dùng cuộn qua khỏi Hero Section để đọc nội dung Educate, một thanh điều hướng nhỏ gọn (Bottom Floating Bar) sẽ cố định ở chân màn hình điện thoại với nút CTA tương ứng theo hệ điều hành để người dùng có thể bấm tải app bất kỳ lúc nào.
 
 ### 4.3. Cơ Chế Nhận Diện Thiết Bị & Logic Nút Bấm Thông Minh (Smart CTA Logic)
 
@@ -328,7 +304,7 @@ graph TD
   <tbody>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xây dựng UI Desktop QR & In-App Bouncer Page</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>R (Chủ trì)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>R (Đầu mối thực thi)</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">I (Thông báo)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">C (Góp ý)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">C (Review Tagging)</td>
@@ -337,13 +313,13 @@ graph TD
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cấu hình OneLink AppsFlyer Template cho Web</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">C (Phối hợp)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">C (Cấu hình)</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>R (Chủ trì)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>R (Đầu mối thực thi)</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">C (Kiểm tra)</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cấu hình AASA & Android Digital Asset Links</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">C (Domain Web)</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>R (Chủ trì)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>R (Đầu mối thực thi)</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">I (Thông báo)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">I (Thông báo)</td>
     </tr>
@@ -351,13 +327,13 @@ graph TD
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thiết kế Custom Product Pages & Custom Store Listings</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">I (Thông báo)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">I (Thông báo)</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>R (Chủ trì)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>R (Đầu mối thực thi)</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">C (A/B Test)</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xử lý Deferred Deep Link Onboarding In-App</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">C (Gửi Payload)</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>R (Chủ trì)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>R (Đầu mối thực thi)</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">C (Thiết kế quà)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">C (Đo Activation)</td>
     </tr>
@@ -366,12 +342,12 @@ graph TD
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">C (Cung cấp Data Web)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">C (Data App)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">C (Yêu cầu KPI)</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>R (Chủ trì)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>R (Đầu mối thực thi)</strong></td>
     </tr>
   </tbody>
 </table>
 
-> *Ghi chú ma trận RACI:* **R** = Responsible (Chủ trì thực thi), **A** = Accountable (Chịu trách nhiệm phê duyệt), **C** = Consulted (Tư vấn chuyên môn), **I** = Informed (Nhận thông tin cập nhật).
+> *Ghi chú ma trận RACI:* **R** = Responsible (Đầu mối thực thi), **A** = Accountable (Chịu trách nhiệm phê duyệt), **C** = Consulted (Tư vấn chuyên môn), **I** = Informed (Nhận thông tin cập nhật).
 
 ---
 

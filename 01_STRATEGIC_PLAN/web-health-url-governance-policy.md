@@ -1,9 +1,9 @@
 # Web Health & URL Governance Policy
 ## momo.vn - Platform Health Management
 
-> **Version:** 2.0 | **Ngày tạo:** 2026-05-22 | **Ngày hiệu lực:** Sau khi VP phê duyệt
-> **Policy Owner:** Văn Hiến - Web Product Lead, Web Platform, GPD
-> **Approver:** Công - VP, Growth Platform Division
+> **Phiên bản:** 2.0 | **Ngày tạo:** 2026-05-22 | **Ngày hiệu lực:** Sau khi VP phê duyệt
+> **Owner:** Văn Hiến - Web Product Lead, Web Platform, GPD
+> **Phê duyệt:** Công - VP, Growth Platform Division
 > **Trạng thái:** Draft - Pending VP Approval
 > **Chu kỳ review:** 6 tháng / khi có thay đổi platform lớn
 

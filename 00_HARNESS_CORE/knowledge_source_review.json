@@ -1,0 +1,15 @@
+{
+  "mode": "observe",
+  "reviewed_at": "2026-11-07",
+  "items": [
+    {"reference": "07_REPORTS/sheets/full_month_performance_template.csv", "status": "candidate_relocated", "candidate": "07_REPORTS/templates/sheets/full_month_performance_template.csv", "evidence": "Candidate file exists; content equivalence requires review."},
+    {"reference": "07_REPORTS/data/monthly_10_2026_mtd_9d.json", "status": "candidate_archived", "candidate": "07_REPORTS/data/history/monthly_snapshots/monthly_10_2026_mtd_9d.json", "evidence": "Historical snapshot exists; period must be checked before changing reference."},
+    {"reference": "07_REPORTS/data/push_log.json", "status": "detector_false_positive", "candidate": "07_REPORTS/data/push_log.jsonl", "evidence": "scripts/intake.py LOG_PATH and 13_INTAKE/README.md both use .jsonl; regex previously truncated extension."},
+    {"reference": "./lib/data/quiz_catalog.json", "status": "documented_export_destination", "candidate": "04_MOSPARK_PLATFORM/data/quiz_catalog.json", "evidence": "QUIZ_FLOW_SPECIFICATION_FOR_DEV.md:233 describes copying local catalog to this downstream destination."},
+    {"reference": "data/seo-clusters/index.json", "status": "generated_downstream_candidate", "evidence": "scripts/sync_inventory_to_hubs.py:1318 documents modular export; downstream repository not inspected."},
+    {"reference": "lib/dashboard/web-data.json", "status": "downstream_reference_requires_review", "evidence": "Referenced in dashboard architecture and intake docs; downstream repository not inspected."},
+    {"reference": "data/content-plan-data.json", "status": "unverified", "evidence": "Referenced in KEYWORD_REALLOCATION_REVIEW.md; no replacement confirmed."},
+    {"reference": "vn/.well-known/assetlinks.json", "status": "possible_url_fragment", "evidence": "Located in tai-app-landing-prd.md; full URL parsing requires improvement."},
+    {"reference": "bold-template-pack/selection-index.json", "status": "skill_asset_review", "evidence": "Skill package resource; not a business data source."}
+  ]
+}

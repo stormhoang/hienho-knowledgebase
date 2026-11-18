@@ -64,7 +64,7 @@ Báo cáo đo lường hiệu suất Web Platform dựa trên bộ 2 nhóm chỉ
   </thead>
   <tbody>
     <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>1. Financial Hub</strong><br/>(Ưu tiên P0)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>1. Financial Hub</strong><br/></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">
         Dựng Staging layout dọc bộ utilities (tính lãi, tỷ giá, vàng, CIC); tạm hoãn widget tab.
       </td>
@@ -207,7 +207,7 @@ graph TD
 * **Bản chất chiến thuật:** Loại bỏ rào cản bắt buộc đăng nhập Số điện thoại ngay từ đầu; thực hiện luồng định danh mềm dẻo "Trao giá trị trước, thu thập thông tin sau".
 * **Điểm chạm Thu thập Gmail dựa trên Tiện ích (Utility-driven Email Opt-in):**
   * **Chuyên trang Tài chính & CIC (`momo.vn/diem-tin-dung`):** Người dùng nhập Email để nhận bản báo cáo phân tích chi tiết sức khỏe tín dụng và hướng dẫn nâng hạng tín dụng định kỳ.
-  * **Tiện ích Giao thông & Phạt Nguội (`momo.vn/tien-ich-giao-thong`):** Thu thập Email kèm biển số xe để thiết lập hệ thống **"Cảnh Báo Tự Động"** — gửi thông báo ngay lập tức qua Gmail mỗi khi phương tiện phát sinh lỗi vi phạm mới trên hệ thống C08.
+  * **Tiện ích Giao thông & Phạt Nguội (`momo.vn/tien-ich-giao-thong`):** Thu thập Email kèm biển số xe để thiết lập hệ thống **"Cảnh Báo Tự Động"** - gửi thông báo ngay lập tức qua Gmail mỗi khi phương tiện phát sinh lỗi vi phạm mới trên hệ thống C08.
   * **Bản tin Tài chính & Giá Vàng / Tỷ Giá:** Người dùng đăng ký nhận bản tin tóm tắt biến động thị trường vàng, ngoại tệ và lãi suất tiết kiệm hàng tuần.
   * **Cổng Sinh Viên (`momo.vn/sinh-vien`):** Thu thập Email sinh viên (.edu.vn hoặc Gmail) để gửi thông báo học bổng, sự kiện workshop và kích hoạt gói quyền lợi Student Pass.
 * **Giá trị Kinh doanh & Chuyển đổi Dài hạn:**

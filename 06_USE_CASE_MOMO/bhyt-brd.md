@@ -1,13 +1,13 @@
 # BRD: Bảo Hiểm Y Tế
 
-> - **Project:** BHYT Web Growth - MiniWeb Expansion + Blog Production
-> - **Main URL:** momo.vn/bao-hiem-y-te
-> - **Division:** FS (Financial Services - InsurTech)
+> - **Dự án:** BHYT Web Growth - MiniWeb Expansion + Blog Production
+> - **URL chính:** momo.vn/bao-hiem-y-te
+> - **Khối phụ trách:** FS (Financial Services - InsurTech)
 > - **Use Case:** Bảo Hiểm Y Tế
 > - **Owner:** Web Platform
-> - **Governance:** Web Product Lead (Hiến)
-> - **Version:** 1.2 - Tháng 7/2026
-> - **Status:** On Track (Updated Media Team Plan)
+> - **Phê duyệt:** Web Product Lead (Hiến)
+> - **Phiên bản:** 1.2 - Tháng 7/2026
+> - **Trạng thái:** On Track (Updated Media Team Plan)
 
 ---
 

@@ -1,0 +1,203 @@
+{
+  "file_source": "GA4 Data API (Property 270743103)",
+  "read_timestamp": "2026-11-11 11:06:10",
+  "report_type": "MTD 10 Ngày (01/11 - 10/11/2026)",
+  "days_elapsed": 10,
+  "days_in_month": 30,
+  "target_pv": 3829155,
+  "actual_mtd_pv": 1207981,
+  "progress_pct": 31.55,
+  "daily_pace": 120798.1,
+  "daily_needed": 131058.7,
+  "forecast_31d": 3623943.0,
+  "forecast_pct": 94.64,
+  "users": 502601,
+  "sessions": 656229,
+  "channels": {
+    "organic": {
+      "pv": 581941,
+      "pct": 48.17
+    },
+    "direct": {
+      "pv": 304430,
+      "pct": 25.2
+    },
+    "paid": {
+      "pv": 218011,
+      "pct": 18.05
+    },
+    "referral": {
+      "pv": 59808,
+      "pct": 4.95
+    },
+    "others": {
+      "pv": 43791,
+      "pct": 3.63
+    },
+    "ai_traffic": {
+      "pv": 9678,
+      "pct": 0.8
+    },
+    "non_paid_total": {
+      "pv": 989970,
+      "pct": 81.95
+    }
+  },
+  "hubs": {
+    "cinema": {
+      "pv": 310937,
+      "target": 1294630,
+      "pct": 24.02
+    },
+    "financial": {
+      "pv": 122678,
+      "target": 700000,
+      "pct": 17.53
+    },
+    "new_user": {
+      "pv": 34822,
+      "target": 300000,
+      "pct": 11.61
+    },
+    "vehicle": {
+      "pv": 49097,
+      "target": 100000,
+      "pct": 49.1
+    },
+    "insurance": {
+      "pv": 19143,
+      "target": 50000,
+      "pct": 38.29
+    },
+    "student": {
+      "pv": 1030,
+      "target": 100000,
+      "pct": 1.03
+    }
+  },
+  "cinema_breakdown": {
+    "Trang Rạp phim": 215330,
+    "Trang phim chi tiết": 63841,
+    "Cinema_Home Page": 21546,
+    "Cinema_Blog": 8774,
+    "Cinema_Landing Page": 1250,
+    "Tin tức": 196,
+    "Others": 0
+  },
+  "web_to_app_funnel": {
+    "source": "AppsFlyer GPD Attribution (07_REPORTS/data/analytics/gpd_momo_web_nov_2026.csv)",
+    "period": "01/11/2026 - 10/11/2026 (MTD 10 ngày)",
+    "total": {
+      "installs": 3171,
+      "reg": 864,
+      "map": 533,
+      "mau": 314,
+      "cvr_reg_pct": 27.25,
+      "cvr_map_pct": 61.69,
+      "cvr_install_to_map_pct": 16.81,
+      "cvr_end_to_end_pct": 9.9,
+      "daily_pace": {
+        "installs": 317.1,
+        "reg": 86.4,
+        "map": 53.3,
+        "mau": 31.4
+      },
+      "forecast_30d": {
+        "installs": 9513,
+        "reg": 2592,
+        "map": 1599,
+        "mau": 942
+      }
+    },
+    "campaign_groups": [
+      {
+        "group": "C.CHAOMOMO (Banner đại trà)",
+        "installs": 2763,
+        "share_pct": 87.13,
+        "reg": 772,
+        "cvr_reg_pct": 27.94,
+        "map": 479,
+        "cvr_map_pct": 62.05,
+        "mau": 275,
+        "cvr_end_to_end_pct": 9.95
+      },
+      {
+        "group": "Cinema Hub (Rạp phim & Lotte)",
+        "installs": 224,
+        "share_pct": 7.06,
+        "reg": 58,
+        "cvr_reg_pct": 25.89,
+        "map": 38,
+        "cvr_map_pct": 65.52,
+        "mau": 27,
+        "cvr_end_to_end_pct": 12.05
+      },
+      {
+        "group": "WEB_BRT_C.CHAOMOMO (Đổi quà)",
+        "installs": 58,
+        "share_pct": 1.83,
+        "reg": 16,
+        "cvr_reg_pct": 27.59,
+        "map": 8,
+        "cvr_map_pct": 50.0,
+        "mau": 5,
+        "cvr_end_to_end_pct": 8.62
+      },
+      {
+        "group": "Bảo Hiểm (InsurTech)",
+        "installs": 53,
+        "share_pct": 1.67,
+        "reg": 13,
+        "cvr_reg_pct": 24.53,
+        "map": 6,
+        "cvr_map_pct": 46.15,
+        "mau": 5,
+        "cvr_end_to_end_pct": 9.43
+      },
+      {
+        "group": "Merchant Hub (Đối tác)",
+        "installs": 42,
+        "share_pct": 1.32,
+        "reg": 3,
+        "cvr_reg_pct": 7.14,
+        "map": 1,
+        "cvr_map_pct": 33.33,
+        "mau": 1,
+        "cvr_end_to_end_pct": 2.38
+      },
+      {
+        "group": "Financial Health",
+        "installs": 31,
+        "share_pct": 0.98,
+        "reg": 2,
+        "cvr_reg_pct": 6.45,
+        "map": 1,
+        "cvr_map_pct": 50.0,
+        "mau": 1,
+        "cvr_end_to_end_pct": 3.23
+      }
+    ],
+    "platforms": {
+      "android": {
+        "installs": 1651,
+        "share_pct": 52.07,
+        "reg": 442,
+        "cvr_reg_pct": 26.77,
+        "map": 238,
+        "cvr_map_pct": 53.85,
+        "mau": 129,
+        "cvr_end_to_end_pct": 7.81
+      },
+      "ios": {
+        "installs": 1520,
+        "share_pct": 47.93,
+        "reg": 422,
+        "cvr_reg_pct": 27.76,
+        "map": 295,
+        "cvr_map_pct": 69.91,
+        "mau": 185,
+        "cvr_end_to_end_pct": 12.17
+      }
+    }
+  }
+}

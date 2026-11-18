@@ -264,7 +264,7 @@ Bảng tổng hợp 100% dung lượng 35.071 lượt truy vấn Q3/2026 đượ
 
 ## III. MA TRẬN KỊCH BẢN ĐIỀU HƯỚNG BỘ SEARCH TERM CHUNG CHỦ ĐỀ (SEARCH REDIRECTION MATRIX)
 
-Để tối ưu hóa trải nghiệm tìm kiếm và triệt tiêu ma sát tìm kiếm (Search Friction), MoSpark CMS thiết lập **Bảng Kịch Bản Điều Hướng Tự Động (Automation Redirection Matrix)** với nguyên tắc **1 Kịch Bản = 1 Link Đích Duy Nhất (1:1 Mapping)**. Khi người dùng nhập bất kỳ từ khóa nào nằm trong danh sách Match Rules (gồm cả từ gõ đúng, viết tắt, không dấu, hoặc từ đồng nghĩa), hệ thống lập tức hiển thị **Thẻ Gợi Ý Smart Card** và chuyển hướng thẳng đến **Link Đích (Destination Target URL)** chính thức trên `momo.vn`:
+Để tối ưu hóa trải nghiệm tìm kiếm và giảm rào cản thao tác tìm kiếm (Search Friction), MoSpark CMS thiết lập **Bảng Kịch Bản Điều Hướng Tự Động (Automation Redirection Matrix)** với nguyên tắc **1 Kịch Bản = 1 Link Đích Duy Nhất (1:1 Mapping)**. Khi người dùng nhập bất kỳ từ khóa nào nằm trong danh sách Match Rules (gồm cả từ gõ đúng, viết tắt, không dấu, hoặc từ đồng nghĩa), hệ thống lập tức hiển thị **Thẻ Gợi Ý Smart Card** và chuyển hướng thẳng đến **Link Đích (Destination Target URL)** chính thức trên `momo.vn`:
 
 <table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
   <thead>

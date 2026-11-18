@@ -1,10 +1,10 @@
 # Master BRD: Web-to-App New User Acquisition & Pre-install Personalization Engine
 
-> - **Project:** New User Hub & Web-to-App Personalization Journey
-> - **Division:** Growth Platform Division (GPD)
-> - **Owners:** Web Platform Team x User Growth Team
-> - **Version:** 2.0 · Tháng 8/2026
-> - **Status:** Active (Strategic Alignment & Execution)
+> - **Dự án:** New User Hub & Web-to-App Personalization Journey
+> - **Khối phụ trách:** Growth Platform Division (GPD)
+> - **Owner:** Web Platform Team x User Growth Team
+> - **Phiên bản:** 2.0 · Tháng 8/2026
+> - **Trạng thái:** Active (Strategic Alignment & Execution)
 
 ---
 
@@ -353,7 +353,7 @@ Thống nhất xây dựng **New User Master Hub (`momo.vn/welcome`)** làm tran
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Baseline Cũ (T7/2026)</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Thực tế Tháng 08/2026</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Thực tế Tháng 09/2026</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">MTD Tháng 10/2026 (22 Ngày)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Thực tế Tháng 10/2026 (Full Month)</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Mục tiêu H2 (Mỗi tháng)</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cơ sở & Phương pháp Đo lường</th>
     </tr>
@@ -364,7 +364,7 @@ Thống nhất xây dựng **New User Master Hub (`momo.vn/welcome`)** làm tran
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">948 users</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">1.818 users</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.276 users (~2.3K)</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center; font-weight:700; color:#16a34a;">1.719 users (Run-rate ~2.42K)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center; font-weight:700; color:#16a34a;">2.389 users (+5,0% MoM - Kỷ lục mới)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>5.000 users/tháng</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Người dùng mới hoàn tất đăng ký & liên kết ngân hàng qua Web-to-App.</td>
     </tr>
@@ -373,7 +373,7 @@ Thống nhất xây dựng **New User Master Hub (`momo.vn/welcome`)** làm tran
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">5.239 installs</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">10.041 installs</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">10.501 installs</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center; font-weight:700; color:#16a34a;">7.804 installs (Run-rate ~11.0K)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center; font-weight:700; color:#16a34a;">11.143 installs (+6,1% MoM)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>20.000 - 30.000 installs/tháng</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tổng lượt tải App ghi nhận attribution qua AppsFlyer OneLink.</td>
     </tr>
@@ -382,7 +382,7 @@ Thống nhất xây dựng **New User Master Hub (`momo.vn/welcome`)** làm tran
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">32.10%</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">32.10%</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">33.99%</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center; font-weight:700; color:#16a34a;">35.97%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center; font-weight:700; color:#16a34a;">35.02% (+1,03 p.p MoM)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>≥ 50.0% - 60.0%</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nâng cao nhờ cơ chế chọn quà trước và luồng Hybrid Onboarding tại momo.vn/welcome.</td>
     </tr>
@@ -391,7 +391,7 @@ Thống nhất xây dựng **New User Master Hub (`momo.vn/welcome`)** làm tran
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">536 MAU</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">1.029 MAU</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">1.328 MAU</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center; font-weight:700; color:#16a34a;">902 MAU (Run-rate ~1.27K)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center; font-weight:700; color:#16a34a;">1.284 MAU (Tiệm cận đỉnh T9)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>2.500 MAU/tháng</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Người dùng mới phát sinh ít nhất 1 giao dịch thực tế trên App.</td>
     </tr>
@@ -416,7 +416,7 @@ Nhằm tối ưu hóa đồng thời tốc độ chuyển đổi của quảng c
 
 1. **Luồng 1 - Performance Fast Track (Dành cho Paid Ads qua URL Parameter):**
    * **Cơ chế:** Khi người dùng nhấp từ quảng cáo có đính kèm tham số nhu cầu (ví dụ: `momo.vn/welcome?intent=cinema`), MoSpark Edge Node đọc tham số trong < 15ms và hiển thị **ngay lập tức** bộ Thẻ quà khớp với nội dung quảng cáo trong 0 giây chờ, không bắt làm khảo sát.
-   * **Mục tiêu:** Triệt tiêu ma sát ở Upper Funnel, giảm tối đa tỷ lệ thoát trang (Bounce Rate) và thúc đẩy hành động bấm nút "Tải App Nhận Quà".
+   * **Mục tiêu:** Giảm rào cản thao tác ở Upper Funnel, giảm tối đa tỷ lệ thoát trang (Bounce Rate) và thúc đẩy hành động nhấp vào nút "Tải App Nhận Quà".
 
 2. **Luồng 2 - Interactive Survey Track (Dành cho Direct / Organic Traffic):**
    * **Cơ chế:** Khi người dùng tự gõ địa chỉ `momo.vn/welcome` (hoặc vào từ Google không có tham số), trang Web hiển thị Bộ quà Mặc định (Best-Seller Pack) đính kèm **Khung trắc nghiệm Vibe Quiz 1-Click** (*"Cuối tuần có tiền, gu của bạn là gì?"* với 4 lựa chọn: Xem phim, Game & Data, F&B Mua sắm, Học tập).
@@ -424,7 +424,7 @@ Nhằm tối ưu hóa đồng thời tốc độ chuyển đổi của quảng c
 
 ### 2.3 Phân Khúc Thử Nghiệm Đầu Tiên: U18 & Back to School (`momo.vn/welcome`)
 * **Định vị:** Nhóm U18 (học sinh cấp 3 chuẩn bị bước vào Đại học / Tân sinh viên) được chọn làm phân khúc thử nghiệm đầu tiên (Validation Segment).
-* **Touchpoint chuyên biệt:** Trang Master Hub `momo.vn/welcome` đóng vai trò là cửa ngõ chính, thay thế cho các trang landing page ngắn hạn, tích hợp gói quà tân thủ và bộ voucher tiếp sức mùa nhập học.
+* **Touchpoint chuyên biệt:** Trang Master Hub `momo.vn/welcome` đóng vai trò là cửa ngõ chính, thay thế cho các trang landing page ngắn hạn, tích hợp gói quà người dùng mới và bộ voucher tiếp sức mùa nhập học.
 
 ### 2.4 Cửa Ngõ Tải Ứng Dụng Tiện Ích Độc Lập (`momo.vn/tai-app`)
 * **Định vị & Phân tách với `/download`:** Tách biệt hoàn toàn luồng Tải Ứng Dụng mới khỏi trang `/download` (vốn được ITC sử dụng riêng cho cơ chế ép Update App). Trang `momo.vn/tai-app` được thiết kế theo triết lý **Trung tâm Tiện ích Tải Ứng Dụng Thuần Túy (Zero Marketing Noise)**, không tiếp thị thẻ quà hay sự kiện có thời hạn.

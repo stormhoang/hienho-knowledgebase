@@ -1,29 +1,32 @@
-# KẾ HOẠCH NỘI DUNG CHUẨN (CONTENT PLAN V2 - SHIELDED) - USE CASE: VIETLOTT
+# KẾ HOẠCH NỘI DUNG CHUẨN (CONTENT PLAN V2 - SHIELDED) - THEME: VIETLOTT MEGA & POWER
 
-- **Use Case:** Vietlott
-- **Phân Khối Ngành:** Lottery
+- **Theme:** Vietlott Mega & Power
+- **Hub:** Lottery
 - **URL Pillar Hub:** `/vietlott/`
-- **Tổng từ khóa thô ban đầu:** 1,319 từ khóa
-- **Từ khóa nhiễu bị loại bỏ:** 91 từ khóa
-- **Từ khóa trùng Intent được gom cụm (Shielded):** 32 từ khóa
-- **Số lượng URLs phân bổ:** 9 URLs (1 Pillar Hub + 8 Cluster Pages)
+- **Tổng từ khóa thô ban đầu:** 1,464 từ khóa
+- **Từ khóa nhiễu bị loại bỏ:** 27 từ khóa
+- **Từ khóa nhường cho theme khác cùng Hub (chống trùng giữa các plan):** 15 từ khóa
+- **Từ khóa nhận từ CSV theme khác cùng Hub:** 234 từ khóa
+- **Từ khóa trùng Intent được gom cụm (Shielded):** 47 từ khóa
+- **Số lượng URLs phân bổ:** 10 URLs (1 Pillar Hub + 9 Cluster Pages)
 - **Quy tắc bảo vệ:** Mỗi URL giải quyết duy nhất 1 Intent độc lập. Các từ khóa cùng Intent đã được gom thành Secondary Synonyms (Zero Keyword Cannibalization).
 
 ---
 
 ## 1. BẢNG KẾ HOẠCH BÀI VIẾT CHI TIẾT (ACTIONABLE CONTENT PLAN)
 
-| STT | URL Slug | Tiêu Đề Bài Viết / Trang Đích | Primary Keyword | Secondary Synonyms (Đã Gom Chống Ăn Thịt) | Search Volume | Search Intent | Định Dạng Nội Dung | Phễu | Ưu Tiên | Điểm Chạm Web-to-App (CTA Hook) |
+| STT | URL Slug | Tiêu Đề Bài Viết / Trang Đích | Primary Keyword | Secondary Synonyms (Đã Gom Chống Ăn Thịt) | Search Volume | Search Intent | Định Dạng Nội Dung | Phễu | Đợt Sản Xuất | Điểm Chạm Web-to-App (CTA Hook) |
 | :---: | :--- | :--- | :--- | :--- | :---: | :---: | :--- | :---: | :---: | :--- |
-| 1 | `/vietlott/` | Cẩm Nang & Bảng Tra Cứu Vietlott Mega & Power Toàn Diện | `vietlott` | xổ số vietlott, vietlott 6 55 hôm nay, vietlott sms | 550,000 | `Informational` | Pillar Hub Page + Interactive Widget | `TOFU` | `P0` | Đặt Vé Số Vietlott Online Qua MoMo -> Deeplink: momo://lottery -> Event: web_lottery_btn_click |
-| 2 | `/vietlott/power-6-55/` | Power 6/55 Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết | `vietlott power 6 55` | power 6 55, vietlott power, xổ số power 6 55 | 143,190 | `Informational` | Educational Guide & FAQ | `TOFU` | `P0` | Đặt Vé Số Vietlott Online Qua MoMo -> Deeplink: momo://lottery -> Event: web_lottery_btn_click |
-| 3 | `/vietlott/mega-6-45/` | Mega 6/45 Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết | `mega 6 45` | xổ số mega 6 45, vietlott mega, mega vietlott | 133,120 | `Informational` | Educational Guide & FAQ | `TOFU` | `P0` | Đặt Vé Số Vietlott Online Qua MoMo -> Deeplink: momo://lottery -> Event: web_lottery_btn_click |
-| 4 | `/vietlott/dai-ly-mua-ve/` | Đại lý & Mua vé online Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết | `vietlott sms` | sms vietlott, vietlott online, vietlott sms mobifone | 131,880 | `Informational` | Educational Guide & FAQ | `TOFU` | `P0` | Đặt Vé Số Vietlott Online Qua MoMo -> Deeplink: momo://lottery -> Event: web_lottery_btn_click |
-| 5 | `/vietlott/keno/` | Keno Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết | `keno vietlott` | kết quả keno, vietlott keno, keno vietlott trực tiếp | 55,000 | `Informational` | Educational Guide & FAQ | `TOFU` | `P0` | Đặt Vé Số Vietlott Online Qua MoMo -> Deeplink: momo://lottery -> Event: web_lottery_btn_click |
-| 6 | `/vietlott/max-3d/` | Max 3D Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết | `max3d` | xổ số max 3d, kết quả max 3d, vietlott max 3d | 45,250 | `Informational` | Educational Guide & FAQ | `TOFU` | `P0` | Đặt Vé Số Vietlott Online Qua MoMo -> Deeplink: momo://lottery -> Event: web_lottery_btn_click |
-| 7 | `/vietlott/bingo-18/` | Bingo 18 Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết | `bingo18` | xs vietlott bingo, vietlott bingo18, app bingo18 | 2,120 | `Informational` | Educational Guide & FAQ | `TOFU` | `P0` | Đặt Vé Số Vietlott Online Qua MoMo -> Deeplink: momo://lottery -> Event: web_lottery_btn_click |
-| 8 | `/vietlott/co-cau-trung-thuong/` | Cơ cấu & Trúng thưởng Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết | `dò vé số vietlott` | vietlott trúng thưởng, vietlott giải thưởng, hướng dẫn dò vé số vietlott | 1,310 | `Informational` | Educational Guide & FAQ | `TOFU` | `P1` | Đặt Vé Số Vietlott Online Qua MoMo -> Deeplink: momo://lottery -> Event: web_lottery_btn_click |
-| 9 | `/vietlott/lien-he/` | Cổng dịch vụ & Liên hệ Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết | `tổng đài vietlott` | vietlott trang chủ, số điện thoại tổng đài vietlott, số tổng đài vietlott | 500 | `Navigational` | Educational Guide & FAQ | `TOFU` | `P2` | Đặt Vé Số Vietlott Online Qua MoMo -> Deeplink: momo://lottery -> Event: web_lottery_btn_click |
+| 1 | `/vietlott/` | Cẩm Nang & Bảng Tra Cứu Vietlott Mega & Power Toàn Diện | `vietlott` | xổ số vietlott, xs vietlott, vietlott bao nhiêu tiền | 916,570 | `Informational` | Pillar Hub Page + Interactive Widget | `TOFU` | `Đợt 1` | Đặt Vé Số Vietlott Online Qua MoMo -> Deeplink: momo://lottery -> Event: web_lottery_btn_click |
+| 2 | `/vietlott/cam-nang/` | Cẩm nang & Hỏi đáp Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết | `vietlott 6 55 hôm nay` | vietlott 6 45, vietlott 6 55, kết quả vietlott | 924,990 | `Informational` | Educational Guide & FAQ | `TOFU` | `Đợt 2` | Đặt Vé Số Vietlott Online Qua MoMo -> Deeplink: momo://lottery -> Event: web_lottery_btn_click |
+| 3 | `/vietlott/power-6-55/` | Power 6/55 Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết | `xổ số power` | vietlott power 6 55, power 6 55, vietlott power | 288,280 | `Informational` | Educational Guide & FAQ | `TOFU` | `Đợt 2` | Đặt Vé Số Vietlott Online Qua MoMo -> Deeplink: momo://lottery -> Event: web_lottery_btn_click |
+| 4 | `/vietlott/mega-6-45/` | Mega 6/45 Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết | `xổ số mega` | mega 6 45, mega 6 55, xổ số mega 6 45 | 272,760 | `Informational` | Educational Guide & FAQ | `TOFU` | `Đợt 2` | Đặt Vé Số Vietlott Online Qua MoMo -> Deeplink: momo://lottery -> Event: web_lottery_btn_click |
+| 5 | `/vietlott/keno/` | Keno Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết | `trực tiếp keno` | xổ số keno, keno trực tiếp, keno vietlott | 193,230 | `Informational` | Educational Guide & FAQ | `TOFU` | `Đợt 2` | Đặt Vé Số Vietlott Online Qua MoMo -> Deeplink: momo://lottery -> Event: web_lottery_btn_click |
+| 6 | `/vietlott/dai-ly-mua-ve/` | Đại lý & Mua vé online Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết | `vietlott sms` | sms vietlott, vietlott online, vietlott sms mobifone | 132,040 | `Informational` | Educational Guide & FAQ | `TOFU` | `Đợt 2` | Đặt Vé Số Vietlott Online Qua MoMo -> Deeplink: momo://lottery -> Event: web_lottery_btn_click |
+| 7 | `/vietlott/max-3d/` | Max 3D Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết | `max3d` | xổ số 3d, xổ số max 3d, xổ số max 3d pro | 61,500 | `Informational` | Educational Guide & FAQ | `TOFU` | `Đợt 2` | Đặt Vé Số Vietlott Online Qua MoMo -> Deeplink: momo://lottery -> Event: web_lottery_btn_click |
+| 8 | `/vietlott/bingo-18/` | Bingo 18 Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết | `bingo18` | xs vietlott bingo, xổ số bingo18, vietlott bingo18 | 2,230 | `Informational` | Educational Guide & FAQ | `TOFU` | `Đợt 1` | Đặt Vé Số Vietlott Online Qua MoMo -> Deeplink: momo://lottery -> Event: web_lottery_btn_click |
+| 9 | `/vietlott/co-cau-trung-thuong/` | Cơ cấu & Trúng thưởng Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết | `dò vé số vietlott` | vietlott trúng thưởng, vietlott giải thưởng, hướng dẫn dò vé số vietlott | 1,310 | `Informational` | Educational Guide & FAQ | `TOFU` | `Đợt 2` | Đặt Vé Số Vietlott Online Qua MoMo -> Deeplink: momo://lottery -> Event: web_lottery_btn_click |
+| 10 | `/vietlott/lien-he/` | Cổng dịch vụ & Liên hệ Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết | `tổng đài vietlott` | vietlott trang chủ, số điện thoại tổng đài vietlott, số tổng đài vietlott | 500 | `Navigational` | Educational Guide & FAQ | `TOFU` | `Đợt 3` | Đặt Vé Số Vietlott Online Qua MoMo -> Deeplink: momo://lottery -> Event: web_lottery_btn_click |
 
 ---
 
@@ -57,7 +60,7 @@ Dưới đây là cấu trúc dàn ý chuẩn E-E-A-T và chỉ tiêu dung lư�
 - **URL Slug:** `/vietlott/`
 - **Chỉ tiêu độ dài:** `2,500 - 3,500 từ` (Cấp bậc: `Master Hub Pillar`)
 - **Primary Keyword:** `vietlott`
-- **Secondary Synonyms:** xổ số vietlott, vietlott 6 55 hôm nay, vietlott sms, vietlott 6 45
+- **Secondary Synonyms:** xổ số vietlott, xs vietlott, vietlott bao nhiêu tiền, vietlott trúng 3 số được bao nhiêu tiền
 - **Dàn ý H2/H3 bắt buộc (SEO Entity Checklist):**
    - ## H2 1: Tổng quan & Khái niệm cốt lõi về vietlott
    - ## H2 2: Chi tiết các tiêu chí & Bảng tổng hợp số liệu mới nhất
@@ -65,47 +68,79 @@ Dưới đây là cấu trúc dàn ý chuẩn E-E-A-T và chỉ tiêu dung lư�
    - ## H2 4: Những sai lầm thường gặp và cách phòng tránh
    - ## H2 5: Câu hỏi thường gặp (FAQs) giải đáp thắc mắc về vietlott
    - ### H3 5.1: Xổ số vietlott?
-   - ### H3 5.2: Vietlott 6 55 hôm nay?
-   - ### H3 5.3: Vietlott sms?
+   - ### H3 5.2: Xs vietlott?
+   - ### H3 5.3: Vietlott bao nhiêu tiền?
    - ## H2 6: Giải pháp tối ưu quyền lợi và thao tác nhanh qua Ứng dụng MoMo
 
-### Bài 2: `Power 6/55 Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết`
+### Bài 2: `Cẩm nang & Hỏi đáp Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết`
+- **URL Slug:** `/vietlott/cam-nang/`
+- **Chỉ tiêu độ dài:** `2,500 - 3,500 từ` (Cấp bậc: `Master Hub Pillar`)
+- **Primary Keyword:** `vietlott 6 55 hôm nay`
+- **Secondary Synonyms:** vietlott 6 45, vietlott 6 55, kết quả vietlott, vietlott 6 45 hôm nay
+- **Dàn ý H2/H3 bắt buộc (SEO Entity Checklist):**
+   - ## H2 1: Tổng quan & Khái niệm cốt lõi về vietlott 6 55 hôm nay
+   - ## H2 2: Chi tiết các tiêu chí & Bảng tổng hợp số liệu mới nhất
+   - ## H2 3: 5 lưu ý quan trọng để đảm bảo an toàn và tối đa hóa quyền lợi
+   - ## H2 4: Những sai lầm thường gặp và cách phòng tránh
+   - ## H2 5: Câu hỏi thường gặp (FAQs) giải đáp thắc mắc về vietlott 6 55 hôm nay
+   - ### H3 5.1: Vietlott 6 45?
+   - ### H3 5.2: Vietlott 6 55?
+   - ### H3 5.3: Kết quả vietlott?
+   - ## H2 6: Giải pháp tối ưu quyền lợi và thao tác nhanh qua Ứng dụng MoMo
+
+### Bài 3: `Power 6/55 Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết`
 - **URL Slug:** `/vietlott/power-6-55/`
 - **Chỉ tiêu độ dài:** `2,500 - 3,500 từ` (Cấp bậc: `Master Hub Pillar`)
-- **Primary Keyword:** `vietlott power 6 55`
-- **Secondary Synonyms:** power 6 55, vietlott power, xổ số power 6 55, xổ số vietlott power
+- **Primary Keyword:** `xổ số power`
+- **Secondary Synonyms:** vietlott power 6 55, power 6 55, vietlott power, xổ số power 6 55
 - **Dàn ý H2/H3 bắt buộc (SEO Entity Checklist):**
-   - ## H2 1: Tổng quan & Khái niệm cốt lõi về vietlott power 6 55
+   - ## H2 1: Tổng quan & Khái niệm cốt lõi về xổ số power
    - ## H2 2: Chi tiết các tiêu chí & Bảng tổng hợp số liệu mới nhất
    - ## H2 3: 5 lưu ý quan trọng để đảm bảo an toàn và tối đa hóa quyền lợi
    - ## H2 4: Những sai lầm thường gặp và cách phòng tránh
-   - ## H2 5: Câu hỏi thường gặp (FAQs) giải đáp thắc mắc về vietlott power 6 55
-   - ### H3 5.1: Power 6 55?
-   - ### H3 5.2: Vietlott power?
-   - ### H3 5.3: Xổ số power 6 55?
+   - ## H2 5: Câu hỏi thường gặp (FAQs) giải đáp thắc mắc về xổ số power
+   - ### H3 5.1: Vietlott power 6 55?
+   - ### H3 5.2: Power 6 55?
+   - ### H3 5.3: Vietlott power?
    - ## H2 6: Giải pháp tối ưu quyền lợi và thao tác nhanh qua Ứng dụng MoMo
 
-### Bài 3: `Mega 6/45 Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết`
+### Bài 4: `Mega 6/45 Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết`
 - **URL Slug:** `/vietlott/mega-6-45/`
 - **Chỉ tiêu độ dài:** `2,500 - 3,500 từ` (Cấp bậc: `Master Hub Pillar`)
-- **Primary Keyword:** `mega 6 45`
-- **Secondary Synonyms:** xổ số mega 6 45, vietlott mega, mega vietlott, vietlott mega 6 45
+- **Primary Keyword:** `xổ số mega`
+- **Secondary Synonyms:** mega 6 45, mega 6 55, xổ số mega 6 45, vietlott mega
 - **Dàn ý H2/H3 bắt buộc (SEO Entity Checklist):**
-   - ## H2 1: Tổng quan & Khái niệm cốt lõi về mega 6 45
+   - ## H2 1: Tổng quan & Khái niệm cốt lõi về xổ số mega
    - ## H2 2: Chi tiết các tiêu chí & Bảng tổng hợp số liệu mới nhất
    - ## H2 3: 5 lưu ý quan trọng để đảm bảo an toàn và tối đa hóa quyền lợi
    - ## H2 4: Những sai lầm thường gặp và cách phòng tránh
-   - ## H2 5: Câu hỏi thường gặp (FAQs) giải đáp thắc mắc về mega 6 45
-   - ### H3 5.1: Xổ số mega 6 45?
-   - ### H3 5.2: Vietlott mega?
-   - ### H3 5.3: Mega vietlott?
+   - ## H2 5: Câu hỏi thường gặp (FAQs) giải đáp thắc mắc về xổ số mega
+   - ### H3 5.1: Mega 6 45?
+   - ### H3 5.2: Mega 6 55?
+   - ### H3 5.3: Xổ số mega 6 45?
    - ## H2 6: Giải pháp tối ưu quyền lợi và thao tác nhanh qua Ứng dụng MoMo
 
-### Bài 4: `Đại lý & Mua vé online Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết`
+### Bài 5: `Keno Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết`
+- **URL Slug:** `/vietlott/keno/`
+- **Chỉ tiêu độ dài:** `2,500 - 3,500 từ` (Cấp bậc: `Master Hub Pillar`)
+- **Primary Keyword:** `trực tiếp keno`
+- **Secondary Synonyms:** xổ số keno, keno trực tiếp, keno vietlott, kết quả keno
+- **Dàn ý H2/H3 bắt buộc (SEO Entity Checklist):**
+   - ## H2 1: Tổng quan & Khái niệm cốt lõi về trực tiếp keno
+   - ## H2 2: Chi tiết các tiêu chí & Bảng tổng hợp số liệu mới nhất
+   - ## H2 3: 5 lưu ý quan trọng để đảm bảo an toàn và tối đa hóa quyền lợi
+   - ## H2 4: Những sai lầm thường gặp và cách phòng tránh
+   - ## H2 5: Câu hỏi thường gặp (FAQs) giải đáp thắc mắc về trực tiếp keno
+   - ### H3 5.1: Xổ số keno?
+   - ### H3 5.2: Keno trực tiếp?
+   - ### H3 5.3: Keno vietlott?
+   - ## H2 6: Giải pháp tối ưu quyền lợi và thao tác nhanh qua Ứng dụng MoMo
+
+### Bài 6: `Đại lý & Mua vé online Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết`
 - **URL Slug:** `/vietlott/dai-ly-mua-ve/`
 - **Chỉ tiêu độ dài:** `2,500 - 3,500 từ` (Cấp bậc: `Master Hub Pillar`)
 - **Primary Keyword:** `vietlott sms`
-- **Secondary Synonyms:** sms vietlott, vietlott online, vietlott sms mobifone, vietlott sms viettel
+- **Secondary Synonyms:** sms vietlott, vietlott online, vietlott sms mobifone, vietlott sms vinaphone
 - **Dàn ý H2/H3 bắt buộc (SEO Entity Checklist):**
    - ## H2 1: Tổng quan & Khái niệm cốt lõi về vietlott sms
    - ## H2 2: Chi tiết các tiêu chí & Bảng tổng hợp số liệu mới nhất
@@ -117,43 +152,27 @@ Dưới đây là cấu trúc dàn ý chuẩn E-E-A-T và chỉ tiêu dung lư�
    - ### H3 5.3: Vietlott sms mobifone?
    - ## H2 6: Giải pháp tối ưu quyền lợi và thao tác nhanh qua Ứng dụng MoMo
 
-### Bài 5: `Keno Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết`
-- **URL Slug:** `/vietlott/keno/`
-- **Chỉ tiêu độ dài:** `2,500 - 3,500 từ` (Cấp bậc: `Master Hub Pillar`)
-- **Primary Keyword:** `keno vietlott`
-- **Secondary Synonyms:** kết quả keno, vietlott keno, keno vietlott trực tiếp, dò keno
-- **Dàn ý H2/H3 bắt buộc (SEO Entity Checklist):**
-   - ## H2 1: Tổng quan & Khái niệm cốt lõi về keno vietlott
-   - ## H2 2: Chi tiết các tiêu chí & Bảng tổng hợp số liệu mới nhất
-   - ## H2 3: 5 lưu ý quan trọng để đảm bảo an toàn và tối đa hóa quyền lợi
-   - ## H2 4: Những sai lầm thường gặp và cách phòng tránh
-   - ## H2 5: Câu hỏi thường gặp (FAQs) giải đáp thắc mắc về keno vietlott
-   - ### H3 5.1: Kết quả keno?
-   - ### H3 5.2: Vietlott keno?
-   - ### H3 5.3: Keno vietlott trực tiếp?
-   - ## H2 6: Giải pháp tối ưu quyền lợi và thao tác nhanh qua Ứng dụng MoMo
-
-### Bài 6: `Max 3D Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết`
+### Bài 7: `Max 3D Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết`
 - **URL Slug:** `/vietlott/max-3d/`
 - **Chỉ tiêu độ dài:** `2,500 - 3,500 từ` (Cấp bậc: `Master Hub Pillar`)
 - **Primary Keyword:** `max3d`
-- **Secondary Synonyms:** xổ số max 3d, kết quả max 3d, vietlott max 3d, kết quả xổ số max 3d
+- **Secondary Synonyms:** xổ số 3d, xổ số max 3d, xổ số max 3d pro, xổ số max 3d pro hôm nay
 - **Dàn ý H2/H3 bắt buộc (SEO Entity Checklist):**
    - ## H2 1: Tổng quan & Khái niệm cốt lõi về max3d
    - ## H2 2: Chi tiết các tiêu chí & Bảng tổng hợp số liệu mới nhất
    - ## H2 3: 5 lưu ý quan trọng để đảm bảo an toàn và tối đa hóa quyền lợi
    - ## H2 4: Những sai lầm thường gặp và cách phòng tránh
    - ## H2 5: Câu hỏi thường gặp (FAQs) giải đáp thắc mắc về max3d
-   - ### H3 5.1: Xổ số max 3d?
-   - ### H3 5.2: Kết quả max 3d?
-   - ### H3 5.3: Vietlott max 3d?
+   - ### H3 5.1: Xổ số 3d?
+   - ### H3 5.2: Xổ số max 3d?
+   - ### H3 5.3: Xổ số max 3d pro?
    - ## H2 6: Giải pháp tối ưu quyền lợi và thao tác nhanh qua Ứng dụng MoMo
 
-### Bài 7: `Bingo 18 Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết`
+### Bài 8: `Bingo 18 Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết`
 - **URL Slug:** `/vietlott/bingo-18/`
 - **Chỉ tiêu độ dài:** `1,200 - 1,600 từ` (Cấp bậc: `Educational Spoke`)
 - **Primary Keyword:** `bingo18`
-- **Secondary Synonyms:** xs vietlott bingo, vietlott bingo18, app bingo18, bingo18 app
+- **Secondary Synonyms:** xs vietlott bingo, xổ số bingo18, vietlott bingo18, app bingo18
 - **Dàn ý H2/H3 bắt buộc (SEO Entity Checklist):**
    - ## H2 1: Tổng quan & Khái niệm cốt lõi về bingo18
    - ## H2 2: Chi tiết các tiêu chí & Bảng tổng hợp số liệu mới nhất
@@ -161,11 +180,11 @@ Dưới đây là cấu trúc dàn ý chuẩn E-E-A-T và chỉ tiêu dung lư�
    - ## H2 4: Những sai lầm thường gặp và cách phòng tránh
    - ## H2 5: Câu hỏi thường gặp (FAQs) giải đáp thắc mắc về bingo18
    - ### H3 5.1: Xs vietlott bingo?
-   - ### H3 5.2: Vietlott bingo18?
-   - ### H3 5.3: App bingo18?
+   - ### H3 5.2: Xổ số bingo18?
+   - ### H3 5.3: Vietlott bingo18?
    - ## H2 6: Giải pháp tối ưu quyền lợi và thao tác nhanh qua Ứng dụng MoMo
 
-### Bài 8: `Cơ cấu & Trúng thưởng Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết`
+### Bài 9: `Cơ cấu & Trúng thưởng Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết`
 - **URL Slug:** `/vietlott/co-cau-trung-thuong/`
 - **Chỉ tiêu độ dài:** `1,200 - 1,600 từ` (Cấp bậc: `Educational Spoke`)
 - **Primary Keyword:** `dò vé số vietlott`
@@ -181,7 +200,7 @@ Dưới đây là cấu trúc dàn ý chuẩn E-E-A-T và chỉ tiêu dung lư�
    - ### H3 5.3: Hướng dẫn dò vé số vietlott?
    - ## H2 6: Giải pháp tối ưu quyền lợi và thao tác nhanh qua Ứng dụng MoMo
 
-### Bài 9: `Cổng dịch vụ & Liên hệ Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết`
+### Bài 10: `Cổng dịch vụ & Liên hệ Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết`
 - **URL Slug:** `/vietlott/lien-he/`
 - **Chỉ tiêu độ dài:** `1,200 - 1,600 từ` (Cấp bậc: `Educational Spoke`)
 - **Primary Keyword:** `tổng đài vietlott`
@@ -224,7 +243,7 @@ Dưới đây là cấu trúc dàn ý chuẩn E-E-A-T và chỉ tiêu dung lư�
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Vietlott",
+      "name": "Vietlott Mega & Power",
       "item": "https://momo.vn/vietlott"
     }
   ]
@@ -236,14 +255,22 @@ Dưới đây là cấu trúc dàn ý chuẩn E-E-A-T và chỉ tiêu dung lư�
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "name": "Hỏi đáp thường gặp về Vietlott",
+  "name": "Hỏi đáp thường gặp về Vietlott Mega & Power",
   "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Cẩm nang & Hỏi đáp Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Thông tin chi tiết về vietlott 6 55 hôm nay được cập nhật chính xác và minh bạch tại MoMo Web Platform. Người dùng có thể tra cứu và thực hiện tiện ích trực tiếp trên ứng dụng MoMo."
+      }
+    },
     {
       "@type": "Question",
       "name": "Power 6/55 Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Thông tin chi tiết về vietlott power 6 55 được cập nhật chính xác và minh bạch tại MoMo Web Platform. Người dùng có thể tra cứu và thực hiện tiện ích trực tiếp trên ứng dụng MoMo."
+        "text": "Thông tin chi tiết về xổ số power được cập nhật chính xác và minh bạch tại MoMo Web Platform. Người dùng có thể tra cứu và thực hiện tiện ích trực tiếp trên ứng dụng MoMo."
       }
     },
     {
@@ -251,15 +278,7 @@ Dưới đây là cấu trúc dàn ý chuẩn E-E-A-T và chỉ tiêu dung lư�
       "name": "Mega 6/45 Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Thông tin chi tiết về mega 6 45 được cập nhật chính xác và minh bạch tại MoMo Web Platform. Người dùng có thể tra cứu và thực hiện tiện ích trực tiếp trên ứng dụng MoMo."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Đại lý & Mua vé online Vietlott Mega & Power: Hướng Dẫn & Tra Cứu Chi Tiết?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Thông tin chi tiết về vietlott sms được cập nhật chính xác và minh bạch tại MoMo Web Platform. Người dùng có thể tra cứu và thực hiện tiện ích trực tiếp trên ứng dụng MoMo."
+        "text": "Thông tin chi tiết về xổ số mega được cập nhật chính xác và minh bạch tại MoMo Web Platform. Người dùng có thể tra cứu và thực hiện tiện ích trực tiếp trên ứng dụng MoMo."
       }
     }
   ]
@@ -276,14 +295,14 @@ Phân tầng dòng chảy uy tín trang (PageRank) và định vị chuyên môn
 - **Trang Cột Trụ Cấp 1:** `[Xổ Số & Trúng Thưởng](/xo-so)`
 - **Anchor Text Mỏ Neo:** `"Tra cứu kết quả & Vé số Vietlott MoMo"`
 
-### B. Liên kết ngang cùng ngành (Peer In-Silo):
-| Thứ tự | Use Case Bổ Trợ | Đường Dẫn Khuyến Nghị | Anchor Text Tự Nhiên | Độ Tương Đồng | Search Volume |
+### B. Liên kết ngang cùng Hub (Peer In-Silo):
+| Thứ tự | Theme Bổ Trợ | Đường Dẫn Khuyến Nghị | Anchor Text Tự Nhiên | Độ Tương Đồng | Search Volume |
 | :---: | :--- | :--- | :--- | :---: | :---: |
-| 1 | `Xổ Số Kiến Thiết 3 Miền` | `/xo-so/` | `xsmn` | `0.0` | 1,453,751,220 |
-| 2 | `Dò Vé Số Trực Tuyến` | `/ve-so/` | `dò vé số` | `0.0` | 532,760 |
+| 1 | `Dò Vé Số Trực Tuyến` | `/ve-so/` | `dò vé số` | `0.094` | 532,760 |
+| 2 | `Xổ Số Kiến Thiết 3 Miền` | `/xo-so/` | `xổ số miền nam` | `0.0` | 1,453,751,220 |
 
-### C. Cầu nối liên kết xuyên ngành (Cross-Silo Bridges):
-| Thứ tự | Use Case Đích | Phân Khối Ngành | Đường Dẫn Khuyến Nghị | Anchor Text Móc Nối | Search Volume |
+### C. Cầu nối liên kết xuyên Hub (Cross-Silo Bridges):
+| Thứ tự | Theme Đích | Hub | Đường Dẫn Khuyến Nghị | Anchor Text Móc Nối | Search Volume |
 | :---: | :--- | :--- | :--- | :--- | :---: |
 
 ---
@@ -293,14 +312,14 @@ Phân tầng dòng chảy uy tín trang (PageRank) và định vị chuyên môn
 Cung cấp sẵn khối thông tin trích dẫn phục vụ trực tiếp cho Google AI Overviews, SearchGPT, Perplexity và Gemini:
 
 ### A. Đoạn trích dẫn trực tiếp (Direct Answer Snippet - 40-60 từ):
-> "Vietlott là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến vietlott một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút."
+> "Vietlott là tiện ích theo dõi kết quả mở thưởng xổ số kiến thiết 3 miền và xổ số điện toán Vietlott theo thời gian thực từ các hội đồng quay thưởng chính thức, cung cấp bảng thống kê giải thưởng minh bạch và hướng dẫn quy trình lĩnh thưởng hợp pháp theo quy định của Bộ Tài chính."
 
 ### B. Bảng thuộc tính thực thể (Entity Knowledge Graph Factsheet):
 | Thuộc Tính Thực Thể | Giá Trị Chuẩn Hóa |
 | :--- | :--- |
-| Phân loại giải pháp | Tiện ích Web Lottery - MoMo Web Platform |
-| Đối tượng áp dụng | Toàn bộ người dùng cá nhân có nhu cầu tra cứu và giao dịch trực tuyến |
-| Thời gian xử lý | Xử lý tức thì (Real-time), hỗ trợ 24/7 không phụ thuộc giờ hành chính |
-| Hạ tầng kỹ thuật | Kết nối API trực tiếp từ hệ thống đối tác liên kết chính thức |
-| Tiêu chuẩn bảo mật | Bảo mật đa tầng, đạt chứng chỉ bảo mật quốc tế PCI DSS Level 1 |
-| Kênh thao tác liền mạch | Trình duyệt Web (Desktop/Mobile) kết hợp chuyển tiếp Web-to-App MoMo |
+| Đơn vị phát hành chính thức | Công ty TNHH MTV Xổ số Kiến thiết 3 miền & Xổ số Điện toán Việt Nam (Vietlott) |
+| Cơ cấu giá trị giải thưởng | Giải Đặc biệt 2 tỷ đồng (XSKT truyền thống) hoặc Jackpot từ 12 đến 30 tỷ (Vietlott) |
+| Khung giờ quay số mở thưởng | 16h15 (Miền Nam), 17h15 (Miền Trung), 18h15 (Miền Bắc) & 18h00 (Vietlott) |
+| Thời hạn lĩnh thưởng hợp lệ | Trong vòng 30 ngày kể từ ngày công bố kết quả mở thưởng chính thức |
+| Nghĩa vụ thuế khi trúng thưởng | Khấu trừ thuế TNCN 10% đối với phần tiền thưởng vượt trên 10.000.000 VNĐ |
+| Cơ chế giám sát quay số | Hội đồng Giám sát Xổ số theo quy định của Bộ Tài chính và cơ quan thanh tra |

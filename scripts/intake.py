@@ -15,7 +15,6 @@ Su dung:
   python3 scripts/intake.py --scan --push          # xu ly + push
   python3 scripts/intake.py --file <path> [--push] # xu ly 1 file cu the
   python3 scripts/intake.py --verify               # health check
-  python3 scripts/intake.py --rollover             # tao file tuan tiep theo tu template
 
 Drop zone: ~/Downloads/intake/
 Quarantine: 13_INTAKE/quarantine/
@@ -40,7 +39,7 @@ HASHES_PATH = os.path.join(DATA_DIR, "processed_hashes.json")
 LOG_PATH = os.path.join(DATA_DIR, "push_log.jsonl")
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from intake_parsers import registry, parse_tracking, parse_crawl, parse_backlink, parse_tasks  # noqa: E402
+from intake_parsers import registry, parse_tracking, parse_crawl, parse_backlink  # noqa: E402
 
 # Sanity bounds cho tracking (PV MTD)
 TRACKING_PV_MIN = 50_000
@@ -103,15 +102,13 @@ def validate_tracking(summary):
     return True, "ok"
 
 
-def run_parser(fmt, file_path, week=None, overwrite=False):
+def run_parser(fmt, file_path):
     if fmt == registry.TRACKING:
         return parse_tracking.parse(file_path)
     if fmt == registry.CRAWL:
         return parse_crawl.parse(file_path)
     if fmt == registry.BACKLINK:
         return parse_backlink.parse(file_path)
-    if fmt == registry.TASKS:
-        return parse_tasks.parse(file_path, week=week, overwrite=overwrite)
     raise RuntimeError(f"Khong co parser cho format {fmt}")
 
 
@@ -139,7 +136,7 @@ def push_to_hubs(targets):
     return ok, "; ".join(msgs) if msgs else "khong co gi de push"
 
 
-def process_file(file_path, do_push=False, week=None, overwrite=False):
+def process_file(file_path, do_push=False):
     """Xu ly 1 file: detect -> parse -> (validate) -> push -> log."""
     digest = sha256_of(file_path)
     hashes = load_hashes()
@@ -160,7 +157,7 @@ def process_file(file_path, do_push=False, week=None, overwrite=False):
         return {"file": name, "status": "quarantine"}
 
     try:
-        result = run_parser(fmt, file_path, week=week, overwrite=overwrite)
+        result = run_parser(fmt, file_path)
     except Exception as e:
         print(f"[PARSE FAIL] {e}")
         log_event({"file": name, "hash": digest, "format": fmt, "status": "parse_fail", "error": str(e)})
@@ -201,7 +198,7 @@ def process_file(file_path, do_push=False, week=None, overwrite=False):
     return {"file": name, "status": status, "format": fmt, "push": push_msg}
 
 
-def scan_intake(do_push=False, week=None, overwrite=False):
+def scan_intake(do_push=False):
     os.makedirs(INTAKE_DIR, exist_ok=True)
     files = sorted(
         os.path.join(INTAKE_DIR, f)
@@ -214,7 +211,7 @@ def scan_intake(do_push=False, week=None, overwrite=False):
     print(f"Phat hien {len(files)} file trong intake zone.")
     results = []
     for fp in files:
-        results.append(process_file(fp, do_push=do_push, week=week, overwrite=overwrite))
+        results.append(process_file(fp, do_push=do_push))
     return results
 
 
@@ -255,128 +252,12 @@ def verify_health():
     return all_ok
 
 
-def _parse_week_open_tasks(week_path):
-    """Parse 1 file week, tra ve list dict task chua Done (To Do / In Progress / Blocked).
-    Moi dict: {title, ac, pic, coop, status, section}
-    """
-    if not os.path.exists(week_path):
-        return []
-    with open(week_path, "r", encoding="utf-8") as f:
-        lines = f.read().splitlines()
-
-    tasks = []
-    current_section = ""
-    table_started = False
-    for ln in lines:
-        if ln.startswith("### "):
-            current_section = re.sub(r"^\d+\.\s*", "", ln[4:].strip())
-            table_started = False
-            continue
-        if ln.startswith("|") and "Hạng mục Công việc" in ln:
-            table_started = True
-            continue
-        if table_started and ln.startswith("| :---"):
-            continue
-        if table_started and ln.startswith("|"):
-            cols = [c.strip() for c in ln.strip().split("|")[1:-1]]
-            if len(cols) >= 5:
-                status_raw = cols[4].strip().strip("`")
-                if status_raw != "Done":
-                    tasks.append({
-                        "title": cols[0],
-                        "ac": cols[1],
-                        "pic": cols[2],
-                        "coop": cols[3],
-                        "status": status_raw,
-                        "section": current_section,
-                    })
-        elif table_started and not ln.startswith("|"):
-            table_started = False
-    return tasks
-
-
-def rollover_week():
-    """Tao file tuan tiep theo tu template + carry-forward task chua Done tu tuan truoc."""
-    template = os.path.join(BASE_DIR, "12_TASK_MANAGEMENT/templates/weekly_task_template.md")
-    if not os.path.exists(template):
-        print(f"Khong tim thay template: {template}")
-        return
-    month_dirs = sorted(glob_month_dirs())
-    if not month_dirs:
-        print("Chua co thu muc thang nao trong 12_TASK_MANAGEMENT.")
-        return
-    month_dir = month_dirs[-1]
-    existing = sorted(f for f in os.listdir(month_dir) if f.startswith("week_"))
-    if not existing:
-        print("Thang chua co file tuan nao.")
-        return
-    last_week = max(int(f.split("_")[1].split(".")[0]) for f in existing)
-    next_week = last_week + 1
-    if next_week > 4:
-        print("Da du 4 tuan trong thang, khong tao them.")
-        return
-    target = os.path.join(month_dir, f"week_{next_week:02d}.md")
-    if os.path.exists(target):
-        print(f"{target} da ton tai.")
-        return
-
-    # Parse open tasks tu tuan truoc
-    prev_week_path = os.path.join(month_dir, f"week_{last_week:02d}.md")
-    open_tasks = _parse_week_open_tasks(prev_week_path)
-
-    with open(template, "r", encoding="utf-8") as f:
-        content = f.read()
-    content = content.replace("[X]", str(next_week))
-    now = datetime.now()
-    content = content.replace("[DD/MM]", now.strftime("%d/%m")).replace("[MM/YYYY]", now.strftime("%m/%Y"))
-
-    # Append carry-forward section neu co open task
-    if open_tasks:
-        carry_lines = [
-            "",
-            "---",
-            "",
-            f"## CARRY-FORWARD TỪ TUẦN {last_week} (chưa Done)",
-            "",
-            f"> {len(open_tasks)} đầu việc từ Tuần {last_week} chưa hoàn thành, tự động chuyển tiếp.",
-            "",
-        ]
-        # Gom theo section
-        by_section = {}
-        for t in open_tasks:
-            by_section.setdefault(t["section"], []).append(t)
-        for sec, sec_tasks in by_section.items():
-            carry_lines.append(f"### {sec}")
-            carry_lines.append("")
-            carry_lines.append("| Hạng mục Công việc | Mô tả Chi tiết & Tiêu chí Hoàn thành (AC) | PIC Chính | Phối hợp | Trạng thái |")
-            carry_lines.append("| :--- | :--- | :--- | :--- | :---: |")
-            for t in sec_tasks:
-                ac_marked = f"{t['ac']} [carry từ Tuần {last_week}]"
-                carry_lines.append(f"| {t['title']} | {ac_marked} | {t['pic']} | {t['coop']} | `{t['status']}` |")
-            carry_lines.append("")
-        content = content.rstrip() + "\n" + "\n".join(carry_lines) + "\n"
-
-    with open(target, "w", encoding="utf-8") as f:
-        f.write(content)
-    carry_msg = f" + carry-forward {len(open_tasks)} task chua Done" if open_tasks else ""
-    print(f"Da tao {target} tu template{carry_msg}.")
-    log_event({"file": os.path.basename(target), "format": "rollover", "status": "created", "push": [], "carry_forward": len(open_tasks)})
-
-
-def glob_month_dirs():
-    import glob as _glob
-    return _glob.glob(os.path.join(BASE_DIR, "12_TASK_MANAGEMENT", "????-??"))
-
-
 def main():
     ap = argparse.ArgumentParser(description="Intake Agent: drop file -> push hubs-momo")
     ap.add_argument("--scan", action="store_true", help="Quet intake folder xu ly tat ca file moi")
     ap.add_argument("--file", help="Xu ly 1 file cu the")
     ap.add_argument("--push", action="store_true", help="Thuc te push sang hubs-momo (mac dinh chi dry-run)")
     ap.add_argument("--verify", action="store_true", help="Health check pipeline")
-    ap.add_argument("--rollover", action="store_true", help="Tao file tuan tiep theo tu template")
-    ap.add_argument("--week", type=int, help="Ghi vao week_XX cu the (cho task parser)")
-    ap.add_argument("--overwrite", action="store_true", help="Cho phep ghi de week file da ton tai (task parser)")
     ap.add_argument("--sync-inventory", action="store_true", help="Gom cum toan bo Inventory va push sang hubs-momo")
     args = ap.parse_args()
 
@@ -388,16 +269,12 @@ def main():
     if args.verify:
         verify_health()
         return
-    if args.rollover:
-        rollover_week()
-        return
-
     if args.file:
-        process_file(args.file, do_push=args.push, week=args.week, overwrite=args.overwrite)
+        process_file(args.file, do_push=args.push)
         return
 
-    if args.scan or not (args.verify or args.rollover or args.file):
-        scan_intake(do_push=args.push, week=args.week, overwrite=args.overwrite)
+    if args.scan or not (args.verify or args.file):
+        scan_intake(do_push=args.push)
         return
 
 

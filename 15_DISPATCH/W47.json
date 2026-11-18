@@ -1,0 +1,202 @@
+{
+  "id": "W47",
+  "lenhGoc": "Kế hoạch & Phân công đầu việc Tuần 47 (W47: 16/11 - 22/11/2026) cho Nhật Bùi và Thuận Võ",
+  "taoLucHienThi": "16/11/2026 17:05",
+  "duAn": "Web Platform",
+  "tomTat": "Kế hoạch tác vụ Tuần 47 (W47: 16/11 - 22/11/2026): Nhật Bùi (Puck Editor & Tiptap) và Thuận Võ (Retarget Ads, Tool Khấu Trừ, Soundbox iPOS, Component BHXM, Project Unbox)",
+  "hanChot": "2026-11-22",
+  "phanCong": [
+    {
+      "nguoi": "Nhật",
+      "trangThai": "cho-xac-nhan",
+      "viecCanLam": "Puck Editor: Nâng cấp Section Long Content (Template 2) có chia mục lục (TOC tự động theo H2/H3) và bổ sung Rating/Count ở Hero Section map Schema AggregateRating",
+      "phuThuoc": [
+        "Hoan (kiểm thử biên tập bài viết thực tế trên CMS)",
+        "Hiến (review trải nghiệm và ký duyệt Product Sign-off)"
+      ],
+      "canHienCungCap": [
+        "Giao diện mẫu hoặc prototype khối TOC và Rating Hero Section",
+        "Quy chuẩn Schema JSON-LD AggregateRating"
+      ],
+      "timeline": [
+        {
+          "moc": "Hoàn thiện Props cấu hình và UI Rating/Count Hero",
+          "ngay": "2026-11-18"
+        },
+        {
+          "moc": "Hoàn thiện tự động trích xuất TOC H2/H3 và cuộn mượt",
+          "ngay": "2026-11-19"
+        },
+        {
+          "moc": "Nghiệm thu trên Staging và bàn giao Hoan kiểm thử",
+          "ngay": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "nguoi": "Nhật",
+      "trangThai": "cho-xac-nhan",
+      "viecCanLam": "Tiptap Editor: Chỉnh sửa Edit Internal/External Link trực quan, tách 2 tab rõ ràng, hỗ trợ autocomplete URL nội bộ và tự động gắn thuộc tính SEO (target, nofollow, noopener)",
+      "phuThuoc": [
+        "Hoan (kiểm thử thao tác biên tập nội dung blog)",
+        "Hiến (nghiệm thu UX)"
+      ],
+      "canHienCungCap": [
+        "Danh mục các tiền tố URL Hubs nội bộ để cấu hình gợi ý tự động",
+        "Quy chuẩn gán thẻ nofollow cho External Links"
+      ],
+      "timeline": [
+        {
+          "moc": "Xây dựng Popover Edit Link tách 2 tab Internal/External",
+          "ngay": "2026-11-18"
+        },
+        {
+          "moc": "Tích hợp phím tắt, nút unlink và preview link",
+          "ngay": "2026-11-19"
+        },
+        {
+          "moc": "Deploy Staging và nghiệm thu với ban biên tập",
+          "ngay": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "nguoi": "Thuận",
+      "trangThai": "cho-xac-nhan",
+      "viecCanLam": "Retarget Ads: Kiểm thử toàn diện luồng lưu vết 1st-party cookie momo_retarget_intent (TTL 30 ngày) và hiển thị thanh Smart Resume Dock trên môi trường Demo/Staging",
+      "phuThuoc": [
+        "Hiến (kiểm tra kịch bản kiểm thử và nghiệm thu luồng bám đuổi)",
+        "Lộc (hỗ trợ cấu hình cookie domain nếu cần)"
+      ],
+      "canHienCungCap": [
+        "Kịch bản kiểm thử Trang A (thoát form) và Trang B (bật Smart Resume Dock)",
+        "Xác nhận thời gian tạm ẩn dismiss cooldown (3 ngày)"
+      ],
+      "timeline": [
+        {
+          "moc": "Cài đặt và kiểm tra logic ghi/đọc cookie kèm localStorage",
+          "ngay": "2026-11-17"
+        },
+        {
+          "moc": "Kiểm thử hiển thị Smart Resume Dock và nút Tiếp tục",
+          "ngay": "2026-11-18"
+        },
+        {
+          "moc": "Kiểm thử dọn dẹp cookie khi đạt Goal và nghiệm thu Demo",
+          "ngay": "2026-11-19"
+        }
+      ]
+    },
+    {
+      "nguoi": "Thuận",
+      "trangThai": "cho-xac-nhan",
+      "viecCanLam": "Insurtech: Sửa Công cụ Mức Khấu Trừ Bảo Hiểm Ô Tô theo số liệu chốt từ BU Bảo hiểm (khớp 4 nấc khấu trừ, tỷ lệ giảm phí hàng năm, slider mobile) trước khi phát hành lên trang bảo hiểm thân vỏ",
+      "phuThuoc": [
+        "Insurtech BU (xác nhận bảng tỷ lệ giảm phí theo từng mức khấu trừ)",
+        "Hoan (hoàn thiện nội dung text hướng dẫn)",
+        "Hiến (ký duyệt Product Sign-off)"
+      ],
+      "canHienCungCap": [
+        "Bảng công thức và % giảm phí chính thức từ Insurtech BU",
+        "Văn bản phê duyệt nội dung text trang /bao-hiem-o-to/than-vo"
+      ],
+      "timeline": [
+        {
+          "moc": "Cập nhật công thức và 4 nấc khấu trừ trên code",
+          "ngay": "2026-11-17"
+        },
+        {
+          "moc": "Tối ưu slider mobile và hiển thị số tiền trực quan",
+          "ngay": "2026-11-18"
+        },
+        {
+          "moc": "Nghiệm thu Staging cùng Insurtech BU",
+          "ngay": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "nguoi": "Thuận",
+      "trangThai": "cho-xac-nhan",
+      "viecCanLam": "Soundbox: Revamp trang momo.vn/loa-thong-bao-chuyen-khoan, tích hợp Component Mua Hàng chọn biến thể SKU và Số lượng, điều hướng sang loathongbao.ipos.vn mang đủ tham số đơn hàng",
+      "phuThuoc": [
+        "Soundbox Team & iPOS Team (thống nhất danh mục mã SKU và cấu trúc query URL)",
+        "Hiến (nghiệm thu luồng D2C)"
+      ],
+      "canHienCungCap": [
+        "Danh sách mã SKU chính thức (Loa 4G, Loa Wifi, Đế sạc) và đơn giá",
+        "Tài liệu endpoint checkout của iPOS"
+      ],
+      "timeline": [
+        {
+          "moc": "Dựng Component chọn SKU và bộ đếm số lượng kèm tính giá",
+          "ngay": "2026-11-18"
+        },
+        {
+          "moc": "Gắn link điều hướng kèm query params và UTM sang iPOS",
+          "ngay": "2026-11-19"
+        },
+        {
+          "moc": "Kiểm thử end-to-end đặt hàng thử nghiệm trên Staging",
+          "ngay": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "nguoi": "Thuận",
+      "trangThai": "cho-xac-nhan",
+      "viecCanLam": "Bảo Hiểm Xe Máy: Đóng gói Component BHXM độc lập (tính phí theo phân khối, OneLink W2A deep link/QR Code) phục vụ nhúng đa kênh vào Vehicle Hub và các bài viết Blog",
+      "phuThuoc": [
+        "Hoan (phối hợp chọn danh sách bài blog giao thông để nhúng thử nghiệm)",
+        "Hiếu (kiểm tra tracking schema bhxm_form_view, bhxm_form_submit, bhxm_payment_click)",
+        "Hiến (ký duyệt Product Sign-off)"
+      ],
+      "canHienCungCap": [
+        "Biểu phí chuẩn Bộ Tài chính theo 4 nhóm phân khối",
+        "Deep link OneLink in-app mở thẳng luồng thanh toán bảo hiểm xe máy"
+      ],
+      "timeline": [
+        {
+          "moc": "Đóng gói Component độc lập và cách ly CSS",
+          "ngay": "2026-11-18"
+        },
+        {
+          "moc": "Tích hợp bộ tính phí và OneLink/QR Code",
+          "ngay": "2026-11-19"
+        },
+        {
+          "moc": "Nhúng thử nghiệm vào 1 bài Blog và kiểm tra tracking trên Staging",
+          "ngay": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "nguoi": "Thuận",
+      "trangThai": "cho-xac-nhan",
+      "viecCanLam": "New User Hub: Triển khai Landing Page Project Unbox (Gói Quà tự chọn 3/9 voucher) kết nối OneLink mang mã định danh quà tặng, phục vụ chiến dịch A/B test đối chứng với /lienkettaikhoan",
+      "phuThuoc": [
+        "User Growth Team & Media Team (phối hợp ngân sách Media 50 triệu VNĐ và kịch bản A/B)",
+        "Tữ (thiết kế UI hộp quà và hiệu ứng mở quà)",
+        "Hiến (ký duyệt Product Sign-off)"
+      ],
+      "canHienCungCap": [
+        "Figma thiết kế UI Project Unbox từ Tữ",
+        "Danh mục 9 voucher và cơ chế sinh mã claim code quà tặng"
+      ],
+      "timeline": [
+        {
+          "moc": "Dựng giao diện Landing Page và tương tác chọn 3/9 hộp quà",
+          "ngay": "2026-11-18"
+        },
+        {
+          "moc": "Tích hợp luồng sinh mã quà và gắn OneLink thông minh",
+          "ngay": "2026-11-19"
+        },
+        {
+          "moc": "Kiểm thử A/B tracking và nghiệm thu Staging",
+          "ngay": "2026-11-21"
+        }
+      ]
+    }
+  ]
+}

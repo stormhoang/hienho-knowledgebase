@@ -20,7 +20,7 @@ Bản đồ Tài nguyên & Thị phần (SoV)
 ### 1.1. Tầm nhìn (Vision)
 Trở thành "Bản đồ Định vị Thị trường" duy nhất cho toàn bộ hệ sinh thái MoSpark, quyết định nơi nào đáng đổ tài nguyên và nội dung nào cần sản xuất để chiếm lĩnh Traffic.
 
-### 1.2. Mục tiêu tối thượng (North Star)
+### 1.2. Mục tiêu cốt lõi (North Star)
 Chấm dứt việc làm nội dung "mù mờ" - Mọi Mini Web/Blog trên MoMo đều phải gắn với Market Volume thực và Share of Voice (SoV) nhằm tối ưu hóa tỷ lệ chuyển đổi Web-to-App.
 
 ---
@@ -401,7 +401,7 @@ Quy hoạch SEO Inventory chia Kiến trúc Nội dung thành cấu trúc Hub & 
 
 ### 4.1. Phân tách Intent rõ ràng
 *   **Mini Web (Landing/Transactional Pages):**
-    *   **Mục đích:** Hứng trọn lượng truy cập mang "Intent Mua Hàng" (VD: "Mua bảo hiểm ô tô", "Mở ví trả sau").
+    *   **Mục đích:** Đón nhận trọn vẹn lượng truy cập mang "Intent Mua Hàng" (VD: "Mua bảo hiểm ô tô", "Mở ví trả sau").
     *   **Thiết kế:** Được build bằng *Landing Page Builder* của MoSpark. Không chứa quá nhiều chữ, tập trung vào CTA, Simulator và quy trình đăng ký.
 *   **Blog (Informational Pages):**
     *   **Mục đích:** Vây ráp các từ khóa ngách, từ khóa tìm kiếm thông tin (VD: "Cách tính phí bảo hiểm ô tô", "Phạt nguội đi sai làn").
@@ -730,7 +730,7 @@ Mục đích: Tránh tình huống 2 trang cùng tối ưu cho 1 từ khóa - ch
 *   **v4.3 (2026-05-18):** Tinh chỉnh khối Metadata: Chuyển sang định dạng văn bản thuần không có ký tự blockquote `>` và loại bỏ toàn bộ các liên kết double-bracket trong khối Metadata theo chỉ đạo của anh Hiến.
 *   **v4.4 (2026-05-18):** Nâng cấp tài liệu lên hàng Master BRD: Thiết lập cấu trúc dữ liệu cơ sở dữ liệu gốc (12 trường dữ liệu), tích hợp Thuật toán ưu tiên SEO-ICE, Công thức tính SoV và Cơ chế gác cổng chống chồng chéo từ khóa (Hiến).
 *   **v4.5 (2026-05-18):** Tinh chỉnh mô hình tính toán SoV - phiên bản tạm thời dùng Impression/Volume (đã được thay thế ở v4.6).
-*   **v4.6 (2026-05-24):** P1 Fixes - Sửa formula Market Share = Traffic/Volume × 100; Bổ sung Complexity Rubric (1-5); W2A CR governance: do Hiến define theo baseline thực tế (Hiến).
+*   **v4.6 (2026-05-24):** Bản sửa lỗi trọng yếu - Sửa formula Market Share = Traffic/Volume × 100; Bổ sung Complexity Rubric (1-5); W2A CR governance: do Hiến define theo baseline thực tế (Hiến).
 *   **v4.7 (2026-05-24):** Restructure toàn bộ document từ DB spec sang operational doc - (1) Rewrite Section 2: chain position diagram + Input/Output table; (2) Replace Section 7 DB Schema → "Dữ liệu cần duy trì & Trách nhiệm" với 3 nhóm: Market Data / MoMo Performance / Priority & Governance + RACI rõ ràng; (3) Simplify Section 8: bỏ field references, giữ nguyên lý vận hành (Hiến).
 
 ---

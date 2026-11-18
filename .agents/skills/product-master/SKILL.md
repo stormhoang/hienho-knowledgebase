@@ -18,7 +18,7 @@ Master Skill này là hệ thống vận hành sản phẩm duy nhất của AI 
    * Tuyệt đối không dùng Emoji / Icon trong tiêu đề, bảng biểu, danh sách.
    * Không nêu tên riêng cá nhân / PIC (thay thế 100% bằng tên đội ngũ: Web Platform Team, Data Science Team, App Growth Team, BU Bảo Hiểm...).
    * Không dùng văn chương hoa mỹ, sáo rỗng kiểu AI.
-3. **Cấu trúc câu trả lời:** Đi thẳng vào bản chất ➔ Nêu rõ Context ➔ Action Items cụ thể (kèm P0/P1) ➔ Chỉ số KPIs / Số liệu thực tế (Baseline vs. Target).
+3. **Cấu trúc câu trả lời:** Đi thẳng vào bản chất ➔ Nêu rõ Context ➔ Action Items cụ thể (sắp theo thứ tự triển khai, không gắn nhãn P) ➔ Chỉ số KPIs / Số liệu thực tế (Baseline vs. Target).
 4. **Trực quan hóa bắt buộc:**
    * Luồng người dùng / Conversion Funnel: Dùng sơ đồ Mermaid (`graph TD` hoặc `graph LR`) + Bảng phân tích chi tiết các bước (Step Breakdown Table - 5 cột).
    * Lộ trình: Dùng Bảng Markdown 4 cột (`Giai đoạn`, `Thời gian`, `Tên Giai Đoạn`, `Chi Tiết Triển Khai & Mục Tiêu`).
@@ -39,13 +39,13 @@ Tùy theo đề bài của người dùng, AI Agent tự động chọn đúng m
 ### Giai Đoạn 2: Định Vị Sản Phẩm (Product Positioning)
 * Áp dụng **Mẫu Định Vị Geoffrey Moore**:
   * *Dành cho [Khách hàng mục tiêu]*
-  * *Những người đang gặp vấn đề [Nỗi đau / JTBD]*
+  * *Những người đang gặp vấn đề [Điểm nghẽn / JTBD]*
   * *Sản phẩm [Tên sản phẩm/Hub]* là một [Danh mục giải pháp]*
   * *Giúp mang lại [Lợi ích cốt lõi & Aha! Moment]*
   * *Khác với [Đối thủ cạnh tranh / Giải pháp thay thế]*
-  * *Sản phẩm của chúng tôi [Lợi thế cạnh tranh độc quyền & Hào nước dữ liệu]*
+  * *Sản phẩm của chúng tôi [Lợi thế cạnh tranh độc quyền & Lợi thế phòng thủ dữ liệu]*
 * Thẩm định qua **3 Câu Hỏi Chiến Lược của Pony Ma**:
-  1. Sản phẩm có giải quyết được nỗi đau thực sự bức thiết của người dùng không?
+  1. Sản phẩm có giải quyết được điểm nghẽn thực sự bức thiết của người dùng không?
   2. Năng lực công nghệ/dữ liệu của chúng ta có tạo ra lợi thế vượt trội không?
   3. Mô hình này có khả năng mở rộng quy mô lớn (Scalability) và bảo vệ trước đối thủ không?
 * *Tài liệu tham chiếu master:* [`03_SKILLS/product-positioning-framework.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS/product-positioning-framework.md)
@@ -63,9 +63,9 @@ Tùy theo đề bài của người dùng, AI Agent tự động chọn đúng m
 * **Phương Pháp Định Lượng - RICE Score:**
   $$\text{RICE Score} = \frac{\text{Reach} \times \text{Impact} \times \text{Confidence}}{\text{Effort}}$$
 * **Phương Pháp Định Tính - Ma Trận UIC (Urgency - Impact - Complexity):**
-  * *Góc phần tư 1 (Quick Wins - Ưu tiên P0):* Impact cao, Urgency cao, Complexity thấp.
-  * *Góc phần tư 2 (Strategic Bets - Ưu tiên P1):* Impact cao, Urgency cao, Complexity cao (Cần bóc tách nhỏ để triển khai).
-  * *Góc phần tư 3 (Fill-ins - Ưu tiên P2):* Impact thấp, Complexity thấp (Làm khi dư thừa nguồn lực hoặc tự động hóa).
+  * *Góc phần tư 1 (Quick Wins - làm trước):* Impact cao, Urgency cao, Complexity thấp.
+  * *Góc phần tư 2 (Strategic Bets - làm tiếp theo):* Impact cao, Urgency cao, Complexity cao (Cần bóc tách nhỏ để triển khai).
+  * *Góc phần tư 3 (Fill-ins - làm khi dư nguồn lực):* Impact thấp, Complexity thấp (Làm khi dư thừa nguồn lực hoặc tự động hóa).
   * *Góc phần tư 4 (Time Wasters - Loại bỏ):* Impact thấp, Complexity cao.
 * *Tài liệu tham chiếu master:* [`03_SKILLS/product-prioritization-framework.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS/product-prioritization-framework.md)
 

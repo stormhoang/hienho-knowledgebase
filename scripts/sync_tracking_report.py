@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+"""Đọc file Web Performance Tracking.xlsx mới nhất trong ~/Downloads, trích xuất số MTD và đồng bộ SSOT Excel/JSON/Markdown.
+
+Usage: ./.venv/bin/python scripts/sync_tracking_report.py"""
+
 import os
 import sys
 import glob
@@ -255,6 +259,6 @@ if __name__ == "__main__":
     print(f"- Crawl Stats Status: Loaded (Requests T10: {res.get('crawl_stats', {}).get('monthly_run_rate', {}).get('2026-10', {}).get('requests_per_day', 'N/A')} req/ngày)")
     print(f"- Backlink Profile Status: Loaded (Total Referring Sites: {res.get('backlink_profile', {}).get('total_referring_domains', 'N/A')}, Disavow Candidates: {res.get('backlink_profile', {}).get('toxic_audit_summary', {}).get('total_disavow_candidates', 'N/A')})")
     if "cinema_breakdown" in res:
-        print(f"\n--- Phân rã Cinema Sub-pages MTD {res['days_elapsed']}d (Quy chuẩn Tracking mới) ---")
+        print(f"\n--- Cơ cấu Cinema Sub-pages MTD {res['days_elapsed']}d (Quy chuẩn Tracking mới) ---")
         for p_name, p_data in res["cinema_breakdown"].items():
             print(f"  * {p_name}: {p_data['pv']:,} PVs ({p_data['pct_hub']}%)")

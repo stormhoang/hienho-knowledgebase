@@ -2,7 +2,7 @@
 
 > - **Dự án:** Vehicle Hub & Trang Bảo Hiểm Ô Tô (`momo.vn/bao-hiem-o-to` & `momo.vn/tien-ich-giao-thong/muc-khau-tru`)
 > - **Tài liệu gốc (Source PRD):** `/Users/hienhv/Downloads/PRD Tool mô phỏng mức khấu trừ, trang Bảo hiểm thân vỏ ô tô (web).docx`
-> - **Đơn vị phụ trách:** Web Platform Team (Chịu trách nhiệm máy tính phí & UI/UX) x InsurTech BU (Chịu trách nhiệm file config tỷ lệ)
+> - **Khối phụ trách:** Web Platform Team (Chịu trách nhiệm máy tính phí & UI/UX) x InsurTech BU (Chịu trách nhiệm file config tỷ lệ)
 > - **Trạng thái:** PRD Approved & Production Spec Ready
 
 ---
@@ -63,7 +63,7 @@ graph TD
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Điều Hướng Báo Giá 9 Hãng</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bấm nút CTA 'Xem báo giá 9 hãng', trang cuộn tới section #bao-gia.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhấp vào nút CTA 'Xem báo giá 9 hãng', trang cuộn tới section #bao-gia.</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Smooth Scroll `#bao-gia` + Bắn Event GA4 `cta_click`</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Platform</td>
     </tr>

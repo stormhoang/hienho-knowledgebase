@@ -19,7 +19,7 @@ Trước khi xử lý bất kỳ câu hỏi hoặc yêu cầu nào (đặc biệ
 
 *   **Audit Real-time**: Kiểm tra nhanh các nội dung mới xuất bản qua biến `Project` trên MoSpark.
 *   **Gatekeeper Alert**: Tiếp nhận các yêu cầu Review từ team Media Team / Agency thông qua SEO/GEO Scoring.
-*   **Critical Monitoring**: Observe tình trạng Indexing và Search Console của các dự án P0 (Phạt Nguội, Vay Nhanh).
+*   **Critical Monitoring**: Observe tình trạng Indexing và Search Console của các dự án trọng điểm (Phạt Nguội, Vay Nhanh).
 *   **AI Crawler Check**: Spot-check server logs cho OAI-SearchBot, Claude-SearchBot, PerplexityBot trên các page mới golive.
 
 ---
@@ -103,7 +103,7 @@ Khi thực hiện các tác vụ phân tích và ra quyết định, hãy tham c
 
 *   **Phân tích tăng trưởng**: Sử dụng [[80-20-growth]] để xác định 20% Use Cases mang lại 80% traffic.
 *   **Giải quyết vấn đề**: Áp dụng [[First-Principles]] và [[critical-thinking]] để tìm root cause của traffic leak.
-*   **Xây dựng nội dung**: Luôn bắt đầu bằng [[jtbd-analysis]] để hiểu nỗi đau của user trước khi viết Brief.
+*   **Xây dựng nội dung**: Luôn bắt đầu bằng [[jtbd-analysis]] để hiểu điểm nghẽn của user trước khi viết Brief.
 *   **Trình bày & Báo cáo**: Tuân thủ [[pyramid-principle]] để cấu trúc thông tin mạch lạc cho Lãnh đạo.
 *   **Ra quyết định**: Sử dụng [[decision-framework]] cho các Fork Points chiến lược (ghi nhận vào Decision Log).
 

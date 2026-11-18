@@ -6,7 +6,7 @@
 > - **PIC:** Hiếu (Prototype & Logic Builder), Thuận (Widget Standards & Packaging), Hiến (Project Manager)
 > - **Sponsors:** GPD & Business Units (Finhub BU - internal - làm đơn vị thí điểm Phase 1)
 > - **Status:** Active - Restructured & PLG Reoriented
-> - **Version:** 4.4 — 2026-07-02
+> - **Version:** 4.4-2026-07-02
 
 ---
 
@@ -330,7 +330,7 @@ Trong H2/2026, nền tảng Widget Store và Merchant Page sẽ được nâng c
     *   **v4.3 (2026-07-02):** Thêm quy hoạch Microsite-to-Widget Mapping tự động kế thừa (Auto-Inheritance) để tối ưu vận hành và kiểm soát chặt chẽ sự xuất hiện của các công cụ trên hệ thống.
     *   **v4.2 (2026-07-02):** Loại bỏ các đặc tả kỹ thuật chi tiết của Dev (Next.js, JSON Schema, Base64, Redis, robots.txt) để tập trung tài liệu hoàn toàn vào định hướng sản phẩm và nghiệp vụ của PM.
     *   **v4.1 (2026-07-02):** Chuẩn hóa lại tên Stakeholder sở hữu nền tảng là MoSpark (thay vì MoMo Growth & Platform).
-    *   **v4.0 (2026-07-02):** Tái định nghĩa Product Vision của cả nền tảng theo định hướng Platform (phân rã chi tiết Giá trị cần đạt & Việc cần làm cho stakeholders), phân định rõ S-P-A Framework là quy trình thực thi cho Cell Teams.
+    *   **v4.0 (2026-07-02):** Tái định nghĩa Product Vision của cả nền tảng theo định hướng Platform (bóc tách chi tiết Giá trị cần đạt & Việc cần làm cho stakeholders), phân định rõ S-P-A Framework là quy trình thực thi cho Cell Teams.
     *   **v3.9 (2026-07-02):** Điều chỉnh Product Vision & Scope định vị Widget Store thành Một Nền tảng Tương tác Tăng trưởng hợp nhất (Unified PLG Growth Platform).
     *   **v3.8 (2026-07-02):** Cập nhật định hướng Product Vision & Scope của Widget Store theo định hướng PLG, tăng trưởng MEU/DLU/MLU và vai trò platform tiếp nhận Prototype HTML từ các Cell Teams.
     *   **v3.7 (2026-06-26):** Cập nhật quy trình phối hợp làm việc mới: Hiếu tiếp nhận brief BU về Logic/Formula & hiển thị để build Prototype nhanh và verify với BU; Thuận chịu trách nhiệm refactor prototype chuẩn Design System (MoBase), quản lý và đóng gói.

@@ -154,13 +154,13 @@
 
 ### 1. Key Highlights & Business Impact
 - **Định vị Nền tảng & Ranh Giới KPI:** Chuyển dịch sang "Web Destination / Web Hub". Thống nhất quy tắc **Lượng traffic In-app KHÔNG được tính vào KPI chung của Web Platform**.
-- **Mô hình Agency Nội bộ:** Inbound Team (BMC) chủ trì 100% chất lượng nội dung toàn kênh Web; Web Platform đóng vai trò hỗ trợ kỹ thuật và xây dựng công cụ tự động hóa MoSpark.
+- **Mô hình Agency Nội bộ:** Inbound Team (BMC) điều phối 100% chất lượng nội dung toàn kênh Web; Web Platform đóng vai trò hỗ trợ kỹ thuật và xây dựng công cụ tự động hóa MoSpark.
 - **Phễu Web-to-App & Tăng Trưởng New User:** Tập trung tối ưu CTR nhấp CTA và lượt chuyển đổi cài đặt mới (New Installs) từ các chiến dịch Ads.
 
 ---
 
 ### 2. Phối Hợp Liên Phòng Ban (Cross-team Collaboration & Support Needed)
-- **Inbound Team (BMC):** Chủ trì 100% chất lượng nội dung; ban hành quy trình phê duyệt chất lượng và hệ thống Guardrails tự động; phân quyền Admin Panel cho các BU.
+- **Inbound Team (BMC):** Điều phối 100% chất lượng nội dung; ban hành quy trình phê duyệt chất lượng và hệ thống Guardrails tự động; phân quyền Admin Panel cho các BU.
 - **Risk Team & Compliance:** Phê duyệt bộ tiêu chí Guardrails tự động trên MoSpark CMS; thống nhất quy định pháp lý cho luồng hiển thị Webview T&C dạng TLDR và Nộp Phạt Nguội Trực Tuyến.
 - **VTTI BU (Phương Tiện):** Phối hợp thẩm định Master Hub Giao Thông; đồng bộ dữ liệu vi phạm giao thông real-time với CSGT & TTDK.
 - **InsurTech BU (Bảo Hiểm):** Cung cấp API các sản phẩm bảo hiểm; phối hợp đóng gói các gói Combo Cross-sell (Tra cứu phạt nguội + voucher bảo hiểm / ưu đãi ePass).

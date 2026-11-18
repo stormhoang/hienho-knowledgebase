@@ -54,10 +54,9 @@ def clean_text(text: str) -> str:
     return text.strip()
 
 def slugify(text: str) -> str:
-    text = text.lower().strip()
-    text = re.sub(r'[^\w\s-]', '', text)
-    text = re.sub(r'[\s_-]+', '-', text)
-    return text.strip('-')
+    # Slug ASCII không dấu, thống nhất với content_plan_config.slugify (tránh sinh song song file có dấu và không dấu)
+    from content_plan_config import slugify as ascii_slugify
+    return ascii_slugify(text)
 
 def fetch_page_text(url: str, limit: int = 20000) -> str:
     """Cào và làm sạch nội dung text của 1 URL (dùng cho trang MoMo hiện hữu)."""

@@ -1,0 +1,22 @@
+version: 1
+defaults:
+  python_runtime: ./.venv/bin/python
+  mutating_actions: preview_then_approve
+  external_push: explicit_user_request
+  secrets: never_print_or_commit
+  pii: do_not_collect_or_persist
+
+worktree_checks:
+  before_write:
+    - git status --short
+    - identify_user_changes
+  after_write:
+    - inspect_diff
+    - run_targeted_validation
+    - report_unrelated_changes_untouched
+
+failure_handling:
+  - stop_on_source_conflict
+  - preserve_existing_user_changes
+  - report_partial_completion
+  - do_not_claim_sync_success_without_verification

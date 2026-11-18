@@ -27,7 +27,9 @@ from scripts.sync_ga4_to_hubs import get_access_token, PROPERTY_ID, run_ga4_repo
 JSON_OUTPUT = BASE_DIR / "07_REPORTS" / "data" / "analytics" / "paid_ads_performance.json"
 MD_OUTPUT = BASE_DIR / "07_REPORTS" / "docs" / "PAID_ADS_TRACKING_LATEST.md"
 
-def classify_hub(page_path: str) -> str:
+def classify_hub(page_path: str, host_name: str = "www.momo.vn") -> str:
+    if "napthengay.vn" in host_name:
+        return "Nạp Thẻ Ngay (Telco & Game)"
     path = page_path.lower()
     if any(k in path for k in ["/game/", "/nap-xu-tiktok", "/nap-the-game", "/uu-dai-icloud", "nap-game"]):
         return "Game & Telco"
@@ -49,10 +51,11 @@ def fetch_paid_ads(start_date: str, end_date: str):
     token = get_access_token()
     print(f"-> Truy van GA4 Data API Property {PROPERTY_ID} cho ky {start_date} -> {end_date}...")
 
-    # 1. Truy vấn Pageviews, Sessions, Users theo Page, SourceMedium, Campaign, Content
+    # 1. Truy vấn Pageviews, Sessions, Users theo HostName, Page, SourceMedium, Campaign, Content
     body_ads = {
         "dateRanges": [{"startDate": start_date, "endDate": end_date}],
         "dimensions": [
+            {"name": "hostName"},
             {"name": "pagePath"},
             {"name": "sessionSourceMedium"},
             {"name": "sessionCampaignName"},
@@ -85,6 +88,7 @@ def fetch_paid_ads(start_date: str, end_date: str):
     body_conv = {
         "dateRanges": [{"startDate": start_date, "endDate": end_date}],
         "dimensions": [
+            {"name": "hostName"},
             {"name": "pagePath"},
             {"name": "eventName"},
             {"name": "sessionSourceMedium"}
@@ -104,20 +108,22 @@ def fetch_paid_ads(start_date: str, end_date: str):
     res_conv = run_ga4_report(token, body_conv)
     rows_conv = res_conv.get("rows", [])
 
-    # Map chuyển đổi theo pagePath
+    # Map chuyển đổi theo (host, path)
     page_conv = defaultdict(lambda: {"w2a_clicks": 0, "installs": 0, "clickplay": 0, "by_source": defaultdict(int)})
     for r in rows_conv:
-        path = r["dimensionValues"][0]["value"]
-        evt = r["dimensionValues"][1]["value"]
-        sm = r["dimensionValues"][2]["value"]
+        host = r["dimensionValues"][0]["value"]
+        path = r["dimensionValues"][1]["value"]
+        evt = r["dimensionValues"][2]["value"]
+        sm = r["dimensionValues"][3]["value"]
         cnt = int(r["metricValues"][0]["value"])
+        key = (host, path)
         if evt == "click_to_app":
-            page_conv[path]["w2a_clicks"] += cnt
-            page_conv[path]["by_source"][sm] += cnt
+            page_conv[key]["w2a_clicks"] += cnt
+            page_conv[key]["by_source"][sm] += cnt
         elif evt == "gmc_1vuquyt_install":
-            page_conv[path]["installs"] += cnt
+            page_conv[key]["installs"] += cnt
         elif evt == "gmc_1vuquyt_clickplay":
-            page_conv[path]["clickplay"] += cnt
+            page_conv[key]["clickplay"] += cnt
 
     # 3. Tổng hợp dữ liệu
     total_paid_pv = 0
@@ -133,10 +139,11 @@ def fetch_paid_ads(start_date: str, end_date: str):
     channels_summary = defaultdict(lambda: {"pv": 0, "sessions": 0, "pages": set()})
 
     for r in rows_ads:
-        path = r["dimensionValues"][0]["value"]
-        sm = r["dimensionValues"][1]["value"]
-        camp = r["dimensionValues"][2]["value"]
-        ad = r["dimensionValues"][3]["value"]
+        host = r["dimensionValues"][0]["value"]
+        path = r["dimensionValues"][1]["value"]
+        sm = r["dimensionValues"][2]["value"]
+        camp = r["dimensionValues"][3]["value"]
+        ad = r["dimensionValues"][4]["value"]
         pv = int(r["metricValues"][0]["value"])
         sess = int(r["metricValues"][1]["value"])
         u = int(r["metricValues"][2]["value"])
@@ -144,7 +151,8 @@ def fetch_paid_ads(start_date: str, end_date: str):
         total_paid_pv += pv
         total_paid_sessions += sess
 
-        p = pages_map[path]
+        key = (host, path)
+        p = pages_map[key]
         p["pv"] += pv
         p["sessions"] += sess
         p["users"] += u
@@ -156,19 +164,22 @@ def fetch_paid_ads(start_date: str, end_date: str):
 
         channels_summary[sm]["pv"] += pv
         channels_summary[sm]["sessions"] += sess
-        channels_summary[sm]["pages"].add(path)
+        channels_summary[sm]["pages"].add(f"{host}{path}")
 
     # Chuyển đổi pages_map thành danh sách
     pages_list = []
-    for path, data in pages_map.items():
-        hub = classify_hub(path)
-        conv = page_conv[path]
+    for (host, path), data in pages_map.items():
+        hub = classify_hub(path, host)
+        conv = page_conv[(host, path)]
         w2a = conv["w2a_clicks"] or conv["installs"]
         cvr = round((w2a / data["sessions"] * 100), 2) if data["sessions"] > 0 else 0.0
 
         top_channels = sorted(data["channels"].items(), key=lambda x: x[1], reverse=True)
+        full_url = f"https://{host}{path}"
         pages_list.append({
+            "host_name": host,
             "page_path": path,
+            "full_url": full_url,
             "hub": hub,
             "pageviews": data["pv"],
             "sessions": data["sessions"],
@@ -248,18 +259,20 @@ def generate_markdown_report(data):
 
 ## 2. TOP TRANG WEB ĐANG CHẠY ADS (XẾP THEO PAGEVIEW)
 
-| Trang Web (`pagePath`) | Hub sản phẩm | Kênh chủ đạo | Pageviews Ads | W2A Convs | CVR (%) |
+| Trang Web (`Domain + Path`) | Hub sản phẩm | Kênh chủ đạo | Pageviews Ads | W2A Convs | CVR (%) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 """
     for p in data["landing_pages"][:30]:
-        md += f"| [`{p['page_path']}`](https://www.momo.vn{p['page_path']}) | {p['hub']} | `{p['primary_channel']}` | **{p['pageviews']:,}** | {p['w2a_conversions']:,} | {p['cvr_percent']}% |\n"
+        display_name = f"{p['host_name']}{p['page_path']}"
+        md += f"| [`{display_name}`]({p['full_url']}) | {p['hub']} | `{p['primary_channel']}` | **{p['pageviews']:,}** | {p['w2a_conversions']:,} | {p['cvr_percent']}% |\n"
 
     md += """
 ---
 
 ## 3. ĐÁNH GIÁ CHẤT LƯỢNG & RỦI RO
+- **Phân định tên miền SSOT:** GA4 Property 270743103 ghi nhận đồng thời cả `www.momo.vn` và cổng nạp `napthengay.vn`. Các đường dẫn phễu thanh toán như `/order/first-buy/`, `/confirmorder`, `/payments` thuộc về `napthengay.vn` (không phải `www.momo.vn`).
 - **Kênh Google Search Ads:** Chiếm phần lớn ngân sách, phục vụ các trang có ý định chuyển đổi trực tiếp (Nạp xu, Điểm tín dụng, Mở ví, Mua bảo hiểm).
-- **TikTok Ads:** Lưu ý kiểm tra tỷ lệ cài đặt/chuyển đổi thực tế trên các trang game/quảng bá để tránh lãng phí ngân sách.
+- **TikTok Ads & Affiliate Entercode:** Lưu ý kiểm tra tỷ lệ cài đặt/chuyển đổi thực tế trên các trang game/quảng bá để tránh lãng phí ngân sách.
 - **Admicro Native Ads:** Phục vụ chủ đạo bài truyền thông PR thương hiệu.
 """
     MD_OUTPUT.parent.mkdir(parents=True, exist_ok=True)
@@ -282,7 +295,8 @@ def print_terminal_report(data):
 
     print("\n[2] TOP 15 TRANG ĐANG CHẠY ADS LỚN NHẤT:")
     for idx, p in enumerate(data["landing_pages"][:15], 1):
-        print(f" {idx:02d}. {p['page_path']:<45} [{p['hub']}]")
+        display_name = f"{p['host_name']}{p['page_path']}"
+        print(f" {idx:02d}. {display_name:<50} [{p['hub']}]")
         print(f"     PV: {p['pageviews']:>7,} | Kênh chính: {p['primary_channel']:<22} | W2A: {p['w2a_conversions']:>5,} (CVR: {p['cvr_percent']}%)")
     print("=" * 80 + "\n")
 

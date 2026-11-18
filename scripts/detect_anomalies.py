@@ -249,7 +249,7 @@ def run_anomaly_scan(severity_filter=None, hub_filter=None):
             a["action"]
         ])
 
-    headers = ["#", "Mức độ", "Véc-tơ", "Thực thể ảnh hưởng", "Chỉ số dị biệt", "Bản chất vấn đề", "Đơn thuốc hành động"]
+    headers = ["#", "Mức độ", "Véc-tơ", "Thực thể ảnh hưởng", "Chỉ số dị biệt", "Bản chất vấn đề", "Kế hoạch xử lý"]
     print(format_table(headers, table_data))
     print("\n" + "=" * 80)
 

@@ -14,12 +14,15 @@ import os
 import sys
 import subprocess
 import argparse
+import concurrent.futures
 import time
 from datetime import datetime
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 SCRIPTS_DIR = BASE_DIR / "scripts"
+sys.path.insert(0, str(BASE_DIR))
+from scripts.lib.hub_sync_lock import hub_sync_lock
 
 def run_step(step_name, command_args, continue_on_error=True):
     """Thực thi 1 bước đồng bộ với logging rõ ràng."""
@@ -47,6 +50,19 @@ def run_step(step_name, command_args, continue_on_error=True):
             sys.exit(1)
         return False, elapsed
 
+def run_step_capture(step_name, command_args):
+    """Chạy step song song: capture output thay vì stream trực tiếp.
+    Trả về (success, elapsed, combined_output) để caller tự in sau khi xong."""
+    start_time = time.time()
+    cmd = [sys.executable] + command_args
+    try:
+        res = subprocess.run(cmd, cwd=str(BASE_DIR), capture_output=True, text=True)
+        elapsed = time.time() - start_time
+        output = (res.stdout or "") + (res.stderr or "")
+        return res.returncode == 0, elapsed, output
+    except Exception as e:
+        return False, time.time() - start_time, str(e)
+
 def main():
     parser = argparse.ArgumentParser(description="Master Data & API Sync Runner for MoMo Web Platform")
     parser.add_argument("--skip-clarity", action="store_true", help="Bỏ qua kéo dữ liệu Microsoft Clarity")
@@ -56,7 +72,7 @@ def main():
     parser.add_argument("--skip-hubs", action="store_true", help="Bỏ qua sync sang Web Hubs (react-web-momo)")
     parser.add_argument("--skip-seo-news", action="store_true", help="Bỏ qua sync tin SEO/GEO News")
     parser.add_argument("--skip-ga4", action="store_true", help="Bỏ qua sync GA4 thực tế sang Web Hubs")
-    parser.add_argument("--skip-funnel", action="store_true", help="Bỏ qua phân rã ma trận phễu GSC + GA4")
+    parser.add_argument("--skip-funnel", action="store_true", help="Bỏ qua bóc tách ma trận phễu GSC + GA4")
     parser.add_argument("--push-hubs", action="store_true", help="Tự động đẩy commit lên GitHub Hubs qua REST API (vượt qua firewall)")
     args = parser.parse_args()
 
@@ -79,42 +95,67 @@ def main():
     else:
         results["Web Tracking (MTD)"] = ("SKIPPED (User flag)", 0)
 
-    # 2. Luồng Microsoft Clarity Data Export API
+    # 2-4. Nhóm step ĐỘC LẬP (không ghi react-web-momo/hubs-momo) chạy SONG SONG:
+    # Clarity Data Export, Google Trends Validation, Bing Copilot Ingest.
+    # Các step ghi Hub (Tracking, Inventory, SEO News, GA4, Funnel, Push) vẫn chạy tuần tự bên dưới.
+    parallel_tasks = []  # (step_name, command_args, result_key)
+
+    # 2. Microsoft Clarity Data Export API
     if not args.skip_clarity:
         clarity_script = SCRIPTS_DIR / "fetch_clarity.py"
         if clarity_script.exists():
             clarity_args = [str(clarity_script)]
             if args.reprocess_clarity:
                 clarity_args.append("--reprocess")
-            success, elapsed = run_step("Microsoft Clarity API (AI & Frustration)", clarity_args)
-            results["Clarity Data Export"] = ("SUCCESS" if success else "FAILED", elapsed)
+            parallel_tasks.append(("Microsoft Clarity API (AI & Frustration)", clarity_args, "Clarity Data Export"))
         else:
             results["Clarity Data Export"] = ("SKIPPED (File not found)", 0)
     else:
         results["Clarity Data Export"] = ("SKIPPED (User flag)", 0)
 
-    # 3. Luồng Google Trends Validation (Top Financial Themes Rolling)
+    # 3. Google Trends Validation (Top Financial Themes Rolling)
     if not args.skip_trends:
         trends_script = SCRIPTS_DIR / "cron_google_trends_validation.py"
         if trends_script.exists():
-            # Chạy rolling an toàn cho 5 themes tài chính trụ cột
-            success, elapsed = run_step("Google Trends Demand Validation", [
+            parallel_tasks.append(("Google Trends Demand Validation", [
                 str(trends_script),
                 "--sector", "Financial",
                 "--themes", "gia-vang,ty-gia,vay-tin-chap,vi-tra-sau,gui-tiet-kiem",
                 "--kws-per-theme", "2"
-            ])
-            results["Google Trends Validation"] = ("SUCCESS" if success else "FAILED", elapsed)
+            ], "Google Trends Validation"))
         else:
             results["Google Trends Validation"] = ("SKIPPED (File not found)", 0)
     else:
         results["Google Trends Validation"] = ("SKIPPED (User flag)", 0)
 
-    # 4. Luồng Bing Webmaster / Copilot AI Ingest (Nếu có file export mới)
+    # 4. Bing Webmaster / Copilot AI Ingest (Nếu có file export mới)
     bing_script = SCRIPTS_DIR / "ingest_bing_ai.py"
     if bing_script.exists():
-        success, elapsed = run_step("Bing AI Copilot Performance Ingest", [str(bing_script)])
-        results["Bing Copilot Ingest"] = ("SUCCESS" if success else "FAILED", elapsed)
+        parallel_tasks.append(("Bing AI Copilot Performance Ingest", [str(bing_script)], "Bing Copilot Ingest"))
+
+    if parallel_tasks:
+        print(f"\n{'='*70}")
+        print(f"▶ [PARALLEL GROUP] Chạy song song {len(parallel_tasks)} luồng độc lập")
+        print(f"{'='*70}")
+        par_start = time.time()
+        with concurrent.futures.ThreadPoolExecutor(max_workers=len(parallel_tasks)) as ex:
+            futures = {
+                ex.submit(run_step_capture, name, cargs): (name, key)
+                for name, cargs, key in parallel_tasks
+            }
+            for fut in concurrent.futures.as_completed(futures):
+                name, key = futures[fut]
+                success, elapsed, output = fut.result()
+                print(f"\n{'='*70}")
+                print(f"▶ [SYNC STEP] {name.upper()} (chạy song song, {elapsed:.1f}s)")
+                print(f"{'='*70}")
+                tail = output[-3000:] if len(output) > 3000 else output
+                if tail.strip():
+                    print(tail)
+                status = "SUCCESS" if success else "FAILED"
+                print(f"{'✓' if success else '✗'} [{name}] {status} ({elapsed:.1f}s)")
+                results[key] = (status, elapsed)
+        print(f"\n[PARALLEL GROUP] Hoàn thành {len(parallel_tasks)} luồng trong {time.time() - par_start:.1f}s")
 
     # 5. Luồng Sync Inventory & Clusters sang Web Hubs
     if not args.skip_hubs:
@@ -164,7 +205,7 @@ def main():
         results["GA4 API Direct Fetch"] = ("SKIPPED (User flag)", 0)
         results["GA4 Real Data (Hubs)"] = ("SKIPPED (User flag)", 0)
 
-    # 8. Luồng Phân rã Ma trận Phễu Hợp nhất (GSC + GA4 Full-Funnel)
+    # 8. Luồng Bóc tách Ma trận Phễu Hợp nhất (GSC + GA4 Full-Funnel)
     if not args.skip_funnel:
         funnel_script = SCRIPTS_DIR / "build_full_funnel_matrix.py"
         if funnel_script.exists():
@@ -197,4 +238,5 @@ def main():
     print("="*70 + "\n")
 
 if __name__ == "__main__":
-    main()
+    with hub_sync_lock("sync_all_data"):
+        main()

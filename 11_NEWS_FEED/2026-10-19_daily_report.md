@@ -25,7 +25,7 @@ tags: [seo, geo, aeo, google_ask_maps, tracking_tools_poisoning, human_experienc
 - **Nguồn & Trích dẫn:** Báo cáo chiến lược từ [Search Engine Land: Google Ask Maps: How to make your business easier to recommend](https://searchengineland.com/google-ask-maps-make-your-business-easier-to-recommend-496672).
 - **Chi tiết bản tin:**
   - Google nâng cấp Google Maps với trải nghiệm đàm thoại tự nhiên **Ask Maps**, kết nối trực tiếp với **Personal Intelligence** của người dùng (tích hợp dữ liệu Gmail, Calendar, lịch trình chuyến bay, thói quen tiêu dùng).
-  - Thay vì hiển thị danh sách Map Pack 3 vị trí dựa trên khoảng cách và từ khóa, Ask Maps tự động phân tích bối cảnh cá nhân hóa (thời gian, thời tiết, lịch hẹn tiếp theo, chế độ ăn uống, phương thức thanh toán hỗ trợ) để trực tiếp đề xuất 1–2 địa điểm phù hợp nhất kèm lý do cụ thể.
+  - Thay vì hiển thị danh sách Map Pack 3 vị trí dựa trên khoảng cách và từ khóa, Ask Maps tự động phân tích bối cảnh cá nhân hóa (thời gian, thời tiết, lịch hẹn tiếp theo, chế độ ăn uống, phương thức thanh toán hỗ trợ) để trực tiếp đề xuất 1-2 địa điểm phù hợp nhất kèm lý do cụ thể.
   - Tích hợp sâu hành động chuyển đổi: Người dùng có thể đặt bàn nhà hàng, mua vé sự kiện, đặt phòng khách sạn và thanh toán không chạm ngay trong giao diện hội thoại mà không cần thoát ứng dụng.
 
 ### 2. Google Merchant Center Bổ Sung Thuộc Tính Bảo Hành (Warranty Attribute) Cho Dữ Liệu Sản Phẩm
@@ -46,7 +46,7 @@ tags: [seo, geo, aeo, google_ask_maps, tracking_tools_poisoning, human_experienc
   - Nhiều đơn vị theo dõi thứ hạng từ khóa lớn (Semrush, RankRanger, DataForSEO) báo cáo tình trạng dữ liệu SERP bị xáo trộn dị thường. Google bị nghi ngờ đã chủ động triển khai các cơ chế trả về dữ liệu ảo (synthetic/decoy SERPs) hoặc chuyển hướng bot cào dữ liệu vào các trang xác thực paywall giả.
   - Mục đích của Google nhằm ngăn chặn tình trạng cào dữ liệu thứ hạng hàng loạt không được cấp phép và bảo vệ độc quyền dữ liệu AI Mode. Điều này đồng nghĩa với việc các báo cáo biến động thứ hạng từ công cụ bên thứ ba hiện tại cần được đối chiếu trực tiếp với dữ liệu nhật ký máy chủ và Google Search Console.
 
-### 2. Dư Chấn Biến Động SERP Kéo Dài Qua Cuối Tuần (17–19/10/2026)
+### 2. Dư Chấn Biến Động SERP Kéo Dài Qua Cuối Tuần (17-19/10/2026)
 - **Nguồn & Trích dẫn:** Thảo luận diễn đàn quốc tế tại [Search Engine Roundtable](https://www.seroundtable.com/) và các nhóm chuyên môn [Reddit r/SEO](https://www.reddit.com/r/SEO/).
 - **Hiện trạng thực tế:** Biến động xếp hạng vẫn duy trì ở mức cao sau khi September 2026 Spam Update hoàn tất. Các trang web tài chính và dịch vụ tiện ích ghi nhận sự thanh lọc mạnh mẽ đối với các nội dung ký sinh (Parasite SEO trên các trang báo điện tử). Các vị trí Top đầu đang được tái phân bổ cho các tên miền chính chủ có uy tín thực thể (Brand Authority) cao.
 
@@ -54,15 +54,15 @@ tags: [seo, geo, aeo, google_ask_maps, tracking_tools_poisoning, human_experienc
 
 ## PHẦN 3: CÁC KỸ THUẬT, TACTICS, TRICKS & TIPS THỰC CHIẾN (SEO / GEO / AEO)
 
-### 1. "Human Experience" (E-E-A-T Thực Tế) – Rào Cản Phòng Thủ Duy Nhất Trước AI Content
+### 1. "Human Experience" (E-E-A-T Thực Tế) - Rào Cản Phòng Thủ Duy Nhất Trước AI Content
 - **Nguồn & Phân tích:** [Search Engine Land: Human experience is your content's biggest differentiator](https://searchengineland.com/human-experience-content-differentiator-496574).
 - **Bản chất vấn đề:** Các thuật toán AI Search (Gemini 4 Argon, ChatGPT Search) có thể tổng hợp kiến thức thông thường chỉ trong vài giây. Do đó, các bài viết tóm tắt lý thuyết suông sẽ bị AI hấp thụ và triệt tiêu lượt click (Zero-Click). Để được AI trích dẫn làm nguồn thẩm quyền, nội dung bắt buộc phải chứa "bằng chứng con người" (Proof of Experience).
 - **Tactics triển khai:**
   - Bổ sung hình ảnh/video tự chụp thực tế trong quá trình trải nghiệm dịch vụ hoặc quy trình giao dịch thực.
   - Trích dẫn dữ liệu khảo sát độc quyền của chính doanh nghiệp (First-party survey data).
-  - Nêu rõ các góc nhìn phản biện, tình huống ngoại lệ (Edge cases) và rủi ro thực tế mà người dùng gặp phải – những dữ liệu mà AI tổng quát không tự suy luận được.
+  - Nêu rõ các góc nhìn phản biện, tình huống ngoại lệ (Edge cases) và rủi ro thực tế mà người dùng gặp phải - những dữ liệu mà AI tổng quát không tự suy luận được.
 
-### 2. Chiến Lược Canonicalization Chuẩn Hóa Thực Thể Cho Kỷ Nguyên AI Search (2026–2027)
+### 2. Chiến Lược Canonicalization Chuẩn Hóa Thực Thể Cho Kỷ Nguyên AI Search (2026-2027)
 - **Nguồn & Hướng dẫn kỹ thuật:** [Search Engine Land: Canonicalization and SEO: A guide for 2027](https://searchengineland.com/canonicalization-seo-448161).
 - **Tác động đến AI Search:** Khi một website có nhiều phiên bản URL tương tự nhau (do bộ lọc sản phẩm, tham số UTM, phân trang dynamic), AI Search Bot sẽ bị phân tán ngân sách thu thập và gặp khó khăn trong việc xác định trang gốc chứa thực thể chính xác.
 - **Actionable Checklist:**

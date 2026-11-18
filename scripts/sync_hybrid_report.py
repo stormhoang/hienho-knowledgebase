@@ -35,6 +35,7 @@ sys.path.insert(0, str(BASE_DIR))
 from scripts.sync_ga4_to_hubs import get_access_token, PROPERTY_ID, run_ga4_report
 from scripts.build_full_funnel_matrix import build_theme_matcher
 from scripts.sync_ga4_master import patch_excel_dynamic
+from scripts.lib.hub_sync_lock import hub_sync_lock
 
 TARGET_OCT = 3665607
 
@@ -187,7 +188,7 @@ def fetch_ga4_mtd(days):
         "total_w2a": sum(w2a_map.values())
     }
 
-def run_hybrid_sync(force_mtd=None, no_push=False):
+def run_hybrid_sync(force_mtd=None, push_hubs=False):
     start_time = time.time()
     print("=" * 80)
     print("KHỞI CHẠY HỆ THỐNG ĐỐI SOÁT & HỢP NHẤT DỮ LIỆU KÉP (HYBRID DATA SYNC)")
@@ -264,44 +265,7 @@ def run_hybrid_sync(force_mtd=None, no_push=False):
     progress_pct = round((api_latest["total_pv"] / TARGET_OCT) * 100, 2)
     daily_needed = round((TARGET_OCT - api_latest["total_pv"]) / max(1, 31 - target_api_days), 2)
 
-    # 4.1 Cập nhật web-data.json
-    web_data_path = HUBS_REPO / "lib" / "dashboard" / "web-data.json"
-    if web_data_path.exists():
-        with open(web_data_path, "r", encoding="utf-8") as f:
-            web_data = json.load(f)
-        web_data["running"] = {
-            "month": "2026-10",
-            "daysElapsed": target_api_days,
-            "daysInMonth": 31,
-            "report": f"monthly_10_2026_mtd_{target_api_days}d.json"
-        }
-        web_data["generatedAt"] = datetime.now().isoformat()
-        oct_idx = web_data["months"].index("2026-10")
-        
-        cur_ch = [0, 0, 0, 0, 0]
-        for p in web_data["projects"]:
-            for i in range(5):
-                cur_ch[i] += p["full"][oct_idx][i]
-        tgt_ch = [org_pv, paid_pv, dir_pv, ref_pv, oth_pv]
-        scales = [tgt_ch[i] / cur_ch[i] if cur_ch[i] > 0 else 1.0 for i in range(5)]
-        
-        new_ch = [0, 0, 0, 0, 0]
-        for p in web_data["projects"]:
-            for i in range(5):
-                val = round(p["full"][oct_idx][i] * scales[i])
-                p["full"][oct_idx][i] = val
-                p["mtd"][oct_idx][i] = val
-                new_ch[i] += val
-        for i in range(5):
-            d_val = tgt_ch[i] - new_ch[i]
-            if d_val != 0:
-                max_p = max(web_data["projects"], key=lambda p: p["full"][oct_idx][i])
-                max_p["full"][oct_idx][i] += d_val
-                max_p["mtd"][oct_idx][i] += d_val
-
-        with open(web_data_path, "w", encoding="utf-8") as f:
-            json.dump(web_data, f, ensure_ascii=False, indent=2)
-
+    # 4.1 web-data.json: chỉ build-dashboard-data.py được ghi, gọi ở cuối script.
     # 4.2 Cập nhật summary.json
     summary_data = {
         "lastFull": {
@@ -346,8 +310,7 @@ def run_hybrid_sync(force_mtd=None, no_push=False):
             "others": oth_pv
         }
     }
-    with open(HUBS_REPO / "lib" / "dashboard" / "summary.json", "w", encoding="utf-8") as f:
-        json.dump(summary_data, f, ensure_ascii=False, indent=2)
+    # lib/dashboard/summary.json do build-dashboard-data.py ghi.
     with open(BASE_DIR / "07_REPORTS" / "data" / "summary.json", "w", encoding="utf-8") as f:
         json.dump(summary_data, f, ensure_ascii=False, indent=2)
 
@@ -406,16 +369,26 @@ def run_hybrid_sync(force_mtd=None, no_push=False):
         except Exception as e:
             print(f"[Auto-Drive] Lưu ý đồng bộ Drive: {e}")
 
-    # 5. Push GitHub qua REST API
-    if not no_push:
-        print("[5/5] Tự động đẩy dữ liệu hợp nhất lên GitHub Hubs...")
+    # 4.7 Tự động đồng bộ biến động 7 ngày SERP (Gainers & Losers) vào /report và /dashboard
+    try:
+        print("[Auto-7D-SERP] Đang đồng bộ biến động 7 ngày SERP (Gainers & Losers) vào /report & /dashboard...")
+        sync_7d_script = BASE_DIR / "scripts" / "sync_7d_performance_report.py"
+        if sync_7d_script.exists():
+            subprocess.run([sys.executable, str(sync_7d_script), "--no-push"], check=False)
+    except Exception as e:
+        print(f"[Auto-7D-SERP] Lưu ý đồng bộ 7D SERP: {e}")
+
+    # 5. Push GitHub qua REST API (Mặc định không đẩy trừ khi có push_hubs=True)
+    if push_hubs:
+        print("[5/5] Tự động đẩy dữ liệu hợp nhất lên GitHub Hubs (--push-hubs)...")
         push_script = BASE_DIR / "scripts" / "push_to_hubs_api.py"
         subprocess.run([
             sys.executable, str(push_script),
+            "--commit-local",
             "-m", f"data(hybrid-sync): reconcile Excel MTD {excel_days}d vs GA4 MTD {target_api_days}d ({api_latest['total_pv']:,} PV)"
         ], check=True)
     else:
-        print("[5/5] Chế độ no-push: Bỏ qua đẩy GitHub.")
+        print("[5/5] Mặc định an toàn (No-Push): Bỏ qua đẩy GitHub.")
 
     elapsed = time.time() - start_time
     print("=" * 80)
@@ -425,7 +398,7 @@ def run_hybrid_sync(force_mtd=None, no_push=False):
     print(f"- Trạng thái đối soát      : {reconciliation['status']}")
     if incremental_net_add > 0:
         print(f"- Phần bù ngày mới (Net add): +{incremental_net_add:,} PV (Cập nhật từ ngày {excel_days + 1} đến {target_api_days})")
-    print(f"- Dự phóng 31 ngày         : {forecast_31d:,.0f} PV ({forecast_pct}% Target {TARGET_OCT:,})")
+    print(f"- Dự báo 31 ngày           : {forecast_31d:,.0f} PV ({forecast_pct}% Target {TARGET_OCT:,})")
     print("=" * 80)
 
     return snapshot_payload
@@ -433,6 +406,7 @@ def run_hybrid_sync(force_mtd=None, no_push=False):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--mtd", type=int, default=None)
-    parser.add_argument("--no-push", action="store_true")
+    parser.add_argument("--push-hubs", action="store_true", default=False, help="Cho phép đẩy lên GitHub Hubs")
     args = parser.parse_args()
-    run_hybrid_sync(force_mtd=args.mtd, no_push=args.no_push)
+    with hub_sync_lock("sync_hybrid_report"):
+        run_hybrid_sync(force_mtd=args.mtd, push_hubs=args.push_hubs)

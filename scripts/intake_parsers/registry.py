@@ -13,7 +13,6 @@ import zipfile
 TRACKING = "tracking"
 CRAWL = "crawl_stats"
 BACKLINK = "backlink"
-TASKS = "tasks"
 UNKNOWN = "unknown"
 
 
@@ -58,7 +57,7 @@ def _zip_contains(path, *keywords):
 
 
 def detect(path):
-    """Trả về format id (TRACKING/CRAWL/BACKLINK/TASKS/UNKNOWN)."""
+    """Trả về format id (TRACKING/CRAWL/BACKLINK/UNKNOWN)."""
     name = os.path.basename(path).lower()
     ext = os.path.splitext(name)[1].lower()
 
@@ -69,8 +68,6 @@ def detect(path):
             return TRACKING
         if any("crawl" in s for s in sheets):
             return CRAWL
-        if "tasks" in sheets or "tasklist" in sheets:
-            return TASKS
 
     # 2. Crawl stats (zip gsc export)
     if ext == ".zip" and _zip_contains(path, "crawl"):
@@ -86,17 +83,7 @@ def detect(path):
             if any("linking pages" in c for c in h) and any(c in ("site", "domain", "source") for c in h):
                 return BACKLINK
 
-    # 4. Tasklist markdown
-    if ext == ".md":
-        try:
-            with open(path, "r", encoding="utf-8", errors="replace") as f:
-                head = f.read(2000)
-            if "Hạng mục Công việc" in head and "Trạng thái" in head:
-                return TASKS
-        except Exception:
-            pass
-
-    # 5. Fallback theo tên file (tracking xlsx không đọc được sheet)
+    # 4. Fallback theo tên file (tracking xlsx không đọc được sheet)
     if ext == ".xlsx" and ("tracking" in name or "performance" in name):
         return TRACKING
 

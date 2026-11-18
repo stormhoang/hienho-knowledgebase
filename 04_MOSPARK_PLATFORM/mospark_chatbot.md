@@ -19,10 +19,11 @@ Việc không tìm thấy thông tin nhanh chóng trên một trang web lớn d�
 ### 1.2. Giải pháp: mospark_chatbot - Agentic Web Chatbot
 Định vị không phải là một công cụ trò chuyện mở (open-domain chat), mà là một **PLG Tool (Utility)** được nhúng trên **toàn bộ website momo.vn**.
 
-**3 Nguyên tắc thiết kế cốt lõi:**
+**4 Nguyên tắc thiết kế cốt lõi:**
 1. **Zero-Scripting (Contextual Grounding):** Dù người dùng đang ở bất kỳ trang nào, Chatbot tự động nhận diện ngữ cảnh (URL) để load đúng Knowledge Base (Business Context 12 fields + Content + LLM) của dự án/Use Case tương ứng để dẫn dắt và giải quyết JTBD. Không cấu hình kịch bản thủ công.
 2. **Intent-First:** Cung cấp sẵn các Quick Replies thay đổi linh hoạt theo trang người dùng đang xem để họ chạm là ra kết quả (Không bắt ép phải gõ phím).
 3. **Conversion-Driven:** Mọi tương tác của chatbot đều hướng đến việc điều hướng người dùng mở App (OneLink) để hoàn tất luồng (Ví dụ: "Mở Ví Trả Sau", "Nộp Phạt Ngay", "Thanh toán ngay").
+4. **MoSpark Qwen & RAG Engine:** Vận hành trực tiếp trên mô hình Qwen nội bộ kết hợp với cơ sở dữ liệu vector RAG Knowledge Base. Toàn bộ dữ liệu sản phẩm, biểu phí và hướng dẫn được vector hóa bằng Qwen Embedding trên hạ tầng MoSpark, giúp Chatbot phản hồi tức thì với chi phí 0 đồng và bảo mật tuyệt đối dữ liệu nội bộ.
 
 ---
 
@@ -120,6 +121,7 @@ Chatbot được thiết kế để giải quyết các nhu cầu (JTBD) phổ b
 1. **Nguồn dữ liệu (Dynamic Knowledge Base):** Chatbot tự động nội suy câu trả lời từ kho dữ liệu tương ứng với trang web hiện tại:
    - **Đối với bài viết/Blog/Use Case chung:** Lấy từ trường thông tin `Business Context` (12 fields) và nội dung Content dài đang thuộc về Use Case đó.
    - **Đối với trang Merchant (Đối tác):** Chatbot ưu tiên đọc dữ liệu tĩnh được bóc tách tự động từ luồng GenAI Single-Pass của MoSpark (Structured Custom Fields bao gồm `merchant_address`, `price_range`, `operating_hours`, `amenities_services`, `payment_policy`) thông qua Webhook API. Cơ chế cấu trúc hóa này giúp tối ưu token (RAG) và chống hallucination (bịa thông tin).
+   - **Tích hợp Qwen RAG & Hybrid Retrieval:** Chatbot kết nối trực tiếp với RAG Knowledge Base đã được vector hóa bởi mô hình Qwen nội bộ trên MoSpark. Khi người dùng đặt câu hỏi, hệ thống tự động lọc metadata theo URL hiện hành (Contextual Pre-filtering) kết hợp tìm kiếm kết hợp (Hybrid Search: Vector Qwen + Keyword BM25) để trích xuất các đoạn thông tin chuẩn xác nhất trước khi gửi tới Qwen LLM sinh câu trả lời.
 2. **Anti-Hallucination:** System Prompt của LLM bắt buộc chứa rule: *"Chỉ trả lời dựa trên Knowledge Base được cung cấp của trang hiện hành. Nếu thông tin không có, trả lời 'Hiện tại chưa có thông tin này' thay vì bịa ra."*
 3. **Quality Gate:** Trang web hiện tại phải đạt điểm SEO/GEO Scoring >= 60 mới được kích hoạt tính năng trả lời tự động bằng AI (vì nội dung gốc rác thì AI trả lời cũng rác).
 

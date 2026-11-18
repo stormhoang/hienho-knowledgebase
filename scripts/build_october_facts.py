@@ -132,7 +132,16 @@ def main():
             "daily_pace": round(total_oct / DAYS_ELAPSED),
         },
         "channels": channels,
-        "geo_ai": {"oct": 40827, "sep": 33661, "mom_pct": pct(40827, 33661), "verified": False},
+        "geo_ai": {
+            "oct": 18547, "sep": 13596, "mom_pct": pct(18547, 13596), "verified": True,
+            "source": "GA4 sessionSource, 31 ngày, cùng danh sách nguồn cho tháng 9",
+            "breakdown": {
+                "ChatGPT": {"oct": 17739, "sep": 12589},
+                "Perplexity": {"oct": 284, "sep": 239},
+                "Gemini": {"oct": 467, "sep": 704},
+                "Khác (Claude, Copilot.com, OpenAI, Meta)": {"oct": 57, "sep": 64},
+            },
+        },
         "minigame_mot_mua_quyt": {"active_players": 7097, "period": "2026-10-15/2026-10-25"},
         "hubs": {"cinema": hub_block("cinema"), "financial": hub_block("financial")},
         "projects": {

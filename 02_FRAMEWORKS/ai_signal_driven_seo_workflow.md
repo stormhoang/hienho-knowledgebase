@@ -88,7 +88,7 @@ Sức mạnh của mô hình nằm ở khả năng nén và mã hóa 4 nguồn t
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2. Sitemap Architecture</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sơ đồ XML Sitemap của đối thủ trong ngành</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phân rã cấu trúc URL đối thủ thành sơ đồ Topic Clusters và loại trang</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bóc tách cấu trúc URL đối thủ thành sơ đồ Topic Clusters và loại trang</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bảng Content Gap Matrix; Sơ đồ kiến trúc Hub & Spoke</td>
     </tr>
     <tr>
@@ -101,7 +101,7 @@ Sức mạnh của mô hình nằm ở khả năng nén và mã hóa 4 nguồn t
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4. Community Listening</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thảo luận tự nhiên từ các diễn đàn, cộng đồng</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Rút ngắn khoảng cách giữa từ khóa SEO và ngôn ngữ đời thực người dùng</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Văn phong Voice of Customer; Cấu trúc FAQ giải quyết đúng nỗi đau</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Văn phong Voice of Customer; Cấu trúc FAQ giải quyết đúng điểm nghẽn</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5. Content Refresh</td>
@@ -138,9 +138,9 @@ Sức mạnh của mô hình nằm ở khả năng nén và mã hóa 4 nguồn t
 2. **Phát Hiện Điểm Nghẽn CTR Trang Master Chuỗi Rạp:**
    * *Hiện tượng:* Trang Master CGV (`/cinema/rap/cgv`) đạt **2,3 triệu hiển thị** nhưng CTR chỉ **1,57%** (vị trí 6.92); Galaxy Cinema (`/cinema/rap/galaxy-cinema`) đạt **1,05 triệu hiển thị** nhưng CTR chỉ **0,87%** (vị trí 5.48).
    * *Nguyên lý:* Thiếu thông điệp giá trị trực quan trên SERP (Title Tag chưa làm nổi bật tính năng tra lịch chiếu real-time và mua vé nhanh không cần tải app).
-3. **Cơ Hội Vị Trí 8–20 Của Từ Khóa Hạt Nhân:**
+3. **Cơ Hội Vị Trí 8-20 Của Từ Khóa Hạt Nhân:**
    * *Hiện tượng:* Từ khóa "phim chiếu rạp" đạt **580.275 hiển thị** ở vị trí **8.85** (CTR 0,75%).
-   * *Nguyên lý:* Đang đứng trước ngưỡng cửa Top 5. Chỉ cần tối ưu cấu trúc ngữ nghĩa và trải nghiệm trang, lưu lượng sẽ bứt phá từ 4.300 lên 35.000–50.000 clicks/tháng.
+   * *Nguyên lý:* Đang đứng trước ngưỡng cửa Top 5. Chỉ cần tối ưu cấu trúc ngữ nghĩa và trải nghiệm trang, lưu lượng sẽ bứt phá từ 4.300 lên 35.000-50.000 clicks/tháng.
 
 ### Luồng Tối Ưu Hạ Tầng Kỹ Thuật Cinema Hub
 

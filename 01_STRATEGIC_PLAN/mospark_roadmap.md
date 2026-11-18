@@ -1,10 +1,10 @@
 # MOSPARK MASTER PRODUCT ROADMAP
 ## Lộ trình Năng lực Nền tảng Tăng trưởng (Growth OS) momo.vn
 
-> **Product Owners:** Văn Hiến (Web Product Lead) & Anh Bảo (Head of Web Platform)
-> **Timeline:** H1/2026 (Đã hoàn thành) – H2/2026 (Hiện tại) – 2027+ (Tầm nhìn)
-> **Status:** Active
-> **Version:** v3.6 (Cập nhật định hướng hạ tầng truyền thông và phân biệt dự án PLG)
+> **Owner:** Văn Hiến (Web Product Lead) & Anh Bảo (Head of Web Platform)
+> **Tiến độ:** H1/2026 (Đã hoàn thành) - H2/2026 (Hiện tại) - 2027+ (Tầm nhìn)
+> **Trạng thái:** Active
+> **Phiên bản:** v3.6 (Cập nhật định hướng hạ tầng truyền thông và phân biệt dự án PLG)
 
 ---
 
@@ -167,7 +167,7 @@ Về mặt phạm vi sản phẩm hỗ trợ, MoSpark phân định rõ hai tr�
 *   **Dev Ticket Queue System:** Lưu trữ và quản lý các yêu cầu dưới dạng Ticket trong hàng đợi (Queue) để Dev tiến hành triển khai (hỗ trợ đính kèm brief công thức đối với các Utilities Tool tự gen bằng AI).
 
 ### 12. Umami Tracking & User Identity (Identify User)
-*   **Hợp tác & Kiểm thử Hạ tầng (SSO / Edge Cookie Deployment):** Do phần back-end bên dưới đã hoàn thiện trong H1, H2 sẽ tập trung vào việc căn chỉnh hạ tầng (aim lại), cấu hình các Edge Middleware để deploy HttpOnly Cookie an toàn và chạy tích hợp định danh thực tế trên production.
+*   **Hợp tác & Test Hạ tầng (SSO / Edge Cookie Deployment):** Do phần back-end bên dưới đã hoàn thiện trong H1, H2 sẽ tập trung vào việc căn chỉnh hạ tầng (aim lại), cấu hình các Edge Middleware để deploy HttpOnly Cookie an toàn và chạy tích hợp định danh thực tế trên production.
 *   **GSC/GA4/BigQuery Integrated Dashboard:** Tích hợp dữ liệu từ Google Search Console, Google Analytics 4, BigQuery và Umami để hiển thị bức tranh toàn cảnh về traffic sources, engagement.
 *   **End-to-End W2A Funnel Stitching:** Đo lường chi tiết hành trình người dùng từ Click Web ➔ Click to App ➔ Open App ➔ Login ➔ MAU thực tế trên ứng dụng MoMo.
 

@@ -1,10 +1,10 @@
 # BRD: Ví Trả Sau (BNPL)
 
-> - **Project:** Use Case Ví Trả Sau - Web Growth & Media SEO/GEO
-> - **Main URL:** momo.vn/vi-tra-sau
-> - **Division:** FS (Financial Services) - PayLater
-> - **Version:** 2.0 · Tháng 7/2026
-> - **Status:** Active (Updated Media Team Plan)
+> - **Dự án:** Use Case Ví Trả Sau - Web Growth & Media SEO/GEO
+> - **URL chính:** momo.vn/vi-tra-sau
+> - **Khối phụ trách:** FS (Financial Services) - PayLater
+> - **Phiên bản:** 2.0 · Tháng 7/2026
+> - **Trạng thái:** Active (Updated Media Team Plan)
 
 ---
 
@@ -68,7 +68,7 @@ Build sub-pages use-case và **PLG Interactive Tool** để intercept adjacent i
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sub-pages use-case</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/vi-tra-sau/nap-game, /tra-gop, /mua-sam, ...</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chưa build</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1 deliverable H1 2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 1, bàn giao H1 2026</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Merchant pages</td>
@@ -1115,7 +1115,7 @@ SEO channel cần đóng góp ~87% total search traffic. Model này dùng W2A CR
   * **Business Metric:** Tổng số lượng giao dịch hoàn tất (Conversion Trans) đạt **2.000 lượt chuyển đổi (2.000 CR)** qua phễu Web-to-App & QR Code tại cửa hàng.
 
 ### 9.2 Cấu Trúc Phân Khúc Khách Hàng Whitelist (1.52M Users Active Sizing)
-Hệ thống cấp hạn mức ghi nhận tổng tệp **1.522.821 Users Active** được phê duyệt sẵn Hạn Mức Đặc Biệt (Extra Limit 50M), phân rã chi tiết thành 4 nhóm mục tiêu:
+Hệ thống cấp hạn mức ghi nhận tổng tệp **1.522.821 Users Active** được phê duyệt sẵn Hạn Mức Đặc Biệt (Extra Limit 50M), bóc tách chi tiết thành 4 nhóm mục tiêu:
 
 <table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
   <thead>
@@ -1155,7 +1155,7 @@ Hệ thống cấp hạn mức ghi nhận tổng tệp **1.522.821 Users Active*
 </table>
 
 ### 9.3 Khung Thông Điệp Truyền Thông (Communication Strategy)
-* **Key Message chính (Primary):** *"Ví Trả Sau MoMo — Hạn mức 50M sẵn trong ví, đủ rinh Galaxy A, trả trước 0đ"*.
+* **Key Message chính (Primary):** *"Ví Trả Sau MoMo - Hạn mức 50M sẵn trong ví, đủ rinh Galaxy A, trả trước 0đ"*.
 * **Secondary Message:** *"Lên đời Samsung với VTS, trả trước 0đ, lãi từ 1%/tháng, chỉ cần CCCD"* (Umbrella Tagline: *"Để tâm để bạn an tâm"*).
 * **Tone & Manner:** Tự tin, hiện đại, gần gũi, tạo cảm giác "chắc ăn". Tôn vinh tinh thần đổi mới sáng tạo dòng điện thoại gập (Foldable Innovation), tránh văn phong tài chính khô cứng.
 * **4 Trụ cột giá trị (Value Propositions):**
@@ -1163,74 +1163,6 @@ Hệ thống cấp hạn mức ghi nhận tổng tệp **1.522.821 Users Active*
   * **VP2 - Pre-approved (Duyệt sẵn):** Sẵn trong ví, không chứng minh thu nhập, mở nhanh 3 phút bằng CCCD.
   * **VP3 - Competitive Rate (Lãi suất 1%/tháng):** Mức lãi suất ưu đãi trả góp tốt nhất tại hệ thống CellphoneS.
   * **VP4 - Flexible Payment (Thanh toán linh hoạt):** Trả trước 0đ (Flip & Galaxy A) + Kỳ hạn 12 tháng chia nhỏ chi phí + Combo Trade-in.
-
-### 9.4 Cấu Trúc Kỹ Thuật Giao Diện Mới trên MoSpark CMS (New Layout & Card Schema)
-Miniweb được nâng cấp từ Template cũ lên Custom Layout hoàn chỉnh trên **MoSpark CMS** với 3 điểm kỹ thuật cốt lõi:
-
-1. **Hệ thống 2 Nút Hành Động (Multi-CTA Architecture):**
-   * **CTA 1 (Primary - Mua Trả Góp):** Nút chính dẫn vào App MoMo qua OneLink (`momo://app?action=credit_paylater&product_code=...`) để người dùng mở hạn mức/thanh toán.
-   * **CTA 2 (Secondary - Xem Tại CellphoneS):** Nút phụ dẫn thẳng ra Website đối tác CellphoneS PDP (`cellphones.com.vn/...`).
-   * **Quy tắc bảo vệ chỉ số SEO (SEO Defense Rule):** Thẻ liên kết out-app bắt buộc chứa thuộc tính `rel="sponsored nofollow noopener"` để tránh tụt điểm chất lượng (Quality Score) của domain `momo.vn`.
-2. **Tự động hóa tính toán chi phí trả góp (`monthly_amount`):**
-   * CMS Backend tự động tính số tiền trả hàng tháng theo công thức:
-     $$\text{monthly\_amount} = \left\lceil \frac{\text{ref\_price} + (\text{ref\_price} \times \text{conversion\_fee})}{\text{term\_months}} \right\rceil$$
-3. **Cắt giảm danh sách sản phẩm rác (Catalog Optimization):**
-   * Không hiển thị hơn 20 sản phẩm tràn lan làm nặng trang (Page Load Speed). Tập trung hiển thị **3 - 4 sản phẩm Hero chính** (Samsung Z Fold, Z Flip, Galaxy S, Galaxy A), các sản phẩm khác ẩn dưới dạng tab/xem thêm.
-
-<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
-  <thead>
-    <tr style="background-color:#f1f5f9;">
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tên Trường (Field)</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Kiểu Dữ Liệu</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Bắt Buộc</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô Tả Hiển Thị UI</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">`product_name`</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">String</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tên hiển thị (VD: Samsung Galaxy A57 5G)</td>
-    </tr>
-    <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">`variant`</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">String</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cấu hình RAM/ROM (VD: 8GB | 128GB)</td>
-    </tr>
-    <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">`image_url`</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">String (URL)</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hình ảnh đại diện sản phẩm</td>
-    </tr>
-    <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">`list_price`</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Number</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giá niêm yết (gạch ngang)</td>
-    </tr>
-    <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">`ref_price`</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Number</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giá tham khảo (Highlight nổi bật)</td>
-    </tr>
-    <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">`terms[].monthly_amount`</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Number</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Số tiền phải trả từng kỳ (mỗi tháng)</td>
-    </tr>
-    <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">`cta_partner_link`</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">String (URL)</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Link CellphoneS PDP đính kèm `rel="sponsored nofollow"`</td>
-    </tr>
-  </tbody>
-</table>
 
 ### 9.5 Luồng Triển Khai & Cột Mốc Thời Gian Go-Live (Workflow & Milestones)
 
@@ -1273,7 +1205,7 @@ graph TD
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giai đoạn 4</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">29/08 - 31/08/2026</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Kiểm thử tốc độ trang (PageSpeed), nạp data thật trên Staging và đối soát mã tracking UTM giữa Web và App</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Test tốc độ trang (PageSpeed), nạp data thật trên Staging và đối soát mã tracking UTM giữa Web và App</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web QA & Operations Team</td>
     </tr>
     <tr>
@@ -1370,5 +1302,4 @@ Tài liệu **[VTS - Pay Later] Inbound Plan 2026** xác lập chi tiết lộ t
 - **Tháng 5/2026 (v1.3):** Chuẩn hóa tài liệu - loại bỏ liên kết nội bộ, thông tin vận hành, tên nhân sự; chuẩn bị cho Head of BU / C-Level review.
 - **Tháng 5/2026 (v1.2):** Bổ sung market data, JTBD, competitive landscape, dependencies.
 - **Tháng 5/2026 (v1.0):** Khởi tạo tài liệu và chuẩn hóa cấu trúc thư mục.
-
 

@@ -13,7 +13,7 @@ User tìm phim đang chiếu hoặc lịch chiếu theo rạp - tìm thấy thô
 **PLG Hook:** Booking flow là PLG hook tự nhiên - user đến với commercial intent cao, product chỉ cần serve đúng intent thì tự convert, không cần campaign hay push. "Nhắc tôi khi mở bán" (Phase 1) là PLG hook bổ sung tạo repeat engagement khi phim chưa ra rạp.
 
 3 kết quả kinh doanh đạt được khi Product Job được giải quyết tốt:
-- **Doanh thu Giao dịch (Transaction revenue):** Hoa hồng từ vé bán ra - Mục tiêu tối thượng của dự án.
+- **Doanh thu Giao dịch (Transaction revenue):** Hoa hồng từ vé bán ra - Mục tiêu kinh doanh cốt lõi của dự án.
 - **Độ phủ Thị phần Tìm kiếm (Market Share):** Bao phủ toàn bộ các từ khóa tìm kiếm về rạp và lịch chiếu tại từng địa phương.
 - **Bảo vệ Vị thế Dài hạn:** Chuẩn hóa cấu trúc dữ liệu để luôn xuất hiện nổi bật khi người dùng sử dụng AI Overview của Google để tìm kiếm phim.
 
@@ -38,11 +38,11 @@ User tìm phim đang chiếu hoặc lịch chiếu theo rạp - tìm thấy thô
 
 **A. Chỉ số Người dùng Web in App (MAU & MEU)**
 *Ghi chú: MEU đo lường số lượng User có hành vi click từ trang Web dẫn sâu sang In-App hoặc quét QR thanh toán.*
-- MAU Web in App dao động mạnh theo mùa vụ (Tết, Hè), đạt đỉnh 16.5K (2025).
+- MAU Web in App dao động mạnh theo mùa vụ (Tết, Hè), chạm mốc kỷ lục 16.5K (2025).
 - MEU duy trì gấp 2-3 lần MAU, cho thấy hành vi chuyển đổi deep-link diễn ra liên tục.
 
 **B. Chỉ số Giao dịch Cổng Thanh Toán (Payment Gateway)**
-- PG Web/App Đối tác: H1/2026 đạt đỉnh ~303K giao dịch/tháng.
+- PG Web/App Đối tác: H1/2026 chạm mức cao nhất ~303K giao dịch/tháng.
 - PG Offline tại quầy: H1/2026 trung bình ~3.7K/tháng (tăng so với 2025).
 
 ### 2.2 Keyword Ranking Hiện Tại

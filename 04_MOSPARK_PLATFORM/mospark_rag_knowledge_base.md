@@ -1,12 +1,12 @@
 # MoSpark - RAG Knowledge Base Architecture
 Hệ thống Quản trị Tri thức Tập trung & Truy xuất Cơ sở Dữ liệu MoMo
 
-> - **Project:** MoSpark Web Platform
-> - **Division:** GPD (Growth Product Division)
-> - **Product:** Web Growth Platform
-> - **Governance:** Văn Hiến (Web Product Lead)
-> - **Version:** 1.0 · June 2026
-> - **Status:** Proposal - Core Knowledge Engine
+> - **Dự án:** MoSpark Web Platform
+> - **Khối phụ trách:** GPD (Growth Product Division)
+> - **Sản phẩm:** Web Growth Platform
+> - **Phê duyệt:** Văn Hiến (Web Product Lead)
+> - **Phiên bản:** 1.0 · June 2026
+> - **Trạng thái:** Proposal - Core Knowledge Engine
 
 ---
 
@@ -150,7 +150,9 @@ Hệ thống sử dụng giải thuật phân mảnh đệ quy (Recursive Charac
 *   *Overlap Size:* 64 tokens (để nối ngữ cảnh giữa các đoạn liền kề).
 
 ### 3.2. Vector hóa & Lưu trữ (Embeddings & Database)
-*   **Embedding Model:** Sử dụng model `text-embedding-3-small` (hoặc `cohere-embed-multilingual-v3`) để tối ưu hóa khả năng hiểu ngữ nghĩa tiếng Việt đa ngành hàng.
+*   **Embedding Model Chuẩn hóa:** Hệ thống chính thức chuẩn hóa sử dụng **Mô hình Qwen Embedding nội bộ** chạy trên máy chủ MoSpark (thay thế các model bên ngoài như `text-embedding-3-small` hay `cohere-embed-multilingual-v3`). 
+    *   *Ưu thế cốt lõi:* Khả năng vector hóa dữ liệu tiếng Việt chuyên sâu cho domain tài chính và dịch vụ số, tốc độ nạp dữ liệu tức thì, không bị giới hạn tần suất gọi API (Zero-Rate-Limit), chi phí vận hành 0 đồng và bảo mật tuyệt đối dữ liệu nội bộ.
+    *   *Tích hợp trực tiếp Chatbot:* Toàn bộ vector chunks được đồng bộ trực tiếp sang MoSpark Web Chatbot để phục vụ trả lời câu hỏi ngữ cảnh tức thì.
 *   **Vector Database:** pgvector tích hợp trực tiếp trên Supabase database hiện tại của MoSpark để tối ưu hóa chi phí vận hành và đồng bộ dữ liệu nhanh với CMS.
 
 ---
@@ -260,7 +262,7 @@ Khi viết một bài mới (ví dụ: *Cách đăng ký phạt nguội qua momo
 
 ## 5. Yêu Cầu Giao Diện Quản Trị RAG trên Web (UI/UX Specification)
 
-Nằm trong phân hệ cấu hình nâng cao của Admin Panel MoSpark:
+Nằm trong khu vực cấu hình nâng cao của Admin Panel MoSpark:
 
 ### 5.1. Màn hình Quản lý Nguồn Tri thức (Knowledge Center Dashboard)
 *   **Trình tải lên tài liệu (Ingestion Panel):**

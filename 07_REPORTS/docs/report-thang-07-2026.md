@@ -11,7 +11,7 @@
 
 *   **Định hình Chiến lược Trust-led Growth:** Áp dụng toàn diện khung chiến lược "Tăng trưởng bằng Niềm Tin" vào toàn bộ sản phẩm Out-App, lấy việc củng cố niềm tin số làm bệ phóng phát triển tự nhiên (User Trust Index Q1 đạt kỷ lục 4.18/5).
 *   **Mở rộng Phân khúc eSIM Du Lịch:** Hoàn thành BRD v1.4 mở rộng phạm vi Media Team eSIM đón đầu 50.8K volume search/tháng từ khách quốc tế vào Việt Nam.
-*   **Tái cấu trúc Quy trình Phát triển Widget:** Thực hiện phân rã 2 Workflow phát triển Widget chuyên biệt cho Hiếu (Prototype & Logic) và Thuận (Design Standards & Packaging chuẩn MoBase).
+*   **Tái cấu trúc Quy trình Phát triển Widget:** Thực hiện bóc tách 2 Workflow phát triển Widget chuyên biệt cho Hiếu (Prototype & Logic) và Thuận (Design Standards & Packaging chuẩn MoBase).
 
 ---
 
@@ -20,7 +20,7 @@
 #### 1. Vehicle Hub (Tiện ích Giao thông & Hồ sơ Phương tiện) - [Dự án mới triển khai]
 * **Định hướng chiến lược:** Nối tiếp, mở rộng và tận dụng tối đa nền tảng cùng hiệu suất bứt phá từ dự án Phạt Nguội (Total Traffic 267.3K Views, Tỷ lệ tra cứu 78.16%, 14.886 lượt Login App và 9.825 người dùng giao dịch chéo) để phát triển thành Vehicle Hub với định hướng "Một chiếc xe - Một tài khoản dịch vụ".
 * **Challenge:** Giải quyết rào cản phân mảnh thông tin của chủ phương tiện khi phải sử dụng 5-7 ứng dụng/website độc lập (phạt nguội, nạp ETC, bảo hiểm, đăng kiểm, giá xăng), đồng thời chuyển đổi tệp tìm kiếm ngoài Open Web thành tài khoản định danh xe (Vehicle Profile) trên MoMo.
-* **Solution & Scope:** Tận dụng phễu mồi câu Phạt Nguội làm điểm chạm đầu tiên để khởi tạo Hồ sơ xe, mở rộng hệ sinh thái tiện ích giao thông (bảng giá xăng, trạm sạc EV, nạp tiền ETC, nhắc lịch đăng kiểm) và tích hợp các gói dịch vụ gia tăng (Subscription cảnh báo tự động 9k/năm, Bảo hiểm Ô tô).
+* **Solution & Scope:** Tận dụng phễu tiện ích thu hút Phạt Nguội làm điểm chạm đầu tiên để khởi tạo Hồ sơ xe, mở rộng hệ sinh thái tiện ích giao thông (bảng giá xăng, trạm sạc EV, nạp tiền ETC, nhắc lịch đăng kiểm) và tích hợp các gói dịch vụ gia tăng (Subscription cảnh báo tự động 9k/năm, Bảo hiểm Ô tô).
 * **Trạng thái hiện tại:** Dự án mới khởi tạo trong tháng, đang tập trung xây dựng hạ tầng Hồ sơ xe (Vehicle Profile) từ nền tảng Phạt Nguội và kết nối API tích hợp dữ liệu với các đối tác (ePass, TTDK, Bảo hiểm). Các chỉ số hiệu suất kinh doanh tổng thể sẽ được ghi nhận khi đi vào vận hành chính thức.
 
 #### 2. Cinema Hub (Cổng Giải Trí & Điện Ảnh) - [Dự án Tái đầu tư & Tái kích hoạt]
@@ -318,7 +318,7 @@
 ##### Priorities for the Next 7 Days
 *   **Triển khai whitelist trang Địa phương (Location Page):** Sử dụng GenAI sinh nội dung và xuất bản các trang vùng địa lý, tuyến đường và điểm nóng phạt nguội theo danh sách whitelist đã được duyệt.
 *   **Thống nhất API & Technical Specs cho Subscription:** Làm việc sâu với PO Cell Team để tháo gỡ vướng mắc về đặc tả kỹ thuật và chốt cơ chế thanh toán gói cước giám sát phạt nguội tự động trực tiếp trên Web.
-*   **Hoàn thiện cơ chế bóc tách & mapping dữ liệu:** Hoàn thành cơ chế trích xuất dữ liệu Lỗi + Tên đường và kiểm thử luồng mapping dữ liệu sang trang Location địa phương và Blog hướng dẫn chi tiết.
+*   **Hoàn thiện cơ chế bóc tách & mapping dữ liệu:** Hoàn thành cơ chế trích xuất dữ liệu Lỗi + Tên đường và test luồng mapping dữ liệu sang trang Location địa phương và Blog hướng dẫn chi tiết.
 
 ##### Cross-team Collaboration & Support Needed
 *   Phối hợp cùng PO Cell Team và Risk Verification Team chốt cơ chế đồng bộ dữ liệu và thanh toán Web PG cho gói Subscription Phạt Nguội.
@@ -368,16 +368,16 @@
 *   **Ví Trả Sau Gần Bạn quanh trường học:** Hoàn tất đồng bộ danh sách merchant chấp nhận thanh toán Ví Trả Sau quanh các trường đại học lớn cùng team M4B và SME phục vụ tệp học sinh U18 chuẩn bị nhập học.
 
 ##### Priorities for the Next 7 Days
-*   **Go-Live Landing Page U18:** Hoàn thành phát triển, kiểm thử kỹ thuật và xuất bản chính thức trang `momo.vn/phi-xet-tuyen` trước ngày 15/07.
+*   **Go-Live Landing Page U18:** Hoàn thành phát triển, nghiệm thu kỹ thuật và xuất bản chính thức trang `momo.vn/phi-xet-tuyen` trước ngày 15/07.
 *   **Kiểm tra luồng tracking W2A U18:** Đảm bảo hệ thống tracking Universal Links và UTM hoạt động chính xác từ Web sang App để đo lường tỷ lệ New User.
 *   **Đánh giá chất lượng nội dung sinh từ Prompts mới:** Thử nghiệm sản xuất nội dung mẫu cho 50 merchant mới bằng bộ Prompts Outline, Draft và Menu vừa tinh chỉnh để đánh giá độ chính xác thực đơn và thông tin địa phương trước khi launch diện rộng.
 *   **Phát triển và cấu hình nội dung động cho Merchant:** Thiết lập các cấu phần FAQ tự sinh theo ngữ cảnh địa danh và Top 5 merchants được tin dùng để tối ưu SEO/GEO.
 *   **Quy hoạch dữ liệu trường đại học/cao đẳng:** Chuẩn bị danh sách tọa độ các trường Đại học / Cao đẳng và chạy luồng quét merchant xung quanh các điểm này phục vụ chiến dịch của User Growth.
 *   **Sản xuất trang đối tác SME:** Sử dụng GenAI tự động hóa sản xuất và xuất bản ~50 trang merchant quanh khu vực các trường đại học theo danh sách.
-*   **Kiểm thử thuật toán Radius Fallback & Luồng cào dữ liệu:** Kiểm nghiệm thực tế cơ chế quét bán kính, luồng cào ảnh Google Maps, menu ShopeeFood / GrabFood và tự động gắn thẻ noindex đối với các trang danh sách không đạt số lượng merchant tối thiểu.
+*   **Test thuật toán Radius Fallback & Luồng cào dữ liệu:** Kiểm nghiệm thực tế cơ chế quét bán kính, luồng cào ảnh Google Maps, menu ShopeeFood / GrabFood và tự động gắn thẻ noindex đối với các trang danh sách không đạt số lượng merchant tối thiểu.
 
 ##### Cross-team Collaboration & Support Needed
-*   Phối hợp chặt chẽ với team User Growth kiểm thử luồng đăng ký tài khoản mới và áp dụng mã ưu đãi `EMCHUA18` trên App.
+*   Phối hợp chặt chẽ với team User Growth test luồng đăng ký tài khoản mới và áp dụng mã ưu đãi `EMCHUA18` trên App.
 *   Làm việc với team M4B và PM quản lý SME để kiểm duyệt thông tin và hình ảnh merchant trước khi xuất bản.
 
 ---
@@ -394,7 +394,7 @@
 
 ##### Priorities for the Next 7 Days
 *   **Hoàn thiện UI và phát triển các công cụ mới:** Tinh chỉnh xong giao diện Saving Tool và hoàn thành triển khai bộ 3 công cụ Bảo hiểm xã hội/Lương hưu.
-*   **Kiểm thử thực tế tính năng quản lý Widget:** Kiểm nghiệm thực tế cơ chế kéo thả Utilities trên MoSpark Landing Page, thử nghiệm tính năng cấu hình CTA động và đối soát số liệu đo lường qua Umami.
+*   **Test thực tế tính năng quản lý Widget:** Kiểm nghiệm thực tế cơ chế kéo thả Utilities trên MoSpark Landing Page, thử nghiệm tính năng cấu hình CTA động và đối soát số liệu đo lường qua Umami.
 *   **Di chuyển eSIM sang MoSpark:** Hoàn tất migration microsite eSIM, duy trì cấu trúc URL cũ và triển khai kế hoạch **Media Team eSIM** cho du khách nước ngoài với trang tiếng Anh `/esim-du-lich/viet-nam` (target search volume 50.8K/tháng) và xây dựng Bản Đồ Hành Trình Khách Hàng Chi Tiết (CJM 9 Bước).
 *   **Xây dựng Destination Promotion Hub (MoMo Travel):** Lên kế hoạch phát triển Destination Promotion Hub (MoMo Travel) nhằm tối ưu hóa việc bán chéo vé bay quốc tế, khách sạn và bảo hiểm du lịch theo từng điểm đến.
 *   **Triển khai GEO/AEO Quality Gate:** Tích hợp bộ quy tắc chấm điểm chất lượng nội dung GenAI (yêu cầu đạt >= 80 điểm) lên MoSpark CMS.

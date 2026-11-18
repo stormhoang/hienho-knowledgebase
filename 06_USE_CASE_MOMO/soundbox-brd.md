@@ -1,12 +1,12 @@
 # BRD: Soundbox
 
-> - **Project:** Soundbox Web D2C - Website Order Loa Báo Chuyển Khoản MoMo
-> - **Division:** PS (Payment Services) | SME Offline
-> - **Main URL:** momo.vn/loa-thong-bao-chuyen-khoan
+> - **Dự án:** Soundbox Web D2C - Website Order Loa Báo Chuyển Khoản MoMo
+> - **Khối phụ trách:** PS (Payment Services) | SME Offline
+> - **URL chính:** momo.vn/loa-thong-bao-chuyen-khoan
 > - **Owner:** Web Platform
-> - **Governance:** Web Product Lead (Hiến)
-> - **Version:** 2.0 - Tháng 05/2026
-> - **Status:** Draft - Chờ stakeholder review
+> - **Phê duyệt:** Web Product Lead (Hiến)
+> - **Phiên bản:** 2.0 - Tháng 05/2026
+> - **Trạng thái:** Draft - Chờ stakeholder review
 
 ---
 

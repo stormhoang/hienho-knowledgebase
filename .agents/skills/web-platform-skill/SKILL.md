@@ -53,7 +53,7 @@ Kỹ sư có thể sao chép tài liệu này vào dự án của mình và sử
    - **Executive (Tóm tắt điều hành):** Đánh giá tổng quan bài toán và tác động kỹ thuật/nghiệp vụ.
    - **Hypothesis (Giả thuyết):** Vấn đề tồn đọng và giả định cải thiện chỉ số/hiệu năng khi thực thi.
    - **Solution (Giải pháp):** Phương án kỹ thuật, cơ chế xử lý hoặc kiến trúc đã chọn.
-   - **Status (Trạng thái):** Mức độ hoàn thiện cụ thể (Hoàn thành 100% / Đang kiểm thử / Gặp điểm nghẽn).
+   - **Status (Trạng thái):** Mức độ hoàn thiện cụ thể (Hoàn thành 100% / Đang test / Gặp điểm nghẽn).
 4. **Hình thức trình bày tối giản:** 
    - Chỉ sử dụng **Bảng biểu Markdown** và **Gạch đầu dòng phân tích trực diện**.
    - **Không vẽ sơ đồ, graph hay chart**.
@@ -66,7 +66,7 @@ Kỹ sư có thể sao chép tài liệu này vào dự án của mình và sử
 ### 3.1. Công thức liên kết Hypothesis $\rightarrow$ Solution $\rightarrow$ Status $\rightarrow$ Impact
 $$\text{Hypothesis (Vấn đề & Giả định)} \longrightarrow \text{Solution (Giải pháp kỹ thuật)} \longrightarrow \text{Status (Trạng thái nghiệm thu)} \longrightarrow \text{Impact (Tác động đo lường)}$$
 
-- *Ví dụ:* "Giả định việc chuẩn hóa cấu trúc dữ liệu và loại bỏ các truy vấn lặp sẽ giảm độ trễ (Hypothesis) $\rightarrow$ Đã tái cấu trúc 3 module tính toán cốt lõi (Solution) $\rightarrow$ Trạng thái: Đã hoàn tất kiểm thử 100% (Status) $\rightarrow$ Thời gian xử lý phản hồi giảm 35% không phát sinh lỗi biên dịch (Impact)."
+- *Ví dụ:* "Giả định việc chuẩn hóa cấu trúc dữ liệu và loại bỏ các truy vấn lặp sẽ giảm độ trễ (Hypothesis) $\rightarrow$ Đã tái cấu trúc 3 module tính toán cốt lõi (Solution) $\rightarrow$ Trạng thái: Đã hoàn tất test 100% (Status) $\rightarrow$ Thời gian xử lý phản hồi giảm 35% không phát sinh lỗi biên dịch (Impact)."
 
 ### 3.2. Khung phân loại 4 Zone cho Báo cáo Tổng thể
 - **Performance Zone (Hiệu suất):** Duy trì, tối ưu và refactor hệ thống đang vận hành ổn định.
@@ -85,7 +85,7 @@ $$\text{Hypothesis (Vấn đề & Giả định)} \longrightarrow \text{Solution
 > **Phạm vi tác vụ:** [Tên tác vụ / Dự án]  
 > **Thời gian thực hiện:** [YYYY-MM-DD HH:MM] - [YYYY-MM-DD HH:MM]  
 > **Đơn vị thực thi:** [Tên vai trò Kỹ sư / AI Agent - ví dụ: Backend Engineer / Lead AI Agent]  
-> **Trạng thái tổng thể (Overall Status):** [Hoàn thành 100% / Đang kiểm thử / Gặp điểm nghẽn]  
+> **Trạng thái tổng thể (Overall Status):** [Hoàn thành 100% / Đang test / Gặp điểm nghẽn]  
 
 ---
 
@@ -105,7 +105,7 @@ $$\text{Hypothesis (Vấn đề & Giả định)} \longrightarrow \text{Solution
 | **Giả Thuyết Đặt Ra (Hypothesis)** | [Giả định: Nếu thực hiện giải pháp X thì sẽ đạt kết quả Y, cải thiện chỉ số Z] |
 | **Giải Pháp Kỹ Thuật (Technical Solution)** | [Chi tiết kiến trúc, thuật toán, module hoặc luồng dữ liệu được áp dụng] |
 | **Tiêu Chuẩn Nghiệm Thu (Acceptance Criteria)** | [Danh sách các điều kiện cụ thể để xác nhận giải pháp thành công] |
-| **Trạng Thái Thực Thi (Status)** | [Hoàn thành 100% / Đang kiểm thử - kèm lý do nếu chưa hoàn tất] |
+| **Trạng Thái Thực Thi (Status)** | [Hoàn thành 100% / Đang test - kèm lý do nếu chưa hoàn tất] |
 
 ---
 
@@ -117,7 +117,7 @@ $$\text{Hypothesis (Vấn đề & Giả định)} \longrightarrow \text{Solution
 | Số tệp tin tạo mới (New Files) | [Số file] | Mã nguồn, tài liệu, cấu hình |
 | Số tệp tin chỉnh sửa (Modified Files) | [Số file] | Refactor, sửa lỗi |
 | Số lệnh Terminal đã chạy (Commands) | [Số lệnh] | Build, test, lint, search |
-| Số bài kiểm thử đã pass (Tests Passed) | [Số bài / Tổng số] | Đạt 100% test cases |
+| Số bài test đã pass (Tests Passed) | [Số bài / Tổng số] | Đạt 100% test cases |
 | Số sự cố kỹ thuật gặp phải (Errors) | [Số lỗi] | Lỗi cú pháp, runtime đã khắc phục |
 
 ---
@@ -129,7 +129,7 @@ $$\text{Hypothesis (Vấn đề & Giả định)} \longrightarrow \text{Solution
 | 1 | Khảo sát & Đọc bối cảnh | Kiểm tra kiến trúc hiện tại, rà soát mã nguồn và lịch sử | Hoàn thành | Nắm rõ luồng nghiệp vụ và cấu trúc dữ liệu |
 | 2 | Phân tích & Lập giải pháp | Bóc tách yêu cầu, kiểm chứng Hypothesis và chốt Solution | Hoàn thành | Chốt phương án triển khai tối ưu |
 | 3 | Triển khai mã nguồn | Viết code, cập nhật tệp tin cấu hình và tài liệu đặc tả | Hoàn thành | Hoàn thiện mã nguồn mới |
-| 4 | Kiểm thử & Nghiệm thu | Chạy kiểm thử, kiểm tra tính toàn vẹn và chuẩn format | Hoàn thành | Hệ thống hoạt động chính xác, 0 lỗi |
+| 4 | Test & Nghiệm thu | Chạy test, kiểm tra tính toàn vẹn và chuẩn format | Hoàn thành | Hệ thống hoạt động chính xác, 0 lỗi |
 | 5 | Đóng gói & Bàn giao | Soạn tài liệu tổng kết và bàn giao sản phẩm | Hoàn thành | Bàn giao hoàn chỉnh cho đội ngũ liên quan |
 
 ---
@@ -163,11 +163,11 @@ $$\text{Hypothesis (Vấn đề & Giả định)} \longrightarrow \text{Solution
 
 ### B. Kế Hoạch Hành Động Tiếp Theo
 
-| Mức Độ Ưu Tiên | Hạng Mục Công Việc | Đội Ngũ Phụ Trách | Thời Hạn | Trạng Thái (Status) |
+| Thứ Tự Triển Khai | Hạng Mục Công Việc | Đội Ngũ Phụ Trách | Thời Hạn | Trạng Thái (Status) |
 | --- | --- | --- | --- | --- |
-| P0 (Cấp bách) | [Hành động cần làm ngay] | [Tên đội ngũ chuyên môn] | [Thời hạn] | Chưa bắt đầu |
-| P1 (Quan trọng) | [Hành động hoàn thiện/mở rộng] | [Tên đội ngũ chuyên môn] | [Thời hạn] | Chưa bắt đầu |
-| P2 (Nâng cao) | [Hành động tối ưu dài hạn] | [Tên đội ngũ chuyên môn] | [Thời hạn] | Chưa bắt đầu |
+| 1. Làm ngay | [Hành động cần làm ngay] | [Tên đội ngũ chuyên môn] | [Thời hạn] | Chưa bắt đầu |
+| 2. Làm tiếp theo | [Hành động hoàn thiện/mở rộng] | [Tên đội ngũ chuyên môn] | [Thời hạn] | Chưa bắt đầu |
+| 3. Tối ưu dài hạn | [Hành động tối ưu dài hạn] | [Tên đội ngũ chuyên môn] | [Thời hạn] | Chưa bắt đầu |
 ```
 
 ---
@@ -196,7 +196,7 @@ $$\text{Hypothesis (Vấn đề & Giả định)} \longrightarrow \text{Solution
 | Hạng Mục / Dự Án | Giả Thuyết Ban Đầu (Hypothesis) | Giải Pháp Triển Khai (Solution) | Trạng Thái (Status) | Kết Quả Đo Lường / Impact |
 | :--- | :--- | :--- | :--- | :--- |
 | [Tên Dự Án 1] | [Giả định cải thiện chỉ số/tính năng] | [Chi tiết giải pháp kỹ thuật đã áp dụng] | Hoàn thành (100%) | [Chỉ số đạt được thực tế] |
-| [Tên Dự Án 2] | [Giả định giảm tải thời gian/lỗi] | [Chi tiết giải pháp kỹ thuật đã áp dụng] | Đang kiểm thử (80%) | [Kết quả kiểm thử ban đầu] |
+| [Tên Dự Án 2] | [Giả định giảm tải thời gian/lỗi] | [Chi tiết giải pháp kỹ thuật đã áp dụng] | Đang test (80%) | [Kết quả test ban đầu] |
 | [Tên Dự Án 3] | [Giả định tối ưu quy trình] | [Chi tiết giải pháp kỹ thuật đã áp dụng] | Gặp điểm nghẽn (40%) | [Vướng mắc cần hỗ trợ] |
 
 ---
@@ -209,7 +209,7 @@ $$\text{Hypothesis (Vấn đề & Giả định)} \longrightarrow \text{Solution
 | Số tệp tin tạo mới (New Files) | [Số] | [Số] | [+/-]% | [Mục tiêu] | Đạt |
 | Số tệp tin refactor (Modified) | [Số] | [Số] | [+/-]% | [Mục tiêu] | Đạt |
 | Số PR / Commits đã merge | [Số] | [Số] | [+/-]% | [Mục tiêu] | Đạt |
-| Tỷ lệ thành công kiểm thử (Test Pass Rate) | [Số]% | [Số]% | [+/-]pp | [Mục tiêu]% | Đạt |
+| Tỷ lệ thành công test (Test Pass Rate) | [Số]% | [Số]% | [+/-]pp | [Mục tiêu]% | Đạt |
 
 ---
 
@@ -217,7 +217,7 @@ $$\text{Hypothesis (Vấn đề & Giả định)} \longrightarrow \text{Solution
 
 - **Phát Triển Mã Nguồn & Tiện Ích:** Hoàn thành [Số] tính năng cốt lõi; nâng cao độ chính xác xử lý logic; tối ưu [Số]% thời gian phản hồi.
 - **Tự Động Hóa & Tối Ưu Quy Trình:** Chuẩn hóa quy trình xử lý dữ liệu; giảm [Số]% các thao tác thủ công lặp lại.
-- **Xử Lý Lỗi & Ổn Định Hệ Thống:** Khắc phục triệt để [Số] lỗi runtime; 100% bài kiểm thử trên môi trường staging vượt qua tiêu chuẩn nghiệm thu.
+- **Xử Lý Lỗi & Ổn Định Hệ Thống:** Khắc phục triệt để [Số] lỗi runtime; 100% bài test trên môi trường staging vượt qua tiêu chuẩn nghiệm thu.
 
 ---
 
@@ -225,17 +225,17 @@ $$\text{Hypothesis (Vấn đề & Giả định)} \longrightarrow \text{Solution
 
 - **Backend Team:** Thống nhất đặc tả API và định dạng dữ liệu cho module [Tên module] trước ngày [Ngày/Tháng] - *Trạng thái: Đang trao đổi*.
 - **Data Analytics Team:** Chuẩn hóa cấu trúc trường dữ liệu log để phục vụ phân tích - *Trạng thái: Đã hoàn tất*.
-- **QA Team:** Hoàn tất kịch bản kiểm thử cho các trường hợp biên (Edge Cases) - *Trạng thái: Đang chờ bàn giao*.
+- **QA Team:** Hoàn tất kịch bản test cho các trường hợp biên (Edge Cases) - *Trạng thái: Đang chờ bàn giao*.
 
 ---
 
 ## 6. KẾ HOẠCH TRỌNG TÂM 7 NGÀY TỚI (PRIORITIES FOR NEXT 7 DAYS)
 
-| Mức Độ Ưu Tiên | Hạng Mục Công Việc Cần Triển Khai | Đội Ngũ Phụ Trách | Mục Tiêu Đầu Ra | Trạng Thái (Status) |
+| Thứ Tự Triển Khai | Hạng Mục Công Việc Cần Triển Khai | Đội Ngũ Phụ Trách | Mục Tiêu Đầu Ra | Trạng Thái (Status) |
 | --- | --- | --- | --- | --- |
-| P0 (Cấp bách) | [Nhiệm vụ trọng điểm 1 - Bugfix/Delivery] | [Tên đội ngũ chuyên môn] | [Deliverable cụ thể] | Đang chuẩn bị |
-| P1 (Quan trọng) | [Nhiệm vụ trọng điểm 2 - Feature/Testing] | [Tên đội ngũ chuyên môn] | [Deliverable cụ thể] | Chưa bắt đầu |
-| P2 (Nâng cao) | [Nhiệm vụ tối ưu hóa / Refactor kiến trúc] | [Tên đội ngũ chuyên môn] | [Deliverable cụ thể] | Chưa bắt đầu |
+| 1. Làm ngay | [Nhiệm vụ trọng điểm 1 - Bugfix/Delivery] | [Tên đội ngũ chuyên môn] | [Deliverable cụ thể] | Đang chuẩn bị |
+| 2. Làm tiếp theo | [Nhiệm vụ trọng điểm 2 - Feature/Testing] | [Tên đội ngũ chuyên môn] | [Deliverable cụ thể] | Chưa bắt đầu |
+| 3. Tối ưu dài hạn | [Nhiệm vụ tối ưu hóa / Refactor kiến trúc] | [Tên đội ngũ chuyên môn] | [Deliverable cụ thể] | Chưa bắt đầu |
 ```
 
 ---
@@ -277,7 +277,7 @@ $$\text{Hypothesis (Vấn đề & Giả định)} \longrightarrow \text{Solution
 | Tổng số tác vụ kỹ thuật hoàn tất | [Số] | [Số] | [+/-]% | Vượt kế hoạch | Đạt |
 | Tổng tệp tin mã nguồn tạo mới & tối ưu | [Số] | [Số] | [+/-]% | Đạt tiêu chuẩn | Đạt |
 | Tổng số PR / Commits đã merge | [Số] | [Số] | [+/-]% | Tương tác chuyên sâu | Đạt |
-| Tỷ lệ thành công kiểm thử (Test Pass Rate) | [Số]% | [Số]% | [+/-]pp | Chất lượng cao | Đạt |
+| Tỷ lệ thành công test (Test Pass Rate) | [Số]% | [Số]% | [+/-]pp | Chất lượng cao | Đạt |
 | Thời gian trung bình hoàn tất tác vụ | [Số] giờ | [Số] giờ | [+/-]% | Tốc độ cải thiện | Đạt |
 
 ---

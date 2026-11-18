@@ -1136,7 +1136,7 @@ Utility-First không phải slogan - đây là cơ chế chuyển đổi khác n
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Pillar</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tools cần build</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Data được tạo ra</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Priority</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Đợt Triển Khai</th>
     </tr>
   </thead>
   <tbody>
@@ -1144,13 +1144,13 @@ Utility-First không phải slogan - đây là cơ chế chuyển đổi khác n
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>P1 - Tài chính & Tín dụng</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Loan calculator, CIC score simulator, VTS eligibility checker</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhu cầu vay theo khu vực, phân phối credit score người dùng thực tế</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P0</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 1</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>P2 - Bảo hiểm Công nghệ</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">BH cost calculator (xe máy, ô tô, BHYT), Plan comparison</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phân phối mức phí thị trường, preference theo gói, demographic</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 2</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>P3 - Dịch vụ Công & Tiện ích</strong></td>
@@ -1162,7 +1162,7 @@ Utility-First không phải slogan - đây là cơ chế chuyển đổi khác n
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>P4 - Đời sống & Merchant</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Merchant finder, Cinema showtime lookup</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Demand theo khu vực, genre preference, payment pattern</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 3</td>
     </tr>
   </tbody>
 </table>
@@ -1208,7 +1208,7 @@ Không có competitor nào có data này. Không LLM nào có thể fabricate da
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tool sessions/tháng</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lượt sử dụng per tool</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">> 100K/tool P0 trong 6 tháng live</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">> 100K/tool Đợt 1 trong 6 tháng live</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tool → CTA click rate</td>

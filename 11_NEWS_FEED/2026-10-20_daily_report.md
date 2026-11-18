@@ -37,7 +37,7 @@ tags: [seo, geo, aeo, ai_search, google_search, llm_optimization, entity_authori
 
 ### 1. Ổn Định Sau Đợt Biến Động Hậu Spam Update & Xu Hướng Tái Đánh Giá Chất Lượng
 - **Nguồn & Trích dẫn:** [Search Engine Roundtable: Google Search Algorithm Updates](https://www.seroundtable.com/category/google-updates) & [Google Status Dashboard](https://status.search.google.com/products/rGHU1u87FJnkP6W2GwMi/history).
-- **Hiện trạng SERP:** Sau các ngày biến động mạnh (15–18/10), biên độ dao động SERP bắt đầu đi vào chu kỳ cân bằng mới. Những website duy trì lượng người dùng quay lại trực tiếp (Direct Traffic) và có thương hiệu thực thể rõ ràng ghi nhận sự phục hồi vị trí, trong khi các mạng lưới site vệ tinh chuyên cào dữ liệu không có dấu hiệu hồi phục.
+- **Hiện trạng SERP:** Sau các ngày biến động mạnh (15-18/10), biên độ dao động SERP bắt đầu đi vào chu kỳ cân bằng mới. Những website duy trì lượng người dùng quay lại trực tiếp (Direct Traffic) và có thương hiệu thực thể rõ ràng ghi nhận sự phục hồi vị trí, trong khi các mạng lưới site vệ tinh chuyên cào dữ liệu không có dấu hiệu hồi phục.
 
 ### 2. Tác Động Của Tín Hiệu Thực Thể Uy Tín (Entity Authority Signals)
 - Các cập nhật ngầm gần đây của Google cho thấy công cụ tìm kiếm phụ thuộc ngày càng nhiều vào Đồ thị tri thức (Knowledge Graph) để xác minh tính chính danh của các nguồn thông tin tài chính và sức khỏe (YMYL), giảm phụ thuộc vào các chỉ số liên kết (PageRank/Backlinks) nhân tạo.

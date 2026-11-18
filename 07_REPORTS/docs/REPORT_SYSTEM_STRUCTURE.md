@@ -1,6 +1,6 @@
 # HỆ THỐNG ĐÓNG GÓI BÁO CÁO WEB PLATFORM (REPORT PACKAGING ARCHITECTURE)
 
-Tài liệu này xác lập cấu trúc tổ chức, nguồn dữ liệu Single Source of Truth (SSOT) và quy trình đóng gói số liệu định kỳ (Weekly & Monthly Reports) cho toàn bộ nền tảng Web Platform.
+Tài liệu này xác lập cấu trúc tổ chức, nguồn dữ liệu chuẩn mực và quy trình đóng gói số liệu định kỳ (Weekly & Monthly Reports) cho toàn bộ nền tảng Web Platform.
 
 ---
 
@@ -33,14 +33,14 @@ Báo cáo Web Platform không chỉ dừng lại ở số liệu Pageviews bề 
 
 ## 2. CHI TIẾT 3 NGUỒN DỮ LIỆU ĐẦU VÀO
 
-### Trụ Cột 1: Hiệu Suất Tăng Trưởng & Phân Rã Kênh (Performance & Channels)
+### Trụ Cột 1: Hiệu Suất Tăng Trưởng & cơ cấu (Performance & Channels)
 - **Nguồn trích xuất:** File `Web Performance Tracking (2).xlsx` (tại `/Users/hienhv/Downloads/`).
-- **File SSOT lưu trữ:** [`07_REPORTS/web_performance_tracking.xlsx`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/web_performance_tracking.xlsx).
+- **Tệp lưu trữ chính:** [`07_REPORTS/web_performance_tracking.xlsx`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/web_performance_tracking.xlsx).
 - **Snapshot tự động:** [`07_REPORTS/data/monthly_MM_YYYY_mtd_XXd.json`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/data).
 - **Chỉ số trọng yếu:**
   - Tổng Pageviews lũy kế (Actual MTD), Số ngày MTD (MTD Days).
-  - Tốc độ vận hành ngày (Daily Pace) và Dự phóng cuối tháng (Run-rate Forecast 31d).
-  - Phân bổ Kênh: Organic, Direct, Referral, Paid, Others.
+  - Tốc độ vận hành ngày (Daily Pace) và dự báo cuối tháng (Run-rate Forecast 31d).
+  - Phân bổ Kênh theo cấu trúc hai nhóm lưu lượng: Non-Paid (Organic Search, Direct, Referral, AI Traffic) và Paid Ads.
   - Phân bổ 5 Strategic Hubs: Cinema Hub, Financial Hub, Vehicle Hub, New User Hub, Student Hub.
 
 ### Trụ Cột 2: Sức Khỏe Kỹ Thuật & Crawl Budget (Technical Health & GSC Crawl Stats)
@@ -74,15 +74,15 @@ Báo cáo Web Platform không chỉ dừng lại ở số liệu Pageviews bề 
 ```
 07_REPORTS/
 ├── REPORT_SYSTEM_STRUCTURE.md               # Kiến trúc hệ thống dữ liệu báo cáo (File này)
-├── WEB_PERFORMANCE_TRACKING_MASTER.md       # SSOT Master (Tracking, Crawl Stats & Backlinks)
-├── web_performance_tracking.xlsx            # File SSOT Excel đồng bộ từ Downloads
+├── WEB_PERFORMANCE_TRACKING_MASTER.md       # Master Tracking (Tracking, Crawl Stats & Backlinks)
+├── web_performance_tracking.xlsx            # Tệp Excel đối soát đồng bộ từ Downloads
 │
 ├── data/                                    # Kho lưu trữ JSON Snapshots theo ngày MTD
 │   ├── monthly_10_2026_mtd_9d.json          # Snapshot tracking thuần MTD 9 ngày
 │   ├── monthly_10_2026_consolidated.json    # Snapshot hợp nhất (Tracking + Crawl + Backlinks)
 │   └── ...                                  # Snapshots các mốc thời gian trước
 │
-├── technical_seo/                           # Phân hệ Sức khỏe Kỹ thuật & Hạ tầng SEO
+├── technical_seo/                           # Báo cáo Sức khỏe Kỹ thuật & Hạ tầng SEO
 │   ├── crawl_stats/                         # Dữ liệu & Báo cáo GSC Crawl Stats
 │   │   └── gsc_crawl_stats_latest.json      # Snapshot chi tiết Crawl Budget & Status Codes
 │   └── backlinks/                           # Dữ liệu Hồ sơ Liên kết & Audit Disavow
@@ -91,7 +91,7 @@ Báo cáo Web Platform không chỉ dừng lại ở số liệu Pageviews bề 
 │       ├── backlink_disavow_candidates_2026-10-10.txt
 │       └── backlink_disavow_baseline_2026-10-10.csv
 │
-├── packages/                                # Phân hệ Đóng gói Báo cáo Điều hành (Executive)
+├── packages/                                # Bộ Báo cáo Điều hành (Executive Packages)
 │   ├── monthly/                             # Báo cáo Tháng (Chuẩn Agenda 4 phần gửi BOM)
 │   │   ├── report-thang-08-2026.md
 │   │   ├── report-thang-09-2026.md
@@ -109,7 +109,7 @@ Báo cáo Web Platform không chỉ dừng lại ở số liệu Pageviews bề 
 
 ## 4. QUY TRÌNH ĐÓNG GÓI BÁO CÁO TỰ ĐỘNG (PACKAGING PIPELINE)
 
-1. **Bước 1: Đồng bộ dữ liệu Excel:** Chạy `python3 scripts/sync_tracking_report.py` để quét file mới nhất trong `/Users/hienhv/Downloads/` và cập nhật SSOT Excel cùng JSON tracking.
+1. **Bước 1: Đồng bộ dữ liệu Excel:** Chạy `./.venv/bin/python scripts/sync_tracking_report.py` để quét file mới nhất trong `/Users/hienhv/Downloads/` và cập nhật tệp Excel cùng JSON tracking.
 2. **Bước 2: Hợp nhất Dữ liệu Kỹ thuật:** Script tự động nạp `gsc_crawl_stats_latest.json` và `backlink_profile_latest.json` để tạo file snapshot hợp nhất `monthly_10_2026_consolidated.json`.
 3. **Bước 3: Cập nhật Master Document:** Đồng bộ các số liệu mới nhất vào [WEB_PERFORMANCE_TRACKING_MASTER.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md).
 4. **Bước 4: Xuất bản Executive Report:** Đóng gói bản báo cáo hoàn chỉnh vào `07_REPORTS/packages/monthly/` theo chuẩn văn phong Product Lead / Tech Lead:

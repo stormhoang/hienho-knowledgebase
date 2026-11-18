@@ -11,7 +11,7 @@
 ### 🚀 1.1 Dự án Phạt Nguội (Pioneer Project)
 - **Recap chỉ đạo từ CEO A. Tường (Workshop JTBD - 06/05/2026):**
   *   **Elegant Problem Framing:** Định nghĩa vấn đề tinh tế và đơn giản (định nghĩa đúng vấn đề = 50% giải pháp). Thiết kế công cụ tra cứu Phạt Nguội phải tuyệt đối tuân thủ tiêu chuẩn: *"An toàn, An tâm, Đơn giản (không cần hướng dẫn) & Dễ dùng (1-2-3 click là xong)"*.
-  *   **Bữa tối gia đình Test:** Sản phẩm/tính năng tốt phải tạo ra Aha! Moment đủ mạnh để người dùng tự động kể về nó một cách tự nhiên trong bữa tối gia đình.
+  *   **Tiêu chuẩn trải nghiệm đột phá (Aha Moment):** Sản phẩm/tính năng tốt phải tạo ra Aha! Moment đủ mạnh để người dùng tự động kể về nó một cách tự nhiên trong bữa tối gia đình.
   *   **Áp dụng thực tế:** Triển khai thành công mô hình này lên toàn bộ hệ thống các trang Phạt Nguội đã build bao gồm trang chủ tra cứu, trang ngách Ô tô, Xe máy, Xe máy điện và các trang tin tức/blog.
 - **Recap chỉ đạo từ VP A. Công (Weekly Platform - 12/05 & 19/05/2026):**
   *   **Mô hình Product Service & Framework SPA (Pilot Phase):** Đóng gói Phạt Nguội làm Case Study mẫu đại diện cho mô hình cung cấp giải pháp cho BU, áp dụng chặt chẽ quy trình quản trị **SPA (reSearch - Pilot - Action)**. 
@@ -19,11 +19,11 @@
 ### 🏛️ 1.2 Dự án Dịch Vụ Công (Strategic Governance Hub)
 - **Recap chỉ đạo từ CEO A. Tường (Workshop JTBD - 06/05/2026):**
   *   **Elegant Problem Framing:** Hàng triệu người dùng tìm kiếm thủ tục hành chính (TTHC), BHXH mỗi ngày nhưng không fintech nào giải quyết tốt nhu cầu này trên web. MoMo đang xử lý tới 11.2% volume giao dịch DVCQG nhưng thiếu touchpoint web để điều hướng và dẫn user vào App thanh toán. Thiết kế DVC Hub phải đơn giản, dễ tiếp cận và định hướng trực tiếp tới in-app transaction.
-  *   **Bữa tối gia đình Test:** Ứng dụng công cụ tương tác **Smart DVC Checklist Generator** (trả lời 3 câu hỏi nhanh → render ngay checklist hồ sơ chuẩn 100%) tại vị trí First-Fold thay vì viết content dài dòng, tạo Aha! Moment tức thì và dự kiến tăng 30% tỷ lệ chuyển đổi Web-to-App (W2A).
+  *   **Tiêu chuẩn trải nghiệm đột phá (Aha Moment):** Ứng dụng công cụ tương tác **Smart DVC Checklist Generator** (trả lời 3 câu hỏi nhanh → render ngay checklist hồ sơ chuẩn 100%) tại vị trí First-Fold thay vì viết content dài dòng, tạo Aha! Moment tức thì và dự kiến tăng 30% tỷ lệ chuyển đổi Web-to-App (W2A).
 - **Recap chỉ đạo từ VP A. Công (Weekly Platform - 12/05 & 19/05/2026):**
   *   **Quy trình SPA & Action Phase:** Sự thành công của Pilot Phạt Nguội trong tháng 6/2026 là cơ sở để pitch BU DVC duyệt ngân sách triển khai scale-out đồng loạt 1,900+ TTHC dưới Governance Hub.
   *   **Topical Authority:** Định vị Dịch vụ công là Pillar chiến lược số 3. Bắt buộc triển khai cấu trúc mớm dữ liệu sạch `llms.txt` để các AI Search Engines (ChatGPT, Perplexity) dễ dàng quét thông tin và trích dẫn (cite) MoMo làm nguồn dữ liệu chính thống.
-  *   **Xác lập 2 phân hệ (Utility vs Payment):** Định rõ KPI cam kết: *Utility Lane* (đo bằng MEU) đối với Checklist TTHC; và *Payment Lane* (đo bằng MAU + % New to services) đối với cổng ePass/ETC chuyển giao sang mô hình Payment Gateway trực tiếp (1 User ↔ 1 PG MoMo).
+  *   **Xác lập 2 luồng chuyển đổi (Utility vs Payment):** Định rõ KPI cam kết: *Utility Lane* (đo bằng MEU) đối với Checklist TTHC; và *Payment Lane* (đo bằng MAU + % New to services) đối với cổng ePass/ETC chuyển giao sang mô hình Payment Gateway trực tiếp (1 User ↔ 1 PG MoMo).
 
 ### 🤖 1.3 Nền tảng MoSpark & GenAI Content Engine
 - **Recap đồng thuận từ Huy Lê (VP User Growth - 22/05/2026):**
@@ -168,7 +168,7 @@
 **Strategic Governance Hub - Dịch Vụ Công**
 - **Thiết lập Phễu Tăng Trưởng (Web Acquisition Funnel) cho Dịch Vụ Công:** Định vị DVC là Pillar chiến lược số 3 của Web Platform, giải quyết triệt để bài toán thiếu touchpoint Web để hứng tệp khách hàng tiềm năng khổng lồ (~5M searches/tháng có ý định giao dịch cao nhất).
 - **Đột phá Trải nghiệm tương tác với "Smart DVC Checklist Generator":** Thay thế nội dung chữ dài dòng bằng công cụ tạo checklist hồ sơ tự động (trả lời 3 câu hỏi nhận kết quả chuẩn xác 100%). Giả thuyết A/B test chứng minh đưa widget này lên First Fold sẽ giúp tăng tỷ lệ chuyển đổi Web-to-App (W2A) thêm 30% so với trang tĩnh.
-- **Xác lập mô hình KPI & Phân hệ chuyển đổi:** 
+- **Xác lập mô hình KPI & Luồng chuyển đổi:** 
   *   *Utility Lane (MEU):* Đo lường tương tác qua các công cụ như Checklist Generator trên Hub `/dich-vu-cong`.
   *   *Payment Lane (MAU & % New to services):* Kênh ePass/ETC chuyển giao mô hình sang "ePass liên kết trực tiếp Payment Gateway MoMo" (1 User ↔ 1 PG MoMo).
 - **Ứng dụng SPA Framework để Tối ưu hóa Nguồn lực:** Sử dụng thành công của dự án Pilot Phạt Nguội trong tháng 5 để pitching BU DVC phê duyệt ngân sách và tài nguyên phát triển để nhân bản đồng loạt cho 1,900+ TTHC trong tháng 6/2026.

@@ -2,6 +2,10 @@ openpyxl==3.1.5
 pandas>=2.0
 python-pptx>=0.6.23
 xlsxwriter>=3.1
+pyyaml>=6.0         # knowledge registry, freshness, provenance
+
+# Kiểm thử
+pytest>=8.0
 
 # SEO/GEO: Keyword & Entity Extraction (Content Gap / Information Gain)
 yake>=0.4.3

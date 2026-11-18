@@ -24,6 +24,14 @@ REPO_OWNER = "vanhien26"
 REPO_NAME = "hubs-momo"
 BRANCH = "main"
 
+# Whitelist các thư mục dữ liệu được phép tự động đồng bộ sang Hubs
+ALLOWED_DATA_PREFIXES = (
+    "lib/dashboard/",
+    "data/analytics/",
+    "data/reports/",
+    "public/reports/",
+)
+
 def get_github_token() -> str:
     """Lấy token GitHub từ biến môi trường hoặc gh CLI."""
     token = os.environ.get("GITHUB_TOKEN")
@@ -86,7 +94,8 @@ def api_request(method: str, endpoint: str, token: str, data: dict = None) -> di
 def main():
     parser = argparse.ArgumentParser(description="Day du lieu len Hubs qua GitHub REST API (vượt qua firewall)")
     parser.add_argument("--message", "-m", default="feat(sync): automated data sync via GitHub REST API", help="Noi dung commit")
-    parser.add_argument("--commit-local", action="store_true", default=True, help="Tu dong git commit cac file modified tren local truoc")
+    parser.add_argument("--commit-local", action="store_true", default=False, help="Tu dong git commit cac file du lieu modified tren local truoc (mac dinh: False)")
+    parser.add_argument("--allow-non-data", action="store_true", default=False, help="Cho phep commit/push cac file ngoai whitelist du lieu (mac dinh: False)")
     args = parser.parse_args()
 
     if not HUBS_REPO.exists():
@@ -100,13 +109,35 @@ def main():
 
     # 1. Kiem tra git status local
     status_res = subprocess.run(["git", "-C", str(HUBS_REPO), "status", "--porcelain"], capture_output=True, text=True)
-    dirty_files = [line.strip() for line in status_res.stdout.splitlines() if line.strip()]
+    raw_dirty = [line.strip() for line in status_res.stdout.splitlines() if line.strip()]
 
-    if dirty_files and args.commit_local:
-        print(f"Phat hien {len(dirty_files)} files thay doi tren local. Dang tao commit...")
-        subprocess.run(["git", "-C", str(HUBS_REPO), "add", "-A"], check=True)
+    # Tach rieng file thuoc whitelist du lieu va file ma nguon/tinh nang
+    data_files = []
+    ignored_code_files = []
+    for item in raw_dirty:
+        parts = item.split(maxsplit=1)
+        if len(parts) < 2:
+            continue
+        rel = parts[1].split("->")[-1].strip()
+        if rel.startswith(ALLOWED_DATA_PREFIXES) or args.allow_non_data:
+            data_files.append(rel)
+        else:
+            ignored_code_files.append(rel)
+
+    if ignored_code_files:
+        print(f"[REPO GUARD] Bo qua {len(ignored_code_files)} file code/tinh nang ngoai danh muc du lieu (Bao ve an toan repo React):")
+        for f in ignored_code_files[:5]:
+            print(f"  - Bo qua: {f}")
+        if len(ignored_code_files) > 5:
+            print(f"  - ... va {len(ignored_code_files) - 5} files khac")
+
+    if data_files and args.commit_local:
+        print(f"Phat hien {len(data_files)} file du lieu thay doi tren local. Dang tao commit...")
+        subprocess.run(["git", "-C", str(HUBS_REPO), "add"] + data_files, check=True)
         subprocess.run(["git", "-C", str(HUBS_REPO), "commit", "-m", args.message], check=True)
-        print("✓ Da commit sach working tree local.")
+        print("✓ Da commit rieng cac file du lieu sach tren local.")
+    elif data_files and not args.commit_local:
+        print(f"[NOTE] Co {len(data_files)} file du lieu modified nhung khong commit local vi --commit-local=False.")
 
     # 2. Lay commit SHA tren remote
     ref_data = api_request("GET", f"git/ref/heads/{BRANCH}", token)
@@ -120,13 +151,24 @@ def main():
         ["git", "-C", str(HUBS_REPO), "diff-tree", "-r", "--no-commit-id", "--name-status", remote_commit_sha, "HEAD"],
         capture_output=True, text=True
     )
-    diff_lines = [l.strip() for l in diff_res.stdout.splitlines() if l.strip()]
+    raw_diff_lines = [l.strip() for l in diff_res.stdout.splitlines() if l.strip()]
+
+    # Loc chi nhung file thuoc whitelist du lieu moi duoc upload len remote
+    diff_lines = []
+    for line in raw_diff_lines:
+        parts = line.split(maxsplit=1)
+        if len(parts) >= 2:
+            rel = parts[1].strip()
+            if rel.startswith(ALLOWED_DATA_PREFIXES) or args.allow_non_data:
+                diff_lines.append(line)
+            else:
+                print(f"[REPO GUARD] Chan upload file ngoai whitelist: {rel}")
 
     if not diff_lines:
-        print("✓ Local va Remote da hoan toan dong bo. Khong co thay doi nao can day.")
+        print("✓ Local va Remote da hoan toan dong bo hoac khong co file du lieu nao can day.")
         return
 
-    print(f"Phat hien {len(diff_lines)} files khac biet giua Local va Remote.")
+    print(f"Phat hien {len(diff_lines)} file du lieu hop le can dong bo Local sang Remote.")
 
     # 4. Upload blobs len GitHub
     tree_items = []

@@ -88,9 +88,8 @@ def main():
         print("Không có biến thể tên project nào cần xử lý.")
 
     if args.write:
-        data["projects"] = merged
-        WEB_DATA.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
-        print(f"Đã ghi: {WEB_DATA}")
+        # build-dashboard-data.py đã gộp tên project không phân biệt hoa/thường và là writer duy nhất.
+        print("--write đã tắt: chạy scripts/build-dashboard-data.py trong repo Hubs để dựng lại web-data.json.")
     else:
         print("Dry-run: chưa ghi file. Thêm --write để áp dụng.")
 

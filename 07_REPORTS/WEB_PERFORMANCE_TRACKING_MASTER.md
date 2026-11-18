@@ -616,7 +616,7 @@ Dữ liệu trích xuất tự động từ tệp tracking mới nhất `Web Per
 * **Target Tháng 10:** 3.665.607 PV.
 * **Lũy kế MTD 22 ngày (Actual GA4 SSOT):** 2.624.335 PV (Đạt **71.59%** Target sau 22/31 ngày = 70.97% thời gian).
 * **Nhịp chạy trung bình ngày (Daily Pace):** 119.287,95 PV/ngày.
-* **Dự phóng cả tháng (Forecast 31 ngày):** 3.697.926,59 PV (Đạt **100.88%** Target tháng - Dự kiến chính thức về bờ và vượt kế hoạch).
+* **Dự báo cả tháng (Forecast 31 ngày):** 3.697.926,59 PV (Đạt **100.88%** Target tháng - Dự kiến chính thức về bờ và vượt kế hoạch).
 
 #### Bảng Cơ Cấu Kênh Traffic MTD 22 Ngày Tháng 10 (Non-Paid vs. Paid Dichotomy):
 
@@ -632,7 +632,7 @@ Dữ liệu trích xuất tự động từ tệp tracking mới nhất `Web Per
 
 #### Bảng Theo Dõi Hiệu Suất Theo Web Hubs MTD 22 Ngày:
 
-| Web Hub | Zone | Lũy Kế MTD (PV) | Target Tháng 10 | % Đạt Target | Nhịp Chạy (PV/ngày) | Dự Phóng 31 Ngày (PV) | Trạng Thái & Dự Báo |
+| Web Hub | Zone | Lũy Kế MTD (PV) | Target Tháng 10 | % Đạt Target | Nhịp Chạy (PV/ngày) | Dự Báo 31 Ngày (PV) | Trạng Thái & Dự Báo |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
 | **Cinema Hub** | Performance | 873.427 | 1.117.378 | 78.17% | 39.701 | 1.230.738 | Dự kiến vượt Target +10.1%, tiếp tục là đầu kéo tăng trưởng lớn nhất toàn Website. |
 | **Financial Hub** | Transformation | 157.058 | 450.000 | 34.90% | 7.139 | 221.309 | Đạt 49.2% Target; duy trì nhịp đều, chờ lực đẩy từ indexing các tiện ích mới. |
@@ -640,9 +640,9 @@ Dữ liệu trích xuất tự động từ tệp tracking mới nhất `Web Per
 | **Vehicle Hub** | Transformation | 28.278 | 100.000 | 28.28% | 1.285 | 39.846 | Đạt 39.8% Target; Phạt nguội ổn định, chờ đẩy trang Garage và Bảo hiểm. |
 | **Student Hub** | Incubation | 1.376 | 100.000 | 1.38% | 63 | 1.939 | Đạt 1.9% Target; quy mô còn nhỏ, cần kích hoạt chiến dịch mùa tựu trường/học kỳ. |
 
-#### Bảng Phân Rã Lưu Lượng Cinema Hub Sub-pages (MTD 22 Ngày Tháng 10):
+#### cơ cấu Cinema Hub Sub-pages (MTD 22 Ngày Tháng 10):
 
-| Phân Hệ Sub-page | Tên Quy Chuẩn Tracking | Lũy Kế MTD (PV) | Tỷ Trọng Hub (%) | Kênh Chủ Lực | Ghi Chú & Định Hướng |
+| Nhóm Trang Sub-page | Tên Quy Chuẩn Tracking | Lũy Kế MTD (PV) | Tỷ Trọng Hub (%) | Kênh Chủ Lực | Ghi Chú & Định Hướng |
 | :--- | :--- | :---: | :---: | :--- | :--- |
 | **Trang Rạp phim** | `Cinema_Cineplex` | **535.642** | **61.33%** | Organic (92.0%) | Cụm rạp CGV, Lotte, NCC; đầu kéo chủ lực chiếm trên 61% Hub. |
 | **Trang phim chi tiết** | `Cinema_Page` | **292.198** | **33.45%** | Organic (86.4%) | Lưu lượng tìm kiếm phim chiếu rạp và lịch chiếu chi tiết. |
@@ -652,27 +652,27 @@ Dữ liệu trích xuất tự động từ tệp tracking mới nhất `Web Per
 | **Tin tức** | `Cinema_News` | **1.885** | **0.22%** | Organic (86.1%) | Tin vắn điện ảnh, tin khuyến mãi. |
 | **TỔNG CỘNG CINEMA HUB** | `Cinema Hub` | **873.427** | **100.00%** | **Organic (89.3%)** | **Vượt nhịp Target (+10.1%)** |
 
-#### Bảng Phễu Chuyển Đổi Web-to-App MTD Tháng 10/2026 (Dữ Liệu AppsFlyer GPD Cập Nhật - Lũy Kế 28 Ngày):
+#### Bảng Phễu Chuyển Đổi Web-to-App Tháng 10/2026 (Chốt Số Full Month 31 Ngày - Dữ Liệu AppsFlyer SSOT):
 
-* **Total Installs (Cài đặt):** **9.824 installs** (Daily Pace: **350,9/ngày**; Forecast 31 ngày: **10.876 installs**).
-* **Đăng Ký Tài Khoản (REG):** **3.436 users** (CVR Install -> REG: **34,98%**; tăng +0,98 p.p so với T9 là 34,0%; Forecast 31 ngày: **3.804 users**).
-* **Liên Kết Ngân Hàng (Map Bank / N2MM):** **2.072 users** (CVR REG -> Map: **60,30%**; CVR Install -> Map: **21,09%**; Daily Pace: **74,0/ngày**; Forecast 31 ngày: **2.294 users**, vượt qua mốc T9 là 2.276).
-* **Active MAU (Kích hoạt giao dịch đầu):** **1.131 users** (CVR Map -> MAU: **54,58%**; End-to-End CVR Install -> MAU: **11,51%**; Forecast 31 ngày: **1.252 MAU**).
-* **Điểm sáng Cinema Hub Web-to-App:** Cinema Hub đạt **1.808 Installs** (vượt xa cả tháng 9 là 1.221), tạo ra **740 REG**, **458 Map Bank** (vượt xa T9 là 252) và **278 Active MAU** (vượt xa T9 là 169). Cinema Hub tiếp tục dẫn đầu toàn Website về chất lượng chuyển đổi: CVR Install -> REG đạt **40,9%**, CVR REG -> Map đạt **61,9%**, và CVR End-to-End từ Install sang Map Bank đạt **25,33%** (so với luồng banner đại trà C.CHAOMOMO là 20,35%).
-* **Thử nghiệm mới:** Khởi động luồng Financial Health (`261012_NEW_WEB_N2MM_INS_C.Financial-Health`) từ ngày 12/10 ghi nhận 40 Installs đầu tiên.
+* **Total Installs (Cài đặt):** **11.143 installs** (Tăng **+6,11% MoM** so với Tháng 9 là 10.501; Daily Pace: **359,5/ngày**).
+* **Đăng Ký Tài Khoản (REG):** **3.902 users** (Tăng **+9,33% MoM** so với Tháng 9 là 3.569; CVR Install -> REG đạt **35,02%**, tăng +1,03 p.p so với T9 là 33,99%).
+* **Liên Kết Ngân Hàng (Map Bank / N2MM):** **2.389 users** (Tăng **+4,96% MoM** so với Tháng 9 là 2.276, **XÁC LẬP KỶ LỤC LỊCH SỬ MỚI**; CVR REG -> Map: **61,23%**; CVR Install -> Map: **21,44%**).
+* **Active MAU (Kích hoạt giao dịch đầu):** **1.284 users** (Tiệm cận đỉnh T9 là 1.328, -3,31% MoM; CVR Map -> MAU: **53,75%**; End-to-End CVR Install -> MAU: **11,52%**).
+* **Điểm sáng Cinema Hub Web-to-App:** Cinema Hub đạt **1.931 Installs** (bứt phá **+58,15% MoM** so với cả tháng 9 là 1.221), tạo ra **785 REG** (+91,9% MoM), **484 Map Bank** (+92,1% MoM so với T9 là 252) và **293 Active MAU** (+73,4% MoM so với T9 là 169). Cinema Hub tiếp tục dẫn đầu toàn Website về chất lượng chuyển đổi: CVR Install -> REG đạt **40,65%**, CVR REG -> Map đạt **61,66%**, và CVR End-to-End từ Install sang MAU đạt **15,17%** (vượt trội so với luồng banner đại trà C.CHAOMOMO là 10,85%).
+* **Thử nghiệm mới:** Khởi động luồng Financial Health (`261012_NEW_WEB_N2MM_INS_C.Financial-Health`) từ ngày 12/10 ghi nhận 68 Installs, 7 REG, 3 Map Bank và 1 Active MAU.
 
 | Cụm Kênh / Placement | Installs | Tỷ Trọng | REG | CVR REG | Map Bank | CVR Map | Active MAU | End-to-End CVR |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| C.CHAOMOMO (Banner đại trà) | 7.419 | 75,5% | 2.526 | 34,0% | 1.525 | 60,4% | 797 | 20,6% |
-| **Cinema Hub (Rạp phim & Lotte)** | **1.808** | **18,4%** | **740** | **40,9%** | **458** | **61,9%** | **278** | **25,3%** |
-| Merchant Hub (Đối tác) | 240 | 2,4% | 66 | 27,5% | 38 | 57,6% | 29 | 15,8% |
-| WEB_BRT_C.CHAOMOMO (Đổi quà) | 237 | 2,4% | 69 | 29,1% | 33 | 47,8% | 17 | 13,9% |
-| Bảo Hiểm (InsurTech) | 79 | 0,8% | 31 | 39,2% | 17 | 54,8% | 9 | 21,5% |
-| Financial Health | 40 | 0,4% | 3 | 7,5% | 0 | 0,0% | 0 | 0,0% |
-| Khác (Organic / None) | 1 | 0,0% | 1 | 100,0% | 1 | 100,0% | 1 | 100,0% |
-| **TỔNG CỘNG MTD THÁNG 10 (28 NGÀY)** | **9.824** | **100,0%** | **3.436** | **35,0%** | **2.072** | **60,3%** | **1.131** | **21,1%** |
+| **C.CHAOMOMO (Banner đại trà)** | 8.517 | 76,43% | 2.921 | 34,30% | 1.798 | 61,55% | 924 | 10,85% |
+| **Cinema Hub (Rạp phim & Lotte)** | **1.931** | **17,33%** | **785** | **40,65%** | **484** | **61,66%** | **293** | **15,17%** |
+| **Merchant Hub (Đối tác)** | 271 | 2,43% | 72 | 26,57% | 40 | 55,56% | 30 | 11,07% |
+| **WEB_BRT_C.CHAOMOMO (Đổi quà)** | 264 | 2,37% | 77 | 29,17% | 41 | 53,25% | 22 | 8,33% |
+| **Bảo Hiểm (InsurTech)** | 91 | 0,82% | 39 | 42,86% | 22 | 56,41% | 13 | 14,29% |
+| **Financial Health** | 68 | 0,61% | 7 | 10,29% | 3 | 42,86% | 1 | 1,47% |
+| **Khác (None_android)** | 1 | 0,01% | 1 | 100,00% | 1 | 100,00% | 1 | 100,00% |
+| **TỔNG CỘNG THÁNG 10/2026 (FULL MONTH)** | **11.143** | **100,00%** | **3.902** | **35,02%** | **2.389** | **61,23%** | **1.284** | **11,52%** |
 
-* **So sánh nền tảng:** iOS chiếm **51,7% Installs (5.082)**, mang lại **1.213 Map Bank (58,5% N2MM)** và **669 Active MAU (59,2% MAU)** với CVR Install -> Map Bank đạt **23,87%**; Android đạt 4.742 Installs (48,3%), 859 Map Bank (41,5% N2MM) và 462 MAU (40,8% MAU) với CVR Install -> Map Bank đạt 18,11%.
+* **So sánh nền tảng:** iOS chiếm **51,22% Installs (5.707)**, mang lại **1.364 Map Bank (57,10% tổng N2MM)** và **753 Active MAU (58,64% tổng MAU)** với CVR REG -> Map đạt **67,39%** và End-to-End CVR đạt **13,19%**; Android đạt 5.436 Installs (48,78%), 1.025 Map Bank (42,90% N2MM) và 531 MAU (41,36% MAU) với End-to-End CVR đạt 9,77%.
 
 ---
 
@@ -683,7 +683,7 @@ Dữ liệu trích xuất từ Google Analytics 4 API (Property 270743103) cắt
 * **Target Tháng 10:** 3.665.607 PV.
 * **Lũy kế MTD 23 ngày (Actual GA4 SSOT):** 2.735.276 PV (Đạt **74,62%** Target sau 23/31 ngày = 74,19% thời gian).
 * **Nhịp chạy trung bình ngày (Daily Pace):** 118.925,04 PV/ngày.
-* **Dự phóng cả tháng (Forecast 31 ngày):** 3.686.676,35 PV (Đạt **100,57%** Target tháng - Dự kiến chính thức về đích và vượt chỉ tiêu +21.069 PV).
+* **Dự báo cả tháng (Forecast 31 ngày):** 3.686.676,35 PV (Đạt **100,57%** Target tháng - Dự kiến chính thức về đích và vượt chỉ tiêu +21.069 PV).
 * **Lượng tăng thêm trong ngày 23 (Net add):** +110.941 PV.
 
 #### Bảng Cơ Cấu Kênh Traffic MTD 23 Ngày Tháng 10 (Non-Paid vs. Paid Dichotomy):
@@ -706,7 +706,7 @@ Dữ liệu trích xuất từ Google Analytics 4 API (Property 270743103) cắt
 
 #### Bảng Theo Dõi Hiệu Suất Theo Web Hubs MTD 23 Ngày:
 
-| Web Hub | Zone | Lũy Kế MTD (PV) | Target Tháng 10 | % Đạt Target | Nhịp Chạy (PV/ngày) | Dự Phóng 31 Ngày (PV) | Trạng Thái & Dự Báo |
+| Web Hub | Zone | Lũy Kế MTD (PV) | Target Tháng 10 | % Đạt Target | Nhịp Chạy (PV/ngày) | Dự Báo 31 Ngày (PV) | Trạng Thái & Dự Báo |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
 | **Cinema Hub** | Performance | 889.399 | 1.117.378 | 79,60% | 38.670 | 1.198.755 | Vượt Target +7,28%, tiếp tục là đầu kéo tăng trưởng lớn nhất toàn Website. |
 | **Financial Hub** | Transformation | 163.850 | 450.000 | 36,41% | 7.124 | 220.842 | Đạt 49,08% Target; duy trì nhịp đều, chờ lực đẩy từ indexing các tiện ích mới. |
@@ -714,9 +714,9 @@ Dữ liệu trích xuất từ Google Analytics 4 API (Property 270743103) cắt
 | **Vehicle Hub** | Transformation | 29.740 | 100.000 | 29,74% | 1.293 | 40.084 | Đạt 40,08% Target; Phạt nguội ổn định, chờ đẩy trang Garage và Bảo hiểm. |
 | **Student Hub** | Incubation | 1.892 | 100.000 | 1,89% | 82 | 2.550 | Đạt 2,55% Target; quy mô còn nhỏ, cần kích hoạt chiến dịch chuyên biệt. |
 
-#### Bảng Phân Rã Lưu Lượng Cinema Hub Sub-pages (MTD 23 Ngày Tháng 10):
+#### cơ cấu Cinema Hub Sub-pages (MTD 23 Ngày Tháng 10):
 
-| Phân Hệ Sub-page | Tên Quy Chuẩn Tracking | Lũy Kế MTD (PV) | Tỷ Trọng Hub (%) | Kênh Chủ Lực | Ghi Chú & Định Hướng |
+| Nhóm Trang Sub-page | Tên Quy Chuẩn Tracking | Lũy Kế MTD (PV) | Tỷ Trọng Hub (%) | Kênh Chủ Lực | Ghi Chú & Định Hướng |
 | :--- | :--- | :---: | :---: | :--- | :--- |
 | **Trang Rạp phim** | `Cinema_Cineplex` | **545.468** | **61,33%** | Organic (92,0%) | Cụm rạp CGV, Lotte, NCC; đầu kéo chủ lực chiếm trên 61% Hub. |
 | **Trang phim chi tiết** | `Cinema_Page` | **297.746** | **33,48%** | Organic (86,4%) | Lưu lượng tìm kiếm phim chiếu rạp và lịch chiếu chi tiết. |
@@ -735,7 +735,7 @@ Dữ liệu trích xuất từ Google Analytics 4 API (Property 270743103) cắt
 * **Target Tháng 10:** 3.665.607 PV.
 * **Lũy kế MTD 24 ngày (Actual GA4 SSOT):** 2.848.940 PV (Đạt **77,72%** Target sau 24/31 ngày = 77,42% thời gian).
 * **Nhịp chạy trung bình ngày (Daily Pace):** 118.705,83 PV/ngày.
-* **Dự phóng cả tháng (Forecast 31 ngày):** 3.679.880,83 PV (Đạt **100,39%** Target tháng - Dự kiến chính thức về đích và vượt chỉ tiêu +14.274 PV).
+* **Dự báo cả tháng (Forecast 31 ngày):** 3.679.880,83 PV (Đạt **100,39%** Target tháng - Dự kiến chính thức về đích và vượt chỉ tiêu +14.274 PV).
 * **Lượng tăng thêm trong ngày 24 (Net add):** +113.664 PV.
 
 #### Bảng Cơ Cấu Kênh Traffic MTD 24 Ngày Tháng 10 (Non-Paid vs. Paid Dichotomy):
@@ -754,7 +754,7 @@ Dữ liệu trích xuất từ Google Analytics 4 API (Property 270743103) cắt
 
 #### Bảng Theo Dõi Hiệu Suất Theo Web Hubs MTD 24 Ngày:
 
-| Web Hub | Zone | Lũy Kế MTD (PV) | Target Tháng 10 | % Đạt Target | Nhịp Chạy (PV/ngày) | Dự Phóng 31 Ngày (PV) | Trạng Thái & Dự Báo |
+| Web Hub | Zone | Lũy Kế MTD (PV) | Target Tháng 10 | % Đạt Target | Nhịp Chạy (PV/ngày) | Dự Báo 31 Ngày (PV) | Trạng Thái & Dự Báo |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
 | **Cinema Hub** | Performance | 917.209 | 1.117.378 | 82,09% | 38.217 | 1.184.728 | Vượt Target +6,03%, tiếp tục là đầu kéo tăng trưởng chủ lực. |
 | **Financial Hub** | Transformation | 198.968 | 450.000 | 44,22% | 8.290 | 256.997 | Đạt 57,11% Target; tăng tốc tích cực nhờ các landing page tài chính. |
@@ -763,9 +763,9 @@ Dữ liệu trích xuất từ Google Analytics 4 API (Property 270743103) cắt
 | **Student Hub** | Incubation | 2.204 | 100.000 | 2,20% | 92 | 2.847 | Đạt 2,85% Target; cần bổ sung bài viết và chiến dịch trọng điểm. |
 | **Khác (Brand, Games, Utilities)** | Foundation | 1.592.617 | - | - | 66.359 | 2.057.131 | Nền tảng tiện ích cốt lõi duy trì ổn định. |
 
-#### Bảng Phân Rã Lưu Lượng Cinema Hub Sub-pages (MTD 24 Ngày Tháng 10):
+#### cơ cấu Cinema Hub Sub-pages (MTD 24 Ngày Tháng 10):
 
-| Phân Hệ Sub-page | Tên Quy Chuẩn Tracking | Lũy Kế MTD (PV) | Tỷ Trọng Hub (%) | Kênh Chủ Lực | Ghi Chú & Định Hướng |
+| Nhóm Trang Sub-page | Tên Quy Chuẩn Tracking | Lũy Kế MTD (PV) | Tỷ Trọng Hub (%) | Kênh Chủ Lực | Ghi Chú & Định Hướng |
 | :--- | :--- | :---: | :---: | :--- | :--- |
 | **Trang Rạp phim** | `Cinema_Cineplex` | **691.646** | **75,41%** | Organic (92,5%) | Cụm rạp CGV, Lotte, NCC; đầu kéo chủ lực chiếm 75,4% Hub. |
 | **Trang phim chi tiết** | `Cinema_Page` | **112.958** | **12,32%** | Organic (86,9%) | Chi tiết phim chiếu rạp và suất chiếu. |
@@ -773,7 +773,7 @@ Dữ liệu trích xuất từ Google Analytics 4 API (Property 270743103) cắt
 | **Cinema_Home Page (Trang chủ Cinema)** | `Cinema_Home Page` | **38.890** | **4,24%** | Organic (80,0%) | Cổng vào Cinema Hub, nhận diện thương hiệu mạnh. |
 | **Cinema_Blog** | `Cinema_Blog` | **20.752** | **2,26%** | Organic (80,4%) | Review phim, tin điện ảnh. |
 | **Tin tức** | `Cinema_News` | **618** | **0,07%** | Organic (86,0%) | Tin vắn điện ảnh, tin khuyến mãi. |
-| **Khác & Phân hệ mở rộng** | `Others` | **75** | **0,01%** | Direct/Organic | Trang cụm rạp địa phương, landing phụ. |
+| **Khác & Trang mở rộng** | `Others` | **75** | **0,01%** | Direct/Organic | Trang cụm rạp địa phương, landing phụ. |
 | **TỔNG CỘNG CINEMA HUB** | `Cinema Hub` | **917.209** | **100,00%** | **Organic (89,6%)** | **Vượt nhịp Target (+6,03%)** |
 
 ---
@@ -785,7 +785,7 @@ Dữ liệu trích xuất từ Google Analytics 4 API (Property 270743103) cắt
 * **Lũy kế MTD 26 ngày (Actual GA4 SSOT):** 3.076.791 PV (Đạt **83,94%** Target tháng, tiến độ thực tế nhanh hơn tiến độ thời gian +0,07%).
 * **Nhịp chạy trung bình ngày (Daily Pace):** 118.338,12 PV/ngày.
 * **Nhịp chạy cần đạt 5 ngày cuối (Daily Needed):** 117.763,20 PV/ngày.
-* **Dự phóng cả tháng (Forecast 31 ngày):** 3.668.482 PV (Đạt **100,08%** Target tháng - Dự kiến chính thức về đích và vượt chỉ tiêu +2.875 PV).
+* **Dự báo cả tháng (Forecast 31 ngày):** 3.668.482 PV (Đạt **100,08%** Target tháng - Dự kiến chính thức về đích và vượt chỉ tiêu +2.875 PV).
 * **Lượng tăng ròng so với ngày 25 (Net add):** +111.763 PV.
 * **Quy mô người dùng:** 1.518.716 Users | 2.086.367 Sessions.
 
@@ -803,7 +803,7 @@ Dữ liệu trích xuất từ Google Analytics 4 API (Property 270743103) cắt
 
 #### Bảng Theo Dõi Hiệu Suất Theo Web Hubs MTD 26 Ngày:
 
-| Web Hub | Zone | Lũy Kế MTD (PV) | Target Tháng 10 | % Đạt Target | Nhịp Chạy (PV/ngày) | Dự Phóng 31 Ngày (PV) | Trạng Thái & Dự Báo |
+| Web Hub | Zone | Lũy Kế MTD (PV) | Target Tháng 10 | % Đạt Target | Nhịp Chạy (PV/ngày) | Dự Báo 31 Ngày (PV) | Trạng Thái & Dự Báo |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
 | **Cinema Hub** | Performance | 966.833 | 1.117.378 | 86,53% | 37.186 | 1.152.763 | Vượt Target +3,17%, tiếp tục giữ vững vị trí đầu tàu tăng trưởng. |
 | **Financial Hub** | Transformation | 269.552 | 450.000 | 59,90% | 10.367 | 321.389 | Đạt 71,42% Target; nhịp tăng tốc cải thiện tốt nhờ các landing page tài chính. |
@@ -813,9 +813,9 @@ Dữ liệu trích xuất từ Google Analytics 4 API (Property 270743103) cắt
 | **Student Hub** | Incubation | 2.929 | 100.000 | 2,93% | 113 | 3.492 | Đạt 3,49% Target; cần bổ sung bài viết và chiến dịch trọng điểm. |
 | **Khác (Brand, Games, Utilities)** | Foundation | 1.659.028 | - | - | 63.809 | 1.978.073 | Nền tảng tiện ích cốt lõi duy trì ổn định. |
 
-#### Bảng Phân Rã Lưu Lượng Cinema Hub Sub-pages (MTD 26 Ngày Tháng 10):
+#### cơ cấu Cinema Hub Sub-pages (MTD 26 Ngày Tháng 10):
 
-| Phân Hệ Sub-page | Tên Quy Chuẩn Tracking | Lũy Kế MTD (PV) | Tỷ Trọng Hub (%) | Kênh Chủ Lực | Ghi Chú & Định Hướng |
+| Nhóm Trang Sub-page | Tên Quy Chuẩn Tracking | Lũy Kế MTD (PV) | Tỷ Trọng Hub (%) | Kênh Chủ Lực | Ghi Chú & Định Hướng |
 | :--- | :--- | :---: | :---: | :--- | :--- |
 | **Trang Rạp phim** | `Cinema_Cineplex` | **726.016** | **75,09%** | Organic (92,5%) | Cụm rạp CGV, Lotte, NCC; đầu kéo chủ lực chiếm 75,1% Hub. |
 | **Trang phim chi tiết** | `Cinema_Page` | **122.242** | **12,64%** | Organic (86,9%) | Chi tiết phim chiếu rạp và lịch chiếu. |
@@ -823,7 +823,7 @@ Dữ liệu trích xuất từ Google Analytics 4 API (Property 270743103) cắt
 | **Cinema_Home Page (Trang chủ Cinema)** | `Cinema_Home Page` | **42.977** | **4,44%** | Organic (80,0%) | Cổng vào Cinema Hub, nhận diện thương hiệu mạnh. |
 | **Cinema_Blog** | `Cinema_Blog` | **22.140** | **2,29%** | Organic (80,4%) | Review phim, kiến thức điện ảnh. |
 | **Tin tức** | `Cinema_News` | **644** | **0,07%** | Organic (86,0%) | Tin vắn điện ảnh, tin khuyến mãi. |
-| **Khác & Phân hệ mở rộng** | `Others` | **75** | **0,01%** | Direct/Organic | Trang cụm rạp địa phương, landing phụ. |
+| **Khác & Trang mở rộng** | `Others` | **75** | **0,01%** | Direct/Organic | Trang cụm rạp địa phương, landing phụ. |
 | **TỔNG CỘNG CINEMA HUB** | `Cinema Hub` | **966.833** | **100,00%** | **Organic (89,5%)** | **Vượt nhịp Target (+3,17%)** |
 
 ---
@@ -835,7 +835,7 @@ Dữ liệu trích xuất từ Google Analytics 4 API (Property 270743103) cắt
 * **Lũy kế MTD 30 ngày (Actual GA4 SSOT):** 3.496.864 PV (Đạt **95,40%** Target tháng).
 * **Nhịp chạy trung bình ngày (Daily Pace):** 116.562,13 PV/ngày.
 * **Nhịp chạy cần đạt ngày cuối (31/10):** 168.743 PV.
-* **Dự phóng cả tháng (Forecast 31 ngày):** 3.613.426 PV (Đạt **98,58%** Target tháng).
+* **Dự báo cả tháng (Forecast 31 ngày):** 3.613.426 PV (Đạt **98,58%** Target tháng).
 * **Lượng tăng ròng ngày 30/10 (Net add):** +111.542 PV (+10,4% so với ngày 29/10).
 * **Quy mô người dùng:** 1.720.894 Users | 2.402.707 Sessions.
 * **Chất lượng tương tác:** Thời gian lưu trang onsite bình quân đạt 2.45 phút/phiên; tỷ lệ thoát trang giữ ở mức thấp 42.1%.
@@ -854,7 +854,7 @@ Dữ liệu trích xuất từ Google Analytics 4 API (Property 270743103) cắt
 
 #### Bảng Theo Dõi Hiệu Suất Theo Web Hubs MTD 30 Ngày:
 
-| Web Hub | Zone | Lũy Kế MTD (PV) | Target Tháng 10 | % Đạt Target | Nhịp Chạy (PV/ngày) | Dự Phóng 31 Ngày (PV) | Trạng Thái & Dự Báo |
+| Web Hub | Zone | Lũy Kế MTD (PV) | Target Tháng 10 | % Đạt Target | Nhịp Chạy (PV/ngày) | Dự Báo 31 Ngày (PV) | Trạng Thái & Dự Báo |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
 | **Cinema Hub** | Performance | 1.065.617 | 1.117.378 | 95,37% | 35.521 | 1.101.138 | Sát nút hoàn thành 100% chỉ tiêu (còn thiếu 51.7K PV). |
 | **Financial Hub** | Transformation | 299.461 | 450.000 | 66,55% | 9.982 | 309.443 | Tiệm cận mốc 300K PV; nhóm tiện ích tỷ giá và giá vàng giữ nhịp tốt. |
@@ -864,9 +864,9 @@ Dữ liệu trích xuất từ Google Analytics 4 API (Property 270743103) cắt
 | **Student Hub** | Incubation | 3.438 | 100.000 | 3,44% | 115 | 3.553 | Giai đoạn xây nền cấu trúc nội dung. |
 | **Khác (Brand, Games, Utilities)** | Foundation | 1.920.408 | - | - | 64.014 | 1.984.422 | Nền tảng tiện ích cốt lõi vận hành ổn định. |
 
-#### Bảng Phân Rã Lưu Lượng Cinema Hub Sub-pages (MTD 30 Ngày Tháng 10):
+#### cơ cấu Cinema Hub Sub-pages (MTD 30 Ngày Tháng 10):
 
-| Phân Hệ Sub-page | Tên Quy Chuẩn Tracking | Lũy Kế MTD (PV) | Tỷ Trọng Hub (%) | Kênh Chủ Lực | Ghi Chú & Định Hướng |
+| Nhóm Trang Sub-page | Tên Quy Chuẩn Tracking | Lũy Kế MTD (PV) | Tỷ Trọng Hub (%) | Kênh Chủ Lực | Ghi Chú & Định Hướng |
 | :--- | :--- | :---: | :---: | :--- | :--- |
 | **Trang Rạp phim** | `Cinema_Cineplex` | **794.897** | **74,59%** | Organic (92,3%) | Cụm rạp CGV, Lotte, NCC; đầu kéo chủ lực chiếm 74,6% Hub. |
 | **Trang phim chi tiết** | `Cinema_Page` | **139.677** | **13,11%** | Organic (86,7%) | Chi tiết phim chiếu rạp và lịch chiếu. |
@@ -874,7 +874,7 @@ Dữ liệu trích xuất từ Google Analytics 4 API (Property 270743103) cắt
 | **Cinema_Home Page (Trang chủ Cinema)** | `Cinema_Home Page` | **51.905** | **4,87%** | Organic (80,2%) | Cổng vào Cinema Hub, nhận diện thương hiệu mạnh. |
 | **Cinema_Blog** | `Cinema_Blog` | **24.895** | **2,34%** | Organic (80,5%) | Review phim, kiến thức điện ảnh. |
 | **Tin tức** | `Cinema_News` | **699** | **0,07%** | Organic (86,0%) | Tin vắn điện ảnh, tin khuyến mãi. |
-| **Khác & Phân hệ mở rộng** | `Others` | **75** | **0,01%** | Direct/Organic | Trang cụm rạp địa phương, landing phụ. |
+| **Khác & Trang mở rộng** | `Others` | **75** | **0,01%** | Direct/Organic | Trang cụm rạp địa phương, landing phụ. |
 | **TỔNG CỘNG CINEMA HUB** | `Cinema Hub` | **1.065.617** | **100,00%** | **Organic (89,3%)** | **Tiến độ đạt 95,37% Target** |
 
 ---
@@ -1000,19 +1000,19 @@ Nguồn: Google Search Console - Crawl Stats (`www.momo.vn`, window 12/07 - 06/1
 
 Dữ liệu Single Source of Truth (SSOT) phễu chuyển đổi người dùng mới từ Nền Tảng Web (Balloon Ads, Contextual Sticky Bar, Hub Placements) được lưu trữ tại `07_REPORTS/data/web_performance_new_user_funnel_09_2026.csv`.
 
-### 8.1 Chuỗi Hiệu Suất Tăng Trưởng Phễu Toàn Nền Tảng Web (Tháng 7 - Tháng 10 MTD 28d)
+### 8.1 Chuỗi Hiệu Suất Tăng Trưởng Phễu Toàn Nền Tảng Web (Tháng 7 - Tháng 10/2026 Full Month 31d)
 
-| Giai Đoạn Phễu (Funnel Stage) | Tháng 07/2026 | Tháng 08/2026 | Tháng 09/2026 | Tháng 10 MTD (28d) | Nhịp Chạy/ngày | Forecast 31d | Xu Hướng vs T9 |
-| :--- | ---: | ---: | ---: | ---: | ---: | ---: | :--- |
-| **1. Total Installs (Cài đặt)** | 5.239 | 10.041 | 10.501 | **9.824** | 350,9 | **10.876** | +3,6% (duy trì đà tăng) |
-| **2. Đăng Ký Tài Khoản (REG)** | 1.682 | 3.229 | 3.569 | **3.436** | 122,7 | **3.804** | +6,6% (chất lượng lead tăng) |
-| *-- Tỷ lệ CVR (REG / Install)* | 32,1% | 32,1% | 34,0% | **35,0%** | - | **35,0%** | +1,0 p.p |
-| **3. Liên Kết Ngân Hàng (Map Bank / N2MM)** | 948 | 1.818 | 2.276 | **2.072** | 74,0 | **2.294** | **+0,8% (tiếp tục vượt kỷ lục T9)** |
-| *-- Tỷ lệ CVR (Map / REG)* | 56,3% | 56,3% | 63,8% | **60,3%** | - | **60,3%** | -3,5 p.p |
-| **4. Active MAU (Giao dịch đầu tiên)** | 536 | 1.029 | 1.328 | **1.131** | 40,4 | **1.252** | -5,7% (tập trung tệp giá trị cao) |
-| *-- Tỷ lệ CVR (MAU / Map)* | 56,5% | 56,6% | 58,3% | **54,6%** | - | **54,6%** | -3,7 p.p |
-| **End-to-End CVR (Install -> Map N2MM)** | **18,1%** | **18,1%** | **21,7%** | **21,1%** | - | **21,1%** | **-0,6 p.p** |
-| **End-to-End CVR (Install -> Active MAU)** | **10,2%** | **10,2%** | **12,6%** | **11,5%** | - | **11,5%** | **-1,1 p.p** |
+| Giai Đoạn Phễu (Funnel Stage) | Tháng 07/2026 | Tháng 08/2026 | Tháng 09/2026 | Tháng 10/2026 (Full) | Tăng Trưởng MoM (T10 vs T9) | Tăng Trưởng vs Baseline T7 |
+| :--- | ---: | ---: | ---: | ---: | :--- | :--- |
+| **1. Total Installs (Cài đặt)** | 5.239 | 10.041 | 10.501 | **11.143** | +6,11% | +112,7% (gấp 2.1 lần) |
+| **2. Đăng Ký Tài Khoản (REG)** | 1.682 | 3.229 | 3.569 | **3.902** | +9,33% | +132,0% (gấp 2.3 lần) |
+| *-- Tỷ lệ CVR (REG / Install)* | 32,1% | 32,1% | 34,0% | **35,02%** | +1,03 p.p | +2,92 p.p |
+| **3. Liên Kết Ngân Hàng (Map Bank / N2MM)** | 948 | 1.818 | 2.276 | **2.389** | **+4,96% (Kỷ lục mới)** | +152,0% (gấp 2.5 lần) |
+| *-- Tỷ lệ CVR (Map / REG)* | 56,3% | 56,3% | 63,8% | **61,23%** | -2,56 p.p | +4,93 p.p |
+| **4. Active MAU (Giao dịch đầu tiên)** | 536 | 1.029 | 1.328 | **1.284** | -3,31% (tiệm cận đỉnh) | +139,6% (gấp 2.4 lần) |
+| *-- Tỷ lệ CVR (MAU / Map)* | 56,5% | 56,6% | 58,3% | **53,75%** | -4,55 p.p | -2,75 p.p |
+| **End-to-End CVR (Install -> Map N2MM)** | **18,1%** | **18,1%** | **21,7%** | **21,44%** | **-0,23 p.p** | **+3,34 p.p** |
+| **End-to-End CVR (Install -> Active MAU)** | **10,2%** | **10,2%** | **12,6%** | **11,52%** | **-1,08 p.p** | **+1,32 p.p** |
 
 ### 8.2 Tổng Hợp Hiệu Suất Theo Kênh / Placement (Tháng 09/2026)
 
@@ -1034,36 +1034,76 @@ Dữ liệu Single Source of Truth (SSOT) phễu chuyển đổi người dùng 
 
 * **Đặc tính cốt lõi:** Người dùng iOS áp đảo về chất lượng chuyển đổi: CVR từ REG sang Map Bank đạt **72,5%** (cao hơn Android +17,0 p.p), mang lại **55,1% tổng số lượng N2MM** và **56,7% tổng số Active MAU** toàn Website dù lượng cài đặt thấp hơn.
 
-### 8.4 Phân Tích Chi Tiết Phễu Chuyển Đổi Tháng 10 MTD (22 Ngày - Dữ Liệu AppsFlyer SSOT)
+### 8.4 Phân Tích Chi Tiết Phễu Chuyển Đổi Tháng 10/2026 (Chốt Số Full Month 31 Ngày - Dữ Liệu AppsFlyer SSOT)
 
-* Dữ liệu Single Source of Truth (SSOT) phễu chuyển đổi MTD Tháng 10/2026 được lưu trữ tại:
-  - `07_REPORTS/data/web_performance_new_user_funnel_10_2026_mtd_22d.csv`
-  - `07_REPORTS/data/web_performance_new_user_funnel_10_2026_mtd_22d.json`
+* Dữ liệu Single Source of Truth (SSOT) phễu chuyển đổi Full Month Tháng 10/2026 được lưu trữ tại:
+  - `07_REPORTS/data/web_performance_new_user_funnel_10_2026.csv`
+  - `07_REPORTS/data/web_performance_new_user_funnel_10_2026.json`
   - Sheet `New User` trong `07_REPORTS/web_performance_tracking.xlsx`
 
-#### A. Phân Rã Theo Placement & Nhóm Chiến Dịch (MTD 22 Ngày):
+#### A. cơ cấu Theo Placement & Nhóm Chiến Dịch (Tháng 10 Full Month):
 | Cụm Sản Phẩm / Placement | Installs | Tỷ Trọng | REG | CVR REG | Map Bank | CVR Map | Active MAU | End-to-End CVR |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| **C.CHAOMOMO (Banner đại trà)** | 5.719 | 73,3% | 1.996 | 34,9% | 1.223 | 61,3% | 603 | 10,5% |
-| **Cinema Hub (Rạp phim & Lotte)** | **1.665** | **21,3%** | **681** | **40,9%** | **426** | **62,6%** | **257** | **15,4%** |
-| **Merchant Hub (Đối tác)** | 186 | 2,4% | 52 | 28,0% | 27 | 51,9% | 20 | 10,8% |
-| **WEB_BRT_C.CHAOMOMO (Đổi quà)** | 170 | 2,2% | 54 | 31,8% | 29 | 53,7% | 15 | 8,8% |
-| **Bảo Hiểm (InsurTech)** | 56 | 0,7% | 23 | 41,1% | 13 | 56,5% | 7 | 12,5% |
-| **Financial Health** | 7 | 0,1% | 0 | 0,0% | 0 | 0,0% | 0 | 0,0% |
-| **Khác (Organic / Direct)** | 1 | 0,0% | 1 | 100,0% | 1 | 100,0% | 0 | 0,0% |
-| **Tổng Toàn Nền Tảng Web (MTD 22d)** | **7.804** | **100,0%** | **2.807** | **36,0%** | **1.719** | **61,2%** | **902** | **11,6%** |
+| **C.CHAOMOMO (Banner đại trà)** | 8.517 | 76,43% | 2.921 | 34,30% | 1.798 | 61,55% | 924 | 10,85% |
+| **Cinema Hub (Rạp phim & Lotte)** | **1.931** | **17,33%** | **785** | **40,65%** | **484** | **61,66%** | **293** | **15,17%** |
+| **Merchant Hub (Đối tác)** | 271 | 2,43% | 72 | 26,57% | 40 | 55,56% | 30 | 11,07% |
+| **WEB_BRT_C.CHAOMOMO (Đổi quà)** | 264 | 2,37% | 77 | 29,17% | 41 | 53,25% | 22 | 8,33% |
+| **Bảo Hiểm (InsurTech)** | 91 | 0,82% | 39 | 42,86% | 22 | 56,41% | 13 | 14,29% |
+| **Financial Health** | 68 | 0,61% | 7 | 10,29% | 3 | 42,86% | 1 | 1,47% |
+| **Khác (None_android)** | 1 | 0,01% | 1 | 100,00% | 1 | 100,00% | 1 | 100,00% |
+| **Tổng Toàn Nền Tảng Web (Full Month)** | **11.143** | **100,00%** | **3.902** | **35,02%** | **2.389** | **61,23%** | **1.284** | **11,52%** |
 
-#### B. Phân Rã Theo Nền Tảng Hệ Điều Hành (MTD 22 Ngày):
+#### B. cơ cấu Theo Nền Tảng Hệ Điều Hành (Tháng 10 Full Month):
 | Hệ Điều Hành | Installs | Tỷ Trọng | REG | CVR REG | Map Bank | CVR Map | Active MAU | End-to-End CVR |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| **Android** | 3.615 | 46,3% | 1.285 | 35,5% | 692 | 53,9% | 360 | 9,96% |
-| **iOS** | **4.189** | **53,7%** | **1.522** | **36,3%** | **1.027** | **67,5%** | **542** | **12,94%** |
+| **Android** | 5.436 | 48,78% | 1.878 | 34,55% | 1.025 | 54,58% | 531 | 9,77% |
+| **iOS** | **5.707** | **51,22%** | **2.024** | **35,47%** | **1.364** | **67,39%** | **753** | **13,19%** |
+| **TỔNG CỘNG** | **11.143** | **100,00%** | **3.902** | **35,02%** | **2.389** | **61,23%** | **1.284** | **11,52%** |
 
 #### C. Đánh Giá Chiến Lược & Nhận Định Product/Tech Lead:
-1. **Chất Lượng Lead Tăng Trưởng Thực Chất:** CVR Install -> REG đạt **36,0%** (tăng +2,0 p.p so với Tháng 9 là 34,0%). Tỷ lệ Map Bank trên tổng Cài đặt (Install -> Map) đạt **22,03%** (vượt qua mốc T9 là 21,67%).
-2. **Cinema Hub Giữ Vững Vị Thế Động Cơ Chuyển Đổi Số 1:** Cinema Hub chỉ trong 22 ngày đã vượt toàn bộ kết quả Tháng 9 (1.665 vs 1.221 Installs, 426 vs 252 Map Bank, 257 vs 169 Active MAU). Tỷ lệ chuyển đổi End-to-End từ Install sang MAU đạt **15,44%** - cao hơn +4,9 p.p so với banner đại trà CHAOMOMO (10,54%).
-3. **iOS Là Trọng Tâm Giá Trị Sinh Doanh:** Người dùng iOS chiếm 53,7% Installs nhưng đóng góp **59,7% N2MM (1.027 Map Bank)** và **60,1% Active MAU (542 MAU)**. CVR REG -> Map trên iOS đạt **67,5%** (cao hơn Android +13,6 p.p).
-4. **Dự Phóng Run-rate 31 Ngày:** Với nhịp chạy 78,1 Map Bank/ngày và 354,7 Installs/ngày, dự kiến cả Tháng 10 sẽ đạt **~11.000 Installs**, **~2.420 Map Bank (N2MM)** (chính thức phá kỷ lục 2.276 của Tháng 9) và **~1.270 Active MAU**.
+1. **Thiết Lập Đỉnh Mới Về Khách Hàng Liên Kết Ngân Hàng (N2MM):** Tháng 10/2026 mang về **2.389 khách hàng Map Bank mới** (tăng +4,96% MoM so với kỷ lục Tháng 9 là 2.276), khẳng định năng lực chuyển đổi thực chất và bền vững từ nền tảng Web sang App Core.
+2. **Cinema Hub Bứt Phá Vượt Bậc (+58% Installs, +92% Map Bank):** Cinema Hub trở thành đầu tàu tăng trưởng chất lượng cao nhất của Web MoMo với 1.931 Installs, 484 Map Bank và 293 Active MAU. Tỷ lệ chuyển đổi End-to-End từ Install sang MAU đạt **15,17%**, vượt trội so với luồng banner đại trà CHAOMOMO (10,85%).
+3. **iOS Tiếp Tục Chiếm Ưu Thế Về Giá Trị Kinh Doanh:** Dù chỉ chiếm 51,22% lượng cài đặt, người dùng iOS mang lại **57,10% N2MM (1.364 users)** và **58,64% Active MAU (753 users)**. Tỷ lệ Map/REG trên iOS đạt **67,39%**, cao hơn Android (+12,81 p.p).
+4. **Hiệu Quả Luồng Thử Nghiệm Mới (Financial Health):** Khởi động luồng Financial Health từ 12/10 ghi nhận 68 Installs và 3 Map Bank đầu tiên. Cần tiếp tục tối ưu hóa hành trình Pre-install trên Web để nâng tỷ lệ REG/Install (hiện ở mức 10,29%).
+
+---
+
+### 8.5 Phân Tích Phễu Chuyển Đổi MTD Tháng 11/2026 (Lũy Kế 10 Ngày Đầu Tháng - Dữ Liệu AppsFlyer SSOT)
+
+* Dữ liệu Single Source of Truth (SSOT) phễu chuyển đổi MTD 10 Ngày Tháng 11/2026 được lưu trữ tại:
+  - `07_REPORTS/data/analytics/gpd_momo_web_nov_2026.csv`
+  - `07_REPORTS/data/monthly_11_2026_mtd_10d.json`
+  - Sheet `New User` trong `07_REPORTS/web_performance_tracking.xlsx` và Google Sheets Cloud SSOT (ID `1JaaYv2MnDy-dfBdC3P-GMB6SFgjez2VowdjX9PjmPYU`)
+
+#### A. Tổng Quan Phễu Chuyển Đổi Web-to-App MTD 10 Ngày (01/11 - 10/11/2026):
+* **Total Installs (Cài đặt):** **3.171 installs** (Nhịp vận hành: **317,1 lượt/ngày**; Dự báo 30 ngày: **9.513 installs**, đạt 85,4% so với Full Month Tháng 10 là 11.143).
+* **Đăng Ký Tài Khoản (REG):** **864 users** (Nhịp vận hành: **86,4 user/ngày**; Dự báo 30 ngày: **2.592 users**; CVR Install -> REG đạt **27,25%**).
+* **Liên Kết Ngân Hàng (Map Bank / N2MM):** **533 users** (Nhịp vận hành: **53,3 user/ngày**; Dự báo 30 ngày: **1.599 users**; CVR REG -> Map: **61,69%**; CVR Install -> Map: **16,81%**).
+* **Active MAU (Kích hoạt người dùng):** **314 users** (Nhịp vận hành: **31,4 user/ngày**; Dự báo 30 ngày: **942 users**; CVR Map -> MAU: **58,91%**; End-to-End CVR Install -> MAU: **9,90%**).
+
+#### B. Cơ Cấu Theo Placement & Nhóm Chiến Dịch (Tháng 11 MTD 10 Ngày):
+| Cụm Sản Phẩm / Placement | Installs | Tỷ Trọng | REG | CVR REG | Map Bank | CVR Map | Active MAU | End-to-End CVR |
+| :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| **C.CHAOMOMO (Banner đại trà)** | 2.763 | 87,13% | 772 | 27,94% | 479 | 62,05% | 275 | 9,95% |
+| **Cinema Hub (Rạp phim & Lotte)** | **224** | **7,06%** | **58** | **25,89%** | **38** | **65,52%** | **27** | **12,05%** |
+| **WEB_BRT_C.CHAOMOMO (Đổi quà)** | 58 | 1,83% | 16 | 27,59% | 8 | 50,00% | 5 | 8,62% |
+| **Bảo Hiểm (InsurTech)** | 53 | 1,67% | 13 | 24,53% | 6 | 46,15% | 5 | 9,43% |
+| **Merchant Hub (Đối tác)** | 42 | 1,32% | 3 | 7,14% | 1 | 33,33% | 1 | 2,38% |
+| **Financial Health** | 31 | 0,98% | 2 | 6,45% | 1 | 50,00% | 1 | 3,23% |
+| **TỔNG CỘNG MTD 10 NGÀY** | **3.171** | **100,00%** | **864** | **27,25%** | **533** | **61,69%** | **314** | **9,90%** |
+
+#### C. Cơ Cấu Theo Nền Tảng Hệ Điều Hành (Tháng 11 MTD 10 Ngày):
+| Hệ Điều Hành | Installs | Tỷ Trọng | REG | CVR REG | Map Bank | CVR Map | Active MAU | End-to-End CVR |
+| :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| **Android** | 1.651 | 52,07% | 442 | 26,77% | 238 | 53,85% | 129 | 7,81% |
+| **iOS** | **1.520** | **47,93%** | **422** | **27,76%** | **295** | **69,91%** | **185** | **12,17%** |
+| **TỔNG CỘNG** | **3.171** | **100,00%** | **864** | **27,25%** | **533** | **61,69%** | **314** | **9,90%** |
+
+#### D. Đánh Giá Chiến Lược & Nhận Định Product/Tech Lead:
+1. **Duy Trì Tỷ Lệ Map Bank Trên Đăng Ký Vững Chắc (61,69%):** Tỷ lệ chuyển đổi từ REG sang Map Bank trong 10 ngày đầu tháng 11 đạt 61,69%, ngang bằng với mức kỷ lục của Tháng 10 (61,23%). Điều này cho thấy chất lượng người dùng đăng ký tài khoản từ web vẫn rất thực chất.
+2. **Điểm Nghẽn Nằm Ở Bước Install Sang Đăng Ký (27,25% vs 35,02% Tháng 10):** Tỷ lệ người dùng cài app hoàn tất đăng ký tài khoản giảm từ 35,0% trong Tháng 10 xuống 27,2% trong 10 ngày đầu Tháng 11. Cần tiếp tục theo dõi hiệu quả điều hướng của trang Tải App tập trung (`/tai-app`) và tối ưu màn hình Onboarding đầu tiên sau khi mở app.
+3. **Cinema Hub Tiếp Tục Dẫn Đầu Về Tỷ Lệ Giữ Chân Thực Tế (End-to-End CVR 12,05%):** Khách hàng đến từ bối cảnh rạp phim tiếp tục có chất lượng chuyển đổi cao nhất với 12,05% người cài app trở thành Active MAU (so với mức trung bình nền tảng là 9,90%).
+4. **iOS Giữ Vững Tỷ Suất Sinh Lời Cao:** Người dùng iOS đóng góp tới 55,35% tổng số liên kết ngân hàng (295 users) dù lượng cài đặt thấp hơn Android (47,93%), với CVR REG -> Map chạm ngưỡng 69,91%.
 
 
 

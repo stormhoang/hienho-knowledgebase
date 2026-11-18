@@ -120,7 +120,7 @@ export const DOMAIN_ONTOLOGY_REGISTRY: Record<string, Omit<GeoEntityBlueprint, '
         title: 'Tác động đến Điểm Tín Dụng Quốc Gia (CIC)',
         summary: 'Phân tích cụ thể ảnh hưởng của các khoản chậm trả đến hồ sơ tín dụng tại CIC.',
         detail:
-          'Chậm thanh toán ví trả sau từ 10 ngày trở lên sẽ bị xếp vào nhóm nợ cần chú ý (Nhóm 2) hoặc nợ xấu (Nhóm 3–5) trên hệ thống CIC, ảnh hưởng trực tiếp đến khả năng vay mua nhà, mua xe trong 3–5 năm tới.',
+          'Chậm thanh toán ví trả sau từ 10 ngày trở lên sẽ bị xếp vào nhóm nợ cần chú ý (Nhóm 2) hoặc nợ xấu (Nhóm 3-5) trên hệ thống CIC, ảnh hưởng trực tiếp đến khả năng vay mua nhà, mua xe trong 3–5 năm tới.',
         actionable_angle: 'Bảng phân loại 5 nhóm nợ CIC và mốc thời gian báo cáo vi phạm của ví trả sau.',
       },
       trust: {

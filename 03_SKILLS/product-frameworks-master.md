@@ -24,25 +24,25 @@ Mô hình phân bổ nguồn lực và quản trị danh mục sản phẩm theo
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Performance Zone</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Động cơ doanh thu chính</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Duy trì, tối ưu và tăng trưởng các sản phẩm trụ cột hiện tại</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Horizon 1 (0–12 tháng)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Horizon 1 (0-12 tháng)</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Productivity Zone</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hạ tầng & Năng suất</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hỗ trợ Performance Zone thông qua các công cụ, quy trình và hạ tầng kỹ thuật</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Horizon 1 (0–12 tháng)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Horizon 1 (0-12 tháng)</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Incubation Zone</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đổi mới sáng tạo</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thử nghiệm các ý tưởng sản phẩm mới đột phá (Mô hình Venture)</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Horizon 3 (3–5 năm)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Horizon 3 (3-5 năm)</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Transformation Zone</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chuyển đổi chiến lược</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đưa sản phẩm ươm mầm thành công trở thành cột trụ doanh thu mới</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Horizon 2 (1–3 năm)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Horizon 2 (1-3 năm)</td>
     </tr>
   </tbody>
 </table>
@@ -60,7 +60,7 @@ Tương thích trực tiếp với chỉ đạo chiến lược C-Level trong [`
 
 Khung định hình 3 câu hỏi cốt lõi để xây dựng lợi thế cạnh tranh bền vững cho sản phẩm:
 
-- **Delight Customers (Làm người dùng hào hứng):** Sản phẩm giải quyết nỗi đau của người dùng như thế nào để tạo ra cảm giác hài lòng vượt kỳ vọng?
+- **Delight Customers (Làm người dùng hào hứng):** Sản phẩm giải quyết điểm nghẽn của người dùng như thế nào để tạo ra cảm giác hài lòng vượt kỳ vọng?
 - **Hard to Copy (Khó sao chép):** Xây dựng rào cản phòng thủ nào khiến đối thủ cực kỳ khó bắt kịp? (Bao gồm: Thương hiệu uy tín, Hiệu ứng mạng lưới Network Effects, Quy mô kinh tế Economies of Scale, Công nghệ độc quyền Proprietary Tech).
 - **Margin Enhancing (Tối ưu biên lợi nhuận):** Mô hình kinh doanh làm sao để vừa tăng giá trị cho người dùng vừa đảm bảo khả năng sinh lời bền vững?
 

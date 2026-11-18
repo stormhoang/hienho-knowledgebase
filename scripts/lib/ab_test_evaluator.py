@@ -156,8 +156,8 @@ def main():
     parser.add_argument("--nb", type=int, default=50000, help="Cỡ mẫu Variant B")
     parser.add_argument("--xb", type=int, default=650, help="Số chuyển đổi Variant B")
     parser.add_argument("--mde-calc", action="store_true", help="Chạy tính toán cỡ mẫu cần thiết")
-    parser.add_argument("--baseline", type=float, default=0.02, help="Tỷ lệ cơ sở (ví dụ: 0.02 cho 2% CVR)")
-    parser.add_argument("--mde", type=float, default=0.15, help="Mức tăng tối thiểu muốn đo lường (ví dụ: 0.15 cho 15% lift)")
+    parser.add_argument("--baseline", type=float, default=0.02, help="Tỷ lệ cơ sở (ví dụ: 0.02 cho 2%% CVR)")
+    parser.add_argument("--mde", type=float, default=0.15, help="Mức tăng tối thiểu muốn đo lường (ví dụ: 0.15 cho 15%% lift)")
     args = parser.parse_args()
 
     if args.mde_calc:

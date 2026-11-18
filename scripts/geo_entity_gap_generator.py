@@ -79,8 +79,8 @@ DOMAIN_ONTOLOGY_REGISTRY = {
                 "detail": (
                     "Hầu hết các bài viết đối thủ chỉ dừng lại ở bước 'cách đăng ký' và 'hạn mức'. "
                     "Để đạt E-E-A-T cao nhất, nội dung cần làm rõ: Việc chậm thanh toán ví trả sau từ 10 ngày trở lên "
-                    "sẽ bị xếp vào nhóm nợ cần chú ý (Nhóm 2) hoặc nợ xấu (Nhóm 3–5) trên hệ thống CIC, "
-                    "trực tiếp ảnh hưởng đến khả năng vay mua nhà, mua xe hoặc mở thẻ tín dụng ngân hàng trong 3–5 năm tới."
+                    "sẽ bị xếp vào nhóm nợ cần chú ý (Nhóm 2) hoặc nợ xấu (Nhóm 3-5) trên hệ thống CIC, "
+                    "trực tiếp ảnh hưởng đến khả năng vay mua nhà, mua xe hoặc mở thẻ tín dụng ngân hàng trong 3-5 năm tới."
                 ),
                 "actionable_angle": "Bảng phân loại 5 nhóm nợ CIC và mốc thời gian báo cáo vi phạm của ví trả sau."
             },
@@ -593,7 +593,7 @@ Nên sử dụng Schema `{blueprint['schema']['type']}` để các công cụ t�
 
 > "{blueprint['direct_answer_box']['text']}"
 
-* **Số lượng từ:** {blueprint['direct_answer_box']['word_count']} từ (Đạt chuẩn tối ưu 40–55 từ).
+* **Số lượng từ:** {blueprint['direct_answer_box']['word_count']} từ (Đạt chuẩn tối ưu 40-55 từ).
 * **Cấu trúc:** Thực thể định nghĩa ➔ Cơ chế vận hành số hóa ➔ Giá trị cốt lõi giải phóng rào cản.
 
 ---

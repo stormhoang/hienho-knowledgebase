@@ -42,12 +42,22 @@ $$\text{Intensity Factor} = \min(1.0, \max(0.2, \text{Intensity} \times 0.2))$$
 
 ---
 
-## 4. NGUYÊN TẮC VẬN HÀNH: CÔNG THỨC THUẦN TÚY (ZERO LLM DEPENDENCY)
+## 4. KIẾN TRÚC LAI 2 TẦNG: HEURISTICS CLIENT-SIDE & CỔNG QWEN 3.5 REPARAPHRASE
 
-* **Không phụ thuộc LLM:** Toàn bộ quá trình biến đổi diễn ra tức thì thông qua thuật toán bóc tách cú pháp và từ điển chuyển đổi chuẩn hóa trong mã nguồn.
-* **Tốc độ phản hồi:** < 2 mili-giây cho văn bản 10.000 ký tự.
-* **Chống ảo giác số liệu (Anti-Hallucination):** Triệt tiêu 100% rủi ro bịa đặt số liệu lãi suất, biểu phí hay quy định pháp lý, vì công thức chỉ tái cấu trúc câu mà không tự sinh dữ liệu mới.
-* **Bảo vệ toàn vẹn cấu trúc:** Giữ nguyên các định dạng Markdown (`# H1`, `## H2`, `| Bảng biểu |`, `- Danh sách`).
+Hệ thống vận hành theo kiến trúc lai (Hybrid Architecture) kết hợp giữa tốc độ tức thì của thuật toán và khả năng hiểu ngữ nghĩa sâu của mô hình Qwen 3.5:
+
+* **Tầng 1 (Client-Side Instant Engine - Zero LLM Dependency):**
+  * Toàn bộ quá trình biến đổi cơ bản diễn ra tức thì thông qua thuật toán bóc tách cú pháp và từ điển chuyển đổi chuẩn hóa trong mã nguồn.
+  * *Tốc độ phản hồi:* < 2 mili-giây cho văn bản 10.000 ký tự.
+  * *Chống ảo giác số liệu (Anti-Hallucination):* Triệt tiêu rủi ro bịa đặt số liệu lãi suất, biểu phí hay quy định pháp lý vì chỉ tái cấu trúc câu mà không tự sinh dữ liệu mới.
+* **Tầng 2 (Deep Contextual Refinement via Qwen 3.5 MoSpark Gateway):**
+  * Kích hoạt on-demand trên MoSpark GenAI Content Engine (CMS Page Editor / Content Studio) khi Content Writer cần tinh chỉnh toàn diện hoặc bật chế độ `humanize`.
+  * *Nhiệm vụ:* Rà soát lỗi diễn đạt, mượt hóa ngữ cảnh, bẻ nhỏ câu ghép dài thành câu đơn (10-15 từ) thoáng đãng trên di động, và khử văn mẫu AI sáo rỗng.
+  * *Rào cản kiểm soát bắt buộc (Hard Guardrails):*
+    1. Giữ nguyên 100% mọi con số, biểu phí, tỷ lệ %, lãi suất và điều khoản luật.
+    2. Giữ nguyên toàn bộ thực thể và tên riêng sản phẩm MoMo ("MoMo", "Ví Trả Sau", "Vay Nhanh", "Túi Thần Tài", "Phạt Nguội", "OneLink") và cơ quan nhà nước ("CIC", "NHNN", "Napas").
+    3. Giữ nguyên các thẻ Heading (# H1, ## H2, ### H3), bảng biểu Markdown và liên kết nội bộ.
+    4. Tuân thủ bộ từ điển chuẩn mực Web Platform MoMo tại `03_SKILLS/momo-reporting-glossary.md`, bắt buộc sử dụng các thuật ngữ kỹ thuật và sản phẩm chuẩn hóa (nền tảng Web, Kênh Web, module, bóc tách chi tiết, cơ cấu, rào cản thao tác, điểm nghẽn, tiện ích thu hút, bao phủ thị trường, kế hoạch xử lý, trang tải ứng dụng, gói quà chào đón người dùng mới).
 
 ---
 

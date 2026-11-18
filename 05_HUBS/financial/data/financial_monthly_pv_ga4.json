@@ -1,0 +1,229 @@
+[
+  {
+    "month": "2026-01",
+    "pageviews": 330429,
+    "paid": 236769,
+    "non_paid": 93660,
+    "mtd": false,
+    "channels": {
+      "Paid Search": 126060,
+      "Paid Social": 108158,
+      "Organic Search": 74747,
+      "Direct": 11152,
+      "Referral": 4599,
+      "Cross-network": 2493,
+      "Unassigned": 1922,
+      "Organic Social": 1209,
+      "Paid Other": 58,
+      "Organic Video": 29,
+      "Email": 2
+    }
+  },
+  {
+    "month": "2026-02",
+    "pageviews": 379611,
+    "paid": 298979,
+    "non_paid": 80632,
+    "mtd": false,
+    "channels": {
+      "Paid Search": 182930,
+      "Paid Social": 112841,
+      "Organic Search": 57163,
+      "Direct": 16571,
+      "Cross-network": 3158,
+      "Referral": 3114,
+      "Unassigned": 2107,
+      "Organic Social": 1644,
+      "Paid Other": 50,
+      "Organic Video": 33
+    }
+  },
+  {
+    "month": "2026-03",
+    "pageviews": 233228,
+    "paid": 146559,
+    "non_paid": 86669,
+    "mtd": false,
+    "channels": {
+      "Paid Search": 100370,
+      "Organic Search": 69272,
+      "Paid Social": 43808,
+      "Direct": 9196,
+      "Referral": 4417,
+      "Unassigned": 2789,
+      "Cross-network": 2363,
+      "Organic Social": 936,
+      "Organic Video": 59,
+      "Paid Other": 18
+    }
+  },
+  {
+    "month": "2026-04",
+    "pageviews": 202716,
+    "paid": 122692,
+    "non_paid": 80024,
+    "mtd": false,
+    "channels": {
+      "Paid Search": 85817,
+      "Organic Search": 53931,
+      "Paid Social": 35171,
+      "Direct": 14902,
+      "Referral": 5806,
+      "Unassigned": 4522,
+      "Cross-network": 1704,
+      "Organic Social": 836,
+      "Organic Video": 26,
+      "Email": 1
+    }
+  },
+  {
+    "month": "2026-05",
+    "pageviews": 180841,
+    "paid": 95668,
+    "non_paid": 85173,
+    "mtd": false,
+    "channels": {
+      "Paid Search": 93726,
+      "Organic Search": 62724,
+      "Direct": 11371,
+      "Referral": 7330,
+      "Unassigned": 2568,
+      "Cross-network": 1650,
+      "Organic Social": 1071,
+      "Paid Social": 287,
+      "AI Assistant": 91,
+      "Organic Video": 18,
+      "Paid Other": 5
+    }
+  },
+  {
+    "month": "2026-06",
+    "pageviews": 146798,
+    "paid": 73936,
+    "non_paid": 72862,
+    "mtd": false,
+    "channels": {
+      "Paid Search": 72585,
+      "Organic Search": 57752,
+      "Direct": 6468,
+      "Referral": 6400,
+      "Cross-network": 1242,
+      "AI Assistant": 962,
+      "Unassigned": 805,
+      "Organic Social": 467,
+      "Paid Social": 105,
+      "Organic Video": 8,
+      "Paid Other": 4
+    }
+  },
+  {
+    "month": "2026-07",
+    "pageviews": 139896,
+    "paid": 33496,
+    "non_paid": 106400,
+    "mtd": false,
+    "channels": {
+      "Organic Search": 73891,
+      "Paid Search": 32590,
+      "Referral": 23848,
+      "Direct": 6367,
+      "AI Assistant": 1168,
+      "Cross-network": 852,
+      "Unassigned": 603,
+      "Organic Social": 494,
+      "Paid Social": 54,
+      "Organic Video": 29
+    }
+  },
+  {
+    "month": "2026-08",
+    "pageviews": 254736,
+    "paid": 97418,
+    "non_paid": 157318,
+    "mtd": false,
+    "channels": {
+      "Paid Search": 83402,
+      "Referral": 69700,
+      "Organic Search": 67881,
+      "Direct": 14989,
+      "Paid Social": 12128,
+      "Unassigned": 2070,
+      "Cross-network": 1862,
+      "AI Assistant": 1852,
+      "Organic Social": 771,
+      "Organic Video": 52,
+      "Paid Other": 26,
+      "Email": 3
+    }
+  },
+  {
+    "month": "2026-09",
+    "pageviews": 582333,
+    "paid": 433812,
+    "non_paid": 148521,
+    "mtd": false,
+    "channels": {
+      "Paid Social": 347610,
+      "Paid Search": 81867,
+      "Referral": 67381,
+      "Organic Search": 61191,
+      "Direct": 14506,
+      "Unassigned": 2996,
+      "Cross-network": 2509,
+      "AI Assistant": 1879,
+      "Paid Other": 1826,
+      "Organic Social": 541,
+      "Organic Video": 22,
+      "Display": 5
+    }
+  },
+  {
+    "month": "2026-10",
+    "pageviews": 273705,
+    "paid": 102170,
+    "non_paid": 171535,
+    "mtd": false,
+    "channels": {
+      "Organic Search": 122428,
+      "Paid Search": 85210,
+      "Direct": 28430,
+      "Referral": 18560,
+      "AI Assistant": 2027,
+      "Unassigned": 1660,
+      "Cross-network": 4420,
+      "Organic Social": 503,
+      "Paid Social": 12540,
+      "Organic Video": 27,
+      "Email": 3,
+      "Paid Other": 3
+    }
+  },
+  {
+    "month": "2026-11",
+    "pageviews": 41504,
+    "paid": 6577,
+    "non_paid": 34927,
+    "mtd": true,
+    "channels": {
+      "Organic Search": 25408,
+      "Paid Search": 6449,
+      "Direct": 5141,
+      "Referral": 3007,
+      "AI Assistant": 967,
+      "Unassigned": 227,
+      "Organic Social": 167,
+      "Cross-network": 95,
+      "Paid Social": 31,
+      "Organic Video": 10,
+      "Paid Other": 2
+    },
+    "updatedDay": 9,
+    "note": "Lũy kế 9 ngày sạch (01-09/11/2026), loại trừ dữ liệu nhiễu vòng lặp GTM ngày 10-11/11.",
+    "raw_11d": {
+      "pageviews": 97680,
+      "paid": 15166,
+      "non_paid": 82514,
+      "updatedDay": 11
+    }
+  }
+]

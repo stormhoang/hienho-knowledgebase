@@ -83,6 +83,7 @@ TELEX_FIXES = {
     'lai suat': 'lãi suất',
     'bien so': 'biển số',
     'bao hiem': 'bảo hiểm',
+    'trả cứu': 'tra cứu',  # lỗi gõ dấu phổ biến của 'tra cứu'
     'o to': 'ô tô',
     'xe may': 'xe máy',
     # Student Hub: lỗi gõ & biến thể thiếu dấu
@@ -199,6 +200,12 @@ CROSS_DOMAIN_OUTLIERS = {
     ],
     'insurtech': [
         'lừa đảo chiếm đoạt', 'bảo hiểm giang hồ', 'game', 'hack'
+    ],
+    'cinema': [
+        # Web phim lậu: thương hiệu bên thứ ba vi phạm bản quyền, không phải intent đặt vé MoMo
+        'phimmoi', 'phim moi chill', 'phim mới chill', 'mọt phim', 'motphim', 'phim vn2', 'vn2',
+        'phim moi net', 'phim mới net', 'động phim', 'dongphim',
+        'phimbathu', 'bilutv', 'tvhay', 'phim88', 'xem phim lậu'
     ],
     'lottery': [
         'soi cầu lừa đảo', 'mua số trúng 100%', 'bán số đề'
@@ -324,6 +331,8 @@ class SemanticDomainFilter:
     def is_outlier(keyword: str, sector: str, usecase_slug: str, domain_anchors: set = None) -> tuple:
         kw = keyword.lower().strip()
         sec_key = sector.lower()
+        if sec_key not in CROSS_DOMAIN_OUTLIERS:
+            sec_key = sec_key.replace('-hub', '')  # thư mục 'vehicle-hub' dùng bộ lọc 'vehicle'
         
         # 1. Kiểm tra đối chiếu với danh mục Alien Outliers của từng ngành
         alien_patterns = CROSS_DOMAIN_OUTLIERS.get(sec_key, [])
@@ -352,7 +361,9 @@ class SemanticDomainFilter:
 
         # 5. Kiểm tra ngoại lệ đặc thù từng Theme
         if usecase_slug == 'vietlott':
-            vietlott_tokens = ['vietlott', 'viet lott', 'mega 6 45', 'mega 6/45', 'mega645', 'power 6 55', 'power 6/55', 'power 655', 'keno', 'max 3d', 'max3d', 'max 3d+', 'bingo18', 'bingo 18', 'omg']
+            vietlott_tokens = ['vietlott', 'viet lott', 'mega 6 45', 'mega 6/45', 'mega645', 'power 6 55', 'power 6/55', 'power 655', 'keno', 'max 3d', 'max3d', 'max 3d+', 'bingo18', 'bingo 18', 'omg',
+                               # đồng bộ BRAND_THEMES['vietlott'] (content_plan_config): sản phẩm con được định tuyến về /vietlott/
+                               'power', 'mega', 'bingo', 'max 4d', 'max4d', '3d max', 'xổ số 3d', 'vé số 3d']
             if not any(token in kw for token in vietlott_tokens):
                 return True, "Outlier: Vietlott theme only accepts Vietlott brand/product keywords"
 
@@ -732,7 +743,7 @@ class MoMoDomainSERPShield:
         top_url = momo_rankings[0]['url'] if momo_rankings else None
         top_title = momo_rankings[0]['title'] if momo_rankings else None
 
-        # Đối soát với Sitemap SSOT nội bộ có phân rã sector
+        # Đối soát với Sitemap SSOT nội bộ có bóc tách sector
         sitemap_hits = cls.find_sitemap_matches(query, sector=sector)
 
         # Phân loại theo Ma trận

@@ -85,7 +85,7 @@ Tuyền đang cảnh báo rằng Web Platform cần chứng minh giá trị cụ
 
 ### 06/05/2026 - A.Tường (CEO) `[Relay - Bảo]`
 
-**Bối cảnh:** Workshop về Job To Be Done (JTBD) - CEO chủ trì. Bảo tham dự và relay lại cho Hiến.
+**Bối cảnh:** Workshop về Job To Be Done (JTBD) - CEO điều phối. Bảo tham dự và relay lại cho Hiến.
 
 **Tư duy / Chỉ đạo cốt lõi:**
 
@@ -126,7 +126,7 @@ CEO không quan tâm đến cách Hiến làm SEO. CEO quan tâm đến: "MoMo c
 
 ### 12/05/2026 - Công (VP GPD) `[Direct - Team Meeting]`
 
-**Bối cảnh:** Weekly Meeting Web Platform do Công chủ trì. Hiến tham dự cùng Bảo và team.
+**Bối cảnh:** Weekly Meeting Web Platform do Công điều phối. Hiến tham dự cùng Bảo và team.
 
 **Tư duy / Chỉ đạo cốt lõi:**
 
@@ -228,7 +228,7 @@ Intent-based filtering là framework có thể reuse cho mọi BU có cùng bài
 **Tư duy / Chỉ đạo cốt lõi:**
 
 *Tư duy User-Centric sắc sảo:*
-- Nhìn MoSpark từ "nỗi đau" của PM, không nhìn từ góc công nghệ.
+- Nhìn MoSpark từ "điểm nghẽn" của PM, không nhìn từ góc công nghệ.
 - PM sợ nhất: viết Requirement và Constraint. AI phải "đọc hiểu business context" - không phải chỉ chọn template.
 - Đây là biểu hiện JTBD thinking triệt để: không hỏi "tính năng gì" mà hỏi "PM đang thuê builder này để làm gì?".
 
@@ -296,7 +296,7 @@ Ban lãnh đạo nhận thấy tổ chức đang có xu hướng phức tạp h�
 BOM muốn toàn bộ đội ngũ thoát khỏi tư duy làm sản phẩm ngắn hạn/vụ lợi nhỏ lẻ, nâng tầm suy nghĩ để mỗi quyết định sản phẩm đều vừa đóng góp cho mốc **2030 Checkpoint (30% GDP)** và tầm nhìn **2045**, vừa giúp từng Leader xây dựng di sản chuyên môn thực sự.
 
 **Đúc kết cho Hiến:**
-- **Về sản phẩm Web:** Mọi Web Hubs (Merchant, Cinema, Vehicle, Utility) phải thiết kế theo tinh thần "Thâm canh" — giải quyết triệt để Jobs-to-be-Done chứ không làm nội dung mỏng kéo traffic rác.
+- **Về sản phẩm Web:** Mọi Web Hubs (Merchant, Cinema, Vehicle, Utility) phải thiết kế theo tinh thần "Thâm canh" - giải quyết triệt để Jobs-to-be-Done chứ không làm nội dung mỏng kéo traffic rác.
 - **Về Di sản Lãnh đạo:** Đóng gói toàn bộ quy trình MoSpark Platform (Workflow A/B, GenAI Prompting Engine, Dynamic Registry) thành di sản nền tảng dùng chung cho toàn bộ công ty.
 - **Áp dụng trực tiếp vào quản trị sản phẩm trên Web Platform:** Khi các BU/Cell Teams gửi yêu cầu làm Mini Web hoặc tính năng mới, Hiến phải là chốt chặn chất vấn (Stage 1) xem tính năng đó có thực sự cần thiết không, kiên quyết loại bỏ (Stage 2) các trường thông tin hoặc bước trung gian thừa thãi trước khi bắt đầu tối ưu UI/UX (Stage 3) hay tự động hóa qua GenAI (Stage 5).
 - **Quy trình SPA:** Luôn đi từ reSearch (chất vấn, lọc bớt) ➔ Pilot (tối giản hóa) ➔ Action (tự động hóa và scale).

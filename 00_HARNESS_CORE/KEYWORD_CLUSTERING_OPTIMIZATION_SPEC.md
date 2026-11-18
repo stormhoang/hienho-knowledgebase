@@ -40,7 +40,7 @@ Dữ liệu từ khóa của Web Platform vận hành theo luồng khép kín t�
 │    - Keyword Difficulty (KD 0-100): Tính toán định lượng theo formula  │
 │    - Opportunity Score & 4 Ma trận góc phần tư (Strategic, Quick Win...)│
 │    - Pillar Selection: Chọn từ khóa đại diện Theme (không chọn sub-nav)│
-│    - Seasonality 5Y SSOT: scripts/cron_theme_seasonality.py            │
+│    - Seasonality 5Y SSOT: scripts/theme_seasonality.py            │
 └───────────────────────────────────┬────────────────────────────────────┘
                                     │
                                     ▼
@@ -136,7 +136,7 @@ Khi bắt tay vào code, Hoan cần đọc và kế thừa các file SSOT sau:
 | `scripts/lib/keyword_intelligence.py` | **Bộ não thuật toán:** Chứa `calculate_kd`, `calculate_opportunity_score`, `classify_quadrant`, `MultiSignalIntentClassifier`, `SERPCannibalizationShield`. |
 | `scripts/lib/vi_nlp.py` | **Gateway NLP Tiếng Việt:** Hàm `segment()`, `segment_text()`, bắt buộc dùng cho mọi tác vụ tách từ / n-gram. |
 | `scripts/sync_inventory_to_hubs.py` | **Pipeline đồng bộ Master:** Chứa `MERGE_MAP`, logic bóc tách inventory, sinh modular chunks và push sang UI. |
-| `scripts/cron_theme_seasonality.py` | **Seasonality SSOT:** Crawl và chuẩn hóa dữ liệu mùa vụ Google Trends 5 năm (`07_REPORTS/data/theme_seasonality.json`). |
+| `scripts/theme_seasonality.py` | **Seasonality SSOT:** Crawl và chuẩn hóa dữ liệu mùa vụ Google Trends 5 năm (`07_REPORTS/data/theme_seasonality.json`). |
 | `05_HUBS/inventory/` | **Kho dữ liệu thô (Input):** Chứa các file CSV được phân theo từng thư mục Hub ngành. |
 | `react-web-momo/data/seo-clusters/` | **Đích xuất bản (Output Chunks):** Nơi chứa 161 file modular JSON và `index.json`. |
 | `react-web-momo/components/content-plan/KeywordExplorer.tsx` | **Giao diện hiển thị:** Component Next.js đọc dữ liệu từ cluster JSON và hiển thị cho người dùng. |
@@ -157,4 +157,4 @@ Khi bắt tay vào code, Hoan cần đọc và kế thừa các file SSOT sau:
 - [ ] Chạy lệnh đơn giản phân tích 1 file CSV bất kỳ trong `05_HUBS/inventory/` trả ra kết quả trực quan ngay trên terminal trong < 5 giây.
 - [ ] Không còn lỗi lệch nghĩa ngữ nghĩa (Outliers được phát hiện và loại bỏ tự động).
 - [ ] Tính năng `--export` sinh ra file JSON hợp lệ, mở trên `KeywordExplorer.tsx` hiển thị mượt mà, đầy đủ Search Volume, KD, CPC, Intent, Google Trends 5Y Seasonality và danh sách từ khóa phụ.
-- [ ] Code tuân thủ chuẩn ESLint và kiểm thử thành công bằng `./.venv/bin/python`.
+- [ ] Code tuân thủ chuẩn ESLint và test thành công bằng `./.venv/bin/python`.

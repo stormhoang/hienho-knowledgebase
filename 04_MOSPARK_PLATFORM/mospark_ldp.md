@@ -121,10 +121,10 @@ Chuyển dịch từ việc "tự làm" sang "điều phối AI". Quy trình 7 b
 
 ## 9. Lộ trình Phát triển & Go-To-Market (Next Steps)
 Chiến lược tiếp cận "Beachhead": Bắt đầu từ nhóm 15% PM "Serious" có nhu cầu cao (3-5 trang/tháng) làm Design Partners.
-- **P0 - Validate & Funding:** Giải quyết bài toán Build-vs-Buy (chi phí), chuẩn hóa TCO.
-- **P1 - MVP Build:** Tập trung xây dựng tính năng Core (4A) và Workflow đơn lẻ (5A).
-- **P2 - Assisted Rollout:** Đưa bộ Starter Template và quy trình Onboarding để phá vỡ rào cản 66.7% PM "ngại cái mới".
-- **P3 - Scale & Integrate:** Scale lên workflow tự động hóa hàng loạt (Variant fan-out, A/B Testing, Multi-tenant) và tích hợp sâu PFM data.
+- **Giai đoạn 1 - Validate & Funding:** Giải quyết bài toán Build-vs-Buy (chi phí), chuẩn hóa TCO.
+- **Giai đoạn 2 - MVP Build:** Tập trung xây dựng tính năng Core (4A) và Workflow đơn lẻ (5A).
+- **Giai đoạn 3 - Assisted Rollout:** Đưa bộ Starter Template và quy trình Onboarding để phá vỡ rào cản 66.7% PM "ngại cái mới".
+- **Giai đoạn 4 - Scale & Integrate:** Scale lên workflow tự động hóa hàng loạt (Variant fan-out, A/B Testing, Multi-tenant) và tích hợp sâu PFM data.
 
 ## 9.5. Kế hoạch Nâng cấp Tính năng trong H2/2026
 

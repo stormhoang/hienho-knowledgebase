@@ -9,7 +9,7 @@ Mục tiêu: Đảm bảo 100% nội dung xuất bản đạt chuẩn **E-E-A-T*
 ## Nguyên tắc cốt lõi (MoMo Standard)
 1. **User Intent First, Search Engine Second:** Phục vụ trực tiếp JTBD của người dùng MoMo (Vay Nhanh, Đóng Phạt Nguội, Tìm Merchant...).
 2. **MoSpark Compliance:** Mọi trang đều phải qua Gatekeeper. **Chỉ golive khi SEO/GEO Score > 80**.
-3. **GenAI Automation:** Tận dụng tối đa bộ `[03_SKILLS/momo-merchant-page-prompt.md]` và `[03_SKILLS/momo-blog-prompt-1-outline.md]` để mở rộng nội dung, không viết tay thủ công trừ khi cần expert review (YMYL).
+3. **GenAI Automation:** Nội dung YMYL cần expert review trước khi xuất bản. Hai prompt cũ đã được loại bỏ khỏi quy trình; không còn là nguồn bắt buộc cho Agent.
 4. **Data-Driven Handoff:** Không publish nếu chưa chốt Event Spec với team DA. SEO tại MoMo đo lường bằng **Conversion (App Open/Transaction)**, không chỉ đo Traffic.
 
 ---
@@ -18,7 +18,7 @@ Mục tiêu: Đảm bảo 100% nội dung xuất bản đạt chuẩn **E-E-A-T*
 
 ### 1. Discovery & JTBD Analysis
 *   **Action:** Đọc tài liệu Use Case BRD (Ví dụ: `doi-tac-brd.md`, `phat-nguoi-brd.md`).
-*   **Xác định JTBD:** Người dùng muốn giải quyết nỗi đau gì? (Ví dụ: "Quán này có cho thanh toán Ví Trả Sau không?").
+*   **Xác định JTBD:** Người dùng muốn giải quyết rào cản thao tác hoặc nhu cầu gì? (Ví dụ: "Quán này có cho thanh toán Ví Trả Sau không?").
 *   **Gate Check:** Xác định xem chủ đề này có vi phạm chính sách **YMYL** (Your Money or Your Life) không. Nếu có, trigger `momo-ymyl-guideline.md`.
 
 ### 2. Research & Intent Mapping

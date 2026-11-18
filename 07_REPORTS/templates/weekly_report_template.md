@@ -1,9 +1,9 @@
-# BÁO CÁO TUẦN [W] - WEB PLATFORM (TUẦN [DD/MM] – [DD/MM/YYYY])
+# BÁO CÁO TUẦN [W] - WEB PLATFORM (TUẦN [DD/MM] - [DD/MM/YYYY])
 
 > **Kính gửi:** Executive Leadership (anh Công)  
 > **Đơn vị:** Web Platform Team  
 > **Chu kỳ:** 7 ngày (Weekly Shipping Cadence)  
-> **Nguồn dữ liệu:** `07_REPORTS/data/summary.json` & `12_TASK_MANAGEMENT/2026-10/week_0X.md`  
+> **Nguồn dữ liệu:** `07_REPORTS/data/summary.json` & `14_ROADMAP/ship_releases.json`
 
 ---
 
@@ -25,7 +25,7 @@
 
 - **Lũy kế MTD:** [actual_mtd] PVs / [target_month] PVs (Hoàn thành: **[%_progress]%** Target sau [days_elapsed]/[days_in_month] ngày).
 - **Nhịp độ thực tế:** [daily_pace] PVs/ngày.
-- **Tương quan Kênh (Non-Paid vs Paid):** Non-Paid Traffic đạt [%_non_paid]% ([non_paid_pv] PVs - gồm Organic [%_org]%, Direct [%_direct]%, Referral [%_ref]%, Others [%_oth]%), Paid Traffic chiếm [%_paid]% ([paid_pv] PVs).
+- **Tương quan Kênh (Non-Paid vs Paid):** Non-Paid Traffic đạt [%_non_paid]% ([non_paid_pv] PVs - gồm 4 kênh: Organic [%_org]%, Direct [%_direct]%, Referral [%_ref]%, AI Traffic [%_ai]%), Paid Traffic chiếm [%_paid]% ([paid_pv] PVs).
 - **Chỉ số Sức khỏe Kỹ thuật:** GSC Crawl đạt [req_day] req/ngày, Lỗi 404 là [pct_404]%.
 
 ---

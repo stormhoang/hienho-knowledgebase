@@ -1,11 +1,11 @@
 # BRD: Giá Vàng
 
 > - **Market:** Gold
-> - **Division:** Web Platform
+> - **Khối phụ trách:** Web Platform
 > - **Owner:** Web Platform
-> - **Governance:** Web Product Lead (Hiến)
-> - **Version:** v1.2 - 2026-05-23
-> - **Status:** Draft - Chờ 3 pre-conditions (xem Section 3.3)
+> - **Phê duyệt:** Web Product Lead (Hiến)
+> - **Phiên bản:** v1.2 - 2026-05-23
+> - **Trạng thái:** Draft - Chờ 3 pre-conditions (xem Section 3.3)
 > - **Business Model:** Financial Utility + PLG Activation (không có sản phẩm mua/bán vàng)
 
 ---
@@ -191,19 +191,19 @@ User hoàn thành daily habit "tra giá vàng" trên MoMo với experience tốt
   </thead>
   <tbody>
     <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PC1</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">API giá vàng real-time reliable - partnership hoặc aggregator có SLA uptime >99%</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chưa giải quyết</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GPD + Legal</td>
     </tr>
     <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PC2</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">BU Owner xác nhận - người chịu trách nhiệm vận hành và update long-term</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chưa xác định</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bảo escalate lên Công</td>
     </tr>
     <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PC3</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">KPI framework aligned với leadership: Traffic + Price Alert Signups, không phải W2A Conversion Rate</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chưa align</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bảo present với Công</td>
@@ -456,7 +456,7 @@ Widget là product - không phải component phụ trợ. Phải load nhanh, đ�
   </tbody>
 </table>
 
-**Lưu ý:** SJC và các thương hiệu vàng không có public API chính thức. Partnership chính thức với ít nhất 1 thương hiệu là điều kiện tiên quyết (Pre-condition P1).
+**Lưu ý:** SJC và các thương hiệu vàng không có public API chính thức. Partnership chính thức với ít nhất 1 thương hiệu là điều kiện tiên quyết (Pre-condition PC1).
 
 ### 5.4 User Flow Chính
 
@@ -538,7 +538,7 @@ Search "nên mua vàng hay gửi tiết kiệm 2026"
   </tbody>
 </table>
 
-**Quan trọng - KPI Alignment (Pre-condition P3):**
+**Quan trọng - KPI Alignment (Pre-condition PC3):**
 KPI chính là Price Alert Sign-ups + Return Rate, không phải W2A Conversion Rate. W2A sẽ thấp do intent bridge indirect - đây là đặc tính của use case, không phải thất bại. Nếu leadership vẫn đo bằng W2A, phải align lại trước khi commit build - không phải sau khi launch.
 
 ---
@@ -556,22 +556,22 @@ KPI chính là Price Alert Sign-ups + Return Rate, không phải W2A Conversion 
   <tbody>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">API giá vàng reliable (uptime >99%)</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không có dữ liệu chính xác = toàn bộ product mất giá trị. Pre-condition P1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không có dữ liệu chính xác = toàn bộ product mất giá trị. Pre-condition PC1</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có - tuyệt đối</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Partnership hoặc legal clearance data source</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SJC không có public API. Scraping có rủi ro pháp lý. Pre-condition P1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SJC không có public API. Scraping có rủi ro pháp lý. Pre-condition PC1</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có - YMYL + legal</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">KPI alignment với leadership</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nếu KPI vẫn là W2A, use case bị đánh giá sai. Pre-condition P3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nếu KPI vẫn là W2A, use case bị đánh giá sai. Pre-condition PC3</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có - quyết định đầu tư</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">BU Owner xác nhận</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trang cross nhiều team - cần owner rõ ràng để vận hành long-term. Pre-condition P2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trang cross nhiều team - cần owner rõ ràng để vận hành long-term. Pre-condition PC2</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có - governance</td>
     </tr>
     <tr>

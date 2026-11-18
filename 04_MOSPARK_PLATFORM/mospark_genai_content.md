@@ -20,10 +20,11 @@ MoSpark cần một "cỗ máy" sản xuất nội dung không chỉ nhanh mà p
 - **Thiếu Source of Truth:** AI dễ bị ảo giác (hallucination) nếu không được bám sát vào mô tả sản phẩm và các URL tham chiếu cụ thể của dự án.
 
 ### 1.3. Giải pháp (Resolution)
-Tạo ra **PLG Project Management Hub & AI Content Engine** - một không gian quản lý tập trung dựa trên 5 trụ cột chiến lược v5.0:
+Tạo ra **PLG Project Management Hub & AI Content Engine** - một không gian quản lý tập trung dựa trên 6 trụ cột chiến lược v5.1:
 - **PLG Project Management & Mapping:** Hoạt động như trung tâm quản trị dự án, bắt buộc ánh xạ 1-1 với Microsite đích để tự động kiểm soát URL và phân cấp.
 - **GEO Moat & AI Citation Tracking:** Tự động hóa sinh 20 query prompts mô phỏng search intent trên AI Search (ChatGPT, Perplexity) để lưu trữ phục vụ đo lường Citation Rate, kết hợp nén nội dung bài viết thành llms.txt cho AI Crawlers.
 - **Multi-Agent Quality Guardrails:** 3 Sub-agents tự động hóa khâu rà soát: YMYL & Legal Compliance Agent (kiểm tra từ khóa cấm, quy định NHNN), Information Gain Scraper (cào quét đối thủ real-time để tìm Content Gap), và Internal Linker (chống cannibalization).
+- **Reparaphrase & Content Refinement (Qwen 3.5 Engine):** Tích hợp mô hình Qwen 3.5 nội bộ trên MoSpark với prompt chuyên dụng để rà soát lỗi diễn đạt, mượt hóa câu chữ (Humanize), bẻ nhỏ câu dài và khử văn mẫu AI sáo rỗng, đồng thời bảo toàn tuyệt đối thực thể SEO và số liệu tài chính YMYL.
 - **Programmatic pSEO Factory:** Tự động hóa sản xuất nội dung quy mô lớn qua CSV (dành cho use case phân mảnh địa phương như Phạt Nguội, eSIM).
 - **Closed-Loop Auto-Refresh:** Đồng bộ dữ liệu GSC/GA4 qua BigQuery để tự động cảnh báo Content Decay và đề xuất cập nhật bài viết.
 
@@ -480,7 +481,7 @@ Trang đã tồn tại có thể cập nhật theo 2 cách:
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>4</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Keyword Apply</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bấm nút <strong>"Apply / Write Outline"</strong> trực tiếp cạnh Keyword đã phân cụm</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhấp vào nút <strong>"Apply / Write Outline"</strong> trực tiếp cạnh Keyword đã phân cụm</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Keyword vào Master Registry, Unique ID Check tự động</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM / Content Team</td>
     </tr>
@@ -722,7 +723,7 @@ Dưới đây là mẫu chuẩn để mô tả trọn vẹn một Business Model
 [Mô tả cách sản phẩm tạo ra giá trị kinh tế. Ví dụ: Hoa hồng trên mỗi giao dịch thành công (Commission), phí dịch vụ hàng tháng (Subscription), hay doanh thu từ quảng cáo/đối tác]
 
 ### 3. Giá trị cốt lõi (Value Propositions)
-[Danh sách các điểm giá trị (USPs) giải quyết nỗi đau của khách hàng mà đối thủ không có hoặc làm chưa tốt]
+[Danh sách các điểm giá trị (USPs) giải quyết điểm nghẽn của khách hàng mà đối thủ không có hoặc làm chưa tốt]
 
 ### 4. Phân khúc khách hàng (Customer Segments)
 [Persona chính: Họ là ai? Đang gặp vấn đề (Pain points) gì? Mong muốn (Gains) gì?]
@@ -773,12 +774,12 @@ Dự án GenAI Content được chia làm 3 giai đoạn chính để đảm b�
 
 ### Giai đoạn 2: Share of Voice (SoV) & Visibility Tracking (June 2026+)
 **Trọng tâm:** Đo lường hiệu quả, tự động hóa chất lượng & tracking.
-- **P0:** Nâng cấp hệ thống trong tháng 6/2026 để hỗ trợ sản xuất Content bên trong một Microsite có Long Content Section (Phạt Nguội) và Merchant.
-- **P0:** Triển khai **AI Query Generator & Citation Tracking** (sinh và lưu trữ 20 query prompts, truy vấn tự động đo lường định kỳ).
-- **P0:** Tích hợp quy chuẩn tự động sinh và nén dữ liệu `llms.txt` từ nội dung thực tế của bài viết.
-- **P0:** Phát triển **YMYL & Legal Compliance Agent** để chốt chặn tự động an toàn pháp lý cho sản phẩm tài chính.
-- **P0 (Đề xuất HubSpot):** Tích hợp **MoMom Brand Voice Presets** (Tone Expert, Friendly, Informative) vào Lớp Business Context.
-- **P0 (Đề xuất HubSpot):** Nâng cấp **Smart Internal Linker Agent** để tự động chèn liên kết ngữ cảnh khi viết bài.
+- **Đợt 1:** Nâng cấp hệ thống trong tháng 6/2026 để hỗ trợ sản xuất Content bên trong một Microsite có Long Content Section (Phạt Nguội) và Merchant.
+- **Đợt 1:** Triển khai **AI Query Generator & Citation Tracking** (sinh và lưu trữ 20 query prompts, truy vấn tự động đo lường định kỳ).
+- **Đợt 1:** Tích hợp quy chuẩn tự động sinh và nén dữ liệu `llms.txt` từ nội dung thực tế của bài viết.
+- **Đợt 1:** Phát triển **YMYL & Legal Compliance Agent** để chốt chặn tự động an toàn pháp lý cho sản phẩm tài chính.
+- **Đợt 1 (Đề xuất HubSpot):** Tích hợp **MoMom Brand Voice Presets** (Tone Expert, Friendly, Informative) vào Lớp Business Context.
+- **Đợt 1 (Đề xuất HubSpot):** Nâng cấp **Smart Internal Linker Agent** để tự động chèn liên kết ngữ cảnh khi viết bài.
 - Tích hợp Dashboard đo lường **SoV (Share of Voice)** theo từng Use Case.
 - Theo dõi **Visibility Index** của các bài viết GenAI trên Google Search & AI Search.
 - **GSC + BigQuery Feedback Loop & Content Decay Auto-Refresh:** Hệ thống cảnh báo nội dung giảm hiệu suất và gợi ý bản nháp tối ưu bài viết.
@@ -786,10 +787,10 @@ Dự án GenAI Content được chia làm 3 giai đoạn chính để đảm b�
 
 ### Giai đoạn 3: Multi-format Scale & Engagement Optimization (Q4/2026)
 **Trọng tâm:** Tối ưu hóa chuyển đổi Web-to-App & mở rộng đa định dạng.
-- **P0:** Mở rộng năng lực GenAI để sản xuất content trên Web với **đa dạng page type và đa dạng format** (không chỉ giới hạn ở Blog Articles mà bao gồm cả Landing Page, FAQ, Merchant Page, v.v.).
-- **P1:** Triển khai **Programmatic Bulk Generator** (pSEO) để hỗ trợ scale hàng loạt trang vệ tinh qua CSV.
-- **P1 (Đề xuất HubSpot):** Tích hợp **Content Remix Engine** để tự động chuyển đổi bài viết chất lượng cao sang các định dạng Ads, Push App, và FAQ.
-- **P1 (Đề xuất HubSpot):** Phát triển giao diện **Visual Topic Cluster Map** để hiển thị trực quan các mối quan hệ liên kết và tình trạng sức khỏe liên kết.
+- **Đợt 1:** Mở rộng năng lực GenAI để sản xuất content trên Web với **đa dạng page type và đa dạng format** (không chỉ giới hạn ở Blog Articles mà bao gồm cả Landing Page, FAQ, Merchant Page, v.v.).
+- **Đợt 2:** Triển khai **Programmatic Bulk Generator** (pSEO) để hỗ trợ scale hàng loạt trang vệ tinh qua CSV.
+- **Đợt 2 (Đề xuất HubSpot):** Tích hợp **Content Remix Engine** để tự động chuyển đổi bài viết chất lượng cao sang các định dạng Ads, Push App, và FAQ.
+- **Đợt 2 (Đề xuất HubSpot):** Phát triển giao diện **Visual Topic Cluster Map** để hiển thị trực quan các mối quan hệ liên kết và tình trạng sức khỏe liên kết.
 
 ---
 
@@ -847,6 +848,35 @@ Việc xác định rõ đơn giá cố định trên từng bài viết giúp P
 3. **Custom Use-Case Prompts (Content Writer Agent):** Cho phép cấu hình các Prompts chuyên biệt viết Outline/Detail cho từng Use Case cụ thể. Mỗi dự án được gán một "Content Writer" riêng biệt được tối ưu hóa để đảm bảo chất lượng văn phong, kiểm soát chi phí, và định hướng chính xác theo Business Context.
 4. **Creative GenAI Suite (Image & Video):** Tích hợp tính năng tự động tạo hình ảnh minh họa (theo template chuẩn Mobase) và video ngắn từ prompt trực tiếp trong luồng sản xuất content.
 5. **Auto-Rewrite Loop (Vòng lặp tự động viết lại):** Tự động nhận tín hiệu cảnh báo từ Content Decay (sụt giảm traffic click trên Google Search Console) để tự tạo draft nâng cấp bài viết.
+
+### 9.5. Module Hiệu đính & Viết lại Nội dung (Reparaphrase Engine via Qwen 3.5)
+
+Hệ thống đã chính thức đưa mô hình **Qwen 3.5 nội bộ trên MoSpark** vào vận hành trực tiếp tại module Reparaphrase để hỗ trợ Content Writer rà soát và tinh chỉnh chất lượng câu chữ trước khi xuất bản:
+
+*   **Vị trí trong luồng:** Nằm tại giao diện biên tập bài viết (CMS Page Editor / Content Studio). Kích hoạt on-demand khi Content Writer dán văn bản mới hoặc muốn tinh chỉnh lại các đoạn văn do AI sinh ra.
+*   **Mục tiêu vận hành:**
+    *   Tự động phát hiện và bẻ nhỏ các câu ghép dài rườm rà thành các câu đơn ngắn (10-15 từ) dễ đọc trên di động.
+    *   Làm mượt ngữ cảnh (Humanize), tăng tính mạch lạc và tự nhiên của tiếng Việt đời thường.
+    *   Khử sạch triệt để các mẫu câu sáo rỗng thường gặp của AI.
+*   **Rào cản kiểm soát bắt buộc (Hard Guardrails):**
+    *   *Bảo tồn 100% số liệu & sự thật (Zero-Hallucination):* Không thay đổi, làm tròn hoặc suy đoán số liệu tài chính, biểu phí, lãi suất, điều khoản pháp lý.
+    *   *Bảo vệ thực thể SEO (Entity Protection):* Giữ nguyên chính xác tên gọi thương hiệu và tính năng MoMo (MoMo, Ví Trả Sau, Vay Nhanh, Túi Thần Tài, Phạt Nguội, OneLink...) và các thực thể đối tác/cơ quan nhà nước (CIC, NHNN, Napas, BVBank, TPBank).
+    *   *Giữ nguyên định dạng Markdown:* Bảo toàn các thẻ Heading (# H1, ## H2, ### H3), bảng biểu dữ liệu Markdown, danh sách gạch đầu dòng và liên kết nội bộ.
+    *   *Tuân thủ Từ điển Web Platform MoMo:* Bắt buộc tuân thủ SSOT từ điển momo-reporting-glossary.md; chỉ dùng các thuật ngữ chuẩn mực (nền tảng Web, Kênh Web, module, bóc tách chi tiết, cơ cấu, rào cản thao tác, điểm nghẽn, tiện ích thu hút, bao phủ thị trường, kế hoạch xử lý, trang tải ứng dụng, gói quà chào đón người dùng mới).
+*   **Prompt Master mẫu triển khai cho Qwen 3.5:**
+    ```text
+    Bạn là Trợ lý Biên tập & Hiệu đính Nội dung Cao cấp của Nền tảng Web MoMo (MoSpark GenAI Content Engine).
+    Nhiệm vụ: Đọc kỹ văn bản đầu vào, phát hiện các điểm diễn đạt rườm rà hoặc sáo rỗng, và VIẾT LẠI (REPARAPHRASE) để câu từ trở nên tự nhiên, mạch lạc, dễ hiểu với người dùng đại chúng.
+
+    NGUYÊN TẮC BẮT BUỘC:
+    1. BẢO TỒN 100% SỐ LIỆU & SỰ THẬT: Giữ nguyên tuyệt đối mọi con số, biểu phí, tỷ lệ %, lãi suất, mốc thời gian và điều khoản luật.
+    2. BẢO VỆ THỰC THỂ & TÊN RIÊNG: Giữ nguyên chính xác tên thương hiệu MoMo ("MoMo", "Ví Trả Sau", "Vay Nhanh", "Túi Thần Tài", "Phạt Nguội", "OneLink") và các thực thể tài chính/pháp lý ("CIC", "NHNN", "Napas", v.v.).
+    3. GIỮ NGUYÊN ĐỊNH DẠNG MARKDOWN: Giữ nguyên toàn bộ cấu trúc Heading (# H1, ## H2, ### H3), bảng dữ liệu, danh sách và liên kết.
+    4. KHỬ VĂN MẪU AI SÁO RỖNG: Loại bỏ triệt để các cụm từ "bứt phá ngoạn mục", "khẳng định vị thế uy tín", "bệ phóng phát triển", "đóng vai trò then chốt", "trong bối cảnh ngày nay", "giải pháp toàn diện".
+    5. TUÂN THỦ TỪ ĐIỂN CHUẨN MỰC MOMO: Tuân thủ quy chuẩn tài liệu Web Platform; sử dụng ngôn ngữ sản phẩm và kinh doanh chuẩn mực (nền tảng Web, Kênh Web, module, bóc tách chi tiết, rào cản thao tác, điểm nghẽn, tiện ích thu hút, bao phủ thị trường, kế hoạch xử lý, trang tải ứng dụng, gói quà chào đón người dùng mới).
+
+    YÊU CẦU ĐẦU RA: Trả về trực tiếp văn bản Markdown hoàn chỉnh sau khi viết lại, không kèm lời chào hay giải thích.
+    ```
 
 ---
 

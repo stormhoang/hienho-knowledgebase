@@ -42,9 +42,9 @@ PERSONS_TS = HUBS_DIR / "lib" / "cinema-data" / "persons.ts"
 
 TEMPLATE_PATH = "/Users/hienhv/Downloads/MoMo Reporting Guidelines & Templates.pptx .pptx"
 OUT_PATHS = [
-    "/Users/hienhv/Downloads/Web_Platform_Thang_10_2026_Monthly_Report.pptx",
-    "07_REPORTS/docs/presentations/Web_Platform_Thang_10_2026_Monthly_Report.pptx",
-    "/Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/public/reports/Web_Platform_Thang_10_2026_Monthly_Report.pptx"
+    "/Users/hienhv/Downloads/Web_Platform_Thang_10_2026_Pyramid.pptx",
+    "07_REPORTS/docs/presentations/Web_Platform_Thang_10_2026_Pyramid.pptx",
+    "/Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/public/reports/Web_Platform_Thang_10_2026_Pyramid.pptx"
 ]
 
 COLOR_TEXT_MAIN = RGBColor(0x1C, 0x17, 0x1A)
@@ -189,7 +189,7 @@ def main():
         if txt.startswith("Mục đích:"):
             remove_shape(s)
         elif "[Tên BU/Division/Project]" in txt:
-            set_text(s, "Web Platform — Báo Cáo Tháng 10/2026", font_size=28, bold=True, color=COLOR_TEXT_MAIN)
+            set_text(s, "Web Platform - Báo Cáo Tháng 10/2026", font_size=28, bold=True, color=COLOR_TEXT_MAIN)
         elif "Report để cung cấp thông tin" in txt:
             set_text(s, "Report để cung cấp thông tin  •  Meeting để thảo luận và ra quyết định", font_size=13, color=COLOR_TEXT_MUTED)
         elif txt.startswith("Note:"):
@@ -206,7 +206,7 @@ def main():
             if txt.startswith("Mục đích:"):
                 set_text(s, "Mục đích: Xin CEO/BOM phê duyệt chiến lược tối ưu luồng Tải App (/tai-app) để thu hút 10.000 volume tìm kiếm tự nhiên.", font_size=8.5, color=COLOR_TEXT_MUTED)
             elif "Discussion Topics —" in txt:
-                set_text(s, "Discussion Topics — 1 Chủ Đề Trọng Tâm: 0 Discuss, 1 Approve", font_size=18, bold=True, color=COLOR_TEXT_MAIN)
+                set_text(s, "Discussion Topics - 1 Chủ Đề Trọng Tâm: 0 Discuss, 1 Approve", font_size=18, bold=True, color=COLOR_TEXT_MAIN)
             elif "Nguồn:" in txt:
                 set_text(s, "Nguồn: Google Search Console & Web Platform   |   Owner: Web Platform   |   Chốt số liệu: 30/10/2026", font_size=9, color=COLOR_TEXT_MUTED)
             elif txt in ["2", "2 / 7", "2 / 8"]:
@@ -381,10 +381,10 @@ def main():
 
             rows_data = [
                 ["Tổng lượt xem (PVs)", vn(T['sep_pv']), vn(T['oct_pv']), signed(T['mom_pct']), vn(T['target']), f"{dec(T['achievement_rate'])}%", f"Dự báo {dec(T['forecast_rate'])}%"],
-                ["• Kênh tự nhiên (Non-Paid)", vn(CH['non_paid']['sep']), vn(CH['non_paid']['oct']), signed(CH['non_paid']['mom_pct']), "—", "—", "Vượt mốc 3M"],
-                ["• Quảng cáo trả phí (Paid)", vn(CH['paid']['sep']), vn(CH['paid']['oct']), signed(CH['paid']['mom_pct']), "—", "—", "Chủ động cắt"],
-                ["• Lượt truy cập trực tiếp (Direct)", vn(CH['direct']['sep']), vn(CH['direct']['oct']), signed(CH['direct']['mom_pct']), "—", "—", "Tăng trưởng mạnh"],
-                ["• Lưu lượng AI Search (GEO)", vn(GEO['sep']), vn(GEO['oct']), signed(GEO['mom_pct']), "—", "—", "Ước tính, cần chuẩn hóa"],
+                ["• Kênh tự nhiên (Non-Paid)", vn(CH['non_paid']['sep']), vn(CH['non_paid']['oct']), signed(CH['non_paid']['mom_pct']), "-", "-", "Vượt mốc 3M"],
+                ["• Quảng cáo trả phí (Paid)", vn(CH['paid']['sep']), vn(CH['paid']['oct']), signed(CH['paid']['mom_pct']), "-", "-", "Chủ động cắt"],
+                ["• Lượt truy cập trực tiếp (Direct)", vn(CH['direct']['sep']), vn(CH['direct']['oct']), signed(CH['direct']['mom_pct']), "-", "-", "Tăng trưởng mạnh"],
+                ["• Lưu lượng AI Search (GEO)", vn(GEO['sep']), vn(GEO['oct']), signed(GEO['mom_pct']), "-", "-", "Ước tính, cần chuẩn hóa"],
             ]
             for r_idx, r_data in enumerate(rows_data, 1):
                 for c_idx, val in enumerate(r_data):

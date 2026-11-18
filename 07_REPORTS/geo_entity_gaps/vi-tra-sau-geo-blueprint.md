@@ -64,7 +64,7 @@ Nên sử dụng Schema `FinancialProduct` để các công cụ tìm kiếm và
 
 > "Ví trả sau là hình thức tín dụng tiêu dùng số cho phép người dùng thanh toán trước các giao dịch mua sắm và trả tiền vào cuối kỳ hoặc trả góp. Sản phẩm này hoạt động dựa trên lịch sử tín dụng cá nhân, tích hợp trực tiếp vào ví điện tử, giúp tối ưu hóa dòng tiền mà không cần thẻ tín dụng vật lý."
 
-* **Số lượng từ:** 67 từ (Đạt chuẩn tối ưu 40–55 từ).
+* **Số lượng từ:** 67 từ (Đạt chuẩn tối ưu 40-55 từ).
 * **Cấu trúc:** Thực thể định nghĩa ➔ Cơ chế vận hành số hóa ➔ Giá trị cốt lõi giải phóng rào cản.
 
 ---
@@ -75,7 +75,7 @@ Nên sử dụng Schema `FinancialProduct` để các công cụ tìm kiếm và
 
 ### 3.1. Tác động đến Điểm Tín Dụng Quốc Gia (CIC) (Góc Chuyên Gia E-E-A-T)
 * **Bản chất vấn đề:** Phân tích cụ thể ảnh hưởng của các khoản chậm trả đến hồ sơ tín dụng tại Trung tâm Thông tin Tín dụng Quốc gia (CIC).
-* **Phân tích chiều sâu:** Hầu hết các bài viết đối thủ chỉ dừng lại ở bước 'cách đăng ký' và 'hạn mức'. Để đạt E-E-A-T cao nhất, nội dung cần làm rõ: Việc chậm thanh toán ví trả sau từ 10 ngày trở lên sẽ bị xếp vào nhóm nợ cần chú ý (Nhóm 2) hoặc nợ xấu (Nhóm 3–5) trên hệ thống CIC, trực tiếp ảnh hưởng đến khả năng vay mua nhà, mua xe hoặc mở thẻ tín dụng ngân hàng trong 3–5 năm tới.
+* **Phân tích chiều sâu:** Hầu hết các bài viết đối thủ chỉ dừng lại ở bước 'cách đăng ký' và 'hạn mức'. Để đạt E-E-A-T cao nhất, nội dung cần làm rõ: Việc chậm thanh toán ví trả sau từ 10 ngày trở lên sẽ bị xếp vào nhóm nợ cần chú ý (Nhóm 2) hoặc nợ xấu (Nhóm 3-5) trên hệ thống CIC, trực tiếp ảnh hưởng đến khả năng vay mua nhà, mua xe hoặc mở thẻ tín dụng ngân hàng trong 3-5 năm tới.
 * **Hành động triển khai:** Bảng phân loại 5 nhóm nợ CIC và mốc thời gian báo cáo vi phạm của ví trả sau.
 
 ### 3.2. Cơ chế định danh điện tử eKYC & Dữ liệu C06 (Hạ Tầng & Bảo Mật)

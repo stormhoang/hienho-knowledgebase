@@ -1,22 +1,66 @@
-# MoMo
+# MoMo Web Platform Knowledge OS
 
-> MoMo (momo.vn) là siêu ứng dụng tài chính và cổng tiện ích đời sống hàng đầu Việt Nam. Nền tảng cung cấp hệ sinh thái thanh toán, quản lý phương tiện giao thông, nhiên liệu và năng lượng số cho hơn 31 triệu người dùng.
+> Repo này là Knowledge OS và Growth Decision Copilot của Web Platform momo.vn.
+> Agent/LLM đọc file này đầu tiên để định tuyến tới đúng SSOT, tránh đọc lan man.
 
-Nền tảng được vận hành bởi Công ty Cổ phần Dịch vụ Di Động Trực Tuyến (M_Service), được cấp phép bởi Ngân hàng Nhà nước Việt Nam. Dưới đây là danh mục các tiện ích và trang thông tin đang hoạt động chính thức trên môi trường Production.
+## Cách dùng file này
 
-## Tiện ích giao thông và xe cộ (Vehicle Hub Production)
+- Mỗi domain chỉ có MỘT file SSOT. Đọc đúng file đó, không đọc file lân cận "cho chắc".
+- File lớn (`MEETING_RECAPS.md`, `hienho_master_doc.md`, `WEB_PERFORMANCE_TRACKING_MASTER.md`) chỉ đọc section liên quan.
+- Mọi script Python chạy qua `./.venv/bin/python <script>` (Python 3.12, không dùng `python3` trần).
+- Dữ liệu hiệu suất tập trung tại `07_REPORTS/data/cache/performance.sqlite` (SQLite Data Mart).
 
-Cổng dịch vụ số toàn diện dành cho chủ xe ô tô và xe máy tại Việt Nam:
+## Knowledge Map (Domain -> SSOT)
 
-- [Tiện Ích Giao Thông MoMo](https://www.momo.vn/tien-ich-giao-thong): Cổng tổng hợp tiện ích vòng đời phương tiện; kiểm tra tình trạng xe qua biển số tức thì, tạo hồ sơ xe điện tử tự động và kết nối hệ sinh thái dịch vụ giao thông.
-- [Bảng Giá Xăng Dầu Hôm Nay](https://www.momo.vn/tien-ich-giao-thong/gia-xang): Cập nhật biểu giá xăng dầu Petrolimex, PVOil realtime theo kỳ điều hành 15:00 thứ Năm hàng tuần của Liên Bộ Công Thương - Tài Chính (RON 95-V, E5 RON 92, Dầu DO Vùng 1 & Vùng 2); công cụ tính tiền đổ đầy bình và dự toán chi phí nhiên liệu theo số Km.
-- [Bản Đồ Cây Xăng Gần Đây](https://www.momo.vn/tien-ich-giao-thong/cay-xang): Định vị mạng lưới trạm xăng mở cửa 24/7 trên toàn quốc (Petrolimex, PVOil, Saigon Petro, Comeco), tra cứu loại nhiên liệu cung cấp, tìm đường đi ngắn nhất và hỗ trợ quét mã thanh toán MoMo tại trụ bơm.
-- [Bản Đồ Trạm Sạc Xe Điện EV](https://www.momo.vn/tien-ich-giao-thong/tram-sac): Định vị hệ thống trạm sạc ô tô điện và xe máy điện trên toàn quốc (VinFast, V-Green), lọc theo chuẩn công suất sạc AC/DC (60kW, 150kW, 250kW), kiểm tra cổng sạc trống và lên kế hoạch sạc theo lộ trình.
+| Domain | File SSOT |
+| :--- | :--- |
+| Kiến trúc repo, Data Mart, CLI engines | `CODEBASE_MANIFEST.md` |
+| Quy tắc vận hành agent, Fast Routing | `AGENTS.md` |
+| Contract agent (capability, safety, output) | `AGENT_OPERATING_CONTRACT.md` + `00_HARNESS_CORE/AGENT_CAPABILITIES.yaml` |
+| Knowledge routing 5 tầng | `00_HARNESS_CORE/KNOWLEDGE_ROUTING.md` |
+| Độ mới tri thức, nguồn stale | `00_HARNESS_CORE/knowledge_freshness.md` (regen: `scripts/check_knowledge_freshness.py`) |
+| Xung đột đường dẫn, link gãy | `00_HARNESS_CORE/knowledge_conflicts.md` (regen: `scripts/detect_knowledge_conflicts.py`) |
+| Quyết định chiến lược đã chốt | `08_DECISION_LOG/decision_log.md` |
+| Chỉ đạo lãnh đạo (đọc section gần nhất) | `MEETING_RECAPS.md` |
+| OKR, chiến lược Web Platform | `01_STRATEGIC_PLAN/` |
+| Framework tư duy (JTBD, 4 Zones, Pyramid...) | `02_FRAMEWORKS/` |
+| Skill & chuẩn SEO/GEO, báo cáo, glossary | `03_SKILLS/` |
+| Kiến trúc MoSpark, Umami tracking schema | `04_MOSPARK_PLATFORM/` (tracking: `umami_utility_tracking.md`) |
+| Keyword inventory theo Hub (CSV SSOT) | `05_HUBS/inventory/<hub>/` |
+| Tài liệu Hub (strategy, BRD hub) | `05_HUBS/<hub>/` |
+| BRD/PRD use case (Vay Nhanh, VTS, BHYT, Phạt Nguội...) | `06_USE_CASE_MOMO/<use-case>-brd.md` |
+| Báo cáo hiệu suất MTD (kỳ hiện tại) | `07_REPORTS/docs/PERFORMANCE_SNAPSHOT_LATEST.md` (kiểm tra `00_HARNESS_CORE/knowledge_freshness.md` trước) |
+| Số liệu lịch sử các tháng đã đóng | `07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md` |
+| Index báo cáo lịch sử | `07_REPORTS/docs/INDEX.md` |
+| Paid Ads performance | `07_REPORTS/data/analytics/paid_ads_performance.json` |
+| Theme seasonality (Google Trends) | `07_REPORTS/data/theme_seasonality.json` |
+| SEO/GEO news feed | `11_NEWS_FEED/*_daily_report.md` (file mới nhất) |
 
-## Cẩm nang và kiến thức phương tiện (Production)
+## CLI Engines (chạy khi user yêu cầu phân tích số liệu)
 
-- [Blog Tiện Ích Giao Thông](https://www.momo.vn/tien-ich-giao-thong/blog): Chuyên trang kiến thức vận hành và bảo dưỡng ô tô xe máy, kinh nghiệm lái xe an toàn, hướng dẫn thủ tục đăng kiểm và phân tích quy định giao thông đường bộ.
+| Nhu cầu | Lệnh |
+| :--- | :--- |
+| Chẩn đoán root cause traffic | `./.venv/bin/python scripts/diagnose_performance.py` |
+| Quét anomaly, đứt gãy W2A | `./.venv/bin/python scripts/detect_anomalies.py` |
+| Truy vấn đa chiều, Quick Wins, W2A | `./.venv/bin/python scripts/query_analytics.py --hubs / --w2a` |
+| Ưu tiên RICE | `./.venv/bin/python scripts/prioritize_initiatives.py` |
+| What-If simulation | `./.venv/bin/python scripts/lib/scenario_simulator.py --scenario all` |
+| A/B test stats | `./.venv/bin/python scripts/lib/ab_test_evaluator.py` |
+| Forecast mùa vụ | `./.venv/bin/python scripts/lib/forecast_engine.py --forecast` |
+| Sổ cái quyết định | `./.venv/bin/python scripts/track_decisions.py --list / --audit` |
 
-## Cổng thông tin nền tảng (Production)
+## Production site (momo.vn)
 
-- [Trang Chủ MoMo](https://www.momo.vn): Cổng thông tin chính thức siêu ứng dụng tài chính MoMo.
+> MoMo là siêu ứng dụng tài chính và cổng tiện ích đời sống hàng đầu Việt Nam, phục vụ hơn 31 triệu người dùng.
+
+### Tiện ích giao thông và xe cộ (Vehicle Hub)
+
+- [Tiện Ích Giao Thông MoMo](https://www.momo.vn/tien-ich-giao-thong): Cổng tổng hợp tiện ích vòng đời phương tiện.
+- [Bảng Giá Xăng Dầu Hôm Nay](https://www.momo.vn/tien-ich-giao-thong/gia-xang): Giá xăng dầu realtime theo kỳ điều hành.
+- [Bản Đồ Cây Xăng Gần Đây](https://www.momo.vn/tien-ich-giao-thong/cay-xang): Định vị trạm xăng toàn quốc.
+- [Bản Đồ Trạm Sạc Xe Điện EV](https://www.momo.vn/tien-ich-giao-thong/tram-sac): Định vị trạm sạc ô tô/xe máy điện.
+- [Blog Tiện Ích Giao Thông](https://www.momo.vn/tien-ich-giao-thong/blog): Kiến thức vận hành, bảo dưỡng phương tiện.
+
+### Cổng thông tin nền tảng
+
+- [Trang Chủ MoMo](https://www.momo.vn): Cổng thông tin chính thức siêu ứng dụng MoMo.

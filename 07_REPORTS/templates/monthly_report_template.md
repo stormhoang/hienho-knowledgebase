@@ -85,12 +85,15 @@ Khối thứ hai bắt buộc có nội dung.
 | **Tốc Độ Ngày (Pace)** | [pace_prev]/ngày | [req_pace]/ngày | [daily_pace]/ngày | - | [pace_status] |
 | **Chênh Lệch (Net Add)** | - | - | - | [gap_pv] | [so_what_net_add] |
 
-### Phân Bổ Kênh Lưu Lượng (Channels Split):
-- **Organic:** [pv_org] ([%_org]%) — [Đánh giá sức khỏe lưu lượng tự nhiên]
-- **Direct:** [pv_dir] ([%_dir]%) — [Đánh giá lượng truy cập tiện ích trực tiếp]
-- **Referral:** [pv_ref] ([%_ref]%) — [Đánh giá luồng giới thiệu đối tác]
-- **Paid:** [pv_paid] ([%_paid]%) — [Đánh giá hiệu quả ngân sách quảng cáo/co-marketing]
-- **Others:** [pv_oth] ([%_oth]%)
+### Phân Bổ Kênh Lưu Lượng (Traffic Dichotomy Split):
+#### 1. Kênh Tự Nhiên (Non-Paid Traffic):
+- **Organic Search:** [pv_org] ([%_org]%) - [Đánh giá sức khỏe lưu lượng tìm kiếm tự nhiên]
+- **Direct:** [pv_dir] ([%_dir]%) - [Đánh giá lượng truy cập tiện ích trực tiếp]
+- **Referral:** [pv_ref] ([%_ref]%) - [Đánh giá luồng giới thiệu đối tác; toàn bộ nguồn vãng lai/nguồn khác gộp vào Referral, không tách dòng Others]
+- **AI Traffic (GEO):** [pv_ai_traffic] ([%_ai]%) - [Đánh giá lưu lượng từ các công cụ AI Search / AI Engine: Perplexity, ChatGPT, Gemini, Copilot]
+
+#### 2. Kênh Trả Phí (Paid Traffic):
+- **Paid Ads:** [pv_paid] ([%_paid]%) - [Đánh giá hiệu quả ngân sách quảng cáo và co-marketing, tách biệt hoàn toàn khỏi kênh tự nhiên]
 
 ---
 
@@ -112,11 +115,11 @@ Khối thứ hai bắt buộc có nội dung.
   * *Phễu Web-to-App:* [Game Quýt 2D/3D, cải tiến trang Download & Bonbon]
 
 ### C. Foundation Zone: Payment Hub
-- **Lưu lượng MTD:** [pv_payment] PVs — [Game, Tiktok, Billpay, P2P, Data...] vận hành ổn định.
+- **Lưu lượng MTD:** [pv_payment] PVs - [Game, Tiktok, Billpay, P2P, Data...] vận hành ổn định.
 
 ### D. Incubator Zone: Student & Travel Hubs
-- **Student Hub:** [pv_student] PVs / Target [target_student] PVs — [Tiến độ gói hội viên sinh viên]
-- **Travel Hub:** [pv_travel] PVs — [Tiến độ vé máy bay, vé tàu, khách sạn, eSIM]
+- **Student Hub:** [pv_student] PVs / Target [target_student] PVs - [Tiến độ gói hội viên sinh viên]
+- **Travel Hub:** [pv_travel] PVs - [Tiến độ vé máy bay, vé tàu, khách sạn, eSIM]
 
 ---
 

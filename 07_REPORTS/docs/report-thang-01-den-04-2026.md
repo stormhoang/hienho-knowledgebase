@@ -29,14 +29,14 @@ Tài liệu này lưu trữ báo cáo hiệu suất chi tiết giai đoạn 4 th
 ### Đánh Giá Chi Tiết Từng Kênh:
 
 - **Organic Stability:** 
-  - Đạt đỉnh 1,78M PV vào T2 nhờ lưu lượng tìm kiếm phim Tết bùng nổ, sau đó duy trì phẳng vững chắc ở mốc 1,51M PV/tháng trong T3 và T4.
+  - Chạm mức cao nhất 1,78M PV vào T2 nhờ lưu lượng tìm kiếm phim Tết bùng nổ, sau đó duy trì phẳng vững chắc ở mốc 1,51M PV/tháng trong T3 và T4.
   - Tỷ trọng Organic liên tục chiếm trên 50% tổng lưu lượng, xác lập vị thế là kênh tạo giá trị thực chất nhất của Web Platform.
 - **Paid Volatility & Discipline:** 
   - Chi tiêu Paid tăng liên tục từ 542K (T1) lên đỉnh 845K (T3) tập trung vào các chiến dịch khuyến mãi nạp game, quà tặng Tết và Ví Trả Sau.
   - Tháng 4 chủ động cắt giảm Paid 79% (từ 845K xuống 175K PV), đưa tỷ trọng Paid từ 26,3% về mức 6,5% an toàn.
 - **Direct & App Referral Expansion:** 
   - Kênh Direct tăng trưởng đột biến trong T4 (+71,7% vs T3, từ 326K lên 560K PV) nhờ sự mở rộng của các trang đích tải ứng dụng `/download` và nhận diện thương hiệu.
-  - Kênh Referral đạt đỉnh 455K PV trong T2 nhờ các hoạt động hợp tác chiến dịch Tết từ các trang vệ tinh và mạng xã hội.
+  - Kênh Referral chạm mức cao nhất 455K PV trong T2 nhờ các hoạt động hợp tác chiến dịch Tết từ các trang vệ tinh và mạng xã hội.
 
 ---
 
@@ -68,11 +68,11 @@ Tài liệu này lưu trữ báo cáo hiệu suất chi tiết giai đoạn 4 th
 #### 2. Financial Hub (Transformation Zone)
 - **Tổng lưu lượng:** Đạt **1.038.622 PV**, đóng góp **8,69%** tổng lưu lượng.
 - **Cấu trúc Sản phẩm:**
-  - `Ví Trả Sau (/vi-tra-sau)`: 715.970 PV (68,93% Hub). Đạt đỉnh 304K PV vào T2 nhờ các chiến dịch thúc đẩy chi tiêu Tết, sau đó điều chỉnh về 75K PV trong T4 do chuyển dịch ngân sách Paid.
+  - `Ví Trả Sau (/vi-tra-sau)`: 715.970 PV (68,93% Hub). Chạm mức cao nhất 304K PV vào T2 nhờ các chiến dịch thúc đẩy chi tiêu Tết, sau đó điều chỉnh về 75K PV trong T4 do chuyển dịch ngân sách Paid.
   - `Vay Nhanh (/vay-nhanh)`: 291.393 PV (28,06% Hub). Tăng trưởng liên tục từ 58K (T1) lên 95K (T4), khẳng định nhu cầu tự nhiên đối với sản phẩm tín dụng tiêu dùng.
   - `Tiện ích Tài chính & Đầu tư`: Điểm Tín Dụng, Túi Thần Tài, Chứng Chỉ Quỹ đóng góp 31.259 PV, chuẩn bị tiền đề cho các đợt mở rộng sản phẩm trong H2.
 
-### 3.1 Bảng Phân Rã Toàn Diện 55 Dự Án Chuẩn Hóa (Standard Projects Breakdown T1 - T4):
+### 3.1 Bảng Bóc Tách Toàn Diện 55 Dự Án Chuẩn Hóa (Standard Projects Breakdown T1 - T4):
 
 | Dự Án (Project) | T1 (Jan Full) | T2 (Feb Full) | T3 (Mar Full) | T4 (Apr Full) | Tổng Lũy Kế T1-T4 | Tỷ Trọng (%) |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -162,6 +162,6 @@ Tài liệu này lưu trữ báo cáo hiệu suất chi tiết giai đoạn 4 th
 1. **Hoàn Thiện Dữ Liệu Lịch Sử 10 Tháng:**
    - Việc phục hồi dữ liệu T1 - T4/2026 đã giải quyết khoảng trống trước khi BigQuery vận hành, tạo ra chuỗi dữ liệu lịch sử liền mạch 10 tháng đầu năm 2026.
 2. **Xác Lập Baseline Tăng Trưởng H1:**
-   - Mức nhịp bình quân 3,0M PV/tháng trong H1 là cơ sở chứng minh hiệu quả của chiến lược tái cấu trúc Web Platform trong H2/2026, khi lưu lượng bứt phá lên 3,46M (T8) và đạt đỉnh 3,95M (T9).
+   - Mức nhịp bình quân 3,0M PV/tháng trong H1 là cơ sở chứng minh hiệu quả của chiến lược tái cấu trúc Web Platform trong H2/2026, khi lưu lượng bứt phá lên 3,46M (T8) và chạm mức cao nhất 3,95M (T9).
 3. **Củng Cố Chiến Lược Organic-First:**
    - Dữ liệu 4 tháng đầu năm chứng minh rõ nét: khi Paid co hẹp mạnh trong T4 (giảm 79%), nền tảng Web vẫn duy trì được 2,69M PV nhờ kênh Organic ổn định ở mốc 1,51M PV. Điều này khẳng định đúng đắn nguyên tắc không phụ thuộc ngân sách đốt tiền mà tập trung vào năng lực tự vận hành và SEO/GEO bền vững.

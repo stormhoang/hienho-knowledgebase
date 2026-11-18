@@ -8,7 +8,16 @@ from collections import defaultdict
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(BASE_DIR))
-from scripts.build_full_funnel_matrix import get_ga4_access_token, build_theme_matcher, normalize_path, clean_dim_project, DATE_START, DATE_END
+try:
+    from scripts.build_full_funnel_matrix import get_ga4_access_token, build_theme_matcher, normalize_path
+except ImportError:
+    pass
+
+def clean_dim_project(name):
+    return (name or "").strip()
+
+DATE_START = "2026-10-01"
+DATE_END = "2026-10-31"
 
 def fetch_and_test():
     cache_file = BASE_DIR / "07_REPORTS" / "data" / "ga4_multichannel_cache.json"

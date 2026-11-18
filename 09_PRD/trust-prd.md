@@ -1,11 +1,11 @@
 # PRD: Website Report Scam - Landing Page & Anonymous Form
 
 > - **Use Case:** Báo Cáo Lừa Đảo (Trust - Report Scam)
-> - **Main URL:** momo.vn/report-scam
-> - **Division:** Risk & Security (GPD Web Platform)
-> - **Version:** 1.0 · Tháng 6/2026
-> - **Status:** [DRAFT] - Sẵn sàng cho phát triển (Tháng 7/2026 Release)
-> - **Doc Owner:** NGUYEN HUYNH THAI KHANG - RM
+> - **URL chính:** momo.vn/report-scam
+> - **Khối phụ trách:** Risk & Security (GPD Web Platform)
+> - **Phiên bản:** 1.0 · Tháng 6/2026
+> - **Trạng thái:** [DRAFT] - Sẵn sàng cho phát triển (Tháng 7/2026 Release)
+> - **Owner:** NGUYEN HUYNH THAI KHANG - RM
 
 ---
 

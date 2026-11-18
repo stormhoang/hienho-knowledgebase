@@ -1,11 +1,11 @@
 # TỔNG QUAN TÀI NGUYÊN TỪ KHÓA & TOPIC CLUSTERS WEB PLATFORM (SSOT INVENTORY V2)
 
 Dữ liệu được trích xuất, lọc nhiễu tự động và bảo vệ chống ăn thịt từ khóa (Cannibalization Shield) từ kho `05_HUBS/inventory/`.
-- **Tổng số Themes:** 161
-- **Tổng số từ khóa theo dõi:** 292,880
-- **Tổng số từ khóa trùng Intent được gom cụm (Shielded):** 138,637
-- **Tổng số từ khóa nhiễu bị loại bỏ:** 2,830
-- **Tổng dung lượng tìm kiếm thị trường:** 1,671,908,690 lượt/tháng
+- **Tổng số Themes:** 164
+- **Tổng số từ khóa theo dõi:** 293,081
+- **Tổng số từ khóa trùng Intent được gom cụm (Shielded):** 138,709
+- **Tổng số từ khóa nhiễu bị loại bỏ:** 2,849
+- **Tổng dung lượng tìm kiếm thị trường:** 1,671,796,580 lượt/tháng
 
 ---
 
@@ -13,18 +13,19 @@ Dữ liệu được trích xuất, lọc nhiễu tự động và bảo vệ ch
 
 | Hub | Số Lượng Themes | Từ Khóa Sạch | Từ Khóa Gom Chống Cannibalization | Dung Lượng Tìm Kiếm (Volume/Tháng) |
 | :--- | :---: | :---: | :---: | :---: |
-| Lottery | 3 | 8,243 | 4,022 | 1,457,059,610 |
+| Lottery | 3 | 8,292 | 4,038 | 1,457,376,030 |
 | Financial | 62 | 116,349 | 50,924 | 122,969,280 |
-| vehicle-hub | 33 | 74,112 | 39,658 | 35,630,100 |
+| vehicle-hub | 33 | 74,060 | 39,646 | 35,628,450 |
 | other | 5 | 18,970 | 8,813 | 15,905,250 |
 | Entertainment | 4 | 4,809 | 1,841 | 12,084,360 |
-| cinema | 5 | 5,883 | 2,707 | 7,278,550 |
+| cinema | 5 | 5,867 | 2,705 | 6,598,690 |
 | ota | 18 | 18,920 | 9,019 | 6,497,720 |
 | student | 9 | 8,950 | 4,033 | 4,659,000 |
 | hospital | 4 | 9,895 | 2,514 | 4,514,230 |
 | telco | 8 | 13,872 | 7,666 | 3,680,410 |
-| insurtech | 8 | 12,534 | 7,234 | 1,599,990 |
+| insurtech | 9 | 12,558 | 7,239 | 1,829,840 |
 | trust | 2 | 343 | 206 | 30,190 |
+| brand | 2 | 196 | 65 | 23,130 |
 
 ---
 
@@ -40,12 +41,12 @@ Dữ liệu được trích xuất, lọc nhiễu tự động và bảo vệ ch
 | 6 | Giá Dầu Hôm Nay | vehicle-hub | 2,499 | 1,280 | 10,557,370 | giá dầu hôm nay (404,420) | dự báo giá xăng dầu hôm nay |
 | 7 | Tỷ Giá Ngoại Tệ | Financial | 3,633 | 1,650 | 7,915,560 | tỷ giá vcb (454,790) | mua đô |
 | 8 | Nạp Thẻ Game | Entertainment | 3,846 | 1,598 | 7,507,250 | nạp thẻ garena (672,120) | nạp the garena |
-| 9 | Phim Chiếu Rạp Mới Nhất | cinema | 505 | 56 | 5,409,760 | phim (1,246,020) | phim xã hội đen |
+| 9 | Phim Chiếu Rạp Mới Nhất | cinema | 492 | 55 | 4,729,900 | phim (1,246,020) | phim xã hội đen |
 | 10 | Tra Cứu Mã Số Thuế | Financial | 3,946 | 2,571 | 3,879,740 | tra cứu mã số thuế (607,550) | đăng ký mã số thuế cá nhân |
 | 11 | Bệnh Viện & Phòng Khám | hospital | 3,316 | 969 | 3,596,670 | bệnh viện (251,560) | bác sĩ |
-| 12 | Bảng Giá Xe Ô Tô & Xe Máy | vehicle-hub | 2,450 | 803 | 3,278,100 | xe máy điện (201,000) | thuê xe máy |
+| 12 | Bảng Giá Xe Ô Tô & Xe Máy | vehicle-hub | 2,447 | 802 | 3,277,150 | xe máy điện (201,000) | thuê xe máy |
 | 13 | Ứng Dụng Game | Entertainment | 467 | 4 | 3,244,820 | game đế chế (1,600) | rise of kingdoms |
-| 14 | Vietlott Mega & Power | Lottery | 1,227 | 376 | 2,775,630 | vietlott (550,800) | power 6 55 |
+| 14 | Vietlott Mega & Power | Lottery | 1,276 | 392 | 3,092,050 | vietlott (550,800) | power 6 55 |
 | 15 | Chứng Khoán | Financial | 2,094 | 876 | 2,656,060 | bảng giá chứng khoán (225,490) | vcbs bảng giá |
 | 16 | Tử Vi Hàng Ngày & Trọn Đời | other | 4,455 | 2,622 | 2,642,650 | tử vi (203,140) | tử vi 12 con giáp |
 | 17 | Đại Học & Trường Đại Học | student | 907 | 311 | 2,288,060 | trường đại học (67,850) | đăng ký nguyện vọng đại học |

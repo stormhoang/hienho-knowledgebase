@@ -37,7 +37,7 @@ Mọi tệp Content Plan lưu tại `06_USE_CASE_MOMO/content-plans/<sector>/<id
 Bảng quy hoạch 1 Pillar Hub Page + 3-5 Cluster Pages gồm 11 cột chuẩn:
 `STT` | `URL Slug` | `Tiêu Đề Bài Viết / Trang Đích` | `Primary Keyword` | `Secondary Synonyms (Đã Gom Chống Ăn Thịt)` | `Search Volume` | `Search Intent` | `Định Dạng Nội Dung` | `Phễu` | `Ưu Tiên` | `Điểm Chạm Web-to-App (CTA Hook)`
 
-### Khối 2: Ma Trận Phân Bổ Intent & Phễu Chuyển Đổi
+### Khối 2: Bảng Phân Bổ Intent & Phễu Chuyển Đổi
 Bảng thống kê tỷ lệ phần trăm phân bổ theo Intent (`Informational`, `Commercial`, `Transactional`, `Tool/Calculator`, `Navigational`) và Phễu chuyển đổi (`TOFU`, `MOFU`, `BOFU`) gắn với JTBD của người dùng.
 
 ### Khối 3: Chiến Lược Điều Hướng & Trải Nghiệm Người Dùng (UX Flow)
@@ -78,9 +78,9 @@ Mã nguồn JSON-LD hoàn chỉnh sẵn sàng để `Web Dev` copy vào code:
 
 | Giai Đoạn | Khung Thời Gian | Trọng Tâm Sản Xuất | Tiêu Chí Lựa Chọn Từ Khóa | Mục Tiêu Kinh Doanh |
 | :--- | :---: | :--- | :--- | :--- |
-| **Giai Đoạn 1** | Ngày 1 – 30 | **100% Quick Wins P0** | Search Volume $\ge 1.500$, Mức độ Cạnh tranh Low. Trích xuất từ `07_REPORTS/QUICK_WINS_PORTFOLIO.md`. | Kéo Organic Clicks và New User tăng trưởng ngay trong tháng đầu tiên với chi phí thấp nhất. |
-| **Giai Đoạn 2** | Ngày 31 – 60 | **Master Pillars & BOFU Converters** | Các trang Cột trụ ngành và trang Công cụ / Tra cứu (Intent: `Tool/Calculator` & `Transactional`). | Xây dựng Thẩm quyền chủ đề (Topical Authority) và đẩy mạnh tỷ lệ chuyển đổi Web-to-App. |
-| **Giai Đoạn 3** | Ngày 61 – 90 | **Supporting Spokes & Long-tail Expansion** | Các bài viết giải đáp chi tiết, hướng dẫn thủ tục và câu hỏi thường gặp (Intent: `Informational`). | Phủ kín mạng lưới Semantic Silo, dẫn truyền PageRank bền vững và triệt tiêu 100% khoảng trống nội dung. |
+| **Giai Đoạn 1** | Ngày 1-30 | **100% Quick Wins (Đợt 1)** | Search Volume $\ge 1.500$, Mức độ Cạnh tranh Low. Trích xuất từ `07_REPORTS/QUICK_WINS_PORTFOLIO.md`. | Kéo Organic Clicks và New User tăng trưởng ngay trong tháng đầu tiên với chi phí thấp nhất. |
+| **Giai Đoạn 2** | Ngày 31-60 | **Master Pillars & BOFU Converters** | Các trang Cột trụ ngành và trang Công cụ / Tra cứu (Intent: `Tool/Calculator` & `Transactional`). | Xây dựng Thẩm quyền chủ đề (Topical Authority) và đẩy mạnh tỷ lệ chuyển đổi Web-to-App. |
+| **Giai Đoạn 3** | Ngày 61-90 | **Supporting Spokes & Long-tail Expansion** | Các bài viết giải đáp chi tiết, hướng dẫn thủ tục và câu hỏi thường gặp (Intent: `Informational`). | Phủ kín mạng lưới Semantic Silo, dẫn truyền PageRank bền vững và triệt tiêu 100% khoảng trống nội dung. |
 
 ---
 
@@ -88,30 +88,30 @@ Mã nguồn JSON-LD hoàn chỉnh sẵn sàng để `Web Dev` copy vào code:
 
 ### 1. Sinh Content Plan cho một Use Case cụ thể:
 ```bash
-python3 scripts/generate_content_plan.py <slug_use_case>
-# Ví dụ: python3 scripts/generate_content_plan.py gui-tiet-kiem
+./.venv/bin/python scripts/generate_content_plan.py <slug_use_case>
+# Ví dụ: ./.venv/bin/python scripts/generate_content_plan.py gui-tiet-kiem
 ```
 
-### 2. Sinh Content Plan hàng loạt cho toàn bộ một Phân khối Ngành:
+### 2. Sinh Content Plan hàng loạt cho toàn bộ một Khối Ngành:
 ```bash
-python3 scripts/generate_content_plan.py --sector <tên_ngành>
-# Ví dụ: python3 scripts/generate_content_plan.py --sector Financial
-# Ví dụ: python3 scripts/generate_content_plan.py --sector insurtech
+./.venv/bin/python scripts/generate_content_plan.py --sector <tên_ngành>
+# Ví dụ: ./.venv/bin/python scripts/generate_content_plan.py --sector Financial
+# Ví dụ: ./.venv/bin/python scripts/generate_content_plan.py --sector insurtech
 ```
 
 ### 3. Sinh Content Plan toàn diện cho 188 Use Cases & Cập nhật Mục lục:
 ```bash
-python3 scripts/generate_content_plan.py --all
+./.venv/bin/python scripts/generate_content_plan.py --all
 ```
 *Lưu ý: Lệnh này sẽ tự động cập nhật tệp mục lục trung tâm tại `06_USE_CASE_MOMO/content-plans/INDEX.md`.*
 
 ### 4. Đồng bộ dữ liệu sang Web Platform Hubs:
 ```bash
-python3 scripts/sync_inventory_to_hubs.py
+./.venv/bin/python scripts/sync_inventory_to_hubs.py
 ```
 
-### 5. Kiểm thử toàn vẹn hệ thống (Audit Test Suite):
+### 5. Test toàn vẹn hệ thống (Audit Test Suite):
 ```bash
-python3 scripts/validate_seo_pipeline.py
+./.venv/bin/python scripts/validate_seo_pipeline.py
 ```
 *Yêu cầu bắt buộc: Đạt 100% PASS trước khi bàn giao bản kế hoạch cho các đội ngũ chuyên môn.*

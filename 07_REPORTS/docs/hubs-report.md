@@ -72,10 +72,10 @@ Từng bước quy đổi các mục tiêu riêng lẻ về 3 tầng chỉ số 
 
 #### 3. Quy Trình Phối Hợp (Engagement Model 4 Bước)
 
-* **Bước 1 — Tiếp nhận Đề bài (BU Context):** BU cung cấp bối cảnh kinh doanh (Business Context), nhu cầu Use Case và chỉ số mục tiêu App (**Business Metrics: MEU, MAU, Transactions, Revenue**).
-* **Bước 2 — Thống nhất Giải pháp & Chỉ số Web (Web Alignment):** Web Platform thiết kế hạ tầng PLG Web Hub, định hình cấu trúc URL và thống nhất chỉ số Kênh Web (**Web Metrics: MPV, CTR**).
-* **Bước 3 — Triển khai & Vận hành Nội dung (Build & Content Production):** Web Platform xây dựng hạ tầng/UI MoBase và sản xuất bài viết pSEO/GEO qua MoSpark GenAI. BU/Cell Team duyệt bài và chủ động xuất bản chiến dịch.
-* **Bước 4 — Đo lường & Báo cáo ROI (Tracking & Attribution):** Hệ thống Umami Analytics & Edge Cookie tự động ghi nhận luồng chuyển đổi Web-to-App, đồng bộ dữ liệu về BigQuery phục vụ báo cáo Ban Giám Đốc.
+* **Bước 1 - Tiếp nhận Đề bài (BU Context):** BU cung cấp bối cảnh kinh doanh (Business Context), nhu cầu Use Case và chỉ số mục tiêu App (**Business Metrics: MEU, MAU, Transactions, Revenue**).
+* **Bước 2 - Thống nhất Giải pháp & Chỉ số Web (Web Alignment):** Web Platform thiết kế hạ tầng PLG Web Hub, định hình cấu trúc URL và thống nhất chỉ số Kênh Web (**Web Metrics: MPV, CTR**).
+* **Bước 3 - Triển khai & Vận hành Nội dung (Build & Content Production):** Web Platform xây dựng hạ tầng/UI MoBase và sản xuất bài viết pSEO/GEO qua MoSpark GenAI. BU/Cell Team duyệt bài và chủ động xuất bản chiến dịch.
+* **Bước 4 - Đo lường & Báo cáo ROI (Tracking & Attribution):** Hệ thống Umami Analytics & Edge Cookie tự động ghi nhận luồng chuyển đổi Web-to-App, đồng bộ dữ liệu về BigQuery phục vụ báo cáo Ban Giám Đốc.
 
 #### 4. Kế Hoạch Đánh Giá Q3 Review & Thực Thi Q4 Execution
 
@@ -229,7 +229,7 @@ graph TD
   * `Verified Students/month`: ~11.667 Sinh viên xác thực mới/tháng *(70.000 Verified Students Q3 - Q4)*
 
 #### 3. Cross-team Collaboration & Support Needed
-* **MDS / Student Pass BU:** Đồng hành chủ trì chương trình Student Pass Ambassador, cung cấp nội dung diễn giả cho Student Pass Webinar và duyệt thông tin ưu đãi đối tác giáo dục.
+* **MDS / Student Pass BU:** Đồng hành điều phối chương trình Student Pass Ambassador, cung cấp nội dung diễn giả cho Student Pass Webinar và duyệt thông tin ưu đãi đối tác giáo dục.
 
 #### 4. Priorities & Action Items (Kế Hoạch & Tiến Độ Thực Thi)
 * **Cung cấp Công cụ Self-Serve Trang School Detail:** Đã bàn giao công cụ tự phục vụ (Self-serve / Page Builder) cho Cell Team (S-Hub BU) chủ động quản lý, chỉnh sửa và vận hành trang **School Detail** (Chi tiết Trường Đại Học / Ratings) không phụ thuộc Dev.
@@ -294,7 +294,7 @@ graph TD
 
 ## 5. CHUẨN HÓA BẢNG CHỈ SỐ ĐO LƯỜNG (METRIC TAXONOMY)
 
-Hiệu suất Kênh Web và tác động chuyển đổi sang App được đo lường hoàn toàn theo số tuyệt đối (Absolute Numbers) và phân rã thành 2 tầng rõ ràng:
+Hiệu suất Kênh Web và tác động chuyển đổi sang App được đo lường hoàn toàn theo số tuyệt đối (Absolute Numbers) và bóc tách thành 2 tầng rõ ràng:
 
 * **Kênh Web (Web Platform Metrics):**
   * `Total Traffic (PageViews)`: Tổng lưu lượng truy cập xem trang trên Web.

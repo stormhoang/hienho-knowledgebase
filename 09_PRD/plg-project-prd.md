@@ -3,11 +3,11 @@
 *Yêu cầu Cell Team điền đầy đủ thông tin cốt lõi dưới đây và gửi cho Web Platform Team trước khi triển khai.*
 
 ## 📋 THÔNG TIN CHUNG (Metadata)
-> *   **Tên dự án / Sản phẩm (PRODUCT NAME):** Nền tảng Điều phối Chiến lược Nội dung MoSpark (MoSpark - PLG Project Platform)
-> *   **Đầu mối Cell Team (PO & Tech Lead):** Trọng (Technical Owner) · Hiến HV (Product Lead)
-> *   **Web Product Lead (Duyệt dự án):** Hien.ho
-> *   **Trạng thái tài liệu (Document status):** DRAFT
-> *   **Tiến độ dự kiến:** Go-Live Q4/2026
+> *   **Dự án:** Nền tảng Điều phối Chiến lược Nội dung MoSpark (MoSpark - PLG Project Platform)
+> *   **Đội ngũ triển khai:** Trọng (Technical Owner) · Hiến HV (Product Lead)
+> *   **Phê duyệt:** Hien.ho
+> *   **Trạng thái:** DRAFT
+> *   **Tiến độ:** Go-Live Q4/2026
 > *   **Loại yêu cầu:** [x] Tính năng mới | [ ] Cải tiến/Thay đổi cấu trúc
 
 ## I. TÀI LIỆU LIÊN QUAN (References)

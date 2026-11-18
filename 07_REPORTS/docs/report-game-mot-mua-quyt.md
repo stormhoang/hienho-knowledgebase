@@ -1,6 +1,6 @@
 # BÁO CÁO ĐÁNH GIÁ HIỆU SUẤT GAME "MỘT MÙA QUÝT" TRÊN WEB PLATFORM
 > **URL:** `momo.vn/game/mot-mua-quyt` | **Loại hình:** Gamification / Interactive Financial Quiz  
-> **Thời gian đo lường:** 15/10/2026 – 25/10/2026 (11 ngày vận hành)  
+> **Thời gian đo lường:** 15/10/2026-25/10/2026 (11 ngày vận hành)  
 > **Nguồn dữ liệu:** GA4 Data API (Property 270743103) & Hệ thống Tracking Web Platform  
 
 ---
@@ -9,7 +9,7 @@
 
 - **Quy mô Lưu lượng:** Đạt **35,551 Pageviews**, **32,675 Sessions** và **27,766 Users**, vươn lên thành **Top 4 Landing Page lớn nhất toàn Website** trong Tháng 10/2026.
 - **Thời gian Tương tác Tích lũy:** Người dùng đã dành tổng cộng **299.2 giờ** (tương đương hơn 12 ngày liên tục) để trải nghiệm trò chơi trên Web MoMo.
-- **Thời gian Onsite Trung bình:** Đạt **64.6 – 66.0 giây/người dùng** đối với tệp người dùng thực chất (Google, Facebook, Direct). Mức độ gắn kết này cao gấp 2.5 lần mức trung bình của các bài viết nội dung hoặc trang giới thiệu dịch vụ thông thường trên Web.
+- **Thời gian Onsite Trung bình:** Đạt **64.6-66.0 giây/người dùng** đối với tệp người dùng thực chất (Google, Facebook, Direct). Mức độ gắn kết này cao gấp 2.5 lần mức trung bình của các bài viết nội dung hoặc trang giới thiệu dịch vụ thông thường trên Web.
 - **Tỷ lệ Hoàn thành Trò chơi:** Ghi nhận **7,097 người dùng thực tế hoàn tất lượt chơi** (`gmc_1vuquyt_clickplay`), chiếm **25.1%** trên tổng lượng khách truy cập (và đạt **40.6%** nếu loại trừ tệp traffic rác từ TikTok Ads).
 - **Chuyển đổi Web-to-App:** Ghi nhận **1,230 người dùng duy nhất** (với **3,594 lượt click**) bấm vào nút CTA OneLink để cài đặt/mở App MoMo, tương ứng tỷ lệ chuyển đổi **17.3% trên tổng số người chơi game**.
 
@@ -19,10 +19,10 @@
 
 ### 2.1. Khung giờ "Hái Quýt" Cao điểm trong Ngày
 Phân tích 32,675 phiên truy cập theo 24 khung giờ cho thấy người dùng tập trung vào 3 nhịp sinh hoạt rõ rệt:
-- **Đỉnh giờ nghỉ trưa (10:00 – 12:00):** Đạt trung bình **2,030 sessions/giờ**. Đây là thời điểm dân văn phòng tranh thủ giải trí ngắn trong giờ nghỉ trưa.
-- **Đỉnh tan tầm chiều (16:00 – 17:00):** Là khung giờ có lượng truy cập **cao nhất trong ngày**, đạt **2,180 sessions/giờ** (tổng hơn 4,330 phiên trong 2 tiếng cuối buổi làm việc).
-- **Đỉnh thư giãn tối (21:00 – 22:00):** Đạt **1,520 sessions/giờ**, người dùng chơi game trước khi ngủ.
-- **Khung giờ thấp điểm nhất:** 02:00 – 04:00 sáng (dưới 350 sessions/giờ).
+- **Đỉnh giờ nghỉ trưa (10:00-12:00):** Đạt trung bình **2,030 sessions/giờ**. Đây là thời điểm dân văn phòng tranh thủ giải trí ngắn trong giờ nghỉ trưa.
+- **Đỉnh tan tầm chiều (16:00-17:00):** Là khung giờ có lượng truy cập **cao nhất trong ngày**, đạt **2,180 sessions/giờ** (tổng hơn 4,330 phiên trong 2 tiếng cuối buổi làm việc).
+- **Đỉnh thư giãn tối (21:00-22:00):** Đạt **1,520 sessions/giờ**, người dùng chơi game trước khi ngủ.
+- **Khung giờ thấp điểm nhất:** 02:00-04:00 sáng (dưới 350 sessions/giờ).
 
 ### 2.2. Cơ cấu Thiết bị và Hệ điều hành
 - **Mobile chiếm ưu thế áp đảo:** **96.6%** lượng truy cập đến từ điện thoại di động (Mobile). Desktop chỉ chiếm 3.4% (chủ yếu là Windows văn phòng).
@@ -33,16 +33,16 @@ Phân tích 32,675 phiên truy cập theo 24 khung giờ cho thấy người dù
 
 ### 2.3. Bản đồ Địa lý Người Chơi
 - **Top 5 Đô thị lớn chiếm 84% lượng người dùng xác định:**
-  1. TP. Hồ Chí Minh: 6,976 sessions (5,760 users) – Chiếm 35.8%.
-  2. Hà Nội: 5,757 sessions (5,025 users) – Chiếm 29.5%.
-  3. Đà Nẵng: 2,227 sessions (1,966 users) – Chiếm 11.4%.
-  4. Cần Thơ: 1,313 sessions (1,162 users) – Chiếm 6.7%.
-  5. Hải Phòng: 1,011 sessions (920 users) – Chiếm 5.2%.
+  1. TP. Hồ Chí Minh: 6,976 sessions (5,760 users) - Chiếm 35.8%.
+  2. Hà Nội: 5,757 sessions (5,025 users) - Chiếm 29.5%.
+  3. Đà Nẵng: 2,227 sessions (1,966 users) - Chiếm 11.4%.
+  4. Cần Thơ: 1,313 sessions (1,162 users) - Chiếm 6.7%.
+  5. Hải Phòng: 1,011 sessions (920 users) - Chiếm 5.2%.
 - **Sức lan tỏa tỉnh thành:** Ghi nhận người dùng từ Huế (276 sessions), Phú Quốc (150 sessions), Rạch Giá (135 sessions).
 
 ### 2.4. Nghịch lý Chất lượng Kênh: Facebook vs. Google vs. TikTok
 Dữ liệu bóc tách hành vi làm sáng tỏ sự khác biệt một trời một vực giữa các kênh media:
-- **Facebook CPC (Chất lượng đỉnh cao):** Người dùng onsite trung bình **66.0 giây**, tỷ lệ chơi đạt **46.5%**, và có tới **18.4% người dùng bấm cài đặt App MoMo** (cứ 5 người vào trang thì có gần 1 người cài app).
+- **Facebook CPC (Chất lượng hiệu suất cao nhất):** Người dùng onsite trung bình **66.0 giây**, tỷ lệ chơi đạt **46.5%**, và có tới **18.4% người dùng bấm cài đặt App MoMo** (cứ 5 người vào trang thì có gần 1 người cài app).
 - **Google CPC (Quy mô vững chắc):** Đóng góp hơn 11,800 users, thời gian onsite **64.6 giây**, tỷ lệ chơi **39.5%**, đóng góp 66% tổng lượng người chơi toàn chiến dịch.
 - **TikTok CPC (Lãng phí nghiêm trọng):** Đốt ngân sách kéo về 11,091 users nhưng thời gian onsite trung bình **CHỈ 0.6 GIÂY**, tỷ lệ thoát lên tới **74.7%**, và chỉ có vỏn vẹn **99 người chơi (0.89%)** và **9 người bấm cài đặt (0.08%)**. Đây là tệp người dùng chạm nhầm hoặc thoát ngay lập tức khi trang vừa tải.
 
@@ -104,7 +104,7 @@ Bản đặc tả để đội ngũ Web React Hub (`react-web-momo`) triển kha
    - Trục tung: Tỷ lệ Chuyển đổi Cài App (%).
    - Làm nổi bật 3 bong bóng: Facebook (66s - 18.4%), Google (64.6s - 4.7%), TikTok (0.6s - 0.08%).
 4. **Chart 3: Bản đồ Nhiệt Hoạt động theo Giờ (Hourly Heatmap / Area Chart):**
-   - Hiển thị 24 cột giờ với 2 đỉnh nhô cao: 10:00 – 12:00 (nghỉ trưa) và 16:00 – 17:00 (tan tầm).
+   - Hiển thị 24 cột giờ với 2 đỉnh nhô cao: 10:00-12:00 (nghỉ trưa) và 16:00-17:00 (tan tầm).
 5. **Section 8 Hệ Quýt Tài Chính (Persona Cards Grid):**
    - Hiển thị 8 thẻ tương ứng với 8 loại Quýt: Múi Đều, Chua Thanh, Vỏ Dày, Mọng Nước, Bóc Từng Múi, Dễ Tách Múi, Chín Đúng Mùa, Đón Nắng Sớm.
    - Thẻ hiển thị: Tên hệ Quýt, Trụ cột tài chính đại diện (`SPENDING`, `SAVING`, `CREDIT`, `INVESTMENT`), Tư duy (`PROTECT` vs `EXPLORE`) và Sản phẩm MoMo đề xuất đi kèm.
@@ -148,7 +148,7 @@ Bản đặc tả để đội ngũ Web React Hub (`react-web-momo`) triển kha
   ],
   "hourly_peaks": [
     { "hour": "10:00 - 12:00", "name": "Nghỉ trưa văn phòng", "avg_sessions_per_hour": 2030, "share_pct": 18.5 },
-    { "hour": "16:00 - 17:00", "name": "Tan tầm chiều (Đỉnh cao nhất)", "avg_sessions_per_hour": 2180, "share_pct": 20.1 },
+    { "hour": "16:00 - 17:00", "name": "Tan tầm chiều (Hiệu suất cao nhất nhất)", "avg_sessions_per_hour": 2180, "share_pct": 20.1 },
     { "hour": "21:00 - 22:00", "name": "Thư giãn đêm", "avg_sessions_per_hour": 1520, "share_pct": 14.2 }
   ],
   "hourly_sessions": [
@@ -184,13 +184,13 @@ Bản đặc tả để đội ngũ Web React Hub (`react-web-momo`) triển kha
 > **Lưu ý phương pháp:** Khảo sát thử nghiệm nhanh được thực hiện trên cỡ mẫu **12 người dùng** ($n = 12$). Dữ liệu nhằm mục đích định hướng cải tiến trải nghiệm người dùng (UX/UI) và tinh chỉnh nội dung, không mang ý nghĩa đại diện thống kê diện rộng.
 
 ### 7.1. Điểm số Thang đo Trải nghiệm (SUS Score)
-- **Điểm SUS Trung bình:** **73.1 / 100 điểm** — Đạt mức **Tốt (Good / Grade B)** theo thang chuẩn System Usability Scale (mức trung bình ngành benchmark là 68.0 điểm).
+- **Điểm SUS Trung bình:** **73.1 / 100 điểm** - Đạt mức **Tốt (Good / Grade B)** theo thang chuẩn System Usability Scale (mức trung bình ngành benchmark là 68.0 điểm).
 - **Đánh giá Nội dung (Content & Tone of Voice):** Điểm trung bình **8.2 / 10**. Người dùng đánh giá cao giọng văn dí dỏm, thông điệp tích cực, các câu hỏi tài chính được lồng ghép tự nhiên không gây cảm giác nặng nề hay phán xét.
 - **Đánh giá Trang Kết Quả (Result Screen):** Điểm trung bình **7.8 / 10**. Thẻ hệ Quýt được đón nhận tốt về mặt thị giác, tính cách miêu tả trúng tâm lý, tuy nhiên phần điều hướng chuyển tiếp sang sản phẩm tài chính trên App cần trực diện và rõ ràng hơn.
 
 ### 7.2. Nhận định Chung về Trải nghiệm Người Dùng
 - **Điểm chạm mượt mà:** Luồng chơi liền mạch từ câu hỏi 1 đến câu hỏi 5, không gặp gián đoạn kỹ thuật hay lỗi hiển thị trên các dòng máy iPhone và Android phổ biến.
-- **Rào cản hành động cuối phễu:** Người dùng thích thú đọc mô tả tính cách tài chính của hệ Quýt, nhưng động lực bấm nút mở App MoMo còn phụ thuộc nhiều vào độ hấp dẫn của gói voucher/quà tặng đi kèm.
+- **Rào cản hành động cuối phễu:** Người dùng thích thú đọc mô tả tính cách tài chính của hệ Quýt, nhưng động lực nhấp vào nút mở App MoMo còn phụ thuộc nhiều vào độ hấp dẫn của gói voucher/quà tặng đi kèm.
 
 ### 7.3. Ba Đề xuất Cải tiến từ Đội ngũ User Growth
 1. **Cá nhân hóa quà tặng theo hệ Quýt:** Thay vì nút CTA chung chung, hiển thị trực tiếp gói quà tặng riêng tương ứng với từng hệ Quýt (ví dụ: Hệ Múi Đều nhận voucher Túi Thần Tài, Hệ Đón Nắng Sớm nhận ưu đãi Chứng chỉ quỹ).

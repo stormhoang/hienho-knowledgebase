@@ -1,0 +1,23 @@
+{
+  "reviewed_at": "2026-11-07",
+  "mode": "observe",
+  "retirement_decision": {
+    "status": "accepted_by_user",
+    "scope": "Four documents confirmed deleted in Git history",
+    "active_references_removed": true,
+    "restore_as_current": false,
+    "note": "Historical recovery pointers below are for audit only; earlier suggested recovery actions are superseded by this decision."
+  },
+  "method": "git log --all --name-status restricted to missing source paths in current repository",
+  "items": [
+    {"path": "Member/trong.md", "status": "deleted_in_history", "deletion_commit": "2256b68", "recovery_source": "2256b68^:Member/trong.md", "action": "Preserve deletion; historical OKRs must not be restored as current without review"},
+    {"path": "07_REPORTS/sheets/web_performance_tracking_framework.xlsx", "status": "deleted_in_history", "deletion_commit": "5e79af8", "recovery_source": "5e79af8^:07_REPORTS/sheets/web_performance_tracking_framework.xlsx", "action": "Preserve deletion; recover only as historical artifact if required"},
+    {"path": "03_SKILLS/momo-blog-prompt-1-outline.md", "status": "deleted_in_history", "deletion_commit": "9cdb964", "recovery_source": "9cdb964^:03_SKILLS/momo-blog-prompt-1-outline.md", "action": "Review historical prompt against current content skills before reactivation"},
+    {"path": "03_SKILLS/momo-merchant-page-prompt.md", "status": "deleted_in_history", "deletion_commit": "9cdb964", "recovery_source": "9cdb964^:03_SKILLS/momo-merchant-page-prompt.md", "action": "Review historical prompt against current content skills before reactivation"},
+    {"path": "05_HUBS/vehicle-hub-navigation.md", "status": "no_exact_path_history_found", "action": "Keep historical changelog; do not invent replacement document"}
+  ],
+  "code_paths": [
+    {"reference": "07_REPORTS/data/gsc_cannibalization_matrix.json", "actual_output": "07_REPORTS/data/cache/gsc_cannibalization_matrix.json", "evidence": "scripts/cron_gsc_cannibalization.py:178-195", "status": "documentation_path_drift"},
+    {"reference": "07_REPORTS/data/gsc_keyword_ranking.json", "evidence": "scripts/cron_gsc_keyword_ranking.py:206-219 writes generated ranking report", "status": "generated_output_requires_path_review"}
+  ]
+}

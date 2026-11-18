@@ -15,7 +15,7 @@ Kích hoạt khi người dùng gõ `/sync-all`, `/sync` hoặc đưa ra các y�
 
 Khi nhận lệnh, AI Agent tự động thực thi script điều phối Master:
 ```bash
-python3 scripts/sync_all_data.py
+./.venv/bin/python scripts/sync_all_data.py
 ```
 
 ### Các Luồng Dữ Liệu Được Đồng Bộ:
@@ -46,5 +46,9 @@ python3 scripts/sync_all_data.py
 Sau khi script hoàn thành, trình bày bảng tóm tắt kết quả chuẩn Tech Lead / Product Lead:
 - **Bảng trạng thái các luồng:** `Tên luồng` | `Trạng thái` | `Thời gian thực thi`.
 - **Chỉ số hiệu suất Kênh Web:** Actual MTD PVs, % Target, Run-rate Forecast.
+- **Bảng kênh truy cập (bắt buộc tách Non-Paid / Paid khi trình bày):** Pipeline sync vẫn đồng bộ toàn bộ dữ liệu thô (mọi tổ hợp `sessionDefaultChannelGroup x sessionSource`) sang SSOT và Hub, không lọc bớt. Riêng phần trình bày kết quả cho người dùng phải tách đúng cấu trúc:
+  - `Non-Paid` gồm đúng 4 kênh con: `Organic` (Organic Search, trừ nguồn AI) | `Direct` | `AI Traffic (GEO)` (mọi phiên có `sessionSource` khớp ChatGPT/OpenAI, Gemini, Perplexity, Claude, Copilot, DeepSeek, Grok, Meta AI, bất kể channel GA4, cộng kênh `AI Assistant`) | `Referral` (Referral, Unassigned, Organic Social, Organic Video, Organic Shopping, Email và mọi `sessionSource` bắt đầu bằng `in_app`).
+  - `Paid Ads` gồm Paid Search, Paid Social, Paid Other, Paid Video, Paid Shopping, Display và `Cross-network` (Performance Max). Tuyệt đối không để Cross-network rơi vào Non-Paid.
+  - Bảng có các cột: kỳ hiện tại, kỳ so sánh cùng kỳ, MoM, tỷ trọng; dòng tổng `Non-Paid`, `Paid Ads`, `Toàn Kênh Web` in đậm, 4 kênh con thụt dòng dưới Non-Paid. Tổng các dòng phải khớp tổng GA4.
 - **Chỉ số Traffic AI & Trải nghiệm:** Tổng AI Sessions, Top URL nhận traffic AI, Kênh AI phát hiện.
 - **Quy chuẩn văn phong:** **KHÔNG dùng Emoji/Icon**, **KHÔNG nêu tên riêng cá nhân**, sử dụng **Markdown Tables** và gạch đầu dòng phân tích trực diện.

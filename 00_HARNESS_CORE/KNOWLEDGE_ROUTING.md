@@ -2,6 +2,10 @@
 
 Tài liệu định nghĩa kiến trúc **Tầng Knowledge (Knowledge Layer)** của hệ thống codebase. Thay vì chỉ phân loại câu hỏi (Prompt classification) bề nổi, Tầng Knowledge vận hành như một bộ máy định tuyến tri thức đa lớp (Multi-layer Knowledge Routing Pipeline) để đảm bảo mọi vấn đề người đặt ra đều nhận được **Câu trả lời Tối ưu (Optimal Answer)** chuẩn xác, trung thực và sát bối cảnh kinh doanh.
 
+## Registry tương thích đa Agent
+
+`knowledge_registry.yaml` là lớp metadata bổ sung cho Claude, Antigravity và các Agent khác. Registry không thay thế tài liệu gốc, không khóa quyền đọc trực tiếp và đang vận hành ở chế độ `observe`. Validator tương ứng là `scripts/validate_knowledge_registry.py`; manifest chỉ đọc có thể xuất bằng `scripts/export_agent_context.py`.
+
 ---
 
 ## 1. KHUNG KIẾN TRÚC 5 TẦNG KNOWLEDGE (5-LAYER KNOWLEDGE PIPELINE)
@@ -38,10 +42,15 @@ Tài liệu định nghĩa kiến trúc **Tầng Knowledge (Knowledge Layer)** c
 
 ## 2. QUY TRÌNH VẬN HÀNH CHI TIẾT TỪNG TẦNG KNOWLEDGE
 
+### Agent Execution Contract
+
+Sau khi định tuyến tri thức, Agent phải tra `AGENT_CAPABILITIES.yaml` để chọn đúng entrypoint và kiểm tra thuộc tính `read_only`, `requires_approval`, `external_write`. Mọi thao tác ghi tuân thủ `AGENT_SAFETY_CONTRACT.yaml`. Kết quả trả về theo `AGENT_OUTPUT_CONTRACT.md`.
+
 ### Tầng 1: Context Memory Layer (Tầng Bối Cảnh Lịch Sử & Chỉ Đạo - Kích Hoạt Có Điều Kiện)
 Chỉ kích hoạt khi thực hiện bài toán Chiến lược cấp cao, Viết báo cáo Lãnh đạo hoặc Lập PRD mới. Đối với các tác vụ kỹ thuật, code review, tra cứu nhanh, Agent bỏ qua Tầng 1 và đi thẳng vào Tầng 3 (SSOT Domain):
 - [`MEETING_RECAPS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/MEETING_RECAPS.md): Chỉ đạo chiến lược của Ban Giám đốc (chỉ đọc mục gần nhất liên quan đến chủ đề).
-- [`07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md): Memory SSOT Hiệu suất — dữ liệu Performance thực tế, Run-rate Target và phân rã Kênh/Hubs.
+- [`07_REPORTS/docs/PERFORMANCE_SNAPSHOT_LATEST.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/PERFORMANCE_SNAPSHOT_LATEST.md): SSOT số liệu kỳ hiện tại (MTD, Run-rate Target, cơ cấu Kênh/Hubs). Kiểm tra `Data As Of` trong [`00_HARNESS_CORE/knowledge_freshness.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/00_HARNESS_CORE/knowledge_freshness.md) trước khi dùng.
+- [`07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md): Số liệu lịch sử các tháng đã đóng, không dùng cho kỳ hiện tại.
 - [`08_DECISION_LOG/decision_log.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/08_DECISION_LOG/decision_log.md): Nhật ký các quyết định kiến trúc và nghiệp vụ đã chốt.
 - [`00_HARNESS_CORE/hienho_master_doc.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/00_HARNESS_CORE/hienho_master_doc.md): Tổng quan toàn bộ hệ thống Web Platform & MoSpark (chỉ tham chiếu khi cần đối soát kiến trúc tổng thể).
 
@@ -58,11 +67,11 @@ Phân tích vấn đề người dùng đặt ra theo 3 góc nhìn quản trị:
 - **Các cụm Hubs:** Thư mục [`05_HUBS/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS).
 - **Dataset Từ Khóa & SEO Inventory Gốc (Use Case Inventory):** Thư mục SSOT [`05_HUBS/inventory/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS/inventory/) (kho dữ liệu CSV nguyên bản bóc tách từng từ khóa và search volume cho Financial, vehicle-hub, insurtech, ota, telco, hospital, Lottery, trust...).
 - **Các Use Case BRD:** Thư mục [`06_USE_CASE_MOMO/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/06_USE_CASE_MOMO).
-- **Báo cáo & Số liệu thực tế:** Thư mục [`07_REPORTS/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS) và file SSOT [`07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md).
+- **Báo cáo & Số liệu thực tế:** Thư mục [`07_REPORTS/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS) với SSOT kỳ hiện tại [`07_REPORTS/docs/PERFORMANCE_SNAPSHOT_LATEST.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/PERFORMANCE_SNAPSHOT_LATEST.md) và số lịch sử [`07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md).
 - **Đặc tả PRD:** Thư mục [`09_PRD/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/09_PRD).
 - **Tư duy & Triết lý Lãnh đạo:** File [`10_LEADERSHIP_MINDSET/leadership-mindset.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/10_LEADERSHIP_MINDSET/leadership-mindset.md).
 - **Tin tức & Thị trường (Gemini Spark):** Thư mục [`11_NEWS_FEED/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/11_NEWS_FEED).
-- **Quản lý Đầu việc & Tasklist Dự án:** Thư mục [`12_TASK_MANAGEMENT/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/12_TASK_MANAGEMENT) và file chuẩn [`TASK_OPERATING_MODEL.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/12_TASK_MANAGEMENT/TASK_OPERATING_MODEL.md).
+- **Trạng thái triển khai & shipment:** Dùng [`14_ROADMAP/ship_releases.json`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/14_ROADMAP/ship_releases.json), PRD liên quan và dữ liệu release thực tế. Project không duy trì một hệ thống tasklist nội bộ riêng.
 
 ### Tầng 4: Master Skill & Framework Execution Layer (Tầng Thực Thi Master Skills)
 Kích hoạt 3 Master Skills trong thư mục [`.agents/skills/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/.agents/skills) kết hợp cùng kho tham chiếu [`03_SKILLS/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS):

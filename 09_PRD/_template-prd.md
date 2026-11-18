@@ -56,7 +56,7 @@ $$Search Demand (Google/AI) \longrightarrow Web Utility Page \longrightarrow In-
 * **Cơ hội bứt phá của MoMo (MoMo Advantage):** Điểm khác biệt vượt trội của Kênh Web MoMo (0-CAPTCHA, UI/UX hiện đại chuẩn Web Platform, đồng bộ dữ liệu In-App, bảo chứng thương hiệu uy tín).
 
 ### 2.3 User Pain Points & Search Demand Inventory
-* **User Pain Points (JTBD):** Mô tả 3–4 rào cản lớn nhất của người dùng khi tìm kiếm và sử dụng dịch vụ trên Web.
+* **User Pain Points (JTBD):** Mô tả 3-4 rào cản lớn nhất của người dùng khi tìm kiếm và sử dụng dịch vụ trên Web.
 * **Search Demand Inventory:**
 
 | Nhóm Nhu Cầu (Search Cluster) | Mẫu Từ Khóa Tìm Kiếm (Query Examples) | Monthly Search Volume | Loại Intent (Search Intent) | Nguồn Dữ Liệu |
@@ -99,7 +99,7 @@ Cấu trúc Kênh Web được chia thành **2 Nhóm Cấu Trúc Rõ Ràng**:
 
 Bảng đặc tả cấu trúc nội dung chi tiết từng khối thành phần cho từng loại trang:
 
-| Trang / Phân Hệ | Tên Component / Section | Nhu Cầu Người Dùng (JTBD) | Giải Pháp Cấu Trúc (Solution) | Thành Phần UI (UI Components) & Functions |
+| Trang / Nhóm Dịch Vụ | Tên Component / Section | Nhu Cầu Người Dùng (JTBD) | Giải Pháp Cấu Trúc (Solution) | Thành Phần UI (UI Components) & Functions |
 | :--- | :--- | :--- | :--- | :--- |
 | **Master Hub**<br>`/[hub-slug]/` | **Hero & Master Search** | "Tôi muốn tra cứu/sử dụng tiện ích ngay lập tức." | Ô nhập liệu thông minh 1-click + Button Action. | Headline H1 + Input Field + Nút Action 1-click |
 | | **Quick Utilities Grid** | "Tôi muốn truy cập nhanh các tiện ích phổ biến." | Grid 6 Card phím tắt điều hướng 6 Spoke cốt lõi. | Grid 6 Card phím tắt tiện ích |
@@ -108,7 +108,7 @@ Bảng đặc tả cấu trúc nội dung chi tiết từng khối thành phần
 | | **FAQ Accordion Block** | "Tôi muốn giải đáp thắc mắc thường gặp." | Accordion Q&A gắn Schema `FAQPage`. | Accordion list các câu hỏi & câu trả lời |
 | **[Standalone Page]**<br>`/[usecase-slug]/` | **Hero & Tool Input** | "Tôi muốn sử dụng công cụ tra cứu/báo giá ngay." | Form nhập liệu trực tiếp bypass CAPTCHA. | Form nhập thông tin + Nút Tra cứu / Báo giá |
 | | **Result & Smart CTA** | "Tôi muốn xem kết quả và thực hiện giao dịch." | Output màn hình kết quả + Smart CTA mở App MoMo. | Khối hiển thị kết quả + Banner CTA Web-to-App |
-| | **SEO Explanatory Block** | "Tôi muốn đọc hướng dẫn và bảng tra chi tiết." | Nội dung bài viết tư vấn chuẩn SEO 800–1200 từ. | Bài viết hướng dẫn từng bước & Bảng tra chi tiết |
+| | **SEO Explanatory Block** | "Tôi muốn đọc hướng dẫn và bảng tra chi tiết." | Nội dung bài viết tư vấn chuẩn SEO 800-1200 từ. | Bài viết hướng dẫn từng bước & Bảng tra chi tiết |
 
 ---
 
@@ -118,12 +118,12 @@ Bảng đặc tả cấu trúc nội dung chi tiết từng khối thành phần
 
 | Touchpoint / Vị Trí Tương Tác | Hành Động Người Dùng (User Action) | Umami Event Name | Event Parameters Schema |
 | :--- | :--- | :--- | :--- |
-| **Hero Search Form** | Bấm nút Tra cứu / Tìm kiếm | `search_submit` | `{ query: string, provider?: string }` |
-| **Smart W2A CTA Banner** | Bấm nút điều hướng mở App MoMo | `w2a_click` | `{ campaign: string, target_screen: string }` |
+| **Hero Search Form** | nhấp vào nút Tra cứu / Tìm kiếm | `search_submit` | `{ query: string, provider?: string }` |
+| **Smart W2A CTA Banner** | nhấp vào nút điều hướng mở App MoMo | `w2a_click` | `{ campaign: string, target_screen: string }` |
 | **Quick Utilities Grid** | Bấm phím tắt dịch vụ trên Hub | `utility_click` | `{ utility_id: string, destination_url: string }` |
 | **GEO Filter Bar** | Chọn bộ lọc Tỉnh/Thành, Quận/Huyện | `filter_select` | `{ province: string, district?: string }` |
 | **Merchant Card Snippet** | Bấm vào thẻ địa điểm chi tiết | `merchant_click` | `{ merchant_id: string, category: string }` |
-| **Form Báo Giá / Mua Hàng** | Bấm nút xem báo giá / mua sản phẩm | `form_submit` | `{ product_id: string, amount?: number }` |
+| **Form Báo Giá / Mua Hàng** | nhấp vào nút xem báo giá / mua sản phẩm | `form_submit` | `{ product_id: string, amount?: number }` |
 
 ---
 

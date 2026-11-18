@@ -18,7 +18,7 @@ Financial Goal Simulator 2.0 (FIN-SIM-MOMO-2026) là một web game tương tác
 Thay vì sử dụng các câu hỏi trắc nghiệm tĩnh nhàm chán, người dùng tự đặt ra một mục tiêu đời thực (ví dụ: Chuyến đi Đà Lạt 6 triệu cuối năm 2026 với số dư ban đầu 0 đồng) và bắt đầu hành trình vượt qua 12 lượt chơi (tương ứng 12 tháng) trên một bản đồ sinh thái tài chính. Trò chơi tích hợp:
 * **Hệ thống cân bằng 3 tài nguyên sống còn:** Tiền tích lũy, Năng lượng tinh thần (Hạnh phúc) và Điểm tín nhiệm (Finance Score).
 * **Mini-game tương tác cơ học:** Chém hóa đơn lãng phí (Slash Expenses), kéo thả phân bổ hũ tiền.
-* **Tình huống đánh đổi chiến lược:** Cân bằng giữa tiết kiệm kỷ luật và bẫy kiệt sức dẫn đến chi tiêu trả thù (Revenge Spending).
+* **Tình huống đánh đổi chiến lược:** Cân bằng giữa tiết kiệm kỷ luật và ngưỡng áp lực tài chính dẫn đến chi tiêu bù đắp quá độ (Revenge Spending).
 * **Giáo dục tri thức mộc mạc:** Chuyển hóa tư tưởng của các nhà kinh tế học lỗi lạc thành châm ngôn đường phố dễ hiểu.
 
 ### 1.2. Mục tiêu kinh doanh & Chuyển đổi (Business & Conversion Goals)
@@ -48,7 +48,7 @@ export interface PlayerStats {
   sanity: number; // Năng lượng Hạnh phúc / Tinh thần (0 - 100). Khởi điểm: 70
   financeScore: number; // Điểm Tin Cậy (300 - 850). Khởi điểm: 600
   streakCount: number; // Chuỗi tháng duy trì kỷ luật
-  burnoutTriggered: boolean; // Trạng thái rơi vào bẫy chi tiêu trả thù
+  burnoutTriggered: boolean; // Trạng thái rơi vào ngưỡng áp lực dẫn đến chi tiêu bù đắp
 }
 
 export type NodeType = 
@@ -89,9 +89,9 @@ export interface GameEngineState {
 
 * **Định mức tích lũy chuẩn tháng:**
   $$\text{RequiredMonthly} = \left\lceil \frac{\text{TargetAmount} - \text{CurrentBalance}}{\text{DeadlineMonths}} \right\rceil$$
-* **Quy tắc Bẫy Kiệt Sức & Chi Tiêu Trả Thù (Burnout & Revenge Spending):**
+* **Quy tắc Ngưỡng Áp Lực & Chi Tiêu Bù Đắp Quá Độ (Burnout & Revenge Spending):**
   * Nếu chỉ số `sanity <= 20`: Kích hoạt trạng thái Báo động Căng thẳng.
-  * Nếu chỉ số `sanity <= 0`: Kích hoạt ngay lập tức biến cố **"Chi tiêu trả thù"**:
+  * Nếu chỉ số `sanity <= 0`: Kích hoạt ngay lập tức biến cố **"Chi tiêu bù đắp quá độ"**:
     $$\text{SavingsPenalty} = \text{savings} \times 0.35$$
     $$\text{sanity} = 50$$
     $$\text{financeScore} = \max(300, \text{financeScore} - 40)$$
@@ -235,7 +235,7 @@ Sau khi cán đích tháng 12, game cung cấp bản giám định tư duy tài 
 | **750 - 850** | >= 100% | Bậc Thầy Cân Bằng Tài Chính | Quản trị dòng tiền xuất sắc, giữ được kỷ luật mà không bị kiệt sức. | Duy trì cơ chế trích tiền tự động để giải phóng tâm trí. |
 | **650 - 749** | 80% - 99% | Chiến Binh Tích Lũy Bền Bỉ | Kỷ luật tốt nhưng còn lúng túng khi gặp các biến cố chi tiêu bất ngờ. | Cần bổ sung hạn mức dự phòng khẩn cấp để không phạm vào quỹ chính. |
 | **500 - 649** | 50% - 79% | Tín Đồ Chi Tiêu Cảm Xúc | Thường xuyên bị bẫy giảm giá và tâm lý FOMO làm trễ hạn mục tiêu. | Cần công cụ đóng băng tiền tiết kiệm để tránh tự tay rút xài. |
-| **Dưới 500** | < 50% | Báo Động Đỏ Cần Cứu Hộ | Dễ rơi vào vòng xoáy kiệt sức rồi chi tiêu trả thù, điểm uy tín suy giảm. | Cần thiết lập lại từ những khoản tích lũy siêu nhỏ 10.000 đ/ngày. |
+| **Dưới 500** | < 50% | Báo Động Đỏ Cần Cứu Hộ | Dễ rơi vào vòng xoáy áp lực rồi chi tiêu bù đắp quá độ, điểm uy tín suy giảm. | Cần thiết lập lại từ những khoản tích lũy siêu nhỏ 10.000 đ/ngày. |
 
 ---
 
@@ -284,7 +284,7 @@ Nhiệm vụ của bạn là lập trình hoàn chỉnh một Web Game tương t
 Yêu cầu kỹ thuật bắt buộc:
 1. Kiến trúc State:
    - Sử dụng React Context hoặc Zustand quản lý 3 chỉ số cốt lõi: Tiền tích lũy (savings), Hạnh phúc (sanity 0-100), và Điểm tin cậy (financeScore 300-850).
-   - Triển khai đúng logic "Bẫy kiệt sức & Chi tiêu trả thù": Nếu sanity tụt về 0, kích hoạt màn hình cảnh báo đỏ, trừ 35% tiền tiết kiệm và trừ 40 điểm Finance Score.
+   - Triển khai đúng logic "Ngưỡng áp lực & Chi tiêu bù đắp quá độ": Nếu sanity tụt về 0, kích hoạt màn hình cảnh báo đỏ, trừ 35% tiền tiết kiệm và trừ 40 điểm Finance Score.
 
 2. Trải nghiệm Bản đồ 12 Tháng (Roguelite Board):
    - Thiết kế bản đồ hành trình gồm 12 Node trực quan (Node thu nhập, cám dỗ, mini-game, sự kiện bí ẩn, trùm cuối).

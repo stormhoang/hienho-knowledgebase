@@ -78,7 +78,7 @@ Hàng triệu người dùng Internet phát sinh nhu cầu tra cứu hàng ngày
 
 ## 3. PHÂN LOẠI HUBS (THEO MA TRẬN 3+1 ZONES QUẢN TRỊ CHIẾN LƯỢC)
 
-Toàn bộ các Hubs và phân hệ trên Web MoMo được quản trị theo **Ma trận 3+1 Zones** nhằm tập trung tối đa hỏa lực, chống dàn trải tài nguyên:
+Toàn bộ các Hubs và mảng sản phẩm trên Web MoMo được quản trị theo **Ma trận 3+1 Zones** nhằm tập trung tối đa hỏa lực, chống dàn trải tài nguyên:
 
 ```
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
@@ -122,7 +122,7 @@ Toàn bộ các Hubs và phân hệ trên Web MoMo được quản trị theo **
 
 2. **TRANSFORMATION ZONE (Duy nhất 2 dự án):**
    * **Financial Hub (`momo.vn/tai-chinh`):** Định vị Financial Authority số 1 của MoMo. Tích hợp 7 Simulator Widgets (CIC, Tính lương, Phân bổ lương, Tỷ giá, Giá vàng, Lãi suất tiết kiệm Net Yield Gap, Chứng chỉ quỹ), mở phễu bán chéo Vay Nhanh & Ví Trả Sau. Chuẩn bị chiến dịch đón đầu mốc 8 triệu lượt check CIC toàn dân năm 2027.
-   * **Vehicle Hub (`momo.vn/tien-ich-giao-thong`):** Trụ cột tăng trưởng quy mô số 1 ngoài Web (>16.2M searches/tháng). Tích hợp liên phân hệ:
+   * **Vehicle Hub (`momo.vn/tien-ich-giao-thong`):** Trụ cột tăng trưởng quy mô số 1 ngoài Web (>16.2M searches/tháng). Tích hợp liên hoàn các dịch vụ:
      - **VTTI:** Phạt nguội 0-CAPTCHA, Đóng phạt trực tuyến C08/DVCQG, ePass/VETC, Đăng kiểm, Cây xăng Petrolimex/PVOil, Trạm sạc EV, Tìm garage, Cứu hộ.
      - **InsurTech:** Bảo hiểm bắt buộc TNDS xe máy, Bảo hiểm thân vỏ ô tô.
      - **Trọng tâm kỹ thuật:** **Migration sang MoSpark CMS + Revised UI**, đặt mục tiêu tạo lập 260K - 500K Hồ sơ phương tiện (Vehicle Profile).
@@ -135,7 +135,7 @@ Toàn bộ các Hubs và phân hệ trên Web MoMo được quản trị theo **
    * **Payment Hub (`momo.vn/thanh-toan-so`):** Dịch vụ thanh toán số & Subscriptions định kỳ: Apple Services, Google Services, ChatGPT Plus, Spotify, Netflix, Steam...
    * **Game Hub (`momo.vn/nap-the-game`):** Cổng nạp thẻ game, liên kết NPH game, nạp game đa nền tảng, nạp xu TikTok và tokens giải trí trực tiếp ngoài Web.
    * **Merchant Hub (`momo.vn/merchant`):** Cổng giải pháp cho Doanh nghiệp & Tiểu thương SME: Giải pháp QR Đa Năng, Loa Soundbox, cổng tiếp nhận đăng ký mở điểm chấp nhận thanh toán (không gắn với `m.momo.vn`).
-   * **New User Hub (`momo.vn/download`):** Cổng chuyển đổi người dùng mới vãng lai (Acquisition Gateway), tối ưu hóa luồng quét QR theo hệ điều hành (iOS, Android) để nhận gói quà tân thủ 1.000.000đ.
+   * **New User Hub (`momo.vn/download`):** Cổng chuyển đổi người dùng mới vãng lai (Acquisition Gateway), tối ưu hóa luồng quét QR theo hệ điều hành (iOS, Android) để nhận gói quà người dùng mới 1.000.000đ.
    * **Home Web (`momo.vn`):** Trang chủ thương hiệu độc lập, định vị Financial Authority & Trust Defense, điều hướng người dùng toàn trang, giữ vai trò Root Authority cho toàn bộ domain.
 
 4. **PRODUCTIVITY ZONE (Hạ tầng Kỹ thuật Nền tảng Dùng chung):**

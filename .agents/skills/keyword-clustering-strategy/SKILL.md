@@ -101,10 +101,10 @@ Tính toán chỉ số **Opportunity Score** cho từng từ khóa:
 $$\text{Opportunity Score} = \log_{10}(\text{Volume} + 1) \times (1.2 - \text{Competition Factor}) \times \text{Intent Weight} \times (1 + \text{CPC Bonus})$$
 
 Phân loại từ khóa vào 4 góc phần tư:
-1. **Quick Wins:** Volume cao/trung bình, Cạnh tranh thấp (Low PPC Competition). Ưu tiên sản xuất P0 để chiếm lĩnh Top SERP nhanh chóng.
+1. **Quick Wins:** Volume cao/trung bình, Cạnh tranh thấp (Low PPC Competition). Sản xuất trước để chiếm lĩnh Top SERP nhanh chóng.
 2. **Strategic Pillars:** Volume cực lớn, Cạnh tranh trung bình/cao. Cần đầu tư tài nguyên lớn, nội dung chuẩn chuyên gia E-E-A-T và tích hợp Widget tương tác để tạo đòn bẩy dài hạn.
 3. **Commercial Converters:** Volume vừa phải nhưng Search Intent mang tính thương mại hoặc hành động cao (Commercial / Transactional / Tool). Đóng vai trò phễu chuyển đổi Web-to-App tốt nhất.
-4. **Long-tail / Supporting:** Volume nhỏ (< 100), cạnh tranh thấp. Đóng gói vào mục FAQ của bài viết chính hoặc triển khai ở giai đoạn P2.
+4. **Long-tail / Supporting:** Volume nhỏ (< 100), cạnh tranh thấp. Đóng gói vào mục FAQ của bài viết chính hoặc triển khai ở đợt sau cùng.
 
 ### Bước 5: Content Strategy & Content Plan Hoàn Chỉnh
 - Thiết lập chiến lược nội dung theo hành trình khách hàng (Customer Journey):

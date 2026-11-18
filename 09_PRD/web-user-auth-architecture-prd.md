@@ -3,20 +3,20 @@
 *Tài liệu Đặc tả Chiến lược Định danh Người dùng & Kiến trúc Hệ thống Quản trị Cửa hàng (User Authentication Strategy & Merchant Portal Architecture PRD)*
 
 ## 📋 THÔNG TIN CHUNG (Metadata)
-> *   **Tên dự án / Sản phẩm (PRODUCT NAME):** Web User Authentication Strategy & Merchant Portal Architecture
-> *   **Đầu mối Cell Team (PO & Tech Lead):** GPD - Web Platform
-> *   **Web Product Lead (Duyệt dự án):** Hien.ho
-> *   **Trạng thái tài liệu (Document status):** DRAFT
-> *   **Tiến độ dự kiến:** Q3/2026 (Kick-off) ➔ Q3/2026 (Pilot) ➔ Q4/2026 (Go-Live)
+> *   **Dự án:** Web User Authentication Strategy & Merchant Portal Architecture
+> *   **Đội ngũ triển khai:** GPD - Web Platform
+> *   **Phê duyệt:** Hien.ho
+> *   **Trạng thái:** DRAFT
+> *   **Tiến độ:** Q3/2026 (Kick-off) ➔ Q3/2026 (Pilot) ➔ Q4/2026 (Go-Live)
 > *   **Loại yêu cầu:** [x] Tính năng mới | [ ] Cải tiến/Thay đổi cấu trúc
 
 ---
 
 ## I. TÀI LIỆU LIÊN QUAN (References)
 *   **Đặc tả định danh Web-to-App:** [mospark_user_identity_tracking.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/04_MOSPARK_PLATFORM/mospark_user_identity_tracking.md)
-*   **PRD Trang Đối Tác (SME detail page):** [doi-tac-prd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/08_PRD/doi-tac-prd.md)
+*   **PRD Trang Đối Tác (SME detail page):** [doi-tac-prd.md](doi-tac-prd.md)
 *   **BRD Merchant Page (MMP):** [doi-tac-brd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/06_USE_CASE_MOMO/doi-tac-brd.md)
-*   **PRD Web Identity Mapping (Use Cases):** [web-identity-mapping-prd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/08_PRD/web-identity-mapping-prd.md)
+*   **PRD Web Identity Mapping (Use Cases):** [web-identity-mapping-prd.md](web-identity-mapping-prd.md)
 
 ---
 

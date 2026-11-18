@@ -40,6 +40,7 @@ if not HUBS_REPO.exists():
 sys.path.insert(0, str(BASE_DIR))
 from scripts.sync_ga4_to_hubs import get_access_token, PROPERTY_ID, run_ga4_report
 from scripts.build_full_funnel_matrix import build_theme_matcher
+from scripts.lib.hub_sync_lock import hub_sync_lock
 
 NS_MAIN = "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
 ET.register_namespace("", NS_MAIN)
@@ -157,11 +158,6 @@ def patch_excel_dynamic(file_path, month_str, target_pv, days_elapsed, total_pv,
             continue
         rescale_pivot_column(ws, col, total_pv)
 
-    # Formula Array for Projects Detail Flow Q3
-    ws_proj = wb["Projects Detail Flow"]
-    q3_formula = "=INDEX('Full month Pivot'!$D$3:$K$400, MATCH(\"Grand Total\", 'Full month Pivot'!$A$3:$A$400, 0), MATCH(Q$2, 'Full month Pivot'!$D$2:$K$2, 0))"
-    ws_proj["Q3"] = ArrayFormula(ref="Q3", text=q3_formula)
-
     # Active view
     idx = wb.sheetnames.index("Overall Performance")
     wb.active = idx
@@ -277,8 +273,15 @@ def main():
     parser = argparse.ArgumentParser(description="Sync GA4 MTD All-In-One")
     parser.add_argument("--mtd", type=int, default=None, help="Số ngày MTD (mặc định: ngày hôm qua)")
     parser.add_argument("--month", type=str, default=None, help="Tháng sync (YYYY-MM), mặc định tự phát hiện")
-    parser.add_argument("--no-push", action="store_true", help="Không tự động push sang Hubs GitHub")
+    parser.add_argument("--strict-momo", action="store_true", default=True, help="Chỉ lọc duy nhất hostName == 'www.momo.vn' (loại trừ napthengay.vn, mặc định: True)")
+    parser.add_argument("--all-hosts", action="store_true", default=False, help="Không lọc hostName, lấy toàn bộ Property (mặc định: False)")
+    parser.add_argument("--push-hubs", action="store_true", default=False, help="Tường minh cho phép đẩy dữ liệu sang Hubs GitHub qua REST API (mặc định: False)")
+    parser.add_argument("--clean", action="store_true", default=False, help="Chuẩn hóa dữ liệu sạch (loại trừ vòng lặp GTM 10x-20x và domain ngoại lai, mặc định: False)")
+    parser.add_argument("--override-pv", type=int, default=None, help="Ghi đè/chuẩn hóa tổng PV theo BigQuery SSOT")
+    parser.add_argument("--local-only", action="store_true", help="Chỉ cập nhật snapshot và Excel SSOT trong repo hiện tại")
     args = parser.parse_args()
+
+    is_strict_momo = not args.all_hosts
 
     # Xác định tháng và số ngày MTD
     now = datetime.now()
@@ -310,18 +313,28 @@ def main():
     closed = days_elapsed >= days_in_month
     report_name = f"monthly_{month_val:02d}_{year_val}_consolidated.json" if closed else f"monthly_{month_val:02d}_{year_val}_mtd_{days_elapsed}d.json"
 
-    web_data_path = HUBS_REPO / "lib" / "dashboard" / "web-data.json"
-    if not web_data_path.exists():
-        sys.exit(f"Không thấy {web_data_path}: cần repo Hubs để lấy target tháng và ghi dashboard.")
-    with open(web_data_path, "r", encoding="utf-8") as f:
-        web_data = json.load(f)
-    target_pv = web_data.get("monthTargets", {}).get(month_str)
+    if args.local_only:
+        prior_snapshots = sorted((BASE_DIR / "07_REPORTS" / "data").glob(f"monthly_{month_val:02d}_{year_val}_mtd_*d.json"))
+        if not prior_snapshots:
+            sys.exit(f"Không có snapshot MTD {month_str} trong repo để lấy target tháng.")
+        with open(prior_snapshots[-1], "r", encoding="utf-8") as f:
+            prior_snapshot = json.load(f)
+        target_pv = prior_snapshot.get("target_pv")
+        hub_targets = {name: values.get("target") for name, values in prior_snapshot.get("hubs", {}).items()}
+    else:
+        web_data_path = HUBS_REPO / "lib" / "dashboard" / "web-data.json"
+        if not web_data_path.exists():
+            sys.exit(f"Không thấy {web_data_path}: cần repo Hubs để lấy target tháng và ghi dashboard.")
+        with open(web_data_path, "r", encoding="utf-8") as f:
+            web_data = json.load(f)
+        target_pv = web_data.get("monthTargets", {}).get(month_str)
     if not target_pv:
         print(f"⚠ Chưa có target {month_str} trong web-data.json monthTargets: bỏ qua các chỉ số % target.")
     # Target hub: lấy của tháng sync, chưa có thì dùng tháng gần nhất trước đó
-    hub_targets_all = web_data.get("hubTargets", {})
-    hub_target_month = max((m for m in hub_targets_all if m <= month_str), default=None)
-    hub_targets = hub_targets_all.get(hub_target_month, {}) if hub_target_month else {}
+    if not args.local_only:
+        hub_targets_all = web_data.get("hubTargets", {})
+        hub_target_month = max((m for m in hub_targets_all if m <= month_str), default=None)
+        hub_targets = hub_targets_all.get(hub_target_month, {}) if hub_target_month else {}
 
     print("=" * 75)
     print(f"KHỞI CHẠY PIPELINE GA4 ALL-IN-ONE (CHU KỲ: {start_date} -> {end_date})")
@@ -333,8 +346,9 @@ def main():
     date_ranges = [{"startDate": start_date, "endDate": end_date}]
 
     # 2. Kéo chỉ số tổng thể toàn Website (Deduplicated Property Totals)
-    print("[2/6] Kéo chỉ số tổng thể toàn Website từ GA4...")
-    res_prop = run_ga4_report(token, {
+    mode_str = " (hostName == www.momo.vn)" if is_strict_momo else ""
+    print(f"[2/6] Kéo chỉ số tổng thể toàn Website từ GA4{mode_str}...")
+    prop_query = {
         "dateRanges": date_ranges,
         "metrics": [
             {"name": "screenPageViews"},
@@ -343,7 +357,12 @@ def main():
             {"name": "engagedSessions"},
             {"name": "userEngagementDuration"}
         ]
-    })
+    }
+    if is_strict_momo:
+        prop_query["dimensionFilter"] = {
+            "filter": {"fieldName": "hostName", "stringFilter": {"value": "www.momo.vn"}}
+        }
+    res_prop = run_ga4_report(token, prop_query)
     row_p = res_prop["rows"][0]
     total_pv = int(row_p["metricValues"][0]["value"])
     total_sessions = int(row_p["metricValues"][1]["value"])
@@ -351,9 +370,59 @@ def main():
     total_engaged = int(row_p["metricValues"][3]["value"])
     total_duration = float(row_p["metricValues"][4]["value"])
 
+    clean_scale = 1.0
+    if args.override_pv:
+        print(f"[Override-Mode] Chuẩn hóa tổng PV theo BigQuery SSOT: {args.override_pv:,} PV (từ GA4 thô {total_pv:,} PV)...")
+        clean_scale = args.override_pv / total_pv if total_pv > 0 else 1.0
+        total_pv = args.override_pv
+    elif month_str == "2026-11" and days_elapsed >= 16:
+        # Tự động nạp Anchor BigQuery SSOT và cộng dồn lũy kế cho các ngày tiếp theo
+        from scripts.lib.baseline_anchor import compute_incremental_mtd
+        anchored_data = compute_incremental_mtd(month_str, days_elapsed, token, run_ga4_report)
+        if anchored_data:
+            clean_scale = anchored_data["total_pv"] / total_pv if total_pv > 0 else 1.0
+            total_pv = anchored_data["total_pv"]
+            print(f"[Anchor-Mode] Áp dụng mốc BigQuery SSOT MTD {days_elapsed}d: {total_pv:,} PV (Anchor 2.86M + Phát sinh {anchored_data['incremental_pv']:,} PV)")
+    elif args.clean:
+        print("[Clean-Mode] Kích hoạt chuẩn hóa dữ liệu sạch (Khử vòng lặp GTM 10x-20x & Domain ngoại lai)...")
+        daily_query = {
+            "dateRanges": date_ranges,
+            "dimensions": [{"name": "date"}],
+            "metrics": [{"name": "screenPageViews"}, {"name": "sessions"}],
+            "dimensionFilter": {
+                "filter": {"fieldName": "hostName", "stringFilter": {"matchType": "EXACT", "value": "www.momo.vn"}}
+            },
+            "orderBys": [{"dimension": {"dimensionName": "date"}}]
+        }
+        res_daily = run_ga4_report(token, daily_query)
+        daily_rows = []
+        for r in res_daily.get("rows", []):
+            daily_rows.append((
+                r["dimensionValues"][0]["value"],
+                int(r["metricValues"][0]["value"]),
+                int(r["metricValues"][1]["value"]),
+            ))
+        clean_pv_sum = sum(pv for _, pv, s in daily_rows if s > 0 and pv / s <= 2.0)
+        clean_sess_sum = sum(s for _, pv, s in daily_rows if s > 0 and pv / s <= 2.0)
+        normal_ratio = clean_pv_sum / clean_sess_sum if clean_sess_sum > 0 else 1.50
+        print(f"[Clean-Mode] Tỷ lệ PV/session chuẩn đo từ ngày sạch: {normal_ratio:.4f}")
+        clean_total_pv = 0
+        raw_total_pv = total_pv
+        for d_str, d_pv, d_sess in daily_rows:
+            ratio = d_pv / d_sess if d_sess > 0 else 1.0
+            if ratio > 2.0:
+                clean_d_pv = round(d_sess * normal_ratio)
+                print(f"  - Chuẩn hóa ngày {d_str}: {d_pv:,} PV (tỷ lệ {ratio:.2f}) -> {clean_d_pv:,} PV sạch (tỷ lệ {normal_ratio:.2f})")
+            else:
+                clean_d_pv = d_pv
+            clean_total_pv += clean_d_pv
+        clean_scale = clean_total_pv / raw_total_pv if raw_total_pv > 0 else 1.0
+        print(f"[Clean-Mode] Tổng PV sạch: {clean_total_pv:,} PV (Hệ số chuẩn hóa: {clean_scale:.6f} so với số thô {raw_total_pv:,} PV)")
+        total_pv = clean_total_pv
+
     # 3. Kéo phân bổ kênh lưu lượng & W2A OneLink clicks
-    print("[3/6] Kéo phân bổ kênh lưu lượng (Non-Paid vs. Paid)...")
-    res_ch = run_ga4_report(token, {
+    print(f"[3/6] Kéo phân bổ kênh lưu lượng (Non-Paid vs. Paid{mode_str})...")
+    ch_query = {
         "dateRanges": date_ranges,
         "dimensions": [
             {"name": "sessionDefaultChannelGroup"},
@@ -365,8 +434,26 @@ def main():
             {"name": "totalUsers"}
         ],
         "limit": 10000
-    })
+    }
+    if is_strict_momo:
+        ch_query["dimensionFilter"] = {
+            "filter": {"fieldName": "hostName", "stringFilter": {"value": "www.momo.vn"}}
+        }
+    res_ch = run_ga4_report(token, ch_query)
 
+    w2a_exprs = [
+        {"filter": {"fieldName": "eventName", "inListFilter": {"values": ["click_to_app", "click_outbound_link"]}}},
+        {
+            "orGroup": {
+                "expressions": [
+                    {"filter": {"fieldName": "customEvent:click_url", "stringFilter": {"matchType": "CONTAINS", "value": "onelink"}}},
+                    {"filter": {"fieldName": "linkUrl", "stringFilter": {"matchType": "CONTAINS", "value": "onelink"}}}
+                ]
+            }
+        }
+    ]
+    if is_strict_momo:
+        w2a_exprs.insert(0, {"filter": {"fieldName": "hostName", "stringFilter": {"value": "www.momo.vn"}}})
     res_w2a = run_ga4_report(token, {
         "dateRanges": date_ranges,
         "dimensions": [
@@ -375,17 +462,7 @@ def main():
         ],
         "dimensionFilter": {
             "andGroup": {
-                "expressions": [
-                    {"filter": {"fieldName": "eventName", "inListFilter": {"values": ["click_to_app", "click_outbound_link"]}}},
-                    {
-                        "orGroup": {
-                            "expressions": [
-                                {"filter": {"fieldName": "customEvent:click_url", "stringFilter": {"matchType": "CONTAINS", "value": "onelink"}}},
-                                {"filter": {"fieldName": "linkUrl", "stringFilter": {"matchType": "CONTAINS", "value": "onelink"}}}
-                            ]
-                        }
-                    }
-                ]
+                "expressions": w2a_exprs
             }
         },
         "metrics": [{"name": "eventCount"}],
@@ -398,12 +475,19 @@ def main():
         src = r["dimensionValues"][1]["value"]
         w2a_map[(ch, src)] = int(r["metricValues"][0]["value"])
 
+    ai_sources = [
+        "chatgpt.com", "perplexity.ai", "gemini.google.com", 
+        "copilot.microsoft.com", "android-app://com.openai.chatgpt",
+        "claude.ai", "duck.ai", "deepseek"
+    ]
+
     channel_stats = {}
     organic_pv = 0
     direct_pv = 0
-    paid_pv = 0
+    ai_pv = 0
     referral_pv = 0
     others_pv = 0
+    paid_pv = 0
     non_paid_pv = 0
 
     for r in res_ch.get("rows", []):
@@ -417,8 +501,13 @@ def main():
 
         cn = ch.lower()
         sn = src.lower()
-        # Quy tắc: sessionSource=in_app chuyển toàn bộ vào Referral
-        if sn == "in_app" or sn.startswith("in_app"):
+        
+        # Track AI traffic sub-metric
+        if any(ai in sn for ai in ai_sources) or cn == "ai assistant":
+            ai_pv += pv
+
+        # Harness Rule SSOT: Non-Paid gồm Organic, Direct, Referral, Others; Paid Ads
+        if sn == "in_app" or sn.startswith("in_app") or "referral" in cn:
             referral_pv += pv
             non_paid_pv += pv
         elif "organic search" in cn:
@@ -427,23 +516,34 @@ def main():
         elif "direct" in cn:
             direct_pv += pv
             non_paid_pv += pv
-        elif "referral" in cn:
-            referral_pv += pv
-            non_paid_pv += pv
-        elif any(k in cn for k in ["paid", "cpc", "display"]):
+        elif any(k in cn for k in ["paid", "cpc", "display", "cross-network"]):
             paid_pv += pv
-        else:
+        else: # Others (hấp thu unassigned, social, video, ai assistant...)
             others_pv += pv
             non_paid_pv += pv
 
+    if args.clean or args.override_pv:
+        organic_pv = round(organic_pv * clean_scale)
+        paid_pv = round(paid_pv * clean_scale)
+        direct_pv = round(direct_pv * clean_scale)
+        referral_pv = round(referral_pv * clean_scale)
+        ai_pv = round(ai_pv * clean_scale)
+        others_pv = total_pv - (organic_pv + paid_pv + direct_pv + referral_pv)
+        non_paid_pv = organic_pv + direct_pv + referral_pv + others_pv
+
     # 4. Kéo phân bổ Hubs
-    print("[4/6] Kéo phân bổ lưu lượng theo Hubs...")
-    res_lp = run_ga4_report(token, {
+    print(f"[4/6] Kéo phân bổ lưu lượng theo Hubs{mode_str}...")
+    lp_query = {
         "dateRanges": date_ranges,
         "dimensions": [{"name": "landingPage"}],
         "metrics": [{"name": "screenPageViews"}],
         "limit": 10000
-    })
+    }
+    if is_strict_momo:
+        lp_query["dimensionFilter"] = {
+            "filter": {"fieldName": "hostName", "stringFilter": {"value": "www.momo.vn"}}
+        }
+    res_lp = run_ga4_report(token, lp_query)
 
     matcher = build_theme_matcher()
     hubs_pv = {
@@ -501,6 +601,16 @@ def main():
         else:
             hubs_pv["others"] += pv
 
+    if args.clean or args.override_pv:
+        for h in hubs_pv:
+            hubs_pv[h] = round(hubs_pv[h] * clean_scale)
+        for s in cinema_sub:
+            cinema_sub[s] = round(cinema_sub[s] * clean_scale)
+        diff_h = total_pv - sum(hubs_pv.values())
+        hubs_pv["others"] += diff_h
+        diff_c = hubs_pv["cinema"] - sum(cinema_sub.values())
+        cinema_sub["Others"] += diff_c
+
     # Tính Pacing & Forecast
     daily_pace = round(total_pv / days_elapsed, 2)
     forecast_31d = round(daily_pace * days_in_month, 2)
@@ -537,6 +647,7 @@ def main():
             "paid": {"pv": paid_pv, "pct": round(paid_pv / total_pv * 100, 2)},
             "referral": {"pv": referral_pv, "pct": round(referral_pv / total_pv * 100, 2)},
             "others": {"pv": others_pv, "pct": round(others_pv / total_pv * 100, 2)},
+            "ai_traffic": {"pv": ai_pv, "pct": round(ai_pv / total_pv * 100, 2)},
             "non_paid_total": {"pv": non_paid_pv, "pct": round(non_paid_pv / total_pv * 100, 2)}
         },
         "hubs": {
@@ -559,6 +670,17 @@ def main():
     }
     with open(consolidated_path, "w", encoding="utf-8") as f:
         json.dump(snapshot_payload, f, ensure_ascii=False, indent=2)
+
+    if args.local_only:
+        bq_excel = BASE_DIR / "07_REPORTS" / "web_performance_tracking.xlsx"
+        if bq_excel.exists():
+            patch_excel_dynamic(
+                str(bq_excel), month_str, target_pv, days_elapsed, total_pv,
+                organic_pv, paid_pv, direct_pv, referral_pv, others_pv,
+                non_paid_pv, hubs_pv, cinema_sub,
+            )
+        print(f"Đã cập nhật dữ liệu MTD {month_str} đến ngày {days_elapsed} trong repo hiện tại: {total_pv:,} PV.")
+        return
 
     # 5.2 Web-data.json cho /dashboard
     months = web_data["months"]
@@ -601,8 +723,7 @@ def main():
             max_p["full"][m_idx][i] += d_val
             max_p["mtd"][m_idx][i] += d_val
 
-    with open(web_data_path, "w", encoding="utf-8") as f:
-        json.dump(web_data, f, ensure_ascii=False, indent=2)
+    # web_data chỉ dùng trong bộ nhớ cho summary 5.3; web-data.json do build-dashboard-data.py ghi ở 5.5b.
 
     # 5.3 Summary JSON: lastFull = tháng đang sync nếu đã đủ ngày, không thì tháng liền trước
     hub_name = {}
@@ -697,17 +818,23 @@ def main():
             non_paid_pv=non_paid_pv,
             hubs_pv=hubs_pv,
             cinema_sub=cinema_sub,
-            month=month_str
+            month=month_str,
+            ai_traffic_pv=ai_pv
         )
 
         # Đồng bộ bảng Click to app by Project trong Projects Detail Flow
         try:
             from scripts.sync_projects_detail_flow_clicks import sync_google_sheet_clicks
-            sync_google_sheet_clicks()
+            sync_google_sheet_clicks(days_elapsed=days_elapsed)
         except Exception as e:
             print(f"[Sheets-API] Lưu ý đồng bộ Click to app Projects Detail Flow: {e}")
     except Exception as e:
         print(f"[Sheets-API] Lưu ý đồng bộ Sheets API: {e}")
+
+    # 5.6b Dựng lại /dashboard web-data.json + summary.json từ Excel vừa co giãn MTD đa tháng (writer duy nhất)
+    sys.path.insert(0, str(BASE_DIR / "scripts" / "lib"))
+    from hubs_dashboard import rebuild_dashboard
+    rebuild_dashboard()
 
     # Đồng thời đồng bộ file Excel offline lên Google Drive Desktop
     gdrive_script = BASE_DIR / "scripts" / "upload_to_gdrive.py"
@@ -718,25 +845,45 @@ def main():
         except Exception as e:
             print(f"[Auto-Drive] Lưu ý đồng bộ Drive: {e}")
 
-    # 6. Push GitHub REST API
-    if not args.no_push:
-        print("[6/6] Tự động đẩy dữ liệu sang GitHub Hubs qua REST API...")
+    # 5.7 Tự động đồng bộ biến động 7 ngày SERP (Gainers & Losers) vào /report và /dashboard
+    try:
+        print("[Auto-7D-SERP] Đang đồng bộ biến động 7 ngày SERP (Gainers & Losers) vào /report & /dashboard...")
+        sync_7d_script = BASE_DIR / "scripts" / "sync_7d_performance_report.py"
+        if sync_7d_script.exists():
+            subprocess.run([sys.executable, str(sync_7d_script), "--no-push"], check=False)
+    except Exception as e:
+        print(f"[Auto-7D-SERP] Lưu ý đồng bộ 7D SERP: {e}")
+
+    # 5.8 Xuất số MTD theo URL (page_mtd.json) cùng ngày chốt, Hubs /dashboard đọc thẳng file này
+    try:
+        print(f"[Auto-Page-MTD] Đang xuất page_mtd.json tới {end_date}...")
+        page_mtd_script = BASE_DIR / "scripts" / "export_page_mtd.py"
+        if page_mtd_script.exists():
+            subprocess.run([sys.executable, str(page_mtd_script), "--end", end_date], check=False)
+    except Exception as e:
+        print(f"[Auto-Page-MTD] Lưu ý xuất page_mtd: {e}")
+
+    # 6. Push GitHub REST API (Mặc định không đẩy trừ khi có --push-hubs)
+    if args.push_hubs:
+        print("[6/6] Tự động đẩy dữ liệu sang GitHub Hubs qua REST API (--push-hubs)...")
         push_script = BASE_DIR / "scripts" / "push_to_hubs_api.py"
         subprocess.run([
             sys.executable, str(push_script),
+            "--commit-local",
             "-m", f"data(ga4): automated all-in-one sync MTD {days_elapsed}d ({total_pv:,} PV)"
         ], check=True)
     else:
-        print("[6/6] Chế độ no-push: Bỏ qua đẩy GitHub.")
+        print("[6/6] Mặc định an toàn (No-Push): Bỏ qua đẩy GitHub Hubs.")
 
     elapsed = time.time() - start_time
     print("=" * 75)
     print(f"HOÀN THÀNH TOÀN BỘ PIPELINE TRONG {elapsed:.1f} GIÂY")
     target_txt = f"{target_pv:,} ({progress_pct}%)" if target_pv else "chưa có target"
     print(f"- Lũy kế MTD {month_str}: {total_pv:,} PV / Target: {target_txt}")
-    print(f"- Nhịp chạy : {daily_pace:,.0f} PV/ngày | Dự phóng {days_in_month}d: {forecast_31d:,.0f} ({forecast_pct}%)")
+    print(f"- Nhịp chạy : {daily_pace:,.0f} PV/ngày | Dự báo {days_in_month}d: {forecast_31d:,.0f} ({forecast_pct}%)")
     print(f"- Non-Paid  : {non_paid_pv:,} PV ({non_paid_pv/total_pv*100:.1f}%) | Paid: {paid_pv:,} PV ({paid_pv/total_pv*100:.1f}%)")
     print("=" * 75)
 
 if __name__ == "__main__":
-    main()
+    with hub_sync_lock("sync_ga4_master"):
+        main()

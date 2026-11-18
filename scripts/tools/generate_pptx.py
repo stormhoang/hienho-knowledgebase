@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate PLG MoSpark Proposal PPTX — Clean layout, MoMo branding, correct slide order."""
+"""Generate PLG MoSpark Proposal PPTX - Clean layout, MoMo branding, correct slide order."""
 
 from pptx import Presentation
 from pptx.util import Inches, Pt
@@ -171,16 +171,16 @@ txt(s, Inches(2), Inches(5.5), Inches(9.3), Inches(0.4),
 s = prs.slides.add_slide(prs.slide_layouts[6])
 solid_bg(s, C_WHITE)
 
-badge(s, M_LEFT, Inches(0.5), "SLIDE 01  —  ĐỊNH VỊ")
+badge(s, M_LEFT, Inches(0.5), "SLIDE 01  -  ĐỊNH VỊ")
 txt(s, M_LEFT, Inches(1.0), CONTENT_W, Inches(0.55),
-    "Web Platform & MoSpark — Vai Trò Nền Tảng", sz=24, bold=True, color=C_GRAY900)
+    "Web Platform & MoSpark - Vai Trò Nền Tảng", sz=24, bold=True, color=C_GRAY900)
 txt(s, M_LEFT, Inches(1.55), CONTENT_W, Inches(0.3),
     "Vai trò chiến lược của momo.vn ngoài App và hạ tầng MoSpark", sz=12, color=C_GRAY500)
 
 divider_line(s, M_LEFT, Inches(1.9), CONTENT_W)
 
 # Left Column (Web Platform)
-section_heading(s, M_LEFT, Inches(2.1), Inches(5.2), "Web Platform (momo.vn) — Kênh ngoài App")
+section_heading(s, M_LEFT, Inches(2.1), Inches(5.2), "Web Platform (momo.vn) - Kênh ngoài App")
 bullet_box(s, Inches(1.2), Inches(2.55), Inches(5.0), [
     ("Financial Authority: ", "Xây dựng momo.vn thành nguồn thông tin tin cậy hàng đầu ngành tài chính và thanh toán, được cả người dùng lẫn AI Search Engine công nhận."),
     ("Growth & MAU: ", "Thu hút traffic tự nhiên ngoài App, tối ưu phễu Web-to-App để mang về người dùng mới và tăng MAU."),
@@ -188,7 +188,7 @@ bullet_box(s, Inches(1.2), Inches(2.55), Inches(5.0), [
 ], sz=11)
 
 # Right Column (MoSpark)
-section_heading(s, Inches(7.0), Inches(2.1), Inches(5.2), "MoSpark — Hệ thống tự động hóa Web")
+section_heading(s, Inches(7.0), Inches(2.1), Inches(5.2), "MoSpark - Hệ thống tự động hóa Web")
 bullet_box(s, Inches(7.2), Inches(2.55), Inches(5.0), [
     ("Platform-as-a-Service: ", "Cung cấp hạ tầng và Quality Gate để các Cell Team tự triển khai Mini Web mà không phụ thuộc Dev."),
     ("GenAI Content: ", "Tự động sản xuất nội dung quy mô lớn với quy trình kiểm duyệt chất lượng và pháp lý tài chính chặt chẽ."),
@@ -202,7 +202,7 @@ bullet_box(s, Inches(7.2), Inches(2.55), Inches(5.0), [
 s = prs.slides.add_slide(prs.slide_layouts[6])
 solid_bg(s, C_WHITE)
 
-badge(s, M_LEFT, Inches(0.5), "SLIDE 02  —  EXECUTIVE SUMMARY")
+badge(s, M_LEFT, Inches(0.5), "SLIDE 02  -  EXECUTIVE SUMMARY")
 txt(s, M_LEFT, Inches(1.0), CONTENT_W, Inches(0.55),
     "Tăng Trưởng Dẫn Dắt Bởi Sản Phẩm (PLG) Trên Nền Tảng MoSpark", sz=24, bold=True, color=C_GRAY900)
 txt(s, M_LEFT, Inches(1.55), CONTENT_W, Inches(0.3),
@@ -254,7 +254,7 @@ for i, label in enumerate(labels):
 s = prs.slides.add_slide(prs.slide_layouts[6])
 solid_bg(s, C_WHITE)
 
-badge(s, M_LEFT, Inches(0.5), "SLIDE 03  —  BỐI CẢNH")
+badge(s, M_LEFT, Inches(0.5), "SLIDE 03  -  BỐI CẢNH")
 txt(s, M_LEFT, Inches(1.0), CONTENT_W, Inches(0.55),
     "Sự Dịch Chuyển Của Search & Nút Thắt Web Platform", sz=24, bold=True, color=C_GRAY900)
 
@@ -297,7 +297,7 @@ rich_text(s, Inches(1.3), Inches(4.65), Inches(10.7), Inches(0.7), [
 s = prs.slides.add_slide(prs.slide_layouts[6])
 solid_bg(s, C_WHITE)
 
-badge(s, M_LEFT, Inches(0.5), "SLIDE 04  —  CHIẾN LƯỢC")
+badge(s, M_LEFT, Inches(0.5), "SLIDE 04  -  CHIẾN LƯỢC")
 txt(s, M_LEFT, Inches(1.0), CONTENT_W, Inches(0.55),
     "Chuyển Dịch Sang Chiến Lược PLG & Co-Investment", sz=24, bold=True, color=C_GRAY900)
 
@@ -386,9 +386,9 @@ for r, row in enumerate(rows_data):
 s = prs.slides.add_slide(prs.slide_layouts[6])
 solid_bg(s, C_WHITE)
 
-badge(s, M_LEFT, Inches(0.5), "SLIDE 05  —  NỀN TẢNG")
+badge(s, M_LEFT, Inches(0.5), "SLIDE 05  -  NỀN TẢNG")
 txt(s, M_LEFT, Inches(1.0), CONTENT_W, Inches(0.55),
-    "MoSpark & SEO Inventory — Hệ Sinh Thái Tự Động Hóa PLG", sz=24, bold=True, color=C_GRAY900)
+    "MoSpark & SEO Inventory - Hệ Sinh Thái Tự Động Hóa PLG", sz=24, bold=True, color=C_GRAY900)
 txt(s, M_LEFT, Inches(1.55), CONTENT_W, Inches(0.3),
     "Quy trình phát triển và vận hành PLG được tự động hóa thông qua 3 thành phần cốt lõi:", sz=12, color=C_GRAY500)
 
@@ -458,14 +458,14 @@ for c, comp in enumerate(components):
 
 
 # ═══════════════════════════════════════
-# SLIDE 6: SEO Inventory — Market Potential
+# SLIDE 6: SEO Inventory - Market Potential
 # ═══════════════════════════════════════
 s = prs.slides.add_slide(prs.slide_layouts[6])
 solid_bg(s, C_WHITE)
 
-badge(s, M_LEFT, Inches(0.5), "SLIDE 06  —  CASE STUDY: PHẠT NGUỘI")
+badge(s, M_LEFT, Inches(0.5), "SLIDE 06  -  CASE STUDY: PHẠT NGUỘI")
 txt(s, M_LEFT, Inches(1.0), CONTENT_W, Inches(0.55),
-    "1. SEO Inventory — Tiềm Năng Thị Trường", sz=24, bold=True, color=C_GRAY900)
+    "1. SEO Inventory - Tiềm Năng Thị Trường", sz=24, bold=True, color=C_GRAY900)
 txt(s, M_LEFT, Inches(1.55), CONTENT_W, Inches(0.3),
     "Nhu cầu thị trường & Quy mô tiếp cận (Market Potential)", sz=12, color=C_GRAY500)
 
@@ -475,8 +475,8 @@ tbl = tbl_shape.table
 tbl.columns[0].width = Inches(4)
 tbl.columns[1].width = Inches(4)
 
-stats = [("~3.56M", "lượt search/tháng — Volume lớn nhất nhóm Dịch vụ công"),
-         ("~356K", "organic sessions/tháng — Mục tiêu 10% SoV")]
+stats = [("~3.56M", "lượt search/tháng - Volume lớn nhất nhóm Dịch vụ công"),
+         ("~356K", "organic sessions/tháng - Mục tiêu 10% SoV")]
 
 for c, (val, label) in enumerate(stats):
     cell_v = tbl.cell(0, c)
@@ -507,7 +507,7 @@ divider_line(s, M_LEFT, Inches(3.5), CONTENT_W)
 bullet_box(s, M_LEFT, Inches(3.7), CONTENT_W, [
     ("Quy mô tìm kiếm lớn: ", "Đạt ~3.56M lượt search/tháng. Đây là cụm từ khóa có volume lớn nhất thuộc nhóm Dịch vụ công và Giao thông."),
     ("Nhu cầu thường trực: ", "Quy định pháp luật tăng mức phạt vi phạm giao thông, thúc đẩy nhu cầu tra cứu thường trực của tài xế."),
-    ("Tệp người dùng giá trị: ", "Hướng đến nhóm sở hữu phương tiện (ô tô, xe máy) có khả năng chi trả cao — đối tượng mục tiêu của các dịch vụ bảo hiểm và tài chính tiêu dùng."),
+    ("Tệp người dùng giá trị: ", "Hướng đến nhóm sở hữu phương tiện (ô tô, xe máy) có khả năng chi trả cao - đối tượng mục tiêu của các dịch vụ bảo hiểm và tài chính tiêu dùng."),
     ("Mục tiêu chiếm lĩnh: ", "Đón đầu và chuyển đổi 10% thị phần tìm kiếm (Share of Voice), tương đương ~356,000 lượt truy cập tự nhiên/tháng."),
 ], sz=12)
 
@@ -518,9 +518,9 @@ bullet_box(s, M_LEFT, Inches(3.7), CONTENT_W, [
 s = prs.slides.add_slide(prs.slide_layouts[6])
 solid_bg(s, C_WHITE)
 
-badge(s, M_LEFT, Inches(0.5), "SLIDE 07  —  CASE STUDY: PHẠT NGUỘI")
+badge(s, M_LEFT, Inches(0.5), "SLIDE 07  -  CASE STUDY: PHẠT NGUỘI")
 txt(s, M_LEFT, Inches(1.0), CONTENT_W, Inches(0.55),
-    "2. Vibe Code — Tốc Độ & Phát Triển", sz=24, bold=True, color=C_GRAY900)
+    "2. Vibe Code - Tốc Độ & Phát Triển", sz=24, bold=True, color=C_GRAY900)
 txt(s, M_LEFT, Inches(1.55), CONTENT_W, Inches(0.3),
     "Phương thức phát triển siêu tốc với sự hỗ trợ của AI", sz=12, color=C_GRAY500)
 
@@ -576,9 +576,9 @@ for c, (val, label, clr) in enumerate([("1 tuần", "Go-live toàn hệ thống 
 s = prs.slides.add_slide(prs.slide_layouts[6])
 solid_bg(s, C_WHITE)
 
-badge(s, M_LEFT, Inches(0.5), "SLIDE 08  —  CASE STUDY: PHẠT NGUỘI")
+badge(s, M_LEFT, Inches(0.5), "SLIDE 08  -  CASE STUDY: PHẠT NGUỘI")
 txt(s, M_LEFT, Inches(1.0), CONTENT_W, Inches(0.55),
-    "3. PLG Project — Quản Trị Chiến Dịch", sz=24, bold=True, color=C_GRAY900)
+    "3. PLG Project - Quản Trị Chiến Dịch", sz=24, bold=True, color=C_GRAY900)
 txt(s, M_LEFT, Inches(1.55), CONTENT_W, Inches(0.3),
     "Phân tách mục tiêu và cơ chế vận hành tự động hóa", sz=12, color=C_GRAY500)
 
@@ -638,9 +638,9 @@ bullet_box(s, M_LEFT, Inches(4.75), CONTENT_W, [
 s = prs.slides.add_slide(prs.slide_layouts[6])
 solid_bg(s, C_WHITE)
 
-badge(s, M_LEFT, Inches(0.5), "SLIDE 09  —  CASE STUDY: PHẠT NGUỘI")
+badge(s, M_LEFT, Inches(0.5), "SLIDE 09  -  CASE STUDY: PHẠT NGUỘI")
 txt(s, M_LEFT, Inches(1.0), CONTENT_W, Inches(0.55),
-    "4. SEO/GEO Performance — Hiệu Quả Thực Tế", sz=24, bold=True, color=C_GRAY900)
+    "4. SEO/GEO Performance - Hiệu Quả Thực Tế", sz=24, bold=True, color=C_GRAY900)
 txt(s, M_LEFT, Inches(1.55), CONTENT_W, Inches(0.3),
     "Số liệu tháng 6/2026", sz=12, color=C_GRAY500)
 
@@ -669,7 +669,7 @@ for c, (val, delta, label) in enumerate(kpis):
     tbl.rows[0].height = Inches(0.6)
 
     cell_d = tbl.cell(1, c)
-    cell_d.text = delta if delta else "—"
+    cell_d.text = delta if delta else "-"
     cell_d.fill.solid()
     cell_d.fill.fore_color.rgb = C_GRAY50
     p = cell_d.text_frame.paragraphs[0]
@@ -709,8 +709,8 @@ tbl.columns[0].width = Inches(3.77)
 tbl.columns[1].width = Inches(3.77)
 tbl.columns[2].width = Inches(3.76)
 
-geo_stats = [("1,920", "searches/tháng — Branded Search"),
-             ("697", "lượt trích dẫn — GEO Citations"),
+geo_stats = [("1,920", "searches/tháng - Branded Search"),
+             ("697", "lượt trích dẫn - GEO Citations"),
              ("7.84%", "SoA trên ChatGPT/Perplexity")]
 
 for c, (val, label) in enumerate(geo_stats):
@@ -744,7 +744,7 @@ for c, (val, label) in enumerate(geo_stats):
 s = prs.slides.add_slide(prs.slide_layouts[6])
 solid_bg(s, C_WHITE)
 
-badge(s, M_LEFT, Inches(0.5), "SLIDE 10  —  VẬN HÀNH")
+badge(s, M_LEFT, Inches(0.5), "SLIDE 10  -  VẬN HÀNH")
 txt(s, M_LEFT, Inches(1.0), CONTENT_W, Inches(0.55),
     "Quy Trình Vận Hành & Điều Kiện Tiên Quyết", sz=24, bold=True, color=C_GRAY900)
 txt(s, M_LEFT, Inches(1.55), CONTENT_W, Inches(0.4),
@@ -781,11 +781,11 @@ bullet_box(s, Inches(7.2), Inches(4.4), Inches(5.2), [
 s = prs.slides.add_slide(prs.slide_layouts[6])
 solid_bg(s, C_WHITE)
 
-badge(s, M_LEFT, Inches(0.5), "SLIDE 11  —  ĐO LƯỜNG")
+badge(s, M_LEFT, Inches(0.5), "SLIDE 11  -  ĐO LƯỜNG")
 txt(s, M_LEFT, Inches(1.0), CONTENT_W, Inches(0.55),
     "Kỳ Vọng & Chỉ Số Đo Lường Cốt Lõi", sz=24, bold=True, color=C_GRAY900)
 txt(s, M_LEFT, Inches(1.55), CONTENT_W, Inches(0.3),
-    "North Star Metrics — H2/2026", sz=12, color=C_GRAY500)
+    "North Star Metrics - H2/2026", sz=12, color=C_GRAY500)
 
 tbl_shape = s.shapes.add_table(5, 3, M_LEFT, Inches(2.2), CONTENT_W, Inches(4.0))
 tbl = tbl_shape.table
@@ -841,7 +841,7 @@ line.fill.fore_color.rgb = C_WHITE
 line.line.fill.background()
 
 txt(s, Inches(2), Inches(3.8), Inches(9.3), Inches(0.4),
-    "Growth Platform Division (GPD) — Hỗ trợ phát triển và vận hành hệ thống MoSpark",
+    "Growth Platform Division (GPD) - Hỗ trợ phát triển và vận hành hệ thống MoSpark",
     sz=14, color=C_PINK_LIGHT, align=PP_ALIGN.CENTER)
 txt(s, Inches(2), Inches(4.3), Inches(9.3), Inches(0.4),
     "Chúc dự án Pilot Phạt Nguội mang lại tăng trưởng bứt phá trong H2/2026",
