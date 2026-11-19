@@ -708,25 +708,35 @@
         "2026-09",
         "2026-10"
       ],
-      "total_users": 71728,
-      "total_transactions": 80050,
-      "total_tickets": 174094,
-      "total_actual_gmv_vnd": 16410250000.0,
-      "transactions_per_user": 1.116,
-      "tickets_per_transaction": 2.175,
-      "avg_ticket_price_vnd": 94261,
-      "vs_full_year_2025_trans_pct": "153.0%",
-      "vs_full_year_2025_gmv_pct": "153.0%",
-      "vs_full_year_2025_tickets_pct": "156.2%"
+      "total_users": 60378,
+      "total_transactions": 77625,
+      "total_tickets": 168884,
+      "total_actual_gmv_vnd": 15913125000.0,
+      "transactions_per_user": 1.286,
+      "tickets_per_transaction": 2.176,
+      "avg_ticket_price_vnd": 94225,
+      "vs_full_year_2025_trans_pct": "148.4%",
+      "vs_full_year_2025_gmv_pct": "148.4%",
+      "vs_full_year_2025_tickets_pct": "151.6%",
+      "sum_of_monthly_rows_reference": {
+        "total_users": 71728,
+        "total_transactions": 80050,
+        "total_tickets": 174094,
+        "total_actual_gmv_vnd": 16410250000.0
+      },
+      "source": "Dashboard In-App range T1-T10 (Success In-App Transactions)",
+      "confirmed_at": "2026-11-18",
+      "users_definition": "unique users toàn kỳ (không cộng MAU từng tháng)",
+      "reconciliation_note": "Cộng dồn bảng tháng cao hơn Dashboard đúng bằng Tháng 7 (2,425 đơn / 5,211 vé). Cần lọc riêng range T7 trên Dashboard."
     }
   },
   "forecast_q4_and_full_year_2026": {
     "generated_at": "2026-11-09",
     "methodology": "Phân tích chuỗi thời gian 10 tháng thực tế năm 2026 kết hợp hệ số mùa vụ Q4/2025 (Tháng 12 tăng vọt +42.6% MAU, +46.9% Transactions) và tác động từ chiến dịch Bò Sữa Bay O2O",
     "unit_economics_10m_baseline": {
-      "orders_per_user": 1.116,
-      "tickets_per_order": 2.175,
-      "avg_ticket_price_vnd": 94261,
+      "orders_per_user": 1.286,
+      "tickets_per_order": 2.176,
+      "avg_ticket_price_vnd": 94225,
       "aov_vnd": 205000
     },
     "scenarios": {
@@ -753,12 +763,13 @@
         },
         "full_year_2026": {
           "users_accumulated": 91967,
-          "transactions": 102636,
-          "tickets": 223219,
-          "gmv_vnd": 21040380000.0,
-          "growth_transactions_vs_2025_pct": 96.2,
-          "growth_tickets_vs_2025_pct": 100.3,
-          "growth_gmv_vs_2025_pct": 96.2
+          "transactions": 100211,
+          "tickets": 218009,
+          "gmv_vnd": 20543255000.0,
+          "growth_transactions_vs_2025_pct": 91.6,
+          "growth_tickets_vs_2025_pct": 95.7,
+          "growth_gmv_vs_2025_pct": 91.6,
+          "users_accumulated_note": "cộng MAU từng tháng (71,728 + 2 tháng dự báo), khác định nghĩa user không trùng lặp"
         }
       },
       "base_case": {
@@ -784,12 +795,13 @@
         },
         "full_year_2026": {
           "users_accumulated": 94680,
-          "transactions": 105665,
-          "tickets": 229806,
-          "gmv_vnd": 21661325000.0,
-          "growth_transactions_vs_2025_pct": 102.0,
-          "growth_tickets_vs_2025_pct": 106.2,
-          "growth_gmv_vs_2025_pct": 102.0
+          "transactions": 103240,
+          "tickets": 224596,
+          "gmv_vnd": 21164200000.0,
+          "growth_transactions_vs_2025_pct": 97.4,
+          "growth_tickets_vs_2025_pct": 101.6,
+          "growth_gmv_vs_2025_pct": 97.4,
+          "users_accumulated_note": "cộng MAU từng tháng (71,728 + 2 tháng dự báo), khác định nghĩa user không trùng lặp"
         }
       },
       "optimistic": {
@@ -815,12 +827,13 @@
         },
         "full_year_2026": {
           "users_accumulated": 98711,
-          "transactions": 110163,
-          "tickets": 239590,
-          "gmv_vnd": 22583415000.0,
-          "growth_transactions_vs_2025_pct": 110.6,
-          "growth_tickets_vs_2025_pct": 115.0,
-          "growth_gmv_vs_2025_pct": 110.6
+          "transactions": 107738,
+          "tickets": 234380,
+          "gmv_vnd": 22086290000.0,
+          "growth_transactions_vs_2025_pct": 106.0,
+          "growth_tickets_vs_2025_pct": 110.4,
+          "growth_gmv_vs_2025_pct": 106.0,
+          "users_accumulated_note": "cộng MAU từng tháng (71,728 + 2 tháng dự báo), khác định nghĩa user không trùng lặp"
         }
       }
     }

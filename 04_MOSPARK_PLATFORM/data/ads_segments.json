@@ -1,29 +1,36 @@
 {
-  "generated_at": "2026-11-17T12:57:29.612463+00:00",
-  "description": "Từ điển phân khúc (Segment Dictionary) chuẩn hóa cho Ads Manager dựa trên DIM_URL",
+  "generated_at": "2026-11-18T09:51:40.055630+00:00",
+  "version": "2.0",
+  "description": "Từ điển phân khúc (Segment Dictionary) chuẩn hóa toàn diện cho Ads Manager",
   "rules_enforced": [
-    "Hợp nhất toàn bộ Cinema_* vào 1 Segment duy nhất: 'Cinema'",
-    "Loại bỏ Blog, Tin Tức, Hỏi đáp, Guide khỏi Segment (đây là Page Type, không phải Segment)",
-    "Đồng bộ trực tiếp với DIM_URL và performance.sqlite"
+    "Hợp nhất Cinema: Gộp toàn bộ Cinema_* vào 1 Segment duy nhất 'Cinema'",
+    "Hợp nhất phân mảnh: Student (Pass+Hub), Game (Game+Nạp thẻ), Phạt Nguội (Phạt nguội+CSGT)",
+    "Sửa lệch Hub: Điểm Tín Dụng & Tiệm Vàng Online về Financial Hub; Nhận Tiền Quốc Tế về Payment Hub",
+    "Bổ sung 6 Segment còn thiếu: Y Tế, Dịch Vụ Công, Vé Tàu, Bảo Hiểm Du Lịch, Đăng Kiểm, Tiện Ích Đời Sống",
+    "Bổ sung Segment 'Toàn Website' để quy tụ các trang tài khoản, bảo mật, CSKH chung",
+    "Phân loại lại 2.297 URL trước đây bị gán nhãn thô là Blog, Tin Tức, Hỏi đáp về đúng Segment dịch vụ"
   ],
-  "total_segments": 74,
-  "total_rules": 2995,
-  "total_matched_urls": 25980,
+  "total_segments": 78,
+  "total_rules": 3012,
+  "total_matched_urls": 28299,
   "hubs_count": 14,
   "segments": [
     {
-      "segment_id": "seg_ien",
+      "segment_id": "seg_dien",
       "segment_name": "Điện",
       "hub_id": "billpay",
       "hub_name": "Billpay Hub",
       "hub_display_vn": "Hóa đơn và Đời sống",
       "page_types_supported": [
         "Blog",
+        "Guide",
+        "Hỏi đáp",
         "Landing Page",
-        "News"
+        "News",
+        "Tin Tức"
       ],
       "rules_count": 16,
-      "matched_urls_count": 13,
+      "matched_urls_count": 73,
       "rules": [
         {
           "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/them-giai-phap-tiet-kiem-dien-voi-tinh-nang-so-8909",
@@ -184,10 +191,13 @@
       "hub_display_vn": "Hóa đơn và Đời sống",
       "page_types_supported": [
         "Blog",
-        "Landing Page"
+        "Guide",
+        "Hỏi đáp",
+        "Landing Page",
+        "Tin Tức"
       ],
       "rules_count": 10,
-      "matched_urls_count": 8,
+      "matched_urls_count": 23,
       "rules": [
         {
           "rule": "https://www.momo.vn/nuoc",
@@ -249,10 +259,12 @@
       "hub_display_vn": "Hóa đơn và Đời sống",
       "page_types_supported": [
         "Blog",
+        "Guide",
+        "Hỏi đáp",
         "Landing Page"
       ],
       "rules_count": 9,
-      "matched_urls_count": 6,
+      "matched_urls_count": 16,
       "rules": [
         {
           "rule": "https://www.momo.vn/internet*",
@@ -353,10 +365,12 @@
       "hub_name": "Billpay Hub",
       "hub_display_vn": "Hóa đơn và Đời sống",
       "page_types_supported": [
+        "Guide",
+        "Hỏi đáp",
         "Landing Page"
       ],
       "rules_count": 4,
-      "matched_urls_count": 1,
+      "matched_urls_count": 6,
       "rules": [
         {
           "rule": "https://www.momo.vn/truyen-hinh",
@@ -415,16 +429,50 @@
       ]
     },
     {
+      "segment_id": "seg_y_te",
+      "segment_name": "Y Tế",
+      "hub_id": "billpay",
+      "hub_name": "Billpay Hub",
+      "hub_display_vn": "Hóa đơn và Đời sống",
+      "page_types_supported": [
+        "Landing Page",
+        "Merchant page",
+        "Page"
+      ],
+      "rules_count": 3,
+      "matched_urls_count": 7,
+      "rules": [
+        {
+          "rule": "https://www.momo.vn/thanh-toan-momo-benh-vien-*",
+          "match_type": "Dynamic",
+          "page_type": "Landing Page"
+        },
+        {
+          "rule": "https://www.momo.vn/benh-vien/*",
+          "match_type": "Dynamic",
+          "page_type": "Page"
+        },
+        {
+          "rule": "https://www.momo.vn/thanh-toan-momo-benh-vien-dai-hoc-y-duoc",
+          "match_type": "Static",
+          "page_type": "Merchant page"
+        }
+      ]
+    },
+    {
       "segment_id": "seg_hoc_phi",
       "segment_name": "Học Phí",
       "hub_id": "billpay",
       "hub_name": "Billpay Hub",
       "hub_display_vn": "Hóa đơn và Đời sống",
       "page_types_supported": [
-        "Landing Page"
+        "Blog",
+        "Hỏi đáp",
+        "Landing Page",
+        "Tin Tức"
       ],
       "rules_count": 3,
-      "matched_urls_count": 1,
+      "matched_urls_count": 25,
       "rules": [
         {
           "rule": "https://www.momo.vn/thanh-toan-momo-the-hoc-duong-ssc",
@@ -444,6 +492,32 @@
       ]
     },
     {
+      "segment_id": "seg_dich_vu_cong",
+      "segment_name": "Dịch Vụ Công",
+      "hub_id": "billpay",
+      "hub_name": "Billpay Hub",
+      "hub_display_vn": "Hóa đơn và Đời sống",
+      "page_types_supported": [
+        "Hỏi đáp",
+        "Landing Page",
+        "Page"
+      ],
+      "rules_count": 2,
+      "matched_urls_count": 8,
+      "rules": [
+        {
+          "rule": "https://www.momo.vn/dich-vu-cong/*",
+          "match_type": "Dynamic",
+          "page_type": "Page"
+        },
+        {
+          "rule": "https://www.momo.vn/nop-thue/*",
+          "match_type": "Dynamic",
+          "page_type": "Landing Page"
+        }
+      ]
+    },
+    {
       "segment_id": "seg_cinema",
       "segment_name": "Cinema",
       "hub_id": "cinema",
@@ -452,13 +526,16 @@
       "page_types_supported": [
         "Blog",
         "Cineplex Page",
+        "Guide",
         "Home Page",
+        "Hỏi đáp",
         "Landing Page",
         "News",
-        "Page"
+        "Page",
+        "Tin Tức"
       ],
       "rules_count": 160,
-      "matched_urls_count": 1013,
+      "matched_urls_count": 1025,
       "rules": [
         {
           "rule": "https://www.momo.vn/cinema",
@@ -1271,13 +1348,15 @@
       "page_types_supported": [
         "Blog",
         "Campaign Page",
+        "Guide",
         "Home Page",
         "Hỏi đáp",
         "Landing Page",
-        "News"
+        "News",
+        "Tin Tức"
       ],
       "rules_count": 116,
-      "matched_urls_count": 74,
+      "matched_urls_count": 137,
       "rules": [
         {
           "rule": "https://www.momo.vn/vi-tra-sau/*",
@@ -2372,12 +2451,14 @@
         "Blog",
         "Guide",
         "Home Page",
+        "Hỏi đáp",
         "Landing Page",
         "News",
-        "Page"
+        "Page",
+        "Tin Tức"
       ],
       "rules_count": 70,
-      "matched_urls_count": 104,
+      "matched_urls_count": 166,
       "rules": [
         {
           "rule": "https://www.momo.vn/vay-nhanh",
@@ -2739,11 +2820,13 @@
       "hub_display_vn": "Dịch vụ Tài chính",
       "page_types_supported": [
         "Blog",
+        "Hỏi đáp",
         "Landing Page",
-        "Page"
+        "Page",
+        "Tin Tức"
       ],
       "rules_count": 41,
-      "matched_urls_count": 18,
+      "matched_urls_count": 40,
       "rules": [
         {
           "rule": "https://www.momo.vn/chung-khoan",
@@ -2959,12 +3042,14 @@
       "hub_name": "Financial Hub",
       "hub_display_vn": "Dịch vụ Tài chính",
       "page_types_supported": [
+        "Blog",
         "Landing Page",
         "Page",
+        "Tin Tức",
         "Tool Page"
       ],
       "rules_count": 18,
-      "matched_urls_count": 18,
+      "matched_urls_count": 40,
       "rules": [
         {
           "rule": "https://www.momo.vn/tiet-kiem-online",
@@ -3055,6 +3140,107 @@
           "rule": "https://www.momo.vn/tai-chinh/gui-tiet-kiem",
           "match_type": "Static",
           "page_type": "Tool Page"
+        }
+      ]
+    },
+    {
+      "segment_id": "seg_diem_tin_dung",
+      "segment_name": "Điểm Tín Dụng",
+      "hub_id": "financial",
+      "hub_name": "Financial Hub",
+      "hub_display_vn": "Dịch vụ Tài chính",
+      "page_types_supported": [
+        "Blog",
+        "Home Page",
+        "Landing Page"
+      ],
+      "rules_count": 17,
+      "matched_urls_count": 10,
+      "rules": [
+        {
+          "rule": "https://www.momo.vn/diem-tin-dung",
+          "match_type": "Static",
+          "page_type": "Home Page"
+        },
+        {
+          "rule": "https://momo.vn/blog/the-tin-dung-anh-huong-den-diem-tin-dung-nhu-the-nao-cach-dung-dung-de-tang-diem-nhanh-c0dt2624",
+          "match_type": "Static",
+          "page_type": "Blog"
+        },
+        {
+          "rule": "https://momo.vn/blog/no-xau-co-vay-tien-online-duoc-khong-c0dt2623",
+          "match_type": "Static",
+          "page_type": "Blog"
+        },
+        {
+          "rule": "https://momo.vn/blog/no-xau-la-gi-khi-nao-bi-xep-no-xau-va-anh-huong-ra-sao-c0dt2622",
+          "match_type": "Static",
+          "page_type": "Blog"
+        },
+        {
+          "rule": "https://momo.vn/blog/no-xau-bao-lau-duoc-xoa-quy-trinh-xoa-no-xau-cic-thoi-gian-cap-nhat-cach-cai-thien-ho-so-tin-dung-sau-tat-toan-c0dt2621",
+          "match_type": "Static",
+          "page_type": "Blog"
+        },
+        {
+          "rule": "https://momo.vn/blog/diem-tin-dung-cic-duoc-cham-khi-nao-cach-theo-doi-va-phan-biet-bao-cao-k40-vs-k11-c0dt2619",
+          "match_type": "Static",
+          "page_type": "Blog"
+        },
+        {
+          "rule": "https://momo.vn/blog/diem-tin-dung-la-gi-cach-tinh-y-nghia-va-cach-cai-thien-diem-tin-dung-nam-2026-c0dt2618",
+          "match_type": "Static",
+          "page_type": "Blog"
+        },
+        {
+          "rule": "https://momo.vn/blog/cic-la-gi-tat-ca-nhung-gi-ban-can-biet-ve-ho-so-tin-dung-cic-c0dt2617",
+          "match_type": "Static",
+          "page_type": "Blog"
+        },
+        {
+          "rule": "https://www.momo.vn/blog/huong-dan-kiem-tra-diem-tin-dung-ca-nhan-c116dt1413",
+          "match_type": "Static",
+          "page_type": "Blog"
+        },
+        {
+          "rule": "https://www.momo.vn/blog/no-xau-la-gi-khi-nao-bi-xep-no-xau-va-anh-huong-ra-sao-c116dt2622",
+          "match_type": "Static",
+          "page_type": "Blog"
+        },
+        {
+          "rule": "https://www.momo.vn/blog/diem-tin-dung-cic-duoc-cham-khi-nao-cach-theo-doi-va-phan-biet-bao-cao-k40-vs-k11-c116dt2619",
+          "match_type": "Static",
+          "page_type": "Blog"
+        },
+        {
+          "rule": "https://www.momo.vn/blog/kiem-tra-no-xau-c116dt2688",
+          "match_type": "Static",
+          "page_type": "Landing Page"
+        },
+        {
+          "rule": "https://www.momo.vn/blog/cic-la-gi-tat-ca-nhung-gi-ban-can-biet-ve-ho-so-tin-dung-cic-c116dt2617",
+          "match_type": "Static",
+          "page_type": "Landing Page"
+        },
+        {
+          "rule": "https://www.momo.vn/blog/kiem-tra-no-xau-bang-so-dien-thoai-c116dt2689",
+          "match_type": "Static",
+          "page_type": "Landing Page"
+        },
+        {
+          "rule": "https://www.momo.vn/blog/diem-tin-dung-la-gi-cach-tinh-y-nghia-va-cach-cai-thien-diem-tin-dung-nam-2026-c116dt2618",
+          "match_type": "Static",
+          "page_type": "Landing Page"
+        },
+        {
+          "rule": "https://www.momo.vn/blog/no-chu-y-la-gi-c116dt2692",
+          "match_type": "Static",
+          "page_type": "Landing Page"
+        },
+        {
+          "rule": "https://www.momo.vn/blog/no-qua-han-bao-lau-thi-bi-khoi-kien-c116dt2695",
+          "match_type": "Static",
+          "page_type": "Landing Page"
         }
       ]
     },
@@ -3163,11 +3349,14 @@
       "hub_name": "Financial Hub",
       "hub_display_vn": "Dịch vụ Tài chính",
       "page_types_supported": [
+        "Blog",
+        "Hỏi đáp",
         "Landing Page",
-        "Page"
+        "Page",
+        "Tin Tức"
       ],
       "rules_count": 13,
-      "matched_urls_count": 13,
+      "matched_urls_count": 48,
       "rules": [
         {
           "rule": "https://www.momo.vn/mo-the-tin-dung",
@@ -3248,7 +3437,7 @@
         "Page"
       ],
       "rules_count": 11,
-      "matched_urls_count": 3,
+      "matched_urls_count": 4,
       "rules": [
         {
           "rule": "https://www.momo.vn/chung-chi-quy",
@@ -3388,11 +3577,12 @@
       "hub_name": "Financial Hub",
       "hub_display_vn": "Dịch vụ Tài chính",
       "page_types_supported": [
+        "Blog",
         "Page",
         "Tool Page"
       ],
       "rules_count": 2,
-      "matched_urls_count": 5,
+      "matched_urls_count": 8,
       "rules": [
         {
           "rule": "https://www.momo.vn/tai-chinh/ty-gia/*",
@@ -3414,10 +3604,11 @@
       "hub_display_vn": "Dịch vụ Tài chính",
       "page_types_supported": [
         "Page",
+        "Tin Tức",
         "Tool Page"
       ],
       "rules_count": 2,
-      "matched_urls_count": 1,
+      "matched_urls_count": 2,
       "rules": [
         {
           "rule": "https://www.momo.vn/tai-chinh/gia-vang/*",
@@ -3487,10 +3678,12 @@
       "hub_name": "Financial Hub",
       "hub_display_vn": "Dịch vụ Tài chính",
       "page_types_supported": [
-        "Page"
+        "Hỏi đáp",
+        "Page",
+        "Tin Tức"
       ],
       "rules_count": 1,
-      "matched_urls_count": 1,
+      "matched_urls_count": 21,
       "rules": [
         {
           "rule": "https://www.momo.vn/tui-than-tai",
@@ -3538,7 +3731,7 @@
       ]
     },
     {
-      "segment_id": "seg_san_au_tu",
+      "segment_id": "seg_san_dau_tu",
       "segment_name": "Sàn Đầu Tư",
       "hub_id": "financial",
       "hub_name": "Financial Hub",
@@ -3553,6 +3746,25 @@
           "rule": "https://www.momo.vn/san-dau-tu",
           "match_type": "Static",
           "page_type": "Page"
+        }
+      ]
+    },
+    {
+      "segment_id": "seg_tiem_vang_online",
+      "segment_name": "Tiệm Vàng Online",
+      "hub_id": "financial",
+      "hub_name": "Financial Hub",
+      "hub_display_vn": "Dịch vụ Tài chính",
+      "page_types_supported": [
+        "Landing Page"
+      ],
+      "rules_count": 1,
+      "matched_urls_count": 1,
+      "rules": [
+        {
+          "rule": "https://www.momo.vn/tiem-vang-online",
+          "match_type": "Static",
+          "page_type": "Landing Page"
         }
       ]
     },
@@ -3584,12 +3796,15 @@
       "page_types_supported": [
         "Blog",
         "FAQ",
+        "Guide",
+        "Hỏi đáp",
         "Landing Page",
         "News",
-        "Page"
+        "Page",
+        "Tin Tức"
       ],
-      "rules_count": 50,
-      "matched_urls_count": 44,
+      "rules_count": 51,
+      "matched_urls_count": 169,
       "rules": [
         {
           "rule": "https://www.momo.vn/nap-the-game",
@@ -3658,6 +3873,11 @@
         },
         {
           "rule": "https://www.momo.vn/blog/cach-dat-ten-lien-quan-mobile-dep-c115dt941",
+          "match_type": "Static",
+          "page_type": "Landing Page"
+        },
+        {
+          "rule": "https://www.momo.vn/tin-tuc/tin-tuc-su-kien/he-bat-mood-game-nap-the-giam-ngay-20-tren-8861",
           "match_type": "Static",
           "page_type": "Landing Page"
         },
@@ -3844,30 +4064,11 @@
       ]
     },
     {
-      "segment_id": "seg_nap_the_game",
-      "segment_name": "Nạp thẻ Game",
-      "hub_id": "game",
-      "hub_name": "Game Hub",
-      "hub_display_vn": "Cộng đồng Game",
-      "page_types_supported": [
-        "Landing Page"
-      ],
-      "rules_count": 1,
-      "matched_urls_count": 1,
-      "rules": [
-        {
-          "rule": "https://www.momo.vn/tin-tuc/tin-tuc-su-kien/he-bat-mood-game-nap-the-giam-ngay-20-tren-8861",
-          "match_type": "Static",
-          "page_type": "Landing Page"
-        }
-      ]
-    },
-    {
       "segment_id": "seg_khuyen_mai",
       "segment_name": "Khuyến mãi",
       "hub_id": "general",
       "hub_name": "General Platform",
-      "hub_display_vn": "Tiện ích Nền tảng chung",
+      "hub_display_vn": "Nền tảng và Tiện ích chung",
       "page_types_supported": [
         "Home Page",
         "Landing Page",
@@ -4064,7 +4265,7 @@
       "segment_name": "Campaign",
       "hub_id": "general",
       "hub_name": "General Platform",
-      "hub_display_vn": "Tiện ích Nền tảng chung",
+      "hub_display_vn": "Nền tảng và Tiện ích chung",
       "page_types_supported": [
         "Campaign Page",
         "Landing Page",
@@ -4251,7 +4452,7 @@
       "segment_name": "Donation",
       "hub_id": "general",
       "hub_name": "General Platform",
-      "hub_display_vn": "Tiện ích Nền tảng chung",
+      "hub_display_vn": "Nền tảng và Tiện ích chung",
       "page_types_supported": [
         "Landing Page",
         "Page"
@@ -4377,112 +4578,11 @@
       ]
     },
     {
-      "segment_id": "seg_iem_tin_dung",
-      "segment_name": "Điểm Tín Dụng",
-      "hub_id": "general",
-      "hub_name": "General Platform",
-      "hub_display_vn": "Tiện ích Nền tảng chung",
-      "page_types_supported": [
-        "Blog",
-        "Home Page",
-        "Landing Page"
-      ],
-      "rules_count": 17,
-      "matched_urls_count": 10,
-      "rules": [
-        {
-          "rule": "https://www.momo.vn/diem-tin-dung",
-          "match_type": "Static",
-          "page_type": "Home Page"
-        },
-        {
-          "rule": "https://momo.vn/blog/the-tin-dung-anh-huong-den-diem-tin-dung-nhu-the-nao-cach-dung-dung-de-tang-diem-nhanh-c0dt2624",
-          "match_type": "Static",
-          "page_type": "Blog"
-        },
-        {
-          "rule": "https://momo.vn/blog/no-xau-co-vay-tien-online-duoc-khong-c0dt2623",
-          "match_type": "Static",
-          "page_type": "Blog"
-        },
-        {
-          "rule": "https://momo.vn/blog/no-xau-la-gi-khi-nao-bi-xep-no-xau-va-anh-huong-ra-sao-c0dt2622",
-          "match_type": "Static",
-          "page_type": "Blog"
-        },
-        {
-          "rule": "https://momo.vn/blog/no-xau-bao-lau-duoc-xoa-quy-trinh-xoa-no-xau-cic-thoi-gian-cap-nhat-cach-cai-thien-ho-so-tin-dung-sau-tat-toan-c0dt2621",
-          "match_type": "Static",
-          "page_type": "Blog"
-        },
-        {
-          "rule": "https://momo.vn/blog/diem-tin-dung-cic-duoc-cham-khi-nao-cach-theo-doi-va-phan-biet-bao-cao-k40-vs-k11-c0dt2619",
-          "match_type": "Static",
-          "page_type": "Blog"
-        },
-        {
-          "rule": "https://momo.vn/blog/diem-tin-dung-la-gi-cach-tinh-y-nghia-va-cach-cai-thien-diem-tin-dung-nam-2026-c0dt2618",
-          "match_type": "Static",
-          "page_type": "Blog"
-        },
-        {
-          "rule": "https://momo.vn/blog/cic-la-gi-tat-ca-nhung-gi-ban-can-biet-ve-ho-so-tin-dung-cic-c0dt2617",
-          "match_type": "Static",
-          "page_type": "Blog"
-        },
-        {
-          "rule": "https://www.momo.vn/blog/huong-dan-kiem-tra-diem-tin-dung-ca-nhan-c116dt1413",
-          "match_type": "Static",
-          "page_type": "Blog"
-        },
-        {
-          "rule": "https://www.momo.vn/blog/no-xau-la-gi-khi-nao-bi-xep-no-xau-va-anh-huong-ra-sao-c116dt2622",
-          "match_type": "Static",
-          "page_type": "Blog"
-        },
-        {
-          "rule": "https://www.momo.vn/blog/diem-tin-dung-cic-duoc-cham-khi-nao-cach-theo-doi-va-phan-biet-bao-cao-k40-vs-k11-c116dt2619",
-          "match_type": "Static",
-          "page_type": "Blog"
-        },
-        {
-          "rule": "https://www.momo.vn/blog/kiem-tra-no-xau-c116dt2688",
-          "match_type": "Static",
-          "page_type": "Landing Page"
-        },
-        {
-          "rule": "https://www.momo.vn/blog/cic-la-gi-tat-ca-nhung-gi-ban-can-biet-ve-ho-so-tin-dung-cic-c116dt2617",
-          "match_type": "Static",
-          "page_type": "Landing Page"
-        },
-        {
-          "rule": "https://www.momo.vn/blog/kiem-tra-no-xau-bang-so-dien-thoai-c116dt2689",
-          "match_type": "Static",
-          "page_type": "Landing Page"
-        },
-        {
-          "rule": "https://www.momo.vn/blog/diem-tin-dung-la-gi-cach-tinh-y-nghia-va-cach-cai-thien-diem-tin-dung-nam-2026-c116dt2618",
-          "match_type": "Static",
-          "page_type": "Landing Page"
-        },
-        {
-          "rule": "https://www.momo.vn/blog/no-chu-y-la-gi-c116dt2692",
-          "match_type": "Static",
-          "page_type": "Landing Page"
-        },
-        {
-          "rule": "https://www.momo.vn/blog/no-qua-han-bao-lau-thi-bi-khoi-kien-c116dt2695",
-          "match_type": "Static",
-          "page_type": "Landing Page"
-        }
-      ]
-    },
-    {
       "segment_id": "seg_trust",
       "segment_name": "Trust",
       "hub_id": "general",
       "hub_name": "General Platform",
-      "hub_display_vn": "Tiện ích Nền tảng chung",
+      "hub_display_vn": "Nền tảng và Tiện ích chung",
       "page_types_supported": [
         "Landing Page"
       ],
@@ -4562,11 +4662,72 @@
       ]
     },
     {
+      "segment_id": "seg_toan_website",
+      "segment_name": "Toàn Website",
+      "hub_id": "general",
+      "hub_name": "General Platform",
+      "hub_display_vn": "Nền tảng và Tiện ích chung",
+      "page_types_supported": [
+        "Blog",
+        "Guide",
+        "Home Page",
+        "Hỏi đáp",
+        "Page",
+        "Tin Tức"
+      ],
+      "rules_count": 3,
+      "matched_urls_count": 1344,
+      "rules": [
+        {
+          "rule": "https://www.momo.vn/",
+          "match_type": "Static",
+          "page_type": "Home Page"
+        },
+        {
+          "rule": "https://www.momo.vn/hoi-dap/*",
+          "match_type": "Dynamic",
+          "page_type": "Hỏi đáp"
+        },
+        {
+          "rule": "https://www.momo.vn/huong-dan/*",
+          "match_type": "Dynamic",
+          "page_type": "Guide"
+        }
+      ]
+    },
+    {
+      "segment_id": "seg_tien_ich_doi_song",
+      "segment_name": "Tiện Ích Đời Sống",
+      "hub_id": "general",
+      "hub_name": "General Platform",
+      "hub_display_vn": "Nền tảng và Tiện ích chung",
+      "page_types_supported": [
+        "Blog",
+        "Hỏi đáp",
+        "Tin Tức",
+        "Tool Page"
+      ],
+      "rules_count": 2,
+      "matched_urls_count": 147,
+      "rules": [
+        {
+          "rule": "https://www.momo.vn/blog/than-so-hoc-*",
+          "match_type": "Dynamic",
+          "page_type": "Blog"
+        },
+        {
+          "rule": "https://www.momo.vn/lich-van-nien",
+          "match_type": "Static",
+          "page_type": "Tool Page"
+        }
+      ]
+    },
+    {
       "segment_id": "seg_tim_kiem",
       "segment_name": "Tìm Kiếm",
       "hub_id": "general",
       "hub_name": "General Platform",
-      "hub_display_vn": "Tiện ích Nền tảng chung",
+      "hub_display_vn": "Nền tảng và Tiện ích chung",
       "page_types_supported": [
         "Mini Web"
       ],
@@ -4590,7 +4751,7 @@
       "segment_name": "Tuyển Dụng",
       "hub_id": "general",
       "hub_name": "General Platform",
-      "hub_display_vn": "Tiện ích Nền tảng chung",
+      "hub_display_vn": "Nền tảng và Tiện ích chung",
       "page_types_supported": [
         "Landing Page"
       ],
@@ -4610,49 +4771,6 @@
       ]
     },
     {
-      "segment_id": "seg_nhan_tien_quoc_te",
-      "segment_name": "Nhận Tiền Quốc Tế",
-      "hub_id": "general",
-      "hub_name": "General Platform",
-      "hub_display_vn": "Tiện ích Nền tảng chung",
-      "page_types_supported": [
-        "Landing Page"
-      ],
-      "rules_count": 2,
-      "matched_urls_count": 1,
-      "rules": [
-        {
-          "rule": "https://www.momo.vn/nhan-tien-quoc-te",
-          "match_type": "Static",
-          "page_type": "Landing Page"
-        },
-        {
-          "rule": "https://www.momo.vn/nhan-tien-quoc-te/*",
-          "match_type": "Dynamic",
-          "page_type": "Landing Page"
-        }
-      ]
-    },
-    {
-      "segment_id": "seg_tiem_vang_online",
-      "segment_name": "Tiệm Vàng Online",
-      "hub_id": "general",
-      "hub_name": "General Platform",
-      "hub_display_vn": "Tiện ích Nền tảng chung",
-      "page_types_supported": [
-        "Landing Page"
-      ],
-      "rules_count": 1,
-      "matched_urls_count": 1,
-      "rules": [
-        {
-          "rule": "https://www.momo.vn/tiem-vang-online",
-          "match_type": "Static",
-          "page_type": "Landing Page"
-        }
-      ]
-    },
-    {
       "segment_id": "seg_bao_hiem_o_to",
       "segment_name": "Bảo Hiểm Ô Tô",
       "hub_id": "insurance",
@@ -4661,13 +4779,14 @@
       "page_types_supported": [
         "Blog",
         "Home Page",
+        "Hỏi đáp",
         "Landing Page",
         "Merchant Page",
         "News",
         "Page"
       ],
-      "rules_count": 79,
-      "matched_urls_count": 92,
+      "rules_count": 77,
+      "matched_urls_count": 96,
       "rules": [
         {
           "rule": "https://www.momo.vn/bao-hiem-o-to",
@@ -4796,11 +4915,6 @@
         },
         {
           "rule": "https://www.momo.vn/bao-hiem-o-to/blog/loi-khong-co-bao-hiem-o-to-phat-bao-nhieu-1232",
-          "match_type": "Static",
-          "page_type": "Blog"
-        },
-        {
-          "rule": "https://www.momo.vn/bao-hiem-o-to/blog/quy-dinh-dang-kiem-xe-o-to-moi-nhat-1246",
           "match_type": "Static",
           "page_type": "Blog"
         },
@@ -4940,11 +5054,6 @@
           "page_type": "Blog"
         },
         {
-          "rule": "https://www.momo.vn/bao-hiem-o-to/blog/dang-kiem-xe-o-to-la-gi-1159",
-          "match_type": "Static",
-          "page_type": "Blog"
-        },
-        {
           "rule": "https://www.momo.vn/bao-hiem-o-to/blog/garage-o-to-gan-day-dia-chi-gara-sua-chua-o-to-uy-tin-tai-ho-chi-minh-1119",
           "match_type": "Static",
           "page_type": "Blog"
@@ -5074,13 +5183,15 @@
       "hub_display_vn": "Bảo hiểm",
       "page_types_supported": [
         "Blog",
+        "Guide",
         "Home Page",
+        "Hỏi đáp",
         "Landing Page",
         "News",
         "Page"
       ],
       "rules_count": 39,
-      "matched_urls_count": 38,
+      "matched_urls_count": 63,
       "rules": [
         {
           "rule": "https://www.momo.vn/bao-hiem-y-te",
@@ -5287,12 +5398,14 @@
       "hub_display_vn": "Bảo hiểm",
       "page_types_supported": [
         "Blog",
+        "Guide",
         "Home Page",
+        "Hỏi đáp",
         "News",
         "Page"
       ],
       "rules_count": 37,
-      "matched_urls_count": 26,
+      "matched_urls_count": 34,
       "rules": [
         {
           "rule": "https://www.momo.vn/bao-hiem-xe-may",
@@ -5488,13 +5601,16 @@
       "hub_name": "Insurance Hub",
       "hub_display_vn": "Bảo hiểm",
       "page_types_supported": [
+        "Blog",
         "Home Page",
+        "Hỏi đáp",
         "Landing Page",
         "Page",
-        "Product Page"
+        "Product Page",
+        "Tin Tức"
       ],
-      "rules_count": 20,
-      "matched_urls_count": 17,
+      "rules_count": 16,
+      "matched_urls_count": 86,
       "rules": [
         {
           "rule": "https://www.momo.vn/bao-hiem/tra-cuu-bao-hiem",
@@ -5503,11 +5619,6 @@
         },
         {
           "rule": "https://www.momo.vn/blog/bao-hiem-tre-chuyen-bay-chi-phi-bao-nhieu-va-quyen-loi-nhu-the-nao-c116dt1138",
-          "match_type": "Static",
-          "page_type": "Landing Page"
-        },
-        {
-          "rule": "https://www.momo.vn/bao-hiem-du-lich-quoc-te",
           "match_type": "Static",
           "page_type": "Landing Page"
         },
@@ -5547,11 +5658,6 @@
           "page_type": "Landing Page"
         },
         {
-          "rule": "https://www.momo.vn/bao-hiem-du-lich-toan-dien",
-          "match_type": "Static",
-          "page_type": "Landing Page"
-        },
-        {
           "rule": "https://www.momo.vn/blog/bao-hiem-xa-hoi-la-gi-nhung-dieu-ban-can-biet-khi-tham-gia-bao-hiem-xa-hoi-c181dt1645",
           "match_type": "Static",
           "page_type": "Landing Page"
@@ -5572,11 +5678,6 @@
           "page_type": "Landing Page"
         },
         {
-          "rule": "https://www.momo.vn/blog/cap-nhat-gia-bao-hiem-du-lich-noi-dia-moi-nhat-2024-c116dt1279",
-          "match_type": "Static",
-          "page_type": "Landing Page"
-        },
-        {
           "rule": "https://www.momo.vn/bao-hiem",
           "match_type": "Static",
           "page_type": "Home Page"
@@ -5590,6 +5691,46 @@
           "rule": "https://www.momo.vn/bao-hiem-tai-nan",
           "match_type": "Static",
           "page_type": "Product Page"
+        }
+      ]
+    },
+    {
+      "segment_id": "seg_bao_hiem_du_lich",
+      "segment_name": "Bảo Hiểm Du Lịch",
+      "hub_id": "insurance",
+      "hub_name": "Insurance Hub",
+      "hub_display_vn": "Bảo hiểm",
+      "page_types_supported": [
+        "Landing Page",
+        "Product Page"
+      ],
+      "rules_count": 6,
+      "matched_urls_count": 9,
+      "rules": [
+        {
+          "rule": "https://www.momo.vn/bao-hiem-du-lich",
+          "match_type": "Static",
+          "page_type": "Product Page"
+        },
+        {
+          "rule": "https://www.momo.vn/bao-hiem-du-lich-quoc-te",
+          "match_type": "Static",
+          "page_type": "Product Page"
+        },
+        {
+          "rule": "https://www.momo.vn/bao-hiem-du-lich-quoc-te",
+          "match_type": "Static",
+          "page_type": "Landing Page"
+        },
+        {
+          "rule": "https://www.momo.vn/bao-hiem-du-lich-toan-dien",
+          "match_type": "Static",
+          "page_type": "Landing Page"
+        },
+        {
+          "rule": "https://www.momo.vn/blog/cap-nhat-gia-bao-hiem-du-lich-noi-dia-moi-nhat-2024-c116dt1279",
+          "match_type": "Static",
+          "page_type": "Landing Page"
         },
         {
           "rule": "https://www.momo.vn/bao-hiem-du-lich",
@@ -5605,10 +5746,13 @@
       "hub_name": "Insurance Hub",
       "hub_display_vn": "Bảo hiểm",
       "page_types_supported": [
-        "Landing Page"
+        "Blog",
+        "Hỏi đáp",
+        "Landing Page",
+        "Tin Tức"
       ],
       "rules_count": 1,
-      "matched_urls_count": 1,
+      "matched_urls_count": 7,
       "rules": [
         {
           "rule": "https://www.momo.vn/bao-hiem-suc-khoe",
@@ -5644,11 +5788,14 @@
       "hub_display_vn": "Vé số",
       "page_types_supported": [
         "Blog",
+        "Guide",
+        "Hỏi đáp",
         "Landing Page",
-        "News"
+        "News",
+        "Tin Tức"
       ],
       "rules_count": 7,
-      "matched_urls_count": 5,
+      "matched_urls_count": 20,
       "rules": [
         {
           "rule": "https://www.momo.vn/tin-tuc/thong-bao/huong-dan-mo-tai-khoan-va-mua-ve-vietlott-sms-5667",
@@ -5699,10 +5846,11 @@
         "Landing Page",
         "Merchant page",
         "News",
-        "Page"
+        "Page",
+        "Tin Tức"
       ],
-      "rules_count": 164,
-      "matched_urls_count": 17782,
+      "rules_count": 163,
+      "matched_urls_count": 17780,
       "rules": [
         {
           "rule": "https://www.momo.vn/tho-dia-momo",
@@ -6370,11 +6518,6 @@
           "page_type": "Merchant page"
         },
         {
-          "rule": "https://www.momo.vn/thanh-toan-momo-benh-vien-dai-hoc-y-duoc",
-          "match_type": "Static",
-          "page_type": "Merchant page"
-        },
-        {
           "rule": "https://www.momo.vn/merchant/tiem-banh-homie-560",
           "match_type": "Static",
           "page_type": "Merchant page"
@@ -6994,11 +7137,16 @@
       "hub_name": "Payment Hub",
       "hub_display_vn": "Thanh toán và Chuyển tiền",
       "page_types_supported": [
+        "Blog",
+        "Guide",
+        "Hỏi đáp",
         "Landing Page",
-        "News"
+        "News",
+        "Page",
+        "Tin Tức"
       ],
       "rules_count": 29,
-      "matched_urls_count": 24,
+      "matched_urls_count": 77,
       "rules": [
         {
           "rule": "https://www.momo.vn/chuyen-tien",
@@ -7405,6 +7553,32 @@
       ]
     },
     {
+      "segment_id": "seg_nhan_tien_quoc_te",
+      "segment_name": "Nhận Tiền Quốc Tế",
+      "hub_id": "payment",
+      "hub_name": "Payment Hub",
+      "hub_display_vn": "Thanh toán và Chuyển tiền",
+      "page_types_supported": [
+        "Blog",
+        "Hỏi đáp",
+        "Landing Page"
+      ],
+      "rules_count": 2,
+      "matched_urls_count": 13,
+      "rules": [
+        {
+          "rule": "https://www.momo.vn/nhan-tien-quoc-te",
+          "match_type": "Static",
+          "page_type": "Landing Page"
+        },
+        {
+          "rule": "https://www.momo.vn/nhan-tien-quoc-te/*",
+          "match_type": "Dynamic",
+          "page_type": "Landing Page"
+        }
+      ]
+    },
+    {
       "segment_id": "seg_xu",
       "segment_name": "XU",
       "hub_id": "payment",
@@ -7424,17 +7598,19 @@
       ]
     },
     {
-      "segment_id": "seg_student_pass",
-      "segment_name": "Student Pass",
+      "segment_id": "seg_student",
+      "segment_name": "Student",
       "hub_id": "student",
       "hub_name": "Student Hub",
       "hub_display_vn": "Gói Sinh viên",
       "page_types_supported": [
+        "Blog",
         "Landing Page",
-        "News"
+        "News",
+        "School Page"
       ],
-      "rules_count": 9,
-      "matched_urls_count": 15,
+      "rules_count": 12,
+      "matched_urls_count": 22,
       "rules": [
         {
           "rule": "https://www.momo.vn/student-pass/back-to-school",
@@ -7450,6 +7626,21 @@
           "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/bao-boi-nhap-hoc-dong-hanh-cung-sinh-vien-tu-tin-8987",
           "match_type": "Static",
           "page_type": "News"
+        },
+        {
+          "rule": "https://www.momo.vn/sinh-vien",
+          "match_type": "Static",
+          "page_type": "Landing Page"
+        },
+        {
+          "rule": "https://www.momo.vn/sinh-vien/dai-hoc-kinh-te-tp-ho-chi-minh-ueh",
+          "match_type": "Static",
+          "page_type": "School Page"
+        },
+        {
+          "rule": "https://www.momo.vn/sinh-vien/blog*",
+          "match_type": "Static",
+          "page_type": "Blog"
         },
         {
           "rule": "https://www.momo.vn/tin-tuc/tin-tuc-su-kien/student-pass-cung-cellphones-mang-uu-dai-cong-8976",
@@ -7484,37 +7675,6 @@
       ]
     },
     {
-      "segment_id": "seg_student_hub",
-      "segment_name": "Student Hub",
-      "hub_id": "student",
-      "hub_name": "Student Hub",
-      "hub_display_vn": "Gói Sinh viên",
-      "page_types_supported": [
-        "Blog",
-        "Landing Page",
-        "School Page"
-      ],
-      "rules_count": 3,
-      "matched_urls_count": 7,
-      "rules": [
-        {
-          "rule": "https://www.momo.vn/sinh-vien",
-          "match_type": "Static",
-          "page_type": "Landing Page"
-        },
-        {
-          "rule": "https://www.momo.vn/sinh-vien/dai-hoc-kinh-te-tp-ho-chi-minh-ueh",
-          "match_type": "Static",
-          "page_type": "School Page"
-        },
-        {
-          "rule": "https://www.momo.vn/sinh-vien/blog*",
-          "match_type": "Static",
-          "page_type": "Blog"
-        }
-      ]
-    },
-    {
       "segment_id": "seg_data",
       "segment_name": "Data",
       "hub_id": "telco",
@@ -7522,13 +7682,16 @@
       "hub_display_vn": "Viễn thông và Nạp thẻ",
       "page_types_supported": [
         "Blog",
+        "Guide",
         "Home Page",
+        "Hỏi đáp",
         "Landing Page",
         "News",
-        "Page"
+        "Page",
+        "Tin Tức"
       ],
       "rules_count": 252,
-      "matched_urls_count": 49,
+      "matched_urls_count": 80,
       "rules": [
         {
           "rule": "https://www.momo.vn/nap-data",
@@ -9787,7 +9950,7 @@
       ]
     },
     {
-      "segment_id": "seg_nap_tien_ien_thoai",
+      "segment_id": "seg_nap_tien_dien_thoai",
       "segment_name": "Nạp tiền điện thoại",
       "hub_id": "telco",
       "hub_name": "Telco Hub",
@@ -9839,13 +10002,15 @@
         "Blog",
         "Destination Page",
         "Home Page",
+        "Hỏi đáp",
         "Landing Page",
         "News",
         "Page",
-        "Service Page"
+        "Service Page",
+        "Tin Tức"
       ],
-      "rules_count": 1027,
-      "matched_urls_count": 671,
+      "rules_count": 1000,
+      "matched_urls_count": 703,
       "rules": [
         {
           "rule": "https://www.momo.vn/du-lich-di-lai",
@@ -9861,11 +10026,6 @@
           "rule": "https://www.momo.vn/du-lich-di-lai/diem-den/*",
           "match_type": "Dynamic",
           "page_type": "Destination Page"
-        },
-        {
-          "rule": "https://www.momo.vn/ve-tau-hoa",
-          "match_type": "Static",
-          "page_type": "Service Page"
         },
         {
           "rule": "https://www.momo.vn/thue-xe-tu-lai",
@@ -11908,11 +12068,6 @@
           "page_type": "News"
         },
         {
-          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/deal-lam-quen-lan-dau-dat-ve-tau-giam-dam-150000d-7644",
-          "match_type": "Static",
-          "page_type": "News"
-        },
-        {
           "rule": "https://www.momo.vn/tin-tuc/tin-tuc-su-kien/chien-than-bay-su-kien-quay-hay-trung-lon-da-3441",
           "match_type": "Static",
           "page_type": "News"
@@ -11929,11 +12084,6 @@
         },
         {
           "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/thu-4-vui-ve-deal-cool-nhat-tuan-ve-xe-giam-den-5515",
-          "match_type": "Static",
-          "page_type": "News"
-        },
-        {
-          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/dat-ve-tau-thuy-tren-momo-nhanh-chong-an-toan-8708",
           "match_type": "Static",
           "page_type": "News"
         },
@@ -12018,11 +12168,6 @@
           "page_type": "News"
         },
         {
-          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/lan-dau-dat-ve-tau-di-dau-cung-giam-sau-den-7099",
-          "match_type": "Static",
-          "page_type": "News"
-        },
-        {
           "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/sieu-sale-99-hoi-deal-linh-dinh-voi-combo-du-lich-4819",
           "match_type": "Static",
           "page_type": "News"
@@ -12039,11 +12184,6 @@
         },
         {
           "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/cuoi-thang-sale-ve-tet-giam-den-21-trieu-8421",
-          "match_type": "Static",
-          "page_type": "News"
-        },
-        {
-          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/lan-dau-dat-ve-tau-momo-travel-giam-dam-sau-den-6182",
           "match_type": "Static",
           "page_type": "News"
         },
@@ -12089,11 +12229,6 @@
         },
         {
           "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/flash-sale-thu-6-deal-bay-giam-sau-cung-vietnam-3669",
-          "match_type": "Static",
-          "page_type": "News"
-        },
-        {
-          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/toc-chien-sieu-deal-cat-canh-san-ve-tau-xe-tet-6993",
           "match_type": "Static",
           "page_type": "News"
         },
@@ -12373,11 +12508,6 @@
           "page_type": "News"
         },
         {
-          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/dat-ve-tau-ha-noi-da-nang-san-combo-tien-ich-giam-7502",
-          "match_type": "Static",
-          "page_type": "News"
-        },
-        {
           "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/ve-dai-nhac-hoi-8wonder-winter-festival-2024-6796",
           "match_type": "Static",
           "page_type": "News"
@@ -12503,11 +12633,6 @@
           "page_type": "News"
         },
         {
-          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/dat-ve-tau-tet-at-ty-2025-som-tren-momo-travel-6728",
-          "match_type": "Static",
-          "page_type": "News"
-        },
-        {
           "rule": "https://www.momo.vn/tin-tuc/tin-tuc-su-kien/bamboo-airways-tam-dung-lam-thu-tuc-truc-tuyen-4912",
           "match_type": "Static",
           "page_type": "News"
@@ -12618,11 +12743,6 @@
           "page_type": "News"
         },
         {
-          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/dat-ve-tau-gia-sieu-hoi-tren-momo-travel-giam-den-8401",
-          "match_type": "Static",
-          "page_type": "News"
-        },
-        {
           "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/otangay-doi-77-giua-he-sale-lon-ve-may-bay-6147",
           "match_type": "Static",
           "page_type": "News"
@@ -12679,11 +12799,6 @@
         },
         {
           "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/thoai-mai-trai-nghiem-he-voi-ve-vui-choi-giam-6035",
-          "match_type": "Static",
-          "page_type": "News"
-        },
-        {
-          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/dat-ve-tau-hoa-tren-momo-travel-giam-den-25-cho-7985",
           "match_type": "Static",
           "page_type": "News"
         },
@@ -13123,16 +13238,6 @@
           "page_type": "News"
         },
         {
-          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/dat-ve-tau-xe-phong-khach-san-nhan-uu-dai-data-4g-7340",
-          "match_type": "Static",
-          "page_type": "News"
-        },
-        {
-          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/sale-giua-thang-dat-ve-tau-xe-di-choi-xa-lang-7013",
-          "match_type": "Static",
-          "page_type": "News"
-        },
-        {
           "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/thang-du-lich-ve-may-bay-vietravel-airlines-giam-7227",
           "match_type": "Static",
           "page_type": "News"
@@ -13344,11 +13449,6 @@
         },
         {
           "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/deal-hot-cuoi-tuan-ve-may-bay-vietnam-airlines-2751",
-          "match_type": "Static",
-          "page_type": "News"
-        },
-        {
-          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/chinh-thuc-mo-ban-ve-tau-tet-2025-uu-dai-den-7958",
           "match_type": "Static",
           "page_type": "News"
         },
@@ -13663,11 +13763,6 @@
           "page_type": "News"
         },
         {
-          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/mung-luong-ve-san-ve-tau-xe-giam-den-250000d-7036",
-          "match_type": "Static",
-          "page_type": "News"
-        },
-        {
           "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/giam-nong-cho-giao-dich-dat-khach-san-tren-3380",
           "match_type": "Static",
           "page_type": "News"
@@ -13868,11 +13963,6 @@
           "page_type": "News"
         },
         {
-          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/lan-dau-dat-ve-tau-di-dau-cung-giam-sau-den-7499",
-          "match_type": "Static",
-          "page_type": "News"
-        },
-        {
           "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/deal-1010-ngay-tron-sale-tron-nam-gon-combo-du-3387",
           "match_type": "Static",
           "page_type": "News"
@@ -13934,11 +14024,6 @@
         },
         {
           "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/thu-mat-me-bay-sieu-re-tung-bung-deal-bay-chao-3155",
-          "match_type": "Static",
-          "page_type": "News"
-        },
-        {
-          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/yen-tam-di-choi-xa-ve-tau-hoa-giam-25000d-4628",
           "match_type": "Static",
           "page_type": "News"
         },
@@ -14323,11 +14408,6 @@
           "page_type": "News"
         },
         {
-          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/ve-tau-truc-tuyen-di-chuyen-an-toan-ho-tro-35000d-1913",
-          "match_type": "Static",
-          "page_type": "News"
-        },
-        {
           "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/mien-phi-1000-ly-tra-sua-khi-dat-ve-vietnam-8711",
           "match_type": "Static",
           "page_type": "News"
@@ -14403,22 +14483,12 @@
           "page_type": "News"
         },
         {
-          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/dat-ve-tau-xe-giam-den-80000d-danh-rieng-hoc-sinh-6596",
-          "match_type": "Static",
-          "page_type": "News"
-        },
-        {
           "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/du-concert-8wonder-moments-of-wonder-san-uu-dai-7789",
           "match_type": "Static",
           "page_type": "News"
         },
         {
           "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/sale-88-trieu-deal-xe-khach-dai-nao-mung-dai-le-6418",
-          "match_type": "Static",
-          "page_type": "News"
-        },
-        {
-          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/sale-10-10-mua-le-hoi-san-ve-xe-ve-tau-mien-phi-6749",
           "match_type": "Static",
           "page_type": "News"
         },
@@ -14443,11 +14513,6 @@
           "page_type": "News"
         },
         {
-          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/sale-99-ve-xe-khach-ve-tau-hoa-giam-dam-den-6636",
-          "match_type": "Static",
-          "page_type": "News"
-        },
-        {
           "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/thu-3-huong-ngoai-momo-travel-va-vietravel-8632",
           "match_type": "Static",
           "page_type": "News"
@@ -14459,11 +14524,6 @@
         },
         {
           "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/thanh-toan-ve-may-bay-tau-xe-tren-momo-travel-6675",
-          "match_type": "Static",
-          "page_type": "News"
-        },
-        {
-          "rule": "https://www.momo.vn/tin-tuc/thong-bao/dat-ve-tau-hoa-tren-momo-de-chon-cho-gia-ve-canh-2997",
           "match_type": "Static",
           "page_type": "News"
         },
@@ -14524,11 +14584,6 @@
         },
         {
           "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/uu-dai-khach-san-theo-gio-dip-8-3-khi-su-lang-man-4037",
-          "match_type": "Static",
-          "page_type": "News"
-        },
-        {
-          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/dau-tuan-day-hung-khoi-voi-ve-tau-hoa-giam-toi-6181",
           "match_type": "Static",
           "page_type": "News"
         },
@@ -14698,11 +14753,6 @@
           "page_type": "News"
         },
         {
-          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/tet-2026-that-gan-lan-dau-dat-ve-tau-giam-dam-8016",
-          "match_type": "Static",
-          "page_type": "News"
-        },
-        {
           "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/hot-momo-travel-chinh-thuc-mo-ban-ve-may-bay-tet-6692",
           "match_type": "Static",
           "page_type": "News"
@@ -14723,22 +14773,12 @@
           "page_type": "News"
         },
         {
-          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/thu-2-mo-qua-ve-tau-hoa-giam-den-110000d-tren-7100",
-          "match_type": "Static",
-          "page_type": "News"
-        },
-        {
           "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/lan-dau-dat-xe-san-deal-giam-den-150000d-cuc-re-7096",
           "match_type": "Static",
           "page_type": "News"
         },
         {
           "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/deal-vi-vu-chao-he-momo-tang-ban-moi-uu-dai-10-2806",
-          "match_type": "Static",
-          "page_type": "News"
-        },
-        {
-          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/thu-2-vui-ve-mua-ve-tau-hoa-giam-30000d-tren-momo-7602",
           "match_type": "Static",
           "page_type": "News"
         },
@@ -14848,11 +14888,6 @@
           "page_type": "News"
         },
         {
-          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/dat-ve-tau-hoa-tren-momo-nhanh-tien-re-giam-den-6585",
-          "match_type": "Static",
-          "page_type": "News"
-        },
-        {
           "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/dat-ve-may-bay-sun-phuquoc-airways-nhan-the-qua-8855",
           "match_type": "Static",
           "page_type": "News"
@@ -14904,11 +14939,6 @@
         },
         {
           "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/co-hoi-cuoi-truoc-them-le-2-9-combo-du-lich-giam-8981",
-          "match_type": "Static",
-          "page_type": "Landing Page"
-        },
-        {
-          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/lan-dau-dat-ve-tau-hoa-tren-momo-giam-thang-8977",
           "match_type": "Static",
           "page_type": "Landing Page"
         },
@@ -14992,13 +15022,16 @@
       "hub_display_vn": "Du lịch và Đi lại",
       "page_types_supported": [
         "Blog",
+        "Guide",
         "Home Page",
+        "Hỏi đáp",
         "Landing Page",
         "News",
-        "Page"
+        "Page",
+        "Tin Tức"
       ],
-      "rules_count": 134,
-      "matched_urls_count": 5358,
+      "rules_count": 130,
+      "matched_urls_count": 5390,
       "rules": [
         {
           "rule": "https://www.momo.vn/ve-xe",
@@ -15156,11 +15189,6 @@
           "page_type": "News"
         },
         {
-          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/dat-ve-tau-thuy-tren-momo-nhanh-chong-an-toan-8708",
-          "match_type": "Static",
-          "page_type": "News"
-        },
-        {
           "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/ngau-hung-dia-can-tho-diem-den-hoan-hao-cho-ky-6047",
           "match_type": "Static",
           "page_type": "News"
@@ -15311,11 +15339,6 @@
           "page_type": "News"
         },
         {
-          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/dat-ve-tau-xe-phong-khach-san-nhan-uu-dai-data-4g-7340",
-          "match_type": "Static",
-          "page_type": "News"
-        },
-        {
           "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/dat-ve-tet-som-san-uu-dai-giam-den-150000d-6909",
           "match_type": "Static",
           "page_type": "News"
@@ -15327,11 +15350,6 @@
         },
         {
           "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/dat-ve-xe-khach-tren-momo-sieu-re-sieu-tien-giam-6464",
-          "match_type": "Static",
-          "page_type": "News"
-        },
-        {
-          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/thu-sau-deal-hoi-giam-450000d-ve-tau-hoa-phong-khach-san-1638",
           "match_type": "Static",
           "page_type": "News"
         },
@@ -15561,11 +15579,6 @@
           "page_type": "News"
         },
         {
-          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/dat-ve-tau-xe-giam-den-80000d-danh-rieng-hoc-sinh-6596",
-          "match_type": "Static",
-          "page_type": "News"
-        },
-        {
           "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/ngau-hung-trai-nghiem-khach-san-resort-5-sao-tai-5951",
           "match_type": "Static",
           "page_type": "News"
@@ -15673,6 +15686,200 @@
       ]
     },
     {
+      "segment_id": "seg_ve_tau",
+      "segment_name": "Vé Tàu",
+      "hub_id": "travel",
+      "hub_name": "Travel Hub",
+      "hub_display_vn": "Du lịch và Đi lại",
+      "page_types_supported": [
+        "Hỏi đáp",
+        "Landing Page",
+        "News",
+        "Page",
+        "Service Page",
+        "Tin Tức"
+      ],
+      "rules_count": 35,
+      "matched_urls_count": 31,
+      "rules": [
+        {
+          "rule": "https://www.momo.vn/ve-tau/*",
+          "match_type": "Dynamic",
+          "page_type": "Page"
+        },
+        {
+          "rule": "https://www.momo.vn/ve-tau-hoa",
+          "match_type": "Static",
+          "page_type": "Landing Page"
+        },
+        {
+          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/dat-ve-tau-thuy-tren-momo-nhanh-chong-an-toan-8708",
+          "match_type": "Static",
+          "page_type": "News"
+        },
+        {
+          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/dat-ve-tau-xe-phong-khach-san-nhan-uu-dai-data-4g-7340",
+          "match_type": "Static",
+          "page_type": "News"
+        },
+        {
+          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/thu-sau-deal-hoi-giam-450000d-ve-tau-hoa-phong-khach-san-1638",
+          "match_type": "Static",
+          "page_type": "News"
+        },
+        {
+          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/dat-ve-tau-xe-giam-den-80000d-danh-rieng-hoc-sinh-6596",
+          "match_type": "Static",
+          "page_type": "News"
+        },
+        {
+          "rule": "https://www.momo.vn/ve-tau-hoa",
+          "match_type": "Static",
+          "page_type": "Service Page"
+        },
+        {
+          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/deal-lam-quen-lan-dau-dat-ve-tau-giam-dam-150000d-7644",
+          "match_type": "Static",
+          "page_type": "News"
+        },
+        {
+          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/dat-ve-tau-thuy-tren-momo-nhanh-chong-an-toan-8708",
+          "match_type": "Static",
+          "page_type": "News"
+        },
+        {
+          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/lan-dau-dat-ve-tau-di-dau-cung-giam-sau-den-7099",
+          "match_type": "Static",
+          "page_type": "News"
+        },
+        {
+          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/lan-dau-dat-ve-tau-momo-travel-giam-dam-sau-den-6182",
+          "match_type": "Static",
+          "page_type": "News"
+        },
+        {
+          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/toc-chien-sieu-deal-cat-canh-san-ve-tau-xe-tet-6993",
+          "match_type": "Static",
+          "page_type": "News"
+        },
+        {
+          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/dat-ve-tau-ha-noi-da-nang-san-combo-tien-ich-giam-7502",
+          "match_type": "Static",
+          "page_type": "News"
+        },
+        {
+          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/dat-ve-tau-tet-at-ty-2025-som-tren-momo-travel-6728",
+          "match_type": "Static",
+          "page_type": "News"
+        },
+        {
+          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/dat-ve-tau-gia-sieu-hoi-tren-momo-travel-giam-den-8401",
+          "match_type": "Static",
+          "page_type": "News"
+        },
+        {
+          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/dat-ve-tau-hoa-tren-momo-travel-giam-den-25-cho-7985",
+          "match_type": "Static",
+          "page_type": "News"
+        },
+        {
+          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/dat-ve-tau-xe-phong-khach-san-nhan-uu-dai-data-4g-7340",
+          "match_type": "Static",
+          "page_type": "News"
+        },
+        {
+          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/sale-giua-thang-dat-ve-tau-xe-di-choi-xa-lang-7013",
+          "match_type": "Static",
+          "page_type": "News"
+        },
+        {
+          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/chinh-thuc-mo-ban-ve-tau-tet-2025-uu-dai-den-7958",
+          "match_type": "Static",
+          "page_type": "News"
+        },
+        {
+          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/mung-luong-ve-san-ve-tau-xe-giam-den-250000d-7036",
+          "match_type": "Static",
+          "page_type": "News"
+        },
+        {
+          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/lan-dau-dat-ve-tau-di-dau-cung-giam-sau-den-7499",
+          "match_type": "Static",
+          "page_type": "News"
+        },
+        {
+          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/yen-tam-di-choi-xa-ve-tau-hoa-giam-25000d-4628",
+          "match_type": "Static",
+          "page_type": "News"
+        },
+        {
+          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/ve-tau-truc-tuyen-di-chuyen-an-toan-ho-tro-35000d-1913",
+          "match_type": "Static",
+          "page_type": "News"
+        },
+        {
+          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/dat-ve-tau-xe-giam-den-80000d-danh-rieng-hoc-sinh-6596",
+          "match_type": "Static",
+          "page_type": "News"
+        },
+        {
+          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/sale-10-10-mua-le-hoi-san-ve-xe-ve-tau-mien-phi-6749",
+          "match_type": "Static",
+          "page_type": "News"
+        },
+        {
+          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/sale-99-ve-xe-khach-ve-tau-hoa-giam-dam-den-6636",
+          "match_type": "Static",
+          "page_type": "News"
+        },
+        {
+          "rule": "https://www.momo.vn/tin-tuc/thong-bao/dat-ve-tau-hoa-tren-momo-de-chon-cho-gia-ve-canh-2997",
+          "match_type": "Static",
+          "page_type": "News"
+        },
+        {
+          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/dau-tuan-day-hung-khoi-voi-ve-tau-hoa-giam-toi-6181",
+          "match_type": "Static",
+          "page_type": "News"
+        },
+        {
+          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/tet-2026-that-gan-lan-dau-dat-ve-tau-giam-dam-8016",
+          "match_type": "Static",
+          "page_type": "News"
+        },
+        {
+          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/thu-2-mo-qua-ve-tau-hoa-giam-den-110000d-tren-7100",
+          "match_type": "Static",
+          "page_type": "News"
+        },
+        {
+          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/thu-2-vui-ve-mua-ve-tau-hoa-giam-30000d-tren-momo-7602",
+          "match_type": "Static",
+          "page_type": "News"
+        },
+        {
+          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/dat-ve-tau-hoa-tren-momo-nhanh-tien-re-giam-den-6585",
+          "match_type": "Static",
+          "page_type": "News"
+        },
+        {
+          "rule": "https://www.momo.vn/hoi-dap/co-the-hoan-huy-ve-tau-hoa-online-da-dat-khong",
+          "match_type": "Static",
+          "page_type": "Landing Page"
+        },
+        {
+          "rule": "https://www.momo.vn/hoi-dap/lam-the-nao-san-cac-uu-dai-hap-dan-khi-mua-ve-tau-hoa-tren-vi-momo",
+          "match_type": "Static",
+          "page_type": "Landing Page"
+        },
+        {
+          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/lan-dau-dat-ve-tau-hoa-tren-momo-giam-thang-8977",
+          "match_type": "Static",
+          "page_type": "Landing Page"
+        }
+      ]
+    },
+    {
       "segment_id": "seg_cross_border",
       "segment_name": "Cross Border",
       "hub_id": "travel",
@@ -15722,10 +15929,11 @@
         "Home Page",
         "Landing Page",
         "Page",
+        "Tin Tức",
         "Tool Page"
       ],
-      "rules_count": 18,
-      "matched_urls_count": 37,
+      "rules_count": 19,
+      "matched_urls_count": 38,
       "rules": [
         {
           "rule": "https://www.momo.vn/phat-nguoi",
@@ -15803,6 +16011,11 @@
           "page_type": "Blog"
         },
         {
+          "rule": "https://www.momo.vn/tien-ich-giao-thong/nop-phat-csgt*",
+          "match_type": "Dynamic",
+          "page_type": "Landing Page"
+        },
+        {
           "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/mien-phi-canh-bao-phat-nguoi-tu-dong-khi-chuyen-8022",
           "match_type": "Static",
           "page_type": "Landing Page"
@@ -15830,8 +16043,8 @@
         "Landing Page",
         "Mini Web"
       ],
-      "rules_count": 14,
-      "matched_urls_count": 16,
+      "rules_count": 13,
+      "matched_urls_count": 15,
       "rules": [
         {
           "rule": "https://www.momo.vn/tien-ich-giao-thong",
@@ -15855,11 +16068,6 @@
         },
         {
           "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/tai-momo-nhap-momobus-mien-phi-5-luot-di-xe-buyt-8984",
-          "match_type": "Static",
-          "page_type": "Landing Page"
-        },
-        {
-          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/dang-kiem-xe-dat-lich-hen-tren-momo-nhanh-gon-5947",
           "match_type": "Static",
           "page_type": "Landing Page"
         },
@@ -15915,10 +16123,11 @@
         "Blog",
         "Hỏi đáp",
         "Landing Page",
-        "News"
+        "News",
+        "Tin Tức"
       ],
       "rules_count": 9,
-      "matched_urls_count": 9,
+      "matched_urls_count": 14,
       "rules": [
         {
           "rule": "https://www.momo.vn/phi-khong-dung",
@@ -15964,6 +16173,47 @@
           "rule": "https://www.momo.vn/hoi-dap/cach-nap-tai-khoan-e-tag-vetc",
           "match_type": "Static",
           "page_type": "Hỏi đáp"
+        }
+      ]
+    },
+    {
+      "segment_id": "seg_dang_kiem",
+      "segment_name": "Đăng Kiểm",
+      "hub_id": "vehicle",
+      "hub_name": "Vehicle Hub",
+      "hub_display_vn": "Xe và Tiện ích Giao thông",
+      "page_types_supported": [
+        "Blog",
+        "Landing Page",
+        "Page"
+      ],
+      "rules_count": 5,
+      "matched_urls_count": 4,
+      "rules": [
+        {
+          "rule": "https://www.momo.vn/dang-kiem/*",
+          "match_type": "Dynamic",
+          "page_type": "Page"
+        },
+        {
+          "rule": "https://www.momo.vn/dang-kiem-xe-o-to",
+          "match_type": "Static",
+          "page_type": "Landing Page"
+        },
+        {
+          "rule": "https://www.momo.vn/bao-hiem-o-to/blog/quy-dinh-dang-kiem-xe-o-to-moi-nhat-1246",
+          "match_type": "Static",
+          "page_type": "Blog"
+        },
+        {
+          "rule": "https://www.momo.vn/bao-hiem-o-to/blog/dang-kiem-xe-o-to-la-gi-1159",
+          "match_type": "Static",
+          "page_type": "Blog"
+        },
+        {
+          "rule": "https://www.momo.vn/tin-tuc/khuyen-mai/dang-kiem-xe-dat-lich-hen-tren-momo-nhanh-gon-5947",
+          "match_type": "Static",
+          "page_type": "Landing Page"
         }
       ]
     },
@@ -16117,25 +16367,6 @@
           "rule": "https://www.momo.vn/tien-ich-giao-thong/hang-xe",
           "match_type": "Static",
           "page_type": "Tool Page"
-        }
-      ]
-    },
-    {
-      "segment_id": "seg_nop_phat_csgt",
-      "segment_name": "Nộp Phạt CSGT",
-      "hub_id": "vehicle",
-      "hub_name": "Vehicle Hub",
-      "hub_display_vn": "Xe và Tiện ích Giao thông",
-      "page_types_supported": [
-        "Landing Page"
-      ],
-      "rules_count": 1,
-      "matched_urls_count": 0,
-      "rules": [
-        {
-          "rule": "https://www.momo.vn/tien-ich-giao-thong/nop-phat-csgt*",
-          "match_type": "Dynamic",
-          "page_type": "Landing Page"
         }
       ]
     }

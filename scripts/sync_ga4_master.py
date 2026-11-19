@@ -522,7 +522,7 @@ def main():
             others_pv += pv
             non_paid_pv += pv
 
-    if args.clean or args.override_pv:
+    if clean_scale != 1.0:
         organic_pv = round(organic_pv * clean_scale)
         paid_pv = round(paid_pv * clean_scale)
         direct_pv = round(direct_pv * clean_scale)
@@ -601,7 +601,7 @@ def main():
         else:
             hubs_pv["others"] += pv
 
-    if args.clean or args.override_pv:
+    if clean_scale != 1.0:
         for h in hubs_pv:
             hubs_pv[h] = round(hubs_pv[h] * clean_scale)
         for s in cinema_sub:
