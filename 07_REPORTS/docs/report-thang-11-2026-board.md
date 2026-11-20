@@ -1,6 +1,6 @@
 # BÁO CÁO KINH DOANH VÀ HIỆU SUẤT NỀN TẢNG WEB - THÁNG 11/2026
 > **Chu kỳ dữ liệu:** 01/11/2026 - 16/11/2026 (MTD 16 ngày, 53% thời gian tháng) và dự báo pacing 30 ngày
-> **Nguồn dữ liệu:** `monthly_11_2026_mtd_16d.json` đọc lúc 17/11/2026 13:06 (GA4 Data API Property 270743103); phễu Web-to-App cohort tháng 11 theo bảng Direction 2027 (AppsFlyer, MTD 16 ngày); MoSpark CMS / Umami (lũy kế đến 10/11); `web_performance_tracking.xlsx`; tham chiếu [2027 Direction - Web Platform](../docs/strategy/2027%20Direction%20-%20Web%20Platform.pptx) và Budget 2027 v2.
+> **Nguồn dữ liệu:** `07_REPORTS/data/monthly/monthly_11_2026_mtd_16d.json` đọc lúc 17/11/2026 13:06 (GA4 Data API Property 270743103); phễu Web-to-App cohort tháng 11 theo bảng Direction 2027 (AppsFlyer, MTD 16 ngày); MoSpark CMS / Umami (lũy kế đến 10/11); `web_performance_tracking.xlsx`; tham chiếu [2027 Direction - Web Platform](../docs/strategy/2027%20Direction%20-%20Web%20Platform.pptx) và Budget 2027 v2.
 > **Phương pháp số liệu:** Số PageViews lấy từ JSON 13:06 ngày 17/11 (2.861.286 PageViews, loại domain đối tác napthengay.vn). Số này thay thế 1.696.417 của lần kéo GA4 www.momo.vn trước đó. Chênh lệch chủ yếu do đổi phạm vi đo, không phải tăng trưởng thực; Web Dev cần xác nhận trước khi công bố.
 > **Nguyên tắc báo cáo:** Báo cáo cung cấp bối cảnh chiến lược và số liệu kinh doanh [R]; Cuộc họp tập trung thảo luận và ra quyết định [D]. Các mục đánh dấu [cần xác nhận] là số đang mâu thuẫn giữa các nguồn, xem Mục 7.
 

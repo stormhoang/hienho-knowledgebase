@@ -1072,7 +1072,7 @@ Dữ liệu Single Source of Truth (SSOT) phễu chuyển đổi người dùng 
 
 * Dữ liệu Single Source of Truth (SSOT) phễu chuyển đổi MTD 10 Ngày Tháng 11/2026 được lưu trữ tại:
   - `07_REPORTS/data/analytics/gpd_momo_web_nov_2026.csv`
-  - `07_REPORTS/data/monthly_11_2026_mtd_10d.json`
+  - `07_REPORTS/data/monthly/monthly_11_2026_mtd_10d.json`
   - Sheet `New User` trong `07_REPORTS/web_performance_tracking.xlsx` và Google Sheets Cloud SSOT (ID `1JaaYv2MnDy-dfBdC3P-GMB6SFgjez2VowdjX9PjmPYU`)
 
 #### A. Tổng Quan Phễu Chuyển Đổi Web-to-App MTD 10 Ngày (01/11 - 10/11/2026):

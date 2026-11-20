@@ -36,7 +36,7 @@ Báo cáo Web Platform không chỉ dừng lại ở số liệu Pageviews bề 
 ### Trụ Cột 1: Hiệu Suất Tăng Trưởng & cơ cấu (Performance & Channels)
 - **Nguồn trích xuất:** File `Web Performance Tracking (2).xlsx` (tại `/Users/hienhv/Downloads/`).
 - **Tệp lưu trữ chính:** [`07_REPORTS/web_performance_tracking.xlsx`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/web_performance_tracking.xlsx).
-- **Snapshot tự động:** [`07_REPORTS/data/monthly_MM_YYYY_mtd_XXd.json`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/data).
+- **Snapshot tự động:** [`07_REPORTS/data/monthly/monthly_MM_YYYY_mtd_XXd.json`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/data).
 - **Chỉ số trọng yếu:**
   - Tổng Pageviews lũy kế (Actual MTD), Số ngày MTD (MTD Days).
   - Tốc độ vận hành ngày (Daily Pace) và dự báo cuối tháng (Run-rate Forecast 31d).
@@ -77,10 +77,11 @@ Báo cáo Web Platform không chỉ dừng lại ở số liệu Pageviews bề 
 ├── WEB_PERFORMANCE_TRACKING_MASTER.md       # Master Tracking (Tracking, Crawl Stats & Backlinks)
 ├── web_performance_tracking.xlsx            # Tệp Excel đối soát đồng bộ từ Downloads
 │
-├── data/                                    # Kho lưu trữ JSON Snapshots theo ngày MTD
-│   ├── monthly_10_2026_mtd_9d.json          # Snapshot tracking thuần MTD 9 ngày
-│   ├── monthly_10_2026_consolidated.json    # Snapshot hợp nhất (Tracking + Crawl + Backlinks)
-│   └── ...                                  # Snapshots các mốc thời gian trước
+├── data/
+│   ├── monthly/                             # Kho lưu trữ JSON Snapshots theo ngày MTD
+│   │   ├── monthly_10_2026_mtd_9d.json          # Snapshot tracking thuần MTD 9 ngày
+│   │   ├── monthly_10_2026_consolidated.json  # Snapshot hợp nhất (Tracking + Crawl + Backlinks)
+│   │   └── ...                                  # Snapshots các mốc thời gian trước
 │
 ├── technical_seo/                           # Báo cáo Sức khỏe Kỹ thuật & Hạ tầng SEO
 │   ├── crawl_stats/                         # Dữ liệu & Báo cáo GSC Crawl Stats
@@ -110,7 +111,7 @@ Báo cáo Web Platform không chỉ dừng lại ở số liệu Pageviews bề 
 ## 4. QUY TRÌNH ĐÓNG GÓI BÁO CÁO TỰ ĐỘNG (PACKAGING PIPELINE)
 
 1. **Bước 1: Đồng bộ dữ liệu Excel:** Chạy `./.venv/bin/python scripts/sync_tracking_report.py` để quét file mới nhất trong `/Users/hienhv/Downloads/` và cập nhật tệp Excel cùng JSON tracking.
-2. **Bước 2: Hợp nhất Dữ liệu Kỹ thuật:** Script tự động nạp `gsc_crawl_stats_latest.json` và `backlink_profile_latest.json` để tạo file snapshot hợp nhất `monthly_10_2026_consolidated.json`.
+2. **Bước 2: Hợp nhất Dữ liệu Kỹ thuật:** Script tự động nạp `gsc_crawl_stats_latest.json` và `backlink_profile_latest.json` để tạo file snapshot hợp nhất `07_REPORTS/data/monthly/monthly_10_2026_consolidated.json`.
 3. **Bước 3: Cập nhật Master Document:** Đồng bộ các số liệu mới nhất vào [WEB_PERFORMANCE_TRACKING_MASTER.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md).
 4. **Bước 4: Xuất bản Executive Report:** Đóng gói bản báo cáo hoàn chỉnh vào `07_REPORTS/packages/monthly/` theo chuẩn văn phong Product Lead / Tech Lead:
    - Không sử dụng Emoji/Icon.

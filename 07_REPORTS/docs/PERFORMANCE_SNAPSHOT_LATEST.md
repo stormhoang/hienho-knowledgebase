@@ -2,7 +2,7 @@
 
 > **Cập nhật:** 20/11/2026 | **Kỳ dữ liệu:** Tháng 11/2026 (MTD 19 ngày hoàn chỉnh: 01/11 - 19/11/2026, Luồng nạp dữ liệu thô hàng ngày từ GA4 Explore CSV)
 > **Chính sách dữ liệu:** Đã loại bỏ hoàn toàn domain đối tác napthengay.vn; chuẩn hóa theo cơ chế neo nền tảng BigQuery SSOT 16 ngày (2.861.286 PV) cộng dồn phát sinh mới 3 ngày 17-19/11 (+371.650 PV) đạt tổng cộng 3.232.936 PV.
-> **Nguồn:** `07_REPORTS/data/monthly_11_2026_mtd_19d.json` & `07_REPORTS/data/summary.json`
+> **Nguồn:** `07_REPORTS/data/monthly/monthly_11_2026_mtd_19d.json` & `07_REPORTS/data/summary.json`
 > **Mục đích:** Bản ghi tinh gọn (Low-token) giúp AI Agents và quy trình tự động đọc số liệu nhanh mà không cần tải toàn bộ tài liệu lịch sử.
 
 ---

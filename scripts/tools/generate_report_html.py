@@ -4,7 +4,7 @@ MoMo Web Platform Report Generator
 JSON data -> HTML slide deck (brand MoMo, Be Vietnam Pro)
 
 Usage:
-    python3 07_REPORTS/scripts/generate_report_html.py 07_REPORTS/data/monthly_08_2026.json -o 07_REPORTS/dashboards/monthly_THÁNG082026.html
+    python3 07_REPORTS/scripts/generate_report_html.py 07_REPORTS/data/monthly/monthly_08_2026.json -o 07_REPORTS/dashboards/monthly_THÁNG082026.html
     python3 07_REPORTS/scripts/generate_report_html.py 07_REPORTS/data/weekly_w33_2026.json -o 07_REPORTS/dashboards/weekly_w33.html
 """
 
