@@ -52,8 +52,6 @@ HUB_FRESHNESS_TARGETS = [
     ("lib/dashboard/summary.json", "summary.json (dashboard)", 48, "build-dashboard-data.py / ingest_ga4_daily.py"),
     ("data/analytics/summary.json", "summary.json (analytics)", 48, "ingest_ga4_daily.py"),
     ("data/analytics/page_mtd.json", "page_mtd.json (analytics)", 48, "ingest_gsc_mtd.py"),
-    ("data/seo-news.json", "seo-news.json", 72, "sync_seo_news.py"),
-    ("data/roadmap.json", "roadmap.json", 14 * 24, "sync_roadmap_to_supabase.py"),
 ]
 
 
