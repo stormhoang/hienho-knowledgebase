@@ -10,12 +10,12 @@
     "daysElapsed": 19,
     "daysInMonth": 30,
     "report": "monthly_11_2026_mtd_19d.json",
-    "pv": 3232936,
+    "pv": 3255620,
     "target": 3829155,
-    "dailyPace": 170155,
-    "dailyNeeded": 54202,
-    "forecast": 5104636,
-    "forecastPct": 133.31
+    "dailyPace": 171348,
+    "dailyNeeded": 52140,
+    "forecast": 5140453,
+    "forecastPct": 134.25
   },
   "hubs": [
     {

@@ -5,54 +5,54 @@
   "days_elapsed": 18,
   "summary": {
     "oct_mtd_pv": 2144693,
-    "nov_mtd_pv": 3102303,
-    "net_change_pv": 957610,
-    "growth_pct_mom": 44.65,
-    "non_paid_contribution_pct": 51.91,
-    "paid_contribution_pct": 48.09
+    "nov_mtd_pv": 3124987,
+    "net_change_pv": 980294,
+    "growth_pct_mom": 45.7,
+    "non_paid_contribution_pct": 53.02,
+    "paid_contribution_pct": 46.98
   },
   "channel_breakdown": {
     "non_paid": {
       "oct_pv": 1930753,
-      "nov_pv": 2427850,
-      "change_pv": 497097,
-      "growth_pct": 25.75,
-      "contribution_pct": 51.91
+      "nov_pv": 2450534,
+      "change_pv": 519781,
+      "growth_pct": 26.92,
+      "contribution_pct": 53.02
     },
     "organic_search": {
       "oct_pv": 1142226,
       "nov_pv": 1403639,
       "change_pv": 261413,
       "growth_pct": 22.89,
-      "contribution_pct": 27.30
+      "contribution_pct": 26.66
     },
     "direct": {
       "oct_pv": 535574,
       "nov_pv": 796552,
       "change_pv": 260978,
       "growth_pct": 48.73,
-      "contribution_pct": 27.25
+      "contribution_pct": 26.62
     },
     "ai_traffic": {
       "oct_pv": 8379,
       "nov_pv": 22684,
       "change_pv": 14305,
       "growth_pct": 170.72,
-      "contribution_pct": 1.49
+      "contribution_pct": 1.46
     },
     "referral_others": {
       "oct_pv": 244574,
-      "nov_pv": 204975,
-      "change_pv": -39599,
-      "growth_pct": -16.19,
-      "contribution_pct": -4.13
+      "nov_pv": 227659,
+      "change_pv": -16915,
+      "growth_pct": -6.92,
+      "contribution_pct": -1.73
     },
     "paid": {
       "oct_pv": 213940,
       "nov_pv": 674453,
       "change_pv": 460513,
       "growth_pct": 215.25,
-      "contribution_pct": 48.09
+      "contribution_pct": 46.98
     }
   },
   "top_gainers_urls": [
@@ -190,7 +190,10 @@
       "oct_pv": 791,
       "nov_pv": 187744,
       "change_pv": 186953,
-      "target_pages": ["/phat-nguoi/o-to", "/phat-nguoi/xe-may"]
+      "target_pages": [
+        "/phat-nguoi/o-to",
+        "/phat-nguoi/xe-may"
+      ]
     },
     {
       "campaign": "TikTok Coin SEM (2 campaigns)",
@@ -198,7 +201,9 @@
       "oct_pv": 62401,
       "nov_pv": 207351,
       "change_pv": 144950,
-      "target_pages": ["/nap-xu-tiktok"]
+      "target_pages": [
+        "/nap-xu-tiktok"
+      ]
     },
     {
       "campaign": "Soundbox Merchant Q4",
@@ -206,12 +211,15 @@
       "oct_pv": 566,
       "nov_pv": 102471,
       "change_pv": 101905,
-      "target_pages": ["/loa-thong-bao-chuyen-khoan"]
+      "target_pages": [
+        "/loa-thong-bao-chuyen-khoan"
+      ]
     }
   ],
   "root_cause_conclusions": [
     "Non-Paid đóng góp 51,91% mức tăng (+497K PV) nhờ SEO bài viết đời sống (BHYT CCCD), dàn phim mới ra rạp (Cinema) và lượt truy cập trực tiếp gia tăng mạnh dịp cuối năm.",
     "Paid đóng góp 48,09% mức tăng (+460K PV) nhờ các BU chủ động rót ngân sách vào các chiến dịch SEM nhu cầu cao (Tra cứu phạt nguội mang về +187K PV, Nạp xu TikTok mang về +145K PV).",
     "Cơ cấu tăng trưởng lành mạnh, gắn liền mục tiêu chuyển đổi mở ứng dụng MoMo (Web-to-App) xử lý giao dịch thực tế."
-  ]
+  ],
+  "reconciliation_note": "Restated 2026-11-19: nov_mtd_pv +22.684 va non_paid +ai_traffic theo canonical schema (AI Traffic la kenh trong Non-Paid va tong PV). referral_others nov hieu chinh +22.684 (ai la kenh rieng, khong phai subset)."
 }

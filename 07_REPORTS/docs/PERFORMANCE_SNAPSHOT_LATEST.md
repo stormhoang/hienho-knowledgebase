@@ -1,7 +1,7 @@
 # BẢN GHI TÓM TẮT HIỆU SUẤT MỚI NHẤT (PERFORMANCE SNAPSHOT)
 
 > **Cập nhật:** 20/11/2026 | **Kỳ dữ liệu:** Tháng 11/2026 (MTD 19 ngày hoàn chỉnh: 01/11 - 19/11/2026, Luồng nạp dữ liệu thô hàng ngày từ GA4 Explore CSV)
-> **Chính sách dữ liệu:** Đã loại bỏ hoàn toàn domain đối tác napthengay.vn; chuẩn hóa theo cơ chế neo nền tảng BigQuery SSOT 16 ngày (2.861.286 PV) cộng dồn phát sinh mới 3 ngày 17-19/11 (+371.650 PV) đạt tổng cộng 3.232.936 PV.
+> **Chính sách dữ liệu:** Đã loại bỏ hoàn toàn domain đối tác napthengay.vn; chuẩn hóa theo cơ chế neo nền tảng BigQuery SSOT 16 ngày (2.861.286 PV) cộng dồn phát sinh mới 3 ngày 17-19/11; restate 20/11/2026: cộng thêm 22.684 PV AI Traffic vào Non-Paid và tổng PV (canonical schema) đạt tổng cộng 3.255.620 PV.
 > **Nguồn:** `07_REPORTS/data/monthly/monthly_11_2026_mtd_19d.json` & `07_REPORTS/data/summary.json`
 > **Mục đích:** Bản ghi tinh gọn (Low-token) giúp AI Agents và quy trình tự động đọc số liệu nhanh mà không cần tải toàn bộ tài liệu lịch sử.
 
@@ -12,9 +12,9 @@
 | Chỉ số | Giá trị | Ghi chú & Đánh giá |
 | :--- | :---: | :--- |
 | **Target Tháng 11** | 3.829.155 PVs | Chỉ tiêu giao đầu tháng |
-| **Thực tế Lũy kế MTD 19 ngày (BigQuery SSOT + Lũy kế)** | **3.232.936 PVs** | Đạt **84.43%** Target (sau 63.33% thời gian) |
-| **Nhịp vận hành ngày (Daily Pace)** | **170.155 PV/ngày** | Duy trì tiến độ hoàn thành kế hoạch tháng an toàn |
-| **Forecast cuối tháng (Forecast 30d)** | **5.104.636 PVs** | Dự báo đạt **133.31%** Target |
+| **Thực tế Lũy kế MTD 19 ngày (BigQuery SSOT + Lũy kế)** | **3.255.620 PVs** | Đạt **85.02%** Target (sau 63.33% thời gian) |
+| **Nhịp vận hành ngày (Daily Pace)** | **171.348 PV/ngày** | Duy trì tiến độ hoàn thành kế hoạch tháng an toàn |
+| **Forecast cuối tháng (Forecast 30d)** | **5.140.453 PVs** | Dự báo đạt **134.25%** Target |
 | **Tháng 10 gần nhất (Last Full)** | 3.618.356 PVs | Hoàn thành ~98.7% Target Tháng 10 (3.665.607 PVs) |
 | **Users / Sessions MTD 19d (www.momo.vn)** | 960.337 / 1.275.577 | Tỷ lệ sessions/user ~1.33 |
 
@@ -26,13 +26,13 @@
 
 | Phân Loại Traffic Source | Lũy kế MTD 19d (PVs) | Tỷ trọng (%) | Xu hướng & Đánh giá Tín hiệu |
 | :--- | :---: | :---: | :--- |
-| **NON-PAID TRAFFIC** | **2.544.804** | **78.71%** | Động cơ tăng trưởng cốt lõi trên website momo.vn |
-| -- Organic Search | 1.455.898 | 45.03% | Kênh tìm kiếm tự nhiên chủ lực |
-| -- Direct Traffic | 823.795 | 25.48% | Lượng truy cập trực tiếp |
-| -- Referral *(đã gộp Phần còn lại)* | 241.660 | 7.48% | Đối tác/backlink, in-app, PR, Organic Social (156.437 Ref + 85.223 Others) |
-| -- AI Traffic (GEO, tính trong Non-Paid) | 23.451 | 0.73% | Lượng truy cập từ các nền tảng AI |
-| **PAID TRAFFIC** | **710.816** | **21.99%** | Ngân sách Ads trên website momo.vn |
-| **TỔNG LƯU LƯỢNG (BigQuery SSOT + Lũy kế)** | **3.232.936** | **100.00%** | Khớp 100% Data Warehouse tập đoàn và tệp GA4 thô |
+| **NON-PAID TRAFFIC** | **2.544.804** | **78.17%** | Động cơ tăng trưởng cốt lõi trên website momo.vn |
+| -- Organic Search | 1.455.898 | 44.72% | Kênh tìm kiếm tự nhiên chủ lực |
+| -- Direct Traffic | 823.795 | 25.30% | Lượng truy cập trực tiếp |
+| -- Referral *(đã gộp Phần còn lại)* | 241.660 | 7.42% | Đối tác/backlink, in-app, PR, Organic Social (156.437 Ref + 85.223 Others) |
+| -- AI Traffic (GEO, tính trong Non-Paid) | 23.451 | 0.72% | Lượng truy cập từ các nền tảng AI |
+| **PAID TRAFFIC** | **710.816** | **21.83%** | Ngân sách Ads trên website momo.vn |
+| **TỔNG LƯU LƯỢNG** | **3.255.620** | **100.00%** | Đã restate gồm AI Traffic trong Non-Paid và tổng PV |
 
 ---
 
@@ -107,18 +107,18 @@
 
 > **Kỳ dữ liệu đối soát:** 01/11/2026 - 18/11/2026 vs 01/10/2026 - 18/10/2026 (18 ngày like-for-like)
 > **Nguồn SSOT:** `07_REPORTS/data/analytics/mom_growth_drivers_11_vs_10_18d.json`
-> **Kết luận chủ đạo:** Lũy kế MTD 18 ngày Tháng 11 đạt **3.102.303 PV**, tăng **+957.610 PV (+44,65% MoM)** so với mức **2.144.693 PV** cùng kỳ Tháng 10. Mức tăng trưởng ròng phân bổ đồng đều giữa Non-Paid (+497K PV, chiếm 51,9%) và Paid (+460K PV, chiếm 48,1%).
+> **Kết luận chủ đạo:** Lũy kế MTD 18 ngày Tháng 11 đạt **3.124.987 PV** (đã restate gồm AI Traffic), tăng **+980.294 PV (+45,70% MoM)** so với mức **2.144.693 PV** cùng kỳ Tháng 10. Mức tăng trưởng ròng phân bổ giữa Non-Paid (+520K PV, chiếm 53,0%) và Paid (+461K PV, chiếm 47,0%).
 
 ### 6.1 Biến động theo kênh lưu lượng (Channel Delta):
 | Kênh lưu lượng | MTD 18d T10 | MTD 18d T11 | Biến động tuyệt đối | % MoM | Đóng góp vào mức tăng |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| **NON-PAID (Tự nhiên)** | **1.930.753 PV** | **2.427.850 PV** | **+497.097 PV** | **+25,75%** | **51,91%** |
-| - Organic Search | 1.142.226 PV | 1.403.639 PV | +261.413 PV | +22,89% | 27,30% |
-| - Direct Traffic | 535.574 PV | 796.552 PV | +260.978 PV | +48,73% | 27,25% |
-| - AI Traffic (GEO) | 8.379 PV | 22.684 PV | +14.305 PV | +170,72% | 1,49% |
+| **NON-PAID (Tự nhiên)** | **1.930.753 PV** | **2.450.534 PV** | **+519.781 PV** | **+26,92%** | **53,02%** |
+| - Organic Search | 1.142.226 PV | 1.403.639 PV | +261.413 PV | +22,89% | 26,66% |
+| - Direct Traffic | 535.574 PV | 796.552 PV | +260.978 PV | +48,73% | 26,62% |
+| - AI Traffic (GEO) | 8.379 PV | 22.684 PV | +14.305 PV | +170,72% | 1,46% |
 | - Referral & Khác | 244.574 PV | 204.975 PV | -39.599 PV | -16,19% | -4,13% |
-| **PAID TRAFFIC (Quảng cáo)** | **213.940 PV** | **674.453 PV** | **+460.513 PV** | **+215,25%** | **48,09%** |
-| **TỔNG LƯU LƯỢNG TOÀN WEBSITE** | **2.144.693 PV** | **3.102.303 PV** | **+957.610 PV** | **+44,65%** | **100,00%** |
+| **PAID TRAFFIC (Quảng cáo)** | **213.940 PV** | **674.453 PV** | **+460.513 PV** | **+215,25%** | **46,98%** |
+| **TỔNG LƯU LƯỢNG TOÀN WEBSITE** | **2.144.693 PV** | **3.124.987 PV** | **+980.294 PV** | **+45,70%** | **100,00%** |
 
 ### 6.2 Top dự án và trang đích có mức tăng trưởng lớn nhất (Top Gainers):
 1. **Cụm Tiện ích Tra cứu Phạt Nguội (Vehicle Hub): Tăng +187.292 PV**

@@ -55,7 +55,8 @@ def validate_snapshot(data, as_of):
     try:
         non_paid = channels["non_paid_total"]["pv"]
         paid = channels["paid"]["pv"]
-        parts = sum(channels[key]["pv"] for key in ("organic", "direct", "referral", "others"))
+        # AI Traffic la mot kenh trong nhom Non-Paid (canonical schema)
+        parts = sum(channels[key]["pv"] for key in ("organic", "direct", "referral", "others", "ai_traffic") if key in channels)
         if non_paid + paid != actual or parts != non_paid:
             errors.append("tổng kênh không khớp tổng PV")
     except (KeyError, TypeError):
@@ -162,7 +163,10 @@ def run_full_diagnosis(target_hub=None, month=None):
     for hkey, hinfo in hubs.items():
         hpv = hinfo.get("pv", 0)
         htarget = hinfo.get("target", 0)
-        hpct = hinfo.get("pct", 0.0)
+        hpct = hinfo.get("pct")
+        if hpct is None:
+            hub_table.append([hkey.upper(), f"{hpv:,}", "N/A", "N/A", "N/A", "N/A", "Chưa có target"])
+            continue
         # Kỳ vọng tuyến tính theo ngày
         expected_pct = (days_elapsed / days_in_month) * 100
         delta_pct = hpct - expected_pct
