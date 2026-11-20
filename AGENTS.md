@@ -76,5 +76,4 @@ Bảng Fast Routing Index đầy đủ (~70 rows: chủ đề → file SSOT → 
   - **Nhất quán logic (Consistency Check):** tổng các phần phải bằng tổng thể; chênh lệch kỳ phải giải thích được; hai nguồn mâu thuẫn → báo conflict, cấm chọn lọc nguồn có lợi cho luận điểm.
   - **Bảo mật (Security):** tuyệt đối không đưa credentials, token, private key, PII vào câu trả lời, file commit hay log. Mọi secret chỉ nằm trong `07_REPORTS/data/credentials/` (gitignored); pre-commit hook chặn secret qua `scripts/guard_secrets.py`.
   - Thiếu dữ liệu để kết luận → nói thẳng "không đủ dữ liệu, cần kiểm tra X" thay vì diễn giải.
-  - Câu trả lời/báo cáo chứa số liệu quan trọng: đóng gói evidence JSON theo `00_HARNESS_CORE/EVIDENCE_CONTRACT.md` và chạy `./.venv/bin/python scripts/validate_evidence.py` trước khi trình bày.
 - **Quản trị file này:** File này phải giữ <16KB (ngưỡng inject rules). Mọi bảng routing/tra cứu đặt tại `00_HARNESS_CORE/FAST_ROUTING_INDEX.md`; thêm rule mới ưu tiên gộp vào mục hiện có, cấm để file vượt 16KB.
