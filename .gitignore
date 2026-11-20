@@ -78,3 +78,6 @@ graphify-out/
 *full-funnel-matrix.json
 /data/
 
+
+# Dated MTD export snapshots (SSOT la page_mtd.json)
+07_REPORTS/data/analytics/*_mtd_*d.csv

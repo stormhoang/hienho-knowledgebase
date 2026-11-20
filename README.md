@@ -27,7 +27,6 @@ Kho lưu trữ này chứa các tài liệu nghiên cứu kỹ thuật, tài ngu
 ├── 07_REPORTS/            # Báo cáo kỹ thuật và dữ liệu phân tích định kỳ
 ├── 08_DECISION_LOG/       # Nhật ký ghi nhận các quyết định kiến trúc
 ├── 09_PRD/                # Tài liệu đặc tả yêu cầu kỹ thuật
-├── growth_reporting_tool/ # Giao diện MCP Server tích hợp công cụ
 └── scripts/               # Bộ công cụ và kịch bản Python tự động hóa
 ```
 
@@ -61,11 +60,12 @@ Các công cụ phân tích và tự động hóa được đóng gói trong th�
 # 2. Kiểm tra dị biệt và tính toàn vẹn liên kết
 ./.venv/bin/python scripts/detect_anomalies.py
 
-# 3. Phân tích dữ liệu chiến dịch và nguồn truy cập
-./.venv/bin/python scripts/sync_paid_ads.py
+# 3. Nạp dữ liệu GA4/GSC thủ công (export CSV từ GA4 Explore / tab SAS_* trên Google Sheet)
+./.venv/bin/python scripts/ingest_ga4_daily.py
+./.venv/bin/python scripts/ingest_gsc_mtd.py
 
 # 4. Khởi chạy MCP Server phục vụ tích hợp công cụ
-./.venv/bin/python growth_reporting_tool/mcp_server.py
+./.venv/bin/python scripts/mcp_server.py
 ```
 
 ---

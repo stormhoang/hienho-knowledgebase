@@ -48,7 +48,7 @@ Sau khi định tuyến tri thức, Agent phải tra `AGENT_CAPABILITIES.yaml` �
 
 ### Tầng 1: Context Memory Layer (Tầng Bối Cảnh Lịch Sử & Chỉ Đạo - Kích Hoạt Có Điều Kiện)
 Chỉ kích hoạt khi thực hiện bài toán Chiến lược cấp cao, Viết báo cáo Lãnh đạo hoặc Lập PRD mới. Đối với các tác vụ kỹ thuật, code review, tra cứu nhanh, Agent bỏ qua Tầng 1 và đi thẳng vào Tầng 3 (SSOT Domain):
-- [`MEETING_RECAPS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/MEETING_RECAPS.md): Chỉ đạo chiến lược của Ban Giám đốc (chỉ đọc mục gần nhất liên quan đến chủ đề).
+- [`MEETING_RECAPS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/meetings/MEETING_RECAPS.md): Chỉ đạo chiến lược của Ban Giám đốc (chỉ đọc mục gần nhất liên quan đến chủ đề).
 - [`07_REPORTS/docs/PERFORMANCE_SNAPSHOT_LATEST.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/PERFORMANCE_SNAPSHOT_LATEST.md): SSOT số liệu kỳ hiện tại (MTD, Run-rate Target, cơ cấu Kênh/Hubs). Kiểm tra `Data As Of` trong [`00_HARNESS_CORE/knowledge_freshness.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/00_HARNESS_CORE/knowledge_freshness.md) trước khi dùng.
 - [`07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md): Số liệu lịch sử các tháng đã đóng, không dùng cho kỳ hiện tại.
 - [`08_DECISION_LOG/decision_log.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/08_DECISION_LOG/decision_log.md): Nhật ký các quyết định kiến trúc và nghiệp vụ đã chốt.

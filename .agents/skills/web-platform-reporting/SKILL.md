@@ -155,6 +155,6 @@ Mọi cập nhật số liệu báo cáo tháng bắt buộc đồng bộ song s
 - **Từ điển thuật ngữ báo cáo (SSOT):** [`03_SKILLS/momo-reporting-glossary.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS/momo-reporting-glossary.md)
 - **Quy chuẩn gốc cấp công ty:** [`03_SKILLS/momo-reporting-guidelines.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS/momo-reporting-guidelines.md)
 - **Tài liệu Master Framework:** [`03_SKILLS/web-platform-reporting-framework.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS/web-platform-reporting-framework.md)
-- **Nhật ký Họp & Chỉ đạo Chiến lược:** [`MEETING_RECAPS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/MEETING_RECAPS.md)
+- **Nhật ký Họp & Chỉ đạo Chiến lược:** [`MEETING_RECAPS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/meetings/MEETING_RECAPS.md)
 - **Quy tắc Kiến trúc Hệ thống:** [`AGENTS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/AGENTS.md)
 - **Định tuyến Tri thức:** [`00_HARNESS_CORE/KNOWLEDGE_ROUTING.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/00_HARNESS_CORE/KNOWLEDGE_ROUTING.md)
