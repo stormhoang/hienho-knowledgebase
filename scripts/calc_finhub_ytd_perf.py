@@ -40,7 +40,7 @@ with open(BASE_DIR / "07_REPORTS" / "data" / "historical_ga4_gsc_t1_t4_2026.json
 
 t1_t4_hubs = {}
 for m in [1, 2, 3, 4]:
-    with open(BASE_DIR / "07_REPORTS" / "data" / f"monthly_0{m}_2026_full_month.json") as f:
+    with open(BASE_DIR / "07_REPORTS" / "data" / "monthly" / f"monthly_0{m}_2026_full_month.json") as f:
         m_data = json.load(f)
         t1_t4_hubs[f"T{m}"] = m_data.get("hubs", {}).get("financial", {})
 

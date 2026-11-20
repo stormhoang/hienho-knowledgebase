@@ -25,6 +25,7 @@ from scripts.lib.db import (
     get_connection,
     DEFAULT_DB_PATH,
     DATA_DIR,
+    MONTHLY_DIR,
     query_hubs_summary,
     query_top_w2a_drivers,
     query_quick_wins
@@ -68,7 +69,7 @@ def validate_snapshot(data, as_of):
     return errors
 
 
-def select_snapshot(month=None, data_dir=DATA_DIR, today=None):
+def select_snapshot(month=None, data_dir=MONTHLY_DIR, today=None):
     today = today or date.today()
     month = month or today.strftime("%Y-%m")
     year, month_number = map(int, month.split("-"))

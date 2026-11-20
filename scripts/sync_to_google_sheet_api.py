@@ -88,7 +88,7 @@ def sync_google_sheet(
     if ai_traffic_pv is None:
         try:
             m_parts = month.split("-")
-            cons_file = BASE_DIR / "07_REPORTS" / "data" / f"monthly_{m_parts[1]}_{m_parts[0]}_mtd_{days_elapsed}d.json"
+            cons_file = BASE_DIR / "07_REPORTS" / "data" / "monthly" / f"monthly_{m_parts[1]}_{m_parts[0]}_mtd_{days_elapsed}d.json"
             if cons_file.exists():
                 with open(cons_file, "r", encoding="utf-8") as f:
                     _cdata = json.load(f)
@@ -338,7 +338,7 @@ def sync_google_sheet(
 
 if __name__ == "__main__":
     # Test chạy trực tiếp với dữ liệu MTD 24
-    consolidated_file = BASE_DIR / "07_REPORTS" / "data" / "monthly_10_2026_consolidated.json"
+    consolidated_file = BASE_DIR / "07_REPORTS" / "data" / "monthly" / "monthly_10_2026_consolidated.json"
     if consolidated_file.exists():
         with open(consolidated_file, "r", encoding="utf-8") as f:
             d = json.load(f)

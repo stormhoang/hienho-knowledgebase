@@ -12,7 +12,7 @@ Quy trình:
 4. Bóc tách 6 Kênh lưu lượng và 6 Hubs nội dung.
 5. Cộng dồn phát sinh ngày mới vào mốc MTD ngày hôm trước.
 6. Cập nhật đồng loạt:
-   - Snapshot MTD JSON: 07_REPORTS/data/monthly_{month}_mtd_{day}d.json
+   - Snapshot MTD JSON: 07_REPORTS/data/monthly/monthly_{month}_mtd_{day}d.json
    - summary.json & PERFORMANCE_SNAPSHOT_LATEST.md
    - Local Excel SSOT: web_performance_tracking.xlsx & web_platform_performance.xlsx
    - Hub Dashboard: react-web-momo/lib/dashboard/web-data.json
@@ -35,7 +35,9 @@ from scripts.lib.excel_patcher import patch_excel_dynamic
 
 DAILY_DIR = BASE_DIR / "07_REPORTS" / "data" / "ga4_daily"
 SNAPSHOT_DIR = BASE_DIR / "07_REPORTS" / "data"
+MONTHLY_DIR = SNAPSHOT_DIR / "monthly"
 SNAPSHOT_DIR.mkdir(parents=True, exist_ok=True)
+MONTHLY_DIR.mkdir(parents=True, exist_ok=True)
 DAILY_DIR.mkdir(parents=True, exist_ok=True)
 
 TARGET_MONTHLY_PV = 3829155
@@ -256,11 +258,11 @@ def ingest_daily_report(csv_path=None, dry_run=False):
 
     # Tìm snapshot MTD của ngày hôm trước
     prior_day = day - 1
-    prior_snapshot_file = SNAPSHOT_DIR / f"monthly_{data['month']:02d}_{data['year']}_mtd_{prior_day}d.json"
+    prior_snapshot_file = MONTHLY_DIR / f"monthly_{data['month']:02d}_{data['year']}_mtd_{prior_day}d.json"
     
     if not prior_snapshot_file.exists():
         # Fallback: tìm snapshot mtd lớn nhất hiện có nhỏ hơn day
-        candidates = sorted(SNAPSHOT_DIR.glob(f"monthly_{data['month']:02d}_{data['year']}_mtd_*d.json"))
+        candidates = sorted(MONTHLY_DIR.glob(f"monthly_{data['month']:02d}_{data['year']}_mtd_*d.json"))
         candidates = [c for c in candidates if int(re.search(r"mtd_(\d+)d", c.name).group(1)) < day]
         if candidates:
             prior_snapshot_file = candidates[-1]
@@ -339,7 +341,7 @@ def ingest_daily_report(csv_path=None, dry_run=False):
         "cinema_breakdown": acc_cinema
     }
 
-    new_snapshot_file = SNAPSHOT_DIR / f"monthly_{data['month']:02d}_{data['year']}_mtd_{day}d.json"
+    new_snapshot_file = MONTHLY_DIR / f"monthly_{data['month']:02d}_{data['year']}_mtd_{day}d.json"
     summary_file = SNAPSHOT_DIR / "summary.json"
 
     print(f"[3/5] Tính toán lũy kế MTD {day} ngày hoàn tất:")

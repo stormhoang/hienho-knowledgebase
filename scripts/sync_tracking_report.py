@@ -183,13 +183,13 @@ def parse_and_sync():
             summary["backlink_profile"] = json.load(f)
 
     # Write snapshot JSON (pure tracking)
-    json_path = os.path.join(BASE_DIR, f"07_REPORTS/data/monthly_10_2026_mtd_{days_elapsed}d.json")
+    json_path = os.path.join(BASE_DIR, f"07_REPORTS/data/monthly/monthly_10_2026_mtd_{days_elapsed}d.json")
     with open(json_path, 'w', encoding='utf-8') as f:
         json.dump(summary, f, ensure_ascii=False, indent=2)
     print(f"Đã tạo JSON snapshot tracking tại {json_path}")
 
     # Write consolidated 3-pillar snapshot
-    consolidated_path = os.path.join(BASE_DIR, "07_REPORTS/data/monthly_10_2026_consolidated.json")
+    consolidated_path = os.path.join(BASE_DIR, "07_REPORTS/data/monthly/monthly_10_2026_consolidated.json")
     with open(consolidated_path, 'w', encoding='utf-8') as f:
         json.dump(summary, f, ensure_ascii=False, indent=2)
     print(f"Đã tạo JSON snapshot hợp nhất (Consolidated 3 Pillars) tại {consolidated_path}")
