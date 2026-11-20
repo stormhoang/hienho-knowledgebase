@@ -1,0 +1,380 @@
+{
+  "_meta": {
+    "title": "MoMo Web Platform Google Search Console Macro Performance 2026",
+    "source_archive": "/Users/hienhv/Downloads/https___www.momo.vn_-Performance-on-Search-2026-11-19.zip",
+    "extracted_dir": "07_REPORTS/data/gsc_exports/2026-11-19",
+    "period": "2026-01-01 to 2026-11-18",
+    "updated_at": "2026-11-19",
+    "total_clicks": 10765499,
+    "total_impressions": 370609259,
+    "average_ctr_pct": 2.9,
+    "average_position": 6.32
+  },
+  "devices": [
+    {
+      "device": "Mobile",
+      "clicks": 9424737,
+      "impressions": 291138641,
+      "ctr_pct": 3.24,
+      "avg_position": 5.78
+    },
+    {
+      "device": "Desktop",
+      "clicks": 1269085,
+      "impressions": 75827254,
+      "ctr_pct": 1.67,
+      "avg_position": 8.32
+    },
+    {
+      "device": "Tablet",
+      "clicks": 71677,
+      "impressions": 3643364,
+      "ctr_pct": 1.97,
+      "avg_position": 8.04
+    }
+  ],
+  "performance_by_hub": [
+    {
+      "hub_name": "Cinema Hub",
+      "pages_count": 324,
+      "clicks": 3849618,
+      "impressions": 120555616,
+      "ctr_pct": 3.19,
+      "avg_position": 7.04
+    },
+    {
+      "hub_name": "Home MoMo",
+      "pages_count": 94,
+      "clicks": 1152117,
+      "impressions": 23496962,
+      "ctr_pct": 4.9,
+      "avg_position": 5.89
+    },
+    {
+      "hub_name": "Financial Hub",
+      "pages_count": 107,
+      "clicks": 1016528,
+      "impressions": 34028050,
+      "ctr_pct": 2.99,
+      "avg_position": 7.46
+    },
+    {
+      "hub_name": "Payment Hub",
+      "pages_count": 27,
+      "clicks": 951216,
+      "impressions": 28621519,
+      "ctr_pct": 3.32,
+      "avg_position": 6.11
+    },
+    {
+      "hub_name": "Game Hub",
+      "pages_count": 14,
+      "clicks": 674075,
+      "impressions": 23181351,
+      "ctr_pct": 2.91,
+      "avg_position": 5.6
+    },
+    {
+      "hub_name": "Support Hub",
+      "pages_count": 125,
+      "clicks": 634203,
+      "impressions": 14081170,
+      "ctr_pct": 4.5,
+      "avg_position": 5.43
+    },
+    {
+      "hub_name": "Travel Hub",
+      "pages_count": 93,
+      "clicks": 301397,
+      "impressions": 16978632,
+      "ctr_pct": 1.78,
+      "avg_position": 6.81
+    },
+    {
+      "hub_name": "Chưa phân loại",
+      "pages_count": 64,
+      "clicks": 226436,
+      "impressions": 6037694,
+      "ctr_pct": 3.75,
+      "avg_position": 5.64
+    },
+    {
+      "hub_name": "Telco Hub",
+      "pages_count": 27,
+      "clicks": 161516,
+      "impressions": 5979301,
+      "ctr_pct": 2.7,
+      "avg_position": 6.23
+    },
+    {
+      "hub_name": "Insurance Hub",
+      "pages_count": 34,
+      "clicks": 161421,
+      "impressions": 7293923,
+      "ctr_pct": 2.21,
+      "avg_position": 7.57
+    },
+    {
+      "hub_name": "Merchant Hub",
+      "pages_count": 44,
+      "clicks": 160221,
+      "impressions": 4928826,
+      "ctr_pct": 3.25,
+      "avg_position": 6.17
+    },
+    {
+      "hub_name": "Vehicle Hub",
+      "pages_count": 15,
+      "clicks": 101851,
+      "impressions": 1952774,
+      "ctr_pct": 5.22,
+      "avg_position": 4.3
+    },
+    {
+      "hub_name": "Billpay Hub",
+      "pages_count": 18,
+      "clicks": 73232,
+      "impressions": 3049902,
+      "ctr_pct": 2.4,
+      "avg_position": 5.04
+    },
+    {
+      "hub_name": "New User Hub",
+      "pages_count": 6,
+      "clicks": 67725,
+      "impressions": 2365900,
+      "ctr_pct": 2.86,
+      "avg_position": 4.28
+    },
+    {
+      "hub_name": "Lottery Hub",
+      "pages_count": 5,
+      "clicks": 34977,
+      "impressions": 1608305,
+      "ctr_pct": 2.17,
+      "avg_position": 6.62
+    },
+    {
+      "hub_name": "Student Hub",
+      "pages_count": 3,
+      "clicks": 8121,
+      "impressions": 198535,
+      "ctr_pct": 4.09,
+      "avg_position": 6.06
+    }
+  ],
+  "top_pages": [
+    {
+      "page_url": "https://www.momo.vn/nap-xu-tiktok",
+      "clicks": 818534,
+      "impressions": 8948436,
+      "ctr_pct": 9.15,
+      "position": 3.11
+    },
+    {
+      "page_url": "https://www.momo.vn/",
+      "clicks": 709644,
+      "impressions": 6914751,
+      "ctr_pct": 10.26,
+      "position": 4.82
+    },
+    {
+      "page_url": "https://www.momo.vn/bonbon",
+      "clicks": 215564,
+      "impressions": 2628790,
+      "ctr_pct": 8.2,
+      "position": 5.92
+    },
+    {
+      "page_url": "https://www.momo.vn/vay-nhanh",
+      "clicks": 179220,
+      "impressions": 6487123,
+      "ctr_pct": 2.76,
+      "position": 7.58
+    },
+    {
+      "page_url": "https://www.momo.vn/cinema",
+      "clicks": 160093,
+      "impressions": 6944545,
+      "ctr_pct": 2.31,
+      "position": 9.43
+    },
+    {
+      "page_url": "https://www.momo.vn/cinema/rap/bhd-star/bhd-star-long-khanh-216",
+      "clicks": 143202,
+      "impressions": 799266,
+      "ctr_pct": 17.92,
+      "position": 7.08
+    },
+    {
+      "page_url": "https://www.momo.vn/hoi-dap/cach-mua-ma-the-game-truc-tuyen",
+      "clicks": 131333,
+      "impressions": 6824097,
+      "ctr_pct": 1.92,
+      "position": 5.04
+    },
+    {
+      "page_url": "https://www.momo.vn/cinema/rap/cgv/cgv-aeon-mall-hai-phong-149",
+      "clicks": 119635,
+      "impressions": 1165277,
+      "ctr_pct": 10.27,
+      "position": 5.69
+    },
+    {
+      "page_url": "https://www.momo.vn/nap-the-game",
+      "clicks": 117529,
+      "impressions": 8850475,
+      "ctr_pct": 1.33,
+      "position": 5.37
+    },
+    {
+      "page_url": "https://www.momo.vn/cinema/rap/cgv",
+      "clicks": 106383,
+      "impressions": 6441997,
+      "ctr_pct": 1.65,
+      "position": 7.19
+    },
+    {
+      "page_url": "https://www.momo.vn/blog/game",
+      "clicks": 92164,
+      "impressions": 341449,
+      "ctr_pct": 26.99,
+      "position": 5.64
+    },
+    {
+      "page_url": "https://www.momo.vn/blog/cac-goi-tai-khoan-netflix-c115dt1097",
+      "clicks": 91840,
+      "impressions": 1570244,
+      "ctr_pct": 5.85,
+      "position": 4.85
+    },
+    {
+      "page_url": "https://www.momo.vn/blog/tra-cuu-y-nghia-so-dien-thoai-c193dt1419",
+      "clicks": 87310,
+      "impressions": 1514797,
+      "ctr_pct": 5.76,
+      "position": 5.19
+    },
+    {
+      "page_url": "https://www.momo.vn/blog/vi-tra-sau-momo-thanh-toan-duoc-nhung-dich-vu-gi-c116dt981",
+      "clicks": 81185,
+      "impressions": 1156795,
+      "ctr_pct": 7.02,
+      "position": 4.39
+    },
+    {
+      "page_url": "https://www.momo.vn/cinema/lich-chieu",
+      "clicks": 75906,
+      "impressions": 3500349,
+      "ctr_pct": 2.17,
+      "position": 10.68
+    }
+  ],
+  "top_queries": [
+    {
+      "query": "momo",
+      "clicks": 419338,
+      "impressions": 1099385,
+      "ctr_pct": 38.14,
+      "position": 1.26
+    },
+    {
+      "query": "nạp xu tiktok",
+      "clicks": 230765,
+      "impressions": 1879975,
+      "ctr_pct": 12.27,
+      "position": 2.13
+    },
+    {
+      "query": "mmoo",
+      "clicks": 142103,
+      "impressions": 2472631,
+      "ctr_pct": 5.75,
+      "position": 6.12
+    },
+    {
+      "query": "napxutiktok",
+      "clicks": 83218,
+      "impressions": 681076,
+      "ctr_pct": 12.22,
+      "position": 1.95
+    },
+    {
+      "query": "cgv",
+      "clicks": 52037,
+      "impressions": 3560627,
+      "ctr_pct": 1.46,
+      "position": 4.32
+    },
+    {
+      "query": "momo game",
+      "clicks": 49659,
+      "impressions": 83188,
+      "ctr_pct": 59.69,
+      "position": 1.53
+    },
+    {
+      "query": "momo88",
+      "clicks": 43318,
+      "impressions": 158077,
+      "ctr_pct": 27.4,
+      "position": 2.01
+    },
+    {
+      "query": "lotte cinema",
+      "clicks": 41736,
+      "impressions": 1050729,
+      "ctr_pct": 3.97,
+      "position": 5.82
+    },
+    {
+      "query": "vay nhanh",
+      "clicks": 40850,
+      "impressions": 1101792,
+      "ctr_pct": 3.71,
+      "position": 5.49
+    },
+    {
+      "query": "bhd long khánh",
+      "clicks": 40295,
+      "impressions": 68551,
+      "ctr_pct": 58.78,
+      "position": 1.85
+    },
+    {
+      "query": "nap xu tiktok",
+      "clicks": 36169,
+      "impressions": 323498,
+      "ctr_pct": 11.18,
+      "position": 2.12
+    },
+    {
+      "query": "môm",
+      "clicks": 31335,
+      "impressions": 381226,
+      "ctr_pct": 8.22,
+      "position": 1.02
+    },
+    {
+      "query": "nạp xu",
+      "clicks": 27083,
+      "impressions": 139153,
+      "ctr_pct": 19.46,
+      "position": 1.89
+    },
+    {
+      "query": "momo no hu",
+      "clicks": 26945,
+      "impressions": 306569,
+      "ctr_pct": 8.79,
+      "position": 2.8
+    },
+    {
+      "query": "momo đăng nhập",
+      "clicks": 25340,
+      "impressions": 70685,
+      "ctr_pct": 35.85,
+      "position": 1.85
+    }
+  ]
+}

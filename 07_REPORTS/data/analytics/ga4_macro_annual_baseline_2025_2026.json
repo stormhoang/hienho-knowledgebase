@@ -1,0 +1,185 @@
+{
+  "_meta": {
+    "title": "MoMo Web Platform GA4 Macro Annual Baseline (2025 - 2026)",
+    "source_file": "/Users/hienhv/Downloads/download (1).csv",
+    "export_source": "GA4 Explore (MoMo.vn Web Performance Tab 3)",
+    "period": "2025-10-01 to 2026-11-19",
+    "updated_at": "2026-11-19",
+    "total_rows": 100000,
+    "total_views_recorded": 44956964,
+    "grand_total_views_header": 45305639
+  },
+  "yearly_breakdown": {
+    "2025": {
+      "views": 8421827,
+      "share_pct": 18.73,
+      "coverage": "Q4 2025 (Tháng 10 - Tháng 12)"
+    },
+    "2026": {
+      "views": 36535137,
+      "share_pct": 81.27,
+      "coverage": "10.5 tháng (01/01/2026 - 19/11/2026)"
+    }
+  },
+  "channel_breakdown_2026": {
+    "non_paid_total": {
+      "views": 27661366,
+      "share_pct": 75.71,
+      "sub_channels": {
+        "organic_search": {
+          "views": 17929822,
+          "share_pct": 49.08
+        },
+        "direct": {
+          "views": 6377679,
+          "share_pct": 17.46
+        },
+        "app_referral": {
+          "views": 2627612,
+          "share_pct": 7.19
+        },
+        "organic_social": {
+          "views": 607405,
+          "share_pct": 1.66
+        },
+        "ai_referrals": {
+          "views": 118848,
+          "share_pct": 0.33
+        }
+      }
+    },
+    "paid_total": {
+      "views": 7741673,
+      "share_pct": 21.19,
+      "sub_channels": {
+        "paid_search": {
+          "views": 5609097,
+          "share_pct": 15.35
+        },
+        "paid_social": {
+          "views": 1773357,
+          "share_pct": 4.85
+        },
+        "cross_network": {
+          "views": 198601,
+          "share_pct": 0.54
+        },
+        "paid_other": {
+          "views": 160618,
+          "share_pct": 0.44
+        }
+      }
+    },
+    "unassigned": {
+      "views": 1110253,
+      "share_pct": 3.04
+    }
+  },
+  "top_pages_2026": [
+    {
+      "rank": 1,
+      "path": "/",
+      "views": 2715967,
+      "share_pct": 7.43,
+      "project": "Trang chủ MoMo"
+    },
+    {
+      "rank": 2,
+      "path": "/download",
+      "views": 2636679,
+      "share_pct": 7.22,
+      "project": "Cổng tải ứng dụng"
+    },
+    {
+      "rank": 3,
+      "path": "/nap-xu-tiktok",
+      "views": 2213035,
+      "share_pct": 6.06,
+      "project": "Nạp xu TikTok"
+    },
+    {
+      "rank": 4,
+      "path": "/tin-tuc/tin-tuc-su-kien/nap-game-sieu-hoi-thang-nay-giam-den-10000d-khi-8081",
+      "views": 1012242,
+      "share_pct": 2.77,
+      "project": "Tin tức nạp game"
+    },
+    {
+      "rank": 5,
+      "path": "/phat-nguoi",
+      "views": 977412,
+      "share_pct": 2.68,
+      "project": "Tra cứu phạt nguội"
+    },
+    {
+      "rank": 6,
+      "path": "/vi-tra-sau",
+      "views": 887599,
+      "share_pct": 2.43,
+      "project": "Ví Trả Sau"
+    },
+    {
+      "rank": 7,
+      "path": "/vay-nhanh",
+      "views": 716201,
+      "share_pct": 1.96,
+      "project": "Vay Nhanh"
+    },
+    {
+      "rank": 8,
+      "path": "/nuoc",
+      "views": 439092,
+      "share_pct": 1.20,
+      "project": "Hóa đơn nước"
+    },
+    {
+      "rank": 9,
+      "path": "/vi-tra-sau/samsung",
+      "views": 385528,
+      "share_pct": 1.06,
+      "project": "Ví Trả Sau Samsung"
+    },
+    {
+      "rank": 10,
+      "path": "/cinema",
+      "views": 384131,
+      "share_pct": 1.05,
+      "project": "Cinema Hub"
+    },
+    {
+      "rank": 11,
+      "path": "/cinema/ghost-in-the-cell-25083",
+      "views": 351859,
+      "share_pct": 0.96,
+      "project": "Chi tiết phim Ghost in the Cell"
+    },
+    {
+      "rank": 12,
+      "path": "/tin-tuc/khuyen-mai/giam-20k-nang-cap-app-nap-game-app-store-khi-lan-8402",
+      "views": 348102,
+      "share_pct": 0.95,
+      "project": "Khuyến mại nạp game App Store"
+    },
+    {
+      "rank": 13,
+      "path": "/tin-tuc/khuyen-mai/momo-tang-ban-qua-tet-giam-toi-45000d-khi-thanh-8487",
+      "views": 331861,
+      "share_pct": 0.91,
+      "project": "Khuyến mại Tết"
+    },
+    {
+      "rank": 14,
+      "path": "/phat-nguoi/o-to",
+      "views": 329656,
+      "share_pct": 0.90,
+      "project": "Phạt nguội ô tô"
+    },
+    {
+      "rank": 15,
+      "path": "/cinema/lich-chieu",
+      "views": 320856,
+      "share_pct": 0.88,
+      "project": "Lịch chiếu phim"
+    }
+  ]
+}

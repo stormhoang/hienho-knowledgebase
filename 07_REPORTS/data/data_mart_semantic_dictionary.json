@@ -4,7 +4,10 @@
     "version": "1.0.0",
     "updated_at": "2026-11-19",
     "description": "Lớp ngữ nghĩa dữ liệu (Semantic Layer) đóng băng định nghĩa chỉ số kinh doanh, công thức SQL và benchmark chuẩn cho Data Analyst và Business Development Copilot.",
-    "sqlite_source": "07_REPORTS/data/cache/performance.sqlite"
+    "sqlite_source": "07_REPORTS/data/cache/performance.sqlite",
+    "macro_baseline_source": "07_REPORTS/data/analytics/ga4_macro_annual_baseline_2025_2026.json",
+    "macro_events_source": "07_REPORTS/data/analytics/ga4_macro_event_breakdown_2025_2026.json",
+    "gsc_macro_source": "07_REPORTS/data/analytics/gsc_macro_performance_2026.json"
   },
   "metrics": {
     "w2a_cvr": {
