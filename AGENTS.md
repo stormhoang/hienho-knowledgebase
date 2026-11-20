@@ -90,6 +90,29 @@
 | **Báo cáo tuần W##, Báo cáo tháng, MBR Board** | [`07_REPORTS/docs/INDEX.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/INDEX.md) | Đọc INDEX trước để xác định đúng file theo kỳ (weekly-report-YYYY-MM-DD-..., report-thang-XX-2026-board.md); KHÔNG load toàn bộ `07_REPORTS/docs/`. Template: `07_REPORTS/templates/monthly_report_template.md`; chuẩn trình bày: skill `web-platform-reporting`. |
 | **Content Plan, Keyword Cluster, Content Inventory** | [`06_USE_CASE_MOMO/content-plans/INDEX.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/06_USE_CASE_MOMO/content-plans/INDEX.md) + [`05_HUBS/inventory/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS/inventory/) | Đọc INDEX chọn đúng use-case folder; keyword inventory đọc đúng CSV của Hub; skill `content-plan-architect` chứa quy chuẩn 7 tầng. |
 
+### BẢNG TRA CỨU NHANH DATA SSOT (DATA QUERY ROUTING)
+
+Khi user hỏi số liệu, agent tra bảng này TRƯỚC, đọc đúng file/command, không đoán path, không đọc file lớn:
+
+| Câu hỏi / Intent | Nguồn SSOT đích | Cách truy vấn nhanh |
+| :--- | :--- | :--- |
+| Traffic, sessions, PV theo ngày/hub/W2A funnel | `07_REPORTS/data/performance.sqlite` | `./.venv/bin/python scripts/query_analytics.py --funnel <hub>` / `--sql <query>` / `--market-sizing <kw>` |
+| Chẩn đoán tăng/giảm, anomaly, pacing MTD | `performance.sqlite` + `07_REPORTS/data/monthly/monthly_*_mtd_*d.json` (mới nhất) | `diagnose_performance.py`, `detect_anomalies.py` |
+| GSC clicks/impressions/position theo page MTD | `07_REPORTS/data/analytics/page_mtd.json` + `gsc_mtd_performance_2026.json` | Đọc JSON trực tiếp (ingest qua `ingest_gsc_mtd.py`) |
+| Paid Ads, kênh media, UTM, CVR W2A | `07_REPORTS/data/analytics/paid_ads_performance.json` | Đọc JSON (ingest qua `ingest_paid_ads.py` từ GA4 Explore CSV) |
+| GA4 raw daily theo page×channel | `07_REPORTS/data/ga4_daily/YYYY-MM-DD.csv` | Đọc CSV ngày cụ thể |
+| MTD tổng PV/sessions/channels mới nhất | `07_REPORTS/data/monthly/monthly_<YYYY-MM>_mtd_*d.json` (file có số ngày lớn nhất của tháng hiện tại) + `07_REPORTS/data/summary.json` | Đọc file MTD mới nhất |
+| URL → Project/Theme/Hub mapping | `07_REPORTS/data/url_project_mapping.json` + `web_dim_page_url.csv` | `scripts/lib/url_project_resolver.py`, `theme_matcher.py` |
+| Keyword clusters, content plan | `07_REPORTS/data/inventory_clusters_summary.json` + `05_HUBS/inventory/<hub>/` | `generate_content_plan.py` |
+| Mùa vụ, trends theo theme | `07_REPORTS/data/theme_seasonality.json` | `theme_seasonality.py`, `forecast_engine.py` |
+| URL inventory live, zero-traffic | `07_REPORTS/data/momo_live_urls.json` | `validate_seo_pipeline.py` |
+| SEO news, trending topics | `07_REPORTS/data/seo_news_latest.json` / `seo_news_enriched.json` | `sync_seo_news.py` |
+| Lost impressions → zero impressions → audit 404/301 | `gsc_lost_impressions_detail.json` → `gsc_zero_impression_analysis.json` | `audit_actionable_urls.py` (chạy lost trước) |
+| GTM tags/triggers/variables live | Container `GTM-P9JDDJZ` | Skill `gtm-inspect` + `scripts/gtm_inspect.py` (read-only) |
+| Event schema, tracking params | `04_MOSPARK_PLATFORM/WEB_EVENT_TRACKING_DICTIONARY.md` | Đọc doc, không query API |
+| Ads segment taxonomy | `04_MOSPARK_PLATFORM/data/ads_segments.json` + `ADS_SEGMENT_DICTIONARY.md` | `generate_ads_segments.py` |
+| Tài chính/FinHub YTD | `historical_ga4_gsc_t1_t4_2026.json` + monthly full_month | `calc_finhub_ytd_perf.py` (đọc Google Sheet) |
+
 ---
 
 ## ⚡ QUY CHUẨN KỸ THUẬT & TRUY XUẤT CỐT LÕI (SSOT POINTERS)
