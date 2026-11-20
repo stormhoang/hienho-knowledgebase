@@ -22,7 +22,7 @@ Quy tắc bắt buộc:
   - Không bịa tin: tin nào không có URL gốc thì bỏ.
 
 Cơ chế làm giàu nội dung (enrichment) - 2 lớp:
-  1) Gemini Spark daily reports (11_NEWS_FEED/*_daily_report.md):
+  1) Gemini Spark daily reports (11_NEWS_FEED/daily/*_daily_report.md):
      - Trích tiêu đề VN, tóm tắt, action, category, impact, tags theo từng section có citation.
      - Bổ sung vào feed các tin được report trích dẫn nhưng RSS không lấy được
        (vd Search Engine Land, Reddit) với published_at = ngày report.
@@ -438,7 +438,7 @@ def parse_news_feed():
     """Doc toan bo Gemini Spark daily reports -> (enrich dict, cited set, stats)."""
     enrich = {}
     cited = set()
-    paths = sorted(glob.glob(os.path.join(NEWS_FEED_DIR, "*_daily_report.md")))
+    paths = sorted(glob.glob(os.path.join(NEWS_FEED_DIR, "**", "*_daily_report.md"), recursive=True))
     reports = [r for r in (parse_report_file(p) for p in paths) if r["date"]]
     reports.sort(key=lambda r: r["date"])  # report moi hon ghi de report cu
     n_sections = 0
