@@ -29,40 +29,7 @@ PROPERTY_ID = "270743103"
 STREAM_ID = "G-02G70QKZ26"
 
 def get_access_token():
-    creds_file = BASE_DIR / "07_REPORTS" / "data" / "credentials" / "ga4-credentials.json"
-    token_file = BASE_DIR / "07_REPORTS" / "data" / "credentials" / "ga4-token.json"
-    
-    if not creds_file.exists() or not token_file.exists():
-        raise FileNotFoundError(f"Thiếu file credentials hoặc token tại: {creds_file}")
-        
-    with open(creds_file, "r", encoding="utf-8") as f:
-        creds_data = json.load(f)
-    oauth_creds = creds_data.get("installed") or creds_data.get("web")
-    if not oauth_creds:
-        raise ValueError("File ga4-credentials.json không chứa installed/web client credentials")
-        
-    with open(token_file, "r", encoding="utf-8") as f:
-        token_data = json.load(f)
-    refresh_token = token_data.get("refresh_token")
-    if not refresh_token:
-        raise ValueError("File ga4-token.json không chứa refresh_token hợp lệ")
-        
-    # Refresh token
-    body = urllib.parse.urlencode({
-        "client_id": oauth_creds["client_id"],
-        "client_secret": oauth_creds["client_secret"],
-        "refresh_token": refresh_token,
-        "grant_type": "refresh_token"
-    }).encode("utf-8")
-    
-    req = urllib.request.Request("https://oauth2.googleapis.com/token", data=body)
-    try:
-        with urllib.request.urlopen(req) as resp:
-            data = json.loads(resp.read().decode("utf-8"))
-            return data["access_token"]
-    except urllib.error.HTTPError as e:
-        err_msg = e.read().decode("utf-8")
-        raise RuntimeError(f"Lỗi refresh token từ Google OAuth: {err_msg}")
+    raise RuntimeError("[CHÍNH SÁCH HẠ TẦNG MOMO] Toàn bộ lệnh gọi GA4 API đã bị vô hiệu hóa vĩnh viễn. Chỉ vận hành GTM.")
 
 def run_ga4_report(access_token, request_body):
     url = f"https://analyticsdata.googleapis.com/v1beta/properties/{PROPERTY_ID}:runReport"
@@ -370,4 +337,5 @@ def main():
     print("=" * 70)
 
 if __name__ == "__main__":
-    main()
+    print("[CHÍNH SÁCH HẠ TẦNG MOMO] sync_ga4_to_hubs.py đã bị vô hiệu hóa hoàn toàn. Hệ thống chỉ vận hành GTM.")
+    sys.exit(0)

@@ -25,7 +25,9 @@ from scripts.lib.db import (
     DEFAULT_DB_PATH,
     query_hubs_summary,
     query_top_w2a_drivers,
-    query_quick_wins
+    query_quick_wins,
+    query_gsc_hubs_summary,
+    query_gsc_devices
 )
 
 
@@ -51,6 +53,48 @@ def show_hubs():
         ])
     headers = ["Hub Name", "Active Pages", "Sessions", "Engagement Rate", "W2A Clicks", "W2A CVR"]
     print("\n--- BAO CAO HIEU SUAT TONG THE CAC HUBS ---")
+    print(format_table(headers, table_data))
+
+
+def show_seo_hubs():
+    rows = query_gsc_hubs_summary()
+    if not rows:
+        print("Khong co du lieu SEO Hubs.")
+        return
+    table_data = []
+    for r in rows:
+        table_data.append([
+            r["hub_name"],
+            f"{r['pages_count']:,}",
+            f"{r['total_clicks']:,}",
+            f"{r['total_impressions']:,}",
+            f"{r['avg_ctr']:.2f}%",
+            f"{r['avg_position']:.2f}"
+        ])
+    headers = ["Hub Name", "Top Pages", "Total Clicks", "Total Imp", "Avg CTR", "Avg Pos"]
+    print("\n--- HIỆU SUẤT SEO GOOGLE SEARCH CONSOLE 2026 THEO HUBS ---")
+    print(format_table(headers, table_data))
+
+
+def show_devices():
+    rows = query_gsc_devices()
+    if not rows:
+        print("Khong co du lieu thiet bi.")
+        return
+    table_data = []
+    total_clicks = sum(r["clicks"] for r in rows)
+    for r in rows:
+        share = (r["clicks"] / total_clicks * 100) if total_clicks > 0 else 0
+        table_data.append([
+            r["device"],
+            f"{r['clicks']:,}",
+            f"{share:.2f}%",
+            f"{r['impressions']:,}",
+            f"{r['ctr']:.2f}%",
+            f"{r['position']:.2f}"
+        ])
+    headers = ["Thiết Bị", "Lượt Clicks", "Tỷ Trọng Clicks", "Lượt Hiển Thị", "CTR", "Vị Trí TB"]
+    print("\n--- PHÂN TẦNG THIẾT BỊ GOOGLE SEARCH CONSOLE 2026 ---")
     print(format_table(headers, table_data))
 
 
@@ -352,6 +396,8 @@ def run_custom_sql(sql):
 def main():
     parser = argparse.ArgumentParser(description="CLI Analytics Query Tool")
     parser.add_argument("--hubs", action="store_true", help="Hiển thị hiệu suất các Hubs")
+    parser.add_argument("--seo-hubs", action="store_true", help="Hiển thị hiệu suất SEO Search Console 2026 theo Hubs")
+    parser.add_argument("--devices", action="store_true", help="Hiển thị phân bổ thiết bị Mobile vs Desktop Search Console 2026")
     parser.add_argument("--w2a", action="store_true", help="Hiển thị Top trang chuyển đổi Web-to-App")
     parser.add_argument("--quick-wins", action="store_true", help="Hiển thị từ khóa Quick Wins")
     parser.add_argument("--cannibalization", action="store_true", help="Hiển thị từ khóa ăn thịt lẫn nhau")
@@ -369,6 +415,10 @@ def main():
         show_funnel(args.funnel)
     elif args.market_sizing:
         show_market_sizing(args.market_sizing, month=args.month)
+    elif args.seo_hubs:
+        show_seo_hubs()
+    elif args.devices:
+        show_devices()
     elif args.hubs:
         show_hubs()
     elif args.w2a:

@@ -20,7 +20,7 @@ from google.oauth2 import service_account
 from googleapiclient.discovery import build
 
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-CREDS_FILE = os.path.join(REPO_ROOT, "07_REPORTS", "data", "credentials", "gsc-credentials.json")
+CREDS_FILE = os.path.join(REPO_ROOT, "07_REPORTS", "data", "credentials", "gtm-credentials.json")
 
 CONTAINER_WEB = "accounts/4262611053/containers/10104547"   # GTM-P9JDDJZ
 CONTAINER_INAPP = "accounts/4262611053/containers/57119568"  # cần verify public ID

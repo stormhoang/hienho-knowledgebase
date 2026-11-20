@@ -1,7 +1,9 @@
 ---
 name: ad-hoc-ga4-query
-description: Truy vấn GA4 Data API ad-hoc cho câu hỏi số liệu một lần (1 page, 1 event, 1 date-range bất kỳ) bằng shared client, không tạo file script mới.
+description: DEPRECATED - GA4/GSC API đã bị cấm theo policy (xem AGENTS.md). Không dùng skill này; đọc dữ liệu local thay thế.
 ---
+
+> **DEPRECATED 2026-11-20:** Policy mới cấm mọi gọi GA4/GSC API. Skill này và `scripts/lib/ga4_client.py` không còn được dùng. Thay thế: `scripts/query_analytics.py` (Data Mart), `page_mtd.json`, `ingest_ga4_daily.py`, `ingest_gsc_mtd.py`.
 
 # SKILL: AD-HOC GA4 QUERY (/ad-hoc-ga4-query)
 
@@ -86,5 +88,4 @@ Full list dimension/metric hợp lệ: GA4 Data API docs (developers.google.com/
 - Skill `sync-ads`: pipeline định kỳ Paid Ads (đã có script riêng, không dùng skill này).
 - `scripts/query_analytics.py`: query SQLite Data Mart local (khác nguồn - dùng khi cần join đa nguồn đã sync, không gọi API trực tiếp).
 - Credentials: `07_REPORTS/data/credentials/ga4-credentials.json` + `ga4-token.json` (OAuth refresh token).
-- BigQuery raw GA4 export: `scripts/lib/bq_client.py` (`query(sql)` → list of dict; project `momovn-prod`, dataset `analytics_270743103`; có thể bị VPC-SC chặn - xem docstring).
 - GSC ad-hoc: dùng `scripts/lib/` chưa có client - nếu cần query GSC Search Analytics ad-hoc, tham khảo pattern trong `scripts/gsc_keyword_ranking.py` (service account `gsc-credentials.json`).

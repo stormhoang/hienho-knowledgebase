@@ -3,6 +3,9 @@ name: sync-ads
 description: Tự động truy vấn GA4 Data API, đồng bộ và bóc tách toàn diện Paid Ads, Landing Pages, Kênh Media và hiệu suất Web-to-App.
 ---
 
+> **DEPRECATED 2026-11-20:** `scripts/sync_paid_ads.py` đã archive do policy cấm GA4 API. Skill này không còn chạy được. Dữ liệu Paid Ads hiện chỉ đọc từ snapshot `07_REPORTS/data/analytics/paid_ads_performance.json` (cập nhật lần cuối trước khi kill API).
+
+
 # SKILL: PAID ADS & UTM SYNCHRONIZATION PIPELINE (/sync-ads)
 
 ## 1. MỤC TIÊU & TRIGGER

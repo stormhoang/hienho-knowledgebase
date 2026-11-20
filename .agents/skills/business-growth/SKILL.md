@@ -40,4 +40,4 @@ Trả lời các câu hỏi growth bằng reasoning kinh doanh có căn cứ s�
 
 ## 5. STALENESS RULE
 
-- `web_growth_benchmarks.json` có `as_of` + `generated_at`. Nếu `as_of` cũ hơn kỳ đang phân tích → cảnh báo user và đề xuất chạy lại `build_benchmarks.py` sau khi `sync_all_data.py`/`sync_ga4_master.py` cập nhật Data Mart.
+- `web_growth_benchmarks.json` có `as_of` + `generated_at`. Nếu `as_of` cũ hơn kỳ đang phân tích → cảnh báo user và đề xuất chạy lại `build_benchmarks.py` sau khi `ingest_ga4_daily.py`/`ingest_gsc_mtd.py` + `sync_data_mart.py` cập nhật Data Mart.
