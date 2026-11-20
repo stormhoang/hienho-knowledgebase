@@ -6,11 +6,12 @@ SYNC DATA TO HUBS DASHBOARD
 và Nhóm Tiện Ích Giao Thông (Vehicle Hub) sang Web Hubs Dashboard (/dashboard).
 
 Cập nhật các tệp đích:
-1. react-web-momo/lib/dashboard/summary.json
-2. react-web-momo/lib/dashboard/web-data.json (enrich.gsc, hubTargets, projects)
-3. react-web-momo/data/analytics/ga4-w2a-attribution.json (top_landing_pages)
-4. react-web-momo/lib/dashboard/hub-map.json
-5. Đẩy sang GitHub Hubs (main) qua REST API
+1. react-web-momo/lib/dashboard/hub-map.json
+2. react-web-momo/data/analytics/ga4-w2a-attribution.json (top_landing_pages)
+
+Lưu ý: summary.json và web-data.json KHÔNG ghi trực tiếp ở đây - web-data.json có
+single-writer là scripts/build-dashboard-data.py phía repo Hubs (đọc patch từ
+07_REPORTS/data/dashboard_patches/). Script này chỉ cập nhật hub-map và attribution.
 """
 
 import os
