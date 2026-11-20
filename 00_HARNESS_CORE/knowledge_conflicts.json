@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-20T13:08:36.352438+00:00",
+  "generated_at": "2026-11-20T13:17:08.325701+00:00",
   "mode": "observe",
   "resolved": false,
-  "conflict_count": 88,
+  "conflict_count": 85,
   "conflicts": [
     {
       "kind": "skill_asset_reference",
@@ -280,42 +280,6 @@
       "line": 106,
       "reason": "cross_repository_data_dependency",
       "message": "Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ."
-    },
-    {
-      "kind": "broken_reference",
-      "reference": "docs/Spec_Driven-Graph_Matrix-Development/README-V1.md",
-      "raw_reference": "docs/Spec_Driven-Graph_Matrix-Development/README-V1.md",
-      "source": "07_REPORTS/docs/weekly-report-2026-11-02-11-08.md",
-      "sources": [
-        "07_REPORTS/docs/weekly-report-2026-11-02-11-08.md"
-      ],
-      "line": 299,
-      "reason": "unresolved_internal_path",
-      "message": "Đường dẫn nội bộ không tìm thấy tệp đích trong repository."
-    },
-    {
-      "kind": "broken_reference",
-      "reference": "momo.cms/docs/features/FEAT-MOMATRIX-CORE-AND-DOCS-API.md",
-      "raw_reference": "momo.cms/docs/features/FEAT-MOMATRIX-CORE-AND-DOCS-API.md",
-      "source": "07_REPORTS/docs/weekly-report-2026-11-02-11-08.md",
-      "sources": [
-        "07_REPORTS/docs/weekly-report-2026-11-02-11-08.md"
-      ],
-      "line": 300,
-      "reason": "unresolved_internal_path",
-      "message": "Đường dẫn nội bộ không tìm thấy tệp đích trong repository."
-    },
-    {
-      "kind": "broken_reference",
-      "reference": "docs/features/MoMatrix/FEAT-CORE-MOMATRIX-MASTER-BLUEPRINT.md",
-      "raw_reference": "docs/features/MoMatrix/FEAT-CORE-MOMATRIX-MASTER-BLUEPRINT.md",
-      "source": "07_REPORTS/docs/weekly-report-2026-11-09-11-15.md",
-      "sources": [
-        "07_REPORTS/docs/weekly-report-2026-11-09-11-15.md"
-      ],
-      "line": 450,
-      "reason": "unresolved_internal_path",
-      "message": "Đường dẫn nội bộ không tìm thấy tệp đích trong repository."
     },
     {
       "kind": "external_reference",
@@ -817,7 +781,7 @@
       "sources": [
         "scripts/ingest_ga4_daily.py"
       ],
-      "line": 434,
+      "line": 435,
       "reason": "cross_repository_data_dependency",
       "message": "Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ."
     },
@@ -829,7 +793,7 @@
       "sources": [
         "scripts/ingest_ga4_daily.py"
       ],
-      "line": 434,
+      "line": 435,
       "reason": "cross_repository_data_dependency",
       "message": "Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ."
     },
@@ -841,7 +805,7 @@
       "sources": [
         "scripts/ingest_ga4_daily.py"
       ],
-      "line": 434,
+      "line": 435,
       "reason": "cross_repository_data_dependency",
       "message": "Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ."
     },
@@ -889,7 +853,7 @@
       "sources": [
         "scripts/ingest_gsc_mtd.py"
       ],
-      "line": 408,
+      "line": 409,
       "reason": "cross_repository_data_dependency",
       "message": "Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ."
     },

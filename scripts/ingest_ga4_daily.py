@@ -228,7 +228,7 @@ def parse_ga4_daily_csv(file_path):
         "page_views": page_views
     }
 
-def ingest_daily_report(csv_path=None, dry_run=False):
+def ingest_daily_report(csv_path=None, dry_run=False, push_hubs=False):
     if csv_path is None:
         csv_path = find_latest_ga4_export()
         if not csv_path:
@@ -430,24 +430,27 @@ def ingest_daily_report(csv_path=None, dry_run=False):
                 if dst1.parent.exists(): shutil.copy2(summary_file, dst1)
                 if dst2.parent.exists(): shutil.copy2(summary_file, dst2)
 
-                # Commit và Push sang Git remote của Hubs
-                commit_files = ["data/analytics/summary.json", "lib/dashboard/summary.json", "lib/dashboard/web-data.json"]
-                commit_msg = f"data(ga4): update MTD {day}d ({accumulated_pv:,} PV) from daily raw ingest"
-                try:
-                    import subprocess
-                    subprocess.run(["git", "-C", str(hub_repo), "add"] + commit_files, check=True)
-                    diff_chk = subprocess.run(["git", "-C", str(hub_repo), "diff", "--cached", "--quiet"])
-                    if diff_chk.returncode != 0:
-                        subprocess.run(["git", "-C", str(hub_repo), "commit", "-m", commit_msg], check=True)
-                        push_res = subprocess.run(["git", "-C", str(hub_repo), "push", "origin", "main"], capture_output=True, text=True)
-                        if push_res.returncode == 0:
-                            print(f"  ✓ Đã commit và push trực tiếp sang GitHub vanhien26/hubs-momo:main")
+                # Commit và Push sang Git remote của Hubs (chi khi co --push-hubs)
+                if push_hubs:
+                    commit_files = ["data/analytics/summary.json", "lib/dashboard/summary.json", "lib/dashboard/web-data.json"]
+                    commit_msg = f"data(ga4): update MTD {day}d ({accumulated_pv:,} PV) from daily raw ingest"
+                    try:
+                        import subprocess
+                        subprocess.run(["git", "-C", str(hub_repo), "add"] + commit_files, check=True)
+                        diff_chk = subprocess.run(["git", "-C", str(hub_repo), "diff", "--cached", "--quiet"])
+                        if diff_chk.returncode != 0:
+                            subprocess.run(["git", "-C", str(hub_repo), "commit", "-m", commit_msg], check=True)
+                            push_res = subprocess.run(["git", "-C", str(hub_repo), "push", "origin", "main"], capture_output=True, text=True)
+                            if push_res.returncode == 0:
+                                print(f"  ✓ Đã commit và push trực tiếp sang GitHub vanhien26/hubs-momo:main")
+                            else:
+                                print(f"  ⚠ Lưu ý push GitHub: {push_res.stderr.strip()}")
                         else:
-                            print(f"  ⚠ Lưu ý push GitHub: {push_res.stderr.strip()}")
-                    else:
-                        print("  ✓ Dữ liệu trên Hubs repo đã ở trạng thái mới nhất, không có commit mới.")
-                except Exception as ge:
-                    print(f"  ⚠ Lỗi commit/push Hubs: {ge}")
+                            print("  ✓ Dữ liệu trên Hubs repo đã ở trạng thái mới nhất, không có commit mới.")
+                    except Exception as ge:
+                        print(f"  ⚠ Lỗi commit/push Hubs: {ge}")
+                else:
+                    print("  ℹ Bỏ qua git commit/push Hubs (dùng --push-hubs để bật). File dashboard đã ghi local.")
             print("  ✓ Đã làm mới web-data.json và summary.json cho Hubs Dashboard")
         except Exception as e:
             print(f"  ⚠ Lưu ý rebuild dashboard: {e}")
@@ -464,6 +467,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Ingest GA4 Daily CSV Export into MTD Pipeline")
     parser.add_argument("--file", type=str, default=None, help="Đường dẫn file CSV (mặc định tìm file mới nhất trong ~/Downloads/)")
     parser.add_argument("--dry-run", action="store_true", help="Chạy thử nghiệm không ghi file")
+    parser.add_argument("--push-hubs", action="store_true", help="Commit + push dữ liệu dashboard sang repo Hubs (mặc định KHÔNG push)")
     args = parser.parse_args()
 
-    ingest_daily_report(csv_path=args.file, dry_run=args.dry_run)
+    ingest_daily_report(csv_path=args.file, dry_run=args.dry_run, push_hubs=args.push_hubs)

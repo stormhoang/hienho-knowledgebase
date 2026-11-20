@@ -21,13 +21,12 @@ for f in $(git diff --cached --name-only --diff-filter=ACM | grep -i "evidence.*
     fi
 done
 
-# 4. Knowledge link guard: khong cho PHEAT SINH link gay moi.
-#    Baseline hien tai: 3 broken_reference (path repo ngoai trong bao cao tuan da qua).
-#    Giam dan so nay khi fix het; tuyet doi khong tang.
+# 4. Knowledge link guard: zero tolerance - bat ky link gay moi nao cung chan commit.
+#    Ref co y tro repo ngoai phai annotate <!-- kb:external --> tren dong do.
 $PYTHON scripts/detect_knowledge_conflicts.py \
     --output /tmp/knowledge_conflicts_hook.json \
     --markdown-output /tmp/knowledge_conflicts_hook.md \
-    --max-broken 3 || FAIL=1
+    --max-broken 0 || FAIL=1
 
 if [ $FAIL -ne 0 ]; then
     echo ""

@@ -191,6 +191,10 @@ def scan(root: Path = ROOT) -> list[dict]:
             continue
 
         for number, line in enumerate(content.splitlines(), 1):
+            # Escape hatch: dong co annotation <!-- kb:external --> la tham chieu
+            # co y tro sang repo/nguon ngoai, khong tinh la broken_reference.
+            if "<!-- kb:external" in line:
+                continue
             for match in pattern.finditer(line):
                 raw = match.group().rstrip("`\"'.,;")
                 prefix = line[:match.start()]

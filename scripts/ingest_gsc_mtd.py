@@ -114,7 +114,7 @@ def load_hub_map():
                     proj_to_hub[p.lower()] = hname
     return proj_to_hub
 
-def ingest_gsc(zip_or_dir_path, start_override=None, end_override=None):
+def ingest_gsc(zip_or_dir_path, start_override=None, end_override=None, push_hubs=False):
     target_path = Path(zip_or_dir_path)
     if not target_path.exists():
         print(f"❌ File/thư mục không tồn tại: {target_path}")
@@ -403,6 +403,29 @@ def ingest_gsc(zip_or_dir_path, start_override=None, end_override=None):
             json.dump(page_mtd, f, ensure_ascii=False, indent=2)
         print(f"✅ Đã đồng bộ sang Hub Dashboard: {PAGE_MTD_HUB}")
 
+        # Commit và Push sang Git remote của Hubs (chi khi co --push-hubs)
+        if push_hubs:
+            hub_repo = PAGE_MTD_HUB.parents[2]
+            commit_files = ["data/analytics/page_mtd.json"]
+            commit_msg = f"data(gsc): update MTD page metrics ({start_date} to {end_date}) into Hubs dashboard"
+            try:
+                import subprocess
+                subprocess.run(["git", "-C", str(hub_repo), "add"] + commit_files, check=True)
+                diff_chk = subprocess.run(["git", "-C", str(hub_repo), "diff", "--cached", "--quiet"])
+                if diff_chk.returncode != 0:
+                    subprocess.run(["git", "-C", str(hub_repo), "commit", "-m", commit_msg], check=True)
+                    push_res = subprocess.run(["git", "-C", str(hub_repo), "push", "origin", "main"], capture_output=True, text=True)
+                    if push_res.returncode == 0:
+                        print(f"  ✓ Đã commit và push page_mtd.json sang GitHub vanhien26/hubs-momo:main")
+                    else:
+                        print(f"  ⚠ Lưu ý push GitHub: {push_res.stderr.strip()}")
+                else:
+                    print("  ✓ Dữ liệu page_mtd.json trên Hubs repo đã ở trạng thái mới nhất, không có commit mới.")
+            except Exception as ge:
+                print(f"  ⚠ Lỗi commit/push Hubs: {ge}")
+        else:
+            print("  ℹ Bỏ qua git commit/push Hubs (dùng --push-hubs để bật). File page_mtd.json đã ghi local.")
+
     print("\n==================================================")
     print(f"HOÀN THÀNH INGEST GSC MTD:")
     print(f"  - Date range: {start_date} đến {end_date}")
@@ -421,6 +444,7 @@ if __name__ == "__main__":
                     help="ZIP export GSC, thư mục CSV, hoặc Google Sheet URL/ID (mặc định: sheet GSC-MTD)")
     ap.add_argument("--start", help="Override start date YYYY-MM-DD (khi thiếu Chart.csv)")
     ap.add_argument("--end", help="Override end date YYYY-MM-DD")
+    ap.add_argument("--push-hubs", action="store_true", help="Commit + push page_mtd.json sang repo Hubs (mặc định KHÔNG push)")
     args = ap.parse_args()
 
     if args.target.startswith("http://") or args.target.startswith("https://"):
@@ -429,6 +453,6 @@ if __name__ == "__main__":
         export_dir.mkdir(parents=True, exist_ok=True)
         dest_csv = export_dir / "Pages_full_20k.csv"
         download_sheet_csv(args.target, dest_csv)
-        ingest_gsc(export_dir, start_override=args.start, end_override=args.end)
+        ingest_gsc(export_dir, start_override=args.start, end_override=args.end, push_hubs=args.push_hubs)
     else:
-        ingest_gsc(args.target, start_override=args.start, end_override=args.end)
+        ingest_gsc(args.target, start_override=args.start, end_override=args.end, push_hubs=args.push_hubs)
