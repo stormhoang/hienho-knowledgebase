@@ -731,4 +731,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    sys.path.insert(0, BASE_DIR)
+    from scripts.lib.hub_sync_lock import hub_sync_lock
+    with hub_sync_lock("sync_seo_news"):
+        main()

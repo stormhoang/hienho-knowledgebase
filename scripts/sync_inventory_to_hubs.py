@@ -1380,4 +1380,6 @@ Dữ liệu được trích xuất, lọc nhiễu tự động và bảo vệ ch
         print(f"Cảnh báo: Không tìm thấy hubs-momo tại {HUBS_REPO}")
 
 if __name__ == '__main__':
-    main()
+    from scripts.lib.hub_sync_lock import hub_sync_lock
+    with hub_sync_lock("sync_inventory_to_hubs"):
+        main()

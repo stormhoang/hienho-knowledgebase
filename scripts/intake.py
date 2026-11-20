@@ -114,6 +114,12 @@ def run_parser(fmt, file_path):
 
 def push_to_hubs(targets):
     """Go endpoint co san cua hubs-momo. Tra ve (ok, message)."""
+    from lib.hub_sync_lock import hub_sync_lock
+    with hub_sync_lock("intake_push"):
+        return _push_to_hubs(targets)
+
+
+def _push_to_hubs(targets):
     if not os.path.exists(HUBS_REPO):
         return False, f"Khong tim thay hubs-momo tai {HUBS_REPO}"
     msgs = []
