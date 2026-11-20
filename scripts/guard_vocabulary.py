@@ -30,6 +30,9 @@ IGNORE_FILES = {
     "momo-reporting-glossary.md",
     "guard_vocabulary.py",
     "AGENTS.md",
+    "SKILL_VIET_BAO_CAO_TUAN_CHO_AGENT.md",
+    "web-platform-engineer-weekly-report.md",
+    "SKILL.md",
 }
 
 IGNORE_DIRS = {
@@ -343,6 +346,14 @@ RULES = [
         "desc": "Dùng từ 'link generic' chắp vá tiếng Anh; thay bằng 'đường dẫn dùng chung' hoặc 'đường dẫn chung (Generic link)'",
         "replacement": "đường dẫn dùng chung (Generic link)",
         "auto_fix": "đường dẫn dùng chung",
+    },
+    {
+        "id": "CUA_NGO",
+        "pattern": r"(?i)\bcửa\s+ngõ(\s+(thu\s+nạp|tiếp\s+cận|chuyển\s+đổi|mỏ\s+neo|thăm\s+dò|vào\s+app|vàng|tìm\s+kiếm))?\b",
+        "flags": 0,
+        "desc": "Từ 'cửa ngõ' nghe sáo rỗng/nhảm nhí; bắt buộc giữ nguyên thuật ngữ Product chuẩn quốc tế là 'Entry Point'",
+        "replacement": "Entry Point, Điểm tiếp cận, Điểm chạm (Touchpoint), hoặc Kênh Web",
+        "auto_fix": "Entry Point",
     },
     # ---------------------------------------------------------------
     # Nhóm CẢNH BÁO (severity: warn): không chặn commit, chỉ nhắc người viết rà lại.
