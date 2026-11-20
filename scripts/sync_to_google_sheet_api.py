@@ -20,7 +20,10 @@ import urllib.parse
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parents[1]
-CREDS_FILE = BASE_DIR / "07_REPORTS" / "data" / "credentials" / "ga4-credentials.json"
+_CREDS_DIR = BASE_DIR / "07_REPORTS" / "data" / "credentials"
+CREDS_FILE = next((p for p in (_CREDS_DIR / "ga4-credentials.json",
+                              _CREDS_DIR / "ga4-credentials.json.disabled") if p.exists()),
+                  _CREDS_DIR / "ga4-credentials.json")
 TOKEN_FILE = BASE_DIR / "07_REPORTS" / "data" / "credentials" / "gdrive-token.json"
 TARGET_SHEET_ID = "1JaaYv2MnDy-dfBdC3P-GMB6SFgjez2VowdjX9PjmPYU"
 

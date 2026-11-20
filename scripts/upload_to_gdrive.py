@@ -24,9 +24,11 @@ from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
 
 BASE_DIR = Path(__file__).resolve().parents[1]
-CREDS_FILE = BASE_DIR / "07_REPORTS" / "data" / "credentials" / "ga4-credentials.json"
+_CREDS_DIR = BASE_DIR / "07_REPORTS" / "data" / "credentials"
+CREDS_FILE = next((p for p in (_CREDS_DIR / "ga4-credentials.json",
+                              _CREDS_DIR / "ga4-credentials.json.disabled") if p.exists()),
+                  _CREDS_DIR / "ga4-credentials.json")
 GDRIVE_TOKEN_FILE = BASE_DIR / "07_REPORTS" / "data" / "credentials" / "gdrive-token.json"
-GA4_TOKEN_FILE = BASE_DIR / "07_REPORTS" / "data" / "credentials" / "ga4-token.json"
 
 DEFAULT_TARGET_ID = "1H_1RNCA1NBdZ9vJH5VLSw7D9aaYhx3XI"
 DEFAULT_FILE_PATH = BASE_DIR / "07_REPORTS" / "web_performance_tracking.xlsx"
@@ -55,7 +57,7 @@ def get_drive_credentials():
         raise ValueError("File ga4-credentials.json không chứa installed/web client credentials")
 
     creds = None
-    token_to_use = GDRIVE_TOKEN_FILE if GDRIVE_TOKEN_FILE.exists() else GA4_TOKEN_FILE
+    token_to_use = GDRIVE_TOKEN_FILE
 
     if token_to_use.exists():
         try:
@@ -91,7 +93,7 @@ def get_drive_credentials():
     )
     creds = flow.run_local_server(port=8089, prompt="consent", access_type="offline")
 
-    # Lưu token mới vào gdrive-token.json và đồng bộ ga4-token.json
+    # Lưu token mới vào gdrive-token.json
     payload = {
         "client_id": client_info["client_id"],
         "refresh_token": creds.refresh_token,
@@ -99,8 +101,6 @@ def get_drive_credentials():
         "updated_at": Path(os.getcwd()).name
     }
     with open(GDRIVE_TOKEN_FILE, "w", encoding="utf-8") as f:
-        json.dump(payload, f, indent=2, ensure_ascii=False)
-    with open(GA4_TOKEN_FILE, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2, ensure_ascii=False)
 
     print(f"✓ Đã lưu token Google Drive thành công tại: {GDRIVE_TOKEN_FILE}")

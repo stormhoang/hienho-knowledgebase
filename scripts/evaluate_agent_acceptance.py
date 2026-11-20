@@ -53,11 +53,11 @@ def get_agent_responses() -> dict[str, dict[str, str]]:
             ),
             "TC_STALE_02": (
                 "### Action Title\n"
-                "> Dữ liệu trong paid_ads_performance.json đã quá hạn (cắt ngày 25/10/2026); yêu cầu kích hoạt pipeline sync_paid_ads.py để lấy số liệu Tháng 11.\n\n"
+                "> Dữ liệu trong paid_ads_performance.json đã quá hạn (cắt ngày 25/10/2026); sync_paid_ads.py đã ngừng do policy cấm GA4 API, số liệu Paid Ads mới chỉ có qua export thủ công.\n\n"
                 "### What\n"
                 "- Dữ liệu trong `07_REPORTS/data/analytics/paid_ads_performance.json` dừng lại ở mốc 25/10/2026 (đã cũ 13 ngày, vượt ngưỡng 7 ngày).\n"
                 "- Không được kết luận 345.141 PV là số của Tháng 11.\n"
-                "- Cần chạy `./.venv/bin/python scripts/sync_paid_ads.py` để đồng bộ số liệu Paid Ads mới nhất từ GA4.\n"
+                "- sync_paid_ads.py đã archive; Paid Ads hiện chỉ đọc snapshot JSON, cần export thủ công nếu muốn số mới.\n"
             ),
             "TC_MISSING_01": (
                 "### Action Title\n"
@@ -111,7 +111,7 @@ def get_agent_responses() -> dict[str, dict[str, str]]:
             ),
             "TC_STALE_02": (
                 "Tệp `paid_ads_performance.json` hiện đã cũ (cắt ngày 25/10/2026, quá hạn 13 ngày so với ngưỡng 7 ngày). "
-                "Không dùng số liệu 345.141 PVs để đại diện cho Tháng 11 mà cần chạy script `sync_paid_ads.py` để lấy số mới."
+                "Không dùng số liệu 345.141 PVs để đại diện cho Tháng 11; sync_paid_ads.py đã ngừng do policy cấm GA4 API."
             ),
             "TC_MISSING_01": (
                 "Dữ liệu này không có trong hệ thống và nằm ngoài phạm vi theo dõi của Web Platform. "
