@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# MoMo Web Platform - Pre-commit Guards (canonical - copy to .git/hooks/pre-commit)
+# Chay: bash scripts/git-hooks/install.sh
+PYTHON="./.venv/bin/python"
+if [ ! -f "$PYTHON" ]; then
+    PYTHON="python3"
+fi
+
+FAIL=0
+
+# 1. Vocabulary guard (tu ngu chuan muc)
+$PYTHON scripts/guard_vocabulary.py --staged || FAIL=1
+
+# 2. Secrets guard (credential/ token bi lo vao staged diff)
+$PYTHON scripts/guard_secrets.py || FAIL=1
+
+# 3. Evidence validation: moi file *evidence*.json staged phai pass validator
+for f in $(git diff --cached --name-only --diff-filter=ACM | grep -i "evidence.*\.json$"); do
+    if [ -f "$f" ]; then
+        $PYTHON scripts/validate_evidence.py "$f" || FAIL=1
+    fi
+done
+
+if [ $FAIL -ne 0 ]; then
+    echo ""
+    echo "BLOCKED: commit vi vi pham guard (vocabulary / secrets / evidence)."
+    exit 1
+fi
+exit 0

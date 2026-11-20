@@ -136,10 +136,12 @@ Khi user hỏi số liệu, agent tra bảng này TRƯỚC, đọc đúng file/c
 - **Google Sheets SSOT:** Web Platform Report `1JaaYv2MnDy-dfBdC3P-GMB6SFgjez2VowdjX9PjmPYU`; Cinema Hub Roadmap `1YT2sdU-O4smoy6TUKBic6PTFBxUXNUVkd_S-tmjiplg`.
 - **Traffic SSOT:** Mọi báo cáo lưu lượng bắt buộc tách Non-Paid (`Organic`, `Direct`, `AI Traffic (GEO)`, `Referral`) vs Paid thành 2 dòng tổng kèm tỷ trọng %.
 - **Báo cáo Tuần/Tháng:** Chuẩn SSOT tại `.agents/skills/web-platform-reporting/SKILL.md` + `03_SKILLS/momo-reporting-guidelines.md` - lazy load khi cần.
-- **Anti-Hallucination (Bắt buộc):**
+- **Anti-Hallucination (Bắt buộc - CHUẨN XÁC, BẢO MẬT, LOGIC):**
   - Phân tầng nghiêm ngặt, không trộn: `fact` (truy được về file/số liệu gốc + kỳ dữ liệu) / `inference` (ghi rõ "suy luận từ...") / `recommendation`. Cấm nêu suy luận như fact.
   - Mọi con số trong câu trả lời phải truy về source cụ thể (file JSON/MD/script output); không truy được → ghi `[cần verify]`, TUYỆT ĐỐI không bịa số, bịa hoàn cảnh, bịa diễn biến.
+  - **Evidence bắt buộc cho mọi deliverable có số liệu** (báo cáo, strategy, BRD, data doc, slide): đóng gói evidence JSON theo `00_HARNESS_CORE/EVIDENCE_CONTRACT.md` (gồm ANTI-FABRICATION: fact/calculation/scenario/benchmark) và chạy `./.venv/bin/python scripts/validate_evidence.py` trước khi trình bày. Chat nhanh có số liệu: phải nêu source inline từng cụm số.
+  - **Nhất quán logic (Consistency Check):** tổng các phần phải bằng tổng thể; chênh lệch kỳ phải giải thích được; hai nguồn mâu thuẫn → báo conflict, cấm chọn lọc nguồn có lợi cho luận điểm.
+  - **Bảo mật (Security):** tuyệt đối không đưa credentials, token, private key, PII vào câu trả lời, file commit hay log. Mọi secret chỉ nằm trong `07_REPORTS/data/credentials/` (gitignored); pre-commit hook chặn secret qua `scripts/guard_secrets.py`.
   - Thiếu dữ liệu để kết luận → nói thẳng "không đủ dữ liệu, cần kiểm tra X" thay vì diễn giải.
-  - Cấm bịa số để hợp thức hóa kế hoạch: mọi con số phải là `fact` (có source), `calculation` (có công thức + inputs), `scenario` (qua `scenario_simulator.py`/`forecast_engine.py`, luôn kèm nhãn kịch bản) hoặc `benchmark` (có nguồn ngoài). Target đề xuất phải ghi "chờ approve", tuyệt đối không trình bày như số thực tế. Chi tiết: `00_HARNESS_CORE/EVIDENCE_CONTRACT.md` mục ANTI-FABRICATION.
   - Câu trả lời/báo cáo chứa số liệu quan trọng: đóng gói evidence JSON theo `00_HARNESS_CORE/EVIDENCE_CONTRACT.md` và chạy `./.venv/bin/python scripts/validate_evidence.py` trước khi trình bày.
 - **Quản trị file này:** Routing table tối đa ~40 rows, row mới ≤2 dòng, ưu tiên gộp vào row hiện có; nếu file >24KB thì tách phần mở rộng sang file riêng và để pointer ở đây.
