@@ -177,7 +177,7 @@ entries:
     status: active
     owner: Web Platform
     system_of_record: "GA4 Data API (270743103) & GSC Search Analytics"
-    generator_script: "scripts/build_full_funnel_matrix.py"
+    generator_script: "scripts/sync_data_mart.py"
     freshness_days: 7
     used_for: [performance_analysis, anomaly_detection, analytics_query]
 
@@ -189,7 +189,7 @@ entries:
     status: active
     owner: Web Platform
     system_of_record: "GA4 Data API & Local History Snapshot"
-    generator_script: "scripts/sync_ga4_master.py"
+    generator_script: "scripts/ingest_ga4_daily.py"
     freshness_days: 7
     used_for: [fast_performance_lookup, mtd_summary]
     cross_check_with: [performance_tracking_master, performance_data_mart]
@@ -202,7 +202,7 @@ entries:
     status: active
     owner: Web Platform
     system_of_record: "GA4 Data API (Property 270743103) Paid Media Channels"
-    generator_script: "scripts/sync_paid_ads.py"
+    generator_script: "scripts/ingest_paid_ads.py"
     freshness_days: 7
     used_for: [paid_ads_analysis, media_channels, campaign_tracking]
     cross_check_with: [performance_tracking_master]
