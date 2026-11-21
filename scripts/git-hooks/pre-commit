@@ -33,6 +33,10 @@ $PYTHON scripts/detect_knowledge_conflicts.py \
 $PYTHON scripts/validate_knowledge_registry.py || \
     echo "WARN: knowledge_registry co finding stale - xem output phia tren"
 
+# 6. Hub writers guard: moi script ghi react-web-momo phai co hub_sync_lock,
+#    moi duong push phai qua flag. Chan commit khi vi pham.
+$PYTHON scripts/guard_hub_writers.py --staged || FAIL=1
+
 if [ $FAIL -ne 0 ]; then
     echo ""
     echo "BLOCKED: commit vi vi pham guard (vocabulary / secrets / evidence)."
