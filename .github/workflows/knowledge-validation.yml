@@ -16,6 +16,10 @@ on:
       - 'scripts/tests/test_knowledge_freshness.py'
       - 'scripts/tests/test_knowledge_provenance.py'
       - 'scripts/tests/test_knowledge_acceptance.py'
+      - 'scripts/tests/test_content_plan_ownership.py'
+      - 'scripts/generate_content_plan.py'
+      - 'scripts/lib/content_plan_config.py'
+      - 'scripts/sync_inventory_to_hubs.py'
   push:
     branches: [main]
     paths:
@@ -32,23 +36,25 @@ on:
       - 'scripts/tests/test_knowledge_freshness.py'
       - 'scripts/tests/test_knowledge_provenance.py'
       - 'scripts/tests/test_knowledge_acceptance.py'
+      - 'scripts/tests/test_content_plan_ownership.py'
+      - 'scripts/generate_content_plan.py'
+      - 'scripts/lib/content_plan_config.py'
+      - 'scripts/sync_inventory_to_hubs.py'
   workflow_dispatch:
 
 jobs:
-  observe:
+  validate:
     runs-on: ubuntu-latest
-    continue-on-error: true
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Install registry dependency
+      - name: Install dependencies (registry + content plan test)
         run: |
           python -m venv .venv
-          ./.venv/bin/python -m pip install pyyaml
+          ./.venv/bin/python -m pip install pyyaml openpyxl
       - name: Validate registry
-        continue-on-error: true
         run: ./.venv/bin/python scripts/validate_knowledge_registry.py
       - name: Build inventory, conflict, triage, freshness and provenance reports
         run: |
@@ -61,9 +67,9 @@ jobs:
       - name: Verify provenance integrity
         run: ./.venv/bin/python scripts/generate_knowledge_provenance.py --verify --json-out /tmp/knowledge_provenance.json
       - name: Test path resolution, conflict triage, freshness, provenance and agent acceptance
-        run: ./.venv/bin/python -m unittest scripts.tests.test_knowledge_paths scripts.tests.test_knowledge_freshness scripts.tests.test_knowledge_provenance scripts.tests.test_knowledge_acceptance -v
+        run: ./.venv/bin/python -m unittest scripts.tests.test_knowledge_paths scripts.tests.test_knowledge_freshness scripts.tests.test_knowledge_provenance scripts.tests.test_knowledge_acceptance scripts.tests.test_content_plan_ownership -v
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: knowledge-observe-reports
+          name: knowledge-validation-reports
           path: /tmp/knowledge_*

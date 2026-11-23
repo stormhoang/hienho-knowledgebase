@@ -751,6 +751,6 @@ Dù được thiết kế như một trải nghiệm thuần Web độc lập (S
 | Giai Đoạn | Thời Gian | Tên Giai Đoạn | Chi Tiết Triển Khai & Mục Tiêu |
 | :---: | :---: | :--- | :--- |
 | **Phase 1** | Tuần 1 - Tuần 2 | Data Modeling & Vietnamese Adaptation | Đóng gói bộ dữ liệu nhân khẩu học 141 nước và dữ liệu 63 tỉnh thành Việt Nam. Hoàn thiện bộ text Việt hóa cho 50 kịch bản quyết định cốt lõi. |
-| **Phase 2** | Tuần 3 - Tuần 4 | Interactive Engine & 3D Prototyping | Dựng nguyên mẫu WebGL/Three.js nhẹ (dung lượng < 1.2MB). Tích hợp logic tính lạm phát, thu nhập, lãi suất và kiểm thử FPS trên các dòng điện thoại phổ thông. |
+| **Phase 2** | Tuần 3 - Tuần 4 | Interactive Engine & 3D Prototyping | Dựng nguyên mẫu WebGL/Three.js nhẹ (dung lượng < 1.2MB). Tích hợp logic tính lạm phát, thu nhập, lãi suất và test FPS trên các dòng điện thoại phổ thông. |
 | **Phase 3** | Tuần 5 | Social Share Engine & Canvas Optimization | Tích hợp Web Share API, tối ưu Canvas Image Generator xuất thẻ Certificate sắc nét cho mạng xã hội (Facebook, Threads, Zalo) và hoàn thiện bộ đếm vòng lặp chơi lại. |
 | **Phase 4** | Tuần 6 | Pilot, A/B Testing & Official Go-Live | Phát hành chính thức trên chuyên mục Game / Game Hub (`momo.vn/game/mot-doi-nguoi`), đo lường tỷ lệ hoàn thành lượt chơi, thời gian lưu trang và tỷ lệ chia sẻ mạng xã hội trước khi đẩy mạnh truyền thông. |

@@ -1,0 +1,24 @@
+name: Vocabulary Guard
+
+on:
+  pull_request:
+    paths:
+      - '**/*.md'
+      - 'scripts/guard_vocabulary.py'
+  push:
+    branches: [main]
+    paths:
+      - '**/*.md'
+      - 'scripts/guard_vocabulary.py'
+  workflow_dispatch:
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Vocabulary guard (toàn bộ file .md được git theo dõi)
+        run: python3 scripts/guard_vocabulary.py --all

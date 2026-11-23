@@ -1,3 +1,7 @@
+"""One-off: cập nhật link demo/staging trong các Hub section của weekly report. Không dùng lại.
+
+Usage: ./.venv/bin/python scripts/update_demo_links.py
+"""
 import os
 
 path = '07_REPORTS/docs/weekly-report-2026-10-26-11-01.md'

@@ -2,7 +2,7 @@
 title: "MoSpark Strategic Deck"
 description: >
   Deck/Proposal nội bộ giúp C-Level và Cell Team nắm chiến lược Web MoMo,
-  vai trò MoSpark Growth OS, và cách onboard Use Case. Đọc như slide — 15–25 phút.
+  vai trò MoSpark Growth OS, và cách onboard Use Case. Đọc như slide - 15-25 phút.
 version: 1.3
 status: Active
 owner: GPD - Web Platform
@@ -15,9 +15,9 @@ division: Growth Platform Division (GPD)
 
 # MoSpark Strategic Deck
 
-> **Mục đích:** Một luồng đọc chung cho C-Level và Cell Team — từ *tại sao* (thị trường) đến *làm thế nào* (onboard Use Case trên MoSpark).
+> **Mục đích:** Một luồng đọc chung cho C-Level và Cell Team - từ *tại sao* (thị trường) đến *làm thế nào* (onboard Use Case trên MoSpark).
 >
-> **Thời gian đọc:** 15–25 phút.
+> **Thời gian đọc:** 15-25 phút.
 
 ---
 
@@ -37,11 +37,11 @@ division: Growth Platform Division (GPD)
   <tbody>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Vision (one-liner)</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Scale Web MoMo thành <strong>Vietnam's #1 Financial & Payment Content Hub</strong> — Product-Led Growth, chuyển search intent → app transactions → New User / MAU</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Scale Web MoMo thành <strong>Vietnam's #1 Financial & Payment Content Hub</strong> - Product-Led Growth, chuyển search intent → app transactions → New User / MAU</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Platform</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoSpark — AI-Powered Growth OS</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoSpark - AI-Powered Growth OS</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Division</strong></td>
@@ -80,21 +80,21 @@ division: Growth Platform Division (GPD)
 
 ---
 
-## 1. The Opportunity — Search Engine Market Inventory
+## 1. The Opportunity - Search Engine Market Inventory
 
 **Audience:** C-Level · Both
 
-**Takeaway:** Thị trường tìm kiếm khổng lồ (179M+/tháng) đang mở — MoMo có sản phẩm in-app nhưng vắng bóng hoặc SoV rất thấp trên Google.
+**Takeaway:** Thị trường tìm kiếm khổng lồ (179M+/tháng) đang mở - MoMo có sản phẩm in-app nhưng vắng bóng hoặc SoV rất thấp trên Google.
 
-> MoMo vận hành rất nhiều Use Case (Tài chính, Bảo hiểm, Thanh toán, Đời sống, VTTI...). Mỗi Use Case có người dùng tiềm năng đang tìm kiếm trên Google mỗi ngày — nhưng **khả năng khám phá ngoài App còn yếu**.
+> MoMo vận hành rất nhiều Use Case (Tài chính, Bảo hiểm, Thanh toán, Đời sống, VTTI...). Mỗi Use Case có người dùng tiềm năng đang tìm kiếm trên Google mỗi ngày - nhưng **khả năng khám phá ngoài App còn yếu**.
 
 **Key points:**
 
 - **~179.3 triệu** lượt tìm kiếm/tháng trên Google Search có nhu cầu liên quan các Use Case của MoMo
-- Thị trường **có nhu cầu cao, MoMo vắng bóng hoặc SoV thấp** — đối thủ ngân hàng/fintech đang chiếm Google Search
+- Thị trường **có nhu cầu cao, MoMo vắng bóng hoặc SoV thấp** - đối thủ ngân hàng/fintech đang chiếm Google Search
 - **Khoảng cách cốt lõi:** Sản phẩm mạnh trong App - Khám phá yếu ngoài App
 
-**Bảng minh họa — Gap thị trường (SoV MoMo):**
+**Bảng minh họa - Gap thị trường (SoV MoMo):**
 
 <table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
   <thead>
@@ -147,11 +147,11 @@ division: Growth Platform Division (GPD)
 
 ---
 
-## 2. The Gap Today — Problem Statement
+## 2. The Gap Today - Problem Statement
 
 **Audience:** Both
 
-**Takeaway:** Web hiện tại chủ yếu là Landing/Blog thông tin — chưa giải JTBD, chưa có công cụ tiện ích, chưa đóng vòng chuyển đổi App.
+**Takeaway:** Web hiện tại chủ yếu là Landing/Blog thông tin - chưa giải JTBD, chưa có công cụ tiện ích, chưa đóng vòng chuyển đổi App.
 
 **Key points:**
 
@@ -177,11 +177,11 @@ flowchart LR
 
 ---
 
-## 3. North Star — Vision & Strategic Goal
+## 3. North Star - Vision & Strategic Goal
 
 **Audience:** C-Level
 
-**Takeaway:** Web MoMo = Content Hub tài chính/thanh toán #1 VN, đo thành công bằng NU/MAU — không phải pageview.
+**Takeaway:** Web MoMo = Content Hub tài chính/thanh toán #1 VN, đo thành công bằng NU/MAU - không phải pageview.
 
 **Product Vision:**
 
@@ -199,7 +199,7 @@ flowchart LR
   <tbody>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Content Authority</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Top 3–5 Google cho từ khóa ngách trọng điểm; 3–5 vertical "đánh dứt điểm"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Top 3-5 Google cho từ khóa ngách trọng điểm; 3-5 vertical "đánh dứt điểm"</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>GEO / AI Citation</strong></td>
@@ -220,7 +220,7 @@ Content → Keywords → Ranking → Use case → User journey → App / Transac
 
 ---
 
-## 4. Three Value Layers — Strategic Framework
+## 4. Three Value Layers - Strategic Framework
 
 **Audience:** Both
 
@@ -238,8 +238,8 @@ Content → Keywords → Ranking → Use case → User journey → App / Transac
   <tbody>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Layer 1 - MoMo</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Brand mạnh in-app; SoV 0–6% trên Google/AI ở ngách lớn; đối thủ chiếm Search</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sở hữu 3–5 Strategic Use-Cases vị trí #1; GEO citation; Content Authority</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Brand mạnh in-app; SoV 0-6% trên Google/AI ở ngách lớn; đối thủ chiếm Search</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sở hữu 3-5 Strategic Use-Cases vị trí #1; GEO citation; Content Authority</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thị trường underserved → traffic uy tín → conversion</td>
     </tr>
     <tr style="background-color:#f8fafc;">
@@ -268,11 +268,11 @@ flowchart LR
 
 ---
 
-## 5. Four Growth Pillars — How We Win
+## 5. Four Growth Pillars - How We Win
 
 **Audience:** C-Level
 
-**Takeaway:** Bốn trụ cột kỹ thuật–chất lượng–GEO–PLG vận hành đồng bộ trên toàn momo.vn.
+**Takeaway:** Bốn trụ cột kỹ thuật-chất lượng-GEO-PLG vận hành đồng bộ trên toàn momo.vn.
 
 <table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
   <thead>
@@ -306,19 +306,19 @@ flowchart LR
   </tbody>
 </table>
 
-> **Good SEO = Good GEO** (Google stance): Không có thuật toán GEO riêng — SEO xuất sắc + E-E-A-T tự lên AI Search.
+> **Good SEO = Good GEO** (Google stance): Không có thuật toán GEO riêng - SEO xuất sắc + E-E-A-T tự lên AI Search.
 
 ---
 
-## 6. What is MoSpark — AI-Powered Growth OS
+## 6. What is MoSpark - AI-Powered Growth OS
 
 **Audience:** Both
 
-**Takeaway:** MoSpark không phải CMS thông thường — là hệ điều hành tăng trưởng 4 lớp (sản xuất → monetize/contextual ads → quality gate → performance loop), phục vụ song hành cả dự án PLG tăng số và Mini Web truyền thông.
+**Takeaway:** MoSpark không phải CMS thông thường - là hệ điều hành tăng trưởng 4 lớp (sản xuất → monetize/contextual ads → quality gate → performance loop), phục vụ song hành cả dự án PLG tăng số và Mini Web truyền thông.
 
 **Định nghĩa:**
 
-> **MoSpark** = **Growth OS** cho momo.vn — "Cỗ máy tăng trưởng tự trị" sản xuất, tối ưu và chuyển đổi dựa trên Search Intent và AI.
+> **MoSpark** = **Growth OS** cho momo.vn - "Cỗ máy tăng trưởng tự trị" sản xuất, tối ưu và chuyển đổi dựa trên Search Intent và AI.
 
 **Phân loại Trụ cột Sản phẩm trên Nền tảng:**
 1. **Trụ cột PLG (Product-Led Growth Projects):** Các sản phẩm giải quyết JTBD bằng tiện ích (Calculator, Simulator, Maps) có cam kết chỉ số tăng trưởng số lượng (W2A rate, Activation, Transactions).
@@ -374,7 +374,7 @@ flowchart TB
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Lớp 3</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Quality & Compliance</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SEO/GEO score 0–100; hard-block; Legal YMYL</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SEO/GEO score 0-100; hard-block; Legal YMYL</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Lớp 4</strong></td>
@@ -402,7 +402,7 @@ flowchart TB
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Phase 2</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Q3–Q4/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Q3-Q4/2026</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GSC Auto-Refresher; Interactive Blocks; Health Shield</td>
     </tr>
     <tr>
@@ -415,11 +415,11 @@ flowchart TB
 
 ---
 
-## 7. Platform-as-a-Service — Cell Team Model
+## 7. Platform-as-a-Service - Cell Team Model
 
 **Audience:** Cell Team · Both
 
-**Takeaway:** Cell Team không phải tự dựng Web từ zero — GPD cung cấp consult, platform, pipeline, và chuẩn đo lường.
+**Takeaway:** Cell Team không phải tự dựng Web từ zero - GPD cung cấp consult, platform, pipeline, và chuẩn đo lường.
 
 **PaaS = 4 khối hỗ trợ:**
 
@@ -488,17 +488,17 @@ flowchart TB
   </tbody>
 </table>
 
-> Media Team hỗ trợ SEO plan/off-page cho một số FS use case — mọi publish trên Web Platform vẫn qua chuẩn GPD/MoSpark.
+> Media Team hỗ trợ SEO plan/off-page cho một số FS use case - mọi publish trên Web Platform vẫn qua chuẩn GPD/MoSpark.
 
 **Framework 5 bước Cell + GPD:** Research → Build Web/Function → Content Production → Tracking → Evaluation
 
 ---
 
-## 8. PLG Product Standard — Mini Web Checklist
+## 8. PLG Product Standard - Mini Web Checklist
 
 **Audience:** Cell Team
 
-**Takeaway:** Mỗi Mini Web mới phải đạt chuẩn PLG + SEO/GEO trước publish — utility-first, không chỉ blog.
+**Takeaway:** Mỗi Mini Web mới phải đạt chuẩn PLG + SEO/GEO trước publish - utility-first, không chỉ blog.
 
 **Nguyên tắc Utility-First:**
 
@@ -561,11 +561,11 @@ flowchart TB
 
 ---
 
-## 9. Content & GEO Engine — GenAI Pipeline
+## 9. Content & GEO Engine - GenAI Pipeline
 
 **Audience:** Cell Team
 
-**Takeaway:** Mọi nội dung scale qua MoSpark GenAI với registry từ khóa toàn cục — 1 Primary Keyword = 1 URL Master.
+**Takeaway:** Mọi nội dung scale qua MoSpark GenAI với registry từ khóa toàn cục - 1 Primary Keyword = 1 URL Master.
 
 **Workflow 7 bước:**
 
@@ -652,11 +652,11 @@ flowchart TB
 
 1. Mọi Primary Keyword thuộc một SEO/GEO Project (không "mồ côi")
 2. **1 Keyword - 1 Blog - 1 URL Master**
-3. Registry quét **Global** — cross-project conflict → cross-link, không tạo URL trùng
+3. Registry quét **Global** - cross-project conflict → cross-link, không tạo URL trùng
 
 ---
 
-## 10. Proof — Case Study: Phạt Nguội
+## 10. Proof - Case Study: Phạt Nguội
 
 **Audience:** Both
 
@@ -734,7 +734,7 @@ pie title Phat_Nguoi_Theme_Distribution_3_56M
 
 **Audience:** C-Level
 
-**Takeaway:** Mọi initiative MoSpark align về 6M MUA, Top 3–5 keywords, 12.5% W2A, và GEO measurement.
+**Takeaway:** Mọi initiative MoSpark align về 6M MUA, Top 3-5 keywords, 12.5% W2A, và GEO measurement.
 
 ### Objective 1 - Financial Authority (Growth)
 
@@ -754,7 +754,7 @@ pie title Phat_Nguoi_Theme_Distribution_3_56M
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>KR 1.2</strong> Ranking</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Top 3–5</strong> (50+ keywords ngách)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Top 3-5</strong> (50+ keywords ngách)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đang ghi nhận</td>
     </tr>
     <tr>
@@ -797,7 +797,7 @@ pie title Phat_Nguoi_Theme_Distribution_3_56M
 
 ### Strategic verticals 2026 (đánh dứt điểm)
 
-> Tập trung **3–5 verticals** trước khi mở rộng — đề xuất align với thesis: **FS (Vay/CIC)**, **VTTI**, **PS (Phạt Nguội)**, **Cinema/Merchant**. Danh sách chính thức chờ leadership chốt.
+> Tập trung **3-5 verticals** trước khi mở rộng - đề xuất align với thesis: **FS (Vay/CIC)**, **VTTI**, **PS (Phạt Nguội)**, **Cinema/Merchant**. Danh sách chính thức chờ leadership chốt.
 
 <table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
   <thead>
@@ -809,15 +809,15 @@ pie title Phat_Nguoi_Theme_Distribution_3_56M
   <tbody>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Vertical chiến lược</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3–5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3-5</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SoV</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Top 3–5 Google</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Top 3-5 Google</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Traffic MUA</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5–6M (OKR: 6M)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5-6M (OKR: 6M)</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">W2A</td>
@@ -828,11 +828,11 @@ pie title Phat_Nguoi_Theme_Distribution_3_56M
 
 ---
 
-## 12. Cell Team Playbook — Onboard in 5 Steps
+## 12. Cell Team Playbook - Onboard in 5 Steps
 
 **Audience:** Cell Team
 
-**Takeaway:** Bắt đầu Use Case mới trên MoSpark theo 5 bước — không publish nếu chưa qua checklist Section 8.
+**Takeaway:** Bắt đầu Use Case mới trên MoSpark theo 5 bước - không publish nếu chưa qua checklist Section 8.
 
 <table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
   <thead>
@@ -914,7 +914,7 @@ pie title Phat_Nguoi_Theme_Distribution_3_56M
 
 1. Chọn Use Case → book **Feasibility Sync** với GPD (Web Platform)
 2. Hoàn thành **Business Context 12 fields** trước khi tạo keyword
-3. Không bypass **Publish Gate** — mọi URL momo.vn đều audit
+3. Không bypass **Publish Gate** - mọi URL momo.vn đều audit
 
 ---
 
@@ -930,31 +930,31 @@ pie title Phat_Nguoi_Theme_Distribution_3_56M
   <tbody>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>PLG</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Product-Led Growth — Web giải JTBD bằng utility, không chỉ content</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Product-Led Growth - Web giải JTBD bằng utility, không chỉ content</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>GEO</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Generative Engine Optimization — tối ưu citation trên AI Search</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Generative Engine Optimization - tối ưu citation trên AI Search</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>SoV</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Share of Voice — % hiển thị MoMo vs đối thủ trên SERP/AI</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Share of Voice - % hiển thị MoMo vs đối thủ trên SERP/AI</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>W2A</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web-to-App conversion — deep link sau CTA contextual</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web-to-App conversion - deep link sau CTA contextual</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>YMYL</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Your Money Your Life — nội dung tài chính, cần E-E-A-T cứng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Your Money Your Life - nội dung tài chính, cần E-E-A-T cứng</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>pSEO</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Programmatic SEO — sinh trang scale từ template + data</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Programmatic SEO - sinh trang scale từ template + data</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>MUA</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Monthly Unique Audience — metric chính 2026 (BigQuery)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Monthly Unique Audience - metric chính 2026 (BigQuery)</td>
     </tr>
   </tbody>
 </table>
@@ -963,8 +963,8 @@ pie title Phat_Nguoi_Theme_Distribution_3_56M
 
 ## Appendix B: Items cần leadership chốt
 
-- Nguồn chứng minh số **179.3M searches/tháng** — cần gắn báo cáo nội bộ khi present
-- Danh sách chính thức **3–5 Strategic Use-Cases 2026**
+- Nguồn chứng minh số **179.3M searches/tháng** - cần gắn báo cáo nội bộ khi present
+- Danh sách chính thức **3-5 Strategic Use-Cases 2026**
 - Executive sponsor (VP GPD / C-Level owner)
 
 ---
@@ -1003,4 +1003,4 @@ pie title Phat_Nguoi_Theme_Distribution_3_56M
   </tbody>
 </table>
 
-*Maintained by: GPD — Web Platform · Governance: Web Product Lead · v1.3 — July 2026*
+*Maintained by: GPD - Web Platform · Governance: Web Product Lead · v1.3 - July 2026*

@@ -1,10 +1,10 @@
-> - **Project:** OTA - BUS (Đặt vé xe khách)
-> - **Main URL:** momo.vn/ve-xe
-> - **Division:** GPD - OTA (Non-Air)
+> - **Dự án:** OTA - BUS (Đặt vé xe khách)
+> - **URL chính:** momo.vn/ve-xe
+> - **Khối phụ trách:** GPD - OTA (Non-Air)
 > - **Owner:** Web Platform
-> - **Governance:** Web Product Lead (Hiến)
-> - **Version:** 2.0 - Tháng 05/2026
-> - **Status:** Draft
+> - **Phê duyệt:** Web Product Lead (Hiến)
+> - **Phiên bản:** 2.0 - Tháng 05/2026
+> - **Trạng thái:** Draft
 > - **Business Model:** Marketplace - MoMo là nền tảng tra cứu, đặt và thanh toán vé xe khách; thu phí từ nhà xe đối tác
 
 ---
@@ -259,19 +259,19 @@ Khác với use case Vay Nhanh hay BH có calculator giúp user convert mà khô
   </thead>
   <tbody>
     <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PC1</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Các landing pages (Routes, Destination, Operator...) hoàn thành xây dựng và được Google index trước thời điểm T</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đang triển khai</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Platform + Dev</td>
     </tr>
     <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PC2</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Content API hoặc ChatGPT-generated content pipeline hoạt động và phủ đủ trang programmatic</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Pilot - chưa confirm</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Media Team + Tech</td>
     </tr>
     <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PC3</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Internal Link API hoặc cơ chế thay thế giữa các page types được cấu hình đúng</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chưa giải quyết</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tech</td>
@@ -516,7 +516,7 @@ Khác với use case Vay Nhanh hay BH có calculator giúp user convert mà khô
     <tr style="background-color:#f1f5f9;">
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Page Type</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">URL Pattern</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ưu tiên</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Đợt Triển Khai</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Volume Potential</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Số URL ước tính</th>
     </tr>
@@ -525,84 +525,84 @@ Khác với use case Vay Nhanh hay BH có calculator giúp user convert mà khô
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Home</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/ve-xe</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 1</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao (head term)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Routes</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/ve-xe/ve-xe-khach-tu-[A]-di-[B]</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 1</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Rất cao</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">500-1.000+</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Destination</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/ve-xe/[tinh-thanh-pho]</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 1</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">63 tỉnh thành</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bus Operator</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/ve-xe/xe-[nha-xe]</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 1</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">500+ nhà xe</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bus Operator + Route</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/ve-xe/nha-xe-[nha-xe]-tu-[A]-di-[B]</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 1</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Rất cao (long-tail)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2.000+</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bus Terminal</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/ve-xe/ben-xe-[ben-xe]</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 2</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung bình</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">50-100 bến xe</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bus Terminal + Destination</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/ve-xe/ben-xe-[ben-xe]-di-[diem-den]</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 2</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung bình</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">200+</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bus Type (Limousine)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/ve-xe/limousine-tu-[A]-di-[B]</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 2</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung bình</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">100-200</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">LDP Tết</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/ve-xe/ve-xe-tet</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1 (seasonal)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 1 (seasonal)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Spike cao tháng 11-1</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1 (evergreen URL)</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/ve-xe/blog + articles</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 2</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung bình - dài hạn</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">200-800 bài</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Promotions</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/ve-xe/khuyen-mai</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 3</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thấp</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1</td>
     </tr>
   </tbody>
 </table>
 
-### 5.3 On-Page Component Anatomy (Các trang P1)
+### 5.3 On-Page Component Anatomy (Các trang Đợt 1)
 
 **Routes Page - /ve-xe/ve-xe-khach-tu-[A]-di-[B]**
 
@@ -841,7 +841,7 @@ Lý do chọn Transactions thay vì W2A: W2A đo việc user mở App nhưng ch�
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tech - Google Indexing</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Các trang phải được Google index trước T để có thời gian rank</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phụ thuộc P1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phụ thuộc Pre-condition PC1</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tech - Content Pipeline</td>

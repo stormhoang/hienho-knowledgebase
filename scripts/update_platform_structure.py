@@ -1,3 +1,7 @@
+"""One-off: tái cấu trúc Section III (Platform Projects) trong báo cáo. Không dùng lại.
+
+Usage: ./.venv/bin/python scripts/update_platform_structure.py"""
+
 import os
 
 path = '07_REPORTS/docs/weekly-report-2026-10-26-11-01.md'

@@ -42,16 +42,10 @@ Kho lưu trữ này chứa các tài liệu nghiên cứu kỹ thuật, tài ngu
 ### Các bước cài đặt:
 ```bash
 # 1. Khởi tạo môi trường ảo
-python3 -m venv .venv
+python3.12 -m venv .venv
 
-# 2. Kích hoạt môi trường ảo
-# Trên macOS / Linux:
-source .venv/bin/activate
-# Trên Windows:
-# .venv\Scripts\activate
-
-# 3. Cài đặt các thư viện phụ thuộc
-pip install -r scripts/requirements.txt
+# 2. Cài đặt các thư viện phụ thuộc (luôn gọi qua ./.venv/bin/python, không dùng python/python3 trần)
+./.venv/bin/python -m pip install -r scripts/requirements.txt
 ```
 
 ---
@@ -62,16 +56,16 @@ Các công cụ phân tích và tự động hóa được đóng gói trong th�
 
 ```bash
 # 1. Chạy chẩn đoán và phân tích dữ liệu hiệu suất
-python scripts/diagnose_performance.py
+./.venv/bin/python scripts/diagnose_performance.py
 
 # 2. Kiểm tra dị biệt và tính toàn vẹn liên kết
-python scripts/detect_anomalies.py
+./.venv/bin/python scripts/detect_anomalies.py
 
 # 3. Phân tích dữ liệu chiến dịch và nguồn truy cập
-python scripts/sync_paid_ads.py
+./.venv/bin/python scripts/sync_paid_ads.py
 
 # 4. Khởi chạy MCP Server phục vụ tích hợp công cụ
-python growth_reporting_tool/mcp_server.py
+./.venv/bin/python growth_reporting_tool/mcp_server.py
 ```
 
 ---

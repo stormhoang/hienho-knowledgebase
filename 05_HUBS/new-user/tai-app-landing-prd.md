@@ -1,8 +1,8 @@
 # PRD: Trang Tải Ứng Dụng MoMo Chính Thức (/tai-app)
 
 > - **Dự án:** New User Hub & Web-to-App Acquisition - Web Platform
-> - **Đơn vị phụ trách:** Web Platform Team x Growth Platform Division (GPD)
-> - **Đường dẫn chuẩn (URL Schema):** `momo.vn/tai-app`
+> - **Khối phụ trách:** Web Platform Team x Growth Platform Division (GPD)
+> - **URL chính:** `momo.vn/tai-app`
 > - **Trạng thái:** Hạng mục trọng tâm Sprint (Tháng 10/2026)
 > - **Mục tiêu:** Thuần túy là Trung tâm Tiện ích Tải Ứng dụng (Utility Software Download Center), tách biệt hoàn toàn với trang Tiếp thị Khuyến mãi / Thẻ quà
 

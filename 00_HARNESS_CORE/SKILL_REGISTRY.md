@@ -14,6 +14,7 @@ Hệ thống các bộ kỹ năng thực thi cốt lõi của AI Agent:
 - **[[.agents/skills/content-plan-architect-v-hoan/SKILL.md|content-plan-architect-v-hoan]]**: Bản V.Hoan (V3.3) lập content plan Theme > Pillar > Cluster (mỗi Cluster = 1 bài) từ inventory từ khóa MoMo, từ khóa chính là volume cao nhất, chặn thin content và cannibalization, dàn ý H1-H4 gộp heading đối thủ top 1-3 và heading lấp content gap. Chạy bằng `scripts/generate_content_plan.py`.
 - **[[.agents/skills/web-platform-reporting/SKILL.md|web-platform-reporting]]**: Quy chuẩn và công cụ tạo báo cáo định kỳ (Weekly gửi Executive Leadership, Monthly gửi Ban Giám Đốc) cho Web Platform theo chuẩn 3 khối nội dung và 2 tầng chỉ số.
 - **[[.agents/skills/frontend-slides/SKILL.md|frontend-slides]]**: Tạo slide thuyết trình trực tiếp trên nền tảng Web bằng HTML/CSS/JS hoạt họa mượt mà, zero-dependency, chuẩn stage cố định 16:9 (1920×1080), hỗ trợ đầy đủ bộ preset phong cách (Bold Templates, Clean Modern, Editorial) không lỗi layout.
+- **[[.agents/skills/business-growth/SKILL.md|business-growth]]**: Tư vấn Business Growth Web Platform - funnel W2A, benchmark so sánh, quyết định scale/kill use case, phân bổ nguồn lực. Playbook SSOT: `00_HARNESS_CORE/GROWTH_PRINCIPLES.md`; baseline: `scripts/build_benchmarks.py` → `07_REPORTS/data/benchmarks/web_growth_benchmarks.json`.
 
 ---
 

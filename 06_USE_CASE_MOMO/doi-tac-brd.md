@@ -1,11 +1,11 @@
 # BRD: MoMo Merchant Page (MMP) Mini Web App
 
-> - **Project:** MoMo Merchant Page (MMP) - Mini Web App (Phase 1)
-> - **Platform:** MoSpark
-> - **Division:** GPD (Growth Platform Division)
+> - **Dự án:** MoMo Merchant Page (MMP) - Mini Web App (Phase 1)
+> - **Nền tảng:** MoSpark
+> - **Khối phụ trách:** GPD (Growth Platform Division)
 > - **Owner:** GPD - Web Platform
-> - **Version:** 3.0 - 2026-07-17 (Chuyển đổi định hướng MMP PRD)
-> - **Status:** Phase 1 - Xây dựng công cụ Sales Enabler (Mobile Fast Creator)
+> - **Phiên bản:** 3.0 - 2026-07-17 (Chuyển đổi định hướng MMP PRD)
+> - **Trạng thái:** Phase 1 - Xây dựng công cụ Sales Enabler (Mobile Fast Creator)
 
 ---
 

@@ -2,9 +2,9 @@
 # TÁI THIẾT KẾ CỔNG CHUYỂN ĐỔI OUT-APP DOWNLOAD MOMO (MOMO.VN/DOWNLOAD)
 
 > **Mã tài liệu:** BRD-W2A-DOWNLOAD-2026-V1  
-> **Trạng thái tài liệu:** DRAFT - PENDING APPROVAL  
-> **Quản trị dự án:** Web Product Lead x Mobile Platform Team x Growth Marketing Team x Data Analytics Team  
-> **Mốc tiến độ dự kiến:** Kick-off: 10/10/2026 | Staging Test: 24/10/2026 | Pilot Rollout: 31/10/2026 | Full Go-Live: 07/11/2026  
+> **Trạng thái:** DRAFT - PENDING APPROVAL  
+> **Phê duyệt:** Web Product Lead x Mobile Platform Team x Growth Marketing Team x Data Analytics Team  
+> **Tiến độ:** Kick-off: 10/10/2026 | Staging Test: 24/10/2026 | Pilot Rollout: 31/10/2026 | Full Go-Live: 07/11/2026  
 
 ---
 
@@ -115,30 +115,6 @@
 Thay vì một trang chuyển hướng mù (blind redirect), `momo.vn/download` được tái thiết kế thành **Trang Đích Giới Thiệu Giá Trị & Kích Hoạt Chuyển Đổi**:
 - **Nguyên tắc Above the Fold (Action-First):** Ngay khi truy cập, người dùng nhìn thấy ngay lý do phải tải (Gói quà người dùng mới) và nút CTA hành động trực tiếp mà không cần cuộn trang.
 - **Nguyên tắc Below the Fold (Educate-Next):** Khi cuộn trang, người dùng được khám phá hệ sinh thái dịch vụ toàn diện của MoMo theo dạng khối trực quan, cô đọng (TLDR), giải quyết thắc mắc "MoMo có gì cho tôi?".
-
-### 4.2. Bố Cục Giao Diện & Khối Nội Dung (Information Architecture & Wireframe Spec)
-
-1. **Khối 1: Hero Section (Above the Fold)**
-   - **Headline & Value Proposition:** Thông điệp ngắn gọn, trực diện (Ví dụ: *"MoMo - Trợ thủ tài chính và thanh toán hàng ngày của hơn 30 triệu người Việt"*).
-   - **Gói quà Người dùng mới (New User) (Welcome Incentive Badge):** Nổi bật thông điệp tặng gói quà voucher trải nghiệm (500.000đ - 1.000.000đ) khi đăng ký tài khoản mới.
-   - **Khối Nút CTA Thích Ứng Theo Thiết Bị (Adaptive CTA Cluster):**
-     - *Trên iOS:* Nút chính `Tải trên App Store` (kèm icon Apple) + Nút phụ `Đã có MoMo? Mở Ứng Dụng`.
-     - *Trên Android:* Nút chính `Tải trên Google Play` (kèm icon Google Play) + Nút phụ `Đã có MoMo? Mở Ứng Dụng`.
-     - *Trên Desktop:* Khối hiển thị **Mã QR Động (Dynamic QR Code)** quét để tải app ngay trên điện thoại + 2 nút Store phụ.
-
-2. **Khối 2: Ecosystem Education (MoMo Có Gì Cho Bạn? - 4 Trụ Cột Cốt Lõi)**
-   - *Trụ cột 1 - Thanh toán & Chuyển tiền tiện lợi:* Chuyển tiền 24/7 miễn phí mọi ngân hàng, quét mã QR thanh toán tại hàng triệu điểm ăn uống, mua sắm.
-   - *Trụ cột 2 - Trung tâm Tài chính số:* Dùng trước trả sau với Ví Trả Sau, gửi tiết kiệm sinh lời mỗi ngày từ số vốn nhỏ, tra cứu điểm tín dụng CIC miễn phí, gói vay tiêu dùng giải ngân nhanh.
-   - *Trụ cột 3 - Giải trí & Đời sống:* Đặt vé xem phim toàn bộ cụm rạp CGV/Lotte/BHD/Beta/NCC, mua vé máy bay, vé xe khách, nạp data 3G/4G, nạp game chiết khấu cao.
-   - *Trụ cột 4 - Tiện ích Dân sinh & Giao thông:* Tra cứu và nộp phạt nguội toàn quốc, thanh toán hóa đơn điện/nước/internet tự động nhắc cước, mua bảo hiểm xe máy/ô tô/y tế trực tuyến.
-
-3. **Khối 3: Social Proof & Security Foundation (Bảo Chứng Thương Hiệu)**
-   - Quy mô cộng đồng: Hơn 30 triệu người dùng tin tưởng sử dụng thường xuyên.
-   - Tiêu chuẩn bảo mật: Chứng chỉ bảo mật quốc tế cấp độ cao nhất PCI DSS Level 1, cơ chế sinh trắc học Face ID / Fingerprint, bảo chứng pháp lý từ Ngân hàng Nhà nước Việt Nam.
-   - Hệ thống liên kết đối tác: Logo mạng lưới ngân hàng nội địa (Vietcombank, Techcombank, BIDV, Agribank, VPBank...) và các đối tác toàn cầu (Apple, Google, TikTok).
-
-4. **Khối 4: Sticky Floating CTA (Nút Hành Động Nổi Chân Trang)**
-   - Khi người dùng cuộn qua khỏi Hero Section để đọc nội dung Educate, một thanh điều hướng nhỏ gọn (Bottom Floating Bar) sẽ cố định ở chân màn hình điện thoại với nút CTA tương ứng theo hệ điều hành để người dùng có thể bấm tải app bất kỳ lúc nào.
 
 ### 4.3. Cơ Chế Nhận Diện Thiết Bị & Logic Nút Bấm Thông Minh (Smart CTA Logic)
 

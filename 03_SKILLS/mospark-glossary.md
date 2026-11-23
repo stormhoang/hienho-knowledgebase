@@ -25,15 +25,15 @@ tags: [glossary, terminology, reference, mospark, momo]
   <tbody>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Content Authority</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nền tảng có thẩm quyền — vị thế "lựa chọn hàng đầu" khi tìm kiếm giải pháp tài chính số. Vision 2026 cho momo.vn.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nền tảng có thẩm quyền - vị thế "lựa chọn hàng đầu" khi tìm kiếm giải pháp tài chính số. Vision 2026 cho momo.vn.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Under-served Markets</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thị trường tiềm năng nhưng chưa được đáp ứng tốt — ưu tiên ngách có volume tìm kiếm lớn nhưng thương hiệu chưa hiển thị tương xứng.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thị trường tiềm năng nhưng chưa được đáp ứng tốt - ưu tiên ngách có volume tìm kiếm lớn nhưng thương hiệu chưa hiển thị tương xứng.</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>PLG</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Product-Led Growth</strong> — Web giải JTBD bằng utility/tool tương tác, không chỉ content. User convert vì product solves their job.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Product-Led Growth</strong> - Web giải JTBD bằng utility/tool tương tác, không chỉ content. User convert vì product solves their job.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>PLG Hook</strong></td>
@@ -41,7 +41,7 @@ tags: [glossary, terminology, reference, mospark, momo]
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>JTBD</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Jobs-to-Be-Done</strong> — framework xác định "công việc" user thuê sản phẩm để thực hiện.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Jobs-to-Be-Done</strong> - framework xác định "công việc" user thuê sản phẩm để thực hiện.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Product Job Cốt Lõi</strong></td>
@@ -49,11 +49,11 @@ tags: [glossary, terminology, reference, mospark, momo]
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>S-C-R</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Situation-Complication-Resolution</strong> — format viết Executive Summary trong các BRD.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Situation-Complication-Resolution</strong> - format viết Executive Summary trong các BRD.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>S-P-A Framework</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>reSearch → Pilot → Action</strong> — khung 3 giai đoạn triển khai Use Case trên Web Platform.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>reSearch → Pilot → Action</strong> - khung 3 giai đoạn triển khai Use Case trên Web Platform.</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Value Before Gate</strong></td>
@@ -61,19 +61,19 @@ tags: [glossary, terminology, reference, mospark, momo]
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Aha! Moment</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khoảnh khắc user cảm nhận giá trị tức thì (VD: trả kết quả CSGT trong 2s) — trigger chuyển đổi W2A.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khoảnh khắc user cảm nhận giá trị tức thì (VD: trả kết quả CSGT trong 2s) - trigger chuyển đổi W2A.</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Utility-First</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nguyên tắc: Interactive tools (calculator, simulator, checker) là core value — content là supporting layer.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nguyên tắc: Interactive tools (calculator, simulator, checker) là core value - content là supporting layer.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>North Star Metric</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chỉ số mục tiêu chính — cho MoMo Web là 6M MUA (Monthly Unique Audience).</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chỉ số mục tiêu chính - cho MoMo Web là 6M MUA (Monthly Unique Audience).</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>BNPL</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Buy Now Pay Later</strong> — Mua trước trả sau (như sản phẩm Ví Trả Sau của MoMo).</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Buy Now Pay Later</strong> - Mua trước trả sau (như sản phẩm Ví Trả Sau của MoMo).</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Vertical</strong></td>
@@ -81,7 +81,7 @@ tags: [glossary, terminology, reference, mospark, momo]
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Use Case</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đơn vị gốc tổ chức mọi content, Ads, analytics — không gắn theo Cell Team hay Division.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đơn vị gốc tổ chức mọi content, Ads, analytics - không gắn theo Cell Team hay Division.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Growth Pillar</strong></td>
@@ -89,7 +89,7 @@ tags: [glossary, terminology, reference, mospark, momo]
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>CAC</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Customer Acquisition Cost</strong> — chi phí để thu hút 1 user mới.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Customer Acquisition Cost</strong> - chi phí để thu hút 1 user mới.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Platform Owner</strong></td>
@@ -97,10 +97,10 @@ tags: [glossary, terminology, reference, mospark, momo]
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>PaaS</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Platform-as-a-Service</strong> — Mô hình GPD cung cấp tư vấn + quy trình + nền tảng cho Cell Teams.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Platform-as-a-Service</strong> - Mô hình GPD cung cấp tư vấn + quy trình + nền tảng cho Cell Teams.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Bữa tối gia đình Test</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tiêu chuẩn trải nghiệm đột phá</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tiêu chuẩn sản phẩm: Phải tạo Aha! Moment đủ mạnh để user tự kể cho người khác trong bữa tối gia đình.</td>
     </tr>
   </tbody>
@@ -120,39 +120,39 @@ tags: [glossary, terminology, reference, mospark, momo]
   <tbody>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>SEO</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Search Engine Optimization</strong> — tối ưu hóa để trang hiển thị tốt trên Google Search.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Search Engine Optimization</strong> - tối ưu hóa để trang hiển thị tốt trên Google Search.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>GEO</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Generative Engine Optimization</strong> — tối ưu hóa citation/trích dẫn trên AI Search (ChatGPT, Perplexity, Gemini).</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Generative Engine Optimization</strong> - tối ưu hóa citation/trích dẫn trên AI Search (ChatGPT, Perplexity, Gemini).</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>AEO</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Answer Engine Optimization</strong> — thuật ngữ tương đương GEO, tối ưu cho AI engines trả lời.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Answer Engine Optimization</strong> - thuật ngữ tương đương GEO, tối ưu cho AI engines trả lời.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>AIO</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>AI Overview</strong> — kết quả AI tổng hợp xuất hiện trên đầu trang SERP của Google.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>AI Overview</strong> - kết quả AI tổng hợp xuất hiện trên đầu trang SERP của Google.</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>SoV</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Share of Voice</strong> — % hiển thị MoMo vs đối thủ trên SERP/AI. <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">SoV = Impression (GSC) / Total Volume Search</code>.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Share of Voice</strong> - % hiển thị MoMo vs đối thủ trên SERP/AI. <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">SoV = Impression (GSC) / Total Volume Search</code>.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>YMYL</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Your Money Your Life</strong> — nội dung tài chính/sức khỏe/pháp lý bị Google đánh giá khắt khe hơn; cần E-E-A-T cứng.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Your Money Your Life</strong> - nội dung tài chính/sức khỏe/pháp lý bị Google đánh giá khắt khe hơn; cần E-E-A-T cứng.</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>E-E-A-T</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Experience, Expertise, Authoritativeness, Trustworthiness</strong> — bộ tiêu chí đánh giá chất lượng nội dung của Google.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Experience, Expertise, Authoritativeness, Trustworthiness</strong> - bộ tiêu chí đánh giá chất lượng nội dung của Google.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>pSEO</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Programmatic SEO</strong> — sinh trang quy mô lớn từ template + data (VD: tạo 63 trang tỉnh thành phạt nguội).</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Programmatic SEO</strong> - sinh trang quy mô lớn từ template + data (VD: tạo 63 trang tỉnh thành phạt nguội).</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>SERP</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Search Engine Results Page</strong> — trang kết quả tìm kiếm của Google.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Search Engine Results Page</strong> - trang kết quả tìm kiếm của Google.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Topical Authority</strong></td>
@@ -184,7 +184,7 @@ tags: [glossary, terminology, reference, mospark, momo]
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Answer-First</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cấu trúc đoạn đầu trả lời trực diện câu hỏi trong 40-60 từ — bắt buộc cho chiến lược GEO.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cấu trúc đoạn đầu trả lời trực diện câu hỏi trong 40-60 từ - bắt buộc cho chiến lược GEO.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Canonical Tag</strong></td>
@@ -196,15 +196,15 @@ tags: [glossary, terminology, reference, mospark, momo]
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Orphan Page</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trang mồ côi — không được bất kỳ trang nào khác link tới, khiến bot khó tìm.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trang mồ côi - không được bất kỳ trang nào khác link tới, khiến bot khó tìm.</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Internal Link</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Liên kết nội bộ — link từ một trang momo.vn sang một trang khác trên momo.vn.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Liên kết nội bộ - link từ một trang momo.vn sang một trang khác trên momo.vn.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Crawl Budget</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ngân sách cào dữ liệu — số trang giới hạn mà bot Google crawl trong một khoảng thời gian nhất định.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ngân sách cào dữ liệu - số trang giới hạn mà bot Google crawl trong một khoảng thời gian nhất định.</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Schema / JSON-LD</strong></td>
@@ -212,7 +212,7 @@ tags: [glossary, terminology, reference, mospark, momo]
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Disclaimer</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tuyên bố miễn trừ trách nhiệm — bắt buộc phải có trên nội dung tài chính YMYL.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tuyên bố miễn trừ trách nhiệm - bắt buộc phải có trên nội dung tài chính YMYL.</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Named Author Policy</strong></td>
@@ -228,7 +228,7 @@ tags: [glossary, terminology, reference, mospark, momo]
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>PAA</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>People Also Ask</strong> — khung câu hỏi liên quan mà Google gợi ý trên SERP.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>People Also Ask</strong> - khung câu hỏi liên quan mà Google gợi ý trên SERP.</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>AI Citation Rate</strong></td>
@@ -236,7 +236,7 @@ tags: [glossary, terminology, reference, mospark, momo]
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Near Miss Keyword</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Từ khóa đang ở rank 4-15 có volume lớn — cơ hội tăng traffic mạnh nếu tối ưu nhẹ.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Từ khóa đang ở rank 4-15 có volume lớn - cơ hội tăng traffic mạnh nếu tối ưu nhẹ.</td>
     </tr>
   </tbody>
 </table>
@@ -255,15 +255,15 @@ tags: [glossary, terminology, reference, mospark, momo]
   <tbody>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>TOFU</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Top of Funnel</strong> — Nội dung Informational (tìm hiểu, giải đáp kiến thức), user mới bắt đầu hành trình.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Top of Funnel</strong> - Nội dung Informational (tìm hiểu, giải đáp kiến thức), user mới bắt đầu hành trình.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>MOFU</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Middle of Funnel</strong> — Nội dung Commercial (so sánh, đánh giá, review), user đang cân nhắc.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Middle of Funnel</strong> - Nội dung Commercial (so sánh, đánh giá, review), user đang cân nhắc.</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>BOFU</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Bottom of Funnel</strong> — Nội dung Transactional (hướng dẫn mở thẻ, bảng giá, đăng ký), user sẵn sàng hành động.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Bottom of Funnel</strong> - Nội dung Transactional (hướng dẫn mở thẻ, bảng giá, đăng ký), user sẵn sàng hành động.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Search Intent</strong></td>
@@ -286,23 +286,23 @@ tags: [glossary, terminology, reference, mospark, momo]
   <tbody>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>MUA</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Monthly Unique Audience</strong> — chỉ số chính yếu 2026 (đo qua BigQuery thay vì GA4), mục tiêu 6M.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Monthly Unique Audience</strong> - chỉ số chính yếu 2026 (đo qua BigQuery thay vì GA4), mục tiêu 6M.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>MUV</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Monthly Unique Visitors</strong> — tương đương MUA.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Monthly Unique Visitors</strong> - tương đương MUA.</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>MAU</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Monthly Active User</strong> — người dùng có hành vi phát sinh giao dịch (Cashin event) trong tháng trên App.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Monthly Active User</strong> - người dùng có hành vi phát sinh giao dịch (Cashin event) trong tháng trên App.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>MEU</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Monthly Engagement User</strong> — đo lường tương tác với tính năng tiện ích (tra cứu, xem info) thay vì giao dịch.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Monthly Engagement User</strong> - đo lường tương tác với tính năng tiện ích (tra cứu, xem info) thay vì giao dịch.</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>DLU / MLU</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Daily/Monthly Line User</strong> — mức độ user tương tác và sử dụng các công cụ PLG hàng ngày/tháng.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Daily/Monthly Line User</strong> - mức độ user tương tác và sử dụng các công cụ PLG hàng ngày/tháng.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>New User</strong></td>
@@ -310,27 +310,27 @@ tags: [glossary, terminology, reference, mospark, momo]
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>W2A</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Web-to-App conversion</strong> — tỷ lệ chuyển đổi user từ Web sang App qua deep link; target ≥ 12.5%.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Web-to-App conversion</strong> - tỷ lệ chuyển đổi user từ Web sang App qua deep link; target ≥ 12.5%.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>CR</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Conversion Rate</strong> — tỷ lệ chuyển đổi tổng quát.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Conversion Rate</strong> - tỷ lệ chuyển đổi tổng quát.</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>CTR</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Click-Through Rate</strong> — tỷ lệ click trên số lần hiển thị.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Click-Through Rate</strong> - tỷ lệ click trên số lần hiển thị.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Organic Traffic</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sessions từ kênh tự nhiên (Google, Bing, AI Search) — không tính ads, direct, social, referral.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sessions từ kênh tự nhiên (Google, Bing, AI Search) - không tính ads, direct, social, referral.</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Zero-Traffic URL</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Các trang "chết" — có dưới 100 organic sessions trong 90 ngày, cần được xử lý theo policy.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Các trang "chết" - có dưới 100 organic sessions trong 90 ngày, cần được xử lý theo policy.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>OKR / KR / KPI</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Objectives and Key Results</strong> / <strong>Key Result</strong> / <strong>Key Performance Indicator</strong> — các chỉ số đo lường hiệu suất.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Objectives and Key Results</strong> / <strong>Key Result</strong> / <strong>Key Performance Indicator</strong> - các chỉ số đo lường hiệu suất.</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>SEO-ICE Score</strong></td>
@@ -338,11 +338,11 @@ tags: [glossary, terminology, reference, mospark, momo]
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>NTS</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>New to Services</strong> — % tỷ lệ người dùng mới (chưa từng dùng) tiếp cận và xài dịch vụ.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>New to Services</strong> - % tỷ lệ người dùng mới (chưa từng dùng) tiếp cận và xài dịch vụ.</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>AOV</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Average Order Value</strong> — giá trị đơn hàng trung bình.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Average Order Value</strong> - giá trị đơn hàng trung bình.</td>
     </tr>
   </tbody>
 </table>
@@ -361,11 +361,11 @@ tags: [glossary, terminology, reference, mospark, momo]
   <tbody>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>MoSpark</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>AI-Powered Growth Platform / Growth OS</strong> của momo.vn — không phải CMS thông thường mà là hệ điều hành tăng trưởng.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>AI-Powered Growth Platform / Growth OS</strong> của momo.vn - không phải CMS thông thường mà là hệ điều hành tăng trưởng.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Mobase</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Design System nội bộ (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">@momo-webplatform/mobase</code>) — hệ thống component chuẩn hóa UI/UX Web.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Design System nội bộ (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">@momo-webplatform/mobase</code>) - hệ thống component chuẩn hóa UI/UX Web.</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Puck Editor</strong></td>
@@ -377,7 +377,7 @@ tags: [glossary, terminology, reference, mospark, momo]
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Onelink</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Appsflyer deep-link service — "xương sống" cho W2A. Cấu trúc: <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">momoapp.onelink.vn/[id]?pid=&c=&af_dp=</code>.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Appsflyer deep-link service - "xương sống" cho W2A. Cấu trúc: <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">momoapp.onelink.vn/[id]?pid=&c=&af_dp=</code>.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Appsflyer</strong></td>
@@ -397,11 +397,11 @@ tags: [glossary, terminology, reference, mospark, momo]
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>GSC</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Google Search Console — check lỗi indexing, tracking organic impressions, clicks.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Google Search Console - check lỗi indexing, tracking organic impressions, clicks.</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>CWV</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Core Web Vitals</strong> — 3 chỉ số hiệu năng tốc độ web cốt lõi (LCP, INP, CLS).</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Core Web Vitals</strong> - 3 chỉ số hiệu năng tốc độ web cốt lõi (LCP, INP, CLS).</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>LCP / INP / CLS</strong></td>
@@ -433,11 +433,11 @@ tags: [glossary, terminology, reference, mospark, momo]
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>SSO / RBAC</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Single Sign-On / Role-Based Access Control — đăng nhập tập trung và phân quyền HRM.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Single Sign-On / Role-Based Access Control - đăng nhập tập trung và phân quyền HRM.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>wui</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Web User Identifier</strong> — ID ẩn danh tracking user web để đối soát khi truyền vào Onelink.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Web User Identifier</strong> - ID ẩn danh tracking user web để đối soát khi truyền vào Onelink.</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Typebot</strong></td>
@@ -482,7 +482,7 @@ tags: [glossary, terminology, reference, mospark, momo]
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>M5</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SEO Inventory</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chứa Market Map & SoV — điểm bắt đầu của mọi dự án.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chứa Market Map & SoV - điểm bắt đầu của mọi dự án.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>M6</strong></td>
@@ -586,7 +586,7 @@ tags: [glossary, terminology, reference, mospark, momo]
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>GEO/Data Moat</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hào nước bảo vệ dữ liệu tương tác từ PLG Tool mà LLM bên thứ 3 không thể tự cào/copy được.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lợi thế phòng thủ bảo vệ dữ liệu tương tác từ PLG Tool mà LLM bên thứ 3 không thể tự cào/copy được.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Content Remix Engine</strong></td>
@@ -613,7 +613,7 @@ tags: [glossary, terminology, reference, mospark, momo]
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>RAG</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Retrieval-Augmented Generation</strong> — truy xuất nội dung cào từ Vector DB để AI bot trả lời chính xác thực tế.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Retrieval-Augmented Generation</strong> - truy xuất nội dung cào từ Vector DB để AI bot trả lời chính xác thực tế.</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Vectorization</strong></td>
@@ -660,7 +660,7 @@ tags: [glossary, terminology, reference, mospark, momo]
   <tbody>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>GPD</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Growth Platform Division</strong> — Khối nền tảng tăng trưởng sở hữu Website và Web Platform.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Growth Platform Division</strong> - Khối nền tảng tăng trưởng sở hữu Website và Web Platform.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Cell Team / Cell PO</strong></td>
@@ -668,7 +668,7 @@ tags: [glossary, terminology, reference, mospark, momo]
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>BMC / Media Team</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Brand & Marketing Center</strong> — team Marketing triển khai Media Team content (tuân thủ rule của GPD).</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Brand & Marketing Center</strong> - team Marketing triển khai Media Team content (tuân thủ rule của GPD).</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Division / BU</strong></td>
@@ -676,7 +676,7 @@ tags: [glossary, terminology, reference, mospark, momo]
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>M4B / OA</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>MoMo for Business / Official Account</strong> — quản lý doanh nghiệp đối tác, tài khoản thương hiệu.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>MoMo for Business / Official Account</strong> - quản lý doanh nghiệp đối tác, tài khoản thương hiệu.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>HRM / ITC</strong></td>
@@ -739,7 +739,7 @@ tags: [glossary, terminology, reference, mospark, momo]
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>N.A.P</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Name - Address - Phone</strong> — cấu trúc thông tin xương sống cho Local SEO (Merchant Pages).</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Name - Address - Phone</strong> - cấu trúc thông tin xương sống cho Local SEO (Merchant Pages).</td>
     </tr>
   </tbody>
 </table>

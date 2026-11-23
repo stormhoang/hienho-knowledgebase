@@ -10,7 +10,7 @@ Diem tiep nhan trung tam cho intake agent. File drop vao `~/Downloads/intake/`, 
 Drop file vao ~/Downloads/intake/
         |
         v
-python3 scripts/intake.py --scan --push
+./.venv/bin/python scripts/intake.py --scan --push
   1. SCAN      - quet file moi, bo qua da xu ly (sha256 idempotency)
   2. DETECT    - nhan dien format theo signature registry
   3. PARSE     - parser tuong ung -> ghi SSOT local
@@ -35,7 +35,7 @@ python3 scripts/intake.py --scan --push
 
 ## 3. CAC LENH
 
-Wrapper `intake` da cai tai `~/.local/bin/intake` (dung truc tiep, khong can `python3 scripts/...`):
+Wrapper `intake` da cai tai `~/.local/bin/intake` (dung truc tiep, khong can `./.venv/bin/python scripts/...`):
 
 ```bash
 # Health check pipeline

@@ -1861,18 +1861,18 @@ VERIFIED_SERP_COMPETITORS = {
     }
 }
 
-# Danh sách ánh xạ các file có tên tiếng Việt / alias cũ để đảm bảo tính tương thích ngược hoàn hảo
+# Chỉ mục alias -> file chuẩn (cùng intent tìm kiếm). Không ghi bản sao file nữa:
+# trước đây mỗi alias là một bản copy y hệt, gây 10 nhóm file trùng và sai intent
+# (ví dụ cic-la-gi / diem-tin-dung chứa số liệu của query "nợ xấu").
+# Chỉ thêm alias khi query thực sự cùng intent với file chuẩn.
 ALIAS_MAPPING = {
-    "gia-xang": ["giá-xăng-hôm-nay", "gia-xang-hom-nay"],
-    "phat-nguoi": ["tra-cứu-phạt-nguội", "phạt-nguội", "tra-cuu-phat-nguoi"],
-    "gui-tiet-kiem": ["gửi-tiết-kiệm-online", "gui-tiet-kiem-online"],
-    "tiet-kiem-online": ["tiết-kiệm-online"],
-    "no-xau": ["cic-là-gì", "cic-la-gi", "diem-tin-dung"],
+    "gia-xang": ["gia-xang-hom-nay"],
+    "phat-nguoi": ["tra-cuu-phat-nguoi"],
+    "gui-tiet-kiem": ["gui-tiet-kiem-online"],
     "vay": ["vay-nhanh"],
-    "bao-hiem-y-te": ["bảo-hiểm-y-tế"],
-    "bao-hiem-o-to": ["bảo-hiểm-ô-tô"],
-    "bao-hiem-xe-may": ["bảo-hiểm-xe-máy"]
 }
+ALIAS_INDEX_FILE = "_aliases.json"
+
 
 def export_all():
     os.makedirs(DATA_DIR, exist_ok=True)
@@ -1897,13 +1897,16 @@ def export_all():
             json.dump(payload, f, ensure_ascii=False, indent=2)
         count += 1
         
-        # 2. Lưu các file alias cũ để MoSpark / KB đối soát không bị miss
-        aliases = ALIAS_MAPPING.get(uc_id, [])
-        for a in aliases:
-            a_file = os.path.join(DATA_DIR, f"{a}.json")
-            with open(a_file, "w", encoding="utf-8") as f:
-                json.dump(payload, f, ensure_ascii=False, indent=2)
-                
+    # 2. Ghi chỉ mục alias thay cho bản sao file
+    alias_index = {
+        alias: f"{uc_id}.json"
+        for uc_id, aliases in ALIAS_MAPPING.items()
+        if uc_id in VERIFIED_SERP_COMPETITORS
+        for alias in aliases
+    }
+    with open(os.path.join(DATA_DIR, ALIAS_INDEX_FILE), "w", encoding="utf-8") as f:
+        json.dump(alias_index, f, ensure_ascii=False, indent=2, sort_keys=True)
+
     print(f"✅ Đã xuất bản thành công {count} file đối thủ SERP chuẩn hoá vào {DATA_DIR}!")
 
 if __name__ == "__main__":

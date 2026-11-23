@@ -56,15 +56,15 @@ https://drive.google.com/file/d/1nl4z5ccoiCo4vHnC9go8i0ZiZll9E1Ao/view
 
 * **Giới tính:** 73% Nam, 27% Nữ.
 
-* **Độ tuổi:** 19–23 tuổi (11.6%), 24–28 tuổi (27.7%), 29–35 tuổi (32.4%).
+* **Độ tuổi:** 19-23 tuổi (11.6%), 24-28 tuổi (27.7%), 29-35 tuổi (32.4%).
 
-* **Khu vực:** Tập trung ở các thành phố lớn – TP.HCM 33%, Hà Nội, Bình Dương, Đồng Nai, Đà Nẵng, Bắc Ninh, Hải Phòng.
+* **Khu vực:** Tập trung ở các thành phố lớn - TP.HCM 33%, Hà Nội, Bình Dương, Đồng Nai, Đà Nẵng, Bắc Ninh, Hải Phòng.
 
 * **Hệ điều hành:** Android 54%, iOS 45%.
 
 * **Thu nhập:** Trung bình thấp, ổn định, ít biến động.
 
-* **Nghề nghiệp:** Đa dạng – văn phòng, tài xế công nghệ (Grab...), lao động chân tay.
+* **Nghề nghiệp:** Đa dạng - văn phòng, tài xế công nghệ (Grab...), lao động chân tay.
 
 ## **2\. Mong muốn**
 
@@ -150,7 +150,7 @@ https://drive.google.com/file/d/1nl4z5ccoiCo4vHnC9go8i0ZiZll9E1Ao/view
 
 ## **3\. Màu sắc & biểu tượng**
 
-* Tông màu chủ đạo: Vàng – Đỏ – Nâu – Gold.
+* Tông màu chủ đạo: Vàng - Đỏ - Nâu - Gold.
 
 * Biểu tượng: ngôi sao, bóng số, đèn nhấp nháy, ribbon.
 
@@ -168,7 +168,7 @@ Từ các phân tích về đối tượng, hành vi liệt kê ở trên, có 8
 | 4 | **Trực tiếp kết quả** | Xem trực tiếp buổi quay số. | Dẫn link đối tác |
 | 5 | **Kết quả xổ số** | Cập nhật kết quả xổ số (KQXS) cho toàn bộ khách hàng MoMo, kể cả khách hàng chưa từng dùng dịch vụ. | Dẫn link đối tác |
 | 6 | **Sổ tay hướng dẫn** | Hướng dẫn mua cơ bản từng sản phẩm, FAQ,... | MoMo tự quản lý |
-| 7 | **Lịch sử vé đã mua** | Lịch sử vé đã mua, chia theo trạng thái: Chờ in – Hoàn thành – Hủy vé. Có thể hiện thông tin vé trúng thưởng. | Dẫn link đối tác |
+| 7 | **Lịch sử vé đã mua** | Lịch sử vé đã mua, chia theo trạng thái: Chờ in - Hoàn thành - Hủy vé. Có thể hiện thông tin vé trúng thưởng. | Dẫn link đối tác |
 | 8 | **Business Page** | Khối nội dung/tin tức mới nhất về sản phẩm dịch vụ, hiển thị trực tiếp ngay trên landing page. | MoMo tự quản lý |
 
 # **VIII. Đề xuất bố cục màn hình chính**
@@ -218,7 +218,7 @@ Thay vì trình bày theo 3 nhóm danh mục lớn (Vietlott / Điện toán / K
 
 * Nội dung và thứ tự hiển thị thay đổi theo vùng miền của khách hàng (dựa theo mã tỉnh/thành, tương tự cách Hợp Phong đang xử lý).
 
-* Kích thước hiển thị tỷ lệ thuận với mức độ yêu thích: hạng 1 hiển thị dạng thẻ lớn, nổi bật nhất; hạng 2–3 dạng thẻ cỡ vừa; hạng 4 trở đi dạng lưới nhỏ gọn.
+* Kích thước hiển thị tỷ lệ thuận với mức độ yêu thích: hạng 1 hiển thị dạng thẻ lớn, nổi bật nhất; hạng 2-3 dạng thẻ cỡ vừa; hạng 4 trở đi dạng lưới nhỏ gọn.
 
 * Tổng danh mục sản phẩm hiển thị theo từng miền vẫn đầy đủ theo đúng quy tắc ở mục I.2 (Miền Bắc 16 sản phẩm gồm cả nhóm Điện toán; Miền Trung và Miền Nam 10 sản phẩm mỗi miền, không có nhóm Điện toán), sản phẩm chưa có dữ liệu rank không bị ẩn đi, vẫn hiển thị ở dạng lưới mục “tất cả sản phẩm”.
 
@@ -242,11 +242,11 @@ QSMT \= Quay số mở thưởng. Một số ví dụ về chi tiết thông tin
 
 | Sản phẩm | Thông tin hiển thị trên thẻ |
 | ----- | :---- |
-| **Power 6/55** | – Ngày QSMT – Kỳ QSMT – Giá trị giải Jackpot 1 (cập nhật real-time) – Giá trị giải Jackpot 2 (cập nhật real-time) – Tag “Nay xổ” / “Mai xổ” – Thời gian đếm ngược QSMT |
-| **Mega 6/45** | – Ngày QSMT – Kỳ QSMT – Giá trị giải Jackpot (cập nhật real-time) – Tag “Nay xổ” / “Mai xổ” – Thời gian đếm ngược QSMT |
-| **Max 3D / Max 3D+** | – Ngày QSMT – Tag “Nay xổ” / “Mai xổ” – Thời gian đếm ngược QSMT |
-| **Max 3D Pro** | – Ngày QSMT – Tag “Nay xổ” / “Mai xổ” – Thời gian đếm ngược QSMT |
-| **Lotto 5/35** | – Kỳ QSMT – Giá trị Độc đắc – Thời gian đếm ngược QSMT |
+| **Power 6/55** | - Ngày QSMT - Kỳ QSMT - Giá trị giải Jackpot 1 (cập nhật real-time) - Giá trị giải Jackpot 2 (cập nhật real-time) - Tag “Nay xổ” / “Mai xổ” - Thời gian đếm ngược QSMT |
+| **Mega 6/45** | - Ngày QSMT - Kỳ QSMT - Giá trị giải Jackpot (cập nhật real-time) - Tag “Nay xổ” / “Mai xổ” - Thời gian đếm ngược QSMT |
+| **Max 3D / Max 3D+** | - Ngày QSMT - Tag “Nay xổ” / “Mai xổ” - Thời gian đếm ngược QSMT |
+| **Max 3D Pro** | - Ngày QSMT - Tag “Nay xổ” / “Mai xổ” - Thời gian đếm ngược QSMT |
+| **Lotto 5/35** | - Kỳ QSMT - Giá trị Độc đắc - Thời gian đếm ngược QSMT |
 | **Keno** | Mã kỳ T-1 (T là kỳ hiện tại) Thời gian đếm ngược QSMT Giá trị giải: 2 tỉ đồng Tag “8 phút/kỳ” |
 | **Bao Keno** | Kỳ QSMT Thời gian đếm ngược QSMT Để cụm “Bao Keno” Tag “8 phút/kỳ” |
 | **Mua chung** | Slogan: Góp NHỎ trúng TO |

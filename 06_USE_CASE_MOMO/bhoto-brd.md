@@ -1,13 +1,13 @@
 # BRD: Bảo Hiểm Ô Tô
 
-> - **Project:** Bảo Hiểm Ô Tô (Vật Chất Xe - VCX & TNDS)
-> - **Main URL:** momo.vn/bao-hiem-o-to
-> - **Division:** FS (Financial Services)
+> - **Dự án:** Bảo Hiểm Ô Tô (Vật Chất Xe - VCX & TNDS)
+> - **URL chính:** momo.vn/bao-hiem-o-to
+> - **Khối phụ trách:** FS (Financial Services)
 > - **Use Case:** InsurTech
 > - **Owner:** Web Platform
-> - **Governance:** Web Product Lead (Văn Hiến)
-> - **Version:** 1.0 - Draft (12/07/2026)
-> - **Status:** Draft - cần review với BU, Web Platform, Media Team
+> - **Phê duyệt:** Web Product Lead (Văn Hiến)
+> - **Phiên bản:** 1.0 - Draft (12/07/2026)
+> - **Trạng thái:** Draft - cần review với BU, Web Platform, Media Team
 
 ---
 

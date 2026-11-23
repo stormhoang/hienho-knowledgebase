@@ -98,13 +98,13 @@ def prioritize_quick_wins(limit=15, hub_filter=None):
 
         rice_score = (reach * impact * confidence) / effort
         
-        # Phân loại độ ưu tiên
+        # Phân loại tiến độ triển khai
         if rice_score >= 100000:
-            priority = "P0 (Triển khai ngay)"
+            priority = "Triển khai ngay"
         elif rice_score >= 40000:
-            priority = "P1 (Ưu tiên cao)"
+            priority = "Ưu tiên kế tiếp"
         else:
-            priority = "P2 (Ưu tiên trung bình)"
+            priority = "Xem xét sau"
 
         scored_items.append({
             "query": r["query"],

@@ -1,13 +1,13 @@
 # BRD: Bảo Hiểm Xe Máy
 
-> - **Project:** Bảo Hiểm Xe Máy Web Growth
-> - **Main URL:** momo.vn/bao-hiem-xe-may
-> - **Division:** FS (Financial Services)
+> - **Dự án:** Bảo Hiểm Xe Máy Web Growth
+> - **URL chính:** momo.vn/bao-hiem-xe-may
+> - **Khối phụ trách:** FS (Financial Services)
 > - **Use Case:** InsurTech
 > - **Owner:** Web Platform
-> - **Governance:** Web Product Lead (Hiến)
-> - **Version:** 1.2 - Tháng 7/2026
-> - **Status:** Draft (Updated Media Team Plan)
+> - **Phê duyệt:** Web Product Lead (Hiến)
+> - **Phiên bản:** 1.2 - Tháng 7/2026
+> - **Trạng thái:** Draft (Updated Media Team Plan)
 > - **SEO Score:** 65/100 | **Traffic:** 15K sessions/tháng | **W2A:** 8.5%
 
 ---
@@ -21,7 +21,7 @@
 ### 1.2 Situation
 MoMo là một trong những kênh phân phối bảo hiểm xe máy trực tuyến lớn tại Việt Nam, đã phân phối hơn 2.3 triệu hợp đồng với đối tác là các nhà bảo hiểm uy tín (Bảo Việt, PVI, PTI, MIC, GIC, Liberty). Thị trường có nền tảng cầu tự nhiên rất cao: 72 triệu xe máy đang lưu hành, bảo hiểm TNDS bắt buộc theo pháp luật.
 
-Dữ liệu keyword nội bộ ghi nhận 519 từ khoá, tổng volume ~67,540/tháng và đạt đỉnh ~76,460 vào tháng 3/2025. Nhu cầu tìm kiếm trải rộng 7 cluster khác nhau từ transactional, informational đến utility.
+Dữ liệu keyword nội bộ ghi nhận 519 từ khoá, tổng volume ~67,540/tháng và chạm mức cao nhất ~76,460 vào tháng 3/2025. Nhu cầu tìm kiếm trải rộng 7 cluster khác nhau từ transactional, informational đến utility.
 
 ### Complication
 
@@ -424,7 +424,7 @@ momo.vn/bao-hiem-xe-may [Hub]
 │   ├── /bao-hiem-xe-may/tu-nguyen          - BH tự nguyện/vật chất
 │   ├── /bao-hiem-xe-may/gia-han            - Gia hạn / Tái tục
 │   ├── /bao-hiem-xe-may/boi-thuong         - Hướng dẫn bồi thường
-│   ├── **PLG Interactive Tool:** /bao-hiem-xe-may/tra-cuu - Widget tra cứu biển số (Bữa tối gia đình test)
+│   ├── **PLG Interactive Tool:** /bao-hiem-xe-may/tra-cuu - Widget tra cứu biển số (Tiêu chuẩn trải nghiệm đột phá)
 │   └── **PLG Interactive Tool:** /bao-hiem-xe-may/bang-gia - Bảng giá + Calculator tính phí
 │
 ├── LANDING PAGE THEO NHÀ BH

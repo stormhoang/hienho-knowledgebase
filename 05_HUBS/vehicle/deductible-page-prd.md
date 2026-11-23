@@ -2,7 +2,7 @@
 
 > - **Dự án:** Vehicle Hub & Trang Bảo Hiểm Ô Tô (`momo.vn/bao-hiem-o-to` & `momo.vn/tien-ich-giao-thong/muc-khau-tru`)
 > - **Tài liệu gốc (Source PRD):** `/Users/hienhv/Downloads/PRD Tool mô phỏng mức khấu trừ, trang Bảo hiểm thân vỏ ô tô (web).docx`
-> - **Đơn vị phụ trách:** Web Platform Team (Chịu trách nhiệm máy tính phí & UI/UX) x InsurTech BU (Chịu trách nhiệm file config tỷ lệ)
+> - **Khối phụ trách:** Web Platform Team (Chịu trách nhiệm máy tính phí & UI/UX) x InsurTech BU (Chịu trách nhiệm file config tỷ lệ)
 > - **Trạng thái:** PRD Approved & Production Spec Ready
 
 ---

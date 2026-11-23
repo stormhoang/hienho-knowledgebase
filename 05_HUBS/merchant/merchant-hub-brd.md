@@ -1,7 +1,7 @@
 # BRD: Merchant Hub - Cổng Thông Tin & Nền Tảng Đối Tác Merchant MoMo
 
-> - **Project:** Merchant Hub (Web Platform & Merchant Profile Identity)
-> - **Division:** Growth Platform Division (GPD)
+> - **Dự án:** Merchant Hub (Web Platform & Merchant Profile Identity)
+> - **Khối phụ trách:** Growth Platform Division (GPD)
 > - **Owner:** Web Platform Team (GPD)
 
 ## I. Executive Summary
@@ -20,7 +20,7 @@
 * **Resolution (Giải pháp):** Xây dựng **Merchant Hub** hoạt động theo mô hình Product-Led Growth (PLG) & Hub-and-Spoke: Hứng traffic tự nhiên từ Open Web qua các Utility Category Spoke Pages (Đồ ăn, Đồ uống, Bách hoá, Làm đẹp, Mua sắm...)  ➔  Khởi tạo Hồ sơ Cửa hàng (Merchant Profile)  ➔  Điều hướng Web-to-App (W2A) để thu thập Voucher O2O & thực hiện giao dịch quét QR thanh toán tại shop.
 
 ### 1.3 Product-Led Growth (PLG) Strategy
-Cơ chế PLG của Merchant Hub dựa trên 5 "Phễu Mồi Câu" (Acquisition & Engagement Hooks) giải quyết nhu cầu tìm kiếm tức thì ngoài Open Web để dẫn dắt người dùng tự nguyện khám phá cửa hàng và chuyển đổi sang App (Web-to-Merchant-to-App Flywheel):
+Cơ chế PLG của Merchant Hub dựa trên 5 "Phễu Tiện Ích Thu Hút" (Acquisition & Engagement Hooks) giải quyết nhu cầu tìm kiếm tức thì ngoài Open Web để dẫn dắt người dùng tự nguyện khám phá cửa hàng và chuyển đổi sang App (Web-to-Merchant-to-App Flywheel):
 
 1. **Phễu Tra Cứu Địa Điểm & Menu (Acquisition Gate):** Xem vị trí Google Maps, menu/bản giá sản phẩm và đánh giá cửa hàng gần đây không cần đăng nhập  ➔  Bấm "Thu thập Voucher O2O"  ➔  Dẫn dắt kích hoạt App MoMo.
 2. **Phễu Săn Voucher O2O (Conversion Hook):** Nhận voucher giảm giá trực tiếp trên Web với 1-click  ➔  Thúc đẩy người dùng di chuyển đến cửa hàng offline quét mã MoMo / Ví Trả Sau để sử dụng voucher.
@@ -150,7 +150,7 @@ MoMo sở hữu lợi thế cạnh tranh tuyệt đối khi kết hợp sức m�
 3. **Cá nhân hóa trải nghiệm theo Ngành nghề:** Dựa trên bộ danh mục 14 ngành nghề chính & 53 ngành nghề phụ để đề xuất chương trình khuyến mãi và giao diện Merchant Page tối ưu cho từng loại hình kinh doanh (Ví dụ: Ngành F&B hiển thị Menu/Bảng giá; Ngành Làm đẹp hiển thị Bảng giá dịch vụ & Đặt lịch; Ngành Bách hoá hiển thị danh mục ưu đãi O2O).
 
 ### 2.3 Search Demand Analysis
-Theo phân tích dữ liệu thực tế trên Open Web tại Việt Nam, tổng nhu cầu tìm kiếm địa điểm ăn uống, mua sắm, dịch vụ local và giải pháp kinh doanh vượt **15.8 triệu lượt/tháng**. Đây là hệ thống nhu cầu cốt lõi mà Merchant Hub tập trung hứng trọn qua mô hình Hub-and-Spoke:
+Theo phân tích dữ liệu thực tế trên Open Web tại Việt Nam, tổng nhu cầu tìm kiếm địa điểm ăn uống, mua sắm, dịch vụ local và giải pháp kinh doanh vượt **15.8 triệu lượt/tháng**. Đây là hệ thống nhu cầu cốt lõi mà Merchant Hub tập trung đón nhận trọn vẹn qua mô hình Hub-and-Spoke:
 
 <table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
   <thead>
@@ -344,7 +344,7 @@ Theo phân tích dữ liệu thực tế trên Open Web tại Việt Nam, tổng
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Nền tảng (MoMo Platform)</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><em>"Giúp MoMo hứng trọn lượng traffic tìm kiếm địa điểm O2O khổng lồ từ Open Web, chuyển đổi người dùng Web thành giao dịch tại shop và bán chéo giải pháp Soundbox/Ví Trả Sau."</em></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><em>"Giúp MoMo đón nhận trọn vẹn lượng traffic tìm kiếm địa điểm O2O khổng lồ từ Open Web, chuyển đổi người dùng Web thành giao dịch tại shop và bán chéo giải pháp Soundbox/Ví Trả Sau."</em></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">- Chi phí thu hút người dùng mới (CAC) ngày càng cao.<br>- Merchant M4B thiếu công cụ kéo traffic O2O.<br>- Nguồn leads bán phần cứng Soundbox bị hạn chế.</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">- Hứng traffic tự nhiên từ SEO Hub (Zero-ad cost).<br>- Tăng sản lượng giao dịch QR O2O In-App.<br>- Tạo nguồn leads bán Loa Soundbox liên tục.</td>
     </tr>
@@ -628,7 +628,7 @@ Tích hợp trọn vẹn bộ danh mục **14 Ngành nghề chính** và **53 Ng
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>v2.0</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-07-31</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Product Lead (GPD)</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Master BRD Upgrade:</strong> Đại tu toàn bộ Merchant Hub BRD theo chuẩn cấu trúc <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">vehicle-hub-brd.md</code>. Bổ sung SCR Framework, PLG 5 Phễu Mồi Câu, Dual North Star Metrics, Bảng Phân Tích Nhu Cầu Tìm Kiếm (Search Demand Analysis), Tích hợp Bộ Taxonomy 14 Ngành nghề chính & 53 Ngành nghề phụ từ CSV, Schema.org Matrix, PDPD Compliance và Risk Management Matrix.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Master BRD Upgrade:</strong> Đại tu toàn bộ Merchant Hub BRD theo chuẩn cấu trúc <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">vehicle-hub-brd.md</code>. Bổ sung SCR Framework, PLG 5 Phễu Tiện Ích Thu Hút, Dual North Star Metrics, Bảng Phân Tích Nhu Cầu Tìm Kiếm (Search Demand Analysis), Tích hợp Bộ Taxonomy 14 Ngành nghề chính & 53 Ngành nghề phụ từ CSV, Schema.org Matrix, PDPD Compliance và Risk Management Matrix.</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>v1.0</strong></td>

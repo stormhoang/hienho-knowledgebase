@@ -1,22 +1,10 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-07T13:12:54.414500+00:00",
+  "generated_at": "2026-11-14T06:58:21.923356+00:00",
   "mode": "observe",
   "resolved": false,
   "conflict_count": 64,
   "conflicts": [
-    {
-      "kind": "skill_asset_reference",
-      "reference": "graphify-out/wiki/index.md",
-      "raw_reference": "graphify-out/wiki/index.md",
-      "source": ".agents/rules/graphify.md",
-      "sources": [
-        ".agents/rules/graphify.md"
-      ],
-      "line": 12,
-      "reason": "skill_package_reference",
-      "message": "Tham chiếu tài nguyên cục bộ bên trong gói agent skill."
-    },
     {
       "kind": "external_reference",
       "reference": "react-web-momo/data/seo-news.json",
@@ -30,7 +18,7 @@
       "message": "Tham chiếu liên kết sang repository Front-end Hub (react-web-momo)."
     },
     {
-      "kind": "broken_reference",
+      "kind": "external_reference",
       "reference": "data/seo-clusters/index.json",
       "raw_reference": "data/seo-clusters/index.json",
       "source": "00_HARNESS_CORE/KEYWORD_CLUSTERING_OPTIMIZATION_SPEC.md",
@@ -38,8 +26,8 @@
         "00_HARNESS_CORE/KEYWORD_CLUSTERING_OPTIMIZATION_SPEC.md"
       ],
       "line": 50,
-      "reason": "unresolved_internal_path",
-      "message": "Đường dẫn nội bộ không tìm thấy tệp đích trong repository."
+      "reason": "cross_repository_data_dependency",
+      "message": "Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ."
     },
     {
       "kind": "external_reference",
@@ -114,7 +102,7 @@
       "message": "Đường dẫn tuyệt đối trỏ ra ngoài phạm vi repository."
     },
     {
-      "kind": "code_path_reference",
+      "kind": "external_reference",
       "reference": "./lib/data/quiz_catalog.json",
       "raw_reference": "./lib/data/quiz_catalog.json",
       "source": "04_MOSPARK_PLATFORM/QUIZ_FLOW_SPECIFICATION_FOR_DEV.md",
@@ -122,8 +110,8 @@
         "04_MOSPARK_PLATFORM/QUIZ_FLOW_SPECIFICATION_FOR_DEV.md"
       ],
       "line": 233,
-      "reason": "code_runtime_or_generated_path",
-      "message": "Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output)."
+      "reason": "cross_repository_data_dependency",
+      "message": "Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ."
     },
     {
       "kind": "external_reference",
@@ -162,16 +150,16 @@
       "message": "Tham chiếu lịch sử từ kho ghi chép cá nhân cũ (Obsidian Vault)."
     },
     {
-      "kind": "broken_reference",
-      "reference": "05_HUBS/vehicle-hub-navigation.md",
-      "raw_reference": "05_HUBS/vehicle-hub-navigation.md",
-      "source": "05_HUBS/vehicle/vehicle-hub-brd.md",
+      "kind": "external_reference",
+      "reference": "lib/dashboard/hub-map.json",
+      "raw_reference": "lib/dashboard/hub-map.json",
+      "source": "05_HUBS/HUB_CLASSIFICATION_SSOT.md",
       "sources": [
-        "05_HUBS/vehicle/vehicle-hub-brd.md"
+        "05_HUBS/HUB_CLASSIFICATION_SSOT.md"
       ],
-      "line": 1006,
-      "reason": "unresolved_internal_path",
-      "message": "Đường dẫn nội bộ không tìm thấy tệp đích trong repository."
+      "line": 120,
+      "reason": "cross_repository_data_dependency",
+      "message": "Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ."
     },
     {
       "kind": "external_reference",
@@ -210,7 +198,7 @@
       "message": "Tham chiếu tệp tin tạm hoặc báo cáo xuất trong thư mục Downloads máy cục bộ."
     },
     {
-      "kind": "broken_reference",
+      "kind": "external_reference",
       "reference": "data/content-plan-data.json",
       "raw_reference": "data/content-plan-data.json",
       "source": "07_REPORTS/KEYWORD_REALLOCATION_REVIEW.md",
@@ -218,11 +206,11 @@
         "07_REPORTS/KEYWORD_REALLOCATION_REVIEW.md"
       ],
       "line": 160,
-      "reason": "unresolved_internal_path",
-      "message": "Đường dẫn nội bộ không tìm thấy tệp đích trong repository."
+      "reason": "cross_repository_data_dependency",
+      "message": "Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ."
     },
     {
-      "kind": "broken_reference",
+      "kind": "external_reference",
       "reference": "lib/dashboard/web-data.json",
       "raw_reference": "lib/dashboard/web-data.json",
       "source": "07_REPORTS/docs/monthly-reporting-tool-architecture.md",
@@ -230,11 +218,35 @@
         "07_REPORTS/docs/monthly-reporting-tool-architecture.md"
       ],
       "line": 106,
+      "reason": "cross_repository_data_dependency",
+      "message": "Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ."
+    },
+    {
+      "kind": "broken_reference",
+      "reference": "docs/Spec_Driven-Graph_Matrix-Development/README-V1.md",
+      "raw_reference": "docs/Spec_Driven-Graph_Matrix-Development/README-V1.md",
+      "source": "07_REPORTS/docs/weekly-report-2026-11-02-11-08.md",
+      "sources": [
+        "07_REPORTS/docs/weekly-report-2026-11-02-11-08.md"
+      ],
+      "line": 297,
       "reason": "unresolved_internal_path",
       "message": "Đường dẫn nội bộ không tìm thấy tệp đích trong repository."
     },
     {
       "kind": "broken_reference",
+      "reference": "momo.cms/docs/features/FEAT-MOMATRIX-CORE-AND-DOCS-API.md",
+      "raw_reference": "momo.cms/docs/features/FEAT-MOMATRIX-CORE-AND-DOCS-API.md",
+      "source": "07_REPORTS/docs/weekly-report-2026-11-02-11-08.md",
+      "sources": [
+        "07_REPORTS/docs/weekly-report-2026-11-02-11-08.md"
+      ],
+      "line": 298,
+      "reason": "unresolved_internal_path",
+      "message": "Đường dẫn nội bộ không tìm thấy tệp đích trong repository."
+    },
+    {
+      "kind": "external_reference",
       "reference": "lib/dashboard/web-data.json",
       "raw_reference": "lib/dashboard/web-data.json",
       "source": "13_INTAKE/README.md",
@@ -242,56 +254,8 @@
         "13_INTAKE/README.md"
       ],
       "line": 78,
-      "reason": "unresolved_internal_path",
-      "message": "Đường dẫn nội bộ không tìm thấy tệp đích trong repository."
-    },
-    {
-      "kind": "external_reference",
-      "reference": "/Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/web-data.json",
-      "raw_reference": "file:///Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/web-data.json",
-      "source": "AGENTS.md",
-      "sources": [
-        "AGENTS.md"
-      ],
-      "line": 88,
-      "reason": "cross_repository_reference",
-      "message": "Tham chiếu liên kết sang repository Front-end Hub (react-web-momo)."
-    },
-    {
-      "kind": "external_reference",
-      "reference": "/Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/summary.json",
-      "raw_reference": "file:///Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/summary.json",
-      "source": "AGENTS.md",
-      "sources": [
-        "AGENTS.md"
-      ],
-      "line": 88,
-      "reason": "cross_repository_reference",
-      "message": "Tham chiếu liên kết sang repository Front-end Hub (react-web-momo)."
-    },
-    {
-      "kind": "external_reference",
-      "reference": "/Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/web-data.json",
-      "raw_reference": "file:///Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/web-data.json",
-      "source": "AGENTS.md",
-      "sources": [
-        "AGENTS.md"
-      ],
-      "line": 93,
-      "reason": "cross_repository_reference",
-      "message": "Tham chiếu liên kết sang repository Front-end Hub (react-web-momo)."
-    },
-    {
-      "kind": "external_reference",
-      "reference": "/Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/summary.json",
-      "raw_reference": "file:///Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/summary.json",
-      "source": "AGENTS.md",
-      "sources": [
-        "AGENTS.md"
-      ],
-      "line": 93,
-      "reason": "cross_repository_reference",
-      "message": "Tham chiếu liên kết sang repository Front-end Hub (react-web-momo)."
+      "reason": "cross_repository_data_dependency",
+      "message": "Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ."
     },
     {
       "kind": "code_path_reference",
@@ -304,6 +268,90 @@
       "line": 39,
       "reason": "code_runtime_or_generated_path",
       "message": "Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output)."
+    },
+    {
+      "kind": "external_reference",
+      "reference": "Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md",
+      "raw_reference": "Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md",
+      "source": "scripts/archive/oneoff-2026-11/scratch_fix_platform.py",
+      "sources": [
+        "scripts/archive/oneoff-2026-11/scratch_fix_platform.py"
+      ],
+      "line": 84,
+      "reason": "cross_repository_reference",
+      "message": "Tham chiếu liên kết sang repository Front-end Hub (react-web-momo)."
+    },
+    {
+      "kind": "external_reference",
+      "reference": "Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md",
+      "raw_reference": "Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md",
+      "source": "scripts/archive/oneoff-2026-11/scratch_fix_v2.py",
+      "sources": [
+        "scripts/archive/oneoff-2026-11/scratch_fix_v2.py"
+      ],
+      "line": 31,
+      "reason": "cross_repository_reference",
+      "message": "Tham chiếu liên kết sang repository Front-end Hub (react-web-momo)."
+    },
+    {
+      "kind": "external_reference",
+      "reference": "Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md",
+      "raw_reference": "Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md",
+      "source": "scripts/archive/oneoff-2026-11/scratch_human_report.py",
+      "sources": [
+        "scripts/archive/oneoff-2026-11/scratch_human_report.py"
+      ],
+      "line": 324,
+      "reason": "cross_repository_reference",
+      "message": "Tham chiếu liên kết sang repository Front-end Hub (react-web-momo)."
+    },
+    {
+      "kind": "external_reference",
+      "reference": "Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md",
+      "raw_reference": "Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md",
+      "source": "scripts/archive/oneoff-2026-11/scratch_strict_audit_report.py",
+      "sources": [
+        "scripts/archive/oneoff-2026-11/scratch_strict_audit_report.py"
+      ],
+      "line": 290,
+      "reason": "cross_repository_reference",
+      "message": "Tham chiếu liên kết sang repository Front-end Hub (react-web-momo)."
+    },
+    {
+      "kind": "external_reference",
+      "reference": "react-web-momo/data/analytics/monthly-report-2026-10.json",
+      "raw_reference": "react-web-momo/data/analytics/monthly-report-2026-10.json",
+      "source": "scripts/archive/oneoff-2026-11/update_all_october_reports_30d.py",
+      "sources": [
+        "scripts/archive/oneoff-2026-11/update_all_october_reports_30d.py"
+      ],
+      "line": 12,
+      "reason": "cross_repository_reference",
+      "message": "Tham chiếu liên kết sang repository Front-end Hub (react-web-momo)."
+    },
+    {
+      "kind": "external_reference",
+      "reference": "react-web-momo/data/reports/monthly-index.json",
+      "raw_reference": "react-web-momo/data/reports/monthly-index.json",
+      "source": "scripts/archive/oneoff-2026-11/update_all_october_reports_30d.py",
+      "sources": [
+        "scripts/archive/oneoff-2026-11/update_all_october_reports_30d.py"
+      ],
+      "line": 13,
+      "reason": "cross_repository_reference",
+      "message": "Tham chiếu liên kết sang repository Front-end Hub (react-web-momo)."
+    },
+    {
+      "kind": "external_reference",
+      "reference": "react-web-momo/data/reports/report-thang-10-2026-board.md",
+      "raw_reference": "react-web-momo/data/reports/report-thang-10-2026-board.md",
+      "source": "scripts/archive/oneoff-2026-11/update_all_october_reports_30d.py",
+      "sources": [
+        "scripts/archive/oneoff-2026-11/update_all_october_reports_30d.py"
+      ],
+      "line": 16,
+      "reason": "cross_repository_reference",
+      "message": "Tham chiếu liên kết sang repository Front-end Hub (react-web-momo)."
     },
     {
       "kind": "external_reference",
@@ -367,11 +415,59 @@
     },
     {
       "kind": "code_path_reference",
+      "reference": "cache/performance.sqlite",
+      "raw_reference": "cache/performance.sqlite",
+      "source": "scripts/detect_knowledge_conflicts.py",
+      "sources": [
+        "scripts/detect_knowledge_conflicts.py"
+      ],
+      "line": 152,
+      "reason": "code_runtime_or_generated_path",
+      "message": "Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output)."
+    },
+    {
+      "kind": "external_reference",
+      "reference": "Idea/react-web-momo/lib/dashboard/hub-map.json",
+      "raw_reference": "Idea/react-web-momo/lib/dashboard/hub-map.json",
+      "source": "scripts/export_3m_urls_to_sheet.py",
+      "sources": [
+        "scripts/export_3m_urls_to_sheet.py"
+      ],
+      "line": 175,
+      "reason": "cross_repository_reference",
+      "message": "Tham chiếu liên kết sang repository Front-end Hub (react-web-momo)."
+    },
+    {
+      "kind": "external_reference",
+      "reference": "react-web-momo/data/analytics/SPEC-page-mtd.md",
+      "raw_reference": "react-web-momo/data/analytics/SPEC-page-mtd.md",
+      "source": "scripts/export_page_mtd.py",
+      "sources": [
+        "scripts/export_page_mtd.py"
+      ],
+      "line": 6,
+      "reason": "cross_repository_reference",
+      "message": "Tham chiếu liên kết sang repository Front-end Hub (react-web-momo)."
+    },
+    {
+      "kind": "external_reference",
+      "reference": "Idea/react-web-momo/data/analytics/page_mtd.json",
+      "raw_reference": "Idea/react-web-momo/data/analytics/page_mtd.json",
+      "source": "scripts/export_page_mtd.py",
+      "sources": [
+        "scripts/export_page_mtd.py"
+      ],
+      "line": 30,
+      "reason": "cross_repository_reference",
+      "message": "Tham chiếu liên kết sang repository Front-end Hub (react-web-momo)."
+    },
+    {
+      "kind": "code_path_reference",
       "reference": "07_REPORTS/data/gsc_cannibalization_matrix.json",
       "raw_reference": "07_REPORTS/data/gsc_cannibalization_matrix.json",
-      "source": "scripts/cron_gsc_cannibalization.py",
+      "source": "scripts/gsc_cannibalization.py",
       "sources": [
-        "scripts/cron_gsc_cannibalization.py"
+        "scripts/gsc_cannibalization.py"
       ],
       "line": 9,
       "reason": "code_runtime_or_generated_path",
@@ -381,9 +477,9 @@
       "kind": "code_path_reference",
       "reference": "07_REPORTS/data/gsc_crawl_stats.json",
       "raw_reference": "07_REPORTS/data/gsc_crawl_stats.json",
-      "source": "scripts/cron_gsc_crawl_stats.py",
+      "source": "scripts/gsc_crawl_stats.py",
       "sources": [
-        "scripts/cron_gsc_crawl_stats.py"
+        "scripts/gsc_crawl_stats.py"
       ],
       "line": 8,
       "reason": "code_runtime_or_generated_path",
@@ -393,28 +489,16 @@
       "kind": "code_path_reference",
       "reference": "07_REPORTS/data/gsc_keyword_ranking.json",
       "raw_reference": "07_REPORTS/data/gsc_keyword_ranking.json",
-      "source": "scripts/cron_gsc_keyword_ranking.py",
+      "source": "scripts/gsc_keyword_ranking.py",
       "sources": [
-        "scripts/cron_gsc_keyword_ranking.py"
+        "scripts/gsc_keyword_ranking.py"
       ],
       "line": 9,
       "reason": "code_runtime_or_generated_path",
       "message": "Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output)."
     },
     {
-      "kind": "code_path_reference",
-      "reference": "cache/performance.sqlite",
-      "raw_reference": "cache/performance.sqlite",
-      "source": "scripts/detect_knowledge_conflicts.py",
-      "sources": [
-        "scripts/detect_knowledge_conflicts.py"
-      ],
-      "line": 144,
-      "reason": "code_runtime_or_generated_path",
-      "message": "Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output)."
-    },
-    {
-      "kind": "code_path_reference",
+      "kind": "external_reference",
       "reference": "lib/dashboard/web-data.json",
       "raw_reference": "lib/dashboard/web-data.json",
       "source": "scripts/intake.py",
@@ -422,11 +506,11 @@
         "scripts/intake.py"
       ],
       "line": 225,
-      "reason": "code_runtime_or_generated_path",
-      "message": "Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output)."
+      "reason": "cross_repository_data_dependency",
+      "message": "Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ."
     },
     {
-      "kind": "code_path_reference",
+      "kind": "external_reference",
       "reference": "lib/dashboard/web-data.json",
       "raw_reference": "lib/dashboard/web-data.json",
       "source": "scripts/lib/hubs_dashboard.py",
@@ -434,8 +518,8 @@
         "scripts/lib/hubs_dashboard.py"
       ],
       "line": 3,
-      "reason": "code_runtime_or_generated_path",
-      "message": "Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output)."
+      "reason": "cross_repository_data_dependency",
+      "message": "Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ."
     },
     {
       "kind": "external_reference",
@@ -446,54 +530,6 @@
         "scripts/lib/url_project_resolver.py"
       ],
       "line": 32,
-      "reason": "cross_repository_reference",
-      "message": "Tham chiếu liên kết sang repository Front-end Hub (react-web-momo)."
-    },
-    {
-      "kind": "external_reference",
-      "reference": "Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md",
-      "raw_reference": "Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md",
-      "source": "scripts/scratch_fix_platform.py",
-      "sources": [
-        "scripts/scratch_fix_platform.py"
-      ],
-      "line": 84,
-      "reason": "cross_repository_reference",
-      "message": "Tham chiếu liên kết sang repository Front-end Hub (react-web-momo)."
-    },
-    {
-      "kind": "external_reference",
-      "reference": "Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md",
-      "raw_reference": "Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md",
-      "source": "scripts/scratch_fix_v2.py",
-      "sources": [
-        "scripts/scratch_fix_v2.py"
-      ],
-      "line": 31,
-      "reason": "cross_repository_reference",
-      "message": "Tham chiếu liên kết sang repository Front-end Hub (react-web-momo)."
-    },
-    {
-      "kind": "external_reference",
-      "reference": "Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md",
-      "raw_reference": "Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md",
-      "source": "scripts/scratch_human_report.py",
-      "sources": [
-        "scripts/scratch_human_report.py"
-      ],
-      "line": 324,
-      "reason": "cross_repository_reference",
-      "message": "Tham chiếu liên kết sang repository Front-end Hub (react-web-momo)."
-    },
-    {
-      "kind": "external_reference",
-      "reference": "Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md",
-      "raw_reference": "Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md",
-      "source": "scripts/scratch_strict_audit_report.py",
-      "sources": [
-        "scripts/scratch_strict_audit_report.py"
-      ],
-      "line": 290,
       "reason": "cross_repository_reference",
       "message": "Tham chiếu liên kết sang repository Front-end Hub (react-web-momo)."
     },
@@ -510,7 +546,7 @@
       "message": "Tham chiếu liên kết sang repository Front-end Hub (react-web-momo)."
     },
     {
-      "kind": "code_path_reference",
+      "kind": "external_reference",
       "reference": "data/reports/index.json",
       "raw_reference": "data/reports/index.json",
       "source": "scripts/sync_7d_performance_report.py",
@@ -518,8 +554,8 @@
         "scripts/sync_7d_performance_report.py"
       ],
       "line": 17,
-      "reason": "code_runtime_or_generated_path",
-      "message": "Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output)."
+      "reason": "cross_repository_data_dependency",
+      "message": "Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ."
     },
     {
       "kind": "external_reference",
@@ -529,12 +565,12 @@
       "sources": [
         "scripts/sync_7d_performance_report.py"
       ],
-      "line": 263,
+      "line": 265,
       "reason": "cross_repository_reference",
       "message": "Tham chiếu liên kết sang repository Front-end Hub (react-web-momo)."
     },
     {
-      "kind": "code_path_reference",
+      "kind": "external_reference",
       "reference": "data/seo-news.json",
       "raw_reference": "data/seo-news.json",
       "source": "scripts/sync_all_data.py",
@@ -542,35 +578,35 @@
         "scripts/sync_all_data.py"
       ],
       "line": 10,
-      "reason": "code_runtime_or_generated_path",
-      "message": "Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output)."
+      "reason": "cross_repository_data_dependency",
+      "message": "Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ."
     },
     {
-      "kind": "code_path_reference",
+      "kind": "external_reference",
       "reference": "data/seo-news.json",
       "raw_reference": "data/seo-news.json",
       "source": "scripts/sync_all_data.py",
       "sources": [
         "scripts/sync_all_data.py"
       ],
-      "line": 130,
-      "reason": "code_runtime_or_generated_path",
-      "message": "Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output)."
+      "line": 132,
+      "reason": "cross_repository_data_dependency",
+      "message": "Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ."
     },
     {
-      "kind": "code_path_reference",
+      "kind": "external_reference",
       "reference": "data/ga4/landing-pages.json",
       "raw_reference": "data/ga4/landing-pages.json",
       "source": "scripts/sync_all_data.py",
       "sources": [
         "scripts/sync_all_data.py"
       ],
-      "line": 141,
-      "reason": "code_runtime_or_generated_path",
-      "message": "Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output)."
+      "line": 143,
+      "reason": "cross_repository_data_dependency",
+      "message": "Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ."
     },
     {
-      "kind": "code_path_reference",
+      "kind": "external_reference",
       "reference": "data/analytics/gsc_breakout_pages_7d.json",
       "raw_reference": "data/analytics/gsc_breakout_pages_7d.json",
       "source": "scripts/sync_breakout_to_hubs.py",
@@ -578,11 +614,11 @@
         "scripts/sync_breakout_to_hubs.py"
       ],
       "line": 14,
-      "reason": "code_runtime_or_generated_path",
-      "message": "Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output)."
+      "reason": "cross_repository_data_dependency",
+      "message": "Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ."
     },
     {
-      "kind": "code_path_reference",
+      "kind": "external_reference",
       "reference": "data/reports/weekly-report-2026-10-26-11-01.md",
       "raw_reference": "data/reports/weekly-report-2026-10-26-11-01.md",
       "source": "scripts/sync_breakout_to_hubs.py",
@@ -590,8 +626,8 @@
         "scripts/sync_breakout_to_hubs.py"
       ],
       "line": 17,
-      "reason": "code_runtime_or_generated_path",
-      "message": "Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output)."
+      "reason": "cross_repository_data_dependency",
+      "message": "Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ."
     },
     {
       "kind": "external_reference",
@@ -666,7 +702,7 @@
       "message": "Tham chiếu liên kết sang repository Front-end Hub (react-web-momo)."
     },
     {
-      "kind": "code_path_reference",
+      "kind": "external_reference",
       "reference": "data/ga4/landing-pages.json",
       "raw_reference": "data/ga4/landing-pages.json",
       "source": "scripts/sync_ga4_to_hubs.py",
@@ -674,32 +710,32 @@
         "scripts/sync_ga4_to_hubs.py"
       ],
       "line": 5,
-      "reason": "code_runtime_or_generated_path",
-      "message": "Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output)."
+      "reason": "cross_repository_data_dependency",
+      "message": "Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ."
     },
     {
-      "kind": "code_path_reference",
+      "kind": "external_reference",
       "reference": "lib/dashboard/summary.json",
       "raw_reference": "lib/dashboard/summary.json",
       "source": "scripts/sync_hybrid_report.py",
       "sources": [
         "scripts/sync_hybrid_report.py"
       ],
-      "line": 312,
-      "reason": "code_runtime_or_generated_path",
-      "message": "Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output)."
+      "line": 313,
+      "reason": "cross_repository_data_dependency",
+      "message": "Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ."
     },
     {
-      "kind": "code_path_reference",
+      "kind": "external_reference",
       "reference": "data/seo-clusters/index.json",
       "raw_reference": "data/seo-clusters/index.json",
       "source": "scripts/sync_inventory_to_hubs.py",
       "sources": [
         "scripts/sync_inventory_to_hubs.py"
       ],
-      "line": 1318,
-      "reason": "code_runtime_or_generated_path",
-      "message": "Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output)."
+      "line": 1273,
+      "reason": "cross_repository_data_dependency",
+      "message": "Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ."
     },
     {
       "kind": "external_reference",
@@ -726,7 +762,7 @@
       "message": "Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output)."
     },
     {
-      "kind": "code_path_reference",
+      "kind": "external_reference",
       "reference": "data/seo-news.json",
       "raw_reference": "data/seo-news.json",
       "source": "scripts/sync_seo_news.py",
@@ -734,44 +770,8 @@
         "scripts/sync_seo_news.py"
       ],
       "line": 6,
-      "reason": "code_runtime_or_generated_path",
-      "message": "Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output)."
-    },
-    {
-      "kind": "external_reference",
-      "reference": "react-web-momo/data/analytics/monthly-report-2026-10.json",
-      "raw_reference": "react-web-momo/data/analytics/monthly-report-2026-10.json",
-      "source": "scripts/update_all_october_reports_30d.py",
-      "sources": [
-        "scripts/update_all_october_reports_30d.py"
-      ],
-      "line": 12,
-      "reason": "cross_repository_reference",
-      "message": "Tham chiếu liên kết sang repository Front-end Hub (react-web-momo)."
-    },
-    {
-      "kind": "external_reference",
-      "reference": "react-web-momo/data/reports/monthly-index.json",
-      "raw_reference": "react-web-momo/data/reports/monthly-index.json",
-      "source": "scripts/update_all_october_reports_30d.py",
-      "sources": [
-        "scripts/update_all_october_reports_30d.py"
-      ],
-      "line": 13,
-      "reason": "cross_repository_reference",
-      "message": "Tham chiếu liên kết sang repository Front-end Hub (react-web-momo)."
-    },
-    {
-      "kind": "external_reference",
-      "reference": "react-web-momo/data/reports/report-thang-10-2026-board.md",
-      "raw_reference": "react-web-momo/data/reports/report-thang-10-2026-board.md",
-      "source": "scripts/update_all_october_reports_30d.py",
-      "sources": [
-        "scripts/update_all_october_reports_30d.py"
-      ],
-      "line": 16,
-      "reason": "cross_repository_reference",
-      "message": "Tham chiếu liên kết sang repository Front-end Hub (react-web-momo)."
+      "reason": "cross_repository_data_dependency",
+      "message": "Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ."
     }
   ]
 }

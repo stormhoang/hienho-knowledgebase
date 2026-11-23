@@ -1,12 +1,12 @@
 # BRD: Tra Cứu Điểm Tín Dụng (CIC)
 
-> - **Project:** Điểm Tín Dụng (CIC) Web Growth
-> - **Main URL:** `momo.vn/diem-tin-dung`
-> - **Division:** Financial Services (FS Division)
+> - **Dự án:** Điểm Tín Dụng (CIC) Web Growth
+> - **URL chính:** `momo.vn/diem-tin-dung`
+> - **Khối phụ trách:** Financial Services (FS Division)
 > - **Use Case:** Điểm Tín Dụng (CIC Score & Alert)
 > - **Owner:** Web Platform Team x BU Financial Hub
-> - **Version:** v2.0 - Month 8/2026
-> - **Status:** Aligned & Content Strategy Execution Phase
+> - **Phiên bản:** v2.0 - Month 8/2026
+> - **Trạng thái:** Aligned & Content Strategy Execution Phase
 
 ---
 
@@ -28,7 +28,7 @@
   - **Baseline CTR thực tế (GA4 30 ngày):** **11.74%** (776 clicks / 6,610 sessions).
   - **Target CTR sau khi triển khai 38 bài MoSpark CMS:** **30% - 40%**.
 
-### 1.3 Baseline Performance & Analytics Benchmark (Dữ Liệu Thực Tế 30 Ngày Gần Nhất: 13/07 – 11/08/2026)
+### 1.3 Baseline Performance & Analytics Benchmark (Dữ Liệu Thực Tế 30 Ngày Gần Nhất: 13/07-11/08/2026)
 Trang đích `momo.vn/diem-tin-dung` ghi nhận tín hiệu khả quan trên Google Search Console & Google Analytics 4 (GA4):
 * **Lượt hiển thị tìm kiếm (GSC Impressions):** 97,222
 * **Lượt truy cập tìm kiếm (GSC Clicks):** 5,603 (Thứ hạng trung bình 6.33, CTR 5.76%)
@@ -55,7 +55,7 @@ Trang đích `momo.vn/diem-tin-dung` ghi nhận tín hiệu khả quan trên Goo
 
 ## 3. Web-to-App Flow & Monetization Strategy
 
-**Nguyên tắc:** Web không bán trực tiếp, Web tạo ra nhu cầu (Demand Generation) và Nỗi đau (Pain-point trigger).
+**Nguyên tắc:** Web không bán trực tiếp, Web tạo ra nhu cầu (Demand Generation) và Điểm nghẽn (Pain-point trigger).
 
 <table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
   <thead>
@@ -85,7 +85,7 @@ Trang đích `momo.vn/diem-tin-dung` ghi nhận tín hiệu khả quan trên Goo
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>Step 3</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>W2A Call-to-action</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bấm nút CTA: <i>"Bật cảnh báo nợ xấu & Đăng ký gói theo dõi CIC hàng tháng trên MoMo"</i>.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhấp vào nút CTA: <i>"Bật cảnh báo nợ xấu & Đăng ký gói theo dõi CIC hàng tháng trên MoMo"</i>.</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Appsflyer OneLink / Deep Link Routing Engine</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>Web ➔ App</strong></td>
     </tr>

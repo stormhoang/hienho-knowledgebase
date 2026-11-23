@@ -151,7 +151,7 @@ graph LR
 | **2. Loại Đóng BH** | Chọn radio "Đóng trên toàn bộ lương" hoặc "Đóng với mức khác" | `select` | `web_gross_net_calculator_insurance_type_select` | `{ page_name: "tinh_luong", insurance_type: "full_salary" }` (hoặc `other_salary`) |
 | **3A. Tra Cứu Vùng** | Click vào link/nút "Tra cứu vùng" để mở modal tra cứu | `click` | `web_gross_net_calculator_btn_click` | `{ page_name: "tinh_luong", button_name: "tra_cuu_vung" }` |
 | **3B. Chọn Vùng** | Chọn Vùng I, Vùng II, Vùng III hoặc Vùng IV | `select` | `web_gross_net_calculator_region_select` | `{ page_name: "tinh_luong", region: "vung_1", source: "form_dropdown" }` (hoặc `modal_lookup`) |
-| **4. Click CTA** | Bấm nút CTA "Quản lý tài chính tự động" mở App | `click` | `web_gross_net_calculator_btn_click` | `{ page_name: "tinh_luong", button_name: "quan_ly_tai_chinh_tu_dong", salary_range: "15m_25m", click_url: "https://onelink.momo.vn/...", auth_status: "anonymous" }` |
+| **4. Click CTA** | Nhấp vào nút CTA "Quản lý tài chính tự động" mở App | `click` | `web_gross_net_calculator_btn_click` | `{ page_name: "tinh_luong", button_name: "quan_ly_tai_chinh_tu_dong", salary_range: "15m_25m", click_url: "https://onelink.momo.vn/...", auth_status: "anonymous" }` |
 
 *(Sự kiện mở rộng: Khi modal Tra cứu mức lương tối thiểu vùng hiển thị thành công: `web_gross_net_calculator_popup_display` với `{ page_name: "tinh_luong", popup_name: "muc_luong_toi_thieu_vung" }`).*
 
@@ -184,9 +184,9 @@ graph LR
 | Event Name | Action | Payload Chuẩn (`umami data`) | Khi Nào Bắn Event? |
 | :--- | :--- | :--- | :--- |
 | `web_salary_allocation_calculator_form_view` | `view` | `{ page_name: "phan_bo_luong", form_name: "budget_rule_form" }` | Tải xong giao diện |
-| `web_salary_allocation_calculator_form_submit` | `submit` | `{ page_name: "phan_bo_luong", form_name: "budget_rule_form", form_status: "success" }` | Bấm nút "Phân Bổ Ngay" |
+| `web_salary_allocation_calculator_form_submit` | `submit` | `{ page_name: "phan_bo_luong", form_name: "budget_rule_form", form_status: "success" }` | Nhấp vào nút "Phân Bổ Ngay" |
 | `web_salary_allocation_calculator_result_card_display` | `display` | `{ page_name: "phan_bo_luong", result_status: "success", income_range: "15m_25m" }` | Hiển thị kết quả biểu đồ phân bổ |
-| `web_salary_allocation_calculator_btn_click` | `click` | `{ page_name: "phan_bo_luong", button_name: "create_spending_pot", click_url: "https://onelink.momo.vn/..." }` | Bấm nút tạo hũ trên App MoMo |
+| `web_salary_allocation_calculator_btn_click` | `click` | `{ page_name: "phan_bo_luong", button_name: "create_spending_pot", click_url: "https://onelink.momo.vn/..." }` | Nhấp vào nút tạo hũ trên App MoMo |
 
 ---
 
@@ -223,7 +223,7 @@ graph LR
 | `web_traffic_fine_lookup_form_submit` | `submit` | `{ page_name: "phat_nguoi", form_name: "traffic_fine_form", vehicle_type: "car" }` | Click nút "Tra cứu vi phạm" |
 | `web_traffic_fine_lookup_popup_display` | `display` | `{ page_name: "phat_nguoi", popup_name: "fine_result", popup_value: "clean" }` | Popup hiển thị kết quả xe sạch |
 | `web_traffic_fine_lookup_popup_display` | `display` | `{ page_name: "phat_nguoi", popup_name: "fine_result", popup_value: "violation", violation_count: 2 }` | Popup hiển thị có lỗi vi phạm |
-| `web_traffic_fine_lookup_btn_click` | `click` | `{ page_name: "phat_nguoi", button_name: "pay_fine_in_app", click_url: "https://onelink.momo.vn/..." }` | Bấm nút nộp phạt qua App MoMo |
+| `web_traffic_fine_lookup_btn_click` | `click` | `{ page_name: "phat_nguoi", button_name: "pay_fine_in_app", click_url: "https://onelink.momo.vn/..." }` | Nhấp vào nút nộp phạt qua App MoMo |
 
 ---
 
@@ -253,7 +253,7 @@ graph LR
 | :--- | :--- | :--- | :--- |
 | `web_fuel_price_lookup_result_card_view` | `view` | `{ page_name: "gia_xang", provider: "petrolimex" }` | Hiển thị bảng giá xăng thành công |
 | `web_fuel_price_lookup_tab_select` | `select` | `{ page_name: "gia_xang", fuel_zone: "zone_1" }` | Click chuyển đổi Vùng 1 / Vùng 2 |
-| `web_fuel_price_lookup_btn_click` | `click` | `{ page_name: "gia_xang", button_name: "find_gas_station_momo", click_url: "https://onelink.momo.vn/..." }` | Bấm nút tìm trạm xăng đổ qua MoMo |
+| `web_fuel_price_lookup_btn_click` | `click` | `{ page_name: "gia_xang", button_name: "find_gas_station_momo", click_url: "https://onelink.momo.vn/..." }` | Nhấp vào nút tìm trạm xăng đổ qua MoMo |
 
 ---
 
@@ -284,9 +284,9 @@ graph LR
 | Event Name | Action | Payload Chuẩn (`umami data`) | Khi Nào Bắn Event? |
 | :--- | :--- | :--- | :--- |
 | `web_bhyt_lookup_form_view` | `view` | `{ page_name: "bhyt", form_name: "bhyt_lookup_form" }` | Tải xong giao diện |
-| `web_bhyt_lookup_form_submit` | `submit` | `{ page_name: "bhyt", form_name: "bhyt_lookup_form", form_status: "success" }` | Bấm nút "Tra cứu thẻ" |
+| `web_bhyt_lookup_form_submit` | `submit` | `{ page_name: "bhyt", form_name: "bhyt_lookup_form", form_status: "success" }` | Nhấp vào nút "Tra cứu thẻ" |
 | `web_bhyt_lookup_popup_display` | `display` | `{ page_name: "bhyt", popup_name: "bhyt_result", popup_value: "expiring_soon" }` | Hiển thị kết quả sắp hết hạn |
-| `web_bhyt_lookup_btn_click` | `click` | `{ page_name: "bhyt", button_name: "renew_bhyt_now", click_url: "https://onelink.momo.vn/..." }` | Bấm nút Gia hạn thẻ qua MoMo |
+| `web_bhyt_lookup_btn_click` | `click` | `{ page_name: "bhyt", button_name: "renew_bhyt_now", click_url: "https://onelink.momo.vn/..." }` | Nhấp vào nút Gia hạn thẻ qua MoMo |
 
 ---
 
@@ -310,18 +310,18 @@ graph LR
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | Discovery | Truy cập widget quy đổi tỷ giá ngoại tệ | Render exchange rate converter | Web |
 | 2 | Currency Selection | Chọn nhanh pill ngoại tệ (USD, EUR, JPY...) hoặc dropdown | Client state update & recalculate | Web |
-| 3 | Direction Swap | Bấm nút đảo chiều `⇅` để chuyển hướng (Ngoại tệ $\leftrightarrow$ VND) | Swap source and target currencies | Web |
+| 3 | Direction Swap | Nhấp vào nút đảo chiều `⇅` để chuyển hướng (Ngoại tệ $\leftrightarrow$ VND) | Swap source and target currencies | Web |
 | 4 | Rate Inspection | Xem kết quả quy đổi và giá mua/bán từ ngân hàng | Compute client-side via cached rates | Web |
-| 5 | Conversion (Endpoint)| Bấm nút CTA "Trải nghiệm Nhận tiền quốc tế" | **Đóng gói toàn bộ User Flow vào CTA payload** | Web sang App |
+| 5 | Conversion (Endpoint)| Nhấp vào nút CTA "Trải nghiệm Nhận tiền quốc tế" | **Đóng gói toàn bộ User Flow vào CTA payload** | Web sang App |
 
 #### 3. Cách Track & Event Name Chi Tiết
 
 | Mục Tiêu Đo Lường | Thao Tác Của Người Dùng | Action | Event Name Chuẩn | Payload Bắt Buộc Gửi Về Umami (`data`) |
 | :--- | :--- | :--- | :--- | :--- |
 | **1. Chọn pill ngoại tệ nhanh** | Bấm chọn pill ngoại tệ trên cùng (USD, EUR, JPY, GBP...) | `select` | `web_exchange_rate_lookup_currency_select` | `{ page_name: "ty_gia", foreign_currency: "USD", currency_pair: "USD_VND", direction: "to_vnd" }` |
-| **2. Bấm nút đảo chiều (Swap)** | Bấm nút mũi tên 2 chiều `⇅` để đổi ngược vị trí tiền tệ | `click` | `web_exchange_rate_lookup_swap_btn_click` | `{ page_name: "ty_gia", currency_pair: "VND_USD", direction: "from_vnd", foreign_currency: "USD" }` |
+| **2. Nhấp vào nút đảo chiều (Swap)** | Nhấp vào nút mũi tên 2 chiều `⇅` để đổi ngược vị trí tiền tệ | `click` | `web_exchange_rate_lookup_swap_btn_click` | `{ page_name: "ty_gia", currency_pair: "VND_USD", direction: "from_vnd", foreign_currency: "USD" }` |
 | **3. Cặp tiền chuyển đổi (Dropdown)**| Đổi đồng tiền nguồn hoặc đích qua menu dropdown | `select` | `web_exchange_rate_lookup_currency_select` | `{ page_name: "ty_gia", source_currency: "USD", target_currency: "VND", currency_pair: "USD_VND", direction: "to_vnd", foreign_currency: "USD" }` |
-| **4. CLICK CTA (ENDPOINT)** | Bấm nút màu hồng **"Trải nghiệm Nhận tiền quốc tế"** | `click` | `web_exchange_rate_lookup_btn_click` | `{ page_name: "ty_gia", button_name: "trai_nghiem_nhan_tien_quoc_te", currency_pair: "USD_VND", direction: "to_vnd", foreign_currency: "USD", source_currency: "USD", target_currency: "VND", amount: 100, provider: "vietcombank", click_url: "https://onelink.momo.vn/...", auth_status: "anonymous" }` |
+| **4. CLICK CTA (ENDPOINT)** | Nhấp vào nút màu hồng **"Trải nghiệm Nhận tiền quốc tế"** | `click` | `web_exchange_rate_lookup_btn_click` | `{ page_name: "ty_gia", button_name: "trai_nghiem_nhan_tien_quoc_te", currency_pair: "USD_VND", direction: "to_vnd", foreign_currency: "USD", source_currency: "USD", target_currency: "VND", amount: 100, provider: "vietcombank", click_url: "https://onelink.momo.vn/...", auth_status: "anonymous" }` |
 
 > **Quy Chuẩn Bóc Tách 2 Bài Toán Nghiệp Vụ Trên Umami:**
 > 1. **Cặp tiền chuyển đổi nhiều nhất:** Lọc thuộc tính `currency_pair` (ví dụ: `USD_VND`, `EUR_VND`, `JPY_VND`, `VND_USD`) để xếp hạng ngay Top cặp tiền tệ được quan tâm nhất.
@@ -380,20 +380,20 @@ graph LR
 | Bước | Tên Giai Đoạn | Trải Nghiệm Người Dùng (UX) | Hạ Tầng / Cơ Chế Kỹ Thuật | Nền Tảng |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | Discovery | Truy cập widget Quiz "Ước tính khoảng điểm CIC của bạn" | Render quiz onboarding screen | Web |
-| 2 | Quiz Start | Bấm nút màu hồng "Bắt đầu ->" để vào bộ câu hỏi | Update quiz state sang question 1 | Web |
+| 2 | Quiz Start | Nhấp vào nút màu hồng "Bắt đầu ->" để vào bộ câu hỏi | Update quiz state sang question 1 | Web |
 | 3 | Question Flow | Trả lời từ 1 đến 4 câu hỏi về lịch sử vay, trễ hạn, nợ xấu | Client state flow (không bắn event lắt nhắt) | Web |
-| 4 | Result Display | Hiển thị màn hình kết quả ước tính (ví dụ: 545–587 điểm) | Render result card & score band | Web |
-| 5 | Conversion (Endpoint)| Bấm nút CTA "Xem điểm CIC thực tế ->" mở App | **Đóng gói toàn bộ kết quả Quiz vào CTA payload** | Web sang App |
+| 4 | Result Display | Hiển thị màn hình kết quả ước tính (ví dụ: 545-587 điểm) | Render result card & score band | Web |
+| 5 | Conversion (Endpoint)| Nhấp vào nút CTA "Xem điểm CIC thực tế ->" mở App | **Đóng gói toàn bộ kết quả Quiz vào CTA payload** | Web sang App |
 
 #### 3. Cách Track & Event Name Chi Tiết (Bắt Đầu & CTA)
 
 | Điểm Chạm Đo Lường | Thao Tác Của Người Dùng | Action | Event Name Chuẩn | Payload Bắt Buộc Gửi Về Umami (`data`) |
 | :--- | :--- | :--- | :--- | :--- |
 | **1. VIEW MÀN HÌNH** | Giao diện mở đầu Quiz CIC hiển thị trên màn hình | `view` | `web_cic_lookup_form_view` | `{ page_name: "cic", form_name: "cic_quiz_widget" }` |
-| **2. CLICK BẮT ĐẦU** | Bấm nút màu hồng **"Bắt đầu ->"** để bắt đầu làm Quiz | `click` | `web_cic_lookup_btn_click` | `{ page_name: "cic", button_name: "bat_dau" }` |
-| **3. HIỂN THỊ KẾT QUẢ** | Màn hình hiển thị khoảng điểm (ví dụ: 545–587) | `display` | `web_cic_lookup_result_card_display` | `{ page_name: "cic", cic_score_range: "545_587" }` |
-| **4. CLICK THỬ LẠI** | Bấm nút "Thử lại" để làm lại Quiz | `click` | `web_cic_lookup_btn_click` | `{ page_name: "cic", button_name: "thu_lai" }` |
-| **5. CLICK CTA (ENDPOINT)** | Bấm nút màu hồng **"Xem điểm CIC thực tế ->"** | `click` | `web_cic_lookup_btn_click` | `{ page_name: "cic", button_name: "xem_diem_cic_thuc_te", cic_score_range: "545_587", click_url: "https://onelink.momo.vn/...", auth_status: "anonymous" }` |
+| **2. CLICK BẮT ĐẦU** | Nhấp vào nút màu hồng **"Bắt đầu ->"** để bắt đầu làm Quiz | `click` | `web_cic_lookup_btn_click` | `{ page_name: "cic", button_name: "bat_dau" }` |
+| **3. HIỂN THỊ KẾT QUẢ** | Màn hình hiển thị khoảng điểm (ví dụ: 545-587) | `display` | `web_cic_lookup_result_card_display` | `{ page_name: "cic", cic_score_range: "545_587" }` |
+| **4. CLICK THỬ LẠI** | Nhấp vào nút "Thử lại" để làm lại Quiz | `click` | `web_cic_lookup_btn_click` | `{ page_name: "cic", button_name: "thu_lai" }` |
+| **5. CLICK CTA (ENDPOINT)** | Nhấp vào nút màu hồng **"Xem điểm CIC thực tế ->"** | `click` | `web_cic_lookup_btn_click` | `{ page_name: "cic", button_name: "xem_diem_cic_thuc_te", cic_score_range: "545_587", click_url: "https://onelink.momo.vn/...", auth_status: "anonymous" }` |
 
 > **Nguyên Tắc Đo Lường Funnel Cho Quiz CIC:**
 > * **Tỷ Lệ Bắt Đầu Quiz:** $\frac{\text{web\_cic\_lookup\_btn\_click (button\_name: "bat\_dau")}}{\text{web\_cic\_lookup\_form\_view}}$
@@ -458,7 +458,7 @@ graph LR
 | 2 | Term & Amount | Chọn số tiền gửi (pills) và kỳ hạn (1, 3, 6, 12, 24 tháng) | Client state update | Web |
 | 3 | Bank Selection | Mở dropdown và chọn ngân hàng (Bac A Bank, ACB...) | Client state update & compute | Web |
 | 4 | Comparison | Xem lãi thực nhận và mở rộng "Top 5 ngân hàng lãi suất tốt nhất" | Render comparison table | Web |
-| 5 | Conversion (Endpoint)| Bấm nút CTA "Khám phá Trung Tâm Tài Chính" mở App | **Đóng gói toàn bộ User Flow vào CTA payload** | Web sang App |
+| 5 | Conversion (Endpoint)| Nhấp vào nút CTA "Khám phá Trung Tâm Tài Chính" mở App | **Đóng gói toàn bộ User Flow vào CTA payload** | Web sang App |
 
 #### 3. Cách Track & Event Name Chi Tiết
 
@@ -468,10 +468,10 @@ graph LR
 | **2. Kỳ Hạn Lựa Chọn** | Bấm chọn pill kỳ hạn (1, 3, 6, 12, 24 tháng) | `select` | `web_saving_interest_calculator_term_select` | `{ page_name: "tinh_lai_tiet_kiem", term: 12, provider: "bac_a_bank", term_and_bank: "12m_bac_a_bank" }` |
 | **3. Chọn Số Tiền** | Bấm chọn pill số tiền (50tr, 100tr, 200tr, 500tr, 1 tỷ) | `select` | `web_saving_interest_calculator_amount_select` | `{ page_name: "tinh_lai_tiet_kiem", amount: 100000000 }` |
 | **4. Xem Top 5 Ngân Hàng** | Bấm mở rộng / thu gọn "So sánh top 5 ngân hàng..." | `click` | `web_saving_interest_calculator_btn_click` | `{ page_name: "tinh_lai_tiet_kiem", button_name: "so_sanh_top_5_ngan_hang", toggle_state: "expand" }` |
-| **5. CLICK CTA (ENDPOINT)** | Bấm nút màu hồng **"Khám phá Trung Tâm Tài Chính"** | `click` | `web_saving_interest_calculator_btn_click` | `{ page_name: "tinh_lai_tiet_kiem", button_name: "kham_pha_trung_tam_tai_chinh", provider: "bac_a_bank", term: 12, term_and_bank: "12m_bac_a_bank", amount: 100000000, interest_rate: 5.60, click_url: "https://onelink.momo.vn/...", auth_status: "anonymous" }` |
+| **5. CLICK CTA (ENDPOINT)** | Nhấp vào nút màu hồng **"Khám phá Trung Tâm Tài Chính"** | `click` | `web_saving_interest_calculator_btn_click` | `{ page_name: "tinh_lai_tiet_kiem", button_name: "kham_pha_trung_tam_tai_chinh", provider: "bac_a_bank", term: 12, term_and_bank: "12m_bac_a_bank", amount: 100000000, interest_rate: 5.60, click_url: "https://onelink.momo.vn/...", auth_status: "anonymous" }` |
 
 > **Nguyên Tắc Đóng Gói User Flow Tại Endpoint (Chốt Chặn CTA):**
-> Khi người dùng bấm nút CTA (Endpoint), hệ thống gom toàn bộ trạng thái cuối cùng của User Flow (`provider`, `term`, `term_and_bank`, `amount`, `interest_rate`) vào một payload duy nhất. Nhờ đó, Product Lead có thể query trực tiếp trên Umami để biết chính xác người dùng quyết định chọn cặp (Kỳ Hạn + Ngân Hàng) nào trước khi mở App.
+> Khi người dùng nhấp vào nút CTA (Endpoint), hệ thống gom toàn bộ trạng thái cuối cùng của User Flow (`provider`, `term`, `term_and_bank`, `amount`, `interest_rate`) vào một payload duy nhất. Nhờ đó, Product Lead có thể query trực tiếp trên Umami để biết chính xác người dùng quyết định chọn cặp (Kỳ Hạn + Ngân Hàng) nào trước khi mở App.
 
 ---
 
@@ -528,7 +528,7 @@ graph LR
 | 1 | Discovery | Truy cập widget ước tính tiền gửi tiết kiệm online | Render saving estimate component | Web |
 | 2 | Method Selection | Chọn tab hình thức gửi ("Gửi 1 lần" hoặc "Gửi đều hàng tháng") | Switch method local state | Web |
 | 3 | Term Selection | Bấm chọn kỳ hạn gửi (1, 3, 6, 9, 12, 24 tháng kèm lãi suất tương ứng) | Compute client-side & update AI advice | Web |
-| 4 | Conversion (Endpoint)| Bấm nút CTA "Gửi tiết kiệm Online" mở App MoMo | **Đóng gói toàn bộ User Flow vào CTA payload** | Web sang App |
+| 4 | Conversion (Endpoint)| Nhấp vào nút CTA "Gửi tiết kiệm Online" mở App MoMo | **Đóng gói toàn bộ User Flow vào CTA payload** | Web sang App |
 
 #### 3. Cách Track & Event Name Chi Tiết (View & Click)
 
@@ -538,7 +538,7 @@ graph LR
 | **CLICK** | Chọn hình thức gửi ("Gửi 1 lần" / "Gửi đều hàng tháng") | `select` | `web_saving_estimate_calculator_tab_select` | `{ page_name: "tiet_kiem_online", deposit_method: "one_time" }`<br>*(hoặc `"recurring_monthly"`)* |
 | **CLICK** | Bấm chọn pill kỳ hạn (1, 3, 6, 9, 12, 24 tháng) | `select` | `web_saving_estimate_calculator_term_select` | `{ page_name: "tiet_kiem_online", term: 12, interest_rate: 8.0, deposit_method: "one_time" }` |
 | **CLICK** | Bấm mở rộng "Xem bảng so sánh lãi suất giữa các kỳ hạn" | `click` | `web_saving_estimate_calculator_btn_click` | `{ page_name: "tiet_kiem_online", button_name: "so_sanh_lai_suat_ky_han", toggle_state: "expand" }` |
-| **CLICK (ENDPOINT)**| Bấm nút màu hồng **"Gửi tiết kiệm Online"** | `click` | `web_saving_estimate_calculator_btn_click` | `{ page_name: "tiet_kiem_online", button_name: "gui_tiet_kiem_online", deposit_method: "one_time", term: 12, interest_rate: 8.0, amount: 100000, expected_interest: 8000, total_receive: 108000, click_url: "https://onelink.momo.vn/...", auth_status: "anonymous" }` |
+| **CLICK (ENDPOINT)**| Nhấp vào nút màu hồng **"Gửi tiết kiệm Online"** | `click` | `web_saving_estimate_calculator_btn_click` | `{ page_name: "tiet_kiem_online", button_name: "gui_tiet_kiem_online", deposit_method: "one_time", term: 12, interest_rate: 8.0, amount: 100000, expected_interest: 8000, total_receive: 108000, click_url: "https://onelink.momo.vn/...", auth_status: "anonymous" }` |
 
 ---
 

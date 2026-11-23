@@ -15,7 +15,7 @@ Kho lưu trữ này không phải là một thư viện tài liệu tĩnh hay m�
 
 ### 1.2. Ranh giới vận hành (What This Repo Is NOT):
 - **KHÔNG PHẢI Data Platform cấp tập đoàn:** Không sao chép các hạ tầng data warehouse khổng lồ (BigQuery/Databricks) mà tập trung vào **Local Analytical Data Mart** gọn nhẹ, tốc độ cao.
-- **KHÔNG PHẢI Media Trading Desk:** Không tự ý tối ưu hóa chi tiêu quảng cáo Paid Ads bằng các mô hình phức tạp; số liệu Paid chỉ dùng để đo lường tỷ trọng phân rã (Non-Paid vs Paid).
+- **KHÔNG PHẢI Media Trading Desk:** Không tự ý tối ưu hóa chi tiêu quảng cáo Paid Ads bằng các mô hình phức tạp; số liệu Paid chỉ dùng để đo lường tỷ trọng cơ cấu (Non-Paid vs Paid).
 - **KHÔNG PHẢI Bloomberg Terminal:** Không kéo các API tài chính vĩ mô ngoài phạm vi phục vụ trực tiếp cho tiện ích Web Hubs.
 
 ---
@@ -37,7 +37,8 @@ Hienho_MoMo-Base/
 ├── 07_REPORTS/               # Trung tâm Dữ liệu Hiệu suất, báo cáo định kỳ và SQLite Data Mart
 │   ├── data/                 # Raw data caches, snapshots MTD, mapping URLs
 │   │   └── cache/performance.sqlite  # [DATA MART SSOT] Cơ sở dữ liệu phân tích tập trung
-│   └── WEB_PERFORMANCE_TRACKING_MASTER.md # Báo cáo hiệu suất lũy kế tháng
+│   ├── docs/                 # Báo cáo; PERFORMANCE_SNAPSHOT_LATEST.md là [SSOT KỲ HIỆN TẠI] số liệu MTD mới nhất
+│   └── WEB_PERFORMANCE_TRACKING_MASTER.md # Số liệu lịch sử các tháng đã đóng
 ├── 08_DECISION_LOG/          # Sổ cái ghi nhận các quyết định rẽ nhánh chiến lược và kiến trúc
 ├── scripts/                  # Toàn bộ mã nguồn Python & Node.js vận hành hệ thống
 │   ├── lib/                  # Thư viện dùng chung (db.py, vi_nlp.py, forecast_engine.py...)
@@ -67,7 +68,7 @@ Toàn bộ dữ liệu hiệu suất của Kênh Web được gom tụ tại cơ
 - **`dim_url_project` (28,270 bản ghi):** Ánh xạ 1:1 mọi URL sang Project và Hub theo danh mục chuẩn `hub-map.json`.
 - **`dim_theme_seasonality` (236 bản ghi):** Chuỗi trọng số mùa vụ 12 tháng (5-year normalized average) của từng Theme.
 - **`fact_daily_performance`:** Lũy kế hiệu suất MTD theo ngày (PV, Sessions, Users, Organic, Paid, Direct, Forecast, Target).
-- **`ga4_landing_pages` (5,059 bản ghi):** Hiệu suất trang đích GA4, phân rã theo kênh và số lượt click OneLink (track1 + track2).
+- **`ga4_landing_pages` (5,059 bản ghi):** Hiệu suất trang đích GA4, bóc tách theo kênh và số lượt click OneLink (track1 + track2).
 - **`gsc_search_analytics` (209,981 bản ghi):** Dữ liệu tìm kiếm tự nhiên: URL, Query, Clicks, Impressions, CTR, Position.
 - **`gsc_keyword_ranking` (257,266 bản ghi):** Thứ hạng và điểm cơ hội từ khóa toàn bộ hệ sinh thái.
 - **`decision_audit_trail`:** Sổ cái theo dõi quyết định chiến lược và đối soát kết quả sau 14 - 30 ngày.
@@ -85,10 +86,10 @@ Mọi thao tác phân tích, chẩn đoán và dự báo đều được tự đ
 
 | Script | Mục đích nghiệp vụ | Lệnh thực thi mẫu |
 | :--- | :--- | :--- |
-| **`scripts/diagnose_performance.py`** | Chẩn đoán nguyên nhân gốc rễ (RCA) 4 bước: Hiện tượng -> Phân rã -> Nguyên nhân -> Đơn thuốc hành động kèm quét dị biệt. | `./.venv/bin/python scripts/diagnose_performance.py` |
+| **`scripts/diagnose_performance.py`** | Chẩn đoán nguyên nhân gốc rễ (RCA) 4 bước: Hiện tượng -> Bóc tách chi tiết -> Nguyên nhân -> Kế hoạch xử lý kèm quét dị biệt. | `./.venv/bin/python scripts/diagnose_performance.py` |
 | **`scripts/detect_anomalies.py`** | Quét 4 véc-tơ dị biệt: Nhịp độ MTD, UX Hub, đứt gãy OneLink W2A, rớt thứ hạng GSC. | `./.venv/bin/python scripts/detect_anomalies.py --severity CRITICAL` |
 | **`scripts/query_analytics.py`** | Truy vấn dữ liệu đa chiều tức thì (<0.2s): Hubs, Top W2A Drivers, Quick Wins, Cannibalization hoặc SQL tự do. | `./.venv/bin/python scripts/query_analytics.py --hubs`<br>`./.venv/bin/python scripts/query_analytics.py --w2a` |
-| **`scripts/prioritize_initiatives.py`** | Tự động chấm điểm RICE và phân loại ưu tiên P0/P1/P2 dựa trên dữ liệu Search Console thực tế. | `./.venv/bin/python scripts/prioritize_initiatives.py --limit 15` |
+| **`scripts/prioritize_initiatives.py`** | Tự động chấm điểm RICE và xếp hạng sáng kiến theo điểm số dựa trên dữ liệu Search Console thực tế. | `./.venv/bin/python scripts/prioritize_initiatives.py --limit 15` |
 | **`scripts/lib/scenario_simulator.py`** | Mô phỏng kịch bản What-If: Dịch chuyển Hub, Cắt giảm Paid Ads, Tối ưu CTR Title/Meta, Nâng CVR phễu UX. | `./.venv/bin/python scripts/lib/scenario_simulator.py --scenario all` |
 | **`scripts/lib/ab_test_evaluator.py`** | Kiểm định ý nghĩa thống kê A/B test (Z-test, P-value, 95% CI) và tính toán cỡ mẫu tối thiểu cần thiết (MDE). | `./.venv/bin/python scripts/lib/ab_test_evaluator.py --na 50000 --xa 500 --nb 50000 --xb 650` |
 | **`scripts/lib/forecast_engine.py`** | Dự báo kết tháng đa kịch bản (Linear, Seasonality Weighted, Conservative) dựa trên trọng số mùa vụ 5 năm. | `./.venv/bin/python scripts/lib/forecast_engine.py --forecast` |
@@ -107,7 +108,7 @@ Bất kỳ AI Agent nào khi đọc hiểu và làm việc trong repo này **B�
 
 ### 5.1. Chế độ vận hành: Problem -> Optimal Answer (Không tự động chạy lan man)
 - Không tự ý triển khai, không chạy tác vụ dài hơi khi chưa được yêu cầu rõ.
-- Luôn suy nghĩ với Chain of Thought: Phân tích bản chất -> Dẫn chứng số liệu -> Kết luận và Đơn thuốc hành động cụ thể.
+- Luôn suy nghĩ với Chain of Thought: Phân tích bản chất -> Dẫn chứng số liệu -> Kết luận và Kế hoạch xử lý cụ thể.
 
 ### 5.2. Chuẩn mực Ngôn ngữ & Văn phong (Writing Style Constraints):
 - **Phong cách:** Thực tế, cô đọng, sắc bén, chuẩn mực Product Lead / Tech Lead. Đi thẳng vào bản chất và gạch đầu dòng.
@@ -118,7 +119,7 @@ Bất kỳ AI Agent nào khi đọc hiểu và làm việc trong repo này **B�
 
 ### 5.3. Quy tắc phân loại nguồn lưu lượng (Traffic Dichotomy SSOT):
 - Luôn chia tách rõ rệt 2 nhóm lớn:
-  1. **Non-Paid Traffic (Tự nhiên - Bền vững):** Gồm `Organic Search`, `Direct`, `Referral`, `Others`. Đây là động cơ tăng trưởng cốt lõi của Web Platform.
+  1. **Non-Paid Traffic (Tự nhiên - Bền vững):** Gồm đúng 4 kênh: `Organic`, `Direct`, `Referral`, `AI Traffic (GEO)`. Referral bao gồm toàn bộ phần còn lại, không tách dòng `Others`. Đây là nguồn tăng trưởng cốt lõi của Web Platform.
   2. **Paid Traffic (Quảng cáo):** Gồm `Paid Search`, `Google Ads`, `Campaign Ads`.
 - Không liệt kê Paid nằm xen kẽ ngang hàng giữa các kênh tự nhiên trong bảng số liệu.
 

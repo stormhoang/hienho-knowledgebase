@@ -5,7 +5,7 @@
 
 ## 1. TỔNG QUAN VỀ HỆ THỐNG (SYSTEM OVERVIEW)
 
-Hệ thống báo cáo định kỳ Web Platform là một **nền tảng tự động hóa phân tích dữ liệu và ra quyết định tăng trưởng (Automated Analytics & Growth Decision Engine)**. Hệ thống hợp nhất toàn bộ dữ liệu từ các nguồn Realtime (GA4 API, Clarity), Data Warehouse (BigQuery), Technical SEO (Google Search Console), Paid Media và Dữ liệu hành vi thị trường (Google Trends) về một nguồn sự thật duy nhất (**Single Source of Truth - SSOT**), phục vụ các cấp quản trị từ Ban Giám Đốc đến Đội ngũ Kỹ sư và Tăng trưởng.
+Hệ thống báo cáo định kỳ Web Platform là một **nền tảng tự động hóa phân tích dữ liệu và ra quyết định tăng trưởng (Automated Analytics & Growth Decision Engine)**. Hệ thống hợp nhất toàn bộ dữ liệu từ các nguồn Realtime (GA4 API, Clarity), Data Warehouse (BigQuery), Technical SEO (Google Search Console), Paid Media và Dữ liệu hành vi thị trường (Google Trends) về một nguồn dữ liệu chuẩn mực hợp nhất, phục vụ các cấp quản trị từ Ban Giám Đốc đến Đội ngũ Kỹ sư và Tăng trưởng.
 
 ```mermaid
 flowchart TD
@@ -34,10 +34,10 @@ flowchart TD
         DevTools_MCP["Chrome DevTools MCP (CWV, LCP, Network)"]
     end
 
-    subgraph Storage_SSOT ["4. Lớp Lưu Trữ & Đồng Bộ SSOT"]
-        GSheets["Google Sheets Cloud SSOT (1JaaYv2MnDy-...)"]
-        LocalSnapshots["JSON Snapshots & Excel SSOT"]
-        MarkdownSSOT["WEB_PERFORMANCE_TRACKING_MASTER.md"]
+    subgraph Storage_Layer ["4. Lớp Lưu Trữ & Đồng Bộ Tập Trung"]
+        GSheets["Google Sheets Cloud (1JaaYv2MnDy-...)"]
+        LocalSnapshots["JSON Snapshots & Excel Đối Soát"]
+        MarkdownMaster["WEB_PERFORMANCE_TRACKING_MASTER.md"]
         DashboardRepo["react-web-momo & MoSpark Growth Dashboard"]
     end
 
@@ -53,8 +53,8 @@ flowchart TD
     MoSpark_Data --> QwenGateway
     Core_Engine <--> Agent_MCP
     QwenGateway --> DashboardRepo
-    Core_Engine --> Storage_SSOT
-    Storage_SSOT --> Stakeholders
+    Core_Engine --> Storage_Layer
+    Storage_Layer --> Stakeholders
 ```
 
 ---
@@ -68,7 +68,7 @@ flowchart TD
 ### 2.2. Lớp Thu thập & Tích hợp Dữ liệu (Data Ingestion Layer)
 1. **Google Analytics 4 Data API (v1beta):**
    - Kết nối trực tiếp vào Property `270743103` (MoMo Web Platform).
-   - Truy vấn thời gian thực các chỉ số: Total Pageviews, Sessions, Active Users (MEU), Phân rã Kênh (Non-Paid vs Paid), Chuyển đổi Web-to-App (W2A Onelink Clicks), và đóng góp theo từng Hub chiến lược.
+   - Truy vấn thời gian thực các chỉ số: Total Pageviews, Sessions, Active Users (MEU), Bóc tách Kênh (Non-Paid vs Paid), Chuyển đổi Web-to-App (W2A Onelink Clicks), và đóng góp theo từng Hub chiến lược.
 2. **BigQuery Export & Excel Parser:**
    - Tự động phát hiện và đọc tệp trích xuất dữ liệu lớn `*Web Performance Tracking*.xlsx` tại thư mục Downloads của người dùng.
    - Thư viện `openpyxl`, `pandas` xử lý nhanh hàng trăm nghìn dòng dữ liệu và trích xuất số liệu MTD lũy kế.
@@ -87,8 +87,8 @@ flowchart TD
   - Tự động làm giàu (Enrichment) ma trận giữ chân (Retention Matrix) và Onelink Clicks vào cấu trúc Hubs.
 - **Root Cause Diagnostic Engine (`scripts/diagnose_performance.py`):**
   - Phân tích khoảng cách (Pacing Gap) so với mục tiêu tháng.
-  - Phân rã 2 tầng: Tầng Nguồn (Non-Paid vs Paid) và Tầng Phễu (Sessions vs W2A CVR).
-  - Tự động phát hiện từ khóa Quick Wins (>50.000 impressions trên Search Console nhưng CTR thấp) và đề xuất đơn thuốc hành động chuẩn P0/P1/P2.
+  - Bóc tách 2 tầng: Tầng Nguồn (Non-Paid vs Paid) và Tầng Phễu (Sessions vs W2A CVR).
+  - Tự động phát hiện từ khóa Quick Wins (>50.000 impressions trên Search Console nhưng CTR thấp) và đề xuất kế hoạch xử lý theo thứ tự triển khai.
 - **Multi-Scenario Forecast Engine (`scripts/lib/forecast_engine.py` & `scenario_simulator.py`):**
   - Dự báo Run-rate 31 ngày dựa trên trọng số mùa vụ 5 năm và độ dốc tăng trưởng hiện tại.
   - Xuất 3 kịch bản: Thận trọng (Conservative), Cơ sở (Base), Khả quan (Bullish).
@@ -98,7 +98,7 @@ flowchart TD
   - Chuẩn hóa lỗi gõ Telex, teencode và trích xuất Entity thương hiệu qua Flashtext.
 
 ### 2.4. Lớp Lưu trữ & Đồng bộ Đa Nền tảng (Storage & Distribution Layer)
-- **Google Sheets Cloud-Native SSOT:**
+- **Google Sheets Cloud-Native:**
   - Ghi trực tiếp Cloud-to-Cloud qua Google Sheets API vào Spreadsheet ID **`1JaaYv2MnDy-dfBdC3P-GMB6SFgjez2VowdjX9PjmPYU`**.
   - Tự động duy trì 100% lịch sử sửa đổi (Version History), tự động tính toán lại công thức `SUM`, `INDEX MATCH`.
 - **Local & Cloud Drive Backup:** Lưu bản ghi Excel `.xlsx` tại Google Drive Desktop (`07_REPORTS/web_performance_tracking.xlsx`).
@@ -115,7 +115,7 @@ Hệ thống được thiết kế theo kiến trúc **Agentic AI Native**, kế
 - **Mô hình Nền tảng (Foundation Models):** Vận hành trên các mô hình tiên tiến nhất của Google DeepMind (Gemini 2.5 / 3.8 Flash và Pro) với khả năng suy luận dài (Extended Thinking) và phân tích dữ liệu đa bước.
 - **Cơ chế Vận hành Reactive & Lazy Routing:**
   - Hệ thống không chạy vòng lặp Polling gây tốn tài nguyên. Khi có lệnh hoặc sự kiện mới, cơ chế **Reactive Wakeup** tự động kích hoạt Agent.
-  - Agent sử dụng bảng **Fast Routing Index** tại `AGENTS.md` để xác định đúng 1 file SSOT đích, tuyệt đối không nạp bừa bãi tài liệu lớn vào context window.
+  - Agent sử dụng bảng **Fast Routing Index** tại `AGENTS.md` để xác định đúng 1 file đích, tuyệt đối không nạp bừa bãi tài liệu lớn vào context window.
 - **Custom Skills Chuyên biệt:**
   - `web-platform-reporting`: Đóng gói logic phân tích theo phong cách Product Lead / Tech Lead, chuẩn hóa cấu trúc 4 phần của MBR và 3 khối của WBR.
   - `read-latest-tracking-report`: Tự động nhận diện và nạp tệp Excel mới nhất.
@@ -140,7 +140,7 @@ Sau khi bộ thư viện Company LLM Gateway SDK được đóng gói hoàn thi�
 - **Tiêu thụ Dữ liệu GA4 & GSC Đã Đồng Bộ Về MoSpark:** Nguồn dữ liệu từ Google Analytics 4 (Sessions, Pageviews, Non-Paid vs Paid, Onelink Clicks) và Google Search Console (Impressions, Clicks, Average Position, Crawl Stats) đã được pipeline kỹ thuật đồng bộ về lưu trữ trực tiếp tại MoSpark Datamart.
 - **Tự Động Sinh Bản Tin Tóm Tắt Điều Hành (Automated Executive Summaries):** Model Qwen 3.5 tổng hợp dữ liệu đa nguồn theo các khung báo cáo WBR/MBR, tự động rút trích các điểm sáng (Big Wins), điểm nghẽn (Blockers) và dự báo tiến độ về đích mà không cần biên soạn thủ công.
 - **Phân Tích Nguyên Nhân Gốc Rễ Tự Động (Automated RCA):** Khi phát hiện độ lệch tiến độ (Pacing Gap) hoặc sụt giảm lưu lượng trên một Hub/Theme cụ thể, Qwen 3.5 đối chiếu ma trận Nguồn x Phễu x Từ khóa để giải trình nguyên nhân (ví dụ: do cắt giảm ngân sách Paid Ads, biến động thứ hạng tìm kiếm, hay lỗi kỹ thuật bot crawl).
-- **Đề Xuất Hành Động Chuẩn P0/P1/P2:** Hệ thống tự động phân loại nhiệm vụ cho từng Squad chuyên môn (Web Dev sửa lỗi 404/Onelink, SEO tối ưu Quick Wins, Media điều chỉnh chiến dịch), gắn liền với dự phóng ROI kinh doanh.
+- **Đề Xuất Hành Động Theo Thứ Tự Triển Khai:** Hệ thống tự động phân loại nhiệm vụ cho từng Squad chuyên môn (Web Dev sửa lỗi 404/Onelink, SEO tối ưu Quick Wins, Media điều chỉnh chiến dịch), gắn liền với dự báo ROI kinh doanh.
 - **Bảo Mật Tuyệt Đối & Chi Phí Vận Hành Tối Ưu:** Do chạy trên máy chủ nội bộ MoMo qua Bearer JWT, toàn bộ dữ liệu kinh doanh được giữ kín 100%, không phát sinh phí API bên ngoài khi chạy định kỳ hàng ngày.
 
 ---
@@ -166,7 +166,7 @@ Hệ thống được thiết kế theo mô hình **Đa tầng Độc giả (Mul
 - **Trọng tâm quản trị:** Giám sát độ lệch pacing MTD, phân tích nguyên nhân gốc rễ (RCA), điều phối nguồn lực kỹ thuật, đánh giá tác động What-if và theo dõi Sổ cái Quyết định (Decision Ledger).
 
 ### 4.4. Đội ngũ Kỹ sư (Web Dev, Backend, Data, SEO, Media)
-- **Hình thức tiếp nhận:** Danh mục Action Items tự động phân cấp P0/P1/P2:
+- **Hình thức tiếp nhận:** Danh mục Action Items tự động sắp xếp theo thứ tự triển khai:
   - *Dev/Backend:* Khắc phục URL gãy Onelink, tối ưu P90/LCP, cải thiện 404 crawl waste.
   - *SEO/Content:* Tối ưu từ khóa Quick Wins, mở rộng cụm Topic Cluster.
   - *Media:* Tái cấu trúc ngân sách chiến dịch Paid Ads, loại bỏ các kênh UTM có CVR thấp.
@@ -191,10 +191,10 @@ Hệ thống được thiết kế theo mô hình **Đa tầng Độc giả (Mul
 | :--- | :--- | :--- | :--- |
 | **Thời gian tổng hợp số liệu** | 2 - 4 giờ làm việc thủ công mỗi tuần | **6 - 10 giây (1 lệnh duy nhất)** | **Giảm >98% thời gian** |
 | **Độ chính xác dữ liệu** | Dễ sai sót công thức, lệch số giữa GA4 và Data Warehouse | **100% đối soát chéo tự động (Hybrid Reconciliation)** | **Loại bỏ hoàn toàn sai số thủ công** |
-| **Tính đa kênh & đồng bộ** | Phải copy paste qua từng file Excel, Google Sheets, Slide | **Cập nhật đồng thời Google Sheets Cloud, Git Dashboard, Markdown SSOT** | **Đồng bộ thời gian thực** |
-| **Khả năng chẩn đoán (RCA)** | Họp bàn nhiều ngày để tìm nguyên nhân traffic sụt giảm | **Tự động phân rã Nguồn/Phễu/Từ khóa trong 15 giây** | **Hành động khắc phục ngay trong ngày** |
-| **Định vị nguồn lưu lượng** | Số liệu Paid bị gộp chung, khó đánh giá chất lượng SEO | **Phân tách nghiêm ngặt Non-Paid vs Paid theo SSOT** | **Minh bạch hóa hiệu quả đầu tư** |
-| **Khả năng dự phóng** | Ngoại suy tuyến tính đơn giản | **Dự báo 3 kịch bản kết hợp chu kỳ mùa vụ 5 năm** | **Độ chính xác dự phóng cao** |
+| **Tính đa kênh & đồng bộ** | Phải copy paste qua từng file Excel, Google Sheets, Slide | **Cập nhật đồng thời Google Sheets Cloud, Git Dashboard, Markdown Master** | **Đồng bộ thời gian thực** |
+| **Khả năng chẩn đoán (RCA)** | Họp bàn nhiều ngày để tìm nguyên nhân traffic sụt giảm | **Tự động bóc tách Nguồn/Phễu/Từ khóa trong 15 giây** | **Hành động khắc phục ngay trong ngày** |
+| **Định vị nguồn lưu lượng** | Số liệu Paid bị gộp chung, khó đánh giá chất lượng SEO | **Phân tách nghiêm ngặt Non-Paid vs Paid theo chuẩn mực** | **Minh bạch hóa hiệu quả đầu tư** |
+| **Khả năng dự báo** | Ngoại suy tuyến tính đơn giản | **Dự báo 3 kịch bản kết hợp chu kỳ mùa vụ 5 năm** | **Độ chính xác dự báo cao** |
 
 ---
 
@@ -203,13 +203,13 @@ Hệ thống được thiết kế theo mô hình **Đa tầng Độc giả (Mul
 Các lệnh vận hành nhanh đã được đóng gói thành các trigger tự động trong môi trường:
 
 ```bash
-# 1. Đồng bộ số liệu GA4 MTD thời gian thực và đẩy đa kênh (Google Sheets, Dashboard, SSOT):
+# 1. Đồng bộ số liệu GA4 MTD thời gian thực và đẩy đa kênh (Google Sheets, Dashboard, Markdown):
 ./.venv/bin/python scripts/sync_ga4_master.py
 
 # 2. Đối soát chéo giữa BigQuery Excel và GA4 Realtime API:
 ./.venv/bin/python scripts/sync_hybrid_report.py
 
-# 3. Chẩn đoán nguyên nhân gốc rễ và đề xuất đơn thuốc hành động:
+# 3. Chẩn đoán nguyên nhân gốc rễ và đề xuất kế hoạch xử lý:
 ./.venv/bin/python scripts/diagnose_performance.py
 
 # 4. Quét dị biệt và đứt gãy chuyển đổi Web-to-App (Onelink):

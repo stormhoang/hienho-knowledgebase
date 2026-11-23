@@ -81,7 +81,7 @@ Việc tái cấu trúc và làm sạch hệ thống dự án CMS là điều ki
 
 ---
 
-### 3. Ma Trận Phân Bổ Quy Mô 15 Cụm Dự Án Lớn Nhất
+### 3. Bảng Phân Bổ Quy Mô 15 Cụm Dự Án Lớn Nhất
 
 <table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
   <thead>

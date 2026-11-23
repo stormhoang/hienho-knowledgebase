@@ -1,8 +1,8 @@
 # PRD: Trang Chi Tiết Dòng Xe & Báo Giá Bảo Hiểm Ô Tô (/hang-xe/[brand]/[model])
 
 > - **Dự án:** Vehicle Hub - Web Platform
-> - **Đơn vị phụ trách:** Web Platform Team x InsurTech BU
-> - **Đường dẫn chuẩn (URL Schema):** `momo.vn/tien-ich-giao-thong/hang-xe/[brand]/[model]` (VD: `momo.vn/tien-ich-giao-thong/hang-xe/vinfast/vf3`)
+> - **Khối phụ trách:** Web Platform Team x InsurTech BU
+> - **URL chính:** `momo.vn/tien-ich-giao-thong/hang-xe/[brand]/[model]` (VD: `momo.vn/tien-ich-giao-thong/hang-xe/vinfast/vf3`)
 > - **Trạng thái:** Hạng mục trọng tâm Sprint (Hoàn thành trước 05/10/2026)
 
 ---
@@ -121,7 +121,7 @@ graph TD
 | :--- | :--- | :--- | :--- |
 | **Giai đoạn 1** | **Thứ 2 (28/09)** | Technical Alignment & Spec Finalize | Khóa API Schema với InsurTech Tech Team (`/quote` & `/car-catalog`). Chốt giao diện UI Widget Báo giá Bảo hiểm. |
 | **Giai đoạn 2** | **Thứ 3 - Thứ 4 (29 - 30/09)** | Frontend Development & API Binding | Web Dev lập trình Next.js Dynamic Template `/hang-xe/[brand]/[model]`, nhúng Widget Báo giá Bảo hiểm và Render danh sách Biến thể chi tiết. |
-| **Giai đoạn 3** | **Thứ 5 (01/10)** | Testing & InsurTech Integration QA | Kiểm thử tích hợp luồng gọi API Báo giá Bảo hiểm real-time, test Dynamic QR / Onelink chuyển đổi Web-to-App. |
+| **Giai đoạn 3** | **Thứ 5 (01/10)** | Testing & InsurTech Integration QA | Test tích hợp luồng gọi API Báo giá Bảo hiểm real-time, test Dynamic QR / Onelink chuyển đổi Web-to-App. |
 | **Giai đoạn 4** | **Thứ 6 (02/10)** | Staging Review & SEO Schema Injection | Đưa trang lên môi trường Staging, kiểm tra JSON-LD Schema (`AutoRental`, `Car`, `FAQPage`), kiểm tra tốc độ tải trang Mobile. |
 | **Giai đoạn 5** | **Cuối tuần (03 - 05/10)** | Production Go-Live & Paid Ads Ready | Chính thức Go-live toàn bộ 264 trang Dòng xe. Sẵn sàng tiếp nhận Paid Ads Campaign 550M từ InsurTech BU. |
 

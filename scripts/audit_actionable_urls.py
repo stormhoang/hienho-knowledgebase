@@ -1,3 +1,7 @@
+"""Audit các URL actionable (top URLs cần kiểm tra index/ranking) từ dữ liệu GSC/GA4.
+
+Usage: ./.venv/bin/python scripts/audit_actionable_urls.py"""
+
 import json, urllib.request, urllib.error, concurrent.futures, os, sys
 from collections import defaultdict
 
@@ -53,7 +57,7 @@ for status, items in sorted(by_status.items(), key=lambda x: str(x[0])):
     print(f"Status {status}: {len(items)} URLs")
 
 dead_404 = by_status.get(404, [])
-print(f"\n[P0 - LỖI 404 TRANG CHẾT] Có {len(dead_404)} URLs đang làm bốc hơi traffic:")
+print(f"\n[NHÓM 1 - LỖI 404 TRANG CHẾT] Có {len(dead_404)} URLs đang làm bốc hơi traffic:")
 for r in dead_404:
     it = r["item"]
     imp = it.get("imp_90d", it.get("imp_30d", 0))
@@ -63,7 +67,7 @@ for r in dead_404:
     print(f"  [{proj}] {imp:,} imp | {clk} clk -> {u}")
 
 live_dropped = [r for r in by_status.get(200, []) if not r["redirect"]]
-print(f"\n[P1 - TRANG SỐNG NHƯNG RỚT TOP SERP VỀ 0 IMPRESSION] Có {len(live_dropped)} URLs:")
+print(f"\n[NHÓM 2 - TRANG SỐNG NHƯNG RỚT TOP SERP VỀ 0 IMPRESSION] Có {len(live_dropped)} URLs:")
 live_dropped.sort(key=lambda x: x["item"].get("imp_90d", x["item"].get("imp_30d", 0)), reverse=True)
 for r in live_dropped[:15]:
     it = r["item"]
@@ -74,4 +78,4 @@ for r in live_dropped[:15]:
     print(f"  [{proj}] {imp:,} imp | {clk} clk -> {u}")
 
 redirected = [r for r in by_status.get(200, []) if r["redirect"]]
-print(f"\n[P2 - REDIRECT ĐÃ XỬ LÝ] Có {len(redirected)} URLs đã được 301 chuyển tiếp an toàn.")
+print(f"\n[NHÓM 3 - REDIRECT ĐÃ XỬ LÝ] Có {len(redirected)} URLs đã được 301 chuyển tiếp an toàn.")

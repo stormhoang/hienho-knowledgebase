@@ -24,7 +24,7 @@ Tài liệu này định nghĩa bộ khung tư duy (Mindset) và kỹ năng th�
 
 ### Trụ cột 2: Agentic & Multi-Agent Thinking (Tư duy Phân công Đa Agent)
 * **Bản chất:** Đừng coi AI là một cá nhân làm tất cả mọi việc. Hãy coi AI là một **Tổ chức các Agent chuyên biệt (Multi-Agent System)**.
-* **Thực thi:** Phân rã quy trình làm việc phức tạp thành chuỗi các Agent nhỏ đảm nhận từng khâu (Market Research Agent ➔ UI/UX Designer Agent ➔ Copywriter Agent ➔ Quality Control Agent).
+* **Thực thi:** Bóc tách quy trình làm việc phức tạp thành chuỗi các Agent nhỏ đảm nhận từng khâu (Market Research Agent ➔ UI/UX Designer Agent ➔ Copywriter Agent ➔ Quality Control Agent).
 
 ### Trụ cột 3: Problem Space First, AI Second (Tư duy Bài toán trước, Công nghệ sau)
 * **Bản chất:** AI là đòn bẩy để giải quyết nhu cầu cốt lõi (Jobs-To-Be-Done) của người dùng và tạo ra tác động kinh doanh (Business Impact), không phải là thứ để phô trương công nghệ.

@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 r"""
 FULL-FUNNEL DATA DECOMPOSITION PIPELINE (GSC + GA4) - REFACTORED
-Đồng bộ và phân rã hợp nhất 2 nguồn dữ liệu lớn nhất của Web Platform:
+Đồng bộ và bóc tách hợp nhất 2 nguồn dữ liệu lớn nhất của Web Platform:
 1. GSC (Google Search Console): Pre-Click (Search Query, Impressions, Position, CTR, Cannibalization, Strike Zone)
    - Khung thời gian SSOT: Mặc định là cửa sổ trượt 28 ngày (Rolling 28 days),
      tính từ (hôm nay - 29 ngày) đến (hôm nay - 2 ngày) do độ trễ cập nhật dữ liệu của GSC API (~2 ngày).
      Có thể ghi đè linh hoạt bằng CLI args --start-date và --end-date.
 2. GA4 (Google Analytics 4): Post-Click & Chuyển đổi Web-to-App
    - Khớp nối toàn diện Organic Search Landing Pages và All-Channel Landing Pages.
-   - Phân rã 2 luồng: ol_momo (onelink.momo.vn) & ol_appsflyer (momoapp.onelink.me)
+   - Bóc tách 2 luồng: ol_momo (onelink.momo.vn) & ol_appsflyer (momoapp.onelink.me)
    - w2a_cr = (ol_momo + ol_appsflyer) / organic_pageviews
 
 Quy chuẩn nâng cao:
@@ -660,7 +660,7 @@ def build_theme_matcher():
 def main():
     start_time = time.time()
     print("=" * 70)
-    print("KHỞI CHẠY PIPELINE PHÂN RÃ HỢP NHẤT DỮ LIỆU GA4 & GSC (V2 REFACTORED)")
+    print("KHỞI CHẠY PIPELINE BÓC TÁCH HỢP NHẤT DỮ LIỆU GA4 & GSC (V2 REFACTORED)")
     print(f"Chu kỳ phân tích SSOT: {DATE_START} -> {DATE_END}")
     print("=" * 70)
 
@@ -1103,7 +1103,7 @@ def main():
         })
 
     # 5. Xử lý dữ liệu Đa Kênh GA4 & Gắn vào Projects Summary (Tập trung Pageviews & W2A)
-    print("[4.5/5] Xử lý phân rã Đa Kênh Pageviews (Non-Paid vs Paid)...")
+    print("[4.5/5] Xử lý bóc tách Đa Kênh Pageviews (Non-Paid vs Paid)...")
     channel_w2a_map = {}
     for r in multi_data.get("channels_w2a", []):
         cg = r["dimensionValues"][0]["value"]
@@ -1449,7 +1449,7 @@ def main():
 
     elapsed = time.time() - start_time
     print("=" * 70)
-    print(f"HOÀN THÀNH PHÂN RÃ HỢP NHẤT TRONG {elapsed:.1f} GIÂY")
+    print(f"HOÀN THÀNH BÓC TÁCH HỢP NHẤT TRONG {elapsed:.1f} GIÂY")
     print(f"- Total Pages Analyzed          : {total_analyzed:,}")
     print(f"- Summary Join Rate             : {join_rate * 100:.2f}% (Đạt chuẩn > 90%)")
     print(f"- Summary Organic Mapped Rate   : {organic_mapped_pct * 100:.2f}% (Đạt chuẩn > 70%)")

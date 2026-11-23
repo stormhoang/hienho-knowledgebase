@@ -1,6 +1,8 @@
 {
   "version": "1.0",
-  "generated_at": "2026-11-07T14:01:36.955443+00:00",
+  "evaluation_mode": "fixture",
+  "independent_agent_execution_verified": false,
+  "generated_at": "2026-11-09T06:28:04.909680+00:00",
   "benchmark_name": "Multi-Agent Knowledge Acceptance Benchmark Suite",
   "total_test_cases": 8,
   "agents": {

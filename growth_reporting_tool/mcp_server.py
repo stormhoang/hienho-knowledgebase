@@ -41,7 +41,7 @@ def get_python_exec():
 TOOLS = [
     {
         "name": "get_latest_report",
-        "description": "Lấy báo cáo tổng hợp hiệu suất Web Platform MTD mới nhất gồm Pageviews, Non-Paid vs Paid, phân rã các Hub chiến lược và tiến độ Target.",
+        "description": "Lấy báo cáo tổng hợp hiệu suất Web Platform MTD mới nhất gồm Pageviews, Non-Paid vs Paid, cơ cấu các Hub chiến lược và tiến độ Target.",
         "inputSchema": {
             "type": "object",
             "properties": {
@@ -56,7 +56,7 @@ TOOLS = [
     },
     {
         "name": "diagnose_performance",
-        "description": "Chạy chẩn đoán nguyên nhân gốc rễ (Root Cause Analysis - RCA) hiệu suất Web Platform: đo độ lệch Pacing MTD, phân rã kênh Non-Paid vs Paid, bóc tách phễu Sessions vs W2A CVR, phát hiện từ khóa Quick Wins (>50k impressions, CTR thấp) và đề xuất danh mục hành động P0/P1/P2.",
+        "description": "Chạy chẩn đoán nguyên nhân gốc rễ (Root Cause Analysis - RCA) hiệu suất Web Platform: đo độ lệch Pacing MTD, bóc tách chi tiết kênh Non-Paid vs Paid, phễu Sessions vs W2A CVR, phát hiện từ khóa Quick Wins (>50k impressions, CTR thấp) và đề xuất danh mục hành động xử lý.",
         "inputSchema": {
             "type": "object",
             "properties": {}
@@ -113,11 +113,11 @@ MOCK_RESPONSES = {
 | **Người Dùng Web (MEU)** | **1.210.000** | 1.650.000 | 73.3% | 1.620.000 |
 | **Chuyển Đổi Web-to-App (W2A)** | **88.500** | 120.000 | 73.8% | 118.000 |
 
-### Phân Rã Nguồn Lưu Lượng (Traffic Channels)
+### Cơ Cấu Nguồn Lưu Lượng (Traffic Channels)
 - **Non-Paid Traffic (Chủ lực):** 2.252.500 PV (85.0% tỷ trọng)
   - *Organic Search:* 1.722.500 PV (65.0%)
   - *Direct Traffic:* 397.500 PV (15.0%)
-  - *Referral & Others:* 132.500 PV (5.0%)
+  - *Referral:* 132.500 PV (5.0%)
 - **Paid Traffic (Chiến dịch):** 397.500 PV (15.0% tỷ trọng)
 
 ### Phân Bổ Theo Strategic Hubs
@@ -125,13 +125,13 @@ MOCK_RESPONSES = {
 2. **Financial Hub:** 345.000 PV (13.0%)
 3. **Vehicle Hub:** 215.000 PV (8.1%)
 4. **Student & Education Hub:** 160.000 PV (6.0%)
-5. **Các Phân Hệ Khác:** 1.050.000 PV (39.7%)
+5. **Các Mảng Khác:** 1.050.000 PV (39.7%)
 """,
 
     "diagnose_performance": """# CHẨN ĐOÁN NGUYÊN NHÂN GỐC RỄ (ROOT CAUSE ANALYSIS)
 *Chế độ: Development / Demo Mock Data*
 
-### 1. Phân Rã Khoảng Cách Pacing (Pacing Gap)
+### 1. Bóc Tách Khoảng Cách Pacing (Pacing Gap)
 - **Tiến độ thời gian:** Ngày 22/31 (71.0% chu kỳ tháng)
 - **Tiến độ lưu lượng:** 72.6% Target (Vượt tiến độ chuẩn +1.6% ~ On-track)
 - **Động cơ chính:** Kênh Organic Search duy trì phong độ ổn định; CTR trung bình đạt 4.8%.
@@ -143,10 +143,10 @@ MOCK_RESPONSES = {
 | `tinh lai suat tiet kiem` | 89.000 | 5.1 | 2.1% | +4.600 clicks/tháng |
 | `lich chieu phim cgv hom nay`| 65.000 | 3.8 | 2.8% | +3.100 clicks/tháng |
 
-### 3. Đơn Thuốc Hành Động (Prescriptive Action Items)
-- **[P0] Web Dev:** Cải thiện tốc độ tải trang LCP cho nhóm trang tra cứu xuống dưới 2.5s.
-- **[P1] SEO & Content:** Bổ sung Schema JSON-LD FAQ và Direct Answer cho 3 cụm từ khóa Quick Wins.
-- **[P2] Media Team:** Tối ưu hóa trang đích cho chiến dịch Paid Search để nâng CVR Web-to-App lên 4.5%.
+### 3. Kế Hoạch Xử Lý Trọng Tâm (Action Items)
+1. **Web Dev:** Cải thiện tốc độ tải trang LCP cho nhóm trang tra cứu xuống dưới 2.5s.
+2. **SEO & Content:** Bổ sung Schema JSON-LD FAQ và Direct Answer cho 3 cụm từ khóa Quick Wins.
+3. **Media Team:** Tối ưu hóa trang đích cho chiến dịch Paid Search để nâng CVR Web-to-App lên 4.5%.
 """,
 
     "detect_anomalies": """# QUÉT DỊ BIỆT LƯU LƯỢNG & ĐỨT GÃY CHUYỂN ĐỔI (ANOMALY SCAN)

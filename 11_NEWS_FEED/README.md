@@ -9,8 +9,9 @@ Thư mục này là điểm tiếp nhận dữ liệu chuyên biệt dành cho *
 ```
 11_NEWS_FEED/
 ├── README.md               # Quy chuẩn định dạng & hướng dẫn vận hành
-├── daily/                  # Bản tin tổng hợp theo ngày (YYYY-MM-DD_daily_pulse.md)
-├── topics/                 # Tin tức chuyên sâu bóc tách theo ngành/Hub
+├── YYYY-MM-DD_daily_report.md  # [VỊ TRÍ CHUẨN DUY NHẤT] Bản tin tổng hợp theo ngày; scripts/sync_seo_news.py và AGENTS.md đọc tại đây
+├── daily/                  # Chỉ để mẫu tham khảo (sample_news_template.md); KHÔNG ghi bản sao bản tin ngày vào đây
+├── topics/                 # Chỉ chứa tin chuyên sâu riêng cho 1 Hub, KHÔNG chép lại nguyên bản tin ngày
 │   ├── financial/          # Tài chính, ngân hàng, lãi suất, giá vàng, tỷ giá, NHNN
 │   ├── cinema/             # Doanh thu rạp, phim bom tấn, xu hướng giải trí
 │   ├── vehicle/            # Giao thông, giá xăng, trạm sạc EV, bảo hiểm xe
@@ -56,4 +57,5 @@ tags: [Từ khóa chính liên quan]
 ## 3. NGUYÊN TẮC VẬN HÀNH & KIỂM DUYỆT
 - **Zero Hallucination:** Mọi tin tức cập nhật phải có nguồn trích dẫn rõ ràng (`source` và `source_url`).
 - **Không dùng Emoji / Icon:** Giữ văn phong cô đọng, sắc sảo, chuyên nghiệp.
+- **Một bản tin, một vị trí:** Mỗi bản tin ngày chỉ ghi đúng 1 file `11_NEWS_FEED/YYYY-MM-DD_daily_report.md`. Không ghi bản sao sang `daily/` hay `topics/`; bản sao trùng nội dung sẽ bị xóa khi rà soát.
 - **Map 1-1 với 5 Strategic Hubs:** Ưu tiên phân loại tin tức trực tiếp vào đúng nhóm chủ đề tại thư mục `topics/` để các đội ngũ nghiệp vụ dễ dàng tra cứu.

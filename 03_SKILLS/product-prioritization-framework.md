@@ -44,5 +44,5 @@ $$RICE Score= \frac{Reach\times Impact\times Confidence}{Effort}$$
 ## 3. NGUYÊN TẮC VÀNG TRONG SẮP XẾP ƯU TIÊN
 
 1. **Thoát khỏi bẫy "Ai to tiếng hơn thì làm trước":** Dùng số liệu và ma trận ưu tiên minh bạch thay vì ý kiến chủ quan.
-2. **Ưu tiên sự cố khả dụng (Usability Bugs):** Các lỗi ảnh hưởng đến dòng tiền hoặc trải nghiệm cốt lõi luôn có ưu tiên P0 cao nhất.
+2. **Ưu tiên sự cố khả dụng (Usability Bugs):** Các lỗi ảnh hưởng đến dòng tiền hoặc trải nghiệm cốt lõi luôn được xử lý trước tiên.
 3. **Loại bỏ tính năng ít giá trị:** Sẵn sàng từ bỏ các yêu cầu có chi phí cao nhưng điểm tác động thấp.

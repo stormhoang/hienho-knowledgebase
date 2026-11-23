@@ -5,9 +5,9 @@ Phân tích nguyên nhân gốc rễ và đề xuất hành động tối ưu ch
 
 Quy trình chẩn đoán 4 bước chuẩn Product Lead:
 1. Hiện tượng (Symptom): Đo lường độ lệch giữa thực tế (Actual) và mục tiêu (Target).
-2. Phân rã đa chiều (Decomposition): Non-Paid vs Paid -> Hubs -> URLs -> Search Queries.
+2. Bóc tách đa chiều (Decomposition): Non-Paid vs Paid -> Hubs -> URLs -> Search Queries.
 3. Nguyên nhân gốc rễ (Root Cause): Tách bạch giữa sụt giảm lưu lượng (Top of funnel) hay sụt giảm CVR (Bottom of funnel).
-4. Đơn thuốc hành động (Prescription): Kế hoạch hành động P0/P1/P2 kèm đội ngũ chịu trách nhiệm và ROI kỳ vọng.
+4. Kế hoạch xử lý (Prescription): Danh mục hành động theo thứ tự triển khai kèm đội ngũ chịu trách nhiệm và ROI kỳ vọng.
 """
 
 import sys
@@ -58,7 +58,7 @@ def validate_snapshot(data, as_of):
         if non_paid + paid != actual or parts != non_paid:
             errors.append("tổng kênh không khớp tổng PV")
     except (KeyError, TypeError):
-        errors.append("thiếu phân rã kênh")
+        errors.append("thiếu bóc tách chi tiết kênh")
     if abs(data.get("progress_pct", 0) - actual / target * 100) > 0.02:
         errors.append("progress_pct không khớp actual/target")
     if abs(data.get("daily_pace", 0) - actual / as_of.day) > 1:
@@ -131,9 +131,9 @@ def run_full_diagnosis(target_hub=None, month=None):
     gap = forecast_31d - target_pv
     print(f"\n-> Nhận định vĩ mô: Trạng thái [{status}], Chênh lệch dự báo: {gap:+,.0f} PV.")
 
-    # BƯỚC 2: PHÂN RÃ ĐA CHIỀU (DECOMPOSITION)
+    # BƯỚC 2: BÓC TÁCH CHI TIẾT ĐA CHIỀU (DECOMPOSITION)
     print("\n" + "-" * 80)
-    print("[BƯỚC 2: PHÂN RÃ NGUỒN LƯU LƯỢNG & CƠ CẤU HUBS]")
+    print("[BƯỚC 2: BÓC TÁCH NGUỒN LƯU LƯỢNG & CƠ CẤU HUBS]")
     
     # 2.1 Non-Paid vs Paid
     ch = mtd_data.get("channels", {})
@@ -177,7 +177,7 @@ def run_full_diagnosis(target_hub=None, month=None):
             f"{delta_pct:+.1f}%",
             status_hub
         ])
-    print("\nBảng phân rã tiến độ các Hubs:")
+    print("\nBảng cơ cấu tiến độ các Hubs:")
     print(format_table(["Hub", "Lũy kế PV", "Target Tháng", "Tiến độ đạt", "Tiến độ chuẩn", "Độ lệch %", "Trạng thái"], hub_table))
 
     # BƯỚC 3: PHÂN TÍCH NGUYÊN NHÂN GỐC RỄ (ROOT CAUSE)
@@ -281,18 +281,18 @@ def run_full_diagnosis(target_hub=None, month=None):
     else:
         print("-> Không phát hiện dị biệt nghiêm trọng nào.")
 
-    # BƯỚC 4: ĐƠN THUỐC HÀNH ĐỘNG (PRESCRIPTION)
+    # BƯỚC 4: KẾ HOẠCH XỬ LÝ (PRESCRIPTION)
     print("\n" + "-" * 80)
-    print("[BƯỚC 4: ĐƠN THUỐC HÀNH ĐỘNG CỤ THỂ (ACTIONABLE PRESCRIPTION)]")
+    print("[BƯỚC 4: KẾ HOẠCH XỬ LÝ CỤ THỂ (ACTIONABLE PRESCRIPTION)]")
     
     actions = [
-        ["P0", "SEO Vendor & Content Team", "Tối ưu CTR Title/Meta Snippet cho 5 cụm từ khóa Quick Wins (>50K imp, Pos 4-10)", "Ước tính mang lại +15,000 đến +25,000 clicks tự nhiên trong 14 ngày mà không tốn chi phí Ads."],
-        ["P0", "Web Dev", "Kiểm tra và chuẩn hóa tracking OneLink W2A trên các trang tin tức/khuyến mãi có CVR cao (>15%)", "Bảo toàn số liệu chuyển đổi New User thực chất, tránh suy hao attribution."],
-        ["P1", "Product Lead & Content Team", "Mở rộng 15 Topic Clusters ngách cho Financial Hub (Theme Vay, Tỷ giá, Tiết kiệm)", "Kéo tiến độ Financial Hub từ 44% lên 75% target cuối tháng 11."],
-        ["P1", "Web Dev & Tech Lead", "Tối ưu hóa Core Web Vitals (LCP < 2.5s) cho nhóm Top 20 Landing Pages rạp phim Cinema", "Giữ vững vị thế Top 1 Google cho mùa phim bom tấn cuối năm."],
-        ["P2", "Media Team", "Rà soát hiệu quả Paid Ads, cắt giảm các chiến dịch có W2A CVR < 1.0% và tái phân bổ sang Non-Paid content", "Tối ưu hóa ngân sách và gia tăng tỷ trọng Non-Paid Traffic lên trên 88%."]
+        ["1", "SEO Vendor & Content Team", "Tối ưu CTR Title/Meta Snippet cho 5 cụm từ khóa Quick Wins (>50K imp, Pos 4-10)", "Ước tính mang lại +15,000 đến +25,000 clicks tự nhiên trong 14 ngày mà không tốn chi phí Ads."],
+        ["2", "Web Dev", "Kiểm tra và chuẩn hóa tracking OneLink W2A trên các trang tin tức/khuyến mãi có CVR cao (>15%)", "Bảo toàn số liệu chuyển đổi New User thực chất, tránh suy hao attribution."],
+        ["3", "Product Lead & Content Team", "Mở rộng 15 Topic Clusters ngách cho Financial Hub (Theme Vay, Tỷ giá, Tiết kiệm)", "Kéo tiến độ Financial Hub từ 44% lên 75% target cuối tháng 11."],
+        ["4", "Web Dev & Tech Lead", "Tối ưu hóa Core Web Vitals (LCP < 2.5s) cho nhóm Top 20 Landing Pages rạp phim Cinema", "Giữ vững vị thế Top 1 Google cho mùa phim bom tấn cuối năm."],
+        ["5", "Media Team", "Rà soát hiệu quả Paid Ads, cắt giảm các chiến dịch có W2A CVR < 1.0% và tái phân bổ sang Non-Paid content", "Tối ưu hóa ngân sách và gia tăng tỷ trọng Non-Paid Traffic lên trên 88%."]
     ]
-    print(format_table(["Ưu tiên", "Đội ngũ chịu trách nhiệm", "Hành động cụ thể", "Tác động kinh doanh dự kiến (ROI)"], actions))
+    print(format_table(["Thứ tự", "Đội ngũ chịu trách nhiệm", "Hành động cụ thể", "Tác động kinh doanh dự kiến (ROI)"], actions))
     print("=" * 80)
     conn.close()
 

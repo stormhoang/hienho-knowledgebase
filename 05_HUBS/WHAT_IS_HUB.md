@@ -135,7 +135,7 @@ Toàn bộ các Hubs và mảng sản phẩm trên Web MoMo được quản tr�
    * **Payment Hub (`momo.vn/thanh-toan-so`):** Dịch vụ thanh toán số & Subscriptions định kỳ: Apple Services, Google Services, ChatGPT Plus, Spotify, Netflix, Steam...
    * **Game Hub (`momo.vn/nap-the-game`):** Cổng nạp thẻ game, liên kết NPH game, nạp game đa nền tảng, nạp xu TikTok và tokens giải trí trực tiếp ngoài Web.
    * **Merchant Hub (`momo.vn/merchant`):** Cổng giải pháp cho Doanh nghiệp & Tiểu thương SME: Giải pháp QR Đa Năng, Loa Soundbox, cổng tiếp nhận đăng ký mở điểm chấp nhận thanh toán (không gắn với `m.momo.vn`).
-   * **New User Hub (`momo.vn/download`):** Cổng chuyển đổi người dùng mới vãng lai (Acquisition Gateway), tối ưu hóa luồng quét QR theo hệ điều hành (iOS, Android) để nhận gói quà tân thủ 1.000.000đ.
+   * **New User Hub (`momo.vn/download`):** Cổng chuyển đổi người dùng mới vãng lai (Acquisition Gateway), tối ưu hóa luồng quét QR theo hệ điều hành (iOS, Android) để nhận gói quà người dùng mới 1.000.000đ.
    * **Home Web (`momo.vn`):** Trang chủ thương hiệu độc lập, định vị Financial Authority & Trust Defense, điều hướng người dùng toàn trang, giữ vai trò Root Authority cho toàn bộ domain.
 
 4. **PRODUCTIVITY ZONE (Hạ tầng Kỹ thuật Nền tảng Dùng chung):**

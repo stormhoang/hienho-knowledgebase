@@ -91,40 +91,206 @@ Bóc tách chi tiết rõ ràng theo từng đội ngũ đối tác kèm yêu c�
 
 ---
 
-## 4. MẪU BÁO CÁO TUẦN DÀNH CHO ANH CÔNG (WEEKLY TEMPLATE)
+## 4. MẪU BÁO CÁO TUẦN CHUẨN ĐIỀU HÀNH DÀNH CHO ANH CÔNG (WEEKLY REPORT ARCHITECTURE)
+
+> **Cập nhật quy chuẩn (Đúc kết từ Báo Cáo Tuần 46):** Áp dụng nguyên mẫu kiến trúc từ `[InsurTech] Web 2026 Performance.pptx` kết hợp cẩm nang `03_SKILLS/executive-presentation-playbook.md`:
+> 1. **Mục I.1 Overview:** Giới hạn đúng 4 chỉ số trọng tâm (PageViews vs Target, Non-Paid Traffic, AI Traffic / GEO, Phễu W2A trọn vẹn Install -> MAU).
+> 2. **Mục I.3 Hub Targets:** Hiệu chỉnh mục tiêu sát thực tế vận hành và run-rate MTD.
+> 3. **Mục I.4 Funnel Progression:** Bảng theo dõi tiến trình phễu W2A đa tháng (từ Tháng 7 đến MTD hiện tại).
+> 4. **Mục II Tiêu đề Action Titles:** Bắt buộc thuần số liệu (PageViews, chuyển đổi, CVR), **tuyệt đối KHÔNG đưa tên tính năng hay công cụ vào tiêu đề** (tên tính năng và chi tiết kỹ thuật nằm ở thân bài).
+> 5. **Mục II Thân bài chuẩn 3 khối:** (a) Highlights & Business Impact (phễu 4 bước + mốc kỹ thuật + Lowlights trung thực), (b) Phối hợp liên đội ngũ (BU đối tác + ngân sách cụ thể), (c) Kế hoạch hành động 7 ngày tới (không gắn nhãn ưu tiên dạng P kèm số 0-3).
+> 6. **Mục III Platform Projects:** Báo cáo tuần BẮT BUỘC có Mục III dành riêng cho các dự án Nền tảng và Năng lực kỹ thuật (MoBase Design System, MoSpark CMS, BFF & Security, Chatbot AI & MoMo LLM Gateway, URL Catalog, MoMatrix V1).
+> 7. **Mục IV Kết luận & Đề xuất hành động:** Bảng 3 cột khép kín: BÀI HỌC THỰC TẾ | BẰNG CHỨNG ĐỐI SOÁT | KẾ HOẠCH HÀNH ĐỘNG 7 NGÀY TỚI.
+> 8. **Quy chuẩn văn phong:** Dùng `PageViews` (không dùng từ ngữ dịch thô), dùng `Nghiệm thu kỹ thuật` / `UAT` / `test`, dùng `Gói Quà tự chọn cho người dùng mới`, không ký tự En Dash / Em Dash, không gắn nhãn ưu tiên dạng P kèm số 0-3.
 
 ```markdown
-# BÁO CÁO TIẾN ĐỘ TUẦN - WEB PLATFORM
-**Tuần:** [Số tuần] | **Thời gian:** [Từ ngày] - [Đến ngày]
+# BÁO CÁO TIẾN ĐỘ TUẦN [Số tuần] ([Từ ngày] - [Đến ngày]): WEB PLATFORM
 
-## 1. BẢNG CHỈ SỐ VẬN HÀNH TUẦN (WEEKLY PERFORMANCE)
+> **Kỳ báo cáo:** Tuần [Số tuần] ([Từ ngày] - [Đến ngày]) | **Cập nhật:** [Ngày/Tháng/Năm]
+> **Đội ngũ thực hiện:** Web Platform
+> **Nguồn dữ liệu:** GA4 Data API (Property 270743103), BigQuery Data Warehouse, AppsFlyer GPD Attribution Engine, MoSpark CMS.
 
-| Nhóm Chỉ Số | Tuần Trước | Tuần Này | Biến Động (WoW) | Mục Tiêu Tuần | Trạng Thái |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| Page Views (Lượt xem) | 750.000 | 820.000 | +9.3% | 800.000 | Đạt |
-| Sessions (Phiên truy cập) | 580.000 | 630.000 | +8.6% | 600.000 | Đạt |
-| MEU (Người dùng Web) | 410.000 | 445.000 | +8.5% | 420.000 | Đạt |
-| Tỷ lệ nhấp CTA (% CTR) | 12.4% | 14.1% | +1.7pp | 13.0% | Đạt |
-| Login App từ Web (W2A) | 52.000 | 58.500 | +12.5% | 55.000 | Đạt |
-| Lượt cài đặt mới (Install) | 1.100 | 1.350 | +22.7% | 1.200 | Đạt |
+---
 
-## 2. TIẾN ĐỘ & TÁC ĐỘNG KINH DOANH (KEY HIGHLIGHTS & BUSINESS IMPACT)
+## I. TỔNG QUAN HIỆU SUẤT TUẦN & TÁC ĐỘNG KINH DOANH
 
-- **Phễu Chuyển Đổi Web-to-App:** Lượt cài đặt mới tăng trưởng +22.7% WoW nhờ triển khai tối ưu nội dung banner gói quà CHAOMOMO trên các trang có lưu lượng cao. Tỷ lệ chuyển đổi CTA sang Login App duy trì ở mức 14.1%.
-- **Vận Hành MoSpark Platform:** Phát hành thành công [Số] bài viết chuẩn SEO/GEO qua GenAI Pipeline, kiểm duyệt hoàn tất trong 20 phút/bài; ghi nhận [Số] từ khóa lọt Top 5 Google Search.
-- **Tối Ưu Trải Nghiệm Kỹ Thuật:** Triển khai cơ chế 0-CAPTCHA cho công cụ Tra cứu Phạt nguội, nâng tỷ lệ hoàn tất tra cứu từ 75.0% lên 78.2%, giảm 45% thời gian phản hồi máy chủ.
+### 1. Tổng quan hiệu suất (Overview)
+- **Tổng lưu lượng so với mục tiêu (Total PageViews vs. Target):** Đạt **[Số] PageViews** MTD [Số] ngày, hoàn thành **[X]%** kế hoạch tháng ([Số] PageViews); nhịp MTD đạt **[Số] PageViews/ngày**, riêng 7 ngày gần nhất ([Từ ngày] - [Đến ngày]) đạt **[Số] PageViews/ngày**, tăng/giảm **[+/-]%** so với tuần trước. Tiến độ so với thời gian trôi qua; nhịp dự báo cuối tháng và số PageViews/ngày cần thiết để về đích.
+- **Lưu lượng tự nhiên (Non-Paid Traffic):** Chiếm **[X]%** toàn Website (**[Số] PageViews**), tiếp tục là trụ cột dẫn dắt với Organic Search đóng góp **[Số] PageViews** ([X]%) và Direct đạt **[Số] PageViews** ([X]%).
+- **Tìm kiếm AI (AI Traffic / GEO):** Ghi nhận **[Số] PageViews** từ các công cụ AI (ChatGPT, Perplexity, Gemini); nhịp bình quân đạt **[Số] PageViews/ngày** nhờ tối ưu cấu trúc dữ liệu Schema và trích dẫn chuyên môn.
+- **Phễu chuyển đổi Web-to-App (Install ➔ MAU, AppsFlyer MTD):** Ghi nhận **[Số] lượt cài đặt mới (App Installs)**, chuyển đổi thành **[Số] tài khoản đăng ký (New Reg)**, **[Số] liên kết ngân hàng (Map Bank)** và **[Số] người dùng kích hoạt (Active MAU)**; tỷ lệ chuyển đổi trọn phễu (End-to-End CVR) đạt **[X]%**.
 
-## 3. PHỐI HỢP LIÊN ĐỘI NGŨ (CROSS-TEAM COLLABORATION & SUPPORT NEEDED)
+### 2. Cơ cấu kênh lưu lượng qua các tháng (Tháng [X] đến MTD [Ngày/Tháng])
 
-- **VTTI BU:** Cần thống nhất luồng liên kết đối tác ePass/Đăng kiểm trước ngày [Ngày/Tháng] để kịp tích hợp vào Master Page Tiện Ích Giao Thông.
-- **Risk Team:** Cần phê duyệt bộ tiêu chí Guardrails tự động cho module CMS trước khi mở rộng phân quyền Self-service cho BU.
-- **Media Team:** Đề xuất bổ sung ngân sách Paid Search cho nhóm từ khóa vé xem phim dịp cuối tuần.
+| Kênh lưu lượng (Nguồn dữ liệu chuẩn) | Tháng N-4 | Tháng N-3 | Tháng N-2 | Tháng N-1 | Tháng N (MTD) | Tỷ Trọng Kỳ Này (%) | Nhận định Xu Hướng & Tín Hiệu Điều Hành |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
+| **KÊNH TỰ NHIÊN (NON-PAID)** | **[Số]** | **[Số]** | **[Số]** | **[Số]** | **[Số]** | **[Tỷ trọng]%** | **Trụ cột tăng trưởng bền vững, luôn giữ vị thế đầu tàu (70 - 88% quy mô)** |
+| - Organic Search | [Số] | [Số] | [Số] | [Số] | [Số] | [Tỷ trọng]% | Lưu lượng tìm kiếm tự nhiên chủ lực |
+| - Direct Traffic | [Số] | [Số] | [Số] | [Số] | [Số] | [Tỷ trọng]% | Thói quen truy cập tiện ích trực tiếp |
+| - Referral | [Số] | [Số] | [Số] | [Số] | [Số] | [Tỷ trọng]% | Đóng góp từ đối tác, in-app và mạng xã hội |
+| - AI Search (GEO) | [Số] | [Số] | [Số] | [Số] | [Số] | [Tỷ trọng]% | Lưu lượng trích dẫn từ ChatGPT, Gemini, Copilot |
+| **KÊNH TRẢ PHÍ (PAID ADS)** | **[Số]** | **[Số]** | **[Số]** | **[Số]** | **[Số]** | **[Tỷ trọng]%** | Ngân sách quảng cáo có chọn lọc dẫn dòng chuyển đổi |
+| **TỔNG LƯỢNG TRUY CẬP** | **[Số]** | **[Số]** | **[Số]** | **[Số]** | **[Số]** | **100,0%** | Nhịp ngày bình quân toàn Website đạt [Số] PageViews/ngày |
 
-## 4. KẾ HOẠCH TRỌNG TÂM 7 NGÀY TỚI (PRIORITIES FOR NEXT 7 DAYS)
+### 3. Tiến độ mục tiêu các Hub (Hub Targets & Actual MTD)
 
-- **Hotfix & Delivery:** Bàn giao giao diện Master Page `/tien-ich-giao-thong` cho đội phát triển Front-end; hoàn thành kiểm thử trên môi trường Staging.
-- **A/B Testing:** Chạy thử nghiệm 2 biến thể nút CTA (Đặt vé ngay vs. Nhận ưu đãi vé) trên Cinema Hub để đo lường CVR.
-- **Cross-team Alignment:** Họp chi tiết với Inbound Team (BMC) để chuyển giao quy trình kiểm duyệt nội dung tự động.
+| Danh mục Hub / Dự án | Target Tháng | MTD Thực Tế | Tiến Độ (%) | Tỷ Trọng Toàn Web (%) | Trạng Thái Vận Hành & Đánh Giá Nhịp Chạy |
+| :--- | :---: | :---: | :---: | :---: | :--- |
+| **Cinema Hub** | [Target] | [Actual] | [Pacing]% | [Share]% | [Đánh giá nhịp chạy, nguyên nhân tăng/chậm] |
+| **Financial Hub** | [Target] | [Actual] | [Pacing]% | [Share]% | [Đánh giá nhịp chạy, đóng góp từ công cụ tiện ích] |
+| **Vehicle Hub** | [Target] | [Actual] | [Pacing]% | [Share]% | [Đánh giá nhịp chạy tra cứu phạt nguội 0-CAPTCHA] |
+| **Dự án New User** | [Target] | [Actual] | [Pacing]% | [Share]% | [Đánh giá cổng /tai-app và chiến dịch kích hoạt] |
+
+### 4. Tiến trình chuyển đổi Web-to-App qua các tháng (AppsFlyer GPD Funnel)
+
+| Kỳ dữ liệu | Installs | New Reg | Tỷ lệ Reg / Install | Map Bank | Tỷ lệ Map / Install | Active MAU | End-to-End CVR (MAU / Install) |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Tháng N-3 | [Số] | [Số] | [%] | [Số] | [%] | [Số] | [%] |
+| Tháng N-2 | [Số] | [Số] | [%] | [Số] | [%] | [Số] | [%] |
+| Tháng N-1 | [Số] | [Số] | [%] | [Số] | [%] | [Số] | [%] |
+| Tháng N (MTD) | [Số] | [Số] | [%] | [Số] | [%] | [Số] | [%] |
+
+---
+
+## II. TIẾN ĐỘ THỰC TẾ CÁC DỰ ÁN CHIẾN LƯỢC (HUBS DEEP-DIVE)
+
+### 1. Cinema Hub [R]: Web mang về [Số] PageViews, kéo về [Số] lượt cài app mới và đạt tỷ lệ chuyển đổi sang MAU [X]%
+> **Hoàn thành [X]% kế hoạch tháng; tỷ lệ chuyển đổi sang MAU dẫn đầu toàn bộ hệ thống Web.**
+
+#### a. Key Highlights & Business Impact
+- **Phễu chuyển đổi (GA4 & AppsFlyer):**
+  - *Bước 1 (Traffic Web):* **[Số] PageViews** | Chiếm [X]% lưu lượng toàn Hub; cụm rạp đối tác đóng góp [X]%.
+  - *Bước 2 (Trang Lịch Chiếu / Cụm Rạp):* **[Số] PageViews** | Tỷ lệ đi tiếp vào phễu đặt vé đạt [X]%.
+  - *Bước 3 (Click Mở App / Đặt Vé):* **[Số] Clicks** | Tỷ lệ nhấp CTA đạt [X]% trên trang lịch chiếu.
+  - *Bước 4 (Chuyển Đổi App Thực Tế):* **[Số] Installs**, **[Số] New Reg**, **[Số] Active MAU**; CVR Install ➔ MAU đạt **[X]%**.
+- **Tiến độ kỹ thuật:** Hoàn tất nghiệm thu kỹ thuật và đưa vào vận hành [Tính năng/Trang] trên Production.
+- **Điểm nghẽn (Lowlights):** [Nêu thẳng thắn sự cạnh tranh thứ hạng từ khóa, tỷ lệ rơi rớt, hoặc độ hụt so với kỳ vọng kèm nguyên nhân gốc rễ].
+
+#### b. Phối hợp liên đội ngũ (Collaboration)
+- **BU Movies:** [Nội dung làm việc, thống nhất ngân sách hoặc tài trợ].
+- **Dự án đầu tư / Ngân sách:** Triển khai gói Pilot Off-Page SEO [Số tiền] triệu VNĐ (BU Movies tài trợ [X]%).
+
+#### c. Kế hoạch hành động 7 ngày tới
+- [Hành động cụ thể 1: Ký hợp đồng, triển khai kỹ thuật, rà soát SEO].
+- [Hành động cụ thể 2: Tối ưu trang nội dung, liên kết nội bộ].
+- [Hành động cụ thể 3: Đo lường và đối soát tỷ lệ chuyển đổi].
+
+---
+
+### 2. Financial Hub [R]: Web mang về [Số] PageViews và kích hoạt [Số] lượt chuyển đổi về app (Điểm Tín Dụng dẫn đầu [Số] clicks)
+> **Hoàn thành [X]% kế hoạch tháng; các công cụ tiện ích tương tác chiếm [X]% tổng lượng chuyển đổi.**
+
+#### a. Key Highlights & Business Impact
+- **Phễu chuyển đổi công cụ tiện ích:**
+  - *Bước 1 (Traffic Hub):* **[Số] PageViews** | Tỷ trọng Non-Paid đạt [X]%.
+  - *Bước 2 (Tương Tác Công Cụ):* Công cụ Tính Lương đạt CTR tương tác **[X]%**; bài viết cẩm nang tĩnh đạt **[X]% CTR**.
+  - *Bước 3 (Click Chuyển Tiếp OneLink về App):* **[Số] clicks** (Trích xuất từ dữ liệu kiểm toán BRD: CIC [Số], TTTC [Số], VTS [Số], Vay Nhanh [Số] clicks); tỷ lệ W2A CVR đạt **[X]%**.
+  - *Bước 4 (Chuyển Đổi App):* **[Số] Installs**, **[Số] New Reg**, **[Số] Active MAU**.
+- **Tiến độ kỹ thuật:** Ra mắt bộ đôi công cụ Tính Thuế TNCN & Hộ Kinh Doanh; hoàn tất nghiệm thu kỹ thuật Production.
+- **Điểm nghẽn (Lowlights):** [Phân tích điểm rơi rớt giữa các bước hoặc rào cản thao tác].
+
+#### b. Phối hợp liên đội ngũ (Collaboration)
+- **BU Financial Services & BU Bank:** Phối hợp nghiệm thu kỹ thuật 15 trang chi tiết ngân hàng; chốt quy tắc tính điểm CIC.
+- **Media Team:** [Kế hoạch phân bổ ngân sách thử nghiệm].
+
+#### c. Kế hoạch hành động 7 ngày tới
+- [Hành động cụ thể 1: Đẩy mạnh liên kết nội bộ sang các công cụ tính thuế].
+- [Hành động cụ thể 2: Hoàn tất nghiệm thu kỹ thuật (UAT) 15 trang chi tiết ngân hàng cùng BU Bank].
+- [Hành động cụ thể 3: Triển khai kịch bản Gamification tương tác].
+
+---
+
+### 3. Vehicle Hub [R]: Đạt [Số] PageViews ([X]% target), phễu tra cứu ghi nhận [Số] lượt tra cứu và [Số] lượt mở app in-app
+> **Tiện ích tra cứu phạt nguội 0-CAPTCHA tạo động lực tăng trưởng; tỷ lệ chuyển tiếp mở app đạt [X]%.**
+
+#### a. Key Highlights & Business Impact
+- **Phễu tra cứu (GA4):**
+  - *Bước 1 (Traffic trang tra cứu):* **[Số] PageViews** | PageViews của 2 trang xe máy và ô tô.
+  - *Bước 2 (Thao Tác Hoàn Tất Tra Cứu):* **[Số] lượt form_submit** | Tỷ lệ tra cứu trên PageViews đạt [X]%.
+  - *Bước 3 (Chuyển Tiếp Mở App In-App):* **[Số] click_to_app** | Tỷ lệ chuyển tiếp đạt [X]% trên lượt tra cứu.
+- **Tốc độ tăng trưởng:** Nhịp bình quân [Số] PageViews/ngày; tiến độ vượt nhịp thời gian.
+- **Điểm nghẽn (Lowlights):** Tỷ lệ chuyển đổi sang thanh toán còn thấp; cần bổ sung cảnh báo thời hạn xử lý.
+
+#### b. Phối hợp liên đội ngũ (Collaboration)
+- **Khối CSGT / VTTI:** Duy trì luồng kết nối API ổn định, mở rộng kênh thông báo vi phạm.
+
+#### c. Kế hoạch hành động 7 ngày tới
+- [Hành động cụ thể 1: Tối ưu giao diện hiển thị kết quả và khối cảnh báo nộp phạt].
+- [Hành động cụ thể 2: Thử nghiệm biến thể CTA nộp phạt trực tiếp trên Mobile].
+
+---
+
+### 4. Dự án New User [R]: Web mang về [Số] lượt cài app mới, tạo ra [Số] tài khoản đăng ký và [Số] người dùng liên kết ngân hàng
+> **Đóng góp [X]% tổng lượng cài đặt mới toàn Website; cổng tải app tập trung cải thiện trải nghiệm chuyển đổi.**
+
+#### a. Key Highlights & Business Impact
+- **So sánh cổng tải app (`/tai-app` vs `/download`):**
+  - Cổng `/tai-app` đạt **[Số] PageViews**, tỷ lệ người dùng mới lần đầu (First Visits) đạt **[X]%**, thời gian trên trang **[Số]s** (so với 0,5s của `/download`).
+  - Giao diện máy tính (Desktop) chiếm **[X]%** lượng truy cập, kích hoạt quét mã Dynamic QR trực tiếp.
+  - Từ khóa tìm kiếm tải file APK đạt thứ hạng Top [X] trên Google Search.
+- **Điểm nghẽn (Lowlights):** Tỷ lệ chuyển đổi từ cài đặt sang đăng ký (Install ➔ Reg) bị suy giảm [X] điểm %; cần gói ưu đãi đủ mạnh để kích hoạt.
+
+#### b. Phối hợp liên đội ngũ (Collaboration)
+- **Growth & Media Team:** Phối hợp triển khai chiến dịch "Gói Quà tự chọn cho người dùng mới" với ngân sách [Số] triệu VNĐ.
+
+#### c. Kế hoạch hành động 7 ngày tới
+- [Hành động cụ thể 1: Cấu hình chuyển hướng từ `/download` sang `/tai-app` trên toàn bộ Header, Footer và Banner].
+- [Hành động cụ thể 2: Tối ưu khối hướng dẫn cài đặt file APK trên trang `/tai-app`].
+- [Hành động cụ thể 3: Hoàn tất nghiệm thu kỹ thuật và chuẩn bị kích hoạt Minigame kéo tệp người dùng đăng ký mới].
+
+---
+
+## III. TIẾN ĐỘ THỰC TẾ CÁC DỰ ÁN NỀN TẢNG (PLATFORM PROJECTS)
+
+### 1. [Tên Dự Án Nền Tảng 1] (Ví dụ: MoBase Design System & Font MoMo Trust Sans)
+- **Key Owner:** [Tên PIC/LDAP] | **Phối hợp:** [Đội ngũ phối hợp]
+- **Liên kết Demo & Production:** [URL Staging, Production, hoặc mã nguồn]
+- **Mục tiêu & Tác động:** [Giải quyết bài toán kỹ thuật hoặc chuẩn hóa hệ thống nào].
+- **Tiến độ thực tế trong tuần:**
+  - [Đầu việc hoàn thành 1: Triển khai component, cập nhật font, tối ưu bundle].
+  - [Đầu việc hoàn thành 2: Nghiệm thu hiển thị đa thiết bị].
+- **Kế hoạch 7 ngày tới:** [Việc cần làm tiếp theo].
+- **Phối hợp liên đội ngũ:** [Phối hợp cùng Design System Team, Mobile Team...].
+
+---
+
+### 2. [Tên Dự Án Nền Tảng 2] (Ví dụ: Chatbot AI & MoMo LLM Gateway)
+- **Key Owner:** [Tên PIC/LDAP] | **Phối hợp:** [AI Team, BU đối tác]
+- **Liên kết Demo & Tài liệu:** [URL Admin, API Gateway, Staging]
+- **Mục tiêu & Tác động:** [Tối ưu chi phí gọi AI, nâng cao độ chính xác, chống ảo giác].
+- **Tiến độ thực tế trong tuần:**
+  - [Đầu việc hoàn thành 1: Tích hợp cổng AI nội bộ, kiểm soát dữ liệu đầu vào].
+  - [Đầu việc hoàn thành 2: Chuẩn bị dữ liệu phục vụ gợi ý tự động].
+- **Kế hoạch 7 ngày tới:** [Việc cần làm tiếp theo].
+- **Phối hợp liên đội ngũ:** [Phối hợp cùng AI Team, Data Team...].
+
+---
+
+### 3. [Tên Dự Án Nền Tảng 3] (Ví dụ: Security, BFF & Hạ Tầng MoMo API)
+- **Key Owner:** [Tên PIC/LDAP] | **Phối hợp:** [ITC Security, DevOps]
+- **Mục tiêu & Tác động:** [Bảo mật dữ liệu, đóng cổng truy cập trực tiếp, tự động hóa cảnh báo].
+- **Tiến độ thực tế trong tuần:**
+  - [Đầu việc hoàn thành 1: Chuyển đổi lệnh gọi qua BFF, cài đặt timeout và rate limit].
+  - [Đầu việc hoàn thành 2: Dựng Helm chart CronJob tự động cảnh báo sự cố].
+- **Kế hoạch 7 ngày tới:** [Việc cần làm tiếp theo].
+- **Phối hợp liên đội ngũ:** [Phối hợp cùng ITC Security, DevOps...].
+
+---
+
+## IV. KẾT LUẬN & ĐỀ XUẤT HÀNH ĐỘNG TOÀN KÊNH WEB [D]
+
+Kế hoạch hành động 7 ngày tới bám sát 3 bài học từ dữ liệu tuần:
+
+| Bài học thực tế | Bằng chứng đối soát | Kế hoạch hành động 7 ngày tới |
+| :--- | :--- | :--- |
+| **1. Công cụ tiện ích (PLG) tạo chuyển đổi vượt trội so với bài viết tĩnh** | [Con số chứng minh chênh lệch CTR hoặc lượng clicks giữa công cụ tương tác và bài viết cẩm nang tĩnh]. | **[Hành động trọng tâm: Đẩy mạnh liên kết nội bộ, mở rộng công cụ tính toán].** |
+| **2. Kênh tự nhiên giữ vững quy mô, tạo nền tảng vững chắc cho đợt cao điểm** | [Con số chứng minh tỷ trọng Non-Paid và nhịp ngày tăng trưởng ổn định]. | **[Hành động trọng tâm: Tối ưu hóa tỷ lệ chuyển đổi từng trang đích, gom phễu về /tai-app].** |
+| **3. Cạnh tranh từ khóa mùa cao điểm đe dọa thứ hạng Top 3** | [Dữ liệu thứ hạng từ khóa bị đe dọa và tỷ trọng đóng góp của mảng liên quan]. | **[Hành động trọng tâm: Ký kết và triển khai các gói Off-Page thẩm quyền kịp thời].** |
+
+---
+
+- **Ghi chú nguồn số liệu:** GA4 (PageViews, kênh, Hub) là MTD [Số] ngày [Từ ngày] - [Đến ngày]; phễu W2A AppsFlyer là MTD [Số] ngày [Từ ngày] - [Đến ngày] do trễ đối soát attribution.
+- **Ngân sách Media:** Duy trì gói [Số] triệu VNĐ cho chiến dịch Gói Quà tự chọn New User.
 ```
 
 ---
@@ -211,12 +377,12 @@ Mọi bài báo cáo Weekly cho Executive Leadership và Monthly cho Ban Giám �
 
 | Tầng Phễu | Tên Chỉ Số (Key Metrics) | Công Thức / Nguồn GA4 & AppsFlyer | Ý Nghĩa Quản Trị & Đánh Giá |
 | :--- | :--- | :--- | :--- |
-| **Đầu Phễu (Traffic & Audience)** | **1. Tổng Page Views** | Tổng lượt xem trang từ TẤT CẢ các nguồn. | Quy mô lưu lượng toàn sàn. |
+| **Đầu Phễu (Traffic & Audience)** | **1. Tổng PageViews** | Tổng PageViews từ TẤT CẢ các nguồn. | Quy mô lưu lượng toàn Website. |
 | | **2. Total Users (Unique Visitors)** | Số người dùng duy nhất (`totalUsers` từ GA4). | Quy mô khách thực tế tiếp cận được (tránh ảo số do 1 người F5 tải lại nhiều lần). |
 | | **3. PV / User (Độ Sâu Tương Tác)** | `= Tổng Page Views / Total Users` | Mức độ tương tác trung bình (healthy: 1.5 - 2.5 trang/người). |
 | | **4. Net Add (Lưu Lượng Mới)** | `Current Month PV - Previous Month PV` | Chỉ báo nỗ lực tạo ra giá trị tăng trưởng mới. |
 | | **5. Growth Rate (%)** | `Net Add / Previous Month PV` | Tốc độ tăng trưởng MoM/WoW. |
-| | **6. Phân Bổ Kênh (Source Breakdown)** | Tỷ trọng 6 nhóm kênh: Organic, Paid, Direct, Cross, Referral Domain, Others. | Phân định kênh sức mạnh chủ lực và kênh suy giảm. |
+| | **6. Phân Bổ Kênh (Source Breakdown)** | Tỷ trọng các nhóm kênh: Non-Paid (Organic Search, Direct, Referral, AI Traffic) và Paid Ads. | Phân định kênh sức mạnh chủ lực và kênh suy giảm. |
 | | **7. Cơ Cấu Theo Dự Án / Use Case** | Phân bổ theo Cinema Hub, Financial Hub, Vehicle Hub, Home Page, TikTok... | Xác định use case tạo lực đẩy và use case cần tối ưu. |
 | **Giữa Phễu (Intent & CTA)** | **8. Click-to-App** | Tổng lượt nhấp vào các nút CTA mở App MoMo. | Đo lường ý định chuyển đổi sang ứng dụng. |
 | | **9. Tỷ Lệ %CTR** | `= Click-to-App / Tổng Page Views` | Hiệu quả của thông điệp và vị trí nút bấm CTA. |
@@ -253,7 +419,7 @@ Trước khi gửi báo cáo Weekly cho Executive Leadership hoặc Monthly cho 
 2. Đã thay thế toàn bộ tên riêng cá nhân/PIC bằng tên đội ngũ chuyên môn chưa?
 3. Đã có đầy đủ 3 khối chuẩn: `Key Highlights & Business Impact`, `Collaboration`, `Priority` chưa?
 4. Đã áp dụng Bộ Chỉ Số Phễu 3 Tầng (`Total PV`, `Total Users`, `PV/User`, `Click-to-App`, `Login`, `Install`, `New Registered Users`) chưa?
-5. Đã bóc tách rõ kênh `Referral Domain` (Báo chí PR & Đối tác) khỏi nhóm `Others` chưa?
+5. Đã tuân thủ chuẩn 4 kênh Non-Paid (Organic Search, Direct, Referral, AI Traffic) và gộp toàn bộ nguồn vãng lai vào Referral mà không tách dòng `Others` chưa?
 6. Đã đối chiếu số liệu theo 2 tầng: Kênh Web và Tác động App chưa?
 7. Các bảng số liệu lớn đã có 2 khối `Observation` và `Problem Statement` ở chân trang chưa?
 8. Kế hoạch hành động đã được phân loại theo đúng nhóm phân vùng (Performance / Transformation / Incubator) chưa?

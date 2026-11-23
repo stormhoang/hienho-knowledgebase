@@ -1,7 +1,6 @@
 # BÁO CÁO KINH DOANH VÀ HIỆU SUẤT NỀN TẢNG WEB - THÁNG 10/2026
-> **Đối tượng:** Ban Giám Đốc / Hội đồng Quản trị
 > **Chu kỳ dữ liệu:** 01/10/2026 - 31/10/2026 (Chốt Full Month 31 ngày)
-> **Nguồn dữ liệu (SSOT):** GA4 Data API (Property 270743103), BigQuery Data Warehouse, AppsFlyer GPD Attribution Engine, và chuẩn hóa bảng kênh theo `Web_Platform_Thang_10_2026_Pyramid.pptx`.
+> **Nguồn dữ liệu:** GA4 Data API (Property 270743103), BigQuery Data Warehouse, AppsFlyer GPD Attribution Engine, và chuẩn hóa bảng kênh theo `Web_Platform_Thang_10_2026_Pyramid.pptx`.
 > **Nguyên tắc báo cáo:** Báo cáo cung cấp bối cảnh chiến lược và số liệu kinh doanh [R]; Cuộc họp tập trung thảo luận và ra quyết định [D].
 
 ---
@@ -14,7 +13,7 @@
 - **Hiệu quả chuyển đổi người dùng mới tích cực:** Ghi nhận 2.389 người dùng mới liên kết ngân hàng (Map Bank, +5,0% MoM, mức cao nhất từ đầu năm) từ 11.143 lượt cài đặt app qua AppsFlyer OneLink. Cinema Hub đạt 1,13M Pageviews (101,4% Target), đóng góp 484 người dùng liên kết ngân hàng với CVR đạt 25,1%.
 
 #### 2. Hợp tác liên phòng ban (Collaboration)
-- **Movies Team:** Phối hợp đưa cụm trang Diễn viên (`/cinema/person`) lên Production ngày 30/10 với 631 hồ sơ bước đầu tối ưu Schema thực thể Person; tích hợp TVC Minigame Bò Sữa Bay tại các cụm rạp đối tác.
+- **Movies Team:** Phối hợp đưa cụm trang Diễn viên (`/cinema/person`) lên Production ngày 30/10 bước đầu tối ưu Schema thực thể Person; tích hợp TVC Minigame Bò Sữa Bay tại các cụm rạp đối tác.
 - **BU Bank & Finhub:** Nghiệm thu biểu mẫu dữ liệu và chuẩn hóa công thức tính thuế cho bộ đôi tiện ích Tính Thuế TNCN và Tính Lương Gross-Net đón kỳ cao điểm cuối năm.
 - **VTTI:** Hoàn tất nghiệm thu bộ dữ liệu 41 hãng xe và gara trước ngày 31/10 để mở rộng danh mục hiển thị trên Production thuộc Vehicle Hub.
 
@@ -58,8 +57,8 @@
 - **Đóng góp quy mô:** Chiếm 31,4% lưu lượng toàn Kênh Web. Tỷ trọng Non-Paid đạt 86,4%.
 - **Động lực tăng trưởng:** Cụm rạp đối tác (Rio, Touch, Metiz) tăng trưởng mạnh +39,6% MoM (đạt 700.229 PVs, chiếm 61,8% toàn Hub); lượt tự nhiên cụm rạp đạt 615.638 PVs (+32,8%), đóng vai trò trụ cột lưu lượng tự nhiên giúp Hub hoàn thành mục tiêu dù BU Movies chủ động cắt giảm 93% Paid Ads phim lẻ (-272K PVs).
 - **Hiệu quả chuyển đổi Web-to-App:** Mang về 279.968 người dùng mới (+17,4% MoM), 1.931 lượt cài app và 484 người dùng liên kết ngân hàng với CVR chuyển đổi đạt **25,1%** (mức CVR cao nhất toàn Web MoMo).
-- **Tiến độ kỹ thuật:** Cụm trang Diễn viên (`/cinema/person`) đã go-live ngày 30/10 với 631 hồ sơ bước đầu tối ưu Schema Person; hoàn thiện tích hợp API Suất chiếu Cinetour thời gian thực.
-- **Hành động tiếp theo:** Hoàn thiện liên kết nội bộ từ trang phim sang 631 hồ sơ diễn viên; mở rộng kết nối lịch chiếu rạp độc lập đón mùa phim Tết 2027.
+- **Tiến độ kỹ thuật:** Cụm trang Diễn viên (`/cinema/person`) đã go-live ngày 30/10 bước đầu tối ưu Schema Person; hoàn thiện tích hợp API Suất chiếu Cinetour thời gian thực.
+- **Hành động tiếp theo:** Hoàn thiện liên kết nội bộ từ trang phim sang hồ sơ nghệ sĩ/diễn viên; mở rộng kết nối lịch chiếu rạp độc lập đón mùa phim Tết 2027.
 
 #### 2. Financial Hub (273.705 PVs - Đạt 109,5% Target, +9,6% MoM)
 - **Đóng góp quy mô:** Tỷ trọng Non-Paid đạt 62,7%, bước đầu đầu tư bài bản ghi nhận tín hiệu khả quan.
@@ -108,7 +107,7 @@
 | 4 | **Giả lập điểm tín dụng CIC** | 528 | 116 | **22,0%** |
 | 5 | **Trả góp Ví Trả Sau** | 1.500 | 242 | **16,1%** |
 | 6 | **Tính BHXH & Lương Hưu** | 108 | 14 | **13,0%** |
-| 7 | **Máy tính Lãi Tiết Kiệm & SIP** | 1.500 | 182 | **12,5%** |
+| 7 | **Máy tính Lãi Tiết Kiệm** | 1.500 | 182 | **12,5%** |
 | 8 | **Chuyển đổi Ngoại tệ** | 1.900 | 178 | **9,2%** |
 | 9 | **Tính Thuế TNCN & Hộ KD** | - | - | Sắp go-live |
 | 10 | **Nhóm Bảng Biểu Tĩnh** (Giá vàng, Tỷ giá, Lãi suất) | 1.410 | **0** | **0,0%** |

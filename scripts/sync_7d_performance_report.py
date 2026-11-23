@@ -31,7 +31,9 @@ from google.oauth2 import service_account
 from googleapiclient.discovery import build
 
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+sys.path.insert(0, BASE_DIR)
 sys.path.append(os.path.join(BASE_DIR, "scripts", "lib"))
+from scripts.lib.hub_sync_lock import hub_sync_lock
 import url_project_resolver as upr
 
 TOP_N = 30
@@ -505,10 +507,12 @@ def sync_7d_performance(push_hubs: bool = False, json_only: bool = False) -> dic
 def main():
     parser = argparse.ArgumentParser(description="Đồng bộ hiệu suất biến động 7 ngày GSC lên /report và /dashboard.")
     parser.add_argument("--push-hubs", action="store_true", default=False, help="Cho phép commit và đẩy lên GitHub Hubs")
+    parser.add_argument("--no-push", action="store_true", default=True, help="Không commit và đẩy lên GitHub Hubs (mặc định)")
     parser.add_argument("--json-only", action="store_true", help="Chỉ xuất JSON SSOT, không sửa markdown/dashboard")
     args = parser.parse_args()
 
     sync_7d_performance(push_hubs=args.push_hubs, json_only=args.json_only)
 
 if __name__ == "__main__":
-    main()
+    with hub_sync_lock("sync_7d_performance_report"):
+        main()

@@ -1,3 +1,7 @@
+"""Sinh slide demo theo design token của Hub /report/monthly (react-web-momo Web Hub UI).
+
+Usage: ./.venv/bin/python scripts/build_hub_style_slide_demo.py"""
+
 import sys
 import os
 import copy

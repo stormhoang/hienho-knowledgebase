@@ -170,6 +170,7 @@ entries:
 
   - id: performance_data_mart
     path: 07_REPORTS/data/cache/performance.sqlite
+    local_only: true  # gitignored (~120MB), chỉ có trên máy dev; CI không kiểm tra sự tồn tại
     domain: performance
     type: analytical_data_mart
     authority: primary
@@ -214,7 +215,7 @@ entries:
     status: active
     owner: Web Platform
     system_of_record: "Google Trends API (pytrends VN)"
-    generator_script: "scripts/cron_theme_seasonality.py"
+    generator_script: "scripts/theme_seasonality.py"
     freshness_days: 30
     used_for: [seasonality_forecast, trend_analysis]
 
@@ -253,7 +254,7 @@ entries:
     type: tracking_ssot
     authority: primary
     status: active
-    owner: SE Team / Thuận
+    owner: SE Team
     system_of_record: "Umami Analytics Cloud Instance & MoSpark Tracking Specification"
     generator_script: "manual_authoring"
     used_for: [event_tracking, utility_tracking]
@@ -270,20 +271,8 @@ entries:
     owner: Cinema Hub Team
     system_of_record: "Cinema Hub Business Requirement Document"
     generator_script: "manual_authoring"
-    used_for: [cinema_strategy, movie_features, cinema_roadmap]
-    cross_check_with: [cinema_funnel_architecture, team_scope_of_work]
-
-  - id: cinema_funnel_architecture
-    path: 05_HUBS/cinema/CINEMA_FUNNEL_ARCHITECTURE.md
-    domain: hubs_cinema
-    type: funnel_architecture
-    authority: primary
-    status: active
-    owner: Cinema Hub Team
-    system_of_record: "Cinema Hub Web-to-App Funnel Architecture"
-    generator_script: "manual_authoring"
-    used_for: [cinema_conversion, web_to_app_funnel, onelink_tracking]
-    cross_check_with: [cinema_hub_brd]
+    used_for: [cinema_strategy, movie_features, cinema_roadmap, cinema_conversion, web_to_app_funnel, onelink_tracking]
+    cross_check_with: [team_scope_of_work]
 
   - id: vehicle_hub_brd
     path: 05_HUBS/vehicle/vehicle-hub-brd.md
@@ -296,6 +285,30 @@ entries:
     generator_script: "manual_authoring"
     used_for: [vehicle_strategy, traffic_tools, garage_directory, penalty_lookup]
     cross_check_with: [team_scope_of_work]
+
+  - id: vehicle_partner_garages
+    path: 05_HUBS/vehicle/datasets/partner-garages.json
+    domain: hubs_vehicle
+    type: garage_directory_dataset
+    authority: primary
+    status: active
+    owner: Vehicle Hub Team
+    system_of_record: "Danh bạ garage đối tác đã làm sạch (chuẩn hóa tên, khử trùng, có garage_id và search_volume)"
+    generator_script: "manual_authoring"
+    used_for: [garage_directory, vehicle_programmatic_pages]
+    supersedes: [vehicle_partner_garages_raw]
+    cross_check_with: [vehicle_hub_brd]
+
+  - id: vehicle_partner_garages_raw
+    path: 05_HUBS/inventory/vehicle-hub/partner-garages.json
+    domain: hubs_vehicle
+    type: garage_directory_dataset
+    authority: reference
+    status: legacy
+    owner: Vehicle Hub Team
+    system_of_record: "Bản thô danh bạ garage đối tác trước khi làm sạch. Chỉ dùng để đối soát nguồn, không dùng làm số liệu."
+    generator_script: "manual_authoring"
+    used_for: [source_reconciliation]
 
   - id: financial_hub_brd
     path: 05_HUBS/financial/financial-hub-brd.md
@@ -318,7 +331,7 @@ entries:
     type: platform_architecture
     authority: primary
     status: active
-    owner: SE Team / Duy
+    owner: SE Team
     system_of_record: "MoSpark Platform Architecture & Knowledge Base"
     generator_script: "manual_authoring"
     used_for: [rag_knowledge_base, smart_search, platform_architecture]

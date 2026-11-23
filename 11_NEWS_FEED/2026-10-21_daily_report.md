@@ -31,7 +31,7 @@ tags: [seo, geo, aeo, ai_overviews_label, chatgpt_utm_bug, url_encoding_brackets
 - **Nguồn & Trích dẫn:** [Search Engine Land: ChatGPT drop in UTM tracking was a bug](https://searchengineland.com/chatgpt-appears-to-drop-utm-tracking-making-ai-referral-traffic-harder-to-measure-496552).
 - **Phân tích số liệu từ Adobe & Telemetry:**
   - Sau đợt cập nhật GPT-6, lưu lượng có gắn `utm_source=chatgpt.com` sụt giảm mạnh (~31.000 lượt/ngày trên 500 trang mẫu), trong khi Direct Traffic tăng đột biến tương ứng (~26.000 lượt/ngày) do phương thức mở link mới của ChatGPT vô tình triệt tiêu referrer và UTM.
-  - OpenAI xác nhận đây là lỗi kỹ thuật không mong muốn và bản vá đã được kích hoạt, đưa lưu lượng tracking ChatGPT phục hồi về 95%–100%.
+  - OpenAI xác nhận đây là lỗi kỹ thuật không mong muốn và bản vá đã được kích hoạt, đưa lưu lượng tracking ChatGPT phục hồi về 95%-100%.
   - **Khuyến nghị cho Web Analytics:** Đánh dấu mốc ghi chú (Annotation) trong GA4/Adobe Analytics từ ngày 08/10 đến 15/10/2026 để giải thích sự sụt giảm ảo của AI Referral và sự gia tăng tạm thời của Direct Traffic; không tự ý điều chỉnh mô hình phân bổ chuyển đổi (Attribution Model).
 
 ### 3. Google Mở Rộng Xác Minh Bắt Buộc Dịch Vụ Tài Chính (Financial Services Verification)
@@ -88,5 +88,5 @@ tags: [seo, geo, aeo, ai_overviews_label, chatgpt_utm_bug, url_encoding_brackets
    - Kiểm tra toàn bộ mã nguồn frontend của các công cụ tìm kiếm ưu đãi, điểm giao dịch: đảm bảo không truyền ký tự `[]` trong URL parameters để tránh lỗi xử lý của Googlebot.
 2. **Kiểm toán clutterScore giao diện Mobile:**
    - Rà soát các vị trí banner Smart App Banner / Smart Banner cài app: đảm bảo không che lấp quá 20% chiều cao màn hình trên điện thoại di động, loại bỏ các pop-up nhảy bất ngờ gây kích hoạt cờ clutterScore.
-3. **Cập nhật ghi chú Attribution GA4 giai đoạn 08–15/10/2026:**
+3. **Cập nhật ghi chú Attribution GA4 giai đoạn 08-15/10/2026:**
    - Ghi chú mốc thời gian sự cố UTM của OpenAI trong báo cáo tuần để đối chiếu chính xác số liệu tăng trưởng của nguồn kênh AI Referral.

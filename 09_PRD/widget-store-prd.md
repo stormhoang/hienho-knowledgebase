@@ -1,11 +1,11 @@
 # PRD: MoSpark Widget Store Platform
 
-> - **Document Version:** 1.9 (Dual Ingestion Workflows)
-> - **Product Manager:** Hiến (Project Manager)
+> - **Phiên bản:** 1.9 (Dual Ingestion Workflows)
+> - **Owner:** Hiến (Project Manager)
 > - **Prototype & Logic Builder:** Hiếu
 > - **Widget Standards & Packaging:** Thuận
-> - **Target Release:** Q3/2026 (Phase 1)
-> - **Status:** PRD Approved for Development
+> - **Tiến độ:** Q3/2026 (Phase 1)
+> - **Trạng thái:** PRD Approved for Development
 
 ---
 

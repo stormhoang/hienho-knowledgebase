@@ -1,12 +1,12 @@
 # BRD: Cổng Tiện Ích Vé Số & Mua Vé Số Trực Tuyến MoMo (MoMo Lottery Hub)
 ## Cổng Tra Cứu Kết Quả Vé Số Sạch, Mua Vé Số Chính Thống & Công Cụ Tăng Trưởng Người Dùng Mới (PLG Web-to-App Engine)
 
-> - **Project:** Cổng Tiện Ích Vé Số & Mua Vé Số Trực Tuyến (MoMo Lottery Hub)
-> - **Main URL:** momo.vn/ve-so
-> - **Division:** Growth Platform Division (Web Platform)
-> - **Governance:** Web Product Lead
-> - **Version:** 2.6 · Tháng 09/2026
-> - **Status:** Active / Sẵn sàng triển khai
+> - **Dự án:** Cổng Tiện Ích Vé Số & Mua Vé Số Trực Tuyến (MoMo Lottery Hub)
+> - **URL chính:** momo.vn/ve-so
+> - **Khối phụ trách:** Growth Platform Division (Web Platform)
+> - **Phê duyệt:** Web Product Lead
+> - **Phiên bản:** 2.6 · Tháng 09/2026
+> - **Trạng thái:** Active / Sẵn sàng triển khai
 > - **Business Model:** Utility-Led Product-Led Growth (PLG), Chuyển đổi Web-to-App, Phí giao dịch thanh toán & Doanh thu hợp tác phân phối
 
 ---
@@ -32,8 +32,8 @@ Dự án thống nhất chọn **`momo.vn/ve-so`** làm thư mục gốc (Root P
 2. **Bao Quát Cả 2 Trục Sản Phẩm:** Cụm từ *"Vé số"* là thuật ngữ chung bao hàm trọn vẹn cả *Vé số Vietlott*, *Vé số Kiến thiết 3 Miền* và *Vé số Điện toán Thủ Đô*.
 3. **Cấu Trúc Topic Silo Rõ Ràng:** Mọi nhánh con phục vụ Dò số (`/ve-so/do-so`), Trực tiếp (`/ve-so/truc-tiep`), Đài tỉnh thành (`/ve-so/da-lat`, `/ve-so/ho-chi-minh`), Vietlott (`/ve-so/vietlott/...`) và Cẩm nang (`/ve-so/blog/...`) đều được gom vào một hệ sinh thái đồng nhất.
 
-### 1.3 Resolution (Giải Pháp & Chiến Lược Đánh Bất Đối Xứng)
-Xây dựng **Cổng Tiện Ích Vé Số & Mua Vé Số Trực Tuyến (MoMo Lottery Hub)** tại `momo.vn/ve-so` theo mô hình **Product-Led Growth (PLG)**, áp dụng chiến lược tấn công bất đối xứng:
+### 1.3 Resolution (Giải Pháp & Chiến Lược Tiếp Cận Khác Biệt)
+Xây dựng **Cổng Tiện Ích Vé Số & Mua Vé Số Trực Tuyến (MoMo Lottery Hub)** tại `momo.vn/ve-so` theo mô hình **Product-Led Growth (PLG)**, áp dụng chiến lược tiếp cận khác biệt:
 * **Đánh ngách High-intent & Đài Tỉnh Thành (Station Matrix & Day-of-Week):** Khởi tạo hệ thống Programmatic SEO (pSEO) phủ 41 đài phát hành XSKT và 21 trang theo thứ trong tuần, kết hợp 5 cụm Quick Wins (Dò vé số thông minh, Trực tiếp real-time, Vietlott SMS hướng dẫn sửa lỗi, Bảng tính thuế TNCN, Thống kê chu kỳ).
 * **Định vị Cổng Kết Quả Sạch Sẽ (Zero-Ad Experience):** Tải trang < 1.5s, 100% không quảng cáo rác, bảo chứng bằng uy tín thương hiệu tài chính số 1 Việt Nam.
 * **Hạ Tầng Mua Vé & Thanh Toán Native Web Dynamic QR:** Cho phép chọn số trực quan cho toàn bộ 4 nhóm sản phẩm Vietlott và XSKT 3 miền, thanh toán tức thì ngoài Web không bắt buộc tải app trước.
@@ -96,7 +96,7 @@ Xây dựng **Cổng Tiện Ích Vé Số & Mua Vé Số Trực Tuyến (MoMo Lo
 
 ---
 
-### 2.2 Phân Rã Dữ Liệu Tra Cứu Theo 41 Đài Phát Hành Tỉnh Thành (28,8 Triệu Search)
+### 2.2 Bóc Tách Dữ Liệu Tra Cứu Theo 41 Đài Phát Hành Tỉnh Thành (28,8 Triệu Search)
 
 <table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
   <thead>
@@ -217,7 +217,7 @@ Xây dựng **Cổng Tiện Ích Vé Số & Mua Vé Số Trực Tuyến (MoMo Lo
 Có **1.326 từ khóa** thể hiện rõ ý định tìm kiếm kết hợp giữa `[Xem KQXS] + [Đài/Tỉnh/Miền] + [Ngày/Thứ/Thời gian]`:
 * **Nhóm Đài/Miền + Thứ trong tuần (550k/từ):** `xổ số miền nam thứ tư` (550k), `xổ số miền nam chủ nhật hàng tuần` (550k), `xổ số miền bắc thứ hai hàng tuần` (368k).
 * **Nhóm Tỉnh thành + Hôm nay/Hôm qua:** `xổ số hà nội hôm nay` (201k), `xổ số khánh hòa hôm nay` (165k), `xổ số gia lai hôm nay` (90.5k).
-* **Nhóm Chu kỳ lịch sử 30–100 ngày:** `kết quả xổ số miền bắc 30 ngày` (1.000.000), `xsmb 30 ngày` (550k), `xổ số miền bắc 90 ngày` (165k).
+* **Nhóm Chu kỳ lịch sử 30-100 ngày:** `kết quả xổ số miền bắc 30 ngày` (1.000.000), `xsmb 30 ngày` (550k), `xổ số miền bắc 90 ngày` (165k).
 
 ---
 
@@ -329,7 +329,7 @@ Google xếp vertical vé số và tài chính trúng thưởng vào nhóm phân
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>3. Ma Trận Lai & Chia Độc Đắc (Hybrid)</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Lotto 5/35</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chọn 5 số chính (01–35) + 1 số đặc biệt (01–12).</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chọn 5 số chính (01-35) + 1 số đặc biệt (01-12).</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>2 lần/ngày:</strong> 13h00 & 21h00 hàng ngày</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giải Độc đắc: Tối thiểu <strong>6 tỷ đồng + tích lũy</strong>.<br><em>Khi Độc đắc > 12 tỷ:</em> Chia giải cho hạng Nhất - Năm vào kỳ 21h00 hôm sau.</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.000.000đ/kỳ quay</td>
@@ -337,15 +337,15 @@ Google xếp vertical vé số và tài chính trúng thưởng vào nhóm phân
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;" rowspan="2"><strong>4. Xổ Nhanh Liên Tục (Fast Draw)</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Keno</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chọn 1–10 số trong tập 01–80 (quay 20 số).</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>8 phút/kỳ:</strong> 191 kỳ/ngày (06h00–21h52)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chọn 1-10 số trong tập 01-80 (quay 20 số).</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>8 phút/kỳ:</strong> 191 kỳ/ngày (06h00-21h52)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bậc 10 trùng 10: <strong>2 tỷ đồng/vé</strong>.</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Theo hạn mức đối tác</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Bingo18</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Dự đoán 3 số (từ 1 đến 6), cộng tổng, Lớn - Hòa - Nhỏ.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>6 phút/kỳ:</strong> 159 kỳ/ngày (06h00–21h54)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>6 phút/kỳ:</strong> 159 kỳ/ngày (06h00-21h54)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tỷ lệ trả thưởng lên đến <strong>x120 lần tiền đặt</strong>.</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.000.000đ/kỳ quay</td>
     </tr>
@@ -354,7 +354,7 @@ Google xếp vertical vé số và tài chính trúng thưởng vào nhóm phân
 
 ### 3.2 Các Hình Thức Chơi Nâng Cao
 * **Chơi Bao Số (Bao 5, 7, 8, 9... 18):** Cho phép người chơi tăng xác suất trúng Jackpot lên gấp hàng chục lần và nhận nhiều giải phụ cộng dồn.
-* **Đặt Trước Nhiều Kỳ (Advance Draw):** Tự động mua vé cho 2–6 kỳ quay kế tiếp mà không lo quên ngày quay.
+* **Đặt Trước Nhiều Kỳ (Advance Draw):** Tự động mua vé cho 2-6 kỳ quay kế tiếp mà không lo quên ngày quay.
 
 ### 3.3 Phân Định 2 Trục Phân Phối Trên MoMo
 1. **Trục 1: Vietlott SMS Chính Thống:** Phục vụ khách hàng dùng 3 nhà mạng (Viettel, VinaPhone, MobiFone), tạo cú pháp SMS 9969 tự động, trả thưởng tự động từ Vietlott về Ví MoMo (< 10 triệu) trong 48 giờ.
@@ -556,7 +556,7 @@ momo.vn/ve-so (Master Hub)
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>momo.vn/ve-so/vietlott/bingo-18</code></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Kết quả 3 con số, tổng điểm (3–18), kết quả Lớn - Hòa - Nhỏ theo từng kỳ 6 phút.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Kết quả 3 con số, tổng điểm (3-18), kết quả Lớn - Hòa - Nhỏ theo từng kỳ 6 phút.</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>kết quả bingo 18</code>, <code>xổ số bingo18 hôm nay</code></td>
     </tr>
     <tr>
@@ -576,56 +576,8 @@ momo.vn/ve-so (Master Hub)
 1. **Hero Live Results:** Bảng kết quả kỳ mới nhất (Bộ số trúng thưởng + Quả bóng đặc biệt Jackpot 2 + Giá trị Jackpot tích lũy).
 2. **Instant Ticket Checker:** Widget nhập số dự thưởng để đối soát ngay giải trúng.
 3. **Direct Ticket Picker:** Khay chọn bộ số may mắn cho kỳ quay kế tiếp kèm nút quét mã QR MoMo thanh toán 10.000đ.
-4. **Draw History & Frequency Matrix:** Bảng lịch sử 10–30 kỳ quay trước và bảng thống kê tần suất xuất hiện các con số.
+4. **Draw History & Frequency Matrix:** Bảng lịch sử 10-30 kỳ quay trước và bảng thống kê tần suất xuất hiện các con số.
 5. **Contextual Knowledge Link:** Khối liên kết điều hướng sang cẩm nang luật chơi chi tiết tại `/ve-so/blog/...`.
-
----
-
-### 6.3 Cấu Trúc Trang Đài Tỉnh Thành & Module Tiện Ích Tương Tác 41 Đài (Station Page Anatomy & Interactive Utilities)
-
-Mỗi trang trong hệ sinh thái 41 đài phát hành tỉnh thành (ví dụ: `momo.vn/ve-so/da-lat`, `momo.vn/ve-so/ho-chi-minh`...) được quy hoạch thành một điểm bán vé và tương tác hoàn chỉnh gồm 6 khối chức năng:
-
-<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
-  <thead>
-    <tr style="background-color:#f1f5f9;">
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Khối Giao Diện</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chức Năng Chi Tiết</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trải Nghiệm Tương Tác & Cơ Chế Kỹ Thuật</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Khối 1: Hero KQXS Live Đài</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bảng kết quả kỳ mới nhất của riêng đài đó; đồng hồ đếm ngược đến kỳ quay tiếp theo.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Real-time Lottery Feed API, tự động cập nhật ngay khi lồng cầu quay (16h15 XSMN, 17h15 XSMT, 18h15 XSMB).</td>
-    </tr>
-    <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Khối 2: Lịch Sử & Đầu Đuôi Loto</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lịch sử 30 kỳ quay liên tiếp và bảng thống kê đầu đuôi loto 2 số (00 đến 99).</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tra cứu nhanh số liệu chu kỳ mở thưởng theo lịch phát hành cố định hàng tuần của đài.</td>
-    </tr>
-    <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Khối 3: Số Nóng / Số Lạnh & Smart Shuffle</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thống kê Top 5 cặp số về nhiều nhất (Số Nóng) và lâu chưa về (Số Lạnh); nút bấm "Quay Số May Mắn".</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hoạt họa lồng cầu quay sinh số có trọng số (< 1s) ➔ Nhả dãy 6 số hoàn chỉnh và tự động điền vào Khay vé.</td>
-    </tr>
-    <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Khối 4: Thần Số Học & Phong Thủy Bản Mệnh</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhập ngày sinh ➔ Tính Con số chủ đạo (Life Path) + Ngũ hành Can Chi tương sinh với ngày quay đài ➔ Gợi ý 3 bộ số tài lộc.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tích hợp nút <strong>"Chia sẻ Thẻ Vận May"</strong> (Ảnh Story kèm mã QR lan truyền); gắn Schema <code>WebApplication</code>.</td>
-    </tr>
-    <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Khối 5: Khay Chọn Đa Vé & Thanh Toán Kép</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khay chứa tối đa 6 bộ số (tự nhập hoặc lấy từ Khối 3, 4); Bộ tính tổng tiền tự động (10k - 60k).</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2 Cổng thanh toán: <strong>MoMo Native Dynamic QR</strong> (Quét mã/App MoMo) hoặc <strong>SMS 9969</strong> (Deep Link <code>sms:9969?body=...</code>); hỗ trợ lưu "Nuôi số bản mệnh" và Fallback tồn kho vé.</td>
-    </tr>
-    <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Khối 6: Cẩm Nang & Địa Chỉ Đổi Thưởng</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cơ cấu giải thưởng của đài, hướng dẫn thủ tục đổi vé trúng thưởng và quy định trả thưởng tự động về Ví MoMo.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nội dung chuẩn E-E-A-T và liên kết nội bộ (Internal Link) về <code>/ve-so/blog/...</code>.</td>
-    </tr>
-  </tbody>
-</table>
 
 ---
 
@@ -714,7 +666,7 @@ graph TD
     <tr style="background-color:#f1f5f9;">
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Hạng Mục Tính Năng</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô Tả Chi Tiết</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ưu Tiên</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Đợt Triển Khai</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Giai Đoạn</th>
     </tr>
   </thead>
@@ -722,55 +674,55 @@ graph TD
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Master Template pSEO (41 Đài & 21 Thứ)</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tự động khởi tạo và cập nhật dữ liệu KQXS cho 41 đài phát hành và 21 trang theo thứ trong tuần dưới cây <code>/ve-so/</code>.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1 (Launch Blocker)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 1 (Launch Blocker)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phase 1</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Interactive Dò Vé Số Widget</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Công cụ nhập số đối soát trúng thưởng trực tiếp tại <code>/ve-so/do-so</code>, tự động tính tiền thưởng thực nhận sau thuế.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1 (Launch Blocker)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 1 (Launch Blocker)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phase 1</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Khay Chọn Đa Vé & Dual Checkout</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khay chọn tối đa 6 bộ số, bộ tính tiền tự động (10k-60k) và 2 cổng thanh toán MoMo Dynamic QR / SMS Dispatcher 9969.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1 (Launch Blocker)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 1 (Launch Blocker)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phase 1</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Module Số Nóng/Lạnh & Thần Số Học Đài</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tiện ích Shuffle quay số theo tần suất và công cụ tính con số tài lộc theo ngày sinh & ngũ hành đài trên 41 trang đài.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1 (Launch Blocker)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 1 (Launch Blocker)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phase 1</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Sổ Tay Hướng Dẫn Vietlott E-E-A-T</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hệ thống bài viết tại <code>/ve-so/blog/</code> giải đáp luật chơi, cách chơi bao và khắc phục lỗi SMS.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1 (Launch Blocker)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 1 (Launch Blocker)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phase 1</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Thẻ Vận May Viral & Nuôi Số Bản Mệnh</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xuất ảnh Story Card chia sẻ bạn bè kèm QR mời gọi; lưu số may mắn và tự động gửi Push nhắc mua vé trước giờ quay.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 2</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phase 2</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Cảnh Báo Jackpot & Trigger Chia Độc Đắc</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tự động bật thông báo khi Jackpot Power 6/55 > 100 tỷ hoặc Lotto 5/35 > 12 tỷ (chia giải).</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 2</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phase 2</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Đặt Vé Trước Nhiều Kỳ (Advance Draw)</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tính năng đặt trước và giữ số dự thưởng tự động cho 2–6 kỳ quay liên tiếp.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tính năng đặt trước và giữ số dự thưởng tự động cho 2-6 kỳ quay liên tiếp.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 2</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phase 2</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Quét Vé Số Bằng Camera (OCR Web)</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhận diện số trên vé giấy bằng camera trên trình duyệt để tự động điền vào công cụ dò vé.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 3</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phase 3</td>
     </tr>
   </tbody>
@@ -1010,5 +962,5 @@ Hệ thống MoSpark Growth Engine kết nối trực tiếp với API cấp d�
 - **Tháng 08/2026 (v2.3):** Bổ sung mục 2.4 Tiêu chuẩn đánh giá của Google (YMYL & E-E-A-T); chuẩn hóa toàn bộ đường dẫn cẩm nang sang `/ve-so/blog/` (hiển thị UI là "Cẩm Nang"); định hình mô hình Hybrid Product Page kết hợp PLG (Dò vé & Mua vé) và Content (Luật chơi & FAQ) cho 6 dòng game Vietlott.
 - **Tháng 08/2026 (v2.2):** Bổ sung mục 6.2 Kiến trúc hiển thị kết quả Vietlott 3 cấp độ.
 - **Tháng 08/2026 (v2.1):** Thống nhất chuẩn hóa URL Root Domain chính thức về **`momo.vn/ve-so`**.
-- **Tháng 08/2026 (v2.0):** Bổ sung phân tích chuyên sâu 41 đài XSKT, 4 nhóm sản phẩm Vietlott, 5 cụm Quick Wins và chiến lược đánh bất đối xứng.
+- **Tháng 08/2026 (v2.0):** Bổ sung phân tích chuyên sâu 41 đài XSKT, 4 nhóm sản phẩm Vietlott, 5 cụm Quick Wins và chiến lược tiếp cận khác biệt.
 - **Tháng 08/2026 (v1.0):** Khởi tạo tài liệu BRD ban đầu.

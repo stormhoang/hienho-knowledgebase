@@ -1,10 +1,10 @@
 # BRD: U18 User Growth (Phí Xét Tuyển Đại Học 2026)
 
-> - **Project:** U18 New User Acquisition - Phí Xét Tuyển Đại Học & Back to School 2026
-> - **Main URL:** `momo.vn/phi-xet-tuyen` (Trang Landing Page chính thức)
-> - **Division:** User Growth - GPD
-> - **Version:** 1.0 · Tháng 7/2026
-> - **Status:** Active (Campaign Launching)
+> - **Dự án:** U18 New User Acquisition - Phí Xét Tuyển Đại Học & Back to School 2026
+> - **URL chính:** `momo.vn/phi-xet-tuyen` (Trang Landing Page chính thức)
+> - **Khối phụ trách:** User Growth - GPD
+> - **Phiên bản:** 1.0 · Tháng 7/2026
+> - **Trạng thái:** Active (Campaign Launching)
 
 ---
 
@@ -25,7 +25,7 @@ MoMo hiện đang sở hữu giải pháp thanh toán tiện lợi nhưng chưa 
 ### Resolution
 Hoàn thiện và Go-live trang Landing Page [momo.vn/phi-xet-tuyen](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/06_USE_CASE_MOMO/user-growth-u18-brd.md) làm Hub thông tin trung tâm. Thiết kế phễu chuyển đổi thông minh:
 1. **Giá trị tiện ích:** Hướng dẫn thanh toán 100% tự động bằng cách quét mã QR, không cần nhập thủ công thông tin ngân hàng giúp tránh sai sót 100%. Hỗ trợ tính năng "thanh toán hộ" cho phụ huynh/người thân.
-2. **Động lực đăng ký (Hook):** Tặng mã khuyến mãi đặc quyền **`EMCHUA18`** và gói quà tân thủ trị giá **20.000đ** (thẻ quà giảm giá ăn uống, mua sắm, nạp data 4G/5G tiếp sức mùa nhập học).
+2. **Động lực đăng ký (Hook):** Tặng mã khuyến mãi đặc quyền **`EMCHUA18`** và gói quà người dùng mới trị giá **20.000đ** (thẻ quà giảm giá ăn uống, mua sắm, nạp data 4G/5G tiếp sức mùa nhập học).
 3. **Phân phối đa kênh:** Phối hợp cùng các kênh truyền thông tuyển sinh và chạy chiến dịch Digital Ads (Google UAC, TikTok Ads) với ngân sách **300.000.000đ**.
 
 ---
@@ -33,7 +33,7 @@ Hoàn thiện và Go-live trang Landing Page [momo.vn/phi-xet-tuyen](file:///Use
 ## 2. Business Context (Bối cảnh doanh nghiệp)
 *   **Chiến dịch chuyển tiếp:** Học sinh cấp 3 chuẩn bị bước vào Đại học có các nhu cầu tài chính độc lập lần đầu tiên.
 *   **Hành vi người dùng:** Phụ thuộc nhiều vào thiết bị di động, nhạy bén với mạng xã hội (TikTok, Facebook Group), hay tìm kiếm thông tin trên công cụ tìm kiếm và các trang tin tuyển sinh.
-*   **Tính thời điểm:** Chiến dịch tập trung mạnh từ đầu tháng 7 và đạt đỉnh trong giai đoạn đóng phí xét tuyển từ **15/07/2026 đến 21/07/2026**.
+*   **Tính thời điểm:** Chiến dịch tập trung mạnh từ đầu tháng 7 và chạm mức cao nhất trong giai đoạn đóng phí xét tuyển từ **15/07/2026 đến 21/07/2026**.
 
 ---
 

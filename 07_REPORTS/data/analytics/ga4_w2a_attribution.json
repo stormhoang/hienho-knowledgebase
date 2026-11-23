@@ -911,10 +911,6 @@
         {
           "path": "/nhap-ma-appstore",
           "clicks": 149
-        },
-        {
-          "path": "/truyen-hinh",
-          "clicks": 13
         }
       ]
     },
@@ -1089,14 +1085,6 @@
           "clicks": 153
         },
         {
-          "path": "/tien-ich-giao-thong/garage",
-          "clicks": 122
-        },
-        {
-          "path": "/tien-ich-giao-thong/hang-xe/vinfast",
-          "clicks": 62
-        },
-        {
           "path": "/tien-ich-giao-thong/blog/thue-nhap-khau-o-to-moi-nhat-5082",
           "clicks": 56
         },
@@ -1111,6 +1099,14 @@
         {
           "path": "/blog/tram-bot-la-gi-gia-ve-tai-tram-thu-phi-bot-la-bao-nhieu-c193dt1293",
           "clicks": 30
+        },
+        {
+          "path": "/tin-tuc/khuyen-mai/mien-phi-ngay-1-lit-xang-khi-nhan-thich-muc-tra-8561",
+          "clicks": 29
+        },
+        {
+          "path": "/tin-tuc/thong-bao/di-metro-ho-chi-minh-nhanh-gon-mua-ve-lien-tren-8246",
+          "clicks": 27
         }
       ]
     },
@@ -1257,10 +1253,6 @@
           "clicks": 1851
         },
         {
-          "path": "/nhan-tien-quoc-te",
-          "clicks": 627
-        },
-        {
           "path": "/blog/3-cach-chuyen-tien-tu-my-ve-viet-nam-c116dt1204",
           "clicks": 316
         },
@@ -1291,6 +1283,10 @@
         {
           "path": "/blog/3-cach-chuyen-nhan-tien-tu-duc-ve-viet-nam-nhanh-nhat-c116dt1347",
           "clicks": 103
+        },
+        {
+          "path": "/blog/huong-dan-chuyen-tien-nhan-tien-tu-uc-ve-viet-nam-c116dt1253",
+          "clicks": 102
         }
       ]
     },
@@ -1330,16 +1326,16 @@
           "clicks": 123
         },
         {
-          "path": "/internet",
-          "clicks": 119
-        },
-        {
           "path": "/blog/huong-dan-cach-gia-han-wifi-viettel-nhanh-gon-c193dt1224",
           "clicks": 55
         },
         {
           "path": "/blog/cach-dong-tien-mang-fpt-online-c103dt1436",
           "clicks": 43
+        },
+        {
+          "path": "/vien-thong-tien-ich",
+          "clicks": 4
         }
       ]
     },
@@ -1448,10 +1444,6 @@
           "clicks": 398
         },
         {
-          "path": "/nap-tien-dien-thoai",
-          "clicks": 329
-        },
-        {
           "path": "/nap-data/khuyen-mai",
           "clicks": 322
         },
@@ -1470,6 +1462,10 @@
         {
           "path": "/blog/goi-4g-vinaphone-khong-gioi-han-dung-luong-c193dt1381",
           "clicks": 138
+        },
+        {
+          "path": "/blog/huong-dan-cach-dang-ky-4g-mobifone-sieu-chi-tiet-c193dt1303",
+          "clicks": 124
         }
       ]
     },
@@ -1950,6 +1946,10 @@
           "clicks": 43
         },
         {
+          "path": "/blog/top-3-cach-dong-tien-dien-qua-dien-thoai-nhanh-nhat-c193dt1184",
+          "clicks": 34
+        },
+        {
           "path": "/blog/top-4-ung-dung-dong-tien-dien-online-uu-dai-khung-c193dt1181",
           "clicks": 29
         },
@@ -2336,10 +2336,6 @@
           "clicks": 45
         },
         {
-          "path": "/phi-xet-tuyen",
-          "clicks": 33
-        },
-        {
           "path": "/sinh-vien/blog/diem-chuan-dai-hoc-ton-duc-thang-2026-170",
           "clicks": 26
         },
@@ -2352,16 +2348,20 @@
           "clicks": 14
         },
         {
-          "path": "/blog/cach-xet-tuyen-hoc-ba-dai-hoc-theo-chuan-phuong-thuc-3-cua-bo-gd-dt-c193dt1081",
-          "clicks": 8
-        },
-        {
           "path": "/sinh-vien/dai-hoc-kinh-te-tp-ho-chi-minh-ueh",
           "clicks": 5
         },
         {
           "path": "/sinh-vien/blog/diem-chuan-dai-hoc-van-lang-2026-chi-tiet-muc-diem-trung-tuyen-theo-tung-nganh-171",
           "clicks": 4
+        },
+        {
+          "path": "/sinh-vien/blog/tu-hoc-ky-nang-di-lam-5203",
+          "clicks": 4
+        },
+        {
+          "path": "/sinh-vien/blog/hoc-phi-dai-hoc-van-lang-5131",
+          "clicks": 2
         }
       ]
     },

@@ -1,8 +1,8 @@
 # BRD: Student Pass - Thẻ Sinh Viên Số & Đặc Quyền Sinh Viên MoMo
 
-> - **Project:** Student Pass (In-App Digital Identity & Privileges)
-> - **Platform:** MoMo App (Mini-app)
-> - **Division:** Growth Platform Division (GPD)
+> - **Dự án:** Student Pass (In-App Digital Identity & Privileges)
+> - **Nền tảng:** MoMo App (Mini-app)
+> - **Khối phụ trách:** Growth Platform Division (GPD)
 > - **Owner:** Youth & Student Segment Team
 
 ---

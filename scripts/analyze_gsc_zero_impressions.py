@@ -1,3 +1,7 @@
+"""Phân tích URL GSC có impressions = 0 để phát hiện URL chết/chưa index.
+
+Usage: ./.venv/bin/python scripts/analyze_gsc_zero_impressions.py"""
+
 import json, re, os, sys
 from collections import defaultdict, Counter
 from datetime import datetime, timedelta

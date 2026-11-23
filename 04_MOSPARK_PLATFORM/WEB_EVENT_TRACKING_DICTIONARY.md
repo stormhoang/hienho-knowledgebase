@@ -36,17 +36,17 @@
 
 ## III. BỘ ĐO LƯỜNG TIỆN ÍCH NHÚNG (UTILITIES TOOL & LOGIN ATTRIBUTION)
 
-Đây là hệ thống mới được chuẩn hóa qua **Folder `[Platform] - UTILITIES TOOL` (GTM Version 222)** và mã frontend:
+Đây là hệ thống được chuẩn hóa qua **Folder `[Platform] - UTILITIES TOOL` (GTM Container `10104547` - `GTM-P9JDDJZ`)** và mã frontend:
 
-### 1. Sự kiện GTM / GA4 bắn ra
-* **Event Name:** **`click_to_app`**
-* **Trigger kích hoạt:** Custom Event `utility_track` khi người dùng click CTA mở App hoặc mở Popup QR của Tool.
-* **Các tham số đính kèm (Query qua `event_params`):**
-  * **`tool_id`**: Mã định danh công cụ (ví dụ: `cic_calc`, `salary_calc`, `bhxh_calc`, `saving_calc`).
-  * **`onelink_id`**: Mã OneLink tương ứng (ví dụ: `6OKONic9`, `EoWoWJ1G`, `J3hhwGSR`).
-  * **`placement`**: Vị trí nhúng công cụ (ví dụ: `mot-mua-quyt`, `inline_widget`, `blog_body`).
-  * **`click_url`**: Full OneLink URL đã được tự động trang trí (Decorated URL).
-  * **`click_to_app`**: Giá trị cố định `'1'`.
+### 1. Phễu Sự kiện GTM / GA4 bắn ra (2 Tầng Đo Lường Khép Kín)
+
+| STT | Event Name | Tên Thẻ GTM (Tag) | Trigger Kích Hoạt | Bản Chất Đo Lường | Tham Số Bắn Lên GA4 (`event_params`) |
+| :---: | :--- | :--- | :--- | :--- | :--- |
+| **1** | **`utility_view`** | `[Platform] - GA4 - Utility View` (#1059) | `CE - utility_view` (#1058) | **Lượt hiển thị (Impression / In-View):** Khi khối công cụ lọt vào màn hình (tối thiểu 50% trong 1s). | `tool_id`, `placement`, `page_location`, `traffic_type` |
+| **2** | **`click_to_app`** | `[Platform] - GA4 - Utility Tracking` (#1049) | `CE - utility_track` (#1048) | **Lượt nhấp mở App (W2A Click):** Khi user click CTA mở App hoặc mở Popup QR của Tool. | `tool_id`, `onelink_id`, `placement`, `click_url`, `link_url`, `click_to_app: 1`, `traffic_type` |
+
+* **Công thức tỷ lệ tương tác (Utility CTR):**
+  $$\text{Utility CTR} = \frac{\text{click\_to\_app}}{\text{utility\_view}} \times 100\%$$
 
 ### 2. Danh mục 8 Master Utility Tools & Mã OneLink SSOT
 DA dùng bảng này để map mã công cụ hoặc OneLink ID với tên nghiệp vụ:

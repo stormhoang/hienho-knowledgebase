@@ -1,3 +1,7 @@
+"""One-off: chèn nội dung Context mới vào weekly report (Cinema Hub...). Không dùng lại.
+
+Usage: ./.venv/bin/python scripts/update_context_all.py"""
+
 import sys
 
 with open('07_REPORTS/docs/weekly-report-2026-10-26-11-01.md', 'r', encoding='utf-8') as f:

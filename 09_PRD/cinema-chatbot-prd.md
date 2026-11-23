@@ -596,7 +596,7 @@ Toàn bộ tương tác của người dùng với Chatbot được gắn mã th
 Dự án được phân chia thành 2 giai đoạn chiến lược, cam kết đưa toàn bộ nhóm tính năng Cơ bản lên môi trường Production ngay trong tháng 11/2026:
 
 #### A. Giai Đoạn 1 (Tháng 11/2026): Cinema Chatbot Cơ Bản (Informational & Knowledge Grounding MVP)
-- **Mục tiêu then chốt:** Hoàn thiện trọn vẹn nhóm tính năng hỏi đáp Cơ bản và phát hành chính thức lên Production trước ngày **30/11/2026**.
+- **Mục tiêu then chốt:** Hoàn thiện trọn vẹn nhóm tính năng hỏi đáp Cơ bản và triển khai chính thức lên Production trước ngày **30/11/2026**.
 - **Phạm vi triển khai (Scope Phase 1):**
   - Khởi tạo dự án con `Cinema` trên hệ thống Chatbot Admin (`adminweb.momocdn.net/chatbot-admin/grounding_document`).
   - Nạp và chuẩn hóa 3 nguồn dữ liệu Grounding Documents: Kho bài viết Blog MoSpark (review, after-credit, easter eggs), Danh mục toàn bộ phim đang và sắp chiếu (thời lượng, đạo diễn, diễn viên, tóm tắt, độ tuổi P/K/T13/T16/T18, điểm đánh giá MoMo), và Danh mục toàn bộ các cụm rạp đối tác (địa chỉ, số tầng, quận huyện, tiện ích bãi xe, phòng chiếu).
@@ -608,7 +608,7 @@ Dự án được phân chia thành 2 giai đoạn chiến lược, cam kết đ
 - **Tiến độ chi tiết từng tuần trong tháng 11/2026:**
   - *Tuần 1 (04/11 - 10/11/2026):* Cấu hình dự án Cinema trên Chatbot Admin, thiết lập nguồn quét sitemap, kích hoạt bộ thẩm định nội dung và nạp dữ liệu tri thức đợt 1.
   - *Tuần 2 (11/11 - 17/11/2026):* Phát triển giao diện Chatbot Widget trên Web Cinema; kết nối Frontend vào API Gateway (`POST /api/cinema/chatbot/query`); cấu hình Contextual Prompts.
-  - *Tuần 3 (18/11 - 24/11/2026):* Kiểm thử toàn diện trên môi trường Staging/UAT (`momovn-dev.mservice.io`); thẩm định độ chính xác câu trả lời và rà soát các trường hợp ngoại lệ.
+  - *Tuần 3 (18/11 - 24/11/2026):* Test toàn diện trên môi trường Staging/UAT (`momovn-dev.mservice.io`); thẩm định độ chính xác câu trả lời và rà soát các trường hợp ngoại lệ.
   - *Tuần 4 (25/11 - 30/11/2026):* **Go-Live Production Phase 1** trên toàn bộ Kênh Web MoMo Cinema (`momo.vn/cinema/*`); giám sát hiệu năng P95 dưới 1.2 giây và theo dõi phản hồi thực tế của người dùng.
 
 #### B. Giai Đoạn 2 (Tháng 12/2026): Cinema Chatbot Nâng Cao (Transactional & Contextual Actions - Cao Điểm Tết 2027)
@@ -648,15 +648,15 @@ components/cinema/chatbot/
 └── useCinemaChatbot.ts       # React Custom Hook quản lý gửi tin nhắn, gọi API và lưu session
 ```
 
-### 9.3 Tuyến Đường API Backend & Cơ Chế Giả Lập Kiểm Thử (Route Handler & Mock Data)
+### 9.3 Tuyến Đường API Backend & Cơ Chế Giả Lập Test (Route Handler & Mock Data)
 - **Vị trí Route Handler trong Next.js:**
   - Tập tin: `app/api/cinema/chatbot/query/route.ts`
   - Phương thức: `POST`
 - **Cơ chế hoạt động khi triển khai thực tế:**
   - Nhận `query`, `pageContext` từ Client.
   - Chuyển tiếp truy vấn sang Backend Chatbot Admin qua API nội bộ hoặc SDK mô hình ngôn ngữ.
-- **Kịch bản kiểm thử cục bộ (Local Development & Fallback Mock):**
-  - Để Kỹ sư Frontend có thể kiểm thử giao diện mượt mà trên máy cục bộ (`npm run dev`) mà không cần chờ cấu hình máy chủ, Route Handler hỗ trợ cờ giả lập:
+- **Kịch bản test cục bộ (Local Development & Fallback Mock):**
+  - Để Kỹ sư Frontend có thể test giao diện mượt mà trên máy cục bộ (`npm run dev`) mà không cần chờ cấu hình máy chủ, Route Handler hỗ trợ cờ giả lập:
 ```typescript
 // app/api/cinema/chatbot/query/route.ts (Mock Fallback Pattern)
 import { NextResponse } from "next/server";
@@ -721,15 +721,15 @@ export async function POST(request: Request) {
 
 ---
 
-## 10. CƠ CHẾ KIỂM THỬ VÀ ĐÁNH GIÁ CHẤT LƯỢNG CHATBOT (EVALUATION & QA FRAMEWORK)
+## 10. CƠ CHẾ TEST VÀ ĐÁNH GIÁ CHẤT LƯỢNG CHATBOT (EVALUATION & QA FRAMEWORK)
 
-Để đảm bảo Cinema Chatbot vận hành ổn định, chính xác tuyệt đối và không phát sinh rủi ro thông tin sai lệch (hallucination) trước khi đưa lên Production, hệ thống thiết lập khung kiểm thử 5 tầng toàn diện:
+Để đảm bảo Cinema Chatbot vận hành ổn định, chính xác tuyệt đối và không phát sinh rủi ro thông tin sai lệch (hallucination) trước khi đưa lên Production, hệ thống thiết lập khung test 5 tầng toàn diện:
 
 ```
 +----------------------------------------------------------------------------------------------------+
-|                               KHUNG KIỂM THỬ CHATBOT NĂM TẦNG TOÀN DIỆN                            |
+|                               KHUNG TEST CHATBOT NĂM TẦNG TOÀN DIỆN                            |
 +--------------------------+-----------------------------------------+-------------------------------+
-| Tầng kiểm thử            | Công cụ & Phương pháp thực hiện         | Tiêu chuẩn nghiệm thu (SLA)   |
+| Tầng test            | Công cụ & Phương pháp thực hiện         | Tiêu chuẩn nghiệm thu (SLA)   |
 +--------------------------+-----------------------------------------+-------------------------------+
 | 1. Kiểm toán Dữ liệu     | Eligibility Validation trên Chatbot     | 100% trang nạp đã xuất bản,   |
 |    Tri thức Đầu vào      | Admin (quét 3 sitemap Blog, Phim, Rạp)  | không có trang rác/trang nháp |
@@ -738,10 +738,10 @@ export async function POST(request: Request) {
 |    (LLM-as-a-Judge)      | Chấm điểm tự động qua mô hình thẩm định | Zero-Spoiler: 100%            |
 |                          |                                         | Answer Relevance: > 95%       |
 +--------------------------+-----------------------------------------+-------------------------------+
-| 3. Kiểm thử Kỹ thuật     | Bóc tách tham số (Slot Filling) và      | Slot Accuracy: > 95%          |
+| 3. NGHIỆM THU KỸ THUẬT     | Bóc tách tham số (Slot Filling) và      | Slot Accuracy: > 95%          |
 |    & Tích hợp OneLink    | Trình kiểm tra cú pháp OneLink Deep Link| Deep Link mở đúng App: 100%   |
 +--------------------------+-----------------------------------------+-------------------------------+
-| 4. Kiểm thử Thực tế      | Môi trường UAT (momovn-dev.mservice.io) | Không có lỗi nghiêm trọng     |
+| 4. Test Thực tế      | Môi trường UAT (momovn-dev.mservice.io) | Không có lỗi nghiêm trọng     |
 |    (Dogfooding & UAT)    | Đội ngũ Product, Content & BU Movies thử| Bảng Feedback giải quyết 100% |
 +--------------------------+-----------------------------------------+-------------------------------+
 | 5. Giám sát Sản xuất     | Umami Tracking & Bảng theo dõi câu hỏi  | Tỷ lệ câu hỏi không đáp: < 5% |
@@ -757,7 +757,7 @@ export async function POST(request: Request) {
 - **Tiêu chuẩn nghiệm thu:** Tỷ lệ bao phủ đạt trên 95% số trang bài viết và rạp chiếu chính thức; không có bất kỳ trang nháp nào bị nạp vào cơ sở dữ liệu Vector.
 
 ### 10.2 Tầng 2: Bộ Đề Thi Thẩm Định Tự Động (Golden Dataset & LLM-as-a-Judge)
-Xây dựng một bộ đề kiểm thử chuẩn hóa gồm 100 cặp câu hỏi và câu trả lời chuẩn (Ground Truth Q&A) bao quát toàn bộ các kịch bản thực tế:
+Xây dựng một bộ đề test chuẩn hóa gồm 100 cặp câu hỏi và câu trả lời chuẩn (Ground Truth Q&A) bao quát toàn bộ các kịch bản thực tế:
 - **Cấu trúc bộ đề thi 100 câu:**
   - 30 câu hỏi Thông tin Cơ bản (After-credit, review khen/chê, diễn viên, địa chỉ rạp, tiện ích bãi xe).
   - 25 câu hỏi Thể loại & Trạng thái phát hành (Kinh dị đang chiếu, hoạt hình nhãn P, phim sắp chiếu Tết 2027, phim đã ngừng chiếu).
@@ -771,25 +771,25 @@ Xây dựng một bộ đề kiểm thử chuẩn hóa gồm 100 cặp câu hỏ
   4. *Độ ngắn gọn súc tích (Conciseness):* Độ dài câu trả lời có nằm trong giới hạn 2-3 câu không? Có bị dài dòng lê thê gây mỏi mắt trên điện thoại không? (Tiêu chuẩn: Đạt trên 90%).
   5. *Tính khả thi hành động (Actionability):* Câu trả lời có đính kèm đường link bài đọc hoặc nút OneLink mở App MoMo chính xác không? (Tiêu chuẩn: 100%).
 
-### 10.3 Tầng 3: Kiểm Thử Kỹ Thuật & Tích Hợp OneLink (Integration & Technical Verification)
-- **Kiểm thử bóc tách tham số (Slot Filling Accuracy):** Đo lường độ chính xác của bộ phân tích ý định khi người dùng gõ câu lệnh có tên riêng không dấu hoặc viết tắt (Ví dụ: "cresent mall" -> `cgv-crescent-mall`, "tee yod 2" -> `tee-yod-2-quy-an-tang`). Tiêu chuẩn độ chính xác bóc tách đạt trên 95%.
+### 10.3 Tầng 3: NGHIỆM THU KỸ THUẬT & Tích Hợp OneLink (Integration & Technical Verification)
+- **Test bóc tách tham số (Slot Filling Accuracy):** Đo lường độ chính xác của bộ phân tích ý định khi người dùng gõ câu lệnh có tên riêng không dấu hoặc viết tắt (Ví dụ: "cresent mall" -> `cgv-crescent-mall`, "tee yod 2" -> `tee-yod-2-quy-an-tang`). Tiêu chuẩn độ chính xác bóc tách đạt trên 95%.
 - **Trình kiểm tra cú pháp OneLink (Deep Link Validator):**
   - Chạy kịch bản tự động kiểm tra 100% các đường link OneLink được sinh ra từ Chatbot.
   - Xác thực liên kết chứa đầy đủ các tham số định tuyến (`movieId`, `theaterId`, `showtime`, `seats`, `af_dp`).
   - Kiểm tra điều hướng thực tế trên cả thiết bị di động thật (iOS và Android) đảm bảo ứng dụng MoMo mở thẳng vào màn hình sơ đồ chọn ghế, không bị lỗi văng ứng dụng hoặc quay về trang chủ.
-- **Kiểm thử tải và độ trễ (Latency & Performance SLA):**
+- **Test tải và độ trễ (Latency & Performance SLA):**
   - Thời gian phản hồi khi trúng bộ nhớ đệm (Semantic Cache Hit): Dưới 150 mili-giây.
   - Thời gian phản hồi khi gọi mô hình ngôn ngữ mới (Cache Miss): Dưới 1.200 mili-giây.
-  - Chạy kiểm thử tải giả lập với 50 truy vấn đồng thời (Concurrent Queries) đảm bảo hệ thống không bị nghẽn API Gateway.
+  - Chạy test tải giả lập với 50 truy vấn đồng thời (Concurrent Queries) đảm bảo hệ thống không bị nghẽn API Gateway.
 
-### 10.4 Tầng 4: Kiểm Thử Người Dùng Thực Tế & Thử Nghiệm Nội Bộ (Dogfooding & Manual UAT)
+### 10.4 Tầng 4: Test Người Dùng Thực Tế & Thử Nghiệm Nội Bộ (Dogfooding & Manual UAT)
 - **Môi trường triển khai thử nghiệm:** Triển khai phiên bản thử nghiệm đầy đủ trên môi trường UAT ([momovn-dev.mservice.io](https://momovn-dev.mservice.io)).
 - **Quy trình thử nghiệm nội bộ (Dogfooding):**
   - Mở quyền truy cập cho đội ngũ Kỹ sư Web Platform, đội ngũ Quản trị Nội dung (Content Team) và Đội ngũ Sản phẩm Phim (BU Movies) trải nghiệm thực tế trong 5 ngày.
   - Cố tình đặt các câu hỏi khó, câu hỏi mập mờ, câu hỏi tiếng lóng ("phim này coi có sợ té ghế không", "có suất khuya k", "bồ tèo coi phim j") để kiểm tra phản xạ của Chatbot.
 - **Quản lý lỗi và phản hồi tập trung:** Sử dụng bảng đối soát trực tuyến (tương tự bảng Feedback Sheet của dự án Vé số) để ghi nhận các câu trả lời chưa chuẩn, phân loại lỗi (Lỗi thiếu dữ liệu / Lỗi hiểu sai ý định / Lỗi giao diện) và khắc phục 100% trước khi phát hành.
 
-### 10.5 Tầng 5: Giám Sát Vận Hành Sau Phát Hành (Production Realtime Monitoring)
+### 10.5 Tầng 5: Giám Sát Vận Hành Sau Go-live (Production Realtime Monitoring)
 Sau khi đưa lên Production, hệ thống tiếp tục duy trì cơ chế đánh giá vòng lặp khép kín (Closed-Loop Feedback):
 - **Theo dõi tỷ lệ câu hỏi không trả lời được (Fallback Rate):** Đo lường tần suất Chatbot phải trả lời câu mặc định "Hiện tại hệ thống chưa có thông tin...". Nếu tỷ lệ này vượt quá 5%, hệ thống tự động xuất danh sách các câu hỏi chưa đáp ứng để bổ sung tài liệu vào Grounding Documents.
 - **Tín hiệu đánh giá của người dùng (Feedback Signals):** Tích hợp nút đánh giá nhanh Hữu ích (Thumbs Up) / Chưa hữu ích (Thumbs Down) bên dưới mỗi câu trả lời.

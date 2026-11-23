@@ -2,13 +2,13 @@
 *Dự án chiến lược: MoMo Destination Hub - Cổng Thông Tin & Đặt Dịch Vụ Du Lịch Outbound*
 
 ## THÔNG TIN CHUNG (Metadata)
-> *   **Tên dự án / Sản phẩm (PRODUCT NAME):** MoMo Destination Hub (Cổng Thông Tin & Đặt Dịch Vụ Du Lịch Quốc Tế)
-> *   **Phiên bản & Ngày (Version & Date):** Version 1.0 - 30/06/2026
-> *   **Đơn vị đề xuất (Business Owner):** Joint Team: Cell Team OTA (MoMo Travel) & Cell Team Telco/Fintech
-> *   **Đơn vị tiếp nhận & phê duyệt:** Web Platform
-> *   **Đội ngũ triển khai kỹ thuật:** Engineering Team & Design System Team
-> *   **Trạng thái tài liệu (Document status):** DRAFT
-> *   **Giai đoạn S-P-A dự kiến:** Stage S (reSearch) & Stage P (Pilot) - Triển khai Q3/2026
+> *   **Dự án:** MoMo Destination Hub (Cổng Thông Tin & Đặt Dịch Vụ Du Lịch Quốc Tế)
+> *   **Phiên bản:** Version 1.0 - 30/06/2026
+> *   **Khối phụ trách:** Joint Team: Cell Team OTA (MoMo Travel) & Cell Team Telco/Fintech
+> *   **Phê duyệt:** Web Platform
+> *   **Đội ngũ triển khai:** Engineering Team & Design System Team
+> *   **Trạng thái:** DRAFT
+> *   **Tiến độ:** Stage S (reSearch) & Stage P (Pilot) - Triển khai Q3/2026
 > *   **Loại yêu cầu:**
 >     *   [x] **1. Tính năng mới (New Feature):** Xây dựng Cổng thông tin Destination Hub (Web Landing Pages) kết hợp Widget tính toán tỷ giá ngoại tệ và luồng in-app mua sắm combo dịch vụ Outbound (eSIM + Vé bay + Khách sạn + QR Thanh toán quốc tế).
 

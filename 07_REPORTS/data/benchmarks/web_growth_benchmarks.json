@@ -1,0 +1,278 @@
+{
+  "as_of": "2026-10-20",
+  "generated_at": "2026-11-14T14:14:48",
+  "source_db": "07_REPORTS/data/cache/performance.sqlite",
+  "period_note": "ga4_landing_pages là snapshot tại synced_at; fact_daily_performance là MTD daily. Không suy diễn cửa sổ ngày ngoài các trường trên.",
+  "overall": {
+    "active_landing_pages": 2523,
+    "sessions": 2044911,
+    "engaged_sessions": 1440388,
+    "engagement_rate_pct": 70.438,
+    "onelink_clicks_track1": 3837,
+    "onelink_clicks_track2": 94717,
+    "w2a_clicks": 98554,
+    "w2a_cvr_pct": 4.819
+  },
+  "by_channel_group": {
+    "non_paid": {
+      "sessions": 1595995,
+      "engaged": 1077626,
+      "w2a": 68689,
+      "channels": {
+        "Organic Search": {
+          "sessions": 832694,
+          "w2a_clicks": 33084,
+          "w2a_cvr_pct": 3.973
+        },
+        "Direct": {
+          "sessions": 629983,
+          "w2a_clicks": 28558,
+          "w2a_cvr_pct": 4.533
+        },
+        "Referral": {
+          "sessions": 97095,
+          "w2a_clicks": 5383,
+          "w2a_cvr_pct": 5.544
+        },
+        "Organic Social": {
+          "sessions": 27642,
+          "w2a_clicks": 1258,
+          "w2a_cvr_pct": 4.551
+        },
+        "AI Assistant": {
+          "sessions": 8549,
+          "w2a_clicks": 390,
+          "w2a_cvr_pct": 4.562
+        },
+        "Organic Video": {
+          "sessions": 32,
+          "w2a_clicks": 16,
+          "w2a_cvr_pct": 50.0
+        }
+      },
+      "engagement_rate_pct": 67.521,
+      "w2a_cvr_pct": 4.304,
+      "sessions_share_pct": 78.047
+    },
+    "paid": {
+      "sessions": 376311,
+      "engaged": 308620,
+      "w2a": 10588,
+      "channels": {
+        "Paid Search": {
+          "sessions": 259014,
+          "w2a_clicks": 9465,
+          "w2a_cvr_pct": 3.654
+        },
+        "Paid Social": {
+          "sessions": 104466,
+          "w2a_clicks": 555,
+          "w2a_cvr_pct": 0.531
+        },
+        "Paid Other": {
+          "sessions": 8624,
+          "w2a_clicks": 114,
+          "w2a_cvr_pct": 1.322
+        },
+        "Cross-network": {
+          "sessions": 4207,
+          "w2a_clicks": 454,
+          "w2a_cvr_pct": 10.792
+        }
+      },
+      "engagement_rate_pct": 82.012,
+      "w2a_cvr_pct": 2.814,
+      "sessions_share_pct": 18.402
+    },
+    "unassigned": {
+      "sessions": 72605,
+      "engaged": 54142,
+      "w2a": 19277,
+      "channels": {
+        "Unassigned": {
+          "sessions": 72605,
+          "w2a_clicks": 19277,
+          "w2a_cvr_pct": 26.551
+        }
+      },
+      "engagement_rate_pct": 74.571,
+      "w2a_cvr_pct": 26.551,
+      "sessions_share_pct": 3.551
+    },
+    "in_app_webview": {
+      "sessions": 61170,
+      "engaged_sessions": 48435,
+      "w2a_clicks": 18494,
+      "active_landing_pages": 90,
+      "note": "Existing users trong app webview; CVR cao là deep-link engagement, không tính vào acquisition benchmark",
+      "w2a_cvr_pct": 30.234
+    },
+    "unassigned_ex_in_app": {
+      "sessions": 11435,
+      "w2a_clicks": 783,
+      "w2a_cvr_pct": 6.847,
+      "note": "Admicro (paid chưa map), (not set), AI referrer, UTM double-encoded - cần fix classification"
+    }
+  },
+  "by_hub": [
+    {
+      "hub_name": "Cinema Hub",
+      "active_pages": 396,
+      "total_sessions": 554502,
+      "engagement_rate_pct": 93.8,
+      "w2a_clicks": 12959,
+      "w2a_cvr_pct": 2.337
+    },
+    {
+      "hub_name": "Download",
+      "active_pages": 1,
+      "total_sessions": 438486,
+      "engagement_rate_pct": 19.66,
+      "w2a_clicks": 222,
+      "w2a_cvr_pct": 0.051
+    },
+    {
+      "hub_name": "Financial Hub",
+      "active_pages": 197,
+      "total_sessions": 253083,
+      "engagement_rate_pct": 82.91,
+      "w2a_clicks": 8504,
+      "w2a_cvr_pct": 3.36
+    },
+    {
+      "hub_name": "Home MoMo",
+      "active_pages": 255,
+      "total_sessions": 232190,
+      "engagement_rate_pct": 77.1,
+      "w2a_clicks": 30494,
+      "w2a_cvr_pct": 13.133
+    },
+    {
+      "hub_name": "Payment Hub",
+      "active_pages": 44,
+      "total_sessions": 177456,
+      "engagement_rate_pct": 91.3,
+      "w2a_clicks": 7235,
+      "w2a_cvr_pct": 4.077
+    },
+    {
+      "hub_name": "Khác / Chưa phân loại",
+      "active_pages": 434,
+      "total_sessions": 130900,
+      "engagement_rate_pct": 53.5,
+      "w2a_clicks": 22069,
+      "w2a_cvr_pct": 16.859
+    },
+    {
+      "hub_name": "Game Hub",
+      "active_pages": 62,
+      "total_sessions": 73236,
+      "engagement_rate_pct": 80.15,
+      "w2a_clicks": 3349,
+      "w2a_cvr_pct": 4.573
+    },
+    {
+      "hub_name": "New User Hub",
+      "active_pages": 13,
+      "total_sessions": 45825,
+      "engagement_rate_pct": 74.78,
+      "w2a_clicks": 4977,
+      "w2a_cvr_pct": 10.861
+    },
+    {
+      "hub_name": "Support Hub",
+      "active_pages": 418,
+      "total_sessions": 32123,
+      "engagement_rate_pct": 94.5,
+      "w2a_clicks": 2718,
+      "w2a_cvr_pct": 8.461
+    },
+    {
+      "hub_name": "Insurance Hub",
+      "active_pages": 49,
+      "total_sessions": 29895,
+      "engagement_rate_pct": 87.56,
+      "w2a_clicks": 382,
+      "w2a_cvr_pct": 1.278
+    },
+    {
+      "hub_name": "Billpay Hub",
+      "active_pages": 15,
+      "total_sessions": 26292,
+      "engagement_rate_pct": 88.85,
+      "w2a_clicks": 3076,
+      "w2a_cvr_pct": 11.699
+    },
+    {
+      "hub_name": "Vehicle Hub",
+      "active_pages": 33,
+      "total_sessions": 17682,
+      "engagement_rate_pct": 89.82,
+      "w2a_clicks": 1330,
+      "w2a_cvr_pct": 7.522
+    },
+    {
+      "hub_name": "Telco Hub",
+      "active_pages": 53,
+      "total_sessions": 16880,
+      "engagement_rate_pct": 71.68,
+      "w2a_clicks": 100,
+      "w2a_cvr_pct": 0.592
+    },
+    {
+      "hub_name": "Merchant Hub",
+      "active_pages": 257,
+      "total_sessions": 9348,
+      "engagement_rate_pct": 68.66,
+      "w2a_clicks": 769,
+      "w2a_cvr_pct": 8.226
+    },
+    {
+      "hub_name": "Travel Hub",
+      "active_pages": 277,
+      "total_sessions": 3741,
+      "engagement_rate_pct": 83.27,
+      "w2a_clicks": 208,
+      "w2a_cvr_pct": 5.56
+    },
+    {
+      "hub_name": "Lottery Hub",
+      "active_pages": 5,
+      "total_sessions": 3007,
+      "engagement_rate_pct": 87.26,
+      "w2a_clicks": 74,
+      "w2a_cvr_pct": 2.461
+    },
+    {
+      "hub_name": "Student Hub",
+      "active_pages": 13,
+      "total_sessions": 267,
+      "engagement_rate_pct": 74.53,
+      "w2a_clicks": 90,
+      "w2a_cvr_pct": 33.708
+    },
+    {
+      "hub_name": "Khác",
+      "active_pages": 1,
+      "total_sessions": 4,
+      "engagement_rate_pct": 75.0,
+      "w2a_clicks": 0,
+      "w2a_cvr_pct": 0.0
+    }
+  ],
+  "landing_page_cvr_distribution": {
+    "min_sessions_threshold": 500,
+    "pages_count": 311,
+    "w2a_cvr_p25_pct": 0.954,
+    "w2a_cvr_median_pct": 1.823,
+    "w2a_cvr_p75_pct": 2.876,
+    "w2a_cvr_p90_pct": 10.236,
+    "interpretation": "CVR >= p75 = top quartile (benchmark tốt); <= p25 = cần xem xét UX/funnel"
+  },
+  "gsc_overall": {
+    "impressions": 24307281,
+    "clicks": 739381,
+    "ctr_pct": 3.042,
+    "avg_position": 5.7
+  }
+}

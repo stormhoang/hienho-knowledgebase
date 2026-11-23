@@ -3,8 +3,8 @@
     "game_code": "mot-mua-quyt",
     "game_name": "Một Mùa Quýt",
     "landing_page": "/game/mot-mua-quyt",
-    "period": "2026-10-15 to 2026-10-25",
-    "generated_at": "2026-10-25T14:32:00",
+    "period": "2026-10-15 to 2026-11-09",
+    "generated_at": "2026-11-10T06:50:00",
     "property_id": "270743103",
     "report_doc": "07_REPORTS/docs/report-game-mot-mua-quyt.md",
     "timezone": "Asia/Saigon",
@@ -12,23 +12,23 @@
     "persona_param": "quyt_code"
   },
   "summary": {
-    "total_pageviews": 35551,
-    "total_sessions": 32675,
-    "total_users": 27766,
-    "total_engagement_hours": 299.2,
-    "avg_onsite_seconds": 38.8,
-    "avg_onsite_qualified_seconds": 65.2,
-    "bounce_rate_pct": 52.6,
-    "engagement_rate_pct": 47.4,
-    "active_players": 7097,
-    "play_rate_all_pct": 25.1,
-    "play_rate_qualified_pct": 40.6,
-    "w2a_installs": 1230,
-    "w2a_clicks": 3594,
-    "w2a_cvr_on_players_pct": 17.3,
-    "w2a_cvr_on_all_pct": 4.3,
-    "total_shares": 153,
-    "unique_sharers": 71,
+    "total_pageviews": 145821,
+    "total_sessions": 118726,
+    "total_users": 91895,
+    "total_engagement_hours": 1541.4,
+    "avg_onsite_seconds": 46.7,
+    "avg_onsite_qualified_seconds": 54.2,
+    "bounce_rate_pct": 42.5,
+    "engagement_rate_pct": 57.5,
+    "active_players": 39276,
+    "play_rate_all_pct": 42.7,
+    "play_rate_qualified_pct": 49.8,
+    "w2a_installs": 5464,
+    "w2a_clicks": 17393,
+    "w2a_cvr_on_players_pct": 13.9,
+    "w2a_cvr_on_all_pct": 5.9,
+    "total_shares": 2682,
+    "unique_sharers": 1194,
     "af_installs": null
   },
   "funnel": [
@@ -36,114 +36,114 @@
       "step": 1,
       "name": "Truy cập Landing Page",
       "event": "page_view",
-      "users": 27766,
+      "users": 91895,
       "cvr_step_pct": 100.0
     },
     {
       "step": 2,
       "name": "Mở Màn hình Game",
       "event": "quyt_screen_view",
-      "users": 19510,
-      "cvr_step_pct": 68.9
+      "users": 78791,
+      "cvr_step_pct": 85.7
     },
     {
       "step": 3,
       "name": "Hoàn tất Chơi Game",
       "event": "gmc_1vuquyt_clickplay",
-      "users": 7097,
-      "cvr_step_pct": 36.4
+      "users": 39276,
+      "cvr_step_pct": 49.8
     },
     {
       "step": 4,
       "name": "Kích hoạt Cài đặt App",
       "event": "gmc_1vuquyt_install",
-      "users": 1230,
-      "cvr_step_pct": 17.3
+      "users": 5464,
+      "cvr_step_pct": 13.9
     }
   ],
   "channels": [
     {
-      "channel": "Facebook Ads",
-      "source_medium": "facebook / cpc",
-      "users": 2640,
-      "sessions": 2875,
-      "pv": 3051,
-      "avg_time_sec": 66.0,
-      "bounce_rate_pct": 46.4,
-      "players": 1228,
-      "play_rate_pct": 46.5,
-      "installs": 486,
-      "install_rate_pct": 18.4,
-      "evaluation": "Chất lượng cao nhất"
-    },
-    {
       "channel": "Google Search Ads",
       "source_medium": "google / cpc",
-      "users": 11899,
-      "sessions": 14408,
-      "pv": 15870,
-      "avg_time_sec": 64.6,
-      "bounce_rate_pct": 43.9,
-      "players": 4694,
-      "play_rate_pct": 39.5,
-      "installs": 562,
-      "install_rate_pct": 4.7,
+      "users": 67712,
+      "sessions": 90626,
+      "pv": 114972,
+      "avg_time_sec": 53.7,
+      "bounce_rate_pct": 39.0,
+      "players": 34022,
+      "play_rate_pct": 50.2,
+      "installs": 3838,
+      "install_rate_pct": 5.7,
       "evaluation": "Quy mô người chơi chủ lực"
+    },
+    {
+      "channel": "Facebook Ads",
+      "source_medium": "facebook / cpc",
+      "users": 6572,
+      "sessions": 7149,
+      "pv": 7684,
+      "avg_time_sec": 63.4,
+      "bounce_rate_pct": 42.6,
+      "players": 3241,
+      "play_rate_pct": 49.3,
+      "installs": 1338,
+      "install_rate_pct": 20.4,
+      "evaluation": "Chất lượng cao nhất"
     },
     {
       "channel": "Direct / Trực tiếp",
       "source_medium": "(direct) / (none)",
-      "users": 1216,
-      "sessions": 1428,
-      "pv": 1985,
-      "avg_time_sec": 61.6,
-      "bounce_rate_pct": 26.5,
-      "players": 541,
-      "play_rate_pct": 42.3,
-      "installs": 120,
-      "install_rate_pct": 9.4,
+      "users": 2100,
+      "sessions": 2511,
+      "pv": 3254,
+      "avg_time_sec": 38.9,
+      "bounce_rate_pct": 27.2,
+      "players": 805,
+      "play_rate_pct": 38.3,
+      "installs": 158,
+      "install_rate_pct": 7.5,
       "evaluation": "Tự nhiên & Quay lại"
     },
     {
       "channel": "Google Organic",
       "source_medium": "google / organic",
-      "users": 605,
-      "sessions": 697,
-      "pv": 958,
-      "avg_time_sec": 37.5,
-      "bounce_rate_pct": 8.2,
-      "players": 201,
-      "play_rate_pct": 30.2,
-      "installs": 12,
-      "install_rate_pct": 1.8,
+      "users": 1524,
+      "sessions": 1772,
+      "pv": 2056,
+      "avg_time_sec": 27.7,
+      "bounce_rate_pct": 7.2,
+      "players": 508,
+      "play_rate_pct": 33.3,
+      "installs": 36,
+      "install_rate_pct": 2.4,
       "evaluation": "SEO Organic Search"
     },
     {
       "channel": "Khác (In-App, Referral)",
       "source_medium": "other",
-      "users": 875,
-      "sessions": 1021,
-      "pv": 996,
-      "avg_time_sec": 52.1,
-      "bounce_rate_pct": 22.4,
-      "players": 334,
-      "play_rate_pct": 38.2,
-      "installs": 41,
-      "install_rate_pct": 4.7,
+      "users": 914,
+      "sessions": 1080,
+      "pv": 1200,
+      "avg_time_sec": 45.0,
+      "bounce_rate_pct": 20.0,
+      "players": 383,
+      "play_rate_pct": 41.9,
+      "installs": 50,
+      "install_rate_pct": 5.5,
       "evaluation": "Nguồn bổ trợ"
     },
     {
       "channel": "TikTok Ads",
       "source_medium": "tiktok / cpc",
-      "users": 11091,
-      "sessions": 12587,
-      "pv": 12982,
-      "avg_time_sec": 0.6,
-      "bounce_rate_pct": 74.7,
-      "players": 99,
+      "users": 13074,
+      "sessions": 14784,
+      "pv": 15588,
+      "avg_time_sec": 0.5,
+      "bounce_rate_pct": 73.3,
+      "players": 117,
       "play_rate_pct": 0.89,
-      "installs": 9,
-      "install_rate_pct": 0.08,
+      "installs": 11,
+      "install_rate_pct": 0.09,
       "evaluation": "Cần cắt giảm / Rủi ro cao"
     }
   ],
@@ -230,85 +230,205 @@
     },
     {
       "date": "2026-10-25",
-      "pv": 2195,
-      "sessions": 1973,
-      "users": 1939,
-      "players": 509,
-      "installs": 50
+      "pv": 5956,
+      "sessions": 5352,
+      "users": 5216,
+      "players": 1320,
+      "installs": 148
+    },
+    {
+      "date": "2026-10-26",
+      "pv": 9292,
+      "sessions": 8342,
+      "users": 8047,
+      "players": 2758,
+      "installs": 320
+    },
+    {
+      "date": "2026-10-27",
+      "pv": 9330,
+      "sessions": 8354,
+      "users": 7939,
+      "players": 3277,
+      "installs": 404
+    },
+    {
+      "date": "2026-10-28",
+      "pv": 9636,
+      "sessions": 8119,
+      "users": 7920,
+      "players": 3363,
+      "installs": 413
+    },
+    {
+      "date": "2026-10-29",
+      "pv": 9371,
+      "sessions": 7867,
+      "users": 7707,
+      "players": 3495,
+      "installs": 428
+    },
+    {
+      "date": "2026-10-30",
+      "pv": 9432,
+      "sessions": 7424,
+      "users": 6993,
+      "players": 3572,
+      "installs": 448
+    },
+    {
+      "date": "2026-10-31",
+      "pv": 10115,
+      "sessions": 7284,
+      "users": 6577,
+      "players": 3779,
+      "installs": 465
+    },
+    {
+      "date": "2026-11-01",
+      "pv": 10233,
+      "sessions": 7295,
+      "users": 6704,
+      "players": 3828,
+      "installs": 388
+    },
+    {
+      "date": "2026-11-02",
+      "pv": 4627,
+      "sessions": 3610,
+      "users": 3414,
+      "players": 1916,
+      "installs": 205
+    },
+    {
+      "date": "2026-11-03",
+      "pv": 5621,
+      "sessions": 3892,
+      "users": 3624,
+      "players": 2202,
+      "installs": 209
+    },
+    {
+      "date": "2026-11-04",
+      "pv": 5547,
+      "sessions": 3783,
+      "users": 3447,
+      "players": 2151,
+      "installs": 172
+    },
+    {
+      "date": "2026-11-05",
+      "pv": 3776,
+      "sessions": 2588,
+      "users": 2388,
+      "players": 1449,
+      "installs": 144
+    },
+    {
+      "date": "2026-11-06",
+      "pv": 6034,
+      "sessions": 4059,
+      "users": 3734,
+      "players": 2469,
+      "installs": 260
+    },
+    {
+      "date": "2026-11-07",
+      "pv": 5709,
+      "sessions": 3464,
+      "users": 3088,
+      "players": 2143,
+      "installs": 211
+    },
+    {
+      "date": "2026-11-08",
+      "pv": 5435,
+      "sessions": 3488,
+      "users": 3193,
+      "players": 2160,
+      "installs": 222
+    },
+    {
+      "date": "2026-11-09",
+      "pv": 2369,
+      "sessions": 1682,
+      "users": 1588,
+      "players": 1017,
+      "installs": 155
     }
   ],
   "hourly_peaks": [
     {
       "hour": "10:00 - 12:00",
       "name": "Nghỉ trưa văn phòng",
-      "avg_sessions_per_hour": 2030,
-      "share_pct": 18.5
+      "avg_sessions_per_hour": 7894,
+      "share_pct": 13.3
     },
     {
       "hour": "16:00 - 17:00",
       "name": "Tan tầm chiều (Đỉnh cao nhất)",
-      "avg_sessions_per_hour": 2180,
-      "share_pct": 20.1
+      "avg_sessions_per_hour": 10288,
+      "share_pct": 8.7
     },
     {
       "hour": "21:00 - 22:00",
       "name": "Thư giãn đêm",
-      "avg_sessions_per_hour": 1520,
-      "share_pct": 14.2
+      "avg_sessions_per_hour": 3266,
+      "share_pct": 2.8
     }
   ],
   "devices": [
     {
       "category": "Mobile Android",
-      "users": 14748,
-      "share_pct": 53.7
+      "users": 72445,
+      "share_pct": 78.8
     },
     {
       "category": "Mobile iOS (iPhone)",
-      "users": 12155,
-      "share_pct": 42.9
+      "users": 17411,
+      "share_pct": 18.9
     },
     {
       "category": "Desktop Windows",
-      "users": 824,
-      "share_pct": 2.9
+      "users": 2008,
+      "share_pct": 2.2
     },
     {
       "category": "Khác (Tablet / Mac / Linux)",
-      "users": 439,
-      "share_pct": 1.5
+      "users": 742,
+      "share_pct": 0.8
     }
   ],
   "cities": [
     {
-      "city": "TP. Hồ Chí Minh",
-      "sessions": 6976,
-      "users": 5760,
-      "share_pct": 35.8
+      "city": "Hà Nội",
+      "sessions": 20469,
+      "users": 16904,
+      "share_pct": 33.1
     },
     {
-      "city": "Hà Nội",
-      "sessions": 5757,
-      "users": 5025,
-      "share_pct": 29.5
+      "city": "TP. Hồ Chí Minh",
+      "sessions": 19656,
+      "users": 15565,
+      "share_pct": 30.5
     },
     {
       "city": "Đà Nẵng",
-      "sessions": 2227,
-      "users": 1966,
-      "share_pct": 11.4
+      "sessions": 8367,
+      "users": 6859,
+      "share_pct": 13.4
     },
     {
       "city": "Cần Thơ",
-      "sessions": 1313,
-      "users": 1162,
-      "share_pct": 6.7
+      "sessions": 3893,
+      "users": 3284,
+      "share_pct": 6.4
     },
     {
       "city": "Hải Phòng",
-      "sessions": 1011,
-      "users": 920,
-      "share_pct": 5.2
+      "sessions": 3523,
+      "users": 2932,
+      "share_pct": 5.7
     }
   ],
   "quyt_personas": [
@@ -394,71 +514,29 @@
     }
   ],
   "hourly_sessions": [
-    740,
-    528,
-    350,
-    294,
-    326,
-    667,
-    1206,
-    1336,
-    1598,
-    1805,
-    2019,
-    2056,
-    2142,
-    1705,
-    1841,
-    1951,
-    2180,
-    2157,
-    1831,
-    1290,
-    1014,
-    1504,
-    1546,
-    1052
-  ],
-  "persona_distribution": [
-    {
-      "id": "QUYT_MUI_DEU",
-      "players": 1275,
-      "share_pct": 18.0
-    },
-    {
-      "id": "QUYT_CHUA_THANH",
-      "players": 943,
-      "share_pct": 13.3
-    },
-    {
-      "id": "QUYT_VO_DAY",
-      "players": 665,
-      "share_pct": 9.4
-    },
-    {
-      "id": "QUYT_MONG_NUOC",
-      "players": 1109,
-      "share_pct": 15.6
-    },
-    {
-      "id": "QUYT_BOC_TUNG_MUI",
-      "players": 665,
-      "share_pct": 9.4
-    },
-    {
-      "id": "QUYT_DE_TACH_MUI",
-      "players": 887,
-      "share_pct": 12.5
-    },
-    {
-      "id": "QUYT_CHIN_DUNG_MUA",
-      "players": 943,
-      "share_pct": 13.3
-    },
-    {
-      "id": "QUYT_DON_NANG_SOM",
-      "players": 610,
-      "share_pct": 8.6
-    }
+    1236,
+    920,
+    724,
+    666,
+    931,
+    2219,
+    4709,
+    4611,
+    5098,
+    6121,
+    7632,
+    8156,
+    8045,
+    6985,
+    7108,
+    8111,
+    10288,
+    10442,
+    8386,
+    5815,
+    4262,
+    3266,
+    2527,
+    1670
   ]
 }

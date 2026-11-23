@@ -1,7 +1,7 @@
 # BRD: Student Hub - Nền Tảng Dịch Vụ & Cổng Thông Tin Sinh Viên MoMo
 
-> - **Project:** Student Hub (Web Platform & Student Pass Identity)
-> - **Division:** Growth Platform Division (GPD)
+> - **Dự án:** Student Hub (Web Platform & Student Pass Identity)
+> - **Khối phụ trách:** Growth Platform Division (GPD)
 > - **Owner:** Web Platform Team (GPD)
 
 ## I. Business Context

@@ -8,7 +8,7 @@
 Một Slide/Báo cáo C-Level tiêu chuẩn cần tuân thủ cấu trúc 3 cột trụ sau:
 
 ### 1. Key Highlights & Business Impact (Trọng tâm)
-*   **Business Context (Bối cảnh Kinh doanh):** Khởi đầu bằng việc nêu bật "nỗi đau" (Pain points) hiện tại. Ví dụ: Thời gian gấp rút, thiếu hụt nhân sự, nguy cơ rò rỉ traffic, áp lực chiến dịch Mega.
+*   **Business Context (Bối cảnh Kinh doanh):** Khởi đầu bằng việc nêu bật "điểm nghẽn" (Pain points) hiện tại. Ví dụ: Thời gian gấp rút, thiếu hụt nhân sự, nguy cơ rò rỉ traffic, áp lực chiến dịch Mega.
 *   **Solution (Giải pháp Chiến lược):** Trình bày giải pháp dưới góc độ hệ thống và tự động hóa. Đừng nói *"Tôi code bằng React"*, hãy nói *"Áp dụng chiến lược PLG và GenAI Pipeline để tự động hóa toàn bộ luồng sản xuất, giải quyết bài toán thiếu hụt nguồn lực"*.
 *   **Result & Expected Impact (Kết quả & Tác động thực tế):**
     *   **Timeline:** Hoàn thành đúng hạn (On-air kịp Big Boom).

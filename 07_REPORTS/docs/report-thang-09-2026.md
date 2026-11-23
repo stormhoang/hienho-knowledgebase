@@ -1,7 +1,7 @@
-# BÁO CÁO PHÂN TÍCH CHUYÊN SÂU & DỰ BÁO CHIẾN LƯỢC - WEB PLATFORM (THÁNG 09/2026 - MTD 27/09/2026 SSOT)
+# BÁO CÁO PHÂN TÍCH CHUYÊN SÂU & DỰ BÁO CHIẾN LƯỢC - WEB PLATFORM (THÁNG 09/2026 - MTD 27/09/2026)
 
 > **Đơn vị thực hiện:** Web Platform Team (Growth Platform Division)  
-> **Nguồn dữ liệu SSOT:** [WEB_PERFORMANCE_TRACKING_MASTER.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md) (Cập nhật 27/09/2026)  
+> **Nguồn dữ liệu:** [WEB_PERFORMANCE_TRACKING_MASTER.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md) (Cập nhật 27/09/2026)  
 > **Khung mục tiêu năm 2026:** Target Tháng 09: 3.509.044 PVs (North Star Dec 2026: 4.000.000 PVs/tháng)  
 > **Đánh giá tổng thể:** CÁN ĐÍCH VƯỢT TARGET CHÍNH THỨC TRƯỚC HẠN 3 NGÀY (MTD 27d đạt 3.513.717 PVs - 100.13% Target, Forecast 30d đạt 3.90M PVs - vượt Target +11.26%)
 
@@ -11,7 +11,7 @@
 
 ### 1. Phân tích kết quả bứt phá 27 ngày (01/09 - 27/09)
 - **Cán đích trước hạn 3 ngày:** Lũy kế 27 ngày đạt **3.513.717 Pageviews** (hoàn thành **100.13% Target Tháng 9** là 3.509.044 PVs). Toàn bộ lưu lượng trong 3 ngày cuối tháng (28/09 - 30/09) sẽ tích lũy vượt mức chỉ tiêu cam kết.
-- **Tốc độ vận hành thực tế (Daily Pace):** Đạt nhịp trung bình **130.138 PVs/ngày** (riêng ngày 26/09 đạt đỉnh **162.291 PVs/ngày**). Dự báo trọn tháng (EOM Forecast 30d) sẽ chạm mốc **3.904.130 Pageviews** (**vượt Target chính thức +11.26% ~ +395.086 PVs**).
+- **Tốc độ vận hành thực tế (Daily Pace):** Đạt nhịp trung bình **130.138 PVs/ngày** (riêng ngày 26/09 chạm mức cao nhất **162.291 PVs/ngày**). Dự báo trọn tháng (EOM Forecast 30d) sẽ chạm mốc **3.904.130 Pageviews** (**vượt Target chính thức +11.26% ~ +395.086 PVs**).
 - **Insight Cốt lõi về Động cơ Tăng trưởng:**
   * **Sức mạnh nội tại Organic Search:** Đạt **1.410.764 PVs** (chiếm 39.52% tổng Web), lập cột mốc lịch sử vượt 1.41 triệu PVs tự nhiên. Tăng trưởng không dựa vào việc đẩy chi phí quảng cáo đơn thuần mà đến từ độ phủ từ khóa SEO chuẩn mực.
   * **Đòn bẩy Co-marketing Paid Traffic:** Đạt **1.156.315 PVs** (chiếm 32.39% tổng Web), ghi nhận sự đóng góp hiệu quả từ mô hình kéo traffic do đối tác tài trợ.
@@ -68,13 +68,13 @@
 ## III. PRIORITIES & ACTION ITEMS TRỌNG TÂM 30 NGÀY TỚI
 
 ### 1. Cấp độ Nền tảng toàn sàn (Web Overview)
-- **P0 - Nâng cấp MoSpark Engine & P90 Performance:** Tối ưu tốc độ tải trang P90 giảm 30%, tăng tốc độ phản hồi máy chủ và mở rộng phân quyền Self-serve Landing Page Builder cho các Cell Teams.
-- **P0 - Chuẩn hóa Guardrails tự động:** Thiết lập bộ lọc kiểm duyệt nội dung tự động trên CMS ngăn chặn bài viết vi phạm tiêu chuẩn SEO/Compliance, bảo vệ uy tín tên miền `momo.vn`.
-- **P1 - Tracking Full-Funnel Web-to-App:** Chuẩn hóa hạ tầng tracking qua Onelink/Appsflyer để bóc tách hành trình từ Pageview sang App Install và First Transaction.
+- **Nâng cấp MoSpark Engine & P90 Performance:** Tối ưu tốc độ tải trang P90 giảm 30%, tăng tốc độ phản hồi máy chủ và mở rộng phân quyền Self-serve Landing Page Builder cho các Cell Teams.
+- **Chuẩn hóa Guardrails tự động:** Thiết lập bộ lọc kiểm duyệt nội dung tự động trên CMS ngăn chặn bài viết vi phạm tiêu chuẩn SEO/Compliance, bảo vệ uy tín tên miền `momo.vn`.
+- **Tracking Full-Funnel Web-to-App:** Chuẩn hóa hạ tầng tracking qua Onelink/Appsflyer để bóc tách hành trình từ Pageview sang App Install và First Transaction.
 
 ### 2. Cấp độ 5 Hubs Chiến Lược
-- **Cinema Hub (P0):** Bàn giao UI/UX trang Rạp mới cho CGV, Lotte, BHS, Galaxy; đẩy mạnh chuỗi bài Blog phim Việt mới và mở rộng hệ thống trang Diễn viên / Đạo diễn; rà soát clean 100% out-date content.
-- **Financial Hub (P0):** Roll out chính thức trang Phân Bổ Lương 50/30/20 và Tool Chứng Chỉ Quỹ Phase 2; nhúng máy tính tài chính trực tiếp vào bài viết SEO.
-- **Vehicle Hub (P0):** Go-live chuyên trang Trạm Sạc VinFast và Tìm Garage trước 30/09; duy trì ổn định luồng API Phạt Nguội và vận hành gói Ads 550M Bảo Hiểm Ô Tô.
-- **New User Hub (P1):** Triển khai Tier 1 Dynamic Landing Page theo Ad Creatives; tối ưu vị trí hiển thị gói quà CHAOMOMO ngoài Web.
-- **Student Hub (P1):** Go-live Destination Page `/sinh-vien` và hoàn thiện 7 trang School Detail phục vụ quét mã QR tại các sự kiện Offline Events đại học.
+- **Cinema Hub:** Bàn giao UI/UX trang Rạp mới cho CGV, Lotte, BHS, Galaxy; đẩy mạnh chuỗi bài Blog phim Việt mới và mở rộng hệ thống trang Diễn viên / Đạo diễn; rà soát clean 100% out-date content.
+- **Financial Hub:** Roll out chính thức trang Phân Bổ Lương 50/30/20 và Tool Chứng Chỉ Quỹ Phase 2; nhúng máy tính tài chính trực tiếp vào bài viết SEO.
+- **Vehicle Hub:** Go-live chuyên trang Trạm Sạc VinFast và Tìm Garage trước 30/09; duy trì ổn định luồng API Phạt Nguội và vận hành gói Ads 550M Bảo Hiểm Ô Tô.
+- **New User Hub:** Triển khai Tier 1 Dynamic Landing Page theo Ad Creatives; tối ưu vị trí hiển thị gói quà CHAOMOMO ngoài Web.
+- **Student Hub:** Go-live Destination Page `/sinh-vien` và hoàn thiện 7 trang School Detail phục vụ quét mã QR tại các sự kiện Offline Events đại học.

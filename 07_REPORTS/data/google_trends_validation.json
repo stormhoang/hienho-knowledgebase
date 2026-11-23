@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T11:21:26.929824",
+  "generated_at": "2026-11-10T10:23:00.942699",
   "sample_size": 21,
   "total_keywords_analyzed": 21,
   "has_trend_count": 17,
@@ -368,9 +368,9 @@
       "sector": "Financial",
       "theme": "gia-vang",
       "trend_data": {
-        "avg_interest": 37.113207547169814,
+        "avg_interest": 38.75471698113208,
         "max_interest": 100.0,
-        "min_interest": 16.0,
+        "min_interest": 18.0,
         "has_trend": true,
         "top_regions": [
           {
@@ -382,22 +382,22 @@
             "interest": 97
           },
           {
-            "region": "Điện Biên",
+            "region": "Sơn La",
             "interest": 97
           },
           {
-            "region": "Hải Dương",
+            "region": "Nam Định",
             "interest": 96
           },
           {
-            "region": "Sơn La",
+            "region": "Hải Dương",
             "interest": 96
           }
         ],
         "related_queries": [
           {
             "query": "giá vàng the giới hôm nay xauusd",
-            "value": 4400
+            "value": 3150
           },
           {
             "query": "giá vàng ngọc thịnh hôm nay",
@@ -405,15 +405,15 @@
           },
           {
             "query": "giá vàng ngọc thịnh đà nẵng hôm nay",
-            "value": 1700
+            "value": 1500
           },
           {
             "query": "giá bạc thế giới hôm nay",
-            "value": 800
+            "value": 750
           },
           {
             "query": "giá xăng hôm nay",
-            "value": 800
+            "value": 750
           }
         ]
       }
@@ -438,8 +438,8 @@
       "sector": "Financial",
       "theme": "ty-gia",
       "trend_data": {
-        "avg_interest": 1.3962264150943395,
-        "max_interest": 2.0,
+        "avg_interest": 1.4528301886792452,
+        "max_interest": 3.0,
         "min_interest": 1.0,
         "has_trend": true,
         "top_regions": [
@@ -452,7 +452,7 @@
             "interest": 5
           },
           {
-            "region": "Tây Ninh",
+            "region": "Bình Dương",
             "interest": 4
           },
           {
@@ -460,22 +460,18 @@
             "interest": 4
           },
           {
-            "region": "Hà Nội",
+            "region": "Tây Ninh",
             "interest": 4
           }
         ],
         "related_queries": [
           {
             "query": "giá dầu thế giới",
-            "value": 130
+            "value": 120
           },
           {
             "query": "tỷ giá usd hiện tại",
             "value": 60
-          },
-          {
-            "query": "tỷ giá usd bidv hôm nay",
-            "value": 50
           },
           {
             "query": "tỷ giá usd agribank hôm nay",
@@ -490,14 +486,14 @@
       "sector": "Financial",
       "theme": "ty-gia",
       "trend_data": {
-        "avg_interest": 3.339622641509434,
+        "avg_interest": 3.452830188679245,
         "max_interest": 4.0,
         "min_interest": 3.0,
         "has_trend": true,
         "top_regions": [
           {
             "region": "Hồ Chí Minh",
-            "interest": 19
+            "interest": 18
           },
           {
             "region": "Đà Nẵng",
@@ -512,18 +508,18 @@
             "interest": 10
           },
           {
-            "region": "Hà Giang",
-            "interest": 8
+            "region": "Quảng Nam",
+            "interest": 9
           }
         ],
         "related_queries": [
           {
-            "query": "usd to vnd exchange rate",
+            "query": "exchange rate usd to vnd",
             "value": 200
           },
           {
             "query": "usd to vnd rate",
-            "value": 160
+            "value": 150
           },
           {
             "query": "usd to vnd today",
@@ -531,11 +527,11 @@
           },
           {
             "query": "22 usd to vnd",
-            "value": 110
+            "value": 100
           },
           {
             "query": "100k usd to vnd",
-            "value": 70
+            "value": 80
           }
         ]
       }
@@ -552,11 +548,11 @@
         "has_trend": true,
         "top_regions": [
           {
-            "region": "An Giang",
+            "region": "Bình Phước",
             "interest": 4
           },
           {
-            "region": "Bạc Liêu",
+            "region": "Bình Thuận",
             "interest": 4
           },
           {
@@ -564,34 +560,34 @@
             "interest": 4
           },
           {
-            "region": "Tây Ninh",
+            "region": "Trà Vinh",
             "interest": 4
           },
           {
-            "region": "Gia Lai",
+            "region": "Ninh Thuận",
             "interest": 4
           }
         ],
         "related_queries": [
           {
-            "query": "pt vay nhanh",
-            "value": 293550
+            "query": "vay nhanh vhntdng",
+            "value": 48650
           },
           {
             "query": "vay nhanh thaimarket.vn",
-            "value": 32400
+            "value": 29650
           },
           {
             "query": "vay nhanh thaimarket",
-            "value": 29950
+            "value": 26550
           },
           {
-            "query": "vay nhanh vhntdng",
-            "value": 3100
+            "query": "pt vay nhanh",
+            "value": 16200
           },
           {
             "query": "app vay 500k nhanh nhất",
-            "value": 2350
+            "value": 4050
           }
         ]
       }
@@ -608,23 +604,23 @@
         "has_trend": true,
         "top_regions": [
           {
-            "region": "Hậu Giang",
-            "interest": 18
+            "region": "Kon Tum",
+            "interest": 17
           },
           {
             "region": "tỉnh Kiên Giang",
-            "interest": 14
+            "interest": 15
           },
           {
-            "region": "Quảng Bình",
-            "interest": 14
-          },
-          {
-            "region": "Gia Lai",
-            "interest": 14
+            "region": "Hậu Giang",
+            "interest": 13
           },
           {
             "region": "Tuyên Quang",
+            "interest": 13
+          },
+          {
+            "region": "Gia Lai",
             "interest": 13
           }
         ],
@@ -637,33 +633,37 @@
       "sector": "Financial",
       "theme": "gui-tiet-kiem",
       "trend_data": {
-        "avg_interest": 19.50943396226415,
+        "avg_interest": 19.641509433962263,
         "max_interest": 34.0,
-        "min_interest": 10.0,
+        "min_interest": 11.0,
         "has_trend": true,
         "top_regions": [
           {
             "region": "Điện Biên",
-            "interest": 31
+            "interest": 30
           },
           {
-            "region": "Lai Châu",
-            "interest": 31
-          },
-          {
-            "region": "Kon Tum",
-            "interest": 29
-          },
-          {
-            "region": "Hải Dương",
+            "region": "Cao Bằng",
             "interest": 28
           },
           {
-            "region": "Nam Định",
+            "region": "Hải Dương",
+            "interest": 27
+          },
+          {
+            "region": "Thái Bình",
             "interest": 26
+          },
+          {
+            "region": "Nam Định",
+            "interest": 25
           }
         ],
         "related_queries": [
+          {
+            "query": "lãi suất gửi tiết kiệm ngân hàng nào cao nhất hiện nay",
+            "value": 120
+          },
           {
             "query": "lãi suất ngân hàng hiện nay",
             "value": 50
@@ -696,30 +696,74 @@
       "sector": "Financial",
       "theme": "vi-tra-sau",
       "trend_data": {
-        "avg_interest": 18.69811320754717,
+        "avg_interest": 18.71698113207547,
         "max_interest": 25.0,
-        "min_interest": 10.0,
+        "min_interest": 11.0,
         "has_trend": true,
         "top_regions": [
           {
-            "region": "Hồ Chí Minh",
-            "interest": 19
+            "region": "Cần Thơ",
+            "interest": 20
           },
           {
             "region": "Hậu Giang",
             "interest": 19
           },
           {
+            "region": "Vĩnh Long",
+            "interest": 18
+          },
+          {
+            "region": "Hồ Chí Minh",
+            "interest": 18
+          },
+          {
+            "region": "Tiền Giang",
+            "interest": 17
+          }
+        ],
+        "related_queries": [
+          {
+            "query": "cách kích hoạt ví trả sau momo",
+            "value": 140
+          },
+          {
+            "query": "ví trả sau momo dùng như nào",
+            "value": 60
+          }
+        ]
+      }
+    },
+    {
+      "keyword": "ví trả sau",
+      "inventory_volume": 2400,
+      "sector": "Financial",
+      "theme": "vi-tra-sau",
+      "trend_data": {
+        "avg_interest": 31.49056603773585,
+        "max_interest": 42.0,
+        "min_interest": 17.0,
+        "has_trend": true,
+        "top_regions": [
+          {
+            "region": "Hồ Chí Minh",
+            "interest": 32
+          },
+          {
+            "region": "Hậu Giang",
+            "interest": 30
+          },
+          {
+            "region": "Đăk Nông",
+            "interest": 30
+          },
+          {
             "region": "Cần Thơ",
-            "interest": 19
+            "interest": 30
           },
           {
-            "region": "Sóc Trăng",
-            "interest": 17
-          },
-          {
-            "region": "An Giang",
-            "interest": 17
+            "region": "Long An",
+            "interest": 29
           }
         ],
         "related_queries": [
@@ -731,71 +775,31 @@
       }
     },
     {
-      "keyword": "ví trả sau",
-      "inventory_volume": 2400,
-      "sector": "Financial",
-      "theme": "vi-tra-sau",
-      "trend_data": {
-        "avg_interest": 31.528301886792452,
-        "max_interest": 43.0,
-        "min_interest": 16.0,
-        "has_trend": true,
-        "top_regions": [
-          {
-            "region": "Đăk Nông",
-            "interest": 32
-          },
-          {
-            "region": "Hồ Chí Minh",
-            "interest": 31
-          },
-          {
-            "region": "Hậu Giang",
-            "interest": 31
-          },
-          {
-            "region": "Cần Thơ",
-            "interest": 31
-          },
-          {
-            "region": "Lâm Đồng",
-            "interest": 30
-          }
-        ],
-        "related_queries": [
-          {
-            "query": "ví trả sau momo dùng như nào",
-            "value": 60
-          }
-        ]
-      }
-    },
-    {
       "keyword": "lãi suất tiết kiệm",
       "inventory_volume": 6600,
       "sector": "Financial",
       "theme": "gui-tiet-kiem",
       "trend_data": {
-        "avg_interest": 51.83018867924528,
+        "avg_interest": 52.094339622641506,
         "max_interest": 100.0,
         "min_interest": 32.0,
         "has_trend": true,
         "top_regions": [
           {
-            "region": "Bắc Kạn",
-            "interest": 97
+            "region": "Lai Châu",
+            "interest": 100
           },
           {
-            "region": "Lai Châu",
-            "interest": 69
+            "region": "Bắc Kạn",
+            "interest": 96
           },
           {
             "region": "Cao Bằng",
-            "interest": 60
+            "interest": 56
           },
           {
-            "region": "Thái Bình",
-            "interest": 50
+            "region": "Điện Biên",
+            "interest": 51
           },
           {
             "region": "Nghệ An",
@@ -805,22 +809,22 @@
         "related_queries": [
           {
             "query": "cake by vpbank",
-            "value": 130
-          },
-          {
-            "query": "lãi suất ngân hàng nào cao nhất hiện nay",
-            "value": 120
+            "value": 140
           },
           {
             "query": "lãi suất gửi tiết kiệm ngân hàng nào cao nhất hiện nay",
-            "value": 110
+            "value": 100
           },
           {
             "query": "lãi suất tiết kiệm ngân hàng nào cao nhất hiện nay",
-            "value": 110
+            "value": 90
           },
           {
-            "query": "lãi suất tiết kiệm cao nhất hiện nay",
+            "query": "lãi suất ngân hàng nào cao nhất hiện nay",
+            "value": 90
+          },
+          {
+            "query": "lãi suất ngân hàng cao nhất hiện nay",
             "value": 70
           }
         ]

@@ -2,7 +2,7 @@
 
 **DỊCH VỤ VIETLOTT SMS TRÊN MOMO**
 
-*Hướng dẫn từng bước — từ đăng ký đến nhận thưởng*
+*Hướng dẫn từng bước - từ đăng ký đến nhận thưởng*
 
 # **PHẦN 1\. TỔNG QUAN VỀ DỊCH VỤ**
 
@@ -54,7 +54,7 @@ Trước khi đăng ký Tài khoản dự thưởng (TKDT) Vietlott SMS, bạn c
 
 3. Bạn đã hoàn tất **xác thực sinh trắc học NFC** trên MoMo.
 
-4. Bạn đã hoàn tất **eKYC bằng Căn cước công dân (CCCD)** — chụp hai mặt CCCD. Hiện chưa chấp nhận các loại giấy tờ tùy thân khác (Hộ chiếu, Giấy phép lái xe,…).
+4. Bạn đã hoàn tất **eKYC bằng Căn cước công dân (CCCD)** - chụp hai mặt CCCD. Hiện chưa chấp nhận các loại giấy tờ tùy thân khác (Hộ chiếu, Giấy phép lái xe,…).
 
 5. Một TKDT Vietlott SMS chỉ liên kết được với một Ví MoMo có **cùng số điện thoại**. Bạn không thể liên kết TKDT đăng ký bằng số A với Ví MoMo đăng ký bằng số B.
 
@@ -122,7 +122,7 @@ Xem lại các gói đã đăng ký: **Lịch sử vé đã mua → Đặt trư�
 
 ## **4.1. Thanh toán bằng Ví MoMo**
 
-Khi mua vé qua MoMo, bạn dùng Ví MoMo để thanh toán. Để kích hoạt, bạn cần liên kết Ví MoMo với dịch vụ Vietlott SMS ở Bước 5 trong luồng đăng ký — chỉ thực hiện một lần.
+Khi mua vé qua MoMo, bạn dùng Ví MoMo để thanh toán. Để kích hoạt, bạn cần liên kết Ví MoMo với dịch vụ Vietlott SMS ở Bước 5 trong luồng đăng ký - chỉ thực hiện một lần.
 
 | 📌 Lưu ý Không thể dùng tài khoản chính hay tài khoản khuyến mãi của thuê bao di động để thanh toán. |
 | :---- |
@@ -186,7 +186,7 @@ Vietlott trực tiếp liên hệ bạn và tổ chức trao giải theo quy đ�
 
 * **Giải từ 10 tỷ đồng trở xuống**: Vietlott SMS trả thưởng trong vòng **48 giờ** kể từ khi bạn nhận SMS chúc mừng trúng thưởng từ đầu số 9969\.
 
-* **Giải trên 10 tỷ đồng**: 2 – 3 tuần theo quy định của Vietlott.
+* **Giải trên 10 tỷ đồng**: 2-3 tuần theo quy định của Vietlott.
 
 * **Thời hạn lĩnh thưởng**: 60 ngày kể từ ngày xác định kết quả. Quá hạn vé không còn giá trị.
 
@@ -202,9 +202,9 @@ Tại màn hình đăng nhập, bấm **"Quên mật khẩu"** và điền thôn
 
 Nếu hệ thống báo "Thông tin bạn cung cấp không tồn tại hoặc Tài khoản dự thưởng không hợp lệ", có thể do:
 
-* Bạn nhập sai thông tin — vui lòng kiểm tra và thử lại.
+* Bạn nhập sai thông tin - vui lòng kiểm tra và thử lại.
 
-* Bạn chưa đổi mật khẩu lần đầu sau khi đăng ký — vui lòng tìm lại SMS từ đầu số 9969 để lấy mật khẩu tạm thời.
+* Bạn chưa đổi mật khẩu lần đầu sau khi đăng ký - vui lòng tìm lại SMS từ đầu số 9969 để lấy mật khẩu tạm thời.
 
 Nếu vẫn chưa được, gọi Hotline Vietlott SMS 1900 599 822 để được hỗ trợ.
 
@@ -237,7 +237,7 @@ Một số điều kiện cần đáp ứng trước khi hủy:
 
 * Không còn vé chờ xác nhận thanh toán.
 
-* **Không còn số dư Hạn mức dự thưởng (HMDT)** — số dư còn lại sẽ được hoàn vào tài khoản ngân hàng/ví điện tử theo yêu cầu trước khi hủy.
+* **Không còn số dư Hạn mức dự thưởng (HMDT)** - số dư còn lại sẽ được hoàn vào tài khoản ngân hàng/ví điện tử theo yêu cầu trước khi hủy.
 
 * TKDT đang ở trạng thái **"Đang hoạt động"** trước khi xử lý yêu cầu hủy.
 
@@ -294,7 +294,7 @@ Trường hợp này thường xảy ra với số điện thoại đã chuyển
 
 * Nếu nhà mạng trước đây cũng là Viettel/MobiFone/VinaPhone nhưng vẫn báo lỗi, liên hệ Hotline MoMo **1900 54 54 41** hoặc chụp màn hình gửi khiếu nại để được kiểm tra.
 
-*Ví dụ: SĐT trước đây thuộc vietnamobile, sau đó chuyển sang Viettel — hệ thống có thể vẫn nhận dạng theo mạng cũ và báo lỗi.*
+*Ví dụ: SĐT trước đây thuộc vietnamobile, sau đó chuyển sang Viettel - hệ thống có thể vẫn nhận dạng theo mạng cũ và báo lỗi.*
 
 **Câu 8\. Ví MoMo bị trừ tiền nhưng tôi không nhận được vé?**
 
@@ -318,7 +318,7 @@ Kiểm tra tại: Vietlott SMS \-\> Thông tin cá nhân \-\> Tài khoản nhậ
 
 Kiểm tra tại: Vietlott SMS \-\> Thông tin cá nhân \-\> Tài khoản nhận thưởng
 
-* Giấy tờ cá nhân trên hệ thống Vietlott SMS đang là CMND — từ **01/01/2025**, Vietlott SMS tạm ngừng trả thưởng cho TKDT có giấy tờ không hợp lệ.
+* Giấy tờ cá nhân trên hệ thống Vietlott SMS đang là CMND - từ **01/01/2025**, Vietlott SMS tạm ngừng trả thưởng cho TKDT có giấy tờ không hợp lệ.
 
 (nhấp dẫn lên mục 6.2)
 
@@ -360,7 +360,7 @@ Các vé mua sau thời gian trên sẽ được tính vào vé cho kỳ quay ti
 
 * **Email**: hotro@momo.vn
 
-* **Trên ứng dụng MoMo** — bốn cách:
+* **Trên ứng dụng MoMo** - bốn cách:
 
   * **Cách 1**: Chụp màn hình → gửi yêu cầu hỗ trợ.
 
@@ -382,7 +382,7 @@ Các vé mua sau thời gian trên sẽ được tính vào vé cho kỳ quay ti
 
 * **Zalo OA**: Tìm "Vietlott SMS" trên Zalo
 
-* **Thời gian hoạt động**: 6h–22h hằng ngày
+* **Thời gian hoạt động**: 6h-22h hằng ngày
 
 # 
 
@@ -637,7 +637,7 @@ Dự đoán chính xác tổng của 3 số sẽ xuất hiện là bao nhiêu, t
 
 ### **1\. Phần giới thiệu ngắn**
 
-Max 3D là một sản phẩm xổ số tự chọn của Vietlott, được phát hành từ 06 giờ 00 phút và kết thúc lúc 22 giờ 00 phút hàng ngày từ Thứ Hai đến Chủ Nhật, cực kỳ dễ chơi – ai cũng có thể tham gia.
+Max 3D là một sản phẩm xổ số tự chọn của Vietlott, được phát hành từ 06 giờ 00 phút và kết thúc lúc 22 giờ 00 phút hàng ngày từ Thứ Hai đến Chủ Nhật, cực kỳ dễ chơi - ai cũng có thể tham gia.
 
 ### **2\. Thông tin cơ bản**
 
@@ -676,7 +676,7 @@ Giới hạn mua vé Max 3D và Max 3D+ là tối đa 5 triệu đồng/ngày đ
 
 ### **1\. Phần giới thiệu ngắn**
 
-Max 3D+ là một sản phẩm xổ số tự chọn số của Vietlott, được phát hành từ 06 giờ 00 phút và kết thúc lúc 22 giờ 00 phút hàng ngày từ Thứ Hai đến Chủ Nhật. Cực kỳ dễ chơi – ai cũng có thể tham gia.
+Max 3D+ là một sản phẩm xổ số tự chọn số của Vietlott, được phát hành từ 06 giờ 00 phút và kết thúc lúc 22 giờ 00 phút hàng ngày từ Thứ Hai đến Chủ Nhật. Cực kỳ dễ chơi - ai cũng có thể tham gia.
 
 ### **2\. Thông tin cơ bản**
 
@@ -723,7 +723,7 @@ Giới hạn mua vé Max 3D và Max 3D+ là tối đa 5 triệu đồng/ngày đ
 
 ### **1\. Phần giới thiệu ngắn**
 
-Max3D Pro là một sản phẩm xổ số tự chọn của Vietlott, được phát hành từ 06 giờ 00 phút và kết thúc lúc 22 giờ 00 phút hàng ngày từ Thứ Hai đến Chủ Nhật. Cực kỳ dễ chơi – ai cũng có thể tham gia.
+Max3D Pro là một sản phẩm xổ số tự chọn của Vietlott, được phát hành từ 06 giờ 00 phút và kết thúc lúc 22 giờ 00 phút hàng ngày từ Thứ Hai đến Chủ Nhật. Cực kỳ dễ chơi - ai cũng có thể tham gia.
 
 ### **2\. Thông tin cơ bản**
 
@@ -916,5 +916,5 @@ Lotto 5/35 là một sản phẩm xổ số tự chọn của Vietlott, được
 
   Phần chia của hạng giải không có vé trúng sẽ được chia đều cho các hạng giải còn lại có vé trúng (trừ giải Khuyến khích).
 
-*— Hết —*
+*- Hết -*
 

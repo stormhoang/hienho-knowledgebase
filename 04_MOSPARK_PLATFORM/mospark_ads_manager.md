@@ -340,7 +340,7 @@ graph TD
 - Tích hợp Appsflyer/Onelink
 - Tần suất & Preview System"]
         P1_Gate["Success Gate 1:
-- Zero P1 bug trong 2 tuần
+- Không phát sinh bug nghiêm trọng trong 2 tuần
 - CTR trung bình >= 4% (3+ campaigns)
 - Đã verify tracking click -> install"]
         P1_Goal --> P1_Deliverables --> P1_Gate
@@ -600,7 +600,7 @@ Thay vì targeting theo Screen (như Athena), Ads Manager targeting theo loại 
        │
        └──► THỎA MÃN TẤT CẢ ĐIỀU KIỆN:
                  │
-                 └──► Kích hoạt Ads Format mới: Smart Resume Dock (Ưu tiên P0 / Tier 1)
+                 └──► Kích hoạt Ads Format mới: Smart Resume Dock (Ưu tiên cao nhất / Tier 1)
                            │
                            ├── Hiển thị: Thumbnail Trang A + Tiêu đề flow dở dang + Nút "Tiếp tục"
                            └── Click CTA ──► Điều hướng về Trang A (kèm state param để khôi phục bước dở)
@@ -695,7 +695,7 @@ Thay vì targeting theo Screen (như Athena), Ads Manager targeting theo loại 
    - Nếu user rời khỏi tab hoặc đóng trình duyệt trong khi cờ `goal_achieved === false`, hệ thống đóng gói payload và set cookie 30 ngày.
 
 3. **Cơ chế Triệt tiêu Intent khi Đạt Goal (Goal Invalidation):**
-   - Khi người dùng bấm nút CTA chuyển đổi Web-to-App OneLink (`data-goal-action="w2a-conversion"`) hoặc hoàn tất việc gửi lead:
+   - Khi người dùng nhấp vào nút CTA chuyển đổi Web-to-App OneLink (`data-goal-action="w2a-conversion"`) hoặc hoàn tất việc gửi lead:
    - Hệ thống set ngay cờ `goal_achieved = true`, xóa cookie `momo_retarget_intent` (set `max-age=0`) và dọn dẹp `localStorage` để không tiếp tục hiển thị quảng cáo nhắc nhở nữa.
 
 #### 4. Nguyên tắc Vận hành Động cơ Phân phối (Delivery Engine trên toàn site)
@@ -733,7 +733,7 @@ Khi người dùng truy cập vào bất kỳ trang nào trên domain `momo.vn`,
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>5. Tần suất / Cooldown</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">User chưa bấm nút đóng (X) trong vòng 24 giờ qua</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">User chưa nhấp vào nút đóng (X) trong vòng 24 giờ qua</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tạm ẩn để tránh gây ức chế cho người dùng</td>
     </tr>
   </tbody>
@@ -744,7 +744,7 @@ Khi người dùng truy cập vào bất kỳ trang nào trên domain `momo.vn`,
 Định dạng này được xếp vào danh mục **Ad Format Re-engagement** với quy chuẩn hiển thị tinh gọn, không gây gián đoạn trải nghiệm:
 
 - **Vị trí và Bố cục hiển thị:**
-  - **Trên Desktop:** Định dạng dạng Card nổi (Floating Card) cố định ở góc dưới bên phải màn hình (`bottom: 24px; right: 24px;`), chiều rộng chuẩn 360–380px, bo góc mềm, bóng đổ nổi bật.
+  - **Trên Desktop:** Định dạng dạng Card nổi (Floating Card) cố định ở góc dưới bên phải màn hình (`bottom: 24px; right: 24px;`), chiều rộng chuẩn 360-380px, bo góc mềm, bóng đổ nổi bật.
   - **Trên Mobile:** Định dạng thanh Dock dính đáy (Sticky Bottom Dock), cố định nằm ngay trên lớp Bottom Navigation (nếu có), không chiếm quá 15% chiều cao màn hình.
   - **Đảm bảo Core Web Vitals:** Load bất đồng bộ, render với container cố định hoặc animation trượt vào mượt mà, đảm bảo $CLS = 0$ (không gây giật nhảy khung hình).
 - **Nội dung thông điệp:**
@@ -755,7 +755,7 @@ Khi người dùng truy cập vào bất kỳ trang nào trên domain `momo.vn`,
   - **Nút CTA "Tiếp tục hoàn thành":** Điều hướng người dùng quay lại URL của Trang A kèm tham số định danh: `${payload.url}?utm_source=onsite_retarget&utm_medium=smart_dock&resume=true`.
   - **Nút "Đóng (X)":** Tắt dock và lưu mốc thời gian cooldown 24 giờ vào bộ nhớ trình duyệt để không làm phiền người dùng trong các lần mở trang tiếp theo của ngày hôm đó.
 - **Quy tắc Phân xử Ưu tiên (Priority Arbitration):**
-  - **Cấp độ Ưu tiên P0 (Tier 1):** Quảng cáo On-site Retargeting có mức chuyển đổi cao nhất nên được quyền ưu tiên hiển thị đè lên Balloon / Float Icon thông thường.
+  - **Cấp độ ưu tiên cao nhất (Tier 1):** Quảng cáo On-site Retargeting có mức chuyển đổi cao nhất nên được quyền ưu tiên hiển thị đè lên Balloon / Float Icon thông thường.
   - **Xử lý xung đột với Popup chiến dịch:** Nếu trang hiện tại có Popup khuyến mại toàn trang đang kích hoạt, Smart Resume Dock sẽ tự động lùi thời gian hiển thị sau 4 giây hoặc chỉ hiện sau khi người dùng đã đóng Popup chiến dịch.
 
 #### 6. Quy chuẩn Đo lường Vòng lặp Kín (Closed-Loop Telemetry Schema)
@@ -783,12 +783,12 @@ Hệ thống ghi nhận 5 sự kiện chuẩn vào Umami Analytics & Google Anal
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">retarget_ad_click</code></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khi user bấm nút "Tiếp tục hoàn thành"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khi user nhấp vào nút "Tiếp tục hoàn thành"</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">source_page</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">target_page</code></td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">retarget_ad_dismiss</code></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khi user bấm nút X tắt thông báo</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khi user nhấp vào nút X tắt thông báo</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">target_page</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">cooldown_hours: 24</code></td>
     </tr>
     <tr>
@@ -799,7 +799,7 @@ Hệ thống ghi nhận 5 sự kiện chuẩn vào Umami Analytics & Google Anal
   </tbody>
 </table>
 
-#### 7. Kế hoạch Phân rã Công việc Triển khai (Action Checklist)
+#### 7. Kế hoạch Bóc tách Công việc Triển khai (Action Checklist)
 
 - [ ] **Task 1 (Client Tracker Engine):** Xây dựng module nhận diện intent tương tác và bắt sự kiện `pagehide`/`visibilitychange` khi drop-off; quản lý cookie `domain=.momo.vn; max-age=2592000` kèm fallback `localStorage`.
 - [ ] **Task 2 (Goal Invalidation Hook):** Cài đặt hàm xóa cookie khi người dùng chạm Goal chuyển đổi (click OneLink W2A hoặc submit form thành công).
@@ -984,7 +984,7 @@ Component là các interactive flow multi-step cho phép user thực hiện giao
 Component thực hiện toàn bộ flow trong Web. Authentication và payment được xử lý inline:
 - Nếu user **chưa có tài khoản MoMo**: Component collect thông tin giao dịch đầy đủ, sau đó trigger Onelink deeplink vào đúng step trong App để authenticate và hoàn tất.
 - Nếu user **đã xác định là MoMo user** (qua Onelink device check): Component trigger deeplink trực tiếp vào bước xác nhận trong App, bỏ qua các step nhập liệu.
-- Mục tiêu tối thượng: **Zero redundant input** - user không phải nhập lại thông tin đã điền trong Component.
+- Mục tiêu cốt lõi: **Zero redundant input** - user không phải nhập lại thông tin đã điền trong Component.
 
 #### Purchase Flow Components
 
@@ -1356,7 +1356,7 @@ Không có auto-winner detection. PM tự phán quyết trong Ads Manager dựa 
   <thead>
     <tr style="background-color:#f1f5f9;">
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Metric</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Priority</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Đợt Triển Khai</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ghi chú</th>
     </tr>
   </thead>
@@ -1437,34 +1437,34 @@ A/B Testing chỉ áp dụng cho **Landing Page** trong Phase 1:
 <table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
   <thead>
     <tr style="background-color:#f1f5f9;">
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Priority</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Đợt Triển Khai</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Use Case</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Lý do</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P0</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 1</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mini Web Use Case (bảo hiểm, BNPL, vay, phạt nguội)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Intent transactional cao nhất, gần điểm convert</td>
     </tr>
     <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P0</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 1</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Landing Page khuyến mãi</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">User đang tìm ưu đãi - highly receptive</td>
     </tr>
     <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 2</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog/News tài chính</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Traffic lớn, cơ hội Awareness</td>
     </tr>
     <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 2</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Partner Page (/merchant)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cross-sell opportunity</td>
     </tr>
     <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 3</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Help Center, Guide</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chỉ Awareness nhẹ - không interrupt flow</td>
     </tr>
@@ -1572,7 +1572,7 @@ User đã có app nhưng inactive → vào web tìm kiếm → thấy Ads nhắc
 ### 8.3. Success Gate per Module
 
 **Gate vào Module 2:**
-- Module 1 zero P1 bug trong 2 tuần liên tiếp
+- Module 1 không phát sinh bug nghiêm trọng trong 2 tuần liên tiếp
 - CTR trung bình đạt 4%+ trên ít nhất 3 Traffic campaign
 - Attribution chain click → install đã verify
 
@@ -1751,7 +1751,7 @@ Nhằm giải quyết dứt điểm các mục tiêu tích hợp và nâng cấp
 ## Change Log
 - **Tháng 11/2026 (v3.5):** 
   - Bổ sung Section 5.3.1: Đặc tả kỹ thuật chi tiết luồng **On-site Retargeting & Cookie Intent 30 ngày** (phụ trách bởi Tech Lead Thuận). Cơ chế bắt drop-off khi người dùng bỏ dở flow tại Trang A, lưu vết 1st-party cookie root domain `.momo.vn` (TTL 30 ngày, kèm Hybrid LocalStorage fallback).
-  - Bổ sung định dạng Ads mới vào Section 5.1: **Smart Resume Dock / Retargeting Bar** (Floating Corner Card trên Desktop, Sticky Bottom Dock trên Mobile) kích hoạt ưu tiên Tier 1 (P0) trên toàn bộ `momo.vn` để kéo user quay lại hoàn thành luồng tại Trang A.
+  - Bổ sung định dạng Ads mới vào Section 5.1: **Smart Resume Dock / Retargeting Bar** (Floating Corner Card trên Desktop, Sticky Bottom Dock trên Mobile) kích hoạt ưu tiên Tier 1 trên toàn bộ `momo.vn` để kéo user quay lại hoàn thành luồng tại Trang A.
   - Chuẩn hóa schema 5 sự kiện đo lường vòng lặp trên Umami & GA4 (`retarget_cookie_set`, `retarget_ad_impression`, `retarget_ad_click`, `retarget_ad_dismiss`, `retarget_recovery_cvr`).
 - **Tháng 6/2026 (v3.4):** Định hướng lại trọng tâm dự án Ads tập trung vào việc tích hợp các định dạng quảng cáo từ Admin Tool (Float, Balloon, A/B Testing) về MoSpark và cải thiện các Format hiển thị (Widget, Popup).
 - **Tháng 6/2026 (v3.3):** Thay thế cơ chế registry Project và mapping URL thủ công bằng cơ chế Smart Targeting Engine (CMS Tags & Categories + Dynamic Matching Rules), tích hợp thuật toán tính điểm ưu tiên (Priority Score Engine) cho phần giải quyết xung đột (Conflict Resolution).

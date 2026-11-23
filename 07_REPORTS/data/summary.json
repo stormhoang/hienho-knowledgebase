@@ -1,91 +1,91 @@
 {
   "lastFull": {
     "month": "2026-10",
-    "pv": 3602023,
+    "pv": 1911082,
     "prevPv": 3952859,
     "target": 3665607
   },
   "running": {
     "month": "2026-11",
-    "daysElapsed": 7,
+    "daysElapsed": 17,
     "daysInMonth": 30,
-    "report": "monthly_11_2026_mtd_7d.json",
-    "pv": 679470,
+    "report": "monthly_11_2026_mtd_17d.json",
+    "pv": 2980278,
     "target": 3829155,
-    "dailyPace": 97067,
-    "dailyNeeded": 136943,
-    "forecast": 2912014,
-    "forecastPct": 76.05
+    "dailyPace": 175310,
+    "dailyNeeded": 65298,
+    "forecast": 5259314,
+    "forecastPct": 137.35
   },
   "hubs": [
     {
       "id": "cinema",
       "name": "Cinema Hub",
-      "pv": 175830
+      "pv": 863982
     },
     {
       "id": "financial",
       "name": "Financial Hub",
-      "pv": 64607
+      "pv": 372174
     },
     {
       "id": "new_user",
       "name": "New User Hub",
-      "pv": 20566
+      "pv": 206141
     },
     {
       "id": "vehicle",
       "name": "Vehicle Hub",
-      "pv": 21203
+      "pv": 288185
     },
     {
       "id": "insurance",
       "name": "Insurance Hub",
-      "pv": 9026
+      "pv": 88185
     },
     {
       "id": "student",
       "name": "Student Hub",
-      "pv": 619
+      "pv": 3106
     }
   ],
   "lastFullHubs": [
     {
       "id": "cinema",
       "name": "Cinema Hub",
-      "pv": 1198507
+      "pv": 631994
     },
     {
       "id": "home",
       "name": "Home MoMo",
-      "pv": 537786
+      "pv": 222633
     },
     {
       "id": "download",
       "name": "Download",
-      "pv": 418639
+      "pv": 220757
     },
     {
       "id": "financial",
       "name": "Financial Hub",
-      "pv": 262871
+      "pv": 146327
     },
     {
       "id": "payment",
       "name": "Payment Hub",
-      "pv": 258609
+      "pv": 138116
     },
     {
       "id": "game",
       "name": "Game Hub",
-      "pv": 255227
+      "pv": 134655
     }
   ],
   "channels": {
-    "organic": 333538,
-    "direct": 172951,
-    "referral": 37322,
-    "paid": 104452,
-    "others": 31207
+    "organic": 1626265,
+    "direct": 918968,
+    "referral": 169150,
+    "paid": 773931,
+    "others": 97972
   }
 }

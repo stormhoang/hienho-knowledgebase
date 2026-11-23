@@ -1,3 +1,7 @@
+"""One-off: cập nhật mục Next Actions trong weekly report theo trạng thái dự án mới nhất. Không dùng lại.
+
+Usage: ./.venv/bin/python scripts/update_next_actions.py
+"""
 import os
 
 path = '07_REPORTS/docs/weekly-report-2026-10-26-11-01.md'

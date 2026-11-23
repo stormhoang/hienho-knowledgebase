@@ -1,41 +1,43 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-07T13:12:51.907612+00:00",
+  "generated_at": "2026-11-09T06:28:03.987180+00:00",
   "mode": "observe",
   "repository": "/Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base",
   "summary": {
-    "total_files": 1068,
-    "registered_files": 26,
-    "unregistered_knowledge_files": 566,
+    "total_files": 1058,
+    "registered_files": 28,
+    "unregistered_knowledge_files": 547,
     "domains": {
       ".agents": 91,
+      ".devin": 1,
       ".github": 2,
       ".obsidian": 7,
+      ".pytest_cache": 1,
       ".vscode": 1,
       "01_STRATEGIC_PLAN": 12,
       "02_FRAMEWORKS": 12,
       "03_SKILLS": 16,
       "04_MOSPARK_PLATFORM": 24,
       "05_HUBS": 264,
-      "06_USE_CASE_MOMO": 40,
-      "07_REPORTS": 287,
+      "06_USE_CASE_MOMO": 39,
+      "07_REPORTS": 274,
       "08_DECISION_LOG": 1,
       "09_PRD": 23,
       "10_LEADERSHIP_MINDSET": 1,
-      "11_NEWS_FEED": 30,
+      "11_NEWS_FEED": 14,
       "13_INTAKE": 1,
       "14_ROADMAP": 1,
-      "15_DISPATCH": 3,
+      "15_DISPATCH": 5,
       "AGENTS.md": 1,
       "AGENT_OPERATING_CONTRACT.md": 1,
       "CODEBASE_MANIFEST.md": 1,
       "MEETING_RECAPS.md": 1,
       "README.md": 1,
       "_archive": 7,
-      "agent_governance": 26,
+      "agent_governance": 33,
       "growth_reporting_tool": 1,
       "scratch": 50,
-      "scripts": 163
+      "scripts": 172
     }
   },
   "unregistered_knowledge_files": [
@@ -83,6 +85,7 @@
     "06_USE_CASE_MOMO/doi-tac-brd.md",
     "06_USE_CASE_MOMO/ota-brd.md",
     "06_USE_CASE_MOMO/esim-du-lich-brd.md",
+    "06_USE_CASE_MOMO/phat-nguoi-master-deck-apr2026.md",
     "06_USE_CASE_MOMO/bus-brd.md",
     "06_USE_CASE_MOMO/bhyt-brd.md",
     "06_USE_CASE_MOMO/gia-vang-brd.md",
@@ -96,6 +99,8 @@
     "06_USE_CASE_MOMO/telecom-brd.md",
     "06_USE_CASE_MOMO/plg-project-template.md",
     "06_USE_CASE_MOMO/trust-brd.md",
+    "06_USE_CASE_MOMO/molisa-location-solution.md",
+    ".pytest_cache/README.md",
     "01_STRATEGIC_PLAN/website-growth-thesis.md",
     "01_STRATEGIC_PLAN/web-momo-okrs-2026.md",
     "01_STRATEGIC_PLAN/search-revamp-brd.md",
@@ -115,21 +120,28 @@
     ".obsidian/appearance.json",
     "00_HARNESS_CORE/knowledge_conflict_triage.json",
     "00_HARNESS_CORE/KEYWORD_CLUSTERING_OPTIMIZATION_SPEC.md",
+    "00_HARNESS_CORE/knowledge_freshness.json",
+    "00_HARNESS_CORE/knowledge_freshness.md",
     "00_HARNESS_CORE/knowledge_conflict_triage.yaml",
     "00_HARNESS_CORE/momo-thinking-protocol.md",
     "00_HARNESS_CORE/OPERATIONAL_ROUTINE.md",
     "00_HARNESS_CORE/knowledge_internal_review.json",
+    "00_HARNESS_CORE/knowledge_acceptance_report.json",
     "00_HARNESS_CORE/knowledge_schema.md",
+    "00_HARNESS_CORE/acceptance_test_cases.json",
     "00_HARNESS_CORE/knowledge_history_review.json",
     "00_HARNESS_CORE/SKILL_REGISTRY.md",
+    "00_HARNESS_CORE/knowledge_acceptance_report.md",
     "00_HARNESS_CORE/web_platform_introduction.md",
     "00_HARNESS_CORE/knowledge_source_review.json",
     "00_HARNESS_CORE/knowledge_conflicts.md",
     "00_HARNESS_CORE/knowledge_conflicts.json",
+    "00_HARNESS_CORE/knowledge_provenance.md",
     "00_HARNESS_CORE/knowledge_inventory.json",
     "00_HARNESS_CORE/PARAPHRASE_RULES_SSOT.md",
     "00_HARNESS_CORE/knowledge_open_issues.json",
     "00_HARNESS_CORE/knowledge_inventory.md",
+    "00_HARNESS_CORE/knowledge_provenance.json",
     "00_HARNESS_CORE/knowledge_registry.yaml",
     "13_INTAKE/README.md",
     "04_MOSPARK_PLATFORM/mospark_chatbot.md",
@@ -176,6 +188,7 @@
     "09_PRD/cinema-chatbot-prd.md",
     "09_PRD/_template-prd.md",
     "09_PRD/destination-hub-prd.md",
+    ".devin/mcp_config.json",
     ".vscode/settings.json",
     "10_LEADERSHIP_MINDSET/leadership-mindset.md",
     "02_FRAMEWORKS/First-Principles.md",
@@ -192,7 +205,9 @@
     "05_HUBS/WHAT_IS_HUB.md",
     "05_HUBS/travel-hub-brd.md",
     "05_HUBS/lottery-hub-brd.md",
+    "15_DISPATCH/.queue/mw7d4it0-308e25.json",
     "15_DISPATCH/.queue/mw5zthk4-648b89.json",
+    "15_DISPATCH/.queue/mw7cs3fn-e39eb3.json",
     "15_DISPATCH/.queue/mw5zqvzn-6d8ca2.json",
     "07_REPORTS/docs/usecase-template.md",
     "07_REPORTS/docs/report-thang-10-2026.md",
@@ -243,8 +258,10 @@
     "07_REPORTS/data/ga4_multichannel_cache_2026-10-01_2026-10-30.json",
     "07_REPORTS/data/poc_cluster_naming_report.md",
     "07_REPORTS/data/monthly_10_2026_mtd_29d.json",
+    "07_REPORTS/data/monthly_11_2026_mtd_8d.json",
     "07_REPORTS/data/web_performance_new_user_funnel_10_2026_mtd_13d.json",
     "07_REPORTS/data/google_trends_validation.json",
+    "07_REPORTS/data/poc_cluster_naming.json",
     "07_REPORTS/data/monthly_10_2026_mtd_23d.json",
     "07_REPORTS/data/monthly_11_2026_mtd_6d.json",
     "07_REPORTS/data/gsc_zero_impression_analysis.json",
@@ -267,6 +284,7 @@
     "07_REPORTS/data/monthly_08_2026.json",
     "07_REPORTS/data/monthly_11_2026_mtd_5d.json",
     "07_REPORTS/data/monthly_10_2026_mtd_20d.json",
+    "07_REPORTS/data/monthly_11_2026_mtd_7d.json",
     "07_REPORTS/data/monthly_10_2026_mtd_22d.json",
     "07_REPORTS/data/monthly_02_2026_full_month.json",
     "07_REPORTS/data/reallocation_audit.json",
@@ -278,15 +296,15 @@
     "07_REPORTS/data/monthly_10_2026_mtd_24d.json",
     "07_REPORTS/data/ga4_multichannel_cache_2026-10-08_2026-11-04.json",
     "07_REPORTS/data/ga4_multichannel_cache_2026-10-01_2026-10-23.json",
-    "07_REPORTS/competitors/bảo-hiểm-ô-tô-competitor-analysis.md",
-    "07_REPORTS/competitors/phạt-nguội-competitor-analysis.md",
-    "07_REPORTS/competitors/bảo-hiểm-y-tế-competitor-analysis.md",
-    "07_REPORTS/competitors/ví-trả-sau-competitor-analysis.md",
-    "07_REPORTS/competitors/gửi-tiết-kiệm-online-competitor-analysis.md",
+    "07_REPORTS/competitors/bao-hiem-y-te-competitor-analysis.md",
+    "07_REPORTS/competitors/vi-tra-sau-competitor-analysis.md",
+    "07_REPORTS/competitors/tiet-kiem-online-competitor-analysis.md",
+    "07_REPORTS/competitors/bao-hiem-o-to-competitor-analysis.md",
+    "07_REPORTS/competitors/cic-la-gi-competitor-analysis.md",
     "07_REPORTS/competitors/vay-nhanh-competitor-analysis.md",
-    "07_REPORTS/competitors/tiết-kiệm-online-competitor-analysis.md",
-    "07_REPORTS/competitors/cic-là-gì-competitor-analysis.md",
-    "07_REPORTS/competitors/tra-cứu-phạt-nguội-competitor-analysis.md",
+    "07_REPORTS/competitors/gui-tiet-kiem-online-competitor-analysis.md",
+    "07_REPORTS/competitors/tra-cuu-phat-nguoi-competitor-analysis.md",
+    "07_REPORTS/competitors/phat-nguoi-competitor-analysis.md",
     "07_REPORTS/technical_seo/crawl_stats/gsc_crawl_stats_latest.json",
     "07_REPORTS/technical_seo/backlinks/backlink_profile_latest.json",
     "07_REPORTS/docs/strategy/report-gamification-strategy-2026.md",
@@ -304,30 +322,23 @@
     "07_REPORTS/data/dashboard_patches/performance7d.json",
     "07_REPORTS/data/suggestions/l%E1%BB%8Bch-chi%E1%BA%BFu-phim-cgv.json",
     "07_REPORTS/data/suggestions/t%E1%BB%B7-gi%C3%A1-vcb.json",
-    "07_REPORTS/data/competitors/diem-tin-dung.json",
-    "07_REPORTS/data/competitors/tiết-kiệm-online.json",
-    "07_REPORTS/data/competitors/bảo-hiểm-y-tế.json",
     "07_REPORTS/data/competitors/no-xau.json",
     "07_REPORTS/data/competitors/benh-vien.json",
     "07_REPORTS/data/competitors/doi-tien.json",
-    "07_REPORTS/data/competitors/ví-trả-sau.json",
     "07_REPORTS/data/competitors/rap.json",
     "07_REPORTS/data/competitors/tu-vi.json",
     "07_REPORTS/data/competitors/crypto.json",
     "07_REPORTS/data/competitors/ty-gia.json",
-    "07_REPORTS/data/competitors/bảo-hiểm-xe-máy.json",
-    "07_REPORTS/data/competitors/gửi-tiết-kiệm-online.json",
     "07_REPORTS/data/competitors/ve-so.json",
     "07_REPORTS/data/competitors/thue.json",
     "07_REPORTS/data/competitors/tram-sac.json",
-    "07_REPORTS/data/competitors/cic-la-gi.json",
-    "07_REPORTS/data/competitors/vay-nhanh.json",
+    "07_REPORTS/data/competitors/vi-tra-sau.json",
     "07_REPORTS/data/competitors/tuyen-sinh.json",
     "07_REPORTS/data/competitors/xe-khach.json",
     "07_REPORTS/data/competitors/game-app.json",
     "07_REPORTS/data/competitors/data-4g.json",
     "07_REPORTS/data/competitors/lai-suat.json",
-    "07_REPORTS/data/competitors/phạt-nguội.json",
+    "07_REPORTS/data/competitors/_aliases.json",
     "07_REPORTS/data/competitors/sua-xe.json",
     "07_REPORTS/data/competitors/gia-dau.json",
     "07_REPORTS/data/competitors/phim.json",
@@ -341,10 +352,8 @@
     "07_REPORTS/data/competitors/bhxh.json",
     "07_REPORTS/data/competitors/sinh-vien.json",
     "07_REPORTS/data/competitors/lich-am.json",
-    "07_REPORTS/data/competitors/gia-xang-hom-nay.json",
     "07_REPORTS/data/competitors/bmi.json",
     "07_REPORTS/data/competitors/thi-bang-lai-xe.json",
-    "07_REPORTS/data/competitors/tra-cứu-phạt-nguội.json",
     "07_REPORTS/data/competitors/lich-phim.json",
     "07_REPORTS/data/competitors/gia-xe.json",
     "07_REPORTS/data/competitors/nap-game.json",
@@ -354,23 +363,18 @@
     "07_REPORTS/data/competitors/gui-tiet-kiem.json",
     "07_REPORTS/data/competitors/chuyen-khoan.json",
     "07_REPORTS/data/competitors/xo-so.json",
-    "07_REPORTS/data/competitors/giá-xăng-hôm-nay.json",
     "07_REPORTS/data/competitors/tuyen-xe-buyt.json",
     "07_REPORTS/data/competitors/ma-so-thue.json",
     "07_REPORTS/data/competitors/vietlott.json",
     "07_REPORTS/data/competitors/bien-so-xe.json",
     "07_REPORTS/data/competitors/ngan-hang.json",
     "07_REPORTS/data/competitors/phat-nguoi.json",
-    "07_REPORTS/data/competitors/gui-tiet-kiem-online.json",
     "07_REPORTS/data/competitors/dai-hoc.json",
-    "07_REPORTS/data/competitors/bảo-hiểm-ô-tô.json",
-    "07_REPORTS/data/competitors/tra-cuu-phat-nguoi.json",
     "07_REPORTS/data/competitors/bao-hiem-y-te.json",
     "07_REPORTS/data/competitors/nph-game.json",
     "07_REPORTS/data/competitors/gia-xang.json",
     "07_REPORTS/data/competitors/bao-hiem-o-to.json",
     "07_REPORTS/data/competitors/chung-khoan.json",
-    "07_REPORTS/data/competitors/cic-là-gì.json",
     "07_REPORTS/data/competitors/internet-banking.json",
     "07_REPORTS/data/competitors/dang-kiem.json",
     "07_REPORTS/data/competitors/vay.json",
@@ -448,30 +452,11 @@
     "07_REPORTS/data/history/monthly_snapshots/monthly_09_2026_mtd.json",
     "07_REPORTS/data/history/monthly_snapshots/monthly_09_2026_mtd_26d.json",
     "07_REPORTS/data/history/monthly_snapshots/monthly_10_2026_mtd_19d.json",
-    "11_NEWS_FEED/daily/2026-11-02_seo_geo_daily_pulse.md",
-    "11_NEWS_FEED/daily/2026-10-21_seo_geo_daily_pulse.md",
     "11_NEWS_FEED/daily/sample_news_template.md",
-    "11_NEWS_FEED/daily/2026-11-01_seo_geo_daily_pulse.md",
-    "11_NEWS_FEED/daily/2026-10-19_seo_geo_daily_pulse.md",
-    "11_NEWS_FEED/daily/2026-10-11_daily_pulse.md",
-    "11_NEWS_FEED/daily/2026-10-09_daily_pulse.md",
-    "11_NEWS_FEED/daily/2026-10-18_seo_geo_daily_pulse.md",
-    "11_NEWS_FEED/daily/2026-10-12_daily_pulse.md",
-    "11_NEWS_FEED/daily/2026-11-03_seo_geo_daily_pulse.md",
-    "11_NEWS_FEED/daily/2026-10-20_seo_geo_daily_pulse.md",
-    "11_NEWS_FEED/daily/2026-10-31_seo_geo_daily_pulse.md",
-    "11_NEWS_FEED/daily/2026-10-30_seo_geo_daily_pulse.md",
-    "11_NEWS_FEED/topics/tech_ai_seo/2026-10-20_seo_geo_pulse.md",
-    "11_NEWS_FEED/topics/tech_ai_seo/2026-10-21_seo_geo_pulse.md",
-    "11_NEWS_FEED/topics/tech_ai_seo/2026-10-18_seo_geo_pulse.md",
-    "11_NEWS_FEED/topics/tech_ai_seo/2026-10-19_seo_geo_pulse.md",
     "06_USE_CASE_MOMO/content-plans/INDEX.md",
-    "06_USE_CASE_MOMO/content-plans/bien-so-xe (1)-content-plan.md",
     "06_USE_CASE_MOMO/content-plans/insurtech/bao-hiem-chay-no-content-plan.md",
     "06_USE_CASE_MOMO/content-plans/insurtech/bao-hiem-content-plan.md",
-    "06_USE_CASE_MOMO/content-plans/insurtech/bao-hiem-xe-content-plan.md",
-    "06_USE_CASE_MOMO/content-plans/insurtech/bao-hiem-vat-chat-content-plan.md",
-    "06_USE_CASE_MOMO/content-plans/insurtech/bao-hiem-than-vo-content-plan.md",
+    "06_USE_CASE_MOMO/content-plans/insurtech/bao-hiem-xe-may-content-plan.md",
     "06_USE_CASE_MOMO/content-plans/insurtech/bhxh-content-plan.md",
     "06_USE_CASE_MOMO/content-plans/insurtech/bhyt-content-plan.md",
     "06_USE_CASE_MOMO/content-plans/insurtech/bao-hiem-o-to-content-plan.md",
@@ -480,9 +465,9 @@
     "06_USE_CASE_MOMO/content-plans/cinema/dat-phim-content-plan.md",
     "06_USE_CASE_MOMO/content-plans/cinema/phim-content-plan.md",
     "06_USE_CASE_MOMO/content-plans/cinema/rap-content-plan.md",
-    "06_USE_CASE_MOMO/content-plans/cinema/mua-ve-phim-content-plan.md",
     "06_USE_CASE_MOMO/content-plans/cinema/ve-xem-phim-content-plan.md",
     "06_USE_CASE_MOMO/content-plans/student/tuyen-sinh-content-plan.md",
+    "06_USE_CASE_MOMO/content-plans/vehicle-hub/bien-so-xe-content-plan.md",
     "06_USE_CASE_MOMO/content-plans/Lottery/vietlott-content-plan.md",
     ".agents/workflows/graphify.md",
     ".agents/rules/always_read_recaps.md",
@@ -594,7 +579,6 @@
     "05_HUBS/new-user/new-user-hub-brd.md",
     "05_HUBS/new-user/tai-app-landing-prd.md",
     "05_HUBS/merchant/merchant-hub-brd.md",
-    "05_HUBS/vehicle/datasets/partner-garages.json",
     "05_HUBS/vehicle/datasets/official-brand-garages.json",
     "05_HUBS/cinema/data/roadmap.json",
     "05_HUBS/cinema/data/cinema_roadmap_manifest.json",
@@ -602,7 +586,6 @@
     "05_HUBS/cinema/data/wp___minigame.json",
     "05_HUBS/cinema/data/opportunity_&_priority.json",
     "05_HUBS/cinema/data/web_performances.json",
-    "05_HUBS/inventory/vehicle-hub/partner-garages.json",
     "05_HUBS/inventory/Lottery/Tài liệu Landing Page Mua hộ vé số - Final.md",
     "05_HUBS/inventory/Lottery/Sổ tay Vietlott SMS - final.md"
   ],
@@ -643,8 +626,8 @@
       "path": ".agents/skills/content-plan-architect/SKILL.md",
       "domain": ".agents",
       "type": "md",
-      "bytes": 8359,
-      "modified_at": "2026-10-16T03:43:14.807377+00:00",
+      "bytes": 8437,
+      "modified_at": "2026-11-09T00:36:00.340980+00:00",
       "registered": false
     },
     {
@@ -1267,8 +1250,8 @@
       "path": ".agents/skills/keyword-clustering-strategy/SKILL.md",
       "domain": ".agents",
       "type": "md",
-      "bytes": 12979,
-      "modified_at": "2026-10-20T10:30:37.249038+00:00",
+      "bytes": 12976,
+      "modified_at": "2026-11-09T00:32:35.462872+00:00",
       "registered": false
     },
     {
@@ -1283,16 +1266,16 @@
       "path": ".agents/skills/product-master/SKILL.md",
       "domain": ".agents",
       "type": "md",
-      "bytes": 8404,
-      "modified_at": "2026-08-16T11:16:00.559289+00:00",
+      "bytes": 8491,
+      "modified_at": "2026-11-09T00:32:11.686634+00:00",
       "registered": false
     },
     {
       "path": ".agents/skills/read-latest-tracking-report/SKILL.md",
       "domain": ".agents",
       "type": "md",
-      "bytes": 3101,
-      "modified_at": "2026-10-12T01:49:45.411275+00:00",
+      "bytes": 3173,
+      "modified_at": "2026-11-09T00:36:11.060064+00:00",
       "registered": false
     },
     {
@@ -1307,8 +1290,8 @@
       "path": ".agents/skills/sync-all/SKILL.md",
       "domain": ".agents",
       "type": "md",
-      "bytes": 3713,
-      "modified_at": "2026-10-18T04:03:45.998716+00:00",
+      "bytes": 3724,
+      "modified_at": "2026-11-09T00:36:19.421437+00:00",
       "registered": false
     },
     {
@@ -1323,8 +1306,8 @@
       "path": ".agents/skills/web-platform-skill/SKILL.md",
       "domain": ".agents",
       "type": "md",
-      "bytes": 22080,
-      "modified_at": "2026-09-13T10:45:14.990180+00:00",
+      "bytes": 22098,
+      "modified_at": "2026-11-09T00:33:03.020319+00:00",
       "registered": false
     },
     {
@@ -1336,11 +1319,19 @@
       "registered": false
     },
     {
+      "path": ".devin/mcp_config.json",
+      "domain": ".devin",
+      "type": "json",
+      "bytes": 142,
+      "modified_at": "2026-11-08T15:15:16.729349+00:00",
+      "registered": false
+    },
+    {
       "path": ".github/workflows/knowledge-validation.yml",
       "domain": ".github",
       "type": "yml",
-      "bytes": 2005,
-      "modified_at": "2026-11-07T13:07:37.377023+00:00",
+      "bytes": 4180,
+      "modified_at": "2026-11-09T06:21:28.541686+00:00",
       "registered": false
     },
     {
@@ -1408,6 +1399,14 @@
       "registered": false
     },
     {
+      "path": ".pytest_cache/README.md",
+      "domain": ".pytest_cache",
+      "type": "md",
+      "bytes": 302,
+      "modified_at": "2026-11-09T05:35:27.567523+00:00",
+      "registered": false
+    },
+    {
       "path": ".vscode/settings.json",
       "domain": ".vscode",
       "type": "json",
@@ -1459,16 +1458,16 @@
       "path": "00_HARNESS_CORE/KNOWLEDGE_ROUTING.md",
       "domain": "agent_governance",
       "type": "md",
-      "bytes": 11442,
-      "modified_at": "2026-11-07T12:54:58.325174+00:00",
+      "bytes": 12025,
+      "modified_at": "2026-11-09T05:34:54.753373+00:00",
       "registered": true
     },
     {
       "path": "00_HARNESS_CORE/OPERATIONAL_ROUTINE.md",
       "domain": "agent_governance",
       "type": "md",
-      "bytes": 7045,
-      "modified_at": "2026-09-22T00:34:49.371700+00:00",
+      "bytes": 7063,
+      "modified_at": "2026-11-09T00:31:37.436627+00:00",
       "registered": false
     },
     {
@@ -1488,6 +1487,14 @@
       "registered": false
     },
     {
+      "path": "00_HARNESS_CORE/acceptance_test_cases.json",
+      "domain": "agent_governance",
+      "type": "json",
+      "bytes": 9004,
+      "modified_at": "2026-11-07T13:59:33.269331+00:00",
+      "registered": false
+    },
+    {
       "path": "00_HARNESS_CORE/hienho_master_doc.md",
       "domain": "agent_governance",
       "type": "md",
@@ -1496,11 +1503,27 @@
       "registered": true
     },
     {
+      "path": "00_HARNESS_CORE/knowledge_acceptance_report.json",
+      "domain": "agent_governance",
+      "type": "json",
+      "bytes": 10849,
+      "modified_at": "2026-11-09T06:21:32.633885+00:00",
+      "registered": false
+    },
+    {
+      "path": "00_HARNESS_CORE/knowledge_acceptance_report.md",
+      "domain": "agent_governance",
+      "type": "md",
+      "bytes": 216,
+      "modified_at": "2026-11-09T06:21:32.633992+00:00",
+      "registered": false
+    },
+    {
       "path": "00_HARNESS_CORE/knowledge_conflict_triage.json",
       "domain": "agent_governance",
       "type": "json",
       "bytes": 34667,
-      "modified_at": "2026-11-07T13:09:46.494792+00:00",
+      "modified_at": "2026-11-07T13:12:54.476229+00:00",
       "registered": false
     },
     {
@@ -1508,23 +1531,39 @@
       "domain": "agent_governance",
       "type": "yaml",
       "bytes": 27132,
-      "modified_at": "2026-11-07T13:09:46.496866+00:00",
+      "modified_at": "2026-11-07T13:12:54.476836+00:00",
       "registered": false
     },
     {
       "path": "00_HARNESS_CORE/knowledge_conflicts.json",
       "domain": "agent_governance",
       "type": "json",
-      "bytes": 31893,
-      "modified_at": "2026-11-07T13:09:46.452077+00:00",
+      "bytes": 30549,
+      "modified_at": "2026-11-09T06:21:32.336308+00:00",
       "registered": false
     },
     {
       "path": "00_HARNESS_CORE/knowledge_conflicts.md",
       "domain": "agent_governance",
       "type": "md",
-      "bytes": 18933,
-      "modified_at": "2026-11-07T13:09:46.452543+00:00",
+      "bytes": 18451,
+      "modified_at": "2026-11-09T06:21:32.336560+00:00",
+      "registered": false
+    },
+    {
+      "path": "00_HARNESS_CORE/knowledge_freshness.json",
+      "domain": "agent_governance",
+      "type": "json",
+      "bytes": 21525,
+      "modified_at": "2026-11-09T06:21:32.405270+00:00",
+      "registered": false
+    },
+    {
+      "path": "00_HARNESS_CORE/knowledge_freshness.md",
+      "domain": "agent_governance",
+      "type": "md",
+      "bytes": 6841,
+      "modified_at": "2026-11-09T06:21:32.405407+00:00",
       "registered": false
     },
     {
@@ -1547,16 +1586,16 @@
       "path": "00_HARNESS_CORE/knowledge_inventory.json",
       "domain": "agent_governance",
       "type": "json",
-      "bytes": 278099,
-      "modified_at": "2026-11-07T13:12:29.543626+00:00",
+      "bytes": 274434,
+      "modified_at": "2026-11-09T06:21:31.696415+00:00",
       "registered": false
     },
     {
       "path": "00_HARNESS_CORE/knowledge_inventory.md",
       "domain": "agent_governance",
       "type": "md",
-      "bytes": 996,
-      "modified_at": "2026-11-07T13:12:29.544256+00:00",
+      "bytes": 1033,
+      "modified_at": "2026-11-09T06:21:31.696746+00:00",
       "registered": false
     },
     {
@@ -1568,19 +1607,35 @@
       "registered": false
     },
     {
+      "path": "00_HARNESS_CORE/knowledge_provenance.json",
+      "domain": "agent_governance",
+      "type": "json",
+      "bytes": 19625,
+      "modified_at": "2026-11-09T06:21:32.544075+00:00",
+      "registered": false
+    },
+    {
+      "path": "00_HARNESS_CORE/knowledge_provenance.md",
+      "domain": "agent_governance",
+      "type": "md",
+      "bytes": 6865,
+      "modified_at": "2026-11-09T06:21:32.544203+00:00",
+      "registered": false
+    },
+    {
       "path": "00_HARNESS_CORE/knowledge_registry.yaml",
       "domain": "agent_governance",
       "type": "yaml",
-      "bytes": 10633,
-      "modified_at": "2026-11-07T13:12:18.343930+00:00",
+      "bytes": 14566,
+      "modified_at": "2026-11-09T05:36:43.397323+00:00",
       "registered": false
     },
     {
       "path": "00_HARNESS_CORE/knowledge_schema.md",
       "domain": "agent_governance",
       "type": "md",
-      "bytes": 1626,
-      "modified_at": "2026-11-07T13:11:36.048801+00:00",
+      "bytes": 4118,
+      "modified_at": "2026-11-07T13:52:01.228677+00:00",
       "registered": false
     },
     {
@@ -1595,8 +1650,8 @@
       "path": "00_HARNESS_CORE/momo-thinking-protocol.md",
       "domain": "agent_governance",
       "type": "md",
-      "bytes": 5555,
-      "modified_at": "2026-10-25T13:59:19.197284+00:00",
+      "bytes": 5775,
+      "modified_at": "2026-11-08T15:06:39.229908+00:00",
       "registered": false
     },
     {
@@ -1604,15 +1659,15 @@
       "domain": "agent_governance",
       "type": "md",
       "bytes": 15334,
-      "modified_at": "2026-08-08T05:34:17.242378+00:00",
+      "modified_at": "2026-11-09T00:31:37.509488+00:00",
       "registered": true
     },
     {
       "path": "00_HARNESS_CORE/team_scope_of_work.md",
       "domain": "agent_governance",
       "type": "md",
-      "bytes": 19807,
-      "modified_at": "2026-11-07T11:39:21.002799+00:00",
+      "bytes": 21533,
+      "modified_at": "2026-11-08T02:35:57.551913+00:00",
       "registered": true
     },
     {
@@ -1627,64 +1682,64 @@
       "path": "01_STRATEGIC_PLAN/homepage-revamp-brd.md",
       "domain": "01_STRATEGIC_PLAN",
       "type": "md",
-      "bytes": 36906,
-      "modified_at": "2026-08-21T01:01:17.837877+00:00",
+      "bytes": 36891,
+      "modified_at": "2026-11-09T00:31:37.526988+00:00",
       "registered": false
     },
     {
       "path": "01_STRATEGIC_PLAN/media-inbound-project.md",
       "domain": "01_STRATEGIC_PLAN",
       "type": "md",
-      "bytes": 26496,
-      "modified_at": "2026-08-13T08:12:52.531929+00:00",
+      "bytes": 26554,
+      "modified_at": "2026-11-09T00:39:30.789287+00:00",
       "registered": false
     },
     {
       "path": "01_STRATEGIC_PLAN/mospark-strategic-deck.md",
       "domain": "01_STRATEGIC_PLAN",
       "type": "md",
-      "bytes": 55346,
-      "modified_at": "2026-08-08T05:34:17.228038+00:00",
+      "bytes": 55226,
+      "modified_at": "2026-11-09T00:25:42.499234+00:00",
       "registered": false
     },
     {
       "path": "01_STRATEGIC_PLAN/mospark_roadmap.md",
       "domain": "01_STRATEGIC_PLAN",
       "type": "md",
-      "bytes": 26038,
-      "modified_at": "2026-08-05T06:41:25.933959+00:00",
+      "bytes": 26034,
+      "modified_at": "2026-11-09T00:25:42.499901+00:00",
       "registered": false
     },
     {
       "path": "01_STRATEGIC_PLAN/operational-support-projects-framework.md",
       "domain": "01_STRATEGIC_PLAN",
       "type": "md",
-      "bytes": 21569,
-      "modified_at": "2026-08-12T01:58:57.709527+00:00",
+      "bytes": 21604,
+      "modified_at": "2026-11-09T00:39:30.790981+00:00",
       "registered": false
     },
     {
       "path": "01_STRATEGIC_PLAN/product-lead.md",
       "domain": "01_STRATEGIC_PLAN",
       "type": "md",
-      "bytes": 33236,
-      "modified_at": "2026-08-08T05:34:17.229438+00:00",
+      "bytes": 33280,
+      "modified_at": "2026-11-09T00:41:36.205266+00:00",
       "registered": false
     },
     {
       "path": "01_STRATEGIC_PLAN/search-revamp-brd.md",
       "domain": "01_STRATEGIC_PLAN",
       "type": "md",
-      "bytes": 21545,
-      "modified_at": "2026-10-22T05:23:25.351838+00:00",
+      "bytes": 21551,
+      "modified_at": "2026-11-09T00:31:37.577286+00:00",
       "registered": false
     },
     {
       "path": "01_STRATEGIC_PLAN/thesis-seo-geo-2027.md",
       "domain": "01_STRATEGIC_PLAN",
       "type": "md",
-      "bytes": 27068,
-      "modified_at": "2026-10-14T23:44:23.157904+00:00",
+      "bytes": 27052,
+      "modified_at": "2026-11-09T00:31:37.584989+00:00",
       "registered": false
     },
     {
@@ -1707,16 +1762,16 @@
       "path": "01_STRATEGIC_PLAN/web_growth_strategy_brd.md",
       "domain": "01_STRATEGIC_PLAN",
       "type": "md",
-      "bytes": 8761,
-      "modified_at": "2026-08-08T05:34:17.229884+00:00",
+      "bytes": 8766,
+      "modified_at": "2026-11-09T00:31:37.608641+00:00",
       "registered": true
     },
     {
       "path": "01_STRATEGIC_PLAN/website-growth-thesis.md",
       "domain": "01_STRATEGIC_PLAN",
       "type": "md",
-      "bytes": 50351,
-      "modified_at": "2026-08-08T05:34:17.226616+00:00",
+      "bytes": 50343,
+      "modified_at": "2026-11-09T00:31:37.621979+00:00",
       "registered": false
     },
     {
@@ -1747,8 +1802,8 @@
       "path": "02_FRAMEWORKS/ai_signal_driven_seo_workflow.md",
       "domain": "02_FRAMEWORKS",
       "type": "md",
-      "bytes": 14706,
-      "modified_at": "2026-08-10T07:42:36.559071+00:00",
+      "bytes": 14708,
+      "modified_at": "2026-11-09T00:31:37.628965+00:00",
       "registered": false
     },
     {
@@ -1763,8 +1818,8 @@
       "path": "02_FRAMEWORKS/critical-thinking.md",
       "domain": "02_FRAMEWORKS",
       "type": "md",
-      "bytes": 6138,
-      "modified_at": "2026-08-08T05:15:50.630363+00:00",
+      "bytes": 6167,
+      "modified_at": "2026-11-09T00:39:30.794942+00:00",
       "registered": false
     },
     {
@@ -1811,16 +1866,16 @@
       "path": "02_FRAMEWORKS/spa-framework.md",
       "domain": "02_FRAMEWORKS",
       "type": "md",
-      "bytes": 18052,
-      "modified_at": "2026-08-08T05:15:50.632248+00:00",
+      "bytes": 18053,
+      "modified_at": "2026-11-09T00:40:20.420843+00:00",
       "registered": false
     },
     {
       "path": "03_SKILLS/ai-product-manager-mindset.md",
       "domain": "03_SKILLS",
       "type": "md",
-      "bytes": 7621,
-      "modified_at": "2026-08-09T10:09:04.688931+00:00",
+      "bytes": 7622,
+      "modified_at": "2026-11-09T00:31:37.648429+00:00",
       "registered": false
     },
     {
@@ -1843,32 +1898,32 @@
       "path": "03_SKILLS/brd-momo.md",
       "domain": "03_SKILLS",
       "type": "md",
-      "bytes": 35889,
-      "modified_at": "2026-08-08T05:15:50.633153+00:00",
+      "bytes": 36022,
+      "modified_at": "2026-11-09T00:40:44.691718+00:00",
       "registered": false
     },
     {
       "path": "03_SKILLS/c-level-reporting-framework.md",
       "domain": "03_SKILLS",
       "type": "md",
-      "bytes": 2910,
-      "modified_at": "2026-06-09T01:31:55+00:00",
+      "bytes": 2915,
+      "modified_at": "2026-11-09T00:31:37.660973+00:00",
       "registered": false
     },
     {
       "path": "03_SKILLS/momo-reporting-glossary.md",
       "domain": "03_SKILLS",
       "type": "md",
-      "bytes": 55038,
-      "modified_at": "2026-11-07T10:16:44.701012+00:00",
+      "bytes": 56430,
+      "modified_at": "2026-11-09T00:39:36.115826+00:00",
       "registered": true
     },
     {
       "path": "03_SKILLS/momo-reporting-guidelines.md",
       "domain": "03_SKILLS",
       "type": "md",
-      "bytes": 13850,
-      "modified_at": "2026-11-05T14:19:03.058966+00:00",
+      "bytes": 13853,
+      "modified_at": "2026-11-09T00:31:37.665058+00:00",
       "registered": false
     },
     {
@@ -1883,16 +1938,16 @@
       "path": "03_SKILLS/mospark-glossary.md",
       "domain": "03_SKILLS",
       "type": "md",
-      "bytes": 69027,
-      "modified_at": "2026-08-08T05:34:17.196886+00:00",
+      "bytes": 68937,
+      "modified_at": "2026-11-09T00:31:37.687630+00:00",
       "registered": false
     },
     {
       "path": "03_SKILLS/product-frameworks-master.md",
       "domain": "03_SKILLS",
       "type": "md",
-      "bytes": 9900,
-      "modified_at": "2026-08-08T05:15:50.635604+00:00",
+      "bytes": 9897,
+      "modified_at": "2026-11-09T00:31:37.690253+00:00",
       "registered": false
     },
     {
@@ -1907,8 +1962,8 @@
       "path": "03_SKILLS/product-prioritization-framework.md",
       "domain": "03_SKILLS",
       "type": "md",
-      "bytes": 3023,
-      "modified_at": "2026-08-08T05:38:23.739515+00:00",
+      "bytes": 3028,
+      "modified_at": "2026-11-09T00:32:35.462754+00:00",
       "registered": false
     },
     {
@@ -1939,16 +1994,16 @@
       "path": "03_SKILLS/web-platform-reporting-framework.md",
       "domain": "03_SKILLS",
       "type": "md",
-      "bytes": 24621,
-      "modified_at": "2026-11-07T13:09:06.768476+00:00",
+      "bytes": 24718,
+      "modified_at": "2026-11-09T00:35:19.353000+00:00",
       "registered": false
     },
     {
       "path": "04_MOSPARK_PLATFORM/QUIZ_FLOW_SPECIFICATION_FOR_DEV.md",
       "domain": "04_MOSPARK_PLATFORM",
       "type": "md",
-      "bytes": 14873,
-      "modified_at": "2026-10-28T00:53:51.803569+00:00",
+      "bytes": 14849,
+      "modified_at": "2026-11-09T00:25:42.509034+00:00",
       "registered": false
     },
     {
@@ -1971,8 +2026,8 @@
       "path": "04_MOSPARK_PLATFORM/interactive_quiz_card_framework.md",
       "domain": "04_MOSPARK_PLATFORM",
       "type": "md",
-      "bytes": 23201,
-      "modified_at": "2026-10-22T14:23:00.516705+00:00",
+      "bytes": 23177,
+      "modified_at": "2026-11-09T00:40:20.422386+00:00",
       "registered": false
     },
     {
@@ -1987,8 +2042,8 @@
       "path": "04_MOSPARK_PLATFORM/mospark_ads_manager.md",
       "domain": "04_MOSPARK_PLATFORM",
       "type": "md",
-      "bytes": 128157,
-      "modified_at": "2026-11-04T02:05:53.814363+00:00",
+      "bytes": 128290,
+      "modified_at": "2026-11-09T00:40:20.422761+00:00",
       "registered": false
     },
     {
@@ -2011,24 +2066,24 @@
       "path": "04_MOSPARK_PLATFORM/mospark_genai_content.md",
       "domain": "04_MOSPARK_PLATFORM",
       "type": "md",
-      "bytes": 77290,
-      "modified_at": "2026-10-28T14:01:50.274621+00:00",
+      "bytes": 77361,
+      "modified_at": "2026-11-09T00:40:20.423074+00:00",
       "registered": false
     },
     {
       "path": "04_MOSPARK_PLATFORM/mospark_ldp.md",
       "domain": "04_MOSPARK_PLATFORM",
       "type": "md",
-      "bytes": 15744,
-      "modified_at": "2026-08-08T05:34:17.245950+00:00",
+      "bytes": 15792,
+      "modified_at": "2026-11-09T00:40:20.423225+00:00",
       "registered": false
     },
     {
       "path": "04_MOSPARK_PLATFORM/mospark_llms_robots_txt.md",
       "domain": "04_MOSPARK_PLATFORM",
       "type": "md",
-      "bytes": 62404,
-      "modified_at": "2026-08-08T05:34:17.251242+00:00",
+      "bytes": 62425,
+      "modified_at": "2026-11-09T00:39:30.805558+00:00",
       "registered": false
     },
     {
@@ -2043,8 +2098,8 @@
       "path": "04_MOSPARK_PLATFORM/mospark_master.md",
       "domain": "04_MOSPARK_PLATFORM",
       "type": "md",
-      "bytes": 131896,
-      "modified_at": "2026-08-08T05:34:17.249886+00:00",
+      "bytes": 131931,
+      "modified_at": "2026-11-09T00:40:20.423601+00:00",
       "registered": false
     },
     {
@@ -2052,15 +2107,15 @@
       "domain": "04_MOSPARK_PLATFORM",
       "type": "md",
       "bytes": 200831,
-      "modified_at": "2026-08-08T05:15:50.648192+00:00",
+      "modified_at": "2026-11-09T00:30:44.491260+00:00",
       "registered": false
     },
     {
       "path": "04_MOSPARK_PLATFORM/mospark_migration.md",
       "domain": "04_MOSPARK_PLATFORM",
       "type": "md",
-      "bytes": 23319,
-      "modified_at": "2026-08-08T05:34:17.246890+00:00",
+      "bytes": 23326,
+      "modified_at": "2026-11-09T00:31:37.895005+00:00",
       "registered": false
     },
     {
@@ -2075,16 +2130,16 @@
       "path": "04_MOSPARK_PLATFORM/mospark_plg_blog.md",
       "domain": "04_MOSPARK_PLATFORM",
       "type": "md",
-      "bytes": 24461,
-      "modified_at": "2026-10-08T12:17:38.804795+00:00",
+      "bytes": 24467,
+      "modified_at": "2026-11-09T00:31:37.903481+00:00",
       "registered": false
     },
     {
       "path": "04_MOSPARK_PLATFORM/mospark_plg_project.md",
       "domain": "04_MOSPARK_PLATFORM",
       "type": "md",
-      "bytes": 33958,
-      "modified_at": "2026-08-08T05:15:50.649590+00:00",
+      "bytes": 33964,
+      "modified_at": "2026-11-09T00:31:37.911536+00:00",
       "registered": false
     },
     {
@@ -2107,8 +2162,8 @@
       "path": "04_MOSPARK_PLATFORM/mospark_seo_inventory.md",
       "domain": "04_MOSPARK_PLATFORM",
       "type": "md",
-      "bytes": 47417,
-      "modified_at": "2026-08-08T05:38:23.765109+00:00",
+      "bytes": 47447,
+      "modified_at": "2026-11-09T00:40:20.423822+00:00",
       "registered": false
     },
     {
@@ -2123,16 +2178,16 @@
       "path": "04_MOSPARK_PLATFORM/mospark_widget_store.md",
       "domain": "04_MOSPARK_PLATFORM",
       "type": "md",
-      "bytes": 36923,
-      "modified_at": "2026-08-08T05:15:50.653011+00:00",
+      "bytes": 36920,
+      "modified_at": "2026-11-09T00:31:37.951250+00:00",
       "registered": false
     },
     {
       "path": "04_MOSPARK_PLATFORM/umami_utility_tracking.md",
       "domain": "04_MOSPARK_PLATFORM",
       "type": "md",
-      "bytes": 45146,
-      "modified_at": "2026-10-15T13:46:02.291006+00:00",
+      "bytes": 45274,
+      "modified_at": "2026-11-09T00:31:37.962448+00:00",
       "registered": true
     },
     {
@@ -2235,8 +2290,8 @@
       "path": "05_HUBS/financial/financial-hub-brd.md",
       "domain": "05_HUBS",
       "type": "md",
-      "bytes": 96136,
-      "modified_at": "2026-11-02T04:16:34.090931+00:00",
+      "bytes": 96264,
+      "modified_at": "2026-11-09T00:39:30.817186+00:00",
       "registered": true
     },
     {
@@ -3147,16 +3202,16 @@
       "path": "05_HUBS/inventory/Lottery/Sổ tay Vietlott SMS - final.md",
       "domain": "05_HUBS",
       "type": "md",
-      "bytes": 50956,
-      "modified_at": "2026-08-28T01:57:21.772788+00:00",
+      "bytes": 50922,
+      "modified_at": "2026-11-09T00:25:42.520658+00:00",
       "registered": false
     },
     {
       "path": "05_HUBS/inventory/Lottery/Tài liệu Landing Page Mua hộ vé số - Final.md",
       "domain": "05_HUBS",
       "type": "md",
-      "bytes": 15087,
-      "modified_at": "2026-08-28T01:58:20.281611+00:00",
+      "bytes": 15025,
+      "modified_at": "2026-11-09T00:25:42.521040+00:00",
       "registered": false
     },
     {
@@ -4053,7 +4108,7 @@
       "type": "json",
       "bytes": 3599780,
       "modified_at": "2026-09-24T00:19:43.219302+00:00",
-      "registered": false
+      "registered": true
     },
     {
       "path": "05_HUBS/inventory/vehicle-hub/phan-mem-mo-phong.csv",
@@ -4163,24 +4218,24 @@
       "path": "05_HUBS/lottery-hub-brd.md",
       "domain": "05_HUBS",
       "type": "md",
-      "bytes": 89193,
-      "modified_at": "2026-09-23T05:39:05.472892+00:00",
+      "bytes": 89228,
+      "modified_at": "2026-11-09T00:39:30.819574+00:00",
       "registered": false
     },
     {
       "path": "05_HUBS/merchant/merchant-hub-brd.md",
       "domain": "05_HUBS",
       "type": "md",
-      "bytes": 77466,
-      "modified_at": "2026-08-08T05:38:23.773674+00:00",
+      "bytes": 77510,
+      "modified_at": "2026-11-09T00:31:38.090866+00:00",
       "registered": false
     },
     {
       "path": "05_HUBS/new-user/new-user-hub-brd.md",
       "domain": "05_HUBS",
       "type": "md",
-      "bytes": 56854,
-      "modified_at": "2026-11-02T03:52:21.315666+00:00",
+      "bytes": 56866,
+      "modified_at": "2026-11-09T00:31:38.105133+00:00",
       "registered": false
     },
     {
@@ -4229,7 +4284,7 @@
       "type": "json",
       "bytes": 4454224,
       "modified_at": "2026-09-24T01:34:40.300679+00:00",
-      "registered": false
+      "registered": true
     },
     {
       "path": "05_HUBS/vehicle/deductible-page-prd.md",
@@ -4243,8 +4298,8 @@
       "path": "05_HUBS/vehicle/vehicle-hub-brd.md",
       "domain": "05_HUBS",
       "type": "md",
-      "bytes": 127586,
-      "modified_at": "2026-11-06T04:27:43.353886+00:00",
+      "bytes": 127705,
+      "modified_at": "2026-11-09T05:35:50.589219+00:00",
       "registered": true
     },
     {
@@ -4259,8 +4314,8 @@
       "path": "06_USE_CASE_MOMO/bhxm-brd.md",
       "domain": "06_USE_CASE_MOMO",
       "type": "md",
-      "bytes": 57437,
-      "modified_at": "2026-08-08T05:34:17.223065+00:00",
+      "bytes": 57460,
+      "modified_at": "2026-11-09T00:31:38.182072+00:00",
       "registered": false
     },
     {
@@ -4275,8 +4330,8 @@
       "path": "06_USE_CASE_MOMO/bus-brd.md",
       "domain": "06_USE_CASE_MOMO",
       "type": "md",
-      "bytes": 57054,
-      "modified_at": "2026-08-08T05:34:17.216715+00:00",
+      "bytes": 57154,
+      "modified_at": "2026-11-09T00:40:20.421272+00:00",
       "registered": false
     },
     {
@@ -4291,168 +4346,144 @@
       "path": "06_USE_CASE_MOMO/content-plans/Financial/gui-tiet-kiem-content-plan.md",
       "domain": "06_USE_CASE_MOMO",
       "type": "md",
-      "bytes": 20930,
-      "modified_at": "2026-10-16T03:33:53.183011+00:00",
+      "bytes": 20129,
+      "modified_at": "2026-11-09T06:27:44.703230+00:00",
       "registered": false
     },
     {
       "path": "06_USE_CASE_MOMO/content-plans/INDEX.md",
       "domain": "06_USE_CASE_MOMO",
       "type": "md",
-      "bytes": 2610,
-      "modified_at": "2026-10-19T09:50:06.368328+00:00",
+      "bytes": 2196,
+      "modified_at": "2026-11-09T06:27:49.396748+00:00",
       "registered": false
     },
     {
       "path": "06_USE_CASE_MOMO/content-plans/Lottery/vietlott-content-plan.md",
       "domain": "06_USE_CASE_MOMO",
       "type": "md",
-      "bytes": 20047,
-      "modified_at": "2026-10-17T17:35:35.934582+00:00",
-      "registered": false
-    },
-    {
-      "path": "06_USE_CASE_MOMO/content-plans/bien-so-xe (1)-content-plan.md",
-      "domain": "06_USE_CASE_MOMO",
-      "type": "md",
-      "bytes": 4363,
-      "modified_at": "2026-10-16T01:40:45.491076+00:00",
+      "bytes": 21869,
+      "modified_at": "2026-11-09T06:27:45.065752+00:00",
       "registered": false
     },
     {
       "path": "06_USE_CASE_MOMO/content-plans/cinema/dat-phim-content-plan.md",
       "domain": "06_USE_CASE_MOMO",
       "type": "md",
-      "bytes": 7673,
-      "modified_at": "2026-10-19T09:50:05.027503+00:00",
+      "bytes": 12104,
+      "modified_at": "2026-11-09T06:27:45.238187+00:00",
       "registered": false
     },
     {
       "path": "06_USE_CASE_MOMO/content-plans/cinema/lich-phim-content-plan.md",
       "domain": "06_USE_CASE_MOMO",
       "type": "md",
-      "bytes": 11471,
-      "modified_at": "2026-10-19T09:50:05.735442+00:00",
-      "registered": false
-    },
-    {
-      "path": "06_USE_CASE_MOMO/content-plans/cinema/mua-ve-phim-content-plan.md",
-      "domain": "06_USE_CASE_MOMO",
-      "type": "md",
-      "bytes": 9587,
-      "modified_at": "2026-10-19T09:50:05.839457+00:00",
+      "bytes": 15877,
+      "modified_at": "2026-11-09T06:27:45.473166+00:00",
       "registered": false
     },
     {
       "path": "06_USE_CASE_MOMO/content-plans/cinema/phim-content-plan.md",
       "domain": "06_USE_CASE_MOMO",
       "type": "md",
-      "bytes": 9307,
-      "modified_at": "2026-10-19T09:50:05.962356+00:00",
+      "bytes": 16378,
+      "modified_at": "2026-11-09T06:27:45.568855+00:00",
       "registered": false
     },
     {
       "path": "06_USE_CASE_MOMO/content-plans/cinema/rap-content-plan.md",
       "domain": "06_USE_CASE_MOMO",
       "type": "md",
-      "bytes": 13429,
-      "modified_at": "2026-10-19T09:50:06.168623+00:00",
+      "bytes": 15516,
+      "modified_at": "2026-11-09T06:27:45.686298+00:00",
       "registered": false
     },
     {
       "path": "06_USE_CASE_MOMO/content-plans/cinema/ve-xem-phim-content-plan.md",
       "domain": "06_USE_CASE_MOMO",
       "type": "md",
-      "bytes": 7700,
-      "modified_at": "2026-10-19T09:50:06.358979+00:00",
+      "bytes": 8038,
+      "modified_at": "2026-11-09T06:27:45.840315+00:00",
       "registered": false
     },
     {
       "path": "06_USE_CASE_MOMO/content-plans/insurtech/bao-hiem-chay-no-content-plan.md",
       "domain": "06_USE_CASE_MOMO",
       "type": "md",
-      "bytes": 5698,
-      "modified_at": "2026-10-16T02:49:08.121536+00:00",
+      "bytes": 15049,
+      "modified_at": "2026-11-09T06:27:46.243423+00:00",
       "registered": false
     },
     {
       "path": "06_USE_CASE_MOMO/content-plans/insurtech/bao-hiem-content-plan.md",
       "domain": "06_USE_CASE_MOMO",
       "type": "md",
-      "bytes": 6577,
-      "modified_at": "2026-10-16T02:49:10.309278+00:00",
+      "bytes": 14849,
+      "modified_at": "2026-11-09T06:27:46.333196+00:00",
       "registered": false
     },
     {
       "path": "06_USE_CASE_MOMO/content-plans/insurtech/bao-hiem-o-to-content-plan.md",
       "domain": "06_USE_CASE_MOMO",
       "type": "md",
-      "bytes": 6463,
-      "modified_at": "2026-10-16T02:49:08.256144+00:00",
+      "bytes": 18783,
+      "modified_at": "2026-11-09T06:27:46.505788+00:00",
       "registered": false
     },
     {
-      "path": "06_USE_CASE_MOMO/content-plans/insurtech/bao-hiem-than-vo-content-plan.md",
+      "path": "06_USE_CASE_MOMO/content-plans/insurtech/bao-hiem-xe-may-content-plan.md",
       "domain": "06_USE_CASE_MOMO",
       "type": "md",
-      "bytes": 6726,
-      "modified_at": "2026-10-16T02:49:08.288041+00:00",
-      "registered": false
-    },
-    {
-      "path": "06_USE_CASE_MOMO/content-plans/insurtech/bao-hiem-vat-chat-content-plan.md",
-      "domain": "06_USE_CASE_MOMO",
-      "type": "md",
-      "bytes": 6775,
-      "modified_at": "2026-10-16T02:49:08.328505+00:00",
-      "registered": false
-    },
-    {
-      "path": "06_USE_CASE_MOMO/content-plans/insurtech/bao-hiem-xe-content-plan.md",
-      "domain": "06_USE_CASE_MOMO",
-      "type": "md",
-      "bytes": 6843,
-      "modified_at": "2026-10-16T02:49:08.772998+00:00",
+      "bytes": 15174,
+      "modified_at": "2026-11-09T06:27:46.681628+00:00",
       "registered": false
     },
     {
       "path": "06_USE_CASE_MOMO/content-plans/insurtech/bhxh-content-plan.md",
       "domain": "06_USE_CASE_MOMO",
       "type": "md",
-      "bytes": 5847,
-      "modified_at": "2026-10-16T02:49:10.363671+00:00",
+      "bytes": 20207,
+      "modified_at": "2026-11-09T06:27:46.922807+00:00",
       "registered": false
     },
     {
       "path": "06_USE_CASE_MOMO/content-plans/insurtech/bhyt-content-plan.md",
       "domain": "06_USE_CASE_MOMO",
       "type": "md",
-      "bytes": 5703,
-      "modified_at": "2026-10-16T02:49:10.451948+00:00",
+      "bytes": 19482,
+      "modified_at": "2026-11-09T06:27:47.184189+00:00",
       "registered": false
     },
     {
       "path": "06_USE_CASE_MOMO/content-plans/student/tuyen-sinh-content-plan.md",
       "domain": "06_USE_CASE_MOMO",
       "type": "md",
-      "bytes": 18083,
-      "modified_at": "2026-10-18T05:10:21.917181+00:00",
+      "bytes": 15633,
+      "modified_at": "2026-11-09T06:27:47.462696+00:00",
+      "registered": false
+    },
+    {
+      "path": "06_USE_CASE_MOMO/content-plans/vehicle-hub/bien-so-xe-content-plan.md",
+      "domain": "06_USE_CASE_MOMO",
+      "type": "md",
+      "bytes": 17200,
+      "modified_at": "2026-11-09T06:27:49.392663+00:00",
       "registered": false
     },
     {
       "path": "06_USE_CASE_MOMO/dich-vu-cong-brd.md",
       "domain": "06_USE_CASE_MOMO",
       "type": "md",
-      "bytes": 60326,
-      "modified_at": "2026-08-08T05:15:50.660719+00:00",
+      "bytes": 60340,
+      "modified_at": "2026-11-09T00:31:38.269842+00:00",
       "registered": false
     },
     {
       "path": "06_USE_CASE_MOMO/diem-tin-dung-brd.md",
       "domain": "06_USE_CASE_MOMO",
       "type": "md",
-      "bytes": 20842,
-      "modified_at": "2026-08-12T13:09:19.467799+00:00",
+      "bytes": 20849,
+      "modified_at": "2026-11-09T00:31:38.275141+00:00",
       "registered": false
     },
     {
@@ -4475,32 +4506,48 @@
       "path": "06_USE_CASE_MOMO/esim-du-lich-brd.md",
       "domain": "06_USE_CASE_MOMO",
       "type": "md",
-      "bytes": 156746,
-      "modified_at": "2026-08-08T05:34:17.215535+00:00",
+      "bytes": 156808,
+      "modified_at": "2026-11-09T00:31:38.322436+00:00",
       "registered": false
     },
     {
       "path": "06_USE_CASE_MOMO/gia-vang-brd.md",
       "domain": "06_USE_CASE_MOMO",
       "type": "md",
-      "bytes": 36688,
-      "modified_at": "2026-08-08T05:15:50.667229+00:00",
+      "bytes": 36697,
+      "modified_at": "2026-11-09T00:40:20.421055+00:00",
+      "registered": false
+    },
+    {
+      "path": "06_USE_CASE_MOMO/molisa-location-solution.md",
+      "domain": "06_USE_CASE_MOMO",
+      "type": "md",
+      "bytes": 8966,
+      "modified_at": "2026-11-07T15:07:15.369552+00:00",
       "registered": false
     },
     {
       "path": "06_USE_CASE_MOMO/ota-brd.md",
       "domain": "06_USE_CASE_MOMO",
       "type": "md",
-      "bytes": 16972,
-      "modified_at": "2026-08-08T05:34:17.213066+00:00",
+      "bytes": 16976,
+      "modified_at": "2026-11-09T00:31:38.338302+00:00",
       "registered": false
     },
     {
       "path": "06_USE_CASE_MOMO/phat-nguoi-brd.md",
       "domain": "06_USE_CASE_MOMO",
       "type": "md",
-      "bytes": 90209,
-      "modified_at": "2026-08-19T06:07:27.967927+00:00",
+      "bytes": 90303,
+      "modified_at": "2026-11-09T00:40:20.421958+00:00",
+      "registered": false
+    },
+    {
+      "path": "06_USE_CASE_MOMO/phat-nguoi-master-deck-apr2026.md",
+      "domain": "06_USE_CASE_MOMO",
+      "type": "md",
+      "bytes": 9467,
+      "modified_at": "2026-11-08T02:36:10.242287+00:00",
       "registered": false
     },
     {
@@ -4531,8 +4578,8 @@
       "path": "06_USE_CASE_MOMO/telecom-brd.md",
       "domain": "06_USE_CASE_MOMO",
       "type": "md",
-      "bytes": 56048,
-      "modified_at": "2026-08-08T05:15:50.672209+00:00",
+      "bytes": 56062,
+      "modified_at": "2026-11-09T00:31:38.395083+00:00",
       "registered": false
     },
     {
@@ -4547,8 +4594,8 @@
       "path": "06_USE_CASE_MOMO/user-growth-u18-brd.md",
       "domain": "06_USE_CASE_MOMO",
       "type": "md",
-      "bytes": 14544,
-      "modified_at": "2026-08-20T00:51:46.635611+00:00",
+      "bytes": 14553,
+      "modified_at": "2026-11-09T00:31:38.403831+00:00",
       "registered": false
     },
     {
@@ -4563,16 +4610,16 @@
       "path": "06_USE_CASE_MOMO/vi-tra-sau-brd.md",
       "domain": "06_USE_CASE_MOMO",
       "type": "md",
-      "bytes": 101561,
-      "modified_at": "2026-08-12T13:46:06.218967+00:00",
+      "bytes": 101565,
+      "modified_at": "2026-11-09T00:40:20.421600+00:00",
       "registered": false
     },
     {
       "path": "07_REPORTS/CONTENT_PLAN_REFACTOR_REVIEW.md",
       "domain": "07_REPORTS",
       "type": "md",
-      "bytes": 48167,
-      "modified_at": "2026-10-17T18:41:48.140353+00:00",
+      "bytes": 48694,
+      "modified_at": "2026-11-09T00:31:38.468154+00:00",
       "registered": false
     },
     {
@@ -4612,11 +4659,19 @@
       "domain": "07_REPORTS",
       "type": "md",
       "bytes": 79331,
-      "modified_at": "2026-11-06T04:23:48.000135+00:00",
+      "modified_at": "2026-11-09T00:41:19.063767+00:00",
       "registered": true
     },
     {
-      "path": "07_REPORTS/competitors/bảo-hiểm-y-tế-competitor-analysis.md",
+      "path": "07_REPORTS/competitors/bao-hiem-o-to-competitor-analysis.md",
+      "domain": "07_REPORTS",
+      "type": "md",
+      "bytes": 16443,
+      "modified_at": "2026-11-09T00:25:42.532677+00:00",
+      "registered": false
+    },
+    {
+      "path": "07_REPORTS/competitors/bao-hiem-y-te-competitor-analysis.md",
       "domain": "07_REPORTS",
       "type": "md",
       "bytes": 13661,
@@ -4624,23 +4679,15 @@
       "registered": false
     },
     {
-      "path": "07_REPORTS/competitors/bảo-hiểm-ô-tô-competitor-analysis.md",
+      "path": "07_REPORTS/competitors/cic-la-gi-competitor-analysis.md",
       "domain": "07_REPORTS",
       "type": "md",
-      "bytes": 16445,
-      "modified_at": "2026-10-18T05:23:09.493856+00:00",
+      "bytes": 15791,
+      "modified_at": "2026-11-09T00:25:42.533112+00:00",
       "registered": false
     },
     {
-      "path": "07_REPORTS/competitors/cic-là-gì-competitor-analysis.md",
-      "domain": "07_REPORTS",
-      "type": "md",
-      "bytes": 15793,
-      "modified_at": "2026-10-18T05:24:34.550074+00:00",
-      "registered": false
-    },
-    {
-      "path": "07_REPORTS/competitors/gửi-tiết-kiệm-online-competitor-analysis.md",
+      "path": "07_REPORTS/competitors/gui-tiet-kiem-online-competitor-analysis.md",
       "domain": "07_REPORTS",
       "type": "md",
       "bytes": 7864,
@@ -4648,15 +4695,15 @@
       "registered": false
     },
     {
-      "path": "07_REPORTS/competitors/phạt-nguội-competitor-analysis.md",
+      "path": "07_REPORTS/competitors/phat-nguoi-competitor-analysis.md",
       "domain": "07_REPORTS",
       "type": "md",
-      "bytes": 15827,
-      "modified_at": "2026-10-18T05:25:33.552299+00:00",
+      "bytes": 15819,
+      "modified_at": "2026-11-09T00:25:42.533668+00:00",
       "registered": false
     },
     {
-      "path": "07_REPORTS/competitors/tiết-kiệm-online-competitor-analysis.md",
+      "path": "07_REPORTS/competitors/tiet-kiem-online-competitor-analysis.md",
       "domain": "07_REPORTS",
       "type": "md",
       "bytes": 4182,
@@ -4664,7 +4711,7 @@
       "registered": false
     },
     {
-      "path": "07_REPORTS/competitors/tra-cứu-phạt-nguội-competitor-analysis.md",
+      "path": "07_REPORTS/competitors/tra-cuu-phat-nguoi-competitor-analysis.md",
       "domain": "07_REPORTS",
       "type": "md",
       "bytes": 6095,
@@ -4675,12 +4722,12 @@
       "path": "07_REPORTS/competitors/vay-nhanh-competitor-analysis.md",
       "domain": "07_REPORTS",
       "type": "md",
-      "bytes": 16799,
-      "modified_at": "2026-10-18T05:23:50.778466+00:00",
+      "bytes": 16791,
+      "modified_at": "2026-11-09T00:25:42.534365+00:00",
       "registered": false
     },
     {
-      "path": "07_REPORTS/competitors/ví-trả-sau-competitor-analysis.md",
+      "path": "07_REPORTS/competitors/vi-tra-sau-competitor-analysis.md",
       "domain": "07_REPORTS",
       "type": "md",
       "bytes": 11867,
@@ -4691,8 +4738,8 @@
       "path": "07_REPORTS/data/agent_tasks.json",
       "domain": "07_REPORTS",
       "type": "json",
-      "bytes": 20931,
-      "modified_at": "2026-11-07T11:39:51.044346+00:00",
+      "bytes": 21343,
+      "modified_at": "2026-11-08T02:36:44.059834+00:00",
       "registered": false
     },
     {
@@ -4739,8 +4786,8 @@
       "path": "07_REPORTS/data/analytics/gsc_7d_performance.json",
       "domain": "07_REPORTS",
       "type": "json",
-      "bytes": 299543,
-      "modified_at": "2026-11-07T01:55:35.919779+00:00",
+      "bytes": 300784,
+      "modified_at": "2026-11-09T00:42:00.160162+00:00",
       "registered": false
     },
     {
@@ -5216,6 +5263,14 @@
       "registered": false
     },
     {
+      "path": "07_REPORTS/data/competitors/_aliases.json",
+      "domain": "07_REPORTS",
+      "type": "json",
+      "bytes": 159,
+      "modified_at": "2026-11-09T05:41:19.316429+00:00",
+      "registered": false
+    },
+    {
       "path": "07_REPORTS/data/competitors/bao-hiem-o-to.json",
       "domain": "07_REPORTS",
       "type": "json",
@@ -5272,30 +5327,6 @@
       "registered": false
     },
     {
-      "path": "07_REPORTS/data/competitors/bảo-hiểm-xe-máy.json",
-      "domain": "07_REPORTS",
-      "type": "json",
-      "bytes": 1762,
-      "modified_at": "2026-10-19T02:01:07.736874+00:00",
-      "registered": false
-    },
-    {
-      "path": "07_REPORTS/data/competitors/bảo-hiểm-y-tế.json",
-      "domain": "07_REPORTS",
-      "type": "json",
-      "bytes": 1675,
-      "modified_at": "2026-10-19T02:01:07.737188+00:00",
-      "registered": false
-    },
-    {
-      "path": "07_REPORTS/data/competitors/bảo-hiểm-ô-tô.json",
-      "domain": "07_REPORTS",
-      "type": "json",
-      "bytes": 1780,
-      "modified_at": "2026-10-19T02:01:07.736668+00:00",
-      "registered": false
-    },
-    {
       "path": "07_REPORTS/data/competitors/chung-khoan.json",
       "domain": "07_REPORTS",
       "type": "json",
@@ -5309,22 +5340,6 @@
       "type": "json",
       "bytes": 1759,
       "modified_at": "2026-10-19T02:01:07.739933+00:00",
-      "registered": false
-    },
-    {
-      "path": "07_REPORTS/data/competitors/cic-la-gi.json",
-      "domain": "07_REPORTS",
-      "type": "json",
-      "bytes": 1812,
-      "modified_at": "2026-10-19T02:01:07.734796+00:00",
-      "registered": false
-    },
-    {
-      "path": "07_REPORTS/data/competitors/cic-là-gì.json",
-      "domain": "07_REPORTS",
-      "type": "json",
-      "bytes": 1812,
-      "modified_at": "2026-10-19T02:01:07.734596+00:00",
       "registered": false
     },
     {
@@ -5368,14 +5383,6 @@
       "registered": false
     },
     {
-      "path": "07_REPORTS/data/competitors/diem-tin-dung.json",
-      "domain": "07_REPORTS",
-      "type": "json",
-      "bytes": 1812,
-      "modified_at": "2026-10-19T02:01:07.734893+00:00",
-      "registered": false
-    },
-    {
       "path": "07_REPORTS/data/competitors/doi-tien.json",
       "domain": "07_REPORTS",
       "type": "json",
@@ -5416,14 +5423,6 @@
       "registered": false
     },
     {
-      "path": "07_REPORTS/data/competitors/gia-xang-hom-nay.json",
-      "domain": "07_REPORTS",
-      "type": "json",
-      "bytes": 1779,
-      "modified_at": "2026-10-19T02:01:07.732551+00:00",
-      "registered": false
-    },
-    {
       "path": "07_REPORTS/data/competitors/gia-xang.json",
       "domain": "07_REPORTS",
       "type": "json",
@@ -5440,35 +5439,11 @@
       "registered": false
     },
     {
-      "path": "07_REPORTS/data/competitors/giá-xăng-hôm-nay.json",
-      "domain": "07_REPORTS",
-      "type": "json",
-      "bytes": 1779,
-      "modified_at": "2026-10-19T02:01:07.732429+00:00",
-      "registered": false
-    },
-    {
-      "path": "07_REPORTS/data/competitors/gui-tiet-kiem-online.json",
-      "domain": "07_REPORTS",
-      "type": "json",
-      "bytes": 1808,
-      "modified_at": "2026-10-19T02:01:07.735257+00:00",
-      "registered": false
-    },
-    {
       "path": "07_REPORTS/data/competitors/gui-tiet-kiem.json",
       "domain": "07_REPORTS",
       "type": "json",
       "bytes": 1808,
       "modified_at": "2026-10-19T02:01:07.734978+00:00",
-      "registered": false
-    },
-    {
-      "path": "07_REPORTS/data/competitors/gửi-tiết-kiệm-online.json",
-      "domain": "07_REPORTS",
-      "type": "json",
-      "bytes": 1808,
-      "modified_at": "2026-10-19T02:01:07.735071+00:00",
       "registered": false
     },
     {
@@ -5584,14 +5559,6 @@
       "registered": false
     },
     {
-      "path": "07_REPORTS/data/competitors/phạt-nguội.json",
-      "domain": "07_REPORTS",
-      "type": "json",
-      "bytes": 1689,
-      "modified_at": "2026-10-19T02:01:07.733804+00:00",
-      "registered": false
-    },
-    {
       "path": "07_REPORTS/data/competitors/rap.json",
       "domain": "07_REPORTS",
       "type": "json",
@@ -5648,30 +5615,6 @@
       "registered": false
     },
     {
-      "path": "07_REPORTS/data/competitors/tiết-kiệm-online.json",
-      "domain": "07_REPORTS",
-      "type": "json",
-      "bytes": 1663,
-      "modified_at": "2026-10-19T02:01:07.735758+00:00",
-      "registered": false
-    },
-    {
-      "path": "07_REPORTS/data/competitors/tra-cuu-phat-nguoi.json",
-      "domain": "07_REPORTS",
-      "type": "json",
-      "bytes": 1689,
-      "modified_at": "2026-10-19T02:01:07.733975+00:00",
-      "registered": false
-    },
-    {
-      "path": "07_REPORTS/data/competitors/tra-cứu-phạt-nguội.json",
-      "domain": "07_REPORTS",
-      "type": "json",
-      "bytes": 1689,
-      "modified_at": "2026-10-19T02:01:07.733478+00:00",
-      "registered": false
-    },
-    {
       "path": "07_REPORTS/data/competitors/tram-sac.json",
       "domain": "07_REPORTS",
       "type": "json",
@@ -5720,14 +5663,6 @@
       "registered": false
     },
     {
-      "path": "07_REPORTS/data/competitors/vay-nhanh.json",
-      "domain": "07_REPORTS",
-      "type": "json",
-      "bytes": 1667,
-      "modified_at": "2026-10-19T02:01:07.740166+00:00",
-      "registered": false
-    },
-    {
       "path": "07_REPORTS/data/competitors/vay-tin-chap.json",
       "domain": "07_REPORTS",
       "type": "json",
@@ -5768,19 +5703,19 @@
       "registered": false
     },
     {
+      "path": "07_REPORTS/data/competitors/vi-tra-sau.json",
+      "domain": "07_REPORTS",
+      "type": "json",
+      "bytes": 38382,
+      "modified_at": "2026-10-19T10:22:59.758772+00:00",
+      "registered": false
+    },
+    {
       "path": "07_REPORTS/data/competitors/vietlott.json",
       "domain": "07_REPORTS",
       "type": "json",
       "bytes": 1756,
       "modified_at": "2026-10-19T02:01:07.737931+00:00",
-      "registered": false
-    },
-    {
-      "path": "07_REPORTS/data/competitors/ví-trả-sau.json",
-      "domain": "07_REPORTS",
-      "type": "json",
-      "bytes": 38382,
-      "modified_at": "2026-10-19T10:22:59.758772+00:00",
       "registered": false
     },
     {
@@ -5851,8 +5786,8 @@
       "path": "07_REPORTS/data/dashboard_patches/performance7d.json",
       "domain": "07_REPORTS",
       "type": "json",
-      "bytes": 18364,
-      "modified_at": "2026-11-07T01:55:35.949708+00:00",
+      "bytes": 18154,
+      "modified_at": "2026-11-09T00:42:00.172582+00:00",
       "registered": false
     },
     {
@@ -6320,6 +6255,22 @@
       "registered": false
     },
     {
+      "path": "07_REPORTS/data/monthly_11_2026_mtd_7d.json",
+      "domain": "07_REPORTS",
+      "type": "json",
+      "bytes": 1572,
+      "modified_at": "2026-11-08T15:19:41.899922+00:00",
+      "registered": false
+    },
+    {
+      "path": "07_REPORTS/data/monthly_11_2026_mtd_8d.json",
+      "domain": "07_REPORTS",
+      "type": "json",
+      "bytes": 1572,
+      "modified_at": "2026-11-09T00:38:04.961952+00:00",
+      "registered": false
+    },
+    {
       "path": "07_REPORTS/data/mtd_pivot_2026-09-09.csv",
       "domain": "07_REPORTS",
       "type": "csv",
@@ -6336,11 +6287,19 @@
       "registered": false
     },
     {
+      "path": "07_REPORTS/data/poc_cluster_naming.json",
+      "domain": "07_REPORTS",
+      "type": "json",
+      "bytes": 12348951,
+      "modified_at": "2026-11-07T14:25:40.252934+00:00",
+      "registered": false
+    },
+    {
       "path": "07_REPORTS/data/poc_cluster_naming_report.md",
       "domain": "07_REPORTS",
       "type": "md",
-      "bytes": 2274,
-      "modified_at": "2026-10-21T01:42:44.842018+00:00",
+      "bytes": 3584,
+      "modified_at": "2026-11-07T14:25:39.964343+00:00",
       "registered": false
     },
     {
@@ -6411,8 +6370,8 @@
       "path": "07_REPORTS/data/summary.json",
       "domain": "07_REPORTS",
       "type": "json",
-      "bytes": 1553,
-      "modified_at": "2026-11-07T01:52:01.745119+00:00",
+      "bytes": 1554,
+      "modified_at": "2026-11-09T00:38:04.962448+00:00",
       "registered": false
     },
     {
@@ -6464,14 +6423,6 @@
       "registered": false
     },
     {
-      "path": "07_REPORTS/data/web_performance_new_user_funnel_10_2026_mtd.csv",
-      "domain": "07_REPORTS",
-      "type": "csv",
-      "bytes": 920,
-      "modified_at": "2026-11-02T03:50:10.786145+00:00",
-      "registered": false
-    },
-    {
       "path": "07_REPORTS/data/web_performance_new_user_funnel_10_2026_mtd_13d.json",
       "domain": "07_REPORTS",
       "type": "json",
@@ -6493,14 +6444,6 @@
       "type": "json",
       "bytes": 3808,
       "modified_at": "2026-10-23T06:29:23.157045+00:00",
-      "registered": false
-    },
-    {
-      "path": "07_REPORTS/data/web_performance_new_user_funnel_10_2026_mtd_28d.csv",
-      "domain": "07_REPORTS",
-      "type": "csv",
-      "bytes": 929,
-      "modified_at": "2026-10-29T03:30:32.664276+00:00",
       "registered": false
     },
     {
@@ -6531,16 +6474,16 @@
       "path": "07_REPORTS/docs/PERFORMANCE_SNAPSHOT_LATEST.md",
       "domain": "07_REPORTS",
       "type": "md",
-      "bytes": 4288,
-      "modified_at": "2026-11-07T13:09:27.785959+00:00",
+      "bytes": 4497,
+      "modified_at": "2026-11-08T15:20:28.100008+00:00",
       "registered": true
     },
     {
       "path": "07_REPORTS/docs/REPORT_SYSTEM_STRUCTURE.md",
       "domain": "07_REPORTS",
       "type": "md",
-      "bytes": 9663,
-      "modified_at": "2026-11-06T04:23:48.003891+00:00",
+      "bytes": 9731,
+      "modified_at": "2026-11-09T00:35:49.600922+00:00",
       "registered": false
     },
     {
@@ -6563,24 +6506,24 @@
       "path": "07_REPORTS/docs/h2-2026-report.md",
       "domain": "07_REPORTS",
       "type": "md",
-      "bytes": 94567,
-      "modified_at": "2026-08-08T09:28:53.952199+00:00",
+      "bytes": 94613,
+      "modified_at": "2026-11-09T00:32:11.686555+00:00",
       "registered": false
     },
     {
       "path": "07_REPORTS/docs/hubs-report.md",
       "domain": "07_REPORTS",
       "type": "md",
-      "bytes": 30911,
-      "modified_at": "2026-10-13T03:52:04.368357+00:00",
+      "bytes": 30908,
+      "modified_at": "2026-11-09T00:31:38.583487+00:00",
       "registered": false
     },
     {
       "path": "07_REPORTS/docs/leadership-mindset-log.md",
       "domain": "07_REPORTS",
       "type": "md",
-      "bytes": 54918,
-      "modified_at": "2026-10-29T09:51:02.347710+00:00",
+      "bytes": 54929,
+      "modified_at": "2026-11-09T00:31:38.597353+00:00",
       "registered": false
     },
     {
@@ -6595,8 +6538,8 @@
       "path": "07_REPORTS/docs/monthly-reporting-tool-architecture.md",
       "domain": "07_REPORTS",
       "type": "md",
-      "bytes": 19142,
-      "modified_at": "2026-10-29T02:13:32.023564+00:00",
+      "bytes": 19171,
+      "modified_at": "2026-11-09T00:32:35.462650+00:00",
       "registered": false
     },
     {
@@ -6619,16 +6562,16 @@
       "path": "07_REPORTS/docs/report-game-mot-mua-quyt.md",
       "domain": "07_REPORTS",
       "type": "md",
-      "bytes": 14940,
-      "modified_at": "2026-10-28T08:56:34.122264+00:00",
+      "bytes": 14928,
+      "modified_at": "2026-11-09T00:31:38.608299+00:00",
       "registered": false
     },
     {
       "path": "07_REPORTS/docs/report-thang-01-den-04-2026.md",
       "domain": "07_REPORTS",
       "type": "md",
-      "bytes": 13671,
-      "modified_at": "2026-10-20T08:46:56.177883+00:00",
+      "bytes": 13708,
+      "modified_at": "2026-11-09T00:31:38.611927+00:00",
       "registered": false
     },
     {
@@ -6651,16 +6594,16 @@
       "path": "07_REPORTS/docs/report-thang-07-2026.md",
       "domain": "07_REPORTS",
       "type": "md",
-      "bytes": 50983,
-      "modified_at": "2026-08-08T05:34:17.202632+00:00",
+      "bytes": 50994,
+      "modified_at": "2026-11-09T00:31:38.635337+00:00",
       "registered": false
     },
     {
       "path": "07_REPORTS/docs/report-thang-08-2026-midmonth.md",
       "domain": "07_REPORTS",
       "type": "md",
-      "bytes": 16405,
-      "modified_at": "2026-08-24T02:20:25.909121+00:00",
+      "bytes": 16413,
+      "modified_at": "2026-11-09T00:31:38.639591+00:00",
       "registered": false
     },
     {
@@ -6675,8 +6618,8 @@
       "path": "07_REPORTS/docs/report-thang-09-2026.md",
       "domain": "07_REPORTS",
       "type": "md",
-      "bytes": 8514,
-      "modified_at": "2026-10-13T03:51:55.443435+00:00",
+      "bytes": 8483,
+      "modified_at": "2026-11-09T00:32:11.685493+00:00",
       "registered": false
     },
     {
@@ -6691,8 +6634,8 @@
       "path": "07_REPORTS/docs/report-thang-10-2026.md",
       "domain": "07_REPORTS",
       "type": "md",
-      "bytes": 20699,
-      "modified_at": "2026-11-03T13:48:14.232785+00:00",
+      "bytes": 20700,
+      "modified_at": "2026-11-09T00:31:38.659985+00:00",
       "registered": false
     },
     {
@@ -6707,8 +6650,8 @@
       "path": "07_REPORTS/docs/strategy/Budget 2027 - 2026 Reflection - Web Platform.md",
       "domain": "07_REPORTS",
       "type": "md",
-      "bytes": 34992,
-      "modified_at": "2026-09-08T00:39:59.206556+00:00",
+      "bytes": 35010,
+      "modified_at": "2026-11-09T00:31:38.669429+00:00",
       "registered": false
     },
     {
@@ -6723,8 +6666,8 @@
       "path": "07_REPORTS/docs/strategy/web-search-term.md",
       "domain": "07_REPORTS",
       "type": "md",
-      "bytes": 45706,
-      "modified_at": "2026-09-23T00:39:57.802502+00:00",
+      "bytes": 45712,
+      "modified_at": "2026-11-09T00:31:38.685782+00:00",
       "registered": false
     },
     {
@@ -6755,56 +6698,56 @@
       "path": "07_REPORTS/docs/vehicle-alignment.md",
       "domain": "07_REPORTS",
       "type": "md",
-      "bytes": 28348,
-      "modified_at": "2026-10-13T03:52:15.961820+00:00",
+      "bytes": 28349,
+      "modified_at": "2026-11-09T00:31:38.703363+00:00",
       "registered": false
     },
     {
       "path": "07_REPORTS/docs/web-platform-report.md",
       "domain": "07_REPORTS",
       "type": "md",
-      "bytes": 32934,
-      "modified_at": "2026-08-19T00:54:40.031874+00:00",
+      "bytes": 32918,
+      "modified_at": "2026-11-09T00:31:38.711829+00:00",
       "registered": false
     },
     {
       "path": "07_REPORTS/docs/weekly-report-2026-10-21-27.md",
       "domain": "07_REPORTS",
       "type": "md",
-      "bytes": 38909,
-      "modified_at": "2026-10-29T08:58:52.940850+00:00",
+      "bytes": 38814,
+      "modified_at": "2026-11-09T00:31:38.721414+00:00",
       "registered": false
     },
     {
       "path": "07_REPORTS/docs/weekly-report-2026-10-26-11-01.md",
       "domain": "07_REPORTS",
       "type": "md",
-      "bytes": 54666,
-      "modified_at": "2026-11-06T04:26:57.900015+00:00",
+      "bytes": 54646,
+      "modified_at": "2026-11-09T00:31:38.734775+00:00",
       "registered": false
     },
     {
       "path": "07_REPORTS/docs/weekly-report-2026-11-02-11-08.md",
       "domain": "07_REPORTS",
       "type": "md",
-      "bytes": 59177,
-      "modified_at": "2026-11-07T09:42:48.141146+00:00",
+      "bytes": 59165,
+      "modified_at": "2026-11-08T02:35:39.645921+00:00",
       "registered": false
     },
     {
       "path": "07_REPORTS/geo_entity_gaps/lich-chieu-phim-geo-blueprint.md",
       "domain": "07_REPORTS",
       "type": "md",
-      "bytes": 7484,
-      "modified_at": "2026-10-19T10:26:12.228456+00:00",
+      "bytes": 7482,
+      "modified_at": "2026-11-09T00:25:42.543472+00:00",
       "registered": false
     },
     {
       "path": "07_REPORTS/geo_entity_gaps/vi-tra-sau-geo-blueprint.md",
       "domain": "07_REPORTS",
       "type": "md",
-      "bytes": 8383,
-      "modified_at": "2026-10-19T10:26:05.512365+00:00",
+      "bytes": 8377,
+      "modified_at": "2026-11-09T00:25:42.543735+00:00",
       "registered": false
     },
     {
@@ -6843,8 +6786,8 @@
       "path": "07_REPORTS/templates/monthly_report_template.md",
       "domain": "07_REPORTS",
       "type": "md",
-      "bytes": 7407,
-      "modified_at": "2026-10-30T13:15:00.616217+00:00",
+      "bytes": 7786,
+      "modified_at": "2026-11-09T00:41:19.063939+00:00",
       "registered": false
     },
     {
@@ -6859,8 +6802,8 @@
       "path": "07_REPORTS/templates/weekly_report_template.md",
       "domain": "07_REPORTS",
       "type": "md",
-      "bytes": 2213,
-      "modified_at": "2026-11-05T01:41:00.630510+00:00",
+      "bytes": 2223,
+      "modified_at": "2026-11-09T00:35:05.840085+00:00",
       "registered": false
     },
     {
@@ -6923,8 +6866,8 @@
       "path": "09_PRD/cinema-chatbot-prd.md",
       "domain": "09_PRD",
       "type": "md",
-      "bytes": 70536,
-      "modified_at": "2026-11-06T04:23:48.062177+00:00",
+      "bytes": 70533,
+      "modified_at": "2026-11-09T00:31:38.795886+00:00",
       "registered": false
     },
     {
@@ -7059,8 +7002,8 @@
       "path": "10_LEADERSHIP_MINDSET/leadership-mindset.md",
       "domain": "10_LEADERSHIP_MINDSET",
       "type": "md",
-      "bytes": 21441,
-      "modified_at": "2026-10-29T09:51:46.000798+00:00",
+      "bytes": 21442,
+      "modified_at": "2026-11-09T00:31:38.953020+00:00",
       "registered": false
     },
     {
@@ -7075,16 +7018,16 @@
       "path": "11_NEWS_FEED/2026-10-11_daily_report.md",
       "domain": "11_NEWS_FEED",
       "type": "md",
-      "bytes": 18131,
-      "modified_at": "2026-10-11T12:35:39.957454+00:00",
+      "bytes": 18151,
+      "modified_at": "2026-11-09T00:31:38.961251+00:00",
       "registered": false
     },
     {
       "path": "11_NEWS_FEED/2026-10-12_daily_report.md",
       "domain": "11_NEWS_FEED",
       "type": "md",
-      "bytes": 17328,
-      "modified_at": "2026-10-12T02:23:43.970471+00:00",
+      "bytes": 17358,
+      "modified_at": "2026-11-09T00:31:38.966029+00:00",
       "registered": false
     },
     {
@@ -7099,24 +7042,24 @@
       "path": "11_NEWS_FEED/2026-10-19_daily_report.md",
       "domain": "11_NEWS_FEED",
       "type": "md",
-      "bytes": 11141,
-      "modified_at": "2026-10-21T00:49:14.564268+00:00",
+      "bytes": 11131,
+      "modified_at": "2026-11-09T00:25:42.547318+00:00",
       "registered": false
     },
     {
       "path": "11_NEWS_FEED/2026-10-20_daily_report.md",
       "domain": "11_NEWS_FEED",
       "type": "md",
-      "bytes": 7586,
-      "modified_at": "2026-10-21T00:49:41.852482+00:00",
+      "bytes": 7584,
+      "modified_at": "2026-11-09T00:25:42.547572+00:00",
       "registered": false
     },
     {
       "path": "11_NEWS_FEED/2026-10-21_daily_report.md",
       "domain": "11_NEWS_FEED",
       "type": "md",
-      "bytes": 10032,
-      "modified_at": "2026-10-21T02:38:48.777852+00:00",
+      "bytes": 10028,
+      "modified_at": "2026-11-09T00:25:42.547860+00:00",
       "registered": false
     },
     {
@@ -7163,104 +7106,8 @@
       "path": "11_NEWS_FEED/README.md",
       "domain": "11_NEWS_FEED",
       "type": "md",
-      "bytes": 3328,
-      "modified_at": "2026-10-09T00:56:07.127759+00:00",
-      "registered": false
-    },
-    {
-      "path": "11_NEWS_FEED/daily/2026-10-09_daily_pulse.md",
-      "domain": "11_NEWS_FEED",
-      "type": "md",
-      "bytes": 15247,
-      "modified_at": "2026-10-09T01:16:16.232197+00:00",
-      "registered": false
-    },
-    {
-      "path": "11_NEWS_FEED/daily/2026-10-11_daily_pulse.md",
-      "domain": "11_NEWS_FEED",
-      "type": "md",
-      "bytes": 18131,
-      "modified_at": "2026-10-11T12:35:55.830368+00:00",
-      "registered": false
-    },
-    {
-      "path": "11_NEWS_FEED/daily/2026-10-12_daily_pulse.md",
-      "domain": "11_NEWS_FEED",
-      "type": "md",
-      "bytes": 17328,
-      "modified_at": "2026-10-12T02:24:10.533665+00:00",
-      "registered": false
-    },
-    {
-      "path": "11_NEWS_FEED/daily/2026-10-18_seo_geo_daily_pulse.md",
-      "domain": "11_NEWS_FEED",
-      "type": "md",
-      "bytes": 12471,
-      "modified_at": "2026-10-18T02:21:42.854725+00:00",
-      "registered": false
-    },
-    {
-      "path": "11_NEWS_FEED/daily/2026-10-19_seo_geo_daily_pulse.md",
-      "domain": "11_NEWS_FEED",
-      "type": "md",
-      "bytes": 11141,
-      "modified_at": "2026-10-21T00:49:12.354878+00:00",
-      "registered": false
-    },
-    {
-      "path": "11_NEWS_FEED/daily/2026-10-20_seo_geo_daily_pulse.md",
-      "domain": "11_NEWS_FEED",
-      "type": "md",
-      "bytes": 7586,
-      "modified_at": "2026-10-21T00:49:39.798515+00:00",
-      "registered": false
-    },
-    {
-      "path": "11_NEWS_FEED/daily/2026-10-21_seo_geo_daily_pulse.md",
-      "domain": "11_NEWS_FEED",
-      "type": "md",
-      "bytes": 10032,
-      "modified_at": "2026-10-21T02:38:45.749295+00:00",
-      "registered": false
-    },
-    {
-      "path": "11_NEWS_FEED/daily/2026-10-30_seo_geo_daily_pulse.md",
-      "domain": "11_NEWS_FEED",
-      "type": "md",
-      "bytes": 4375,
-      "modified_at": "2026-11-04T00:41:21.293707+00:00",
-      "registered": false
-    },
-    {
-      "path": "11_NEWS_FEED/daily/2026-10-31_seo_geo_daily_pulse.md",
-      "domain": "11_NEWS_FEED",
-      "type": "md",
-      "bytes": 5037,
-      "modified_at": "2026-11-04T00:41:09.684280+00:00",
-      "registered": false
-    },
-    {
-      "path": "11_NEWS_FEED/daily/2026-11-01_seo_geo_daily_pulse.md",
-      "domain": "11_NEWS_FEED",
-      "type": "md",
-      "bytes": 5988,
-      "modified_at": "2026-11-04T00:40:24.143636+00:00",
-      "registered": false
-    },
-    {
-      "path": "11_NEWS_FEED/daily/2026-11-02_seo_geo_daily_pulse.md",
-      "domain": "11_NEWS_FEED",
-      "type": "md",
-      "bytes": 5604,
-      "modified_at": "2026-11-04T00:39:51.640762+00:00",
-      "registered": false
-    },
-    {
-      "path": "11_NEWS_FEED/daily/2026-11-03_seo_geo_daily_pulse.md",
-      "domain": "11_NEWS_FEED",
-      "type": "md",
-      "bytes": 10150,
-      "modified_at": "2026-11-04T00:39:03.566326+00:00",
+      "bytes": 3813,
+      "modified_at": "2026-11-09T05:42:12.966169+00:00",
       "registered": false
     },
     {
@@ -7272,43 +7119,11 @@
       "registered": false
     },
     {
-      "path": "11_NEWS_FEED/topics/tech_ai_seo/2026-10-18_seo_geo_pulse.md",
-      "domain": "11_NEWS_FEED",
-      "type": "md",
-      "bytes": 12471,
-      "modified_at": "2026-10-21T00:50:42.319471+00:00",
-      "registered": false
-    },
-    {
-      "path": "11_NEWS_FEED/topics/tech_ai_seo/2026-10-19_seo_geo_pulse.md",
-      "domain": "11_NEWS_FEED",
-      "type": "md",
-      "bytes": 11141,
-      "modified_at": "2026-10-21T00:50:44.314285+00:00",
-      "registered": false
-    },
-    {
-      "path": "11_NEWS_FEED/topics/tech_ai_seo/2026-10-20_seo_geo_pulse.md",
-      "domain": "11_NEWS_FEED",
-      "type": "md",
-      "bytes": 7586,
-      "modified_at": "2026-10-21T00:50:46.739329+00:00",
-      "registered": false
-    },
-    {
-      "path": "11_NEWS_FEED/topics/tech_ai_seo/2026-10-21_seo_geo_pulse.md",
-      "domain": "11_NEWS_FEED",
-      "type": "md",
-      "bytes": 10032,
-      "modified_at": "2026-10-21T02:38:50.947847+00:00",
-      "registered": false
-    },
-    {
       "path": "13_INTAKE/README.md",
       "domain": "13_INTAKE",
       "type": "md",
-      "bytes": 2819,
-      "modified_at": "2026-11-05T01:37:12.544026+00:00",
+      "bytes": 2841,
+      "modified_at": "2026-11-09T00:36:32.550093+00:00",
       "registered": false
     },
     {
@@ -7336,6 +7151,22 @@
       "registered": false
     },
     {
+      "path": "15_DISPATCH/.queue/mw7cs3fn-e39eb3.json",
+      "domain": "15_DISPATCH",
+      "type": "json",
+      "bytes": 159,
+      "modified_at": "2026-11-08T04:49:34.308421+00:00",
+      "registered": false
+    },
+    {
+      "path": "15_DISPATCH/.queue/mw7d4it0-308e25.json",
+      "domain": "15_DISPATCH",
+      "type": "json",
+      "bytes": 159,
+      "modified_at": "2026-11-08T04:59:14.104741+00:00",
+      "registered": false
+    },
+    {
       "path": "15_DISPATCH/README.md",
       "domain": "15_DISPATCH",
       "type": "md",
@@ -7347,8 +7178,8 @@
       "path": "AGENTS.md",
       "domain": "AGENTS.md",
       "type": "md",
-      "bytes": 50060,
-      "modified_at": "2026-11-07T10:16:55.062775+00:00",
+      "bytes": 52455,
+      "modified_at": "2026-11-09T05:34:54.752936+00:00",
       "registered": false
     },
     {
@@ -7363,24 +7194,24 @@
       "path": "CODEBASE_MANIFEST.md",
       "domain": "CODEBASE_MANIFEST.md",
       "type": "md",
-      "bytes": 13688,
-      "modified_at": "2026-11-05T01:45:50.955360+00:00",
+      "bytes": 13941,
+      "modified_at": "2026-11-09T05:36:04.457744+00:00",
       "registered": true
     },
     {
       "path": "MEETING_RECAPS.md",
       "domain": "MEETING_RECAPS.md",
       "type": "md",
-      "bytes": 138167,
-      "modified_at": "2026-10-30T07:40:30.545419+00:00",
+      "bytes": 138194,
+      "modified_at": "2026-11-09T00:41:19.064769+00:00",
       "registered": false
     },
     {
       "path": "README.md",
       "domain": "README.md",
       "type": "md",
-      "bytes": 3604,
-      "modified_at": "2026-10-27T12:24:27.694086+00:00",
+      "bytes": 3620,
+      "modified_at": "2026-11-09T00:22:44.633498+00:00",
       "registered": false
     },
     {
@@ -7443,8 +7274,8 @@
       "path": "growth_reporting_tool/mcp_server.py",
       "domain": "growth_reporting_tool",
       "type": "py",
-      "bytes": 15175,
-      "modified_at": "2026-10-27T12:27:56.256989+00:00",
+      "bytes": 15146,
+      "modified_at": "2026-11-09T00:37:46.722898+00:00",
       "registered": false
     },
     {
@@ -7848,30 +7679,6 @@
       "registered": false
     },
     {
-      "path": "scripts/add_clicks_to_detail_by_project.py",
-      "domain": "scripts",
-      "type": "py",
-      "bytes": 48609,
-      "modified_at": "2026-10-29T06:09:29.913353+00:00",
-      "registered": false
-    },
-    {
-      "path": "scripts/add_provider_subpages_sheet.py",
-      "domain": "scripts",
-      "type": "py",
-      "bytes": 56725,
-      "modified_at": "2026-10-14T08:07:25.614782+00:00",
-      "registered": false
-    },
-    {
-      "path": "scripts/add_status_droplist.py",
-      "domain": "scripts",
-      "type": "py",
-      "bytes": 7996,
-      "modified_at": "2026-11-02T04:16:49.585149+00:00",
-      "registered": false
-    },
-    {
       "path": "scripts/analyze_financial_inventory.py",
       "domain": "scripts",
       "type": "py",
@@ -7883,24 +7690,24 @@
       "path": "scripts/analyze_growth_urls_7d.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 5086,
-      "modified_at": "2026-10-25T13:36:40.650994+00:00",
+      "bytes": 5248,
+      "modified_at": "2026-11-08T15:15:40.173976+00:00",
       "registered": false
     },
     {
       "path": "scripts/analyze_gsc_zero_impressions.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 5838,
-      "modified_at": "2026-10-25T10:17:48.920280+00:00",
+      "bytes": 5995,
+      "modified_at": "2026-11-08T15:15:40.174219+00:00",
       "registered": false
     },
     {
       "path": "scripts/analyze_lost_impressions.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 4928,
-      "modified_at": "2026-10-25T13:12:16.230405+00:00",
+      "bytes": 5108,
+      "modified_at": "2026-11-08T15:15:40.174386+00:00",
       "registered": false
     },
     {
@@ -7909,14 +7716,6 @@
       "type": "py",
       "bytes": 4649,
       "modified_at": "2026-10-22T06:16:08.941196+00:00",
-      "registered": false
-    },
-    {
-      "path": "scripts/apply_roadmap_updates_and_remove_sip.py",
-      "domain": "scripts",
-      "type": "py",
-      "bytes": 32813,
-      "modified_at": "2026-10-30T01:56:28.316770+00:00",
       "registered": false
     },
     {
@@ -7933,6 +7732,174 @@
       "type": "py",
       "bytes": 23763,
       "modified_at": "2026-10-21T01:30:17.970521+00:00",
+      "registered": false
+    },
+    {
+      "path": "scripts/archive/oneoff-2026-11/add_clicks_to_detail_by_project.py",
+      "domain": "scripts",
+      "type": "py",
+      "bytes": 48609,
+      "modified_at": "2026-10-29T06:09:29.913353+00:00",
+      "registered": false
+    },
+    {
+      "path": "scripts/archive/oneoff-2026-11/add_provider_subpages_sheet.py",
+      "domain": "scripts",
+      "type": "py",
+      "bytes": 56725,
+      "modified_at": "2026-10-14T08:07:25.614782+00:00",
+      "registered": false
+    },
+    {
+      "path": "scripts/archive/oneoff-2026-11/add_status_droplist.py",
+      "domain": "scripts",
+      "type": "py",
+      "bytes": 7996,
+      "modified_at": "2026-11-02T04:16:49.585149+00:00",
+      "registered": false
+    },
+    {
+      "path": "scripts/archive/oneoff-2026-11/apply_roadmap_updates_and_remove_sip.py",
+      "domain": "scripts",
+      "type": "py",
+      "bytes": 32813,
+      "modified_at": "2026-10-30T01:56:28.316770+00:00",
+      "registered": false
+    },
+    {
+      "path": "scripts/archive/oneoff-2026-11/fill_overall_sheet.py",
+      "domain": "scripts",
+      "type": "py",
+      "bytes": 10585,
+      "modified_at": "2026-10-31T00:27:34.389173+00:00",
+      "registered": false
+    },
+    {
+      "path": "scripts/archive/oneoff-2026-11/fix_projects_detail_flow_formats.py",
+      "domain": "scripts",
+      "type": "py",
+      "bytes": 10302,
+      "modified_at": "2026-10-30T00:56:09.088230+00:00",
+      "registered": false
+    },
+    {
+      "path": "scripts/archive/oneoff-2026-11/patch_web_platform_performance.py",
+      "domain": "scripts",
+      "type": "py",
+      "bytes": 9912,
+      "modified_at": "2026-10-22T01:04:00.133646+00:00",
+      "registered": false
+    },
+    {
+      "path": "scripts/archive/oneoff-2026-11/refactor_pyramid_pptx.py",
+      "domain": "scripts",
+      "type": "py",
+      "bytes": 32923,
+      "modified_at": "2026-11-03T13:48:56.977337+00:00",
+      "registered": false
+    },
+    {
+      "path": "scripts/archive/oneoff-2026-11/reformat_projects_detail_flow.py",
+      "domain": "scripts",
+      "type": "py",
+      "bytes": 50477,
+      "modified_at": "2026-10-31T01:12:45.690599+00:00",
+      "registered": false
+    },
+    {
+      "path": "scripts/archive/oneoff-2026-11/remove_hien_trang_column.py",
+      "domain": "scripts",
+      "type": "py",
+      "bytes": 17197,
+      "modified_at": "2026-10-30T07:52:31.161836+00:00",
+      "registered": false
+    },
+    {
+      "path": "scripts/archive/oneoff-2026-11/remove_title_banners.py",
+      "domain": "scripts",
+      "type": "py",
+      "bytes": 35762,
+      "modified_at": "2026-10-30T01:18:50.877000+00:00",
+      "registered": false
+    },
+    {
+      "path": "scripts/archive/oneoff-2026-11/scratch_fix_platform.py",
+      "domain": "scripts",
+      "type": "py",
+      "bytes": 9946,
+      "modified_at": "2026-11-02T10:28:35.630650+00:00",
+      "registered": false
+    },
+    {
+      "path": "scripts/archive/oneoff-2026-11/scratch_fix_v2.py",
+      "domain": "scripts",
+      "type": "py",
+      "bytes": 2394,
+      "modified_at": "2026-11-02T10:28:52.229631+00:00",
+      "registered": false
+    },
+    {
+      "path": "scripts/archive/oneoff-2026-11/scratch_human_report.py",
+      "domain": "scripts",
+      "type": "py",
+      "bytes": 34819,
+      "modified_at": "2026-11-02T10:20:37.381299+00:00",
+      "registered": false
+    },
+    {
+      "path": "scripts/archive/oneoff-2026-11/scratch_strict_audit_report.py",
+      "domain": "scripts",
+      "type": "py",
+      "bytes": 30739,
+      "modified_at": "2026-11-02T10:33:25.190859+00:00",
+      "registered": false
+    },
+    {
+      "path": "scripts/archive/oneoff-2026-11/simplify_section1.py",
+      "domain": "scripts",
+      "type": "py",
+      "bytes": 6913,
+      "modified_at": "2026-11-03T08:41:32.117817+00:00",
+      "registered": false
+    },
+    {
+      "path": "scripts/archive/oneoff-2026-11/streamline_sitemap_columns.py",
+      "domain": "scripts",
+      "type": "py",
+      "bytes": 18482,
+      "modified_at": "2026-10-30T06:21:13.748022+00:00",
+      "registered": false
+    },
+    {
+      "path": "scripts/archive/oneoff-2026-11/update_all_october_reports_30d.py",
+      "domain": "scripts",
+      "type": "py",
+      "bytes": 30951,
+      "modified_at": "2026-11-01T10:20:51.659297+00:00",
+      "registered": false
+    },
+    {
+      "path": "scripts/archive/oneoff-2026-11/update_blog_status_done.py",
+      "domain": "scripts",
+      "type": "py",
+      "bytes": 10865,
+      "modified_at": "2026-10-30T06:18:29.824616+00:00",
+      "registered": false
+    },
+    {
+      "path": "scripts/archive/oneoff-2026-11/update_section1_pyramid.py",
+      "domain": "scripts",
+      "type": "py",
+      "bytes": 7193,
+      "modified_at": "2026-11-03T06:53:14.059029+00:00",
+      "registered": false
+    },
+    {
+      "path": "scripts/archive/oneoff-2026-11/update_tax_roadmap_nov.py",
+      "domain": "scripts",
+      "type": "py",
+      "bytes": 31351,
+      "modified_at": "2026-10-30T02:11:34.221832+00:00",
       "registered": false
     },
     {
@@ -7963,8 +7930,8 @@
       "path": "scripts/audit_actionable_urls.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 3155,
-      "modified_at": "2026-10-25T13:33:56.569224+00:00",
+      "bytes": 3331,
+      "modified_at": "2026-11-09T00:33:39.513385+00:00",
       "registered": false
     },
     {
@@ -7979,8 +7946,8 @@
       "path": "scripts/batch_audit_competitors.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 103802,
-      "modified_at": "2026-10-19T01:56:25.023040+00:00",
+      "bytes": 103758,
+      "modified_at": "2026-11-09T05:41:09.094841+00:00",
       "registered": false
     },
     {
@@ -7995,24 +7962,24 @@
       "path": "scripts/build_full_funnel_matrix.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 73952,
-      "modified_at": "2026-11-06T14:12:06.249837+00:00",
+      "bytes": 73957,
+      "modified_at": "2026-11-09T00:39:05.915380+00:00",
       "registered": false
     },
     {
       "path": "scripts/build_ga4_events_inventory.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 23437,
-      "modified_at": "2026-10-23T14:36:56.066445+00:00",
+      "bytes": 23438,
+      "modified_at": "2026-11-09T00:39:45.681631+00:00",
       "registered": false
     },
     {
       "path": "scripts/build_hub_style_slide_demo.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 17186,
-      "modified_at": "2026-11-05T08:51:49.573255+00:00",
+      "bytes": 17347,
+      "modified_at": "2026-11-08T15:15:40.175028+00:00",
       "registered": false
     },
     {
@@ -8043,8 +8010,8 @@
       "path": "scripts/build_templated_pptx.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 43462,
-      "modified_at": "2026-11-02T00:43:56.257232+00:00",
+      "bytes": 43442,
+      "modified_at": "2026-11-09T00:33:39.514405+00:00",
       "registered": false
     },
     {
@@ -8067,8 +8034,16 @@
       "path": "scripts/build_web_platform_performance.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 35844,
-      "modified_at": "2026-10-25T02:18:23.206345+00:00",
+      "bytes": 35845,
+      "modified_at": "2026-11-09T00:39:16.309254+00:00",
+      "registered": false
+    },
+    {
+      "path": "scripts/check_knowledge_freshness.py",
+      "domain": "scripts",
+      "type": "py",
+      "bytes": 23793,
+      "modified_at": "2026-11-08T10:38:36.586302+00:00",
       "registered": false
     },
     {
@@ -8083,8 +8058,8 @@
       "path": "scripts/clean_build_weekly.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 10210,
-      "modified_at": "2026-11-03T01:17:26.935906+00:00",
+      "bytes": 10374,
+      "modified_at": "2026-11-08T15:15:40.175333+00:00",
       "registered": false
     },
     {
@@ -8131,32 +8106,32 @@
       "path": "scripts/cron_theme_seasonality.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 17609,
-      "modified_at": "2026-10-23T15:50:22.611002+00:00",
+      "bytes": 17611,
+      "modified_at": "2026-11-09T00:40:05.608613+00:00",
       "registered": false
     },
     {
       "path": "scripts/detect_anomalies.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 11089,
-      "modified_at": "2026-10-25T14:04:47.183070+00:00",
+      "bytes": 11083,
+      "modified_at": "2026-11-09T00:38:16.389580+00:00",
       "registered": false
     },
     {
       "path": "scripts/detect_knowledge_conflicts.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 12124,
-      "modified_at": "2026-11-07T13:06:39.514620+00:00",
+      "bytes": 13326,
+      "modified_at": "2026-11-08T15:12:16.778604+00:00",
       "registered": false
     },
     {
       "path": "scripts/diagnose_performance.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 15565,
-      "modified_at": "2026-11-05T02:03:00.178542+00:00",
+      "bytes": 15587,
+      "modified_at": "2026-11-09T00:38:25.365595+00:00",
       "registered": false
     },
     {
@@ -8168,11 +8143,19 @@
       "registered": false
     },
     {
+      "path": "scripts/evaluate_agent_acceptance.py",
+      "domain": "scripts",
+      "type": "py",
+      "bytes": 21530,
+      "modified_at": "2026-11-08T10:38:36.588455+00:00",
+      "registered": false
+    },
+    {
       "path": "scripts/export_agent_context.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 1625,
-      "modified_at": "2026-11-07T13:12:38.117342+00:00",
+      "bytes": 7006,
+      "modified_at": "2026-11-08T10:38:36.586831+00:00",
       "registered": false
     },
     {
@@ -8200,27 +8183,11 @@
       "registered": false
     },
     {
-      "path": "scripts/fill_overall_sheet.py",
-      "domain": "scripts",
-      "type": "py",
-      "bytes": 10585,
-      "modified_at": "2026-10-31T00:27:34.389173+00:00",
-      "registered": false
-    },
-    {
-      "path": "scripts/fix_projects_detail_flow_formats.py",
-      "domain": "scripts",
-      "type": "py",
-      "bytes": 10302,
-      "modified_at": "2026-10-30T00:56:09.088230+00:00",
-      "registered": false
-    },
-    {
       "path": "scripts/generate_content_plan.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 24774,
-      "modified_at": "2026-10-18T05:06:45.748558+00:00",
+      "bytes": 36865,
+      "modified_at": "2026-11-09T06:27:20.096623+00:00",
       "registered": false
     },
     {
@@ -8229,6 +8196,14 @@
       "type": "py",
       "bytes": 117223,
       "modified_at": "2026-10-20T07:43:40.306579+00:00",
+      "registered": false
+    },
+    {
+      "path": "scripts/generate_knowledge_provenance.py",
+      "domain": "scripts",
+      "type": "py",
+      "bytes": 10606,
+      "modified_at": "2026-11-07T13:53:52.612653+00:00",
       "registered": false
     },
     {
@@ -8243,8 +8218,8 @@
       "path": "scripts/geo_entity_gap_generator.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 39734,
-      "modified_at": "2026-10-19T10:25:56.490858+00:00",
+      "bytes": 39728,
+      "modified_at": "2026-11-09T00:33:39.513917+00:00",
       "registered": false
     },
     {
@@ -8259,8 +8234,8 @@
       "path": "scripts/guard_vocabulary.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 22176,
-      "modified_at": "2026-11-07T03:19:57.305470+00:00",
+      "bytes": 26275,
+      "modified_at": "2026-11-09T00:40:44.691999+00:00",
       "registered": false
     },
     {
@@ -8347,16 +8322,24 @@
       "path": "scripts/lib/ab_test_evaluator.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 7963,
-      "modified_at": "2026-10-25T14:09:28.905755+00:00",
+      "bytes": 7965,
+      "modified_at": "2026-11-08T15:14:44.800685+00:00",
+      "registered": false
+    },
+    {
+      "path": "scripts/lib/adaptive_clustering.py",
+      "domain": "scripts",
+      "type": "py",
+      "bytes": 21688,
+      "modified_at": "2026-11-07T14:27:47.496329+00:00",
       "registered": false
     },
     {
       "path": "scripts/lib/content_plan_config.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 39989,
-      "modified_at": "2026-10-19T13:30:48.627376+00:00",
+      "bytes": 41697,
+      "modified_at": "2026-11-09T06:26:31.269614+00:00",
       "registered": false
     },
     {
@@ -8483,8 +8466,8 @@
       "path": "scripts/lib/keyword_intelligence.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 81135,
-      "modified_at": "2026-10-21T13:25:01.271544+00:00",
+      "bytes": 82020,
+      "modified_at": "2026-11-09T06:27:41.558927+00:00",
       "registered": false
     },
     {
@@ -8515,8 +8498,8 @@
       "path": "scripts/lib/url_project_resolver.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 19518,
-      "modified_at": "2026-11-06T14:01:51.517063+00:00",
+      "bytes": 19519,
+      "modified_at": "2026-11-09T00:40:01.516005+00:00",
       "registered": false
     },
     {
@@ -8531,8 +8514,8 @@
       "path": "scripts/mcp_server.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 15175,
-      "modified_at": "2026-10-27T12:28:04.932972+00:00",
+      "bytes": 15179,
+      "modified_at": "2026-11-09T00:37:59.760834+00:00",
       "registered": false
     },
     {
@@ -8552,14 +8535,6 @@
       "registered": false
     },
     {
-      "path": "scripts/patch_web_platform_performance.py",
-      "domain": "scripts",
-      "type": "py",
-      "bytes": 9912,
-      "modified_at": "2026-10-22T01:04:00.133646+00:00",
-      "registered": false
-    },
-    {
       "path": "scripts/poc_adaptive_clustering.py",
       "domain": "scripts",
       "type": "py",
@@ -8571,16 +8546,16 @@
       "path": "scripts/prioritize_initiatives.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 5967,
-      "modified_at": "2026-10-25T14:08:53.317839+00:00",
+      "bytes": 5961,
+      "modified_at": "2026-11-09T00:31:45.289144+00:00",
       "registered": false
     },
     {
       "path": "scripts/push_to_hubs_api.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 8392,
-      "modified_at": "2026-10-21T14:45:52.147906+00:00",
+      "bytes": 10253,
+      "modified_at": "2026-11-08T14:58:28.547359+00:00",
       "registered": false
     },
     {
@@ -8619,8 +8594,8 @@
       "path": "scripts/rebuild_projects_detail_flow_v3.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 43221,
-      "modified_at": "2026-11-02T07:35:59.485442+00:00",
+      "bytes": 43222,
+      "modified_at": "2026-11-09T00:39:50.057148+00:00",
       "registered": false
     },
     {
@@ -8629,70 +8604,6 @@
       "type": "py",
       "bytes": 55887,
       "modified_at": "2026-10-30T06:16:05.369191+00:00",
-      "registered": false
-    },
-    {
-      "path": "scripts/refactor_pyramid_pptx.py",
-      "domain": "scripts",
-      "type": "py",
-      "bytes": 32923,
-      "modified_at": "2026-11-03T13:48:56.977337+00:00",
-      "registered": false
-    },
-    {
-      "path": "scripts/reformat_projects_detail_flow.py",
-      "domain": "scripts",
-      "type": "py",
-      "bytes": 50477,
-      "modified_at": "2026-10-31T01:12:45.690599+00:00",
-      "registered": false
-    },
-    {
-      "path": "scripts/remove_hien_trang_column.py",
-      "domain": "scripts",
-      "type": "py",
-      "bytes": 17197,
-      "modified_at": "2026-10-30T07:52:31.161836+00:00",
-      "registered": false
-    },
-    {
-      "path": "scripts/remove_title_banners.py",
-      "domain": "scripts",
-      "type": "py",
-      "bytes": 35762,
-      "modified_at": "2026-10-30T01:18:50.877000+00:00",
-      "registered": false
-    },
-    {
-      "path": "scripts/scratch_fix_platform.py",
-      "domain": "scripts",
-      "type": "py",
-      "bytes": 9946,
-      "modified_at": "2026-11-02T10:28:35.630650+00:00",
-      "registered": false
-    },
-    {
-      "path": "scripts/scratch_fix_v2.py",
-      "domain": "scripts",
-      "type": "py",
-      "bytes": 2394,
-      "modified_at": "2026-11-02T10:28:52.229631+00:00",
-      "registered": false
-    },
-    {
-      "path": "scripts/scratch_human_report.py",
-      "domain": "scripts",
-      "type": "py",
-      "bytes": 34819,
-      "modified_at": "2026-11-02T10:20:37.381299+00:00",
-      "registered": false
-    },
-    {
-      "path": "scripts/scratch_strict_audit_report.py",
-      "domain": "scripts",
-      "type": "py",
-      "bytes": 30739,
-      "modified_at": "2026-11-02T10:33:25.190859+00:00",
       "registered": false
     },
     {
@@ -8707,16 +8618,8 @@
       "path": "scripts/serp_competitor_analyzer.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 34836,
-      "modified_at": "2026-10-19T01:57:15.473446+00:00",
-      "registered": false
-    },
-    {
-      "path": "scripts/simplify_section1.py",
-      "domain": "scripts",
-      "type": "py",
-      "bytes": 6913,
-      "modified_at": "2026-11-03T08:41:32.117817+00:00",
+      "bytes": 34923,
+      "modified_at": "2026-11-09T05:40:49.307869+00:00",
       "registered": false
     },
     {
@@ -8736,19 +8639,11 @@
       "registered": false
     },
     {
-      "path": "scripts/streamline_sitemap_columns.py",
-      "domain": "scripts",
-      "type": "py",
-      "bytes": 18482,
-      "modified_at": "2026-10-30T06:21:13.748022+00:00",
-      "registered": false
-    },
-    {
       "path": "scripts/sync_7d_performance_report.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 27122,
-      "modified_at": "2026-11-04T01:46:56.393323+00:00",
+      "bytes": 27320,
+      "modified_at": "2026-11-09T00:40:15.890688+00:00",
       "registered": false
     },
     {
@@ -8763,8 +8658,8 @@
       "path": "scripts/sync_all_data.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 9774,
-      "modified_at": "2026-10-21T14:46:54.919613+00:00",
+      "bytes": 9776,
+      "modified_at": "2026-11-09T00:39:24.715739+00:00",
       "registered": false
     },
     {
@@ -8811,8 +8706,8 @@
       "path": "scripts/sync_data_to_hubs_dashboard.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 7304,
-      "modified_at": "2026-11-04T01:47:12.441035+00:00",
+      "bytes": 7878,
+      "modified_at": "2026-11-08T15:00:09.004324+00:00",
       "registered": false
     },
     {
@@ -8843,8 +8738,8 @@
       "path": "scripts/sync_ga4_master.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 36400,
-      "modified_at": "2026-11-04T01:47:06.379823+00:00",
+      "bytes": 37874,
+      "modified_at": "2026-11-08T15:01:01.693931+00:00",
       "registered": false
     },
     {
@@ -8859,16 +8754,16 @@
       "path": "scripts/sync_hybrid_report.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 17230,
-      "modified_at": "2026-11-04T01:47:12.440303+00:00",
+      "bytes": 17409,
+      "modified_at": "2026-11-08T15:01:10.100807+00:00",
       "registered": false
     },
     {
       "path": "scripts/sync_inventory_to_hubs.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 78028,
-      "modified_at": "2026-10-19T14:15:11.028167+00:00",
+      "bytes": 75930,
+      "modified_at": "2026-11-09T06:01:21.569763+00:00",
       "registered": false
     },
     {
@@ -8931,8 +8826,8 @@
       "path": "scripts/sync_tracking_report.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 13548,
-      "modified_at": "2026-10-22T00:53:13.251934+00:00",
+      "bytes": 13754,
+      "modified_at": "2026-11-09T00:39:29.159507+00:00",
       "registered": false
     },
     {
@@ -8947,8 +8842,16 @@
       "path": "scripts/tests/test_channels_matrix.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 2783,
-      "modified_at": "2026-10-21T00:03:13.991039+00:00",
+      "bytes": 2000,
+      "modified_at": "2026-11-08T15:08:15.315047+00:00",
+      "registered": false
+    },
+    {
+      "path": "scripts/tests/test_content_plan_ownership.py",
+      "domain": "scripts",
+      "type": "py",
+      "bytes": 5900,
+      "modified_at": "2026-11-09T06:27:41.596021+00:00",
       "registered": false
     },
     {
@@ -8963,8 +8866,32 @@
       "path": "scripts/tests/test_fetch_multichannel.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 10989,
-      "modified_at": "2026-10-21T00:06:52.559510+00:00",
+      "bytes": 11099,
+      "modified_at": "2026-11-08T15:08:24.969712+00:00",
+      "registered": false
+    },
+    {
+      "path": "scripts/tests/test_keyword_clustering.py",
+      "domain": "scripts",
+      "type": "py",
+      "bytes": 4129,
+      "modified_at": "2026-11-07T14:28:19.470102+00:00",
+      "registered": false
+    },
+    {
+      "path": "scripts/tests/test_knowledge_acceptance.py",
+      "domain": "scripts",
+      "type": "py",
+      "bytes": 4161,
+      "modified_at": "2026-11-08T10:38:52.243249+00:00",
+      "registered": false
+    },
+    {
+      "path": "scripts/tests/test_knowledge_freshness.py",
+      "domain": "scripts",
+      "type": "py",
+      "bytes": 9790,
+      "modified_at": "2026-11-08T10:38:52.242757+00:00",
       "registered": false
     },
     {
@@ -8973,6 +8900,14 @@
       "type": "py",
       "bytes": 4431,
       "modified_at": "2026-11-07T13:07:12.371767+00:00",
+      "registered": false
+    },
+    {
+      "path": "scripts/tests/test_knowledge_provenance.py",
+      "domain": "scripts",
+      "type": "py",
+      "bytes": 3596,
+      "modified_at": "2026-11-07T13:55:27.349630+00:00",
       "registered": false
     },
     {
@@ -8995,8 +8930,8 @@
       "path": "scripts/tools/generate_pptx.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 38993,
-      "modified_at": "2026-07-18T14:45:07.232772+00:00",
+      "bytes": 38935,
+      "modified_at": "2026-11-09T00:33:39.514656+00:00",
       "registered": false
     },
     {
@@ -9024,35 +8959,19 @@
       "registered": false
     },
     {
-      "path": "scripts/update_all_october_reports_30d.py",
-      "domain": "scripts",
-      "type": "py",
-      "bytes": 30951,
-      "modified_at": "2026-11-01T10:20:51.659297+00:00",
-      "registered": false
-    },
-    {
-      "path": "scripts/update_blog_status_done.py",
-      "domain": "scripts",
-      "type": "py",
-      "bytes": 10865,
-      "modified_at": "2026-10-30T06:18:29.824616+00:00",
-      "registered": false
-    },
-    {
       "path": "scripts/update_context_all.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 12662,
-      "modified_at": "2026-11-02T14:25:52.943569+00:00",
+      "bytes": 12822,
+      "modified_at": "2026-11-08T15:15:40.175877+00:00",
       "registered": false
     },
     {
       "path": "scripts/update_demo_links.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 5660,
-      "modified_at": "2026-11-03T06:32:37.941252+00:00",
+      "bytes": 5827,
+      "modified_at": "2026-11-08T15:15:44.884843+00:00",
       "registered": false
     },
     {
@@ -9067,40 +8986,24 @@
       "path": "scripts/update_geo_registry.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 64637,
-      "modified_at": "2026-10-19T14:21:20.478125+00:00",
+      "bytes": 64635,
+      "modified_at": "2026-11-09T00:33:39.514207+00:00",
       "registered": false
     },
     {
       "path": "scripts/update_next_actions.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 11159,
-      "modified_at": "2026-11-03T03:39:13.795022+00:00",
+      "bytes": 11347,
+      "modified_at": "2026-11-08T15:15:44.937649+00:00",
       "registered": false
     },
     {
       "path": "scripts/update_platform_structure.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 19112,
-      "modified_at": "2026-11-03T06:21:50.222756+00:00",
-      "registered": false
-    },
-    {
-      "path": "scripts/update_section1_pyramid.py",
-      "domain": "scripts",
-      "type": "py",
-      "bytes": 7193,
-      "modified_at": "2026-11-03T06:53:14.059029+00:00",
-      "registered": false
-    },
-    {
-      "path": "scripts/update_tax_roadmap_nov.py",
-      "domain": "scripts",
-      "type": "py",
-      "bytes": 31351,
-      "modified_at": "2026-10-30T02:11:34.221832+00:00",
+      "bytes": 19278,
+      "modified_at": "2026-11-08T15:15:40.176323+00:00",
       "registered": false
     },
     {
@@ -9131,8 +9034,8 @@
       "path": "scripts/validate_knowledge_registry.py",
       "domain": "scripts",
       "type": "py",
-      "bytes": 3573,
-      "modified_at": "2026-11-07T13:11:30.851633+00:00",
+      "bytes": 4306,
+      "modified_at": "2026-11-07T13:52:54.682093+00:00",
       "registered": false
     },
     {

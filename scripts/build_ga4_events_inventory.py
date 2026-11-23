@@ -266,7 +266,7 @@ def main():
         {"hub": "Insurtech Hub (BHXM)", "flow": "bhxm_form_view -> bhxm_form_submit -> bhxm_payment_result_view", "completed_orders": bhxm_tx["event_count"], "notes": "Mua bảo hiểm trách nhiệm dân sự xe máy bắt buộc"}
     ]
 
-    # 3. Phân rã Chuyển Đổi Web-to-App qua URL/pagePath (Hồi tố 100%)
+    # 3. Bóc tách Chuyển Đổi Web-to-App qua URL/pagePath (Hồi tố 100%)
     print("3. Đang truy vấn và ánh xạ 100% chuyển đổi Web-to-App theo Dự án DIM...")
     sys.path.append(str(BASE_DIR / "scripts"))
     from build_full_funnel_matrix import build_theme_matcher

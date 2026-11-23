@@ -1,151 +1,150 @@
 project_name,page_type,type,page_rule
-STRING,STRING,STRING,STRING
-Cinema,Home Page,Static,https://www.momo.vn/cinema
-Cinema,Page,Dynamic,https://www.momo.vn/cinema/*
-Cinema,Cineplex Page,Dynamic,https://www.momo.vn/cinema/rap/*
-Cinema,Landing Page,Dynamic,https://www.momo.vn/cinema/lp/*
-Cinema,Blog,Dynamic,https://www.momo.vn/cinema/blog/*
-Cinema,News,Static,https://www.momo.vn/cinema/khuyen-mai
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/giam-15k-mua-ve-xem-phim-khi-thanh-toan-momo-tren-4730
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/uu-dai-hoi-tai-rap-lotte-cinema-moi-momo-moi-ban-6784
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/giam-10-gia-ve-galaxy-bhd-toi-da-15k-giao-dich-tren-vi-momo-1482
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/chi-9000d-ve-cgv-cung-momo-dot-chay-rap-he-500
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/khui-tui-mu-duoi-day-ho-cuc-xin-san-secret-thanh-7513
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/nap-dien-thoai-data-4g-5g-va-lay-qua-10000d-mua-7137
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/sale-nao-bang-uu-dai-chop-nhoang-50-gia-ve-galaxy-cinema-tai-vi-momo-1222
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/doc-quyen-tren-momo-san-ve-cgv-chi-tu-59k-4105
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/phim-tet-tung-bung-tai-lotte-cinema-ve-dong-gia-7116
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/beta-cinema-uu-dai-khung-chi-tu-58000d-ve-momo-4166
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/mua-ve-cgv-cuoi-tuan-chi-voi-79000d-ve-va-mien-phi-tikinow-cung-momo-571
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/uu-dai-xuyen-tet-xem-lotte-cinema-dong-gia-chi-95k-5572
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/xem-phim-hay-loi-ngay-deal-xin-giam-10000d-khi-4327
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/xem-lotte-cinema-cuoi-tuan-gia-uu-dai-chi-105000d-8136
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/hoi-u22-mua-ve-lotte-cinema-tren-momo-gia-cuc-re-7546
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/momo-cinema-tang-ban-1-ve-xem-phim-mien-phi-tai-2434
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/giam-truc-tiep-10-khi-mua-ve-xem-phim-galaxy-cinema-tren-vi-momo-1220
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/mua-ve-xem-phim-nhan-combo-ngot-ngao-bao-tron-3954
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/uu-dai-soc-giam-nong-10000d-khi-dat-ve-co-gai-tu-3435
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/thu-tai-tich-tem-doi-qua-rinh-ngan-voucher-phim-7367
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/nhap-ma-batman-giam-gia-truc-tiep-10k-ve-danh-cho-2458
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/xem-phim-hay-loi-ngay-deal-xin-giam-10000d-khi-4779
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/thu-3-thu-4-dong-gia-65k-ve-2d-tai-bhd-star-2230
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/uu-dai-cgv-phu-phe-chi-tu-59k-cho-tin-do-me-phim-4271
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/thu-tai-tich-bap-doi-qua-rinh-ngan-voucher-phim-7218
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/lac-cay-dieu-uoc-ruoc-trieu-qua-ngon-game-hot-doc-5906
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/dong-gia-79000d-ve-bhd-star-vao-cuoi-tuan-gia-han-den-10-08-2019-819
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/uu-dai-10000d-ngot-lim-dat-ve-dan-choi-khong-so-3073
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/deal-le-lon-mua-ve-xem-phim-rinh-qua-du-lich-4153
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/hot-dac-quyen-san-ve-xem-phim-cho-hoi-sinh-vien-8428
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/doc-quyen-tu-vi-tra-sau-cuoi-tuan-xem-phim-cgv-2898
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/xem-bhd-trong-tuan-chi-75k-ve-2d-6671
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/khao-ban-moi-toi-20k-khi-ra-rap-xem-bom-tan-lat-5888
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/uu-dai-doc-quyen-giam-nong-10000d-mua-ve-xem-phim-2646
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/xem-phim-chi-tu-9000d-deal-nay-chill-phet-4802
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/xem-bom-tan-gia-phan-chan-chi-1000dong-ve-galaxy-cinema-738
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/100-trung-thuong-khi-choi-vong-quay-conan-tren-6268
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/dong-gia-ve-online-cgv-chi-9000d-ve-khi-thanh-toan-qua-momo-364
-Cinema,News,Static,https://www.momo.vn/tin-tuc/tin-tuc-su-kien/mua-ve-tai-rap-cgv-thanh-toan-bang-momo-sieu-nhanh-chi-1-cham-man-hinh-430
-Cinema,News,Static,https://www.momo.vn/tin-tuc/tin-tuc-su-kien/dat-ve-lotte-cinema-truc-tiep-tren-momo-ngay-1379
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/dat-ve-phim-chill-he-dinh-nhan-ngay-kem-cornetto-4374
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/lan-dau-dung-momo-nhan-ngay-voucher-cgv-giam-99k-2863
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/xem-beta-cinemas-trong-tuan-chi-58k-ve-2d-6669
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/flash-sale-phim-hay-bat-tan-rap-bhd-star-giam-ran-ran-50-1223
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/mua-ve-lotte-cinema-1000d-bang-vi-momo-gia-han-den-10-9-2019-698
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/dau-nam-san-ve-cgv-trung-qua-dam-ve-0-dong-cung-momo-447
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/me-rap-lotte-momo-giam-ngay-5k-chieu-dai-mot-phim-4263
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/cuoi-tuan-xem-phim-lotte-chi-75k-ve-khi-dat-truc-tiep-tren-vi-momo-1424
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/cuoi-tuan-xem-phim-gia-sieu-hoi-chi-79k-ve-lotte-2966
-Cinema,News,Static,https://www.momo.vn/tin-tuc/tin-tuc-su-kien/mua-ve-galaxy-cinema-tren-ung-dung-momo-moi-luc-moi-noi-43
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/vi-tra-sau-tung-uu-dai-cuc-hot-xem-phim-cgv-cuoi-3003
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/xem-chiem-doat-review-lien-hoan-tien-10000d-ngay-5172
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/tung-hoanh-rap-lotte-cinema-ca-tuan-chi-79000d-ve-3599
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/xem-phim-rap-bhd-star-giam-lien-10-khi-mua-ve-tren-vi-momo-1221
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/fan-xi-ne-thi-cho-bo-qua-uu-dai-cuc-me-giam-4139
-Cinema,News,Static,https://www.momo.vn/tin-tuc/thong-bao/level-up-trai-nghiem-xem-phim-momo-dua-ban-di-vi-6175
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/tet-xem-phim-mai-review-hay-ruoc-ngay-hoan-tien-5573
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/rinh-2-the-qua-gojek-giam-khung-nua-gia-khi-dat-2599
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/uu-dai-pepsi-mien-phi-va-giam-gia-bap-tai-rap-7422
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/bay-cung-spiderman-san-goi-xem-phim-1-nam-2245
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/lan-dau-xai-vi-tang-ban-ve-lotte-cinema-chi-9k-2593
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/mua-ve-lotte-cinema-san-goi-xem-phim-ca-nam-mien-5973
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/wonderdeal-thanh-toan-baemin-nhan-qua-giam-30-my-combo-cgv-1554
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/he-nong-bong-gia-chan-dong-mung-mua-phim-bom-tan-chi-79000d-ve-bhd-star-cho-cac-mot-phim-vao-cuoi-tuan-729
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/nap-dien-thoai-100000d-am-lien-ve-phim-70000d-cuc-2500
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/chon-momo-thanh-toan-tai-web-app-cgv-39000-dong-ve-336
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/nhap-trungthu-du-me-dau-xanh-hay-thap-cam-deu-co-7989
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/xem-galaxy-cinema-cuoi-tuan-chi-81k-ve-2d-6673
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/cuoi-tuan-xem-phim-tha-ga-chi-79000d-ve-542
-Cinema,News,Static,https://www.momo.vn/tin-tuc/tin-tuc-su-kien/thu-6-xine-qua-tang-cuc-me-100-trung-qua-vao-moi-thu-6-hang-tuan-1486
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/nhap-hoi-u22-lotte-cinema-dong-gia-65000d-ve-phim-6646
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/hanh-trinh-san-dau-rinh-qua-moi-chang-thanh-toan-8258
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/nam-ngo-xem-sieu-pham-tet-san-li-xi-den-99999-xu-8495
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/xem-beta-cinemas-cuoi-tuan-chi-62k-ve-2d-6670
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/giam-5k-mua-ve-xem-phim-thoa-suc-kham-pha-vu-tru-4511
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/momo-tri-an-tang-ban-ve-phim-0d-cho-nua-nam-dong-4504
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/2-tuan-phu-phe-qua-tang-khi-dat-ve-cgv-hoac-thanh-toan-baemin-qua-momo-1368
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/xem-phim-gia-xua-chi-1-dong-ve-tai-bhd-star-723
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/ve-xem-phim-2d-dong-gia-tu-59000d-tren-momo-8555
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/khai-truong-galaxy-sala-ra-mat-imax-laser-tai-5330
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/3-buoc-lien-ket-de-dang-nhan-ngay-ve-xem-phim-tai-galaxy-cinema-495
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/uu-dai-doc-quyen-rap-lotte-west-lake-quet-ma-nhan-4758
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/mua-ve-xem-phim-moi-luc-moi-noi-nhan-nhieu-khuyen-mai-49
-Cinema,News,Static,https://www.momo.vn/tin-tuc/tin-tuc-su-kien/thong-bao-cgv-ngung-gui-sms-xac-nhan-dat-ve-tu-1-8-2020-1333
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/ve-cgv-9000d-tai-xuat-loi-hai-hon-nhap-ma-cgvmomo-nhan-combo-cuc-chat-1350
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/giam-10k-mua-ve-xem-phim-thoa-suc-kham-pha-vu-tru-5645
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/uu-dai-pepsi-mien-phi-va-giam-gia-bap-tai-rap-7421
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/ban-moi-toi-nha-momo-khao-toi-ben-tang-the-qua-5849
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/nhap-ma-thieunhi-giam-ngay-10000d-mua-ve-xem-phim-4400
-Cinema,News,Static,https://www.momo.vn/tin-tuc/tin-tuc-su-kien/cuoi-ngua-xem-deal-xem-phim-tet-duoc-hoan-den-8352
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/giam-15k-mua-ve-xem-phim-thoa-suc-kham-pha-vu-tru-5561
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/danh-rieng-cho-khach-hang-co-internet-banking-mua-ve-cgv-39000d-ve-x3-344
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/giam-100000d-mua-ve-phim-tet-tai-galaxycinevn-448
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/mua-ve-xem-phim-rinh-combo-the-qua-data-cuc-hap-3910
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/giam-5k-mua-ve-xem-phim-thoa-suc-kham-pha-vu-tru-4935
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/rinh-qua-doraemon-cuc-xin-khi-dat-ve-xem-phim-2804
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/mua-ve-xem-phim-quy-doi-tang-qua-giam-15k-cho-lan-8472
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/xem-phim-tha-ga-tai-lotte-cinema-voi-gia-ve-chi-tu-1000d-635
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/thu-tai-tich-bap-doi-qua-rinh-ngan-voucher-phim-7115
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/nhap-ma-upsize-doi-vi-bap-nang-size-nuoc-cuc-hoi-7686
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/bom-tan-venom-doi-mat-tu-thu-do-bo-rap-phim-nhap-2196
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/beta-cinema-dong-gia-40000d-ve-cho-u22-khi-thanh-6632
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/uu-dai-hoi-tai-rap-lotte-cinema-moi-momo-moi-ban-7285
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/hot-dac-quyen-san-ve-xem-phim-cho-hoi-sinh-vien-8429
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/nap-dien-thoai-am-ve-xem-phim-mai-sieu-hot-mua-5551
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/choi-lac-xi-gom-ve-phim-tet-rap-nao-cung-co-1602
-Cinema,News,Static,https://www.momo.vn/tin-tuc/tin-tuc-su-kien/momo-tro-thanh-doi-tac-thanh-toan-cua-cgv-314
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/nhap-ma-momozi-giam-lien-10k-thich-phim-gi-dat-5160
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/momo-x-cocacola-sap-den-tet-roi-boi-hoi-don-deal-cgv-sieu-xin-1574
-Cinema,News,Static,https://www.momo.vn/tin-tuc/thong-bao/xem-galaxy-cinema-ca-tuan-momo-khao-ve-81k-5171
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/me-xem-phim-loi-sieu-uu-dai-quet-qr-nhan-qua-20k-5838
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/kham-pha-vu-tru-dien-anh-chi-79000d-tai-cgv-qua-4787
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/duy-nhat-tai-bhd-ruoc-kho-bau-ve-gia-re-giam-10-5601
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/momo-x-cgv-nhap-ma-cgvmm-rinh-goi-qua-data-tri-5319
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/giam-5k-mua-ve-xem-phim-thoa-suc-kham-pha-vu-tru-5560
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/bong-bong-bang-bang-thu-tai-nuoi-ca-bong-trung-6724
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/fan-xine-du-hanh-vu-tru-dien-anh-chi-69000d-tai-4788
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/mua-ve-lotte-cinema-san-bap-nuoc-mien-phi-tren-6461
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/xem-lotte-cinema-ca-tuan-chi-89k-ve-2d-6678
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/giam-10k-mua-ve-xem-phim-thoa-suc-kham-pha-vu-tru-6180
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/tin-chan-dong-flash-sale-giam-50-ve-phim-cgv-chi-co-tai-vi-momo-1224
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/xem-bhd-cuoi-tuan-chi-95k-ve-2d-6672
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/uu-dai-hoi-tai-rap-galaxy-parc-mall-moi-momo-moi-6626
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/uu-dai-xuyen-le-xem-lotte-cinema-dong-gia-chi-110k-8316
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/sale-khung-den-50-do-bo-loat-rap-phim-khi-mua-ve-xem-phim-tren-vi-momo-1230
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/dat-ve-xem-phim-tren-momo-nhan-bap-nuoc-mien-phi-cuoi-tuan-1417
-Cinema,News,Static,https://www.momo.vn/tin-tuc/tin-tuc-su-kien/tich-huy-hieu-rinh-mo-hinh-conan-sieu-xin-va-loat-7675
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/nhap-ma-spiderman-giam-gia-sieu-bom-tan-nguoi-2242
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/xem-lotte-cinema-trong-tuan-gia-uu-dai-chi-99000d-8233
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/xem-galaxy-cinema-cuoi-tuan-chi-86k-ve-2d-8082
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/dong-gia-70k-ve-2d-cuoi-tuan-tai-bhd-star-2229
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/hot-tu-nay-ban-da-co-the-mua-ve-u22-rap-galaxy-8399
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/cuoi-tuan-dat-ve-cgv-truc-tiep-tren-momo-nhan-the-qua-giam-30-my-combo-1529
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/deal-xem-phim-le-cuc-hoi-nhap-ma-quockhanh-va-7851
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/nhap-ma-happyday-moi-thu-3-4-5-sieu-hoi-hoan-tien-8615
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/cay-phim-san-huy-hieu-tich-luy-chi-tieu-de-nhan-6321
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/tin-cuc-vui-u22-co-the-mua-ve-bhd-cuc-hoi-ngay-7461
-Cinema,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/san-sap-sai-gon-rinh-loat-qua-momo-dip-dai-le-tai-8679
-Cinema,Blog,Static,https://www.momo.vn/blog/huong-dan-dang-ky-tai-khoan-fpt-play-c115dt1372
-Cinema,Blog,Static,https://www.momo.vn/blog/huong-dan-cach-dang-ky-tai-khoan-netflix-c115dt1096
+Cinema_Home Page,Home Page,Static,https://www.momo.vn/cinema
+Cinema_Page,Page,Dynamic,https://www.momo.vn/cinema/*
+Cinema_Cineplex Page,Cineplex Page,Dynamic,https://www.momo.vn/cinema/rap/*
+Cinema_Landing Page,Landing Page,Dynamic,https://www.momo.vn/cinema/lp/*
+Cinema_Blog,Blog,Dynamic,https://www.momo.vn/cinema/blog/*
+Cinema_News,News,Static,https://www.momo.vn/cinema/khuyen-mai
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/giam-15k-mua-ve-xem-phim-khi-thanh-toan-momo-tren-4730
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/uu-dai-hoi-tai-rap-lotte-cinema-moi-momo-moi-ban-6784
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/giam-10-gia-ve-galaxy-bhd-toi-da-15k-giao-dich-tren-vi-momo-1482
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/chi-9000d-ve-cgv-cung-momo-dot-chay-rap-he-500
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/khui-tui-mu-duoi-day-ho-cuc-xin-san-secret-thanh-7513
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/nap-dien-thoai-data-4g-5g-va-lay-qua-10000d-mua-7137
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/sale-nao-bang-uu-dai-chop-nhoang-50-gia-ve-galaxy-cinema-tai-vi-momo-1222
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/doc-quyen-tren-momo-san-ve-cgv-chi-tu-59k-4105
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/phim-tet-tung-bung-tai-lotte-cinema-ve-dong-gia-7116
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/beta-cinema-uu-dai-khung-chi-tu-58000d-ve-momo-4166
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/mua-ve-cgv-cuoi-tuan-chi-voi-79000d-ve-va-mien-phi-tikinow-cung-momo-571
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/uu-dai-xuyen-tet-xem-lotte-cinema-dong-gia-chi-95k-5572
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/xem-phim-hay-loi-ngay-deal-xin-giam-10000d-khi-4327
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/xem-lotte-cinema-cuoi-tuan-gia-uu-dai-chi-105000d-8136
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/hoi-u22-mua-ve-lotte-cinema-tren-momo-gia-cuc-re-7546
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/momo-cinema-tang-ban-1-ve-xem-phim-mien-phi-tai-2434
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/giam-truc-tiep-10-khi-mua-ve-xem-phim-galaxy-cinema-tren-vi-momo-1220
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/mua-ve-xem-phim-nhan-combo-ngot-ngao-bao-tron-3954
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/uu-dai-soc-giam-nong-10000d-khi-dat-ve-co-gai-tu-3435
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/thu-tai-tich-tem-doi-qua-rinh-ngan-voucher-phim-7367
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/nhap-ma-batman-giam-gia-truc-tiep-10k-ve-danh-cho-2458
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/xem-phim-hay-loi-ngay-deal-xin-giam-10000d-khi-4779
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/thu-3-thu-4-dong-gia-65k-ve-2d-tai-bhd-star-2230
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/uu-dai-cgv-phu-phe-chi-tu-59k-cho-tin-do-me-phim-4271
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/thu-tai-tich-bap-doi-qua-rinh-ngan-voucher-phim-7218
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/lac-cay-dieu-uoc-ruoc-trieu-qua-ngon-game-hot-doc-5906
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/dong-gia-79000d-ve-bhd-star-vao-cuoi-tuan-gia-han-den-10-08-2019-819
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/uu-dai-10000d-ngot-lim-dat-ve-dan-choi-khong-so-3073
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/deal-le-lon-mua-ve-xem-phim-rinh-qua-du-lich-4153
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/hot-dac-quyen-san-ve-xem-phim-cho-hoi-sinh-vien-8428
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/doc-quyen-tu-vi-tra-sau-cuoi-tuan-xem-phim-cgv-2898
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/xem-bhd-trong-tuan-chi-75k-ve-2d-6671
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/khao-ban-moi-toi-20k-khi-ra-rap-xem-bom-tan-lat-5888
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/uu-dai-doc-quyen-giam-nong-10000d-mua-ve-xem-phim-2646
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/xem-phim-chi-tu-9000d-deal-nay-chill-phet-4802
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/xem-bom-tan-gia-phan-chan-chi-1000dong-ve-galaxy-cinema-738
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/100-trung-thuong-khi-choi-vong-quay-conan-tren-6268
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/dong-gia-ve-online-cgv-chi-9000d-ve-khi-thanh-toan-qua-momo-364
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/tin-tuc-su-kien/mua-ve-tai-rap-cgv-thanh-toan-bang-momo-sieu-nhanh-chi-1-cham-man-hinh-430
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/tin-tuc-su-kien/dat-ve-lotte-cinema-truc-tiep-tren-momo-ngay-1379
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/dat-ve-phim-chill-he-dinh-nhan-ngay-kem-cornetto-4374
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/lan-dau-dung-momo-nhan-ngay-voucher-cgv-giam-99k-2863
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/xem-beta-cinemas-trong-tuan-chi-58k-ve-2d-6669
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/flash-sale-phim-hay-bat-tan-rap-bhd-star-giam-ran-ran-50-1223
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/mua-ve-lotte-cinema-1000d-bang-vi-momo-gia-han-den-10-9-2019-698
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/dau-nam-san-ve-cgv-trung-qua-dam-ve-0-dong-cung-momo-447
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/me-rap-lotte-momo-giam-ngay-5k-chieu-dai-mot-phim-4263
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/cuoi-tuan-xem-phim-lotte-chi-75k-ve-khi-dat-truc-tiep-tren-vi-momo-1424
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/cuoi-tuan-xem-phim-gia-sieu-hoi-chi-79k-ve-lotte-2966
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/tin-tuc-su-kien/mua-ve-galaxy-cinema-tren-ung-dung-momo-moi-luc-moi-noi-43
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/vi-tra-sau-tung-uu-dai-cuc-hot-xem-phim-cgv-cuoi-3003
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/xem-chiem-doat-review-lien-hoan-tien-10000d-ngay-5172
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/tung-hoanh-rap-lotte-cinema-ca-tuan-chi-79000d-ve-3599
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/xem-phim-rap-bhd-star-giam-lien-10-khi-mua-ve-tren-vi-momo-1221
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/fan-xi-ne-thi-cho-bo-qua-uu-dai-cuc-me-giam-4139
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/thong-bao/level-up-trai-nghiem-xem-phim-momo-dua-ban-di-vi-6175
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/tet-xem-phim-mai-review-hay-ruoc-ngay-hoan-tien-5573
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/rinh-2-the-qua-gojek-giam-khung-nua-gia-khi-dat-2599
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/uu-dai-pepsi-mien-phi-va-giam-gia-bap-tai-rap-7422
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/bay-cung-spiderman-san-goi-xem-phim-1-nam-2245
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/lan-dau-xai-vi-tang-ban-ve-lotte-cinema-chi-9k-2593
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/mua-ve-lotte-cinema-san-goi-xem-phim-ca-nam-mien-5973
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/wonderdeal-thanh-toan-baemin-nhan-qua-giam-30-my-combo-cgv-1554
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/he-nong-bong-gia-chan-dong-mung-mua-phim-bom-tan-chi-79000d-ve-bhd-star-cho-cac-mot-phim-vao-cuoi-tuan-729
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/nap-dien-thoai-100000d-am-lien-ve-phim-70000d-cuc-2500
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/chon-momo-thanh-toan-tai-web-app-cgv-39000-dong-ve-336
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/nhap-trungthu-du-me-dau-xanh-hay-thap-cam-deu-co-7989
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/xem-galaxy-cinema-cuoi-tuan-chi-81k-ve-2d-6673
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/cuoi-tuan-xem-phim-tha-ga-chi-79000d-ve-542
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/tin-tuc-su-kien/thu-6-xine-qua-tang-cuc-me-100-trung-qua-vao-moi-thu-6-hang-tuan-1486
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/nhap-hoi-u22-lotte-cinema-dong-gia-65000d-ve-phim-6646
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/hanh-trinh-san-dau-rinh-qua-moi-chang-thanh-toan-8258
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/nam-ngo-xem-sieu-pham-tet-san-li-xi-den-99999-xu-8495
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/xem-beta-cinemas-cuoi-tuan-chi-62k-ve-2d-6670
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/giam-5k-mua-ve-xem-phim-thoa-suc-kham-pha-vu-tru-4511
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/momo-tri-an-tang-ban-ve-phim-0d-cho-nua-nam-dong-4504
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/2-tuan-phu-phe-qua-tang-khi-dat-ve-cgv-hoac-thanh-toan-baemin-qua-momo-1368
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/xem-phim-gia-xua-chi-1-dong-ve-tai-bhd-star-723
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/ve-xem-phim-2d-dong-gia-tu-59000d-tren-momo-8555
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/khai-truong-galaxy-sala-ra-mat-imax-laser-tai-5330
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/3-buoc-lien-ket-de-dang-nhan-ngay-ve-xem-phim-tai-galaxy-cinema-495
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/uu-dai-doc-quyen-rap-lotte-west-lake-quet-ma-nhan-4758
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/mua-ve-xem-phim-moi-luc-moi-noi-nhan-nhieu-khuyen-mai-49
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/tin-tuc-su-kien/thong-bao-cgv-ngung-gui-sms-xac-nhan-dat-ve-tu-1-8-2020-1333
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/ve-cgv-9000d-tai-xuat-loi-hai-hon-nhap-ma-cgvmomo-nhan-combo-cuc-chat-1350
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/giam-10k-mua-ve-xem-phim-thoa-suc-kham-pha-vu-tru-5645
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/uu-dai-pepsi-mien-phi-va-giam-gia-bap-tai-rap-7421
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/ban-moi-toi-nha-momo-khao-toi-ben-tang-the-qua-5849
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/nhap-ma-thieunhi-giam-ngay-10000d-mua-ve-xem-phim-4400
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/tin-tuc-su-kien/cuoi-ngua-xem-deal-xem-phim-tet-duoc-hoan-den-8352
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/giam-15k-mua-ve-xem-phim-thoa-suc-kham-pha-vu-tru-5561
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/danh-rieng-cho-khach-hang-co-internet-banking-mua-ve-cgv-39000d-ve-x3-344
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/giam-100000d-mua-ve-phim-tet-tai-galaxycinevn-448
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/mua-ve-xem-phim-rinh-combo-the-qua-data-cuc-hap-3910
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/giam-5k-mua-ve-xem-phim-thoa-suc-kham-pha-vu-tru-4935
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/rinh-qua-doraemon-cuc-xin-khi-dat-ve-xem-phim-2804
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/mua-ve-xem-phim-quy-doi-tang-qua-giam-15k-cho-lan-8472
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/xem-phim-tha-ga-tai-lotte-cinema-voi-gia-ve-chi-tu-1000d-635
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/thu-tai-tich-bap-doi-qua-rinh-ngan-voucher-phim-7115
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/nhap-ma-upsize-doi-vi-bap-nang-size-nuoc-cuc-hoi-7686
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/bom-tan-venom-doi-mat-tu-thu-do-bo-rap-phim-nhap-2196
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/beta-cinema-dong-gia-40000d-ve-cho-u22-khi-thanh-6632
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/uu-dai-hoi-tai-rap-lotte-cinema-moi-momo-moi-ban-7285
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/hot-dac-quyen-san-ve-xem-phim-cho-hoi-sinh-vien-8429
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/nap-dien-thoai-am-ve-xem-phim-mai-sieu-hot-mua-5551
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/choi-lac-xi-gom-ve-phim-tet-rap-nao-cung-co-1602
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/tin-tuc-su-kien/momo-tro-thanh-doi-tac-thanh-toan-cua-cgv-314
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/nhap-ma-momozi-giam-lien-10k-thich-phim-gi-dat-5160
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/momo-x-cocacola-sap-den-tet-roi-boi-hoi-don-deal-cgv-sieu-xin-1574
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/thong-bao/xem-galaxy-cinema-ca-tuan-momo-khao-ve-81k-5171
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/me-xem-phim-loi-sieu-uu-dai-quet-qr-nhan-qua-20k-5838
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/kham-pha-vu-tru-dien-anh-chi-79000d-tai-cgv-qua-4787
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/duy-nhat-tai-bhd-ruoc-kho-bau-ve-gia-re-giam-10-5601
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/momo-x-cgv-nhap-ma-cgvmm-rinh-goi-qua-data-tri-5319
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/giam-5k-mua-ve-xem-phim-thoa-suc-kham-pha-vu-tru-5560
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/bong-bong-bang-bang-thu-tai-nuoi-ca-bong-trung-6724
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/fan-xine-du-hanh-vu-tru-dien-anh-chi-69000d-tai-4788
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/mua-ve-lotte-cinema-san-bap-nuoc-mien-phi-tren-6461
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/xem-lotte-cinema-ca-tuan-chi-89k-ve-2d-6678
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/giam-10k-mua-ve-xem-phim-thoa-suc-kham-pha-vu-tru-6180
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/tin-chan-dong-flash-sale-giam-50-ve-phim-cgv-chi-co-tai-vi-momo-1224
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/xem-bhd-cuoi-tuan-chi-95k-ve-2d-6672
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/uu-dai-hoi-tai-rap-galaxy-parc-mall-moi-momo-moi-6626
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/uu-dai-xuyen-le-xem-lotte-cinema-dong-gia-chi-110k-8316
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/sale-khung-den-50-do-bo-loat-rap-phim-khi-mua-ve-xem-phim-tren-vi-momo-1230
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/dat-ve-xem-phim-tren-momo-nhan-bap-nuoc-mien-phi-cuoi-tuan-1417
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/tin-tuc-su-kien/tich-huy-hieu-rinh-mo-hinh-conan-sieu-xin-va-loat-7675
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/nhap-ma-spiderman-giam-gia-sieu-bom-tan-nguoi-2242
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/xem-lotte-cinema-trong-tuan-gia-uu-dai-chi-99000d-8233
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/xem-galaxy-cinema-cuoi-tuan-chi-86k-ve-2d-8082
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/dong-gia-70k-ve-2d-cuoi-tuan-tai-bhd-star-2229
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/hot-tu-nay-ban-da-co-the-mua-ve-u22-rap-galaxy-8399
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/cuoi-tuan-dat-ve-cgv-truc-tiep-tren-momo-nhan-the-qua-giam-30-my-combo-1529
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/deal-xem-phim-le-cuc-hoi-nhap-ma-quockhanh-va-7851
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/nhap-ma-happyday-moi-thu-3-4-5-sieu-hoi-hoan-tien-8615
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/cay-phim-san-huy-hieu-tich-luy-chi-tieu-de-nhan-6321
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/tin-cuc-vui-u22-co-the-mua-ve-bhd-cuc-hoi-ngay-7461
+Cinema_News,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/san-sap-sai-gon-rinh-loat-qua-momo-dip-dai-le-tai-8679
+Cinema_Blog,Blog,Static,https://www.momo.vn/blog/huong-dan-dang-ky-tai-khoan-fpt-play-c115dt1372
+Cinema_Blog,Blog,Static,https://www.momo.vn/blog/huong-dan-cach-dang-ky-tai-khoan-netflix-c115dt1096
 Vay Nhanh,Home Page,Static,https://www.momo.vn/vay-nhanh
 Vay Nhanh,Page,Dynamic,https://www.momo.vn/vay-nhanh/*
 Vay Nhanh,Landing Page,Static,https://www.momo.vn/vay-nhanh/ho-kinh-doanh
@@ -432,6 +431,7 @@ Tiktok,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/uu-dai-nap-xu-tiktok-g
 Tiktok,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/uu-dai-nap-xu-tiktok-hoan-tien-14000d-trong-ngay-7178
 Tiktok,Guide,Static,https://www.momo.vn/huong-dan/huong-dan-nap-xu-tiktok-qua-momo
 Game,Landing Page,Static,https://www.momo.vn/nap-the-game
+Game,Page,Dynamic,https://www.momo.vn/nap-the-game/*
 Game,Landing Page,Static,https://www.momo.vn/napthengayvn
 Game,Landing Page,Static,https://www.momo.vn/bonbon
 Game,Blog,Static,https://www.momo.vn/blog/game
@@ -2316,7 +2316,7 @@ Game,Landing Page,Static,https://www.momo.vn/bonbon
 Campaign,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/giat-li-xi-quanh-nam-san-bao-li-xi-nhanh-muot-co-8766
 Campaign,Landing Page,Static,https://www.momo.vn/tro-thu-tai-chinh
 Campaign,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/giat-li-xi-quanh-nam-mo-man-voi-su-kien-mung-dai-8600
-Cinema,Blog,Static,https://www.momo.vn/blog/cac-goi-tai-khoan-netflix-c115dt1097
+Cinema_Blog,Blog,Static,https://www.momo.vn/blog/cac-goi-tai-khoan-netflix-c115dt1097
 New User,Landing Page,Static,https://www.momo.vn/xac-thuc-nfc
 New User,Landing Page,Static,https://www.momo.vn/sinh-trac-hoc
 New User,Landing Page,Static,https://www.momo.vn/lienkettaikhoan
@@ -2361,8 +2361,8 @@ Vé số,Blog,Static,https://www.momo.vn/blog/huong-dan-cach-choi-max-3d-vietlot
 Vé số,Blog,Static,https://www.momo.vn/blog/bingo-18-la-gi-huong-dan-cach-choi-bingo-18-de-hieu-c115dt1866
 Vé số,Blog,Static,https://www.momo.vn/blog/cach-choi-vietlott-chinh-thong-nhan-thuong-an-toan-c115dt1773
 Vé số,Blog,Static,https://www.momo.vn/blog/huong-dan-cach-choi-vietlott-6-45-don-gian-de-hieu-c115dt1865
-Trust,News,Static,https://www.momo.vn/tin-tuc/thong-bao/lien-ket-thanh-toan-momo-quan-ly-moi-dich-vu-dang-8834
-Trust,News,Static,https://www.momo.vn/tin-tuc/thong-bao/momo-nang-cap-bao-mat-theo-thong-tu-77-2025-tt-8510
+Tin Tức,News,Static,https://www.momo.vn/tin-tuc/thong-bao/lien-ket-thanh-toan-momo-quan-ly-moi-dich-vu-dang-8834
+Tin Tức,News,Static,https://www.momo.vn/tin-tuc/thong-bao/momo-nang-cap-bao-mat-theo-thong-tu-77-2025-tt-8510
 Trust,Landing Page,Static,https://www.momo.vn/an-toan-bao-mat
 Trung Tâm Tài Chính,Blog,Static,https://www.momo.vn/blog/paypal-la-gi-huong-dan-su-dung-paypal-cuc-don-gian-c116dt1335
 Trung Tâm Tài Chính,Blog,Static,https://www.momo.vn/blog/doi-tien-do-sang-tien-viet-o-dau-dia-diem-doi-ngoai-te-uy-tin-c116dt1203
@@ -2701,14 +2701,16 @@ Hỏi đáp,Landing Page,Static,https://www.momo.vn/hoi-dap/lam-the-nao-de-biet-
 Hỏi đáp,Landing Page,Static,https://www.momo.vn/hoi-dap/vi-sao-momo-khong-yeu-cau-xac-thuc-bang-ma-otp-khi-nap-tien-tu-ngan-hang-lien-ket
 Tiện Ích Giao Thông,Mini Web,Dynamic,https://www.momo.vn/tien-ich-giao-thong
 Tiện Ích Giao Thông,Blog,Dynamic,https://www.momo.vn/tien-ich-giao-thong/blog/*
+Nộp Phạt CSGT,Landing Page,Dynamic,https://www.momo.vn/tien-ich-giao-thong/nop-phat-csgt*
 Trạm sạc,Mini Web,Dynamic,https://www.momo.vn/tien-ich-giao-thong/tram-sac*
 Cây xăng,Mini Web,Dynamic,https://www.momo.vn/tien-ich-giao-thong/cay-xang*
 Giá xăng,Mini Web,Dynamic,https://www.momo.vn/tien-ich-giao-thong/gia-xang*
 Tiệm Vàng Online,Landing Page,Static,https://www.momo.vn/tiem-vang-online
 Quỹ,Mini Web,Dynamic,https://www.momo.vn/quy-nhom*
 Campaign,Mini Web,Static,https://www.momo.vn/mega-summer-2026
-Dịch Vụ Liên Kết,Mini Web,Static,https://www.momo.vn/vtvgo
-Tìm Kiếm,Mini Web,Dynamic,https://www.momo.vn/tim-kiem
+Dịch vụ liên kết,Mini Web,Static,https://www.momo.vn/vtvgo
+Tìm Kiếm,Mini Web,Static,https://www.momo.vn/tim-kiem
+Tìm Kiếm,Mini Web,Dynamic,https://www.momo.vn/tim-kiem/*
 Nước,Landing Page,Static,https://www.momo.vn/nuoc
 Data,Landing Page,Static,https://www.momo.vn/vien-thong
 Ví Trả Sau,Landing Page,Static,https://www.momo.vn/blog/vi-tra-sau-momo-thanh-toan-duoc-nhung-dich-vu-gi-c116dt981
@@ -2719,15 +2721,15 @@ Ví Trả Sau,Landing Page,Static,https://www.momo.vn/blog/huong-dan-cach-thanh-
 Quản Lý Chi Tiêu,Landing Page,Static,https://www.momo.vn/blog/app-kiem-tien-online-c116dt1125
 Ví Trả Sau,Landing Page,Static,https://www.momo.vn/blog/cach-nang-han-muc-vi-tra-sau-momo-c116dt1868
 Vay Nhanh,Landing Page,Static,https://www.momo.vn/blog/lay-cmnd-nguoi-khac-vay-tien-duoc-khong-bi-nguoi-khac-lay-cmnd-vay-tien-phai-lam-gi-c116dt1089
-Cinema,Landing Page,Static,https://www.momo.vn/blog/huong-dan-cach-huy-dang-ky-netflix-c115dt1100
-Vay nhanh,Landing Page,Static,https://www.momo.vn/blog/tre-han-thanh-toan-khoan-vay-co-gay-hau-qua-gi-khong-c116dt1059
-Vay nhanh,Landing Page,Static,https://www.momo.vn/blog/vay-nhanh-h5-la-gi-nhung-luu-y-can-trong-khi-vay-nhanh-h5-c116dt1932
-Vay nhanh,Landing Page,Static,https://www.momo.vn/blog/huong-dan-kiem-tra-khoan-vay-tren-ung-dung-momo-c116dt1348
-Phạt nguội,Landing Page,Static,https://www.momo.vn/tin-tuc/khuyen-mai/mien-phi-canh-bao-phat-nguoi-tu-dong-khi-chuyen-8022
+Cinema_Landing Page,Landing Page,Static,https://www.momo.vn/blog/huong-dan-cach-huy-dang-ky-netflix-c115dt1100
+Vay Nhanh,Landing Page,Static,https://www.momo.vn/blog/tre-han-thanh-toan-khoan-vay-co-gay-hau-qua-gi-khong-c116dt1059
+Vay Nhanh,Landing Page,Static,https://www.momo.vn/blog/vay-nhanh-h5-la-gi-nhung-luu-y-can-trong-khi-vay-nhanh-h5-c116dt1932
+Vay Nhanh,Landing Page,Static,https://www.momo.vn/blog/huong-dan-kiem-tra-khoan-vay-tren-ung-dung-momo-c116dt1348
+Phạt Nguội,Landing Page,Static,https://www.momo.vn/tin-tuc/khuyen-mai/mien-phi-canh-bao-phat-nguoi-tu-dong-khi-chuyen-8022
 OTA,Landing Page,Static,https://www.momo.vn/khach-san-theo-gio
-Vay nhanh,Landing Page,Static,https://www.momo.vn/blog/tat-toan-khoan-vay-la-gi-thu-tuc-de-tat-toan-khoan-vay-c116dt1763
-Vay nhanh,Landing Page,Static,https://www.momo.vn/blog/vay-tieu-dung-la-gi-va-cach-tinh-lai-suat-vay-tieu-dung-c116dt1760
-Vay nhanh,Landing Page,Static,https://www.momo.vn/hoi-dap/toi-co-the-dang-ky-vay-them-nhieu-khoan-vay-nhanh-fastmoney-duoc-khong
+Vay Nhanh,Landing Page,Static,https://www.momo.vn/blog/tat-toan-khoan-vay-la-gi-thu-tuc-de-tat-toan-khoan-vay-c116dt1763
+Vay Nhanh,Landing Page,Static,https://www.momo.vn/blog/vay-tieu-dung-la-gi-va-cach-tinh-lai-suat-vay-tieu-dung-c116dt1760
+Vay Nhanh,Landing Page,Static,https://www.momo.vn/hoi-dap/toi-co-the-dang-ky-vay-them-nhieu-khoan-vay-nhanh-fastmoney-duoc-khong
 Nước,Landing Page,Static,https://www.momo.vn/blog/cach-lay-ma-khach-hang-dong-tien-nuoc-cuc-nhanh-c193dt1209
 Ví Trả Sau,Landing Page,Static,https://www.momo.vn/blog/vi-tra-sau-momo-co-lai-suat-khong-c116dt1343
 Campaign,Landing Page,Static,https://www.momo.vn/tin-tuc/khuyen-mai/sinh-nhat-tung-bung-ban-moi-chot-don-san-tien-8952
@@ -2736,11 +2738,11 @@ Merchant,Landing Page,Static,https://www.momo.vn/qr-da-nang
 Merchant,Landing Page,Static,https://www.momo.vn/diem-thanh-toan
 Tin Tức,Landing Page,Static,https://www.momo.vn/tin-tuc/thong-bao/huong-dan-huy-tai-khoan-momo-cua-chu-cu-8912
 Khuyến mãi,Landing Page,Static,https://www.momo.vn/tin-tuc/thong-bao/ban-muon-gop-y-ve-san-pham-cho-momo-dung-tinh-6729
-Cinema,Landing Page,Static,https://www.momo.vn/blog/mua-goi-vieon-c115dt1265
-Trust,Landing Page,Static,https://www.momo.vn/tin-tuc/thong-bao/momo-co-chuc-nang-chan-giao-dich-bat-thuong-bao-8059
+Cinema_Landing Page,Landing Page,Static,https://www.momo.vn/blog/mua-goi-vieon-c115dt1265
+Tin Tức,News,Static,https://www.momo.vn/tin-tuc/thong-bao/momo-co-chuc-nang-chan-giao-dich-bat-thuong-bao-8059
 Tin Tức,Landing Page,Static,https://www.momo.vn/tin-tuc/tin-tuc-su-kien/huong-dan-tich-diem-thanh-vien-nestle-tren-momo-7523
 Tin Tức,Landing Page,Static,https://www.momo.vn/tin-tuc/thong-bao/nhung-dac-quyen-khi-doi-qua-tren-momo-xu-6804
-Trung tâm tài chính,Landing Page,Static,https://www.momo.vn/blog/dau-tu-crypto-la-gi-cach-dau-tu-tien-ao-an-toan-cho-nguoi-moi-bat-dau-c181dt1637
+Trung Tâm Tài Chính,Landing Page,Static,https://www.momo.vn/blog/dau-tu-crypto-la-gi-cach-dau-tu-tien-ao-an-toan-cho-nguoi-moi-bat-dau-c181dt1637
 Chứng Khoán,Landing Page,Static,https://www.momo.vn/blog/goi-y-5-app-chung-khoan-tot-nhat-viet-nam-c116dt1366
 Game,Landing Page,Static,https://www.momo.vn/blog/cach-dat-ten-lien-quan-mobile-dep-c115dt941
 Blog,Landing Page,Static,https://www.momo.vn/blog/huong-dan-chuyen-tien-nhan-tien-tu-dai-loan-ve-viet-nam-c116dt1252
@@ -2748,7 +2750,7 @@ Trust,Landing Page,Static,https://www.momo.vn/ve-chung-toi
 OTA,Landing Page,Static,https://www.momo.vn/tin-tuc/khuyen-mai/du-lich-the-gioi-ket-noi-lai-voi-chinh-minh-8971
 Blog,Landing Page,Static,https://www.momo.vn/blog/than-so-hoc-so-11-c117dt190
 Nạp thẻ Game,Landing Page,Static,https://www.momo.vn/tin-tuc/tin-tuc-su-kien/he-bat-mood-game-nap-the-giam-ngay-20-tren-8861
-Trung Tâm tài chính,Landing Page,Static,https://www.momo.vn/tai-chinh-4-khong
+Trung Tâm Tài Chính,Landing Page,Static,https://www.momo.vn/tai-chinh-4-khong
 Điện,Landing Page,Static,https://www.momo.vn/tin-tuc/khuyen-mai/giam-100k-khi-thanh-toan-dien-voi-momo-ap-dung-8705
 Application Store,Landing Page,Static,https://www.momo.vn/blog/tao-tai-khoan-apple-id-dang-ky-icloud-mien-phi-c115dt246
 Khuyến mãi,Landing Page,Static,https://www.momo.vn/tin-tuc/khuyen-mai/ha-nhiet-mua-nong-voi-ma-tietkiem-khi-thanh-toan-8934
@@ -2756,12 +2758,12 @@ New User,Landing Page,Static,https://www.momo.vn/vi-momo-gia-dinh
 Application Store,Landing Page,Static,https://www.momo.vn/nhap-ma-playstore
 Guide,Landing Page,Static,https://www.momo.vn/huong-dan/huong-dan-lien-ket-vi-momo-voi-tai-khoan-ngan-hang-techcombank
 Dịch vụ liên kết,Landing Page,Static,https://www.momo.vn/giai-tri-online
-Cinema,Landing Page,Static,https://www.momo.vn/blog/huong-dan-cach-chia-se-tai-khoan-netflix-c115dt1098
+Cinema_Landing Page,Landing Page,Static,https://www.momo.vn/blog/huong-dan-cach-chia-se-tai-khoan-netflix-c115dt1098
 Application Store,Landing Page,Static,https://www.momo.vn/apple-music
 Tin Tức,Landing Page,Static,https://www.momo.vn/tin-tuc/thong-cao-bao-chi
 Guide,Landing Page,Static,https://www.momo.vn/huong-dan/huong-dan-tim-diem-nap-rut-tien-cua-vi-momo
 Guide,Landing Page,Static,https://www.momo.vn/huong-dan/huong-dan-mua-voucher-tinder-tren-vi-momo
-Trung tâm tài chính,Landing Page,Static,https://www.momo.vn/blog/top-3-cach-chuyen-tien-ra-nuoc-ngoai-don-gian-nhat-c116dt1151
+Trung Tâm Tài Chính,Landing Page,Static,https://www.momo.vn/blog/top-3-cach-chuyen-tien-ra-nuoc-ngoai-don-gian-nhat-c116dt1151
 Mở tài khoản ngân hàng,Landing Page,Static,https://www.momo.vn/tin-tuc/khuyen-mai/nhap-ma-momobidv-nhan-sieu-qua-tha-ga-4150
 Dịch vụ liên kết,Landing Page,Static,https://www.momo.vn/blog/cach-dang-ky-spotify-premium-sinh-vien-c115dt1270
 Merchant,Landing Page,Static,https://www.momo.vn/cong-tac-vien
@@ -2812,11 +2814,11 @@ Trust,Landing Page,Static,https://www.momo.vn/blog/mao-danh-nhan-vien-momo-qua-c
 New User,Landing Page,Static,https://www.momo.vn/xac-thuc-tai-khoan
 Guide,Landing Page,Static,https://www.momo.vn/huong-dan/huong-dan-nap-game-lien-minh-toc-chien
 Trust,Landing Page,Static,https://www.momo.vn/blog/bi-lay-cap-thong-tin-de-vay-tien-co-phai-tra-no-c116dt1358
-Cinema,Landing Page,Static,https://www.momo.vn/blog/huong-dan-cach-huy-goi-vieon-c115dt1267
-Trust,Landing Page,Static,https://www.momo.vn/tin-tuc/khuyen-mai/nhan-canh-bao-phat-hien-nguy-co-lua-dao-khi-8568
+Cinema_Landing Page,Landing Page,Static,https://www.momo.vn/blog/huong-dan-cach-huy-goi-vieon-c115dt1267
+Khuyến mãi,Promotion,Static,https://www.momo.vn/tin-tuc/khuyen-mai/nhan-canh-bao-phat-hien-nguy-co-lua-dao-khi-8568
 Campaign,Landing Page,Static,https://www.momo.vn/tin-tuc/khuyen-mai/huong-dan-chi-tiet-cach-doi-xu-thanh-toan-truc-8381
-Cinema,Landing Page,Static,https://www.momo.vn/blog/huong-dan-cach-huy-goi-galaxy-play-c115dt1354
-Trung tâm tài chính,Landing Page,Static,https://www.momo.vn/blog/3-cach-chuyen-tien-nhan-tien-tu-nhat-ve-viet-nam-c116dt1205
+Cinema_Landing Page,Landing Page,Static,https://www.momo.vn/blog/huong-dan-cach-huy-goi-galaxy-play-c115dt1354
+Trung Tâm Tài Chính,Landing Page,Static,https://www.momo.vn/blog/3-cach-chuyen-tien-nhan-tien-tu-nhat-ve-viet-nam-c116dt1205
 Merchant,Landing Page,Static,https://www.momo.vn/tin-tuc/khuyen-mai/mua-sam-tai-sony-store-vincom-dong-khoi-nhap-ma-8962
 Ví Trả Sau,Landing Page,Static,https://www.momo.vn/blog/nhung-dieu-can-biet-khi-mua-tra-gop-dien-thoai-c116dt1408
 Merchant,Landing Page,Static,https://www.momo.vn/doi-tac/mua-sam
@@ -2863,7 +2865,7 @@ Tiết Kiệm Online,Landing Page,Static,https://www.momo.vn/tin-tuc/thong-bao/d
 Tiện Ích Giao Thông,Landing Page,Static,https://www.momo.vn/tin-tuc/khuyen-mai/tai-momo-nhap-momobus-mien-phi-5-luot-di-xe-buyt-8984
 Guide,Landing Page,Static,https://www.momo.vn/huong-dan/huong-dan-quet-nfc-tren-cccd
 Guide,Landing Page,Static,https://www.momo.vn/huong-dan/huong-dan-chung-ctgr69
-Cinema,Landing Page,Static,https://www.momo.vn/blog/dang-ky-tai-khoan-galaxy-play-c115dt1356
+Cinema_Landing Page,Landing Page,Static,https://www.momo.vn/blog/dang-ky-tai-khoan-galaxy-play-c115dt1356
 Bảo Hiểm Xã Hội,Landing Page,Static,https://www.momo.vn/bao-hiem-xa-hoi
 Quản Lý Chi Tiêu,Landing Page,Static,https://www.momo.vn/blog/ung-dung-quan-ly-tai-chinh-ca-nhan-pho-bien-nhat-c103dt2282
 OTA,Landing Page,Static,https://www.momo.vn/blog/huong-dan-check-in-ve-may-bay-online-c101dt1411
@@ -2889,10 +2891,10 @@ Tiết Kiệm Online,Landing Page,Static,https://www.momo.vn/blog/gui-tiet-kiem-
 Mở Thẻ Tín Dụng,Landing Page,Static,https://www.momo.vn/blog/cach-kiem-tra-sao-ke-the-tin-dung-nhanh-nhat-c116dt1364
 Guide,Landing Page,Static,https://www.momo.vn/huong-dan/huong-dan-nhan-tien-cho-nguoi-chua-co-vi-momo
 Guide,Landing Page,Static,https://www.momo.vn/huong-dan/huong-dan-nap-quan-huy-sieu-toc-tren-google-play-app-store-qua-vi-momo
-Cinema,Landing Page,Static,https://www.momo.vn/blog/huong-dan-cach-dang-ky-goi-k+-fpt-play-c115dt1373
+Cinema_Landing Page,Landing Page,Static,https://www.momo.vn/blog/huong-dan-cach-dang-ky-goi-k+-fpt-play-c115dt1373
 Điện,Landing Page,Static,https://www.momo.vn/tin-tuc/khuyen-mai/tien-dien-nuoc-internet-thang-nay-nhe-hon-khi-8867
 Bảo Hiểm Ô Tô,Landing Page,Static,https://www.momo.vn/blog/bao-hiem-bat-buoc-o-to-7-cho-c116dt1846
-Cinema,Landing Page,Static,https://www.momo.vn/blog/cac-ung-dung-xem-phim-bom-tan-chat-luong-cao-ngay-tai-nha-c115dt113
+Cinema_Landing Page,Landing Page,Static,https://www.momo.vn/blog/cac-ung-dung-xem-phim-bom-tan-chat-luong-cao-ngay-tai-nha-c115dt113
 Ví Trả Sau,Landing Page,Static,https://www.momo.vn/blog/18-tuoi-mua-tra-gop-duoc-khong-nhung-dieu-can-luu-y-c116dt2580
 Trust,Landing Page,Static,https://www.momo.vn/blog/momo-co-de-bi-hack-khong-va-su-that-c198dt2341
 Quản Lý Chi Tiêu,Landing Page,Static,https://www.momo.vn/blog/huong-dan-cach-lap-bang-chi-tieu-ca-nhan-trong-1-thang-c181dt1614
@@ -2925,7 +2927,7 @@ Campaign,Landing Page,Static,https://www.momo.vn/tin-tuc/khuyen-mai/sinh-nhat-tu
 Chứng Khoán,Landing Page,Static,https://www.momo.vn/blog/cach-mo-tai-khoan-chung-khoan-online-c199dt1440
 Bảo Hiểm,Landing Page,Static,https://www.momo.vn/bao-hiem-du-lich-quoc-te
 Ví Trả Sau,Landing Page,Static,https://www.momo.vn/blog/mua-truoc-tra-sau-c116dt1126
-Cinema,Landing Page,Static,https://www.momo.vn/blog/cach-dang-ky-tai-khoan-vieon-c115dt1266
+Cinema_Landing Page,Landing Page,Static,https://www.momo.vn/blog/cach-dang-ky-tai-khoan-vieon-c115dt1266
 Guide,Landing Page,Static,https://www.momo.vn/huong-dan/huong-dan-mua-goi-microsoft-tren-vi-momo
 Cross Border,Landing Page,Static,https://www.momo.vn/tin-tuc/khuyen-mai/thanh-toan-quoc-te-qua-momo-tai-mang-luoi-napas-8596
 Billpay,Landing Page,Static,https://www.momo.vn/blog/bi-kip-kiem-tra-ma-khach-hang-vnpt-nhanh-gon-c193dt1219
@@ -2953,7 +2955,7 @@ P2P,Landing Page,Static,https://www.momo.vn/tin-tuc/thong-bao/cach-nhan-tien-tu-
 Guide,Landing Page,Static,https://www.momo.vn/huong-dan/lien-ket-vi-momo-bidv
 Bảo Hiểm,Landing Page,Static,https://www.momo.vn/blog/mua-bao-hiem-nhan-tho-15-nam-rut-duoc-bao-nhieu-c116dt1238
 Guide,Landing Page,Static,https://www.momo.vn/huong-dan/cach-thanh-toan-spotify-bang-vi-momo
-Trung tâm tài chính,Landing Page,Static,https://www.momo.vn/blog/cach-dau-tu-vang-hieu-qua-cho-nguoi-moi-bat-dau-c181dt1636
+Trung Tâm Tài Chính,Landing Page,Static,https://www.momo.vn/blog/cach-dau-tu-vang-hieu-qua-cho-nguoi-moi-bat-dau-c181dt1636
 OTA,Landing Page,Static,https://www.momo.vn/blog/top-khach-san-tinh-yeu-nha-trang-c101dt495
 Khuyến mãi,Landing Page,Static,https://www.momo.vn/tin-tuc/thong-bao/huong-dan-gui-yeu-cau-hoan-tien-cho-don-hang-app-8890
 Dịch vụ liên kết,Landing Page,Static,https://www.momo.vn/tin-tuc/thong-bao/dang-ky-mo-quan-tren-green-sm-food-thao-tac-nhanh-8908
@@ -2980,13 +2982,13 @@ Campaign,Landing Page,Static,https://www.momo.vn/megaday
 Blog,Landing Page,Static,https://www.momo.vn/blog/tu-vi-tuoi-quy-dau-1993-nam-mang-nam-2025-at-ty-c117dt1881
 Tiết Kiệm Online,Landing Page,Static,https://www.momo.vn/tin-tuc/khuyen-mai/tiet-kiem-den-20k-khi-nang-cap-youtube-premium-de-8408
 Cross Border,Landing Page,Static,https://www.momo.vn/tin-tuc/khuyen-mai/vi-vu-quoc-te-cung-momo-alipay-quet-ma-thanh-toan-8778
-Campaign,Landing Page,Static,https://www.momo.vn/tin-tuc/khuyen-mai/lam-nhiem-vu-gioi-thieu-momo-nhan-50k-tien-mat-8456
-Khuyến mãi,Landing Page,Static,https://www.momo.vn/tin-tuc/khuyen-mai/mo-bat-2026-voi-3-ngay-vang-gioi-thieu-momo-nhan-8325
+New User,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/lam-nhiem-vu-gioi-thieu-momo-nhan-50k-tien-mat-8456
+New User,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/mo-bat-2026-voi-3-ngay-vang-gioi-thieu-momo-nhan-8325
 Bảo Hiểm,Landing Page,Static,https://www.momo.vn/blog/rut-tien-bao-hiem-nhan-tho-dung-han-duoc-bao-nhieu-quyen-loi-khi-dao-han-bao-hiem-nhan-tho-c116dt1236
 Game,Landing Page,Static,https://www.momo.vn/blog/fo4-cac-mua-the-dang-su-dung-nhat-trong-fifa-online-4-c115dt846
 Tiết Kiệm Online,Landing Page,Static,https://www.momo.vn/blog/tien-gui-tiet-kiem-la-gi-nhung-luu-y-quan-trong-khi-gui-tien-tiet-kiem-c181dt1631
 Quản Lý Chi Tiêu,Landing Page,Static,https://www.momo.vn/blog/so-sanh-nhung-app-quan-ly-tai-chinh-ca-nhan-tot-nhat-hien-nay-c181dt1620
-Student Hub,Landing Page,Static,https://www.momo.vn/phi-xet-tuyen
+Phí Xét Tuyển,Landing Page,Static,https://www.momo.vn/phi-xet-tuyen
 Blog,Landing Page,Static,https://www.momo.vn/blog/tu-vi-12-con-giap-c117dt1906
 Guide,Landing Page,Static,https://www.momo.vn/huong-dan/huong-dan-dang-ki-dich-vu-internet-banking-cua-ngan-hang-agribank
 Bảo Hiểm,Landing Page,Static,https://www.momo.vn/bao-hiem-tre-chuyen-bay
@@ -3034,7 +3036,7 @@ Blog,Landing Page,Static,https://www.momo.vn/blog/tu-vi-tuoi-binh-dan-1986-nam-m
 Game,Landing Page,Static,https://www.momo.vn/blog/cach-nap-the-gunny-mobi-cung-momo-c115dt943
 Ví Trả Sau,Landing Page,Static,https://www.momo.vn/blog/huong-dan-mua-tra-gop-tren-apple-store-truc-tuyen-nhanh-chong-c116dt1173
 P2P,Landing Page,Static,https://www.momo.vn/blog/thu-tuc-nhan-tien-quoc-te-tai-viet-nam-can-biet-c116dt1174
-Tnc,Landing Page,Static,https://www.momo.vn/dich-vu-tai-diem-giao-dich/gioi-thieu-cac-dich-vu
+TnC,Landing Page,Static,https://www.momo.vn/dich-vu-tai-diem-giao-dich/gioi-thieu-cac-dich-vu
 Guide,Landing Page,Static,https://www.momo.vn/huong-dan/huong-dan-nap-kim-cuong-game-mat-ma-gaia-cuc-nhanh-qua-momo
 P2P,Landing Page,Static,https://www.momo.vn/blog/3-cach-chuyen-tien-nhan-tien-tu-canada-ve-viet-nam-c116dt1251
 Game,Landing Page,Static,https://www.momo.vn/blog/cach-cai-game-genshin-impact-tren-pc-c115dt1486
@@ -3072,7 +3074,7 @@ Campaign,Landing Page,Static,https://www.momo.vn/dau-truong-tri-thuc
 Game,Landing Page,Static,https://www.momo.vn/blog/game-zenless-zone-zero-c115dt1445
 Điểm Tín Dụng,Landing Page,Static,https://www.momo.vn/blog/no-qua-han-bao-lau-thi-bi-khoi-kien-c116dt2695
 Trust,Landing Page,Static,https://www.momo.vn/blog/phat-hien-momo-bi-mat-tien-toi-phai-lam-sao-c198dt1274
-Tnc,Landing Page,Static,https://www.momo.vn/ung-dung-momo/dich-vu-tren-ung-dung-momo
+TnC,Landing Page,Static,https://www.momo.vn/ung-dung-momo/dich-vu-tren-ung-dung-momo
 Ví Trả Sau,Landing Page,Static,https://www.momo.vn/blog/lam-the-nao-de-mua-iphone-tra-gop-c116dt1145
 Bảo Hiểm,Landing Page,Static,https://www.momo.vn/bao-hiem-du-lich-toan-dien
 Tiết Kiệm Online,Landing Page,Static,https://www.momo.vn/blog/so-tiet-kiem-la-gi-cach-mo-so-tiet-kiem-online-nhanh-chong-c116dt1141
@@ -3084,7 +3086,7 @@ Blog,Landing Page,Static,https://www.momo.vn/blog/tu-vi-tuoi-giap-ty-1984-nam-ma
 Guide,Landing Page,Static,https://www.momo.vn/huong-dan/huong-dan-nap-lords-mobile-voi-momo
 Khuyến mãi,Landing Page,Static,https://www.momo.vn/tin-tuc/thong-bao/huong-dan-gui-yeu-cau-hoan-tien-cho-don-hang-8889
 Tiện Ích Giao Thông,Landing Page,Static,https://www.momo.vn/tin-tuc/khuyen-mai/mien-phi-ngay-1-lit-xang-khi-nhan-thich-muc-tra-8561
-Trust,Landing Page,Static,https://www.momo.vn/tin-tuc/thong-bao/momo-va-bo-cong-an-dong-hop-tac-day-lui-lua-dao-8893
+Tin Tức,News,Static,https://www.momo.vn/tin-tuc/thong-bao/momo-va-bo-cong-an-dong-hop-tac-day-lui-lua-dao-8893
 Merchant,Landing Page,Static,https://www.momo.vn/mini-app-kho-tien-ich
 P2P,Landing Page,Static,https://www.momo.vn/tin-tuc/thong-bao/chuyen-tien-momo-da-nhanh-con-muot-8837
 Chứng Khoán,Landing Page,Static,https://www.momo.vn/blog/san-upcom-la-gi-tong-quan-ve-san-giao-dich-upcom-c199dt1491
@@ -3127,7 +3129,7 @@ Blog,Landing Page,Static,https://www.momo.vn/blog/tu-vi-tuoi-mau-thin-1988-nu-ma
 Thanh Toán Thẻ Tín Dụng,Landing Page,Static,https://www.momo.vn/blog/thanh-toan-du-no-the-tin-dung-c116dt1057
 Campaign,Landing Page,Static,https://www.momo.vn/tin-tuc/khuyen-mai/phien-su-kien-chon-dung-trung-xu-8882
 Tiktok,Landing Page,Static,https://www.momo.vn/tin-tuc/khuyen-mai/google-play-giam-20k-nap-game-nap-xu-tiktok-nang-8404
-Cinema,Cineplex Page,Static,https://www.momo.vn/lotte-cinema
+Cinema_Cineplex Page,Cineplex Page,Static,https://www.momo.vn/lotte-cinema
 Bảo Hiểm Ô Tô,Landing Page,Static,https://www.momo.vn/blog/bao-hiem-bat-buoc-o-to-5-cho-c116dt1775
 Chứng Khoán,Landing Page,Static,https://www.momo.vn/blog/co-tuc-la-gi-loi-ich-khi-dau-tu-vao-co-phieu-co-chi-tra-co-tuc-c116dt1825
 Merchant,Landing Page,Static,https://www.momo.vn/doi-tac/tai-chinh-bao-hiem
@@ -3166,10 +3168,10 @@ Blog,Landing Page,Static,https://www.momo.vn/blog/tu-vi-tuoi-ky-ty-1989-nu-mang-
 Blog,Landing Page,Static,https://www.momo.vn/blog/tu-vi-tuoi-quy-dau-1993-nu-mang-nam-2025-at-ty-c117dt1880
 Campaign,Landing Page,Static,https://www.momo.vn/dau-truong-momo
 Chứng Khoán,Landing Page,Static,https://www.momo.vn/blog/san-hose-c199dt1438
-Khuyến mãi,Landing Page,Static,https://www.momo.vn/tin-tuc/khuyen-mai/vi-du-hellomomo-tieu-de-nhan-bo-qua-1-trieu-mo-ta-8949
+New User,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/vi-du-hellomomo-tieu-de-nhan-bo-qua-1-trieu-mo-ta-8949
 Game,Landing Page,Static,https://www.momo.vn/blog/nhung-skin-dep-nhat-danh-tang-cho-nu-game-thu-c115dt502
 Bảo Hiểm,Landing Page,Static,https://www.momo.vn/tin-tuc/thong-bao/gioi-thieu-ban-moi-mua-bao-hiem-suc-khoe-8924
-Khuyến mãi,Landing Page,Static,https://www.momo.vn/tin-tuc/khuyen-mai/vi-du-hellomomo-tieu-de-nhan-bo-qua-1-trieu-ngay-8911
+New User,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/vi-du-hellomomo-tieu-de-nhan-bo-qua-1-trieu-ngay-8911
 Bảo Hiểm Y Tế,Landing Page,Static,https://www.momo.vn/blog/thay-van-tim-co-duoc-bao-hiem-c116dt2291
 Guide,Landing Page,Static,https://www.momo.vn/huong-dan/huong-dan-nuoi-heo-dat-nhan-heo-vang-va-quyen-gop-tren-vi-momo
 Blog,Landing Page,Static,https://www.momo.vn/blog/tu-vi-tuoi-tan-dau-1981-nam-mang-nam-2025-at-ty-c117dt1926
@@ -3196,7 +3198,7 @@ TnC,Landing Page,Static,https://www.momo.vn/ung-dung-momo/bieu-phi
 Campaign,Landing Page,Static,https://www.momo.vn/tin-tuc/khuyen-mai/dau-truong-tuoi-tho-oan-tu-ti-leo-hang-va-san-8843
 Blog,Landing Page,Static,https://www.momo.vn/blog/tu-vi-tuoi-nham-ngo-2002-nu-mang-nam-2025-at-ty-c117dt1890
 Khuyến mãi,Landing Page,Static,https://www.momo.vn/tin-tuc/thong-bao/quan-ly-goi-dang-ky-subscription-tranh-bi-tru-3780
-Cinema,Landing Page,Static,https://www.momo.vn/blog/huong-dan-cach-thanh-toan-galaxy-play-c115dt1357
+Cinema_Landing Page,Landing Page,Static,https://www.momo.vn/blog/huong-dan-cach-thanh-toan-galaxy-play-c115dt1357
 Game,Landing Page,Static,https://www.momo.vn/blog/game-manh-tuong-xuat-chien-c115dt1352
 Donation,Landing Page,Static,https://www.momo.vn/vi-nhan-ai/campaign/gop-la-va-rung-2026
 Merchant,Landing Page,Static,https://www.momo.vn/tin-tuc/khuyen-mai/mua-samsung-galaxy-a-series-tai-cellphones-tra-7380
@@ -3208,7 +3210,7 @@ Donation,Landing Page,Static,https://www.momo.vn/cong-dong/gay-quy-ho-tro-thiet-
 Tiện Ích Giao Thông,Landing Page,Static,https://www.momo.vn/tin-tuc/thong-bao/mung-tet-doc-lap-di-metro-xe-buyt-ha-noi-mien-phi-8988
 Merchant,Landing Page,Static,https://www.momo.vn/tin-tuc/khuyen-mai/thanh-toan-momo-tai-aeon-nhan-hoan-tien-10-voi-vi-8921
 Quản Lý Chi Tiêu,Landing Page,Static,https://www.momo.vn/blog/cac-nguyen-tac-can-phai-nam-vung-khi-dau-tu-tai-chinh-c181dt1634
-Trung tâm tài chính,Landing Page,Static,https://www.momo.vn/blog/mua-vang-online-o-dau-co-nen-mua-vang-online-c116dt979
+Trung Tâm Tài Chính,Landing Page,Static,https://www.momo.vn/blog/mua-vang-online-o-dau-co-nen-mua-vang-online-c116dt979
 Blog,Landing Page,Static,https://www.momo.vn/blog/tu-vi-tuoi-ky-mui-1979-nam-mang-nam-2026-c117dt2417
 Guide,Landing Page,Static,https://www.momo.vn/huong-dan/huong-dan-thiet-lap-trang-doanh-nghiep-tren-miniapp
 Bảo Hiểm,Landing Page,Static,https://www.momo.vn/blog/cach-tra-cuu-hop-dong-bao-hiem-nhan-tho-c116dt1158
@@ -3239,18 +3241,18 @@ Chứng Khoán,Landing Page,Static,https://www.momo.vn/blog/bi-kip-dau-tu-chung-
 Ví Trả Sau,Landing Page,Static,https://www.momo.vn/blog/mua-tra-gop-nhung-dieu-ban-can-biet-de-chi-tieu-thong-minh-c116dt309
 Blog,Landing Page,Static,https://www.momo.vn/blog/xem-la-so-tu-vi-tuoi-ky-mao-1999-nam-mang-nam-2026-c117dt2376
 P2P,Landing Page,Static,https://www.momo.vn/tin-tuc/khuyen-mai/09-06-30-6-chuyen-2k-tu-ngan-hang-den-so-momo-ban-8839
-Student Hub,Landing Page,Static,https://www.momo.vn/blog/cach-xet-tuyen-hoc-ba-dai-hoc-theo-chuan-phuong-thuc-3-cua-bo-gd-dt-c193dt1081
+Phí Xét Tuyển,Blog,Static,https://www.momo.vn/blog/cach-xet-tuyen-hoc-ba-dai-hoc-theo-chuan-phuong-thuc-3-cua-bo-gd-dt-c193dt1081
 Bảo Hiểm,Landing Page,Static,https://www.momo.vn/blog/cap-nhat-gia-bao-hiem-du-lich-noi-dia-moi-nhat-2024-c116dt1279
 Guide,Landing Page,Static,https://www.momo.vn/huong-dan/huong-dan-lien-ket-vi-momo-voi-tai-khoan-ngan-hang-shb
 P2P,Landing Page,Static,https://www.momo.vn/blog/3-cach-chuyen-nhan-tien-tu-arap-xeut-ve-viet-nam-nhanh-nhat-c116dt1350
 Bảo Hiểm Y Tế,Landing Page,Static,https://www.momo.vn/blog/mo-tim-co-duoc-bao-hiem-chi-tra-khong-c116dt2289
 Donation,Landing Page,Static,https://www.momo.vn/cong-dong/chung-tay-mang-phep-mau-y-te-cho-04-cuoc-doi-nho
 Donation,Landing Page,Static,https://www.momo.vn/cong-dong/trang-bi-lop-hoc-cho-tre-mam-non-vung-lu-lai-chau
-Quản lý chi tiêu,Landing Page,Static,https://www.momo.vn/blog/quan-ly-tien-la-gi-va-4-nguyen-tac-vang-giup-ban-lam-chu-tai-chinh-c181dt1613
+Quản Lý Chi Tiêu,Landing Page,Static,https://www.momo.vn/blog/quan-ly-tien-la-gi-va-4-nguyen-tac-vang-giup-ban-lam-chu-tai-chinh-c181dt1613
 Game,Landing Page,Static,https://www.momo.vn/tin-tuc/tin-tuc-su-kien/mua-su-kien-da-toi-nap-funtap-cuc-hoi-voi-momo-8864
 Quản Lý Chi Tiêu,Landing Page,Static,https://www.momo.vn/blog/dau-tu-sinh-loi-la-gi-kham-pha-cac-kenh-dau-tu-sinh-loi-pho-bien-hien-nay-c181dt1643
 Tiết Kiệm Online,Landing Page,Static,https://www.momo.vn/tin-tuc/khuyen-mai/bay-tiet-kiem-den-10-khi-dat-ve-vietnam-airlines-8826
-Cinema,Landing Page,Static,https://www.momo.vn/tin-tuc/khuyen-mai/vip-san-sang-quay-concert-bigbang-8949
+Cinema_Landing Page,Landing Page,Static,https://www.momo.vn/tin-tuc/khuyen-mai/vip-san-sang-quay-concert-bigbang-8949
 Quản Lý Chi Tiêu,Landing Page,Static,https://www.momo.vn/blog/dau-tu-trai-phieu-la-gi-dau-tu-trai-phieu-nhu-the-nao-hieu-qua-c181dt1656
 Blog,Landing Page,Static,https://www.momo.vn/blog/tarot-du-ky-c117dt866
 New User,Landing Page,Static,https://www.momo.vn/tin-tuc/thong-bao/quet-cccd-gan-chip-tren-momo-xac-thuc-tai-khoan-6872
@@ -3258,7 +3260,9 @@ Blog,Landing Page,Static,https://www.momo.vn/blog/mua-gi
 Guide,Landing Page,Static,https://www.momo.vn/huong-dan/huong-dan-lien-ket-vi-voi-tai-khoan-ngan-hang-timo
 Donation,Landing Page,Static,https://www.momo.vn/cong-dong/chung-tay-mang-den-co-hoi-song-cho-25-benh-nhi
 Guide,Landing Page,Static,https://www.momo.vn/huong-dan/lien-ket-vi-momo-vietinbank
-Game Hub,Mini Web,Dynamic,https://www.momo.vn/game/*
+New User,Landing Page,Dynamic,https://www.momo.vn/game/mot-mua-quyt*
+New User,Landing Page,Static,https://www.momo.vn/game/mot-mua-quyt
+Game,Landing Page,Static,https://www.momo.vn/game
 Ví Trả Sau,Home Page,Static,https://www.momo.vn/vi-tra-sau
 Trung Tâm Tài Chính,Service Page,Dynamic,https://www.momo.vn/tai-chinh/*
 Tỷ Giá,Tool Page,Static,https://www.momo.vn/tai-chinh/ty-gia
@@ -3291,7 +3295,7 @@ Hỏi đáp,Article,Dynamic,https://www.momo.vn/hoi-dap/*
 Guide,Article,Dynamic,https://www.momo.vn/huong-dan/*
 TnC,Static Page,Dynamic,https://www.momo.vn/chinh-sach-quyen-rieng-tu*
 TnC,Static Page,Dynamic,https://www.momo.vn/dieu-khoan-dieu-kien*
-Game,Landing Page,Dynamic,https://www.momo.vn/thanh-toan-momo-*
+Merchant,Merchant page,Dynamic,https://www.momo.vn/thanh-toan-momo-*
 Game,Landing Page,Static,https://www.momo.vn/mua-the-garena
 Campaign,Campaign Page,Dynamic,https://www.momo.vn/lac-xi-*
 Donation,Landing Page,Dynamic,https://www.momo.vn/song-tot/*
@@ -3301,7 +3305,7 @@ Student Pass,Landing Page,Static,https://www.momo.vn/sinh-vien
 Trust,Landing Page,Dynamic,https://www.momo.vn/an-toan-bao-mat/*
 Trust,Landing Page,Static,https://www.momo.vn/an-toan-an-tam
 Trust,Landing Page,Static,https://www.momo.vn/cung-hoc-an-toan-bao-mat
-Cinema,Landing Page,Static,https://www.momo.vn/ve-xem-phim
+Cinema_Landing Page,Landing Page,Static,https://www.momo.vn/ve-xem-phim
 Vé Xe,Landing Page,Static,https://www.momo.vn/ve-xe-khach
 Ví Trả Sau,Landing Page,Static,https://www.momo.vn/uu-dai-vi-tra-sau
 Ví Trả Sau,Campaign Page,Dynamic,https://www.momo.vn/vts-len5/*
@@ -3325,7 +3329,7 @@ Dịch vụ liên kết,Landing Page,Dynamic,https://www.momo.vn/dich-vu-lien-ke
 Billpay,Landing Page,Static,https://www.momo.vn/vien-thong-tien-ich
 P2P,Landing Page,Static,https://www.momo.vn/vietcombankmomo
 Vé số,Landing Page,Static,https://www.momo.vn/vietlott
-Application Store,Landing Page,Static,https://www.momo.vn/truyen-hinh
+Truyền Hình,Landing Page,Static,https://www.momo.vn/truyen-hinh
 Trung Tâm Tài Chính,Landing Page,Static,https://www.momo.vn/10-tu-duy-tai-chinh
 Internet,Landing Page,Dynamic,https://www.momo.vn/internet*
 Internet,Landing Page,Static,https://www.momo.vn/internet
@@ -3343,13 +3347,65 @@ Quỹ Nhóm,Landing Page,Static,https://www.momo.vn/quy-nhom
 Quỹ Nhóm,Landing Page,Dynamic,https://www.momo.vn/quy-nhom/*
 Quản Lý Chi Tiêu,Landing Page,Static,https://www.momo.vn/quan-ly-chi-tieu
 Quản Lý Chi Tiêu,Landing Page,Dynamic,https://www.momo.vn/quan-ly-chi-tieu/*
-Giá Xăng,Tool Page,Dynamic,https://www.momo.vn/tien-ich-giao-thong/gia-xang*
-Giá Xăng,Tool Page,Static,https://www.momo.vn/tien-ich-giao-thong/gia-xang
+Giá xăng,Tool Page,Dynamic,https://www.momo.vn/tien-ich-giao-thong/gia-xang*
+Giá xăng,Tool Page,Static,https://www.momo.vn/tien-ich-giao-thong/gia-xang
 Garage,Tool Page,Dynamic,https://www.momo.vn/tien-ich-giao-thong/garage*
 Garage,Tool Page,Static,https://www.momo.vn/tien-ich-giao-thong/garage
-Cây Xăng,Tool Page,Dynamic,https://www.momo.vn/tien-ich-giao-thong/cay-xang*
-Cây Xăng,Tool Page,Static,https://www.momo.vn/tien-ich-giao-thong/cay-xang
-Trạm Sạc,Tool Page,Dynamic,https://www.momo.vn/tien-ich-giao-thong/tram-sac*
-Trạm Sạc,Tool Page,Static,https://www.momo.vn/tien-ich-giao-thong/tram-sac
+Cây xăng,Tool Page,Dynamic,https://www.momo.vn/tien-ich-giao-thong/cay-xang*
+Cây xăng,Tool Page,Static,https://www.momo.vn/tien-ich-giao-thong/cay-xang
+Trạm sạc,Tool Page,Dynamic,https://www.momo.vn/tien-ich-giao-thong/tram-sac*
+Trạm sạc,Tool Page,Static,https://www.momo.vn/tien-ich-giao-thong/tram-sac
 Hãng Xe,Tool Page,Dynamic,https://www.momo.vn/tien-ich-giao-thong/hang-xe*
 Hãng Xe,Tool Page,Static,https://www.momo.vn/tien-ich-giao-thong/hang-xe
+Download,Landing Page,Static,https://www.momo.vn/tai-app
+Download,Landing Page,Dynamic,https://www.momo.vn/tai-app*
+Soundbox,Page,Dynamic,https://www.momo.vn/loa-thong-bao-chuyen-khoan/*
+Soundbox,Page,Dynamic,https://www.momo.vn/loa-thong-bao*
+Soundbox,Page,Dynamic,https://www.momo.vn/loa-momo/*
+Download,Landing Page,Dynamic,https://www.momo.vn/download*
+
+Truyền Hình,Landing Page,Static,https://www.momo.vn/thanh-toan-hoa-don/truyen-hinh
+Truyền Hình,Landing Page,Dynamic,https://www.momo.vn/truyen-hinh/*
+Truyền Hình,Landing Page,Dynamic,https://www.momo.vn/thanh-toan-hoa-don/truyen-hinh/*
+Chung Cư,Landing Page,Static,https://www.momo.vn/chung-cu
+Chung Cư,Landing Page,Static,https://www.momo.vn/thanh-toan-hoa-don/chung-cu
+Chung Cư,Landing Page,Dynamic,https://www.momo.vn/chung-cu/*
+Chung Cư,Landing Page,Dynamic,https://www.momo.vn/thanh-toan-hoa-don/chung-cu/*
+Phí Xét Tuyển,Landing Page,Dynamic,https://www.momo.vn/phi-xet-tuyen/*
+Phí Xét Tuyển,Blog,Static,https://www.momo.vn/blog/nop-le-phi-xet-tuyen-online-2023-c193dt1082
+Phí Xét Tuyển,Blog,Static,https://www.momo.vn/blog/huong-dan-thanh-toan-nguyen-vong-2023-nhanh-nhat-c193dt1080
+Phí Xét Tuyển,Blog,Static,https://www.momo.vn/blog/sap-xep-nguyen-vong-thi-dai-hoc-nhung-dieu-ban-nen-biet-c193dt1078
+Học Phí,Landing Page,Static,https://www.momo.vn/thanh-toan-momo-the-hoc-duong-ssc
+Học Phí,Landing Page,Dynamic,https://www.momo.vn/hoc-phi/*
+Học Phí,Landing Page,Dynamic,https://www.momo.vn/thanh-toan-hoa-don/hoc-phi/*
+Điện,Landing Page,Static,https://www.momo.vn/thanh-toan-hoa-don/dien
+Điện,Landing Page,Dynamic,https://www.momo.vn/thanh-toan-hoa-don/dien/*
+Điện,Blog,Static,https://www.momo.vn/blog/top-3-cach-dong-tien-dien-qua-dien-thoai-nhanh-nhat-c193dt1184
+Điện,Blog,Static,https://www.momo.vn/blog/bat-mi-6-cach-dong-tien-dien-online-sieu-nhanh-c193dt1182
+Điện,Blog,Static,https://www.momo.vn/blog/gia-dien-nha-nuoc-bao-nhieu-mot-so-cap-nhat-nam-2023-c193dt1208
+Điện,Blog,Static,https://www.momo.vn/blog/cach-tiet-kiem-dien-hieu-qua-khi-su-dung-cac-thiet-bi-dien-cho-gia-dinh-c117dt123
+Nước,Landing Page,Static,https://www.momo.vn/thanh-toan-hoa-don/nuoc
+Nước,Landing Page,Dynamic,https://www.momo.vn/thanh-toan-hoa-don/nuoc/*
+Nước,Blog,Static,https://www.momo.vn/blog/cach-lagi-ma-khach-hang-dong-tien-nuoc-cuc-nhanh-c193dt1209
+Internet,Landing Page,Static,https://www.momo.vn/thanh-toan-hoa-don/internet
+Internet,Landing Page,Dynamic,https://www.momo.vn/thanh-toan-hoa-don/internet/*
+Internet,Blog,Static,https://www.momo.vn/blog/7-hinh-thuc-dong-tien-mang-vnpt-pho-bien-c193dt1220
+Internet,Blog,Static,https://www.momo.vn/blog/bat-mi-4-cach-gia-han-wifi-fpt-nhanh-chong-c193dt1225
+Internet,Blog,Static,https://www.momo.vn/blog/giai-ma-thong-tin-ve-fpt-internet-tu-az-c193dt1216
+Internet,Blog,Static,https://www.momo.vn/blog/huong-dan-cach-lap-dat-wifi-tai-nha-don-gian-tien-gon-c193dt1221
+Internet,Blog,Static,https://www.momo.vn/blog/lap-wifi-viettel-het-bao-nhieu-tien-co-phat-sinh-chi-phi-khong-c193dt1222
+New User,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/hoan-tien-mua-sam-chao-ban-moi-nhan-qua-10k-khi-8087
+New User,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/nhap-hellomomo-nhan-qua-tang-ban-moi-2297
+New User,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/tuan-le-vang-10h-24-6-17h-30-6-tang-100000d-tien-vao-vi-cho-doi-tac-gioi-thieu-momo-1272
+New User,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/cuc-nong-lan-dau-gioi-thieu-momo-nhan-ngay-tien-2549
+New User,News,Static,https://www.momo.vn/tin-tuc/khuyen-mai/nong-ham-hap-nhan-200000d-voucher-da-nang-thanh-toan-moi-dich-vu-khi-gioi-thieu-momo-749
+New User,Landing Page,Static,https://www.momo.vn/chaomomo
+New User,Landing Page,Dynamic,https://www.momo.vn/chaomomo/*
+New User,Landing Page,Static,https://www.momo.vn/hellomomo
+New User,Landing Page,Dynamic,https://www.momo.vn/hellomomo/*
+New User,Landing Page,Dynamic,https://www.momo.vn/gioi-thieu-momo/*
+New User,Landing Page,Dynamic,https://www.momo.vn/lienkettaikhoan/*
+New User,Landing Page,Static,https://www.momo.vn/momo-junior
+New User,Landing Page,Dynamic,https://www.momo.vn/momo-junior/*
+New User,Landing Page,Static,https://www.momo.vn/qua-tang-ban-moi
+New User,Landing Page,Dynamic,https://www.momo.vn/qua-tang-ban-moi/*

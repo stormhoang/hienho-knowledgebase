@@ -1,15 +1,15 @@
 # Web Product Lead - Strategic & OKRs H2 2026
 
-> - **Document:** Web Product Lead - Strategic & OKRs H2 2026
-> - **Division:** Growth Platform Division (GPD)
-> - **Unit:** Web Platform
-> - **Team:** Out-App Traffic Team
-> - **Role:** Web Product Lead
+> - **Tài liệu:** Web Product Lead - Strategic & OKRs H2 2026
+> - **Khối phụ trách:** Growth Platform Division (GPD)
+> - **Đơn vị:** Web Platform
+> - **Nhóm:** Out-App Traffic Team
+> - **Vai trò:** Web Product Lead
 > - **Owner:** Văn Hiến
-> - **Direct Manager:** Head of Web Platform
-> - **Version:** 1.1 · July 2026
-> - **Status:** Active
-> - **Last updated:** 2026-07-13
+> - **Quản lý trực tiếp:** Head of Web Platform
+> - **Phiên bản:** 1.1 · July 2026
+> - **Trạng thái:** Active
+> - **Cập nhật:** 2026-07-13
 
 ---
 
@@ -79,25 +79,25 @@ momo.vn không tổ chức theo BU mà theo Product/Search Ecosystem. 4 Pillars 
   </thead>
   <tbody>
     <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>P1 - Tài chính & Tín dụng</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Trụ cột 1 - Tài chính & Tín dụng</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CIC Score, Ví Trả Sau, Vay Nhanh</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hub-Spoke kết hợp các Interactive Tools (Tính lãi, Mô phỏng CIC)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Named Author Policy</strong> - Gate kiểm duyệt cứng bắt buộc trước khi launch</td>
     </tr>
     <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>P2 - Bảo hiểm Công nghệ</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Trụ cột 2 - Bảo hiểm Công nghệ</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bảo hiểm xe máy, BHYT, BHXH, Bảo hiểm ô tô</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Neutral Aggregator - Cổng so sánh trung lập</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Không dùng geo-based URL</strong> cho bảo hiểm</td>
     </tr>
     <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>P3 - Dịch vụ Công & Tiện ích</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Trụ cột 3 - Dịch vụ Công & Tiện ích</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phạt Nguội, Thanh toán Hóa đơn</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">API real-time kết hợp programmatic SEO (pSEO) cho 63 tỉnh</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>GEO Optimization ready</strong> trước khi rollout</td>
     </tr>
     <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>P4 - Đời sống & Merchant</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Trụ cột 4 - Đời sống & Merchant</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cinema, OTA, eSIM, Merchant</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Intent-first, trang chi tiết Merchant (Merchant Detail Page)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Noindex mandatory</strong> cho các URL hết hạn</td>
@@ -298,7 +298,7 @@ momo.vn không tổ chức theo BU mà theo Product/Search Ecosystem. 4 Pillars 
     *   Áp dụng chính sách quản lý AI Crawler (AI Crawler Policy) nâng cao nhằm kiểm soát ngân sách cào dữ liệu của AI Bots, hướng tới tối đa hóa citation rate của MoMo trong Google AI Overviews, ChatGPT và Perplexity.
 4.  **Enforce Tiêu chuẩn Quality Gate trên MoSpark CMS:**
     *   Sử dụng công thức chấm điểm 5-Block (100 điểm) trực tiếp trên CMS MoSpark. Thực thi hard block đối với các lỗi Core Web Vitals và kỹ thuật SEO nghiêm trọng trước khi xuất bản.
-5.  **Duy trì Vòng lặp Kiểm thử SPA (reSearch - Pilot - Action):**
+5.  **Duy trì Vòng lặp Test SPA (reSearch - Pilot - Action):**
     *   Bảo đảm mọi giải pháp và tính năng mới đều đi qua chu trình nghiên cứu chuyên sâu (Feasibility & Demand), thử nghiệm thực tế (Pilot), và sau đó mới scale-up trên diện rộng.
 6.  **Chuẩn bị cho Sự tiến hóa Agent-Led Search:**
     *   Tối ưu hóa momo.vn thành "Trusted Data Source" cho AI Agents thông qua việc tăng cường Brand Authority (xây dựng Entity, nâng cao E-E-A-T), chuẩn hóa Schema markup chuyên sâu, và cấu trúc nội dung giải quyết triệt để bài toán JTBD của người dùng với độ chính xác cao và thông tin luôn cập nhật (freshness).

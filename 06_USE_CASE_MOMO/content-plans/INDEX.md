@@ -2,30 +2,27 @@
 
 Trang mục lục tra cứu toàn bộ các bản kế hoạch nội dung (Content Plans) của MoMo Web Platform. Được tạo lập và đồng bộ tự động từ kho dữ liệu Semantic Keyword Inventory.
 
-- **Tổng số Content Plans đã xuất bản:** 18 bản kế hoạch
-- **Tổng dung lượng tìm kiếm phục vụ:** 1,494,720,000 lượt/tháng
+- **Tổng số Content Plans đã xuất bản:** 15 bản kế hoạch
+- **Tổng dung lượng tìm kiếm phục vụ:** 10,911,590 lượt/tháng
 
 ---
 
-## DANH SÁCH CHI TIẾT THEO PHÂN KHỐI NGÀNH
+## DANH SÁCH CHI TIẾT THEO HUB
 
-| Phân Khối | Use Case / Dịch Vụ | Số Lượng Topic Clusters | Dung Lượng Tìm Kiếm | Liên Kết Chi Tiết |
+| Hub | Theme | Số Lượng Topic Clusters | Dung Lượng Tìm Kiếm | Liên Kết Chi Tiết |
 | :--- | :--- | :---: | :---: | :--- |
-| `Financial` | **gui-tiet-kiem** | 6 topics | 1,895,060 | [gui-tiet-kiem.md](Financial/gui-tiet-kiem-content-plan.md) |
-| `Lottery` | **vietlott** | 9 topics | 1,455,346,350 | [vietlott.md](Lottery/vietlott-content-plan.md) |
-| `Root` | **bien-so-xe (1)** | 6 topics | 619,140 | [bien-so-xe (1).md](bien-so-xe (1)-content-plan.md) |
-| `cinema` | **ve-xem-phim** | 1 topics | 7,278,550 | [ve-xem-phim.md](cinema/ve-xem-phim-content-plan.md) |
-| `cinema` | **dat-phim** | 1 topics | 7,266,100 | [dat-phim.md](cinema/dat-phim-content-plan.md) |
-| `cinema` | **lich-phim** | 3 topics | 6,871,500 | [lich-phim.md](cinema/lich-phim-content-plan.md) |
-| `cinema` | **rap** | 4 topics | 6,453,470 | [rap.md](cinema/rap-content-plan.md) |
-| `cinema` | **phim** | 2 topics | 3,162,590 | [phim.md](cinema/phim-content-plan.md) |
-| `cinema` | **mua-ve-phim** | 2 topics | 1,872,090 | [mua-ve-phim.md](cinema/mua-ve-phim-content-plan.md) |
-| `insurtech` | **bao-hiem** | 6 topics | 452,630 | [bao-hiem.md](insurtech/bao-hiem-content-plan.md) |
-| `insurtech` | **bhxh** | 4 topics | 340,220 | [bhxh.md](insurtech/bhxh-content-plan.md) |
-| `insurtech` | **bhyt** | 4 topics | 152,680 | [bhyt.md](insurtech/bhyt-content-plan.md) |
-| `insurtech` | **bao-hiem-xe** | 6 topics | 68,550 | [bao-hiem-xe.md](insurtech/bao-hiem-xe-content-plan.md) |
-| `insurtech` | **bao-hiem-o-to** | 5 topics | 34,240 | [bao-hiem-o-to.md](insurtech/bao-hiem-o-to-content-plan.md) |
-| `insurtech` | **bao-hiem-vat-chat** | 5 topics | 12,130 | [bao-hiem-vat-chat.md](insurtech/bao-hiem-vat-chat-content-plan.md) |
-| `insurtech` | **bao-hiem-than-vo** | 5 topics | 11,200 | [bao-hiem-than-vo.md](insurtech/bao-hiem-than-vo-content-plan.md) |
-| `insurtech` | **bao-hiem-chay-no** | 3 topics | 4,750 | [bao-hiem-chay-no.md](insurtech/bao-hiem-chay-no-content-plan.md) |
-| `student` | **tuyen-sinh** | 7 topics | 2,878,750 | [tuyen-sinh.md](student/tuyen-sinh-content-plan.md) |
+| `Financial` | **gui-tiet-kiem** | 7 topics | 228,190 | [gui-tiet-kiem.md](Financial/gui-tiet-kiem-content-plan.md) |
+| `Lottery` | **vietlott** | 10 topics | 2,793,410 | [vietlott.md](Lottery/vietlott-content-plan.md) |
+| `cinema` | **phim** | 6 topics | 4,766,510 | [phim.md](cinema/phim-content-plan.md) |
+| `cinema` | **rap** | 5 topics | 576,300 | [rap.md](cinema/rap-content-plan.md) |
+| `cinema` | **lich-phim** | 5 topics | 550,320 | [lich-phim.md](cinema/lich-phim-content-plan.md) |
+| `cinema` | **dat-phim** | 3 topics | 13,050 | [dat-phim.md](cinema/dat-phim-content-plan.md) |
+| `cinema` | **ve-xem-phim** | 1 topics | 0 | [ve-xem-phim.md](cinema/ve-xem-phim-content-plan.md) |
+| `insurtech` | **bhxh** | 7 topics | 483,730 | [bhxh.md](insurtech/bhxh-content-plan.md) |
+| `insurtech` | **bhyt** | 7 topics | 299,020 | [bhyt.md](insurtech/bhyt-content-plan.md) |
+| `insurtech` | **bao-hiem** | 5 topics | 168,680 | [bao-hiem.md](insurtech/bao-hiem-content-plan.md) |
+| `insurtech` | **bao-hiem-xe-may** | 4 topics | 52,660 | [bao-hiem-xe-may.md](insurtech/bao-hiem-xe-may-content-plan.md) |
+| `insurtech` | **bao-hiem-o-to** | 6 topics | 35,560 | [bao-hiem-o-to.md](insurtech/bao-hiem-o-to-content-plan.md) |
+| `insurtech` | **bao-hiem-chay-no** | 4 topics | 6,600 | [bao-hiem-chay-no.md](insurtech/bao-hiem-chay-no-content-plan.md) |
+| `student` | **tuyen-sinh** | 5 topics | 272,890 | [tuyen-sinh.md](student/tuyen-sinh-content-plan.md) |
+| `vehicle-hub` | **bien-so-xe** | 6 topics | 664,670 | [bien-so-xe.md](vehicle-hub/bien-so-xe-content-plan.md) |

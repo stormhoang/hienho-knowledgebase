@@ -11,6 +11,8 @@ Sử dụng:
     ./.venv/bin/python scripts/guard_vocabulary.py --staged          # Quét các file đang stage git
     ./.venv/bin/python scripts/guard_vocabulary.py --changed         # Quét các file mới/sửa đổi
     ./.venv/bin/python scripts/guard_vocabulary.py --check [files]   # Quét file/thư mục cụ thể
+    ./.venv/bin/python scripts/guard_vocabulary.py --all             # Quét toàn bộ .md được git theo dõi
+    ./.venv/bin/python scripts/guard_vocabulary.py --all --rule EN_EM_DASH  # Chỉ một rule
     ./.venv/bin/python scripts/guard_vocabulary.py --install-hook    # Cài đặt git pre-commit hook
     ./.venv/bin/python scripts/guard_vocabulary.py --fix [files]     # Tự động thay thế các từ cấm
 """
@@ -38,6 +40,8 @@ IGNORE_DIRS = {
     "graphify-out",
     "archive",
     "scratch",
+    "_archive",
+    "frontend-slides",  # skill bên thứ ba (vendored, có LICENSE riêng)
 }
 
 # Định nghĩa các quy tắc kiểm tra (Rules)
@@ -53,7 +57,8 @@ RULES = [
     },
     {
         "id": "PRIORITY_TAG",
-        "pattern": r"(?i)\b(P0|P1|P2|P3|Priority\s*[0-3])\b",
+        # "Priority 0.9" (sitemap priority) không phải nhãn ưu tiên -> loại bằng (?![.,]\d)
+        "pattern": r"(?i)\b(P0|P1|P2|P3|Priority\s*[0-3](?![.,]\d))\b",
         "flags": 0,
         "desc": "Nhãn mức độ ưu tiên P0/P1/P2/P3 bị cấm",
         "replacement": "Trình bày theo thứ tự triển khai logic, gạch đầu dòng tự nhiên hoặc nhóm chuyên môn",
@@ -275,13 +280,142 @@ RULES = [
         "replacement": "kịch bản kết thúc sớm, hoặc mô phỏng rủi ro đột ngột",
         "auto_fix": "kịch bản kết thúc sớm",
     },
+    {
+        "id": "SAN_LUONG_TRAFFIC",
+        "pattern": r"(?i)\bsản\s+lượng\s+(truy\s+cập|thất\s+thoát|chuyển\s+đổi|traffic|pv|pageview|người\s+dùng|khách\s+hàng)\b",
+        "flags": 0,
+        "desc": "Dùng từ sản lượng cho traffic / chuyển đổi web (thuật ngữ cơ khí / sản xuất công nghiệp)",
+        "replacement": "lưu lượng truy cập, lượt truy cập (Pageviews/Sessions), hoặc mục tiêu chuyển đổi Web-to-App",
+        "auto_fix": "lưu lượng",
+    },
+    {
+        "id": "GOI_QUA_TAN_THU",
+        "pattern": r"(?i)\b((gói\s+)?quà\s+(tặng\s+)?tân\s+thủ|tân\s+thủ)\b",
+        "flags": 0,
+        "desc": "Từ 'gói quà tân thủ / quà tân thủ / tân thủ' bị cấm (từ lóng game), thay bằng 'Gói quà CHAOMOMO' hoặc 'người dùng mới'",
+        "replacement": "Gói quà CHAOMOMO (cho gói quà) hoặc người dùng mới (cho user)",
+        "auto_fix": "Gói quà CHAOMOMO",
+    },
+    {
+        "id": "MA_TRAN_LAM_DUNG",
+        "pattern": r"(?i)\b((bảng\s+)?ma\s+trận\s+(tóm\s+tắt|chi\s+tiết|liên\s+kết|phân\s+bổ|kế\s+hoạch|kpis?|ngân\s+sách|quy\s+hoạch|hành\s+động)|bảng\s+ma\s+trận)\b",
+        "flags": 0,
+        "desc": "Lạm dụng chữ 'ma trận' cho bảng biểu, kế hoạch thông thường (AI buzzword sáo rỗng)",
+        "replacement": "bảng tổng hợp, bảng phân bổ, bảng liên kết, khung kế hoạch, hoặc bảng chi tiết",
+        "auto_fix": "bảng tổng hợp",
+    },
+    {
+        "id": "THI_CONG_LAM_DUNG",
+        "pattern": r"(?i)\b((nguyên\s+tắc\s+)?thi\s+công(\s+(dự\s+án|tính\s+năng|web|hub|ui|frontend|backend|hệ\s+thống|ban\s+đêm|kỹ\s+thuật|nền\s+tảng))?)\b",
+        "flags": 0,
+        "desc": "Dùng từ 'thi công' (ngành xây dựng, công trình) cho phần mềm / sản phẩm số; thay bằng 'triển khai', 'thực thi' hoặc 'phát triển'",
+        "replacement": "nguyên tắc triển khai, phương thức thực thi, phát triển, hoặc triển khai kỹ thuật",
+        "auto_fix": "triển khai",
+    },
+    {
+        "id": "KIEM_THU_LAM_DUNG",
+        "pattern": r"(?i)\bkiểm\s+thử(\s+(kỹ\s+thuật|chức\s+năng|toàn\s+diện|hệ\s+thống|production|staging|uat))?\b",
+        "flags": 0,
+        "desc": "Từ 'kiểm thử' mang tính giáo trình sách vở/hành chính cũ; trong báo cáo và văn bản quản trị thay bằng 'nghiệm thu kỹ thuật', 'đánh giá chất lượng', hoặc giữ nguyên 'test', 'test cases', 'UAT'",
+        "replacement": "nghiệm thu kỹ thuật, đánh giá chất lượng, hoàn tất UAT, hoặc chạy test",
+        "auto_fix": "nghiệm thu kỹ thuật",
+    },
+    {
+        "id": "KIEM_THU_THAM_NHAP",
+        "pattern": r"(?i)\bkiểm\s+thử\s+thâm\s+nhập\b",
+        "flags": 0,
+        "desc": "Dịch thô thuật ngữ kỹ thuật 'Pentest'; bắt buộc giữ nguyên thuật ngữ quốc tế Pentest",
+        "replacement": "Pentest",
+        "auto_fix": "Pentest",
+    },
+    {
+        "id": "TOAN_SITE",
+        "pattern": r"(?i)\b(toàn\s+site|trên\s+site)\b",
+        "flags": 0,
+        "desc": "Dùng từ 'site' cộc lốc trong báo cáo tiếng Việt; thay bằng 'toàn Website' hoặc 'toàn Kênh Web'",
+        "replacement": "toàn Website hoặc toàn Kênh Web",
+        "auto_fix": "toàn Website",
+    },
+    {
+        "id": "LINK_GENERIC",
+        "pattern": r"(?i)\blink\s+generic\b",
+        "flags": 0,
+        "desc": "Dùng từ 'link generic' chắp vá tiếng Anh; thay bằng 'đường dẫn dùng chung' hoặc 'đường dẫn chung (Generic link)'",
+        "replacement": "đường dẫn dùng chung (Generic link)",
+        "auto_fix": "đường dẫn dùng chung",
+    },
+    # ---------------------------------------------------------------
+    # Nhóm CẢNH BÁO (severity: warn): không chặn commit, chỉ nhắc người viết rà lại.
+    # Nguồn tham khảo mẫu: blader/humanizer (mục 17, 22, 23, 25 trong bảng 26 mẫu văn AI).
+    # ---------------------------------------------------------------
+    {
+        "id": "NGUON_MUON_UY_QUYEN",
+        "severity": "warn",
+        "pattern": r"(?i)(các\s+chuyên\s+gia|nghiên\s+cứu\s+cho\s+thấy|nhiều\s+nguồn\s+cho\s+rằng|giới\s+chuyên\s+môn\s+cho\s+rằng|theo\s+các\s+nghiên\s+cứu)",
+        "exempt": r"\[cần\s+verify\]|https?://|\[\d+\]|\(nguồn",
+        "flags": 0,
+        "desc": "Quyền uy mượn: nêu 'chuyên gia / nghiên cứu' mà không có nguồn cụ thể. Số liệu và nhận định phải ghi nguồn hoặc đánh dấu [cần verify] (AGENTS.md, Zero-Hallucination)",
+        "replacement": "Ghi tên nguồn và năm cụ thể, hoặc đánh dấu [cần verify]",
+        "auto_fix": None,
+    },
+    {
+        "id": "TAN_DU_CHATBOT",
+        "severity": "warn",
+        "pattern": r"(?i)(dưới\s+đây\s+là\s+(bản\s+(tóm\s+tắt|nháp|trả\s+lời)|nội\s+dung\s+bạn\s+yêu\s+cầu)|hy\s+vọng\s+[^.]{0,30}hữu\s+ích|chắc\s+chắn\s+rồi)",
+        "exempt": None,
+        "flags": 0,
+        "desc": "Tàn dư giọng chatbot (lời mở đầu, lời kết kiểu trợ lý AI) trong tài liệu chính thức",
+        "replacement": "Bỏ lời dẫn, mở thẳng vào nội dung hoặc kết luận",
+        "auto_fix": None,
+    },
+    {
+        "id": "MIEN_TRU_KIEN_THUC",
+        "severity": "warn",
+        "pattern": r"(?i)(tính\s+đến\s+(thời\s+điểm|hiện\s+tại)|theo\s+(hiểu\s+biết|kiến\s+thức)\s+của\s+tôi|có\s+thể\s+không\s+chính\s+xác|tôi\s+không\s+chắc)",
+        "exempt": r"\d{1,2}/\d{1,2}(/\d{2,4})?",
+        "flags": 0,
+        "desc": "Miễn trừ kiến thức hoặc phỏng đoán thay vì chốt mốc thời gian và nguồn. Dòng có ngày cụ thể (dd/mm) được bỏ qua",
+        "replacement": "Ghi rõ mốc dữ liệu (dd/mm/yyyy) và nguồn, hoặc đánh dấu [cần verify]",
+        "auto_fix": None,
+    },
+    {
+        "id": "MO_TA_CHINH_TAI_LIEU",
+        "severity": "warn",
+        "pattern": r"(?i)((báo\s+cáo|tài\s+liệu|văn\s+bản)\s+này\s+(trình\s+bày|tổng\s+hợp|đề\s+cập|phân\s+tích|nhằm)|phần\s+dưới\s+đây\s+(trình\s+bày|tổng\s+hợp))",
+        "exempt": None,
+        "flags": 0,
+        "desc": "Mô tả chính tài liệu thay vì đi vào nội dung. Báo cáo cần đi thẳng vào kết luận, số liệu và việc tiếp theo",
+        "replacement": "Viết thẳng action title hoặc kết luận, bỏ câu mô tả tài liệu",
+        "auto_fix": None,
+    },
 ]
+
+
+# Các file dùng P1-P4 làm mã trụ cột MoSpark (P1 Tài chính & Tín dụng, P2 Bảo hiểm, P3 Dịch vụ Công & Tiện ích,
+# P4 Đời sống & Merchant). Đây là định danh Pillar, không phải nhãn ưu tiên.
+PILLAR_CODE_FILES = {
+    "01_STRATEGIC_PLAN/product-lead.md",
+    "03_SKILLS/mospark-glossary.md",
+    "04_MOSPARK_PLATFORM/mospark_master.md",
+    "04_MOSPARK_PLATFORM/mospark_microsite_management.md",
+}
 
 class VocabularyGuard:
     def __init__(self, workspace_root: Optional[Path] = None):
         if workspace_root is None:
             workspace_root = Path(__file__).resolve().parent.parent
         self.workspace_root = workspace_root
+
+    rule_filter: Optional[set] = None
+
+    def get_all_tracked_files(self) -> List[Path]:
+        """Toàn bộ file markdown đang được git theo dõi (quét cả vi phạm cũ, không chỉ file đang sửa)."""
+        try:
+            out = subprocess.run(["git", "ls-files", "-z", "*.md"], cwd=self.workspace_root,
+                                 capture_output=True, text=True, check=True).stdout
+        except Exception:
+            return []
+        return [self.workspace_root / f for f in out.split("\0") if f and not self.is_ignored(self.workspace_root / f)]
 
     def is_ignored(self, file_path: Path) -> bool:
         """Kiểm tra file hoặc đường dẫn có nằm trong danh sách bỏ qua không."""
@@ -304,15 +438,40 @@ class VocabularyGuard:
         except Exception as e:
             return violations
 
+        rel_path = file_path.relative_to(self.workspace_root).as_posix() if file_path.is_relative_to(self.workspace_root) else str(file_path)
+        active_rules = [r for r in RULES if not self.rule_filter or r["id"] in self.rule_filter]
+        in_fence = False
         for line_num, line in enumerate(lines, start=1):
-            for rule in RULES:
+            if line.lstrip().startswith(("```", "~~~")):
+                in_fence = not in_fence
+            for rule in active_rules:
+                # P0-P3 trong code fence (Mermaid node/subgraph ID, sơ đồ ASCII) là định danh, không phải nhãn ưu tiên
+                if rule["id"] == "PRIORITY_TAG" and in_fence:
+                    continue
+                # Rule cảnh báo không quét trong code fence và bỏ qua dòng thuộc ngoại lệ (ngày, nguồn, link)
+                if rule.get("severity") == "warn":
+                    if in_fence:
+                        continue
+                    if rule.get("exempt") and re.search(rule["exempt"], line, flags=re.IGNORECASE):
+                        continue
                 pattern = rule["pattern"]
                 matches = list(re.finditer(pattern, line, flags=rule["flags"]))
                 for match in matches:
                     matched_text = match.group(0)
-                    # Ngoại lệ hợp lý: nếu là En-dash nằm trong link url hoặc mã code
+                    # Ngoại lệ hợp lý: ký tự được trích dẫn trong backtick (`–`) để định nghĩa luật,
+                    # hoặc nằm bên trong một URL. Không bỏ qua cả dòng chỉ vì dòng có chứa link.
+                    if rule["id"] == "PRIORITY_TAG":
+                        # Mã giai đoạn / điều kiện / Pillar (P1-P4 trụ cột MoSpark) là định danh, không phải nhãn ưu tiên
+                        if re.search(r"(?i)(giai\s+đoạn|phase|pre-condition|pillar|trụ\s+cột)\s*$", line[: match.start()]):
+                            continue
+                        # File MoSpark dùng P1-P4 làm mã 4 trụ cột (Pillar). P0 vẫn bị chặn vì không phải mã Pillar.
+                        if rel_path in PILLAR_CODE_FILES and matched_text.upper() in ("P1", "P2", "P3"):
+                            continue
                     if rule["id"] == "EN_EM_DASH":
-                        if "http" in line or "file://" in line:
+                        st, en = match.start(), match.end()
+                        if st > 0 and en < len(line) and line[st - 1] == "`" and line[en] == "`":
+                            continue
+                        if any(u.start() <= st < u.end() for u in re.finditer(r"(?:https?|file)://\S+", line)):
                             continue
 
                     violations.append({
@@ -326,6 +485,7 @@ class VocabularyGuard:
                         "replacement": rule["replacement"],
                         "line_content": line.strip(),
                         "auto_fix": rule["auto_fix"],
+                        "severity": rule.get("severity", "block"),
                     })
 
         return violations
@@ -456,16 +616,22 @@ def main():
     parser.add_argument("--install-hook", action="store_true", help="Cài đặt git pre-commit hook")
     parser.add_argument("--fix", action="store_true", help="Tự động sửa các lỗi từ ngữ an toàn")
     parser.add_argument("--check", nargs="*", help="Kiểm tra các file hoặc thư mục chỉ định")
+    parser.add_argument("--all", action="store_true", help="Kiểm tra toàn bộ file markdown được git theo dõi (bắt cả vi phạm cũ)")
+    parser.add_argument("--rule", action="append", help="Chỉ áp dụng rule ID chỉ định (lặp lại được), ví dụ --rule EN_EM_DASH")
 
     args = parser.parse_args()
     guard = VocabularyGuard()
+    if args.rule:
+        guard.rule_filter = set(args.rule)
 
     if args.install_hook:
         guard.install_git_hook()
         sys.exit(0)
 
     files_to_check = []
-    if args.staged:
+    if args.all:
+        files_to_check = guard.get_all_tracked_files()
+    elif args.staged:
         files_to_check = guard.get_staged_files()
         if not files_to_check:
             print("ℹ️ Không có file markdown nào đang staged trong git.")
@@ -499,11 +665,31 @@ def main():
     total_violations = 0
     violations_by_file: Dict[str, List[Dict[str, Any]]] = {}
 
+    warnings_by_file: Dict[str, List[Dict[str, Any]]] = {}
+    total_warnings = 0
+
     for fp in files_to_check:
-        v_list = guard.check_file(fp)
-        if v_list:
-            violations_by_file[str(fp)] = v_list
-            total_violations += len(v_list)
+        all_v = guard.check_file(fp)
+        block_v = [v for v in all_v if v["severity"] != "warn"]
+        warn_v = [v for v in all_v if v["severity"] == "warn"]
+        if block_v:
+            violations_by_file[str(fp)] = block_v
+            total_violations += len(block_v)
+        if warn_v:
+            warnings_by_file[str(fp)] = warn_v
+            total_warnings += len(warn_v)
+
+    # Cảnh báo chỉ để người viết rà lại, không làm fail commit
+    if total_warnings:
+        print(f"⚠️ [VOCABULARY GUARD WARNINGS] {total_warnings} cảnh báo (không chặn commit):")
+        for f_path, w_list in warnings_by_file.items():
+            rel_path = Path(f_path).relative_to(guard.workspace_root) if Path(f_path).is_relative_to(guard.workspace_root) else f_path
+            print(f"\n📄 {rel_path} ({len(w_list)} cảnh báo):")
+            for v in w_list:
+                print(f"  • Dòng {v['line']}:{v['col']} [{v['rule_id']}] Cụm từ: \"{v['matched']}\"")
+                print(f"    ↳ Lý do: {v['desc']}")
+                print(f"    ↳ Gợi ý: {v['replacement']}")
+        print()
 
     if total_violations == 0:
         print(f"✅ [VOCABULARY GUARD PASSED] Toàn bộ {len(files_to_check)} files đã kiểm tra hoàn toàn sạch, đạt chuẩn mực!")

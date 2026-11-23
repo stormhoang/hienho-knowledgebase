@@ -12,9 +12,9 @@
 ## 1. TỔNG QUAN & NGUYÊN TẮC TÂM LÝ HỌC HÀNH VI (BEHAVIORAL FOUNDATION)
 
 ### 1.1. Bối cảnh & Mục tiêu Chuyển đổi
-Bên cạnh công cụ tính toán thụ động (Utility Simulator), **Interactive Quiz Card (2–4 câu hỏi phân nhánh)** được triển khai như một phễu dẫn dắt và sàng lọc sơ bộ (Pre-qualification & Advisory Funnel) nhằm:
+Bên cạnh công cụ tính toán thụ động (Utility Simulator), **Interactive Quiz Card (2-4 câu hỏi phân nhánh)** được triển khai như một phễu dẫn dắt và sàng lọc sơ bộ (Pre-qualification & Advisory Funnel) nhằm:
 1. **Educate người dùng** một cách tự nhiên thông qua các tình huống đời thường.
-2. **Kích hoạt hiệu ứng tâm lý (Sunk Cost + Zeigarnik Effect):** Khi người dùng đã bỏ ra 30–45 giây tương tác, họ có thôi thúc mạnh mẽ muốn xem kết quả cuối cùng.
+2. **Kích hoạt hiệu ứng tâm lý (Sunk Cost + Zeigarnik Effect):** Khi người dùng đã bỏ ra 30-45 giây tương tác, họ có thôi thúc mạnh mẽ muốn xem kết quả cuối cùng.
 3. **Cơ chế Gating 60% Reveal / 40% Locked:** Trả ra 60% kết quả chẩn đoán và khoảng giá/hạn mức ước tính trên Web để tạo sự tin tưởng tuyệt đối (Aha! Moment), đồng thời giữ lại 40% giá trị cốt lõi (Báo giá chi tiết từng đối tác, Hạn mức chính xác, Voucher ưu đãi độc quyền) phía sau nút bấm Web-to-App Deeplink.
 
 ### 1.2. Bằng chứng Thực nghiệm (Validation Proof từ Trang Điểm Tín Dụng)
@@ -89,7 +89,7 @@ Mỗi lựa chọn (`option`) quyết định trực tiếp node tiếp theo (`n
 
 ### SẢN PHẨM 1: BẢO HIỂM THÂN VỎ Ô TÔ (CAR PHYSICAL DAMAGE INSURANCE)
 
-- **Định vị:** Chuyên gia tư vấn "Bắt bệnh" gói bảo hiểm – Mua đúng, không bị "hành", không bị "hớ".
+- **Định vị:** Chuyên gia tư vấn "Bắt bệnh" gói bảo hiểm - Mua đúng, không bị "hành", không bị "hớ".
 - **JTBD của chủ xe:** Muốn biết xe của mình mua hết bao nhiêu tiền, nên mua điều khoản nào, có thể bỏ bớt điều khoản thừa nào để tiết kiệm tiền, và hãng nào bồi thường nhanh nhất.
 
 #### Cây Rẽ Nhánh (Decision Tree Flow)
@@ -135,28 +135,28 @@ Mỗi lựa chọn (`option`) quyết định trực tiếp node tiếp theo (`n
   - A. Không lần nào, tay lái cẩn thận chỉ đi làm hàng ngày
   - B. Có vài vết xước nhẹ nhưng tự bỏ tiền ra sơn ngoài cho nhanh
   - C. Đã từng va chạm nặng hoặc ngập nước phải làm bảo hiểm lớn
-- **Câu 2.2 (Tuỳ câu trả lời): Bạn có sẵn sàng tự trả 500k cho mỗi lần xước xát nhỏ để đổi lại giảm ngay 20% – 30% tiền mua bảo hiểm cả năm không?**
+- **Câu 2.2 (Tuỳ câu trả lời): Bạn có sẵn sàng tự trả 500k cho mỗi lần xước xát nhỏ để đổi lại giảm ngay 20% - 30% tiền mua bảo hiểm cả năm không?**
   - A. Rất sẵn sàng, vì cả năm hiếm khi quẹt, chỉ cần bảo hiểm đền khi có va chạm lớn hoặc ngập nước
-  - B. Không, xe xước dù nhỏ nhất mình cũng muốn bảo hiểm lo hết từ A–Z
+  - B. Không, xe xước dù nhỏ nhất mình cũng muốn bảo hiểm lo hết từ A-Z
 
 ##### Nhánh 3: Xe chạy dịch vụ / Kinh doanh
 - **Câu 3.1 (Tuỳ câu trả lời): Chiếc xe của bạn đang đăng ký biển màu gì?**
   - A. Biển số vàng *(Đăng ký kinh doanh vận tải chính thức)*
   - B. Biển số trắng nhưng có chạy khách ngoài / Chở tour kiếm thêm *(Cảnh báo: Không mua đúng điều khoản kinh doanh sẽ bị từ chối đền 100%)*
 - **Câu 3.2 (Tuỳ câu trả lời): Khi xe phải vào xưởng làm bảo hiểm, điều gì khiến bạn đau đầu nhất?**
-  - A. Bị giam xe quá lâu, mỗi ngày nằm xưởng là mất đứt 500k – 1 triệu tiền chạy xe
+  - A. Bị giam xe quá lâu, mỗi ngày nằm xưởng là mất đứt 500k - 1 triệu tiền chạy xe
   - B. Thủ tục giấy tờ hành xác, bắt tài xế đi lại nhiều lần bổ sung biên bản hiện trường
 
 #### Thiết kế Màn hình Kết quả (60% Reveal / 40% Gated)
 - **60% Public trên Web:**
-  1. *Khung giá thị trường:* Biểu phí chuẩn ngoài đại lý: 8.500.000đ – 9.800.000đ/năm.
-  2. *Đơn thuốc nên mua & nên bỏ:* Bắt buộc có Thủy kích + Gara chính hãng; Cắt bỏ gói mất cắp gương nếu đỗ hầm (tiết kiệm 1.200.000đ); Chọn mức khấu trừ 500k (tiết kiệm thêm 15%–20%).
+  1. *Khung giá thị trường:* Biểu phí chuẩn ngoài đại lý: 8.500.000đ - 9.800.000đ/năm.
+  2. *Gói bảo hiểm nên mua & nên bỏ:* Bắt buộc có Thủy kích + Gara chính hãng; Cắt bỏ gói mất cắp gương nếu đỗ hầm (tiết kiệm 1.200.000đ); Chọn mức khấu trừ 500k (tiết kiệm thêm 15%-20%).
   3. *So sánh sơ bộ 4 hãng lớn:* PVI (bồi thường nhanh nhất), Bảo Việt (gara chính hãng phủ kín), PTI (cứu hộ 24/7), MIC (phí cạnh tranh nhất).
 - **40% Khóa để chuyển đổi sang App:**
   - Bảng giá chính xác từng đồng của 4 hãng (`6.xxx.000đ`).
   - Voucher hoàn tiền đến 1.500.000đ vào Ví MoMo hoặc Voucher quà tặng xăng xe.
   - Luồng bồi thường va quẹt nhỏ bằng chụp ảnh trên App không cần chờ giám định viên.
-- **Nút CTA Web-to-App:** `Mở App MoMo để mở khóa bảng giá 4 hãng & Ưu đãi` (Cam kết: *Không gọi điện làm phiền – Tự chủ 100% online*).
+- **Nút CTA Web-to-App:** `Mở App MoMo để mở khóa bảng giá 4 hãng & Ưu đãi` (Cam kết: *Không gọi điện làm phiền - Tự chủ 100% online*).
 
 ---
 
@@ -167,9 +167,9 @@ Mỗi lựa chọn (`option`) quyết định trực tiếp node tiếp theo (`n
 
 #### Bộ 4 Câu hỏi Zero-Click Entry
 - **Câu 1: Số tiền bạn đang muốn hỗ trợ tài chính là bao nhiêu?**
-  - A. 2.000.000đ – 5.000.000đ *(Nhu cầu vi mô, cấp bách)*
-  - B. 6.000.000đ – 15.000.000đ *(Khoảng phổ biến nhất)*
-  - C. 16.000.000đ – 30.000.000đ *(Mức trần giải ngân nhanh)*
+  - A. 2.000.000đ - 5.000.000đ *(Nhu cầu vi mô, cấp bách)*
+  - B. 6.000.000đ - 15.000.000đ *(Khoảng phổ biến nhất)*
+  - C. 16.000.000đ - 30.000.000đ *(Mức trần giải ngân nhanh)*
   - D. Trên 30.000.000đ *(Nhu cầu vay tiêu dùng lớn)*
 - **Câu 2: Bạn đang cần khoản tiền này gấp trong bao lâu?**
   - A. Cần gấp trong ngày hôm nay *(Đánh mạnh vào tính năng giải ngân sau 1 phút)*
@@ -181,16 +181,16 @@ Mỗi lựa chọn (`option`) quyết định trực tiếp node tiếp theo (`n
   - C. Lương tiền mặt / Thu nhập khác *(Điểm tín nhiệm: 0)*
 - **Câu 4: Lịch sử trả nợ thẻ tín dụng hoặc các khoản vay trước đây?**
   - A. Chưa từng vay ai hoặc luôn trả đúng hạn *(Điểm tín nhiệm: +2)*
-  - B. Thỉnh thoảng trễ hạn 1–3 ngày nhưng đã thanh toán đầy đủ *(Điểm tín nhiệm: +1)*
+  - B. Thỉnh thoảng trễ hạn 1-3 ngày nhưng đã thanh toán đầy đủ *(Điểm tín nhiệm: +1)*
   - C. Đang có khoản vay ở ngân hàng/ứng dụng khác *(Điểm tín nhiệm: 0)*
 
 #### Ma trận Trả Kết quả (Scoring Matrix)
-- **Hồ sơ Loại A (Tổng điểm 3–4):**
+- **Hồ sơ Loại A (Tổng điểm 3-4):**
   - *Kết quả:* Khả năng duyệt đạt **95%**. Đủ điều kiện nhận gói đúng số tiền mong muốn.
-  - *Ước tính trả góp:* Chỉ từ ~350.000đ/tháng (chia nhỏ 6–12 tháng). Tốc độ giải ngân 1 phút.
+  - *Ước tính trả góp:* Chỉ từ ~350.000đ/tháng (chia nhỏ 6-12 tháng). Tốc độ giải ngân 1 phút.
   - *CTA:* `Nhận khoản vay trên App MoMo`.
-- **Hồ sơ Loại B (Tổng điểm 1–2 hoặc Nhu cầu >15tr):**
-  - *Kết quả:* Gói [Số tiền chọn] cần thêm hồ sơ chứng minh thu nhập. Đề xuất phương án tối ưu: Nhận trước gói giải ngân tức thì 100% online **5.000.000đ – 10.000.000đ** không cần giấy tờ.
+- **Hồ sơ Loại B (Tổng điểm 1-2 hoặc Nhu cầu >15tr):**
+  - *Kết quả:* Gói [Số tiền chọn] cần thêm hồ sơ chứng minh thu nhập. Đề xuất phương án tối ưu: Nhận trước gói giải ngân tức thì 100% online **5.000.000đ - 10.000.000đ** không cần giấy tờ.
   - *CTA:* `Xem gói vay khả thi trên App MoMo`.
 - **Hồ sơ Loại C (Tổng điểm 0):**
   - *Kết quả:* Hướng sang giải pháp Chi tiêu trước - Trả sau (Ví Trả Sau miễn lãi 45 ngày) hoặc gói vay siêu nhỏ 2 triệu để xây dựng lại lịch sử tín dụng.
@@ -211,8 +211,8 @@ Mỗi lựa chọn (`option`) quyết định trực tiếp node tiếp theo (`n
   - D. Đi ăn uống, cafe, xem phim cuối tuần
 - **Câu 2: Trung bình mỗi tháng bạn chi tiêu không dùng tiền mặt khoảng bao nhiêu?**
   - A. Dưới 1 triệu
-  - B. Từ 1 – 3 triệu
-  - C. Từ 3 – 5 triệu
+  - B. Từ 1-3 triệu
+  - C. Từ 3-5 triệu
   - D. Trên 5 triệu
 - **Câu 3: Bạn đã có tài khoản MoMo và liên kết ngân hàng chưa?**
   - A. Đã có và dùng thường xuyên
@@ -222,28 +222,28 @@ Mỗi lựa chọn (`option`) quyết định trực tiếp node tiếp theo (`n
 #### Màn hình Kết quả (60% Reveal / 40% Gated)
 - **60% Public trên Web:**
   - *Tỷ lệ mở thành công sơ bộ:* 92% (Hồ sơ rất tiềm năng).
-  - *Khoảng hạn mức đề xuất kích hoạt lần đầu:* 1.000.000đ – 3.000.000đ (có thể tăng lên đến 10.000.000đ sau vài tháng chi tiêu).
+  - *Khoảng hạn mức đề xuất kích hoạt lần đầu:* 1.000.000đ - 3.000.000đ (có thể tăng lên đến 10.000.000đ sau vài tháng chi tiêu).
   - *Quyền lợi:* 0% lãi suất lên đến 45 ngày, thanh toán tại hơn 50.000 điểm đối tác.
 - **40% Khóa để chuyển đổi sang App:**
   - Hạn mức chính xác được cấp riêng cho số điện thoại của bạn.
-  - Bộ thẻ quà tặng giảm giá 50.000đ – 100.000đ áp dụng cho lần thanh toán đầu tiên bằng Ví Trả Sau.
+  - Bộ thẻ quà tặng giảm giá 50.000đ - 100.000đ áp dụng cho lần thanh toán đầu tiên bằng Ví Trả Sau.
 - **Nút CTA Web-to-App:** `Kích hoạt hạn mức trên App MoMo`.
 
 ---
 
 ### SẢN PHẨM 4: TIẾT KIỆM & TÍCH LŨY (WEALTH / SAVINGS)
 
-- **Định vị:** Lập kế hoạch "Tiền đẻ ra tiền" – Tối ưu tiền nhàn rỗi hàng tháng.
+- **Định vị:** Lập kế hoạch "Tiền đẻ ra tiền" - Tối ưu tiền nhàn rỗi hàng tháng.
 - **JTBD của người dùng:** Có một khoản tiền nhàn rỗi (vài triệu đến vài chục triệu) để trong tài khoản thanh toán không có lãi, muốn tìm chỗ gửi an toàn, sinh lời mỗi ngày và rút ra linh hoạt khi cần.
 
 #### Bộ 3 Câu hỏi
 - **Câu 1: Bạn thường có khoản tiền nhàn rỗi hàng tháng khoảng bao nhiêu?**
-  - A. Từ 500.000đ – 3.000.000đ *(Tiền tiêu vặt dư ra cuối tháng)*
-  - B. Từ 5.000.000đ – 20.000.000đ *(Tiền dự phòng công việc/gia đình)*
+  - A. Từ 500.000đ - 3.000.000đ *(Tiền tiêu vặt dư ra cuối tháng)*
+  - B. Từ 5.000.000đ - 20.000.000đ *(Tiền dự phòng công việc/gia đình)*
   - C. Trên 20.000.000đ *(Khoản tích lũy lớn chờ cơ hội đầu tư)*
 - **Câu 2: Bạn cần rút khoản tiền này ra sử dụng khi nào?**
   - A. Bất cứ lúc nào cần là phải rút được ngay, không bị mất lãi
-  - B. Có thể gửi cố định từ 1 – 3 tháng
+  - B. Có thể gửi cố định từ 1-3 tháng
   - C. Gửi dài hạn từ 6 tháng đến 1 năm trở lên
 - **Câu 3: Nỗi lo lớn nhất của bạn khi đem tiền đi gửi tích lũy?**
   - A. Lãi suất tài khoản ngân hàng thông thường quá thấp (gần như bằng 0%)
@@ -258,7 +258,7 @@ Mỗi lựa chọn (`option`) quyết định trực tiếp node tiếp theo (`n
   - *Bảng tính tiền lời ước tính:* Nhập số tiền nhàn rỗi -> Hiển thị số tiền lãi nhận được mỗi ngày/mỗi tháng.
 - **40% Khóa để chuyển đổi sang App:**
   - Kích hoạt tính năng "Tự động sinh lời mỗi ngày" từ số dư ví.
-  - Quà tặng 20.000đ – 50.000đ nạp đầu vào Túi Thần Tài.
+  - Quà tặng 20.000đ - 50.000đ nạp đầu vào Túi Thần Tài.
 - **Nút CTA Web-to-App:** `Mở Túi Thần Tài nhận tiền lời mỗi ngày trên MoMo`.
 
 ---
@@ -299,7 +299,7 @@ Toàn bộ các Quiz áp dụng bộ Event Schema chuẩn mực đồng nhất �
 | `quiz_start` | Chạm vào đáp án Câu hỏi 1 | `quiz_id`, `theme`, `first_choice` | Đo lường tỷ lệ bắt đầu (Start Rate) |
 | `quiz_step` | Hoàn thành mỗi câu hỏi | `quiz_id`, `step_index` (1, 2, 3), `question_key`, `selected_option` | Đo lường tỷ lệ rơi rụng (Drop-off Rate) qua từng bước |
 | `quiz_complete` | Màn hình kết quả 60% hiển thị | `quiz_id`, `result_tier`, `persona_id` | Đo lường tỷ lệ hoàn tất (Completion Rate) |
-| `quiz_click_cta` | Bấm nút mở App MoMo | `quiz_id`, `result_tier`, `destination_deeplink` | Đo lường tỷ lệ chuyển đổi cuối cùng (Web-to-App Conversion) |
+| `quiz_click_cta` | Nhấp vào nút mở App MoMo | `quiz_id`, `result_tier`, `destination_deeplink` | Đo lường tỷ lệ chuyển đổi cuối cùng (Web-to-App Conversion) |
 
 ---
 
@@ -307,7 +307,7 @@ Toàn bộ các Quiz áp dụng bộ Event Schema chuẩn mực đồng nhất �
 
 | Giai đoạn | Thời gian | Hạng mục thực hiện | Mục tiêu & Output |
 | :--- | :--- | :--- | :--- |
-| **P1: Vay Nhanh** | Tuần 1 | Triển khai Quiz Vay Nhanh trên Landing Page chuyên biệt | Validate Start Rate (>25%) và CTA Conversion (>80%) |
-| **P2: Bảo hiểm Thân vỏ** | Tuần 2 | Dựng luồng rẽ nhánh 3 Persona cho Bảo hiểm Thân vỏ Ô tô | Đạt tỷ lệ hoàn tất >60% cho sản phẩm High-Ticket |
-| **P3: Ví Trả Sau & Wealth** | Tuần 3 | Đóng gói Quiz Ví Trả Sau và Túi Thần Tài | Hoàn thiện bộ 5 Master Quiz trụ cột |
-| **P4: Blog Auto-Injection** | Tuần 4 | Tích hợp cơ chế tự động gắn Quiz theo `theme_id` vào toàn bộ hệ thống Blog | Mở rộng quy mô tiếp cận toàn bộ traffic Web Platform |
+| **Đợt 1: Vay Nhanh** | Tuần 1 | Triển khai Quiz Vay Nhanh trên Landing Page chuyên biệt | Validate Start Rate (>25%) và CTA Conversion (>80%) |
+| **Đợt 2: Bảo hiểm Thân vỏ** | Tuần 2 | Dựng luồng rẽ nhánh 3 Persona cho Bảo hiểm Thân vỏ Ô tô | Đạt tỷ lệ hoàn tất >60% cho sản phẩm High-Ticket |
+| **Đợt 3: Ví Trả Sau & Wealth** | Tuần 3 | Đóng gói Quiz Ví Trả Sau và Túi Thần Tài | Hoàn thiện bộ 5 Master Quiz trụ cột |
+| **Đợt 4: Blog Auto-Injection** | Tuần 4 | Tích hợp cơ chế tự động gắn Quiz theo `theme_id` vào toàn bộ hệ thống Blog | Mở rộng quy mô tiếp cận toàn bộ traffic Web Platform |

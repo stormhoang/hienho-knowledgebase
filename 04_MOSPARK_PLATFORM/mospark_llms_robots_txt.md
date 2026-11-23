@@ -1,5 +1,5 @@
 # MoSpark - LLMs Robots.txt
-& Robots.txt — Operational Skill Document
+& Robots.txt - Operational Skill Document
 
 > - **Document type:** Operational Skill
 > - **Audience:** Web Platform Team (Bảo + members)
@@ -41,19 +41,19 @@ Hai file `robots.txt` và `llms.txt` cùng nhau tạo thành **AI Crawler Policy
     <tr style="background-color:#f1f5f9;">
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">File</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Action</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Priority</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Đợt Triển Khai</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">robots.txt</code></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nâng cấp: fix param issue + add AI crawler policy</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P0 - Làm trước</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 1 - Làm trước</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">llms.txt</code></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Triển khai mới: master index + per-product full doc</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1 - Làm sau khi robots.txt ổn</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 2 - Làm sau khi robots.txt ổn</td>
     </tr>
   </tbody>
 </table>

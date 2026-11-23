@@ -1,10 +1,10 @@
 # PRD: Bản Tin An Toàn Bảo Mật (ATBM) - Q2/2026 & Quarterly Cycle
 
 > - **Use Case:** Bản Tin An Toàn Bảo Mật (Trust Product Campaign)
-> - **Main URL:** momo.vn/atbm/ban-tin/{quy-nam} (Ví dụ: `momo.vn/atbm/ban-tin/q2-2026`)
-> - **Division:** Risk & Security (GPD Web Platform)
-> - **Version:** 1.0 · Tháng 6/2026
-> - **Status:** [DRAFT] - Sẵn sàng cho phát triển (Tháng 7/2026 Release)
+> - **URL chính:** momo.vn/atbm/ban-tin/{quy-nam} (Ví dụ: `momo.vn/atbm/ban-tin/q2-2026`)
+> - **Khối phụ trách:** Risk & Security (GPD Web Platform)
+> - **Phiên bản:** 1.0 · Tháng 6/2026
+> - **Trạng thái:** [DRAFT] - Sẵn sàng cho phát triển (Tháng 7/2026 Release)
 
 ---
 

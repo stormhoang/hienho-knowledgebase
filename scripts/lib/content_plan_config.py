@@ -10,7 +10,35 @@ import unicodedata
 
 THRESHOLD = 500
 
+# Theme tổng (head term của cả Hub): nhường mọi từ khóa đã có trong CSV của theme con cùng Hub
+# để tránh hai URL cạnh tranh cùng một từ khóa (pillar tổng vs pillar con).
+# Theme thường cũng nhường từ khóa cho theme chuyên biệt hơn, xem generate_content_plan.keyword_owner.
+UMBRELLA_THEMES = {'bao-hiem'}
+
+# Theme mang tên thương hiệu/sản phẩm: từ khóa chứa tên thương hiệu (hoặc sản phẩm con) thuộc theme này,
+# kể cả khi tên theme ngành chung có nhiều token khớp hơn. Vd 'xổ số vietlott', 'xổ số mega' thuộc /vietlott/,
+# không thuộc /xo-so/. Khớp nguyên cụm từ trên dạng không dấu; chỉ áp dụng trong Hub có theme đó.
+BRAND_THEMES = {
+    'vietlott': ['vietlott', 'power 6 55', 'power 655', 'power', 'mega 6 45', 'mega 645', 'mega',
+                 'keno', 'max 3d', 'max3d', 'max 4d', 'max4d', '3d max', 'xo so 3d', 've so 3d', 'bingo', 'bingo18', 'bingo 18'],
+}
+
+# Cụm đồng nghĩa (không dấu) quy về một dạng khi xác định biến thể của head term pillar.
+# Ví dụ 'bảo hiểm xe ô tô', 'bảo hiểm xe hơi', 'bảo hiểm oto' đều là biến thể của 'bảo hiểm ô tô'.
+HEAD_SYNONYM_PHRASES = [
+    ('xe o to', 'o to'),
+    ('xe oto', 'o to'),
+    ('xe hoi', 'o to'),
+    ('oto', 'o to'),
+    ('bhxh', 'bao hiem xa hoi'),
+    ('bhyt', 'bao hiem y te'),
+    ('xo so vietlott', 'vietlott'),
+    ('xs vietlott', 'vietlott'),
+]
+
 def remove_accents(input_str):
+    # "đ/Đ" không tách được bằng NFKD nên phải thay tay, nếu không slug sẽ mất chữ (điểm -> iem)
+    input_str = input_str.replace('đ', 'd').replace('Đ', 'D')
     nfkd_form = unicodedata.normalize('NFKD', input_str)
     return ''.join([c for c in nfkd_form if not unicodedata.combining(c)])
 
@@ -112,13 +140,16 @@ def get_concrete_cta_hook(theme_slug):
         return f"{name} -> Deeplink: {link} -> Event: {evt}"
     return None
 
-# Quy tắc gom cụm Sub-clusters theo Demand thực tế
+# Quy tắc gom cụm Sub-clusters theo Demand thực tế.
+# Trigger khớp nguyên cụm từ (không khớp chuỗi con). Không đặt head term của theme (vd 'bảo hiểm y tế') làm trigger:
+# nó gom mọi từ khóa chung vào một cụm chuyên biệt, làm primary của cụm lệch nghĩa. Từ khóa không khớp cụm nào
+# đi về cụm fallback theo intent (FALLBACK_INTENT_CLUSTERS).
 SUB_CLUSTER_RULES = {
     'vietlott': [
         ('Power 6/55', ['power 6 55', 'power 6/55', 'power 655', 'power655', 'xspower', 'power'], 'power-6-55'),
         ('Mega 6/45', ['mega 6 45', 'mega 6/45', 'mega 645', 'mega645', 'xổ số mega', 'mega'], 'mega-6-45'),
         ('Keno', ['keno', 'quay số nhanh'], 'keno'),
-        ('Max 3D', ['max 3d', 'max3d', 'max 4d', 'max4d', 'max 3d pro'], 'max-3d'),
+        ('Max 3D', ['max 3d', 'max3d', 'max 4d', 'max4d', 'max 3d pro', '3d max', 'xổ số 3d', 'vé số 3d'], 'max-3d'),
         ('Bingo 18', ['bingo', 'bingo18', 'bingo 18'], 'bingo-18'),
         ('Đại lý & Mua vé online', ['mua vé', 'mua ve', 'đại lý', 'dai ly', 'điểm bán', 'sms', 'app', 'online'], 'dai-ly-mua-ve'),
         ('Cơ cấu & Trúng thưởng', ['cơ cấu', 'co cau', 'giải thưởng', 'giai thuong', 'trúng thưởng', 'dò vé', 'do ve'], 'co-cau-trung-thuong'),
@@ -203,7 +234,7 @@ SUB_CLUSTER_RULES = {
         ('Hệ Thống Rạp CGV Cinemas', ['cgv', 'cgv hà nội', 'cgv tp hcm', 'cgv vincom', 'cgv aeon', 'cgv quận'], 'he-thong-rap-cgv'),
         ('Hệ Thống Rạp Lotte, Galaxy & BHD', ['lotte', 'galaxy', 'bhd', 'beta', 'cinestar', 'quốc gia', 'mega gs', 'dcine', 'starlight'], 'he-thong-rap-lotte-galaxy-bhd'),
         ('Rạp Chiếu Phim Gần Đây & Phòng Chiếu', ['gần đây', 'gan day', 'gần nhất', 'địa chỉ', 'chi nhánh', 'phòng chiếu', 'imax', '4dx', 'gold class', 'lamour', 'ghế đôi', 'sweetbox'], 'rap-chieu-phim-gan-day'),
-        ('Bảng Giá & Dịch Vụ Bỏng Nước Tại Rạp', ['giá vé', 'gia ve', 'vé rẻ', 'bắp', 'bỏng', 'nước', 'combo', 'menu', 'dịch vụ', 'đặt vé', 'mua vé', 'rạp chiếu phim', 'rap chieu phim', 'phim chiếu rạp', 'rạp phim', 'cụm rạp', 'rạp', 'rap'], 'bang-gia-dich-vu-bong-nuoc'),
+        ('Bảng Giá & Dịch Vụ Bỏng Nước Tại Rạp', ['giá vé', 'gia ve', 'vé rẻ', 'bắp', 'bỏng', 'nước', 'combo', 'menu', 'dịch vụ'], 'bang-gia-dich-vu-bong-nuoc'),
     ],
     'dat-phim': [
         ('Đặt Vé CGV & Lotte Cinema', ['cgv', 'lotte', 'lotte cinema'], 'dat-ve-cgv-lotte'),
@@ -215,7 +246,7 @@ SUB_CLUSTER_RULES = {
         ('Phim Chiếu Rạp Mới Nhất', ['chiếu rạp', 'chieu rap', 'phim rạp', 'phim mới', 'phim moi', 'sắp chiếu', 'bom tấn'], 'phim-chieu-rap-moi-nhat'),
         ('Top Phim Hay & Đánh Giá Phim', ['phim hay', 'top phim', 'review', 'đánh giá', 'trailer', 'thuyết minh', 'vietsub'], 'top-phim-hay-danh-gia'),
         ('Phim Hoạt Hình & Anime Hot', ['hoạt hình', 'anime', '3d', 'hoat hinh', 'manga'], 'phim-hoat-hinh-anime'),
-        ('Thể Loại Phim & Tuyển Tập', ['hành động', 'kinh dị', 'tình cảm', 'hài', 'khoa học viễn tưởng', 'phim lẻ', 'phim bộ', 'phim'], 'the-loai-phim-tuyen-tap'),
+        ('Thể Loại Phim & Tuyển Tập', ['hành động', 'kinh dị', 'tình cảm', 'hài', 'khoa học viễn tưởng', 'phim lẻ', 'phim bộ'], 'the-loai-phim-tuyen-tap'),
     ],
     'vay': [
         ('Vay Tiền Online Chuyển Khoản Nhanh', ['chuyển khoản', 'online', 'duyệt nhanh', 'cấp tốc', 'ngay', 'trong ngày', 'app vay', 'h5', 'cmnd', 'cccd', 'không thế chấp'], 'vay-online-chuyen-khoan'),
@@ -239,25 +270,25 @@ SUB_CLUSTER_RULES = {
         ('Bảo Hiểm Xe Máy Bắt Buộc (TNDS)', ['tnds', 'bắt buộc', 'bat buoc', 'trách nhiệm dân sự', 'trach nhiem dan su', 'quy định', 'luật', 'mức phạt', 'công an', 'bị phạt'], 'tnds-bat-buoc-xe-may'),
         ('Bảo Hiểm Tự Nguyện & Cháy Nổ Xe Máy', ['tự nguyện', 'tu nguyen', 'cháy nổ', 'mất cắp', 'tai nạn', 'người ngồi trên xe', 'vật chất'], 'bao-hiem-tu-nguyen-xe-may'),
         ('Biểu Phí & Mua Bảo Hiểm Xe Máy Online', ['mua', 'đặt', 'online', 'trực tuyến', 'giá', 'biểu phí', 'bao nhiêu tiền', '66k', '86k', 'app', 'momo', 'giao tận nơi'], 'bieu-phi-mua-online-xe-may'),
-        ('Tra Cứu Hạn Dùng & Bồi Thường Xe Máy', ['tra cứu', 'kiểm tra', 'check', 'thời hạn', 'hạn dùng', 'điện tử', 'bồi thường', 'hồ sơ', 'thủ tục', 'bảo hiểm xe máy', 'bảo hiểm xe'], 'tra-cuu-boi-thuong-xe-may'),
+        ('Tra Cứu Hạn Dùng & Bồi Thường Xe Máy', ['tra cứu', 'kiểm tra', 'check', 'thời hạn', 'hạn dùng', 'điện tử', 'bồi thường', 'hồ sơ', 'thủ tục'], 'tra-cuu-boi-thuong-xe-may'),
     ],
     'bao-hiem-o-to': [
         ('Bảo Hiểm TNDS Bắt Buộc Ô Tô', ['tnds', 'bắt buộc', 'bat buoc', 'trách nhiệm dân sự', 'dân sự', 'đăng kiểm', 'mức phạt', 'nghị định'], 'tnds-bat-buoc-o-to'),
         ('Bảo Hiểm Thân Vỏ & Vật Chất Xe Ô Tô', ['thân vỏ', 'than vo', 'vật chất', 'vat chat', 'thủy kích', 'ngập nước', 'mất cắp', 'tai nạn', 'xước', 'sơn'], 'bao-hiem-than-vo-o-to'),
         ('Báo Giá & Mua Bảo Hiểm Ô Tô Online', ['báo giá', 'giá', 'biểu phí', 'bao nhiêu tiền', 'mua online', 'bảo việt', 'pvi', 'pti', 'mic', 'bảo minh', 'liberty'], 'bao-gia-mua-online-o-to'),
-        ('Quy Trình Giám Định & Bồi Thường Ô Tô', ['bồi thường', 'giám định', 'gara', 'sửa chữa', 'hồ sơ', 'thủ tục', 'miễn thường', 'bảo hiểm ô tô', 'bảo hiểm xe ô tô', 'bảo hiểm oto'], 'quy-trinh-boi-thuong-o-to'),
+        ('Quy Trình Giám Định & Bồi Thường Ô Tô', ['bồi thường', 'giám định', 'gara', 'sửa chữa', 'hồ sơ', 'thủ tục', 'miễn thường'], 'quy-trinh-boi-thuong-o-to'),
     ],
     'bhyt': [
         ('Quyền Lợi & Mức Hưởng Khám BHYT', ['quyền lợi', 'mức hưởng', 'khám chữa bệnh', 'bệnh viện', 'trái tuyến', 'đúng tuyến', '100%', '80%', 'chi trả', 'thuốc'], 'quyen-loi-muc-huong-bhyt'),
         ('Đóng Tiếp & Gia Hạn BHYT Hộ Gia Đình', ['hộ gia đình', 'đóng', 'gia hạn', 'tái tục', 'online', 'mua mới', 'mua ở đâu', 'bao nhiêu tiền', 'giá', 'dịch vụ công'], 'dong-tiep-gia-han-bhyt'),
         ('Tra Cứu Thẻ & Mã Số BHYT Điện Tử', ['tra cứu', 'kiểm tra', 'check', 'mã số', 'số thẻ', 'hạn sử dụng', 'giá trị', 'điện tử', 'vssid', 'vneid'], 'tra-cuu-the-bhyt-dien-tu'),
-        ('Thủ Tục Cấp Lại & Đổi Thẻ BHYT', ['cấp lại', 'đổi thẻ', 'mất thẻ', 'sai thông tin', 'thủ tục', 'hồ sơ', 'bảo hiểm y tế', 'bhyt'], 'thu-tuc-doi-the-bhyt'),
+        ('Thủ Tục Cấp Lại & Đổi Thẻ BHYT', ['cấp lại', 'đổi thẻ', 'mất thẻ', 'sai thông tin', 'thủ tục', 'hồ sơ'], 'thu-tuc-doi-the-bhyt'),
     ],
     'bhxh': [
         ('Rút BHXH 1 Lần & Điều Kiện Chi Trả', ['1 lần', 'một lần', 'rút', 'lãnh', 'cách tính', 'hồ sơ', 'điều kiện', 'thủ tục', 'bao lâu'], 'rut-bhxh-1-lan'),
         ('Chế Độ Thai Sản, Ốm Đau & Hưu Trí', ['thai sản', 'ốm đau', 'hưu trí', 'lương hưu', 'nghỉ việc', 'dưỡng sức', 'chế độ', 'tuổi nghỉ hưu', 'thất nghiệp'], 'che-do-thai-san-huu-tri'),
         ('Tra Cứu Sổ BHXH & Quá Trình Đóng', ['tra cứu', 'sổ bhxh', 'quá trình đóng', 'kiểm tra', 'mã số', 'vssid', 'cổng dịch vụ công', 'dvc'], 'tra-cuu-so-bhxh-qua-trinh'),
-        ('Đóng BHXH Tự Nguyện & Doanh Nghiệp', ['tự nguyện', 'bắt buộc', 'mức đóng', 'phương thức đóng', 'doanh nghiệp', 'nộp tiền', 'bảo hiểm xã hội', 'bhxh'], 'dong-bhxh-tu-nguyen'),
+        ('Đóng BHXH Tự Nguyện & Doanh Nghiệp', ['tự nguyện', 'bắt buộc', 'mức đóng', 'phương thức đóng', 'doanh nghiệp', 'nộp tiền'], 'dong-bhxh-tu-nguyen'),
     ],
     'phat-nguoi': [
         ('Tra Cứu Phạt Nguội Toàn Quốc & Cục CSGT', ['tra cứu', 'kiểm tra', 'check', 'cục csgt', 'cảnh sát giao thông', 'toàn quốc', 'app', 'website', 'chính xác', 'hôm nay'], 'tra-cuu-phat-nguoi-csgt'),
@@ -269,19 +300,19 @@ SUB_CLUSTER_RULES = {
         ('Tra Cứu Biển Số Xe 63 Tỉnh Thành', ['tỉnh', 'tỉnh nào', 'tỉnh thành', 'toàn quốc', 'tra cứu', 'bảng tra', 'danh sách', 'ký hiệu', 'mã vùng'], 'tra-cuu-bien-so-63-tinh'),
         ('Đấu Giá Biển Số Xe Đẹp & Định Danh', ['đấu giá', 'dau gia', 'định danh', 'dinh danh', 'biển số định danh', 'quy chế', 'tiền đặt trước'], 'dau-gia-bien-so-dinh-danh'),
         ('Ý Nghĩa Biển Số Đẹp & Phong Thủy', ['phong thủy', 'ý nghĩa', 'ngũ quý', 'tứ quý', 'thần tài', 'lộc phát', 'số đẹp', 'hợp mệnh', 'dịch biển'], 'y-nghia-bien-so-phong-thuy'),
-        ('Thủ Tục Cấp, Đổi Biển & Sang Tên Xe', ['sang tên', 'đổi biển', 'cấp lại', 'thủ tục', 'hồ sơ', 'thu hồi', 'đăng ký xe', 'làm biển', 'biển số'], 'thu-tuc-cap-doi-bien-so'),
+        ('Thủ Tục Cấp, Đổi Biển & Sang Tên Xe', ['sang tên', 'đổi biển', 'cấp lại', 'thủ tục', 'hồ sơ', 'thu hồi', 'đăng ký xe', 'làm biển'], 'thu-tuc-cap-doi-bien-so'),
     ],
     'bien-so-xe': [
         ('Tra Cứu Biển Số Xe 63 Tỉnh Thành', ['tỉnh', 'tỉnh nào', 'tỉnh thành', 'toàn quốc', 'tra cứu', 'bảng tra', 'danh sách', 'ký hiệu', 'mã vùng'], 'tra-cuu-bien-so-63-tinh'),
         ('Đấu Giá Biển Số Xe Đẹp & Định Danh', ['đấu giá', 'dau gia', 'định danh', 'dinh danh', 'biển số định danh', 'quy chế', 'tiền đặt trước'], 'dau-gia-bien-so-dinh-danh'),
         ('Ý Nghĩa Biển Số Đẹp & Phong Thủy', ['phong thủy', 'ý nghĩa', 'ngũ quý', 'tứ quý', 'thần tài', 'lộc phát', 'số đẹp', 'hợp mệnh', 'dịch biển'], 'y-nghia-bien-so-phong-thuy'),
-        ('Thủ Tục Cấp, Đổi Biển & Sang Tên Xe', ['sang tên', 'đổi biển', 'cấp lại', 'thủ tục', 'hồ sơ', 'thu hồi', 'đăng ký xe', 'làm biển', 'biển số'], 'thu-tuc-cap-doi-bien-so'),
+        ('Thủ Tục Cấp, Đổi Biển & Sang Tên Xe', ['sang tên', 'đổi biển', 'cấp lại', 'thủ tục', 'hồ sơ', 'thu hồi', 'đăng ký xe', 'làm biển'], 'thu-tuc-cap-doi-bien-so'),
     ],
     'bien-so-dep': [
         ('Đấu Giá Biển Số Xe Đẹp Trực Tuyến', ['đấu giá', 'dau gia', 'trực tuyến', 'biển số đẹp', 'vpa', 'tiền cọc'], 'dau-gia-bien-so-truc-tuyen'),
         ('Biển Số Ngũ Quý, Tứ Quý & Thần Tài', ['ngũ quý', 'tứ quý', 'thần tài', 'lộc phát', 'tam hoa', 'sảnh tiến', 'phát lộc'], 'bien-so-ngu-quy-than-tai'),
         ('Định Danh Biển Số Đẹp Theo Luật', ['định danh', 'dinh danh', 'thu hồi', 'sang tên', 'chuyển nhượng', 'quy định'], 'dinh-danh-bien-so-dep'),
-        ('Ý Nghĩa Phong Thủy Biển Số Xe', ['phong thủy', 'ý nghĩa', 'dịch biển', 'hợp tuổi', 'hợp mệnh', 'biển số'], 'y-nghia-phong-thuy-bien-so'),
+        ('Ý Nghĩa Phong Thủy Biển Số Xe', ['phong thủy', 'ý nghĩa', 'dịch biển', 'hợp tuổi', 'hợp mệnh'], 'y-nghia-phong-thuy-bien-so'),
     ],
 }
 

@@ -3,11 +3,11 @@
 *Tài liệu Đặc tả Yêu cầu Sản phẩm cho Hệ thống Quản lý & Liên kết Định danh Người dùng trên Website (Web Identity Hub & Mapping System)*
 
 ## 📋 THÔNG TIN CHUNG (Metadata)
-> *   **Tên dự án / Sản phẩm (PRODUCT NAME):** Web Identity Hub & Mapping System
-> *   **Đầu mối Cell Team (PO & Tech Lead):** Growth Platform Division (GPD)
-> *   **Web Product Lead (Duyệt dự án):** Hien.ho
-> *   **Trạng thái tài liệu (Document status):** DRAFT
-> *   **Tiến độ dự kiến:** Q3/2026 (Kick-off) -> Q3/2026 (Pilot) -> Q4/2026 (Go-Live)
+> *   **Dự án:** Web Identity Hub & Mapping System
+> *   **Đội ngũ triển khai:** Growth Platform Division (GPD)
+> *   **Phê duyệt:** Hien.ho
+> *   **Trạng thái:** DRAFT
+> *   **Tiến độ:** Q3/2026 (Kick-off) -> Q3/2026 (Pilot) -> Q4/2026 (Go-Live)
 > *   **Loại yêu cầu:** [x] Tính năng mới | [ ] Cải tiến/Thay đổi cấu trúc
 
 ---

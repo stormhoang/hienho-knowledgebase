@@ -1,9 +1,9 @@
 # DANH MỤC TỪ KHÓA QUICK WINS TOÀN WEB PLATFORM (HIGH ROI OPPORTUNITIES)
 
-Tập hợp các từ khóa có **Search Volume cao ($\\ge 1.500$) và Mức độ Cạnh tranh Thấp (Low PPC Competition)** trên toàn bộ 163 Use Cases của Web Platform. Đây là các chủ đề ưu tiên hàng đầu mang lại lưu lượng truy cập nhanh nhất với chi phí nội dung tối thiểu.
+Tập hợp các từ khóa có **Search Volume cao ($\\ge 1.500$) và Mức độ Cạnh tranh Thấp (Low PPC Competition)** trên toàn bộ 164 Use Cases của Web Platform. Đây là các chủ đề ưu tiên hàng đầu mang lại lưu lượng truy cập nhanh nhất với chi phí nội dung tối thiểu.
 
-- **Tổng số từ khóa Quick Wins phát hiện:** 573 từ khóa
-- **Tổng dung lượng tìm kiếm Quick Wins:** 7,738,000 lượt/tháng
+- **Tổng số từ khóa Quick Wins phát hiện:** 579 từ khóa
+- **Tổng dung lượng tìm kiếm Quick Wins:** 7,826,000 lượt/tháng
 
 ---
 
@@ -28,7 +28,7 @@ Tập hợp các từ khóa có **Search Volume cao ($\\ge 1.500$) và Mức đ�
 | 15 | `đăng ký nguyện vọng đại học` | 22,200 | `Transactional` | 9.65 | Đại Học & Trường Đại Học | student | Độc lập |
 | 16 | `nạp tiền tiktok` | 1,900 | `Transactional` | 9.61 | Nạp Xu TikTok | Entertainment | cách nạp tiền tiktok, nạp tiền vào tiktok |
 | 17 | `mua bảo hiểm y tế online` | 9,900 | `Transactional` | 9.4 | Bảo Hiểm Y Tế (BHYT) | insurtech | mua bhyt online, mua the bảo hiểm y tế online |
-| 18 | `mua bảo hiểm y tế online` | 9,900 | `Transactional` | 9.4 | Bảo Hiểm Xã Hội (BHXH) | insurtech | mua the bảo hiểm y tế online, mua bảo hiểm y tế online 2022 |
+| 18 | `mua bảo hiểm y tế online` | 9,900 | `Transactional` | 9.4 | Bảo Hiểm | insurtech | mua the bảo hiểm y tế online, mua bảo hiểm y tế online 2022 |
 | 19 | `kiểm tra phạt nguội` | 135,000 | `Tool/Calculator` | 9.25 | Tra Cứu Phạt Nguội Toàn Quốc | vehicle-hub | kiểm tra phạt nguội xe máy, kiểm tra phạt nguội xe ô tô |
 | 20 | `vcbs bảng giá` | 22,200 | `Commercial` | 9.24 | Chứng Khoán | Financial | bảng giá vcbs, bảng giá ck vcbs |
 | 21 | `mua đô` | 14,800 | `Transactional` | 9.04 | Tỷ Giá Ngoại Tệ | Financial | Độc lập |
@@ -36,7 +36,7 @@ Tập hợp các từ khóa có **Search Volume cao ($\\ge 1.500$) và Mức đ�
 | 23 | `đặt vé xe phương trang` | 27,100 | `Transactional` | 8.97 | Vé Xe Khách | ota | phương trang đặt vé, đặt vé phương trang |
 | 24 | `định giá sim24h` | 49,500 | `Tool/Calculator` | 8.75 | SIM Số Đẹp & eSIM | telco | sim24h định giá, định giá sim sim24h |
 | 25 | `mua bảo hiểm y tế` | 5,400 | `Transactional` | 8.75 | Bảo Hiểm Y Tế (BHYT) | insurtech | mua bhyt, bhyt mua bao nhiêu |
-| 26 | `mua bảo hiểm y tế` | 5,400 | `Transactional` | 8.75 | Bảo Hiểm Xã Hội (BHXH) | insurtech | Độc lập |
+| 26 | `mua bảo hiểm y tế` | 5,400 | `Transactional` | 8.75 | Bảo Hiểm | insurtech | Độc lập |
 | 27 | `nạp tiền vào ví airpay` | 22,200 | `Transactional` | 8.69 | Ví Điện Tử | Financial | Độc lập |
 | 28 | `cách nạp thẻ viettel` | 14,800 | `Transactional` | 8.39 | Nạp Tiền Điện Thoại & Thẻ Cào | telco | cách nạp thẻ cào viettel, cách nạp thẻ dt viettel |
 | 29 | `tính bmi` | 40,500 | `Tool/Calculator` | 8.31 | Chỉ Số & Tính Toán BMI Chuẩn | hospital | bmi tính, bmi tính như nào |

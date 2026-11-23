@@ -1,8 +1,8 @@
 # BRD: Travel Hub (MoMo Travel) - Trung Tâm Cẩm Nang & Đặt Vé Du Lịch - Đi Lại
 
-> - **Project:** Travel Hub (Cổng Thông Tin & Đặt Dịch Vụ Du Lịch - Đi Lại)
-> - **Main URL:** momo.vn/du-lich-di-lai
-> - **Division:** Growth Platform Division (GPD)
+> - **Dự án:** Travel Hub (Cổng Thông Tin & Đặt Dịch Vụ Du Lịch - Đi Lại)
+> - **URL chính:** momo.vn/du-lich-di-lai
+> - **Khối phụ trách:** Growth Platform Division (GPD)
 > - **Owner:** Web Platform Team (GPD)
 
 ## 1. BUSINESS CONTEXT & PRODUCT OVERVIEW

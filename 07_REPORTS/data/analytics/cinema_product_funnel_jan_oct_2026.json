@@ -1,0 +1,362 @@
+{
+ "2026-01": {
+  "steps": {
+   "1. Show Time": {
+    "ev": 141157,
+    "u": 36044
+   },
+   "2. Seat": {
+    "ev": 15971,
+    "u": 9903
+   },
+   "3. Popcorn & Drink": {
+    "ev": 12219,
+    "u": 8160
+   },
+   "4. Book Ticket": {
+    "ev": 7707,
+    "u": 5020
+   },
+   "4. Book Ticket (qrcode)": {
+    "ev": 1568,
+    "u": 987
+   }
+  },
+  "funnel_complete": {
+   "ev": 9270,
+   "u": 6006
+  },
+  "funnel_start": {
+   "ev": 140927,
+   "u": 36024
+  },
+  "click_to_app": {
+   "ev": 12955,
+   "u": 8792
+  }
+ },
+ "2026-02": {
+  "steps": {
+   "1. Show Time": {
+    "ev": 634032,
+    "u": 89692
+   },
+   "2. Seat": {
+    "ev": 41990,
+    "u": 23201
+   },
+   "3. Popcorn & Drink": {
+    "ev": 31255,
+    "u": 19204
+   },
+   "4. Book Ticket": {
+    "ev": 23273,
+    "u": 13885
+   },
+   "4. Book Ticket (qrcode)": {
+    "ev": 2468,
+    "u": 1447
+   }
+  },
+  "funnel_complete": {
+   "ev": 25710,
+   "u": 15249
+  },
+  "funnel_start": {
+   "ev": 633024,
+   "u": 89652
+  },
+  "click_to_app": {
+   "ev": 33526,
+   "u": 21001
+  }
+ },
+ "2026-03": {
+  "steps": {
+   "1. Show Time": {
+    "ev": 240975,
+    "u": 53531
+   },
+   "2. Seat": {
+    "ev": 27307,
+    "u": 16152
+   },
+   "3. Popcorn & Drink": {
+    "ev": 20990,
+    "u": 13518
+   },
+   "4. Book Ticket": {
+    "ev": 14345,
+    "u": 8966
+   },
+   "4. Book Ticket (qrcode)": {
+    "ev": 2407,
+    "u": 1423
+   }
+  },
+  "funnel_complete": {
+   "ev": 16721,
+   "u": 10365
+  },
+  "funnel_start": {
+   "ev": 240514,
+   "u": 53475
+  },
+  "click_to_app": {
+   "ev": 21456,
+   "u": 14012
+  }
+ },
+ "2026-04": {
+  "steps": {
+   "1. Show Time": {
+    "ev": 209408,
+    "u": 48784
+   },
+   "2. Seat": {
+    "ev": 22460,
+    "u": 13755
+   },
+   "3. Popcorn & Drink": {
+    "ev": 18135,
+    "u": 11750
+   },
+   "4. Book Ticket": {
+    "ev": 11329,
+    "u": 7217
+   },
+   "4. Book Ticket (qrcode)": {
+    "ev": 2091,
+    "u": 1234
+   }
+  },
+  "funnel_complete": {
+   "ev": 13235,
+   "u": 8328
+  },
+  "funnel_start": {
+   "ev": 208690,
+   "u": 48661
+  },
+  "click_to_app": {
+   "ev": 857872,
+   "u": 300134
+  }
+ },
+ "2026-05": {
+  "steps": {
+   "1. Show Time": {
+    "ev": 236995,
+    "u": 58863
+   },
+   "2. Seat": {
+    "ev": 22317,
+    "u": 13590
+   },
+   "3. Popcorn & Drink": {
+    "ev": 17548,
+    "u": 11299
+   },
+   "4. Book Ticket": {
+    "ev": 10617,
+    "u": 6706
+   },
+   "4. Book Ticket (qrcode)": {
+    "ev": 2187,
+    "u": 1371
+   }
+  },
+  "funnel_complete": {
+   "ev": 12601,
+   "u": 7996
+  },
+  "funnel_start": {
+   "ev": 236305,
+   "u": 58683
+  },
+  "click_to_app": {
+   "ev": 779753,
+   "u": 288161
+  }
+ },
+ "2026-06": {
+  "steps": {
+   "1. Show Time": {
+    "ev": 215915,
+    "u": 53074
+   },
+   "2. Seat": {
+    "ev": 23975,
+    "u": 14497
+   },
+   "3. Popcorn & Drink": {
+    "ev": 18498,
+    "u": 12066
+   },
+   "4. Book Ticket": {
+    "ev": 11351,
+    "u": 7237
+   },
+   "4. Book Ticket (qrcode)": {
+    "ev": 2377,
+    "u": 1530
+   }
+  },
+  "funnel_complete": {
+   "ev": 13486,
+   "u": 8590
+  },
+  "funnel_start": {
+   "ev": 215219,
+   "u": 52843
+  },
+  "click_to_app": {
+   "ev": 787077,
+   "u": 259338
+  }
+ },
+ "2026-07": {
+  "steps": {
+   "1. Show Time": {
+    "ev": 313849,
+    "u": 57203
+   },
+   "2. Seat": {
+    "ev": 22249,
+    "u": 13523
+   },
+   "3. Popcorn & Drink": {
+    "ev": 16331,
+    "u": 10852
+   },
+   "4. Book Ticket": {
+    "ev": 9418,
+    "u": 6190
+   },
+   "4. Book Ticket (qrcode)": {
+    "ev": 2879,
+    "u": 1781
+   }
+  },
+  "funnel_complete": {
+   "ev": 11995,
+   "u": 7729
+  },
+  "funnel_start": {
+   "ev": 312816,
+   "u": 56944
+  },
+  "click_to_app": {
+   "ev": 749557,
+   "u": 252453
+  }
+ },
+ "2026-08": {
+  "steps": {
+   "1. Show Time": {
+    "ev": 220224,
+    "u": 57152
+   },
+   "2. Seat": {
+    "ev": 26346,
+    "u": 15828
+   },
+   "3. Popcorn & Drink": {
+    "ev": 19147,
+    "u": 12867
+   },
+   "4. Book Ticket": {
+    "ev": 11549,
+    "u": 7694
+   },
+   "4. Book Ticket (qrcode)": {
+    "ev": 3262,
+    "u": 2006
+   }
+  },
+  "funnel_complete": {
+   "ev": 14528,
+   "u": 9441
+  },
+  "funnel_start": {
+   "ev": 219486,
+   "u": 56988
+  },
+  "click_to_app": {
+   "ev": 771542,
+   "u": 259834
+  }
+ },
+ "2026-09": {
+  "steps": {
+   "1. Show Time": {
+    "ev": 260749,
+    "u": 68105
+   },
+   "2. Seat": {
+    "ev": 33468,
+    "u": 20434
+   },
+   "3. Popcorn & Drink": {
+    "ev": 25470,
+    "u": 17074
+   },
+   "4. Book Ticket": {
+    "ev": 17677,
+    "u": 11365
+   },
+   "4. Book Ticket (qrcode)": {
+    "ev": 3018,
+    "u": 1806
+   }
+  },
+  "funnel_complete": {
+   "ev": 20644,
+   "u": 13164
+  },
+  "funnel_start": {
+   "ev": 260334,
+   "u": 68039
+  },
+  "click_to_app": {
+   "ev": 1127495,
+   "u": 494409
+  }
+ },
+ "2026-10": {
+  "steps": {
+   "1. Show Time": {
+    "ev": 442664,
+    "u": 97911
+   },
+   "2. Seat": {
+    "ev": 49007,
+    "u": 29439
+   },
+   "3. Popcorn & Drink": {
+    "ev": 36633,
+    "u": 24280
+   },
+   "4. Book Ticket": {
+    "ev": 26540,
+    "u": 16805
+   },
+   "4. Book Ticket (qrcode)": {
+    "ev": 4029,
+    "u": 2342
+   }
+  },
+  "funnel_complete": {
+   "ev": 30545,
+   "u": 19144
+  },
+  "funnel_start": {
+   "ev": 358103,
+   "u": 85117
+  },
+  "click_to_app": {
+   "ev": 1000649,
+   "u": 340622
+  }
+ }
+}

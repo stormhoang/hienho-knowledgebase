@@ -15,7 +15,7 @@ Khi người dùng đưa ra câu lệnh:
 ## 2. QUY TRÌNH XỬ LÝ TỰ ĐỘNG (AUTOMATED WORKFLOW)
 
 1. **Chạy Script Tự Động Quét & Trích Xuất:**
-   - Thực thi lệnh: `python3 scripts/sync_tracking_report.py`
+   - Thực thi lệnh: `./.venv/bin/python scripts/sync_tracking_report.py`
    - Script tự động tìm file mới nhất trong `/Users/hienhv/Downloads/` có dạng `*[Ww]eb*[Pp]erformance*[Tt]racking*.xlsx` theo thời gian `mtime`.
    - Tự động nhận diện số ngày lũy kế MTD (MTD Days).
    - Tự động lưu bản ghi sạch vào SSOT [web_performance_tracking.xlsx](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/web_performance_tracking.xlsx).
@@ -29,7 +29,7 @@ Khi người dùng đưa ra câu lệnh:
 
 3. **Báo Cáo Trực Tiếp Cho Người Dùng (Executive Report):**
    - Trình bày bảng chỉ số tổng quan Kênh Web (Total PVs, % Target, Daily Pace, Run-rate Forecast 30d).
-   - Trình bày bảng phân bổ Kênh Traffic (Organic, Paid, Direct, Referral, Others).
+   - Trình bày bảng phân bổ Kênh Traffic theo 2 nhóm: Non-Paid gồm đúng 4 kênh (Organic, Direct, Referral, AI Traffic (GEO)) và Paid Ads.
    - Trình bày bảng Dashboard 5 Strategic Hubs (New User, Cinema, Financial, Vehicle, Student).
    - Đảm bảo tuân thủ phong cách Product/Tech Lead: **KHÔNG dùng Emoji/Icon**, **KHÔNG nêu tên riêng cá nhân**, sử dụng **Markdown Tables**.
 

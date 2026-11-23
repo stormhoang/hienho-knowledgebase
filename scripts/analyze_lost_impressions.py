@@ -1,3 +1,7 @@
+"""Phát hiện URL mất impressions: có impressions trong 90d/30d nhưng = 0 trong 30d/7d gần nhất (GSC).
+
+Usage: ./.venv/bin/python scripts/analyze_lost_impressions.py"""
+
 import json, os, sys
 from collections import defaultdict, Counter
 from datetime import datetime, timedelta

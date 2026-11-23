@@ -1,11 +1,11 @@
 # MoSpark - SEO/GEO Scoring System
 Hệ thống tự động kiểm duyệt & chấm điểm SEO/GEO chất lượng nội dung
 
-> - **Project Name:** MoSpark Web Platform
-> - **Division:** GPD (Growth Platform Division)
+> - **Dự án:** MoSpark Web Platform
+> - **Khối phụ trách:** GPD (Growth Platform Division)
 > - **Owner:** Bảo
 > - **PIC:** Trọng (Tech/API), Thuận (UI), Lộc (Access Control)
-> - **Version:** 1.3.1 · June 2026
+> - **Phiên bản:** 1.3.1 · June 2026
 
 ---
 

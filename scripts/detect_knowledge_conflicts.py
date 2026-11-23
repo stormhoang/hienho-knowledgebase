@@ -21,6 +21,14 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_OUT = ROOT / "00_HARNESS_CORE" / "knowledge_conflicts.json"
 DEFAULT_MD_OUT = ROOT / "00_HARNESS_CORE" / "knowledge_conflicts.md"
 
+# Repository Hubs (react-web-momo) chứa các data artifact dùng chung.
+# Chỉ kiểm tra tồn tại (existence), không đọc nội dung.
+_HUBS_CANDIDATES = [
+    Path("/Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo"),
+    Path("/Users/hienhv/Klaus/Web-Idea/react-web-momo"),
+]
+HUBS_REPO = next((p for p in _HUBS_CANDIDATES if p.exists()), _HUBS_CANDIDATES[0])
+
 SKIP_DIRS = {
     ".git",
     ".venv",
@@ -214,6 +222,20 @@ def scan(root: Path = ROOT) -> list[dict]:
 
                 # Nếu tệp đích tồn tại thực tế trong repo -> Hợp lệ, bỏ qua
                 if any(target.exists() for target in internal_targets):
+                    continue
+
+                # Nếu đường dẫn là data artifact thuộc repo Hubs (react-web-momo) -> external_reference
+                if not Path(ref).is_absolute() and (HUBS_REPO / ref.removeprefix("Base/")).exists():
+                    findings.append({
+                        "kind": "external_reference",
+                        "reference": ref,
+                        "raw_reference": raw,
+                        "source": rel_posix,
+                        "sources": [rel_posix],
+                        "line": number,
+                        "reason": "cross_repository_data_dependency",
+                        "message": "Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ.",
+                    })
                     continue
 
                 kind, reason, message = determine_conflict_details(ref, raw, source, root, line)

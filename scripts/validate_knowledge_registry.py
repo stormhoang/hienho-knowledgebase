@@ -42,7 +42,7 @@ def validate(registry: dict, today: date | None = None) -> list[str]:
         path = (ROOT / path_text).resolve()
         if not path.is_relative_to(ROOT):
             errors.append(f"Path vượt repository boundary: {path_text}")
-        elif not path.is_file():
+        elif not path.is_file() and not entry.get("local_only"):
             errors.append(f"Không tìm thấy source: {path_text}")
         if entry["authority"] not in ALLOWED_AUTHORITY:
             errors.append(f"{entry_id}: authority không hợp lệ")

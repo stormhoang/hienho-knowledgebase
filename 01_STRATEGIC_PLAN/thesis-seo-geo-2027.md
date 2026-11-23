@@ -1,6 +1,6 @@
 # THESIS: ĐỊNH HƯỚNG CHIẾN LƯỢC SEO ONPAGE (AI) VÀ OFFPAGE 2027
 
-**Đơn vị thực hiện:** Web Platform – Out-App Traffic Team (Growth Platform Division)  
+**Đơn vị thực hiện:** Web Platform - Out-App Traffic Team (Growth Platform Division)  
 **Tác giả / Phụ trách:** Nhóm Chiến lược Web Platform  
 **Website áp dụng:** momo.vn  
 **Cập nhật lần cuối:** Tháng 10/2026 (Bản Hiệu chỉnh v2.1: Chuẩn hóa Sizing Sản phẩm Đối ứng & Tái cấu trúc Mục tiêu 1M Non-paid)
@@ -49,17 +49,17 @@ MoMo hoàn toàn có thể đưa lượng truy cập không trả phí (**Non-pa
 
 ### 1.2. Năm Luận điểm Hỗ trợ (Supporting Arguments)
 
-* **Luận điểm 1 — Căn chỉnh Mục tiêu Thực tế & Nhịp tăng trưởng Khả thi:** Mục tiêu 1.000.000 PV Non-paid Hub Tài chính hoàn toàn tương thích với trần định hướng 4 triệu PV toàn Website của Ban Lãnh đạo. Tốc độ tăng trưởng run-rate yêu cầu đạt **~17,2%/tháng** (từ nền 150K lên 1M), giảm áp lực đáng kể so với mức 21,2%/tháng của mục tiêu cũ, giúp hệ thống có thời gian hấp thụ kỹ thuật và vượt qua độ trễ thuật toán (sandbox).
-* **Luận điểm 2 — Sizing Tập trung vào Sản phẩm Đối ứng, Tỷ lệ Chiếm lĩnh Thực chất:** Khi loại trừ 78,9M lượt tìm kiếm của Giá Vàng, dung lượng thị trường mục tiêu có sản phẩm đối ứng đạt **~24,9 triệu lượt/tháng**. Mục tiêu 1,0 triệu PV/tháng tương đương **~4,0% Share of Voice (SoV)**. Tỷ lệ này hoàn toàn có cơ sở vững chắc khi MoMo đã chứng minh đạt 9,9% SoV ở Vay tín chấp và 4,9% ở Trả sau – Trả góp.
-* **Luận điểm 3 — SEO Onpage AI đã có Bằng chứng Thực nghiệm (Proof of Concept):** Thử nghiệm 15 bài blog AI cho dự án Tra cứu Phạt Nguội tạo ra **11.450 clicks/3 tháng** (trung bình ~254 clicks/bài/tháng), với **14/15 bài lọt Top 10** Google (4 bài Top 3), vị trí trung bình Top 5. Chi phí AI chỉ tốn **936 VNĐ/bài**. Hệ thống MoSpark đã hoàn toàn sẵn sàng cho việc sản xuất hàng loạt.
-* **Luận điểm 4 — Khắc phục Triệt để Điểm nghẽn Agency Offpage 2026:** Năm 2026, MoMo chi **1,45 tỷ VNĐ** cho 171 link (~8,48 triệu VNĐ/link) qua agency nhưng chỉ đưa 13/29 từ khóa vào Top 10 (~112 triệu VNĐ cho 1 từ khóa Top 10), thứ hạng trồi sụt bất ổn và agency không cam kết traffic/conversion. Tự vận hành giúp MoMo kiểm soát trực tiếp chất lượng nguồn đặt link.
-* **Luận điểm 5 — Tối ưu Ngân sách & Đón đầu Làn sóng GEO:** Hợp tác trực tiếp với Admicro giúp tiết kiệm ~1,49 tỷ VNĐ chi phí mua link so với giá agency. Nhân sự Offpage In-house tập trung xây dựng Entity và Brand Mentions trên báo chí lớn và cộng đồng (VOZ, Tinh tế), giúp các AI Bots (ChatGPT, Gemini, Perplexity) nhận diện MoMo là nguồn trích dẫn tài chính uy tín nhất.
+* **Luận điểm 1 - Căn chỉnh Mục tiêu Thực tế & Nhịp tăng trưởng Khả thi:** Mục tiêu 1.000.000 PV Non-paid Hub Tài chính hoàn toàn tương thích với trần định hướng 4 triệu PV toàn Website của Ban Lãnh đạo. Tốc độ tăng trưởng run-rate yêu cầu đạt **~17,2%/tháng** (từ nền 150K lên 1M), giảm áp lực đáng kể so với mức 21,2%/tháng của mục tiêu cũ, giúp hệ thống có thời gian hấp thụ kỹ thuật và vượt qua độ trễ thuật toán (sandbox).
+* **Luận điểm 2 - Sizing Tập trung vào Sản phẩm Đối ứng, Tỷ lệ Chiếm lĩnh Thực chất:** Khi loại trừ 78,9M lượt tìm kiếm của Giá Vàng, dung lượng thị trường mục tiêu có sản phẩm đối ứng đạt **~24,9 triệu lượt/tháng**. Mục tiêu 1,0 triệu PV/tháng tương đương **~4,0% Share of Voice (SoV)**. Tỷ lệ này hoàn toàn có cơ sở vững chắc khi MoMo đã chứng minh đạt 9,9% SoV ở Vay tín chấp và 4,9% ở Trả sau - Trả góp.
+* **Luận điểm 3 - SEO Onpage AI đã có Bằng chứng Thực nghiệm (Proof of Concept):** Thử nghiệm 15 bài blog AI cho dự án Tra cứu Phạt Nguội tạo ra **11.450 clicks/3 tháng** (trung bình ~254 clicks/bài/tháng), với **14/15 bài lọt Top 10** Google (4 bài Top 3), vị trí trung bình Top 5. Chi phí AI chỉ tốn **936 VNĐ/bài**. Hệ thống MoSpark đã hoàn toàn sẵn sàng cho việc sản xuất hàng loạt.
+* **Luận điểm 4 - Khắc phục Triệt để Điểm nghẽn Agency Offpage 2026:** Năm 2026, MoMo chi **1,45 tỷ VNĐ** cho 171 link (~8,48 triệu VNĐ/link) qua agency nhưng chỉ đưa 13/29 từ khóa vào Top 10 (~112 triệu VNĐ cho 1 từ khóa Top 10), thứ hạng trồi sụt bất ổn và agency không cam kết traffic/conversion. Tự vận hành giúp MoMo kiểm soát trực tiếp chất lượng nguồn đặt link.
+* **Luận điểm 5 - Tối ưu Ngân sách & Đón đầu Làn sóng GEO:** Hợp tác trực tiếp với Admicro giúp tiết kiệm ~1,49 tỷ VNĐ chi phí mua link so với giá agency. Nhân sự Offpage In-house tập trung xây dựng Entity và Brand Mentions trên báo chí lớn và cộng đồng (VOZ, Tinh tế), giúp các AI Bots (ChatGPT, Gemini, Perplexity) nhận diện MoMo là nguồn trích dẫn tài chính uy tín nhất.
 
 ---
 
 ## III. STRATEGIC TARGETS & TRAFFIC BASELINE 2027
 
-### 2.1. Phân rã Mục tiêu Tăng trưởng (Traffic Breakdown)
+### 2.1. Bóc tách Mục tiêu Tăng trưởng (Traffic Breakdown)
 
 | Phạm vi Đo lường | Mục tiêu Traffic / Tháng (T12/2027) | Tỷ trọng / Ghi chú |
 | :--- | :---: | :--- |
@@ -129,8 +129,8 @@ Tổng Dung lượng Toàn ngành: 103,8M search/tháng
 ### 4.2. Quy trình Sản xuất Nội dung trên Nền tảng MoSpark
 
 Sản xuất Onpage 2027 vận hành qua 2 luồng công việc tự động hóa:
-* **Luồng 1 — Trang nội dung chính (132 trang - đóng góp ~72% traffic tăng thêm):** Content Strategy chốt khung -> Dev dựng UI/UX tiện ích -> AI fill nội dung (**936đ/trang**) -> Nhân sự chuyên môn kiểm duyệt fact & SEO.
-* **Luồng 2 — Blog hỗ trợ (1.200 bài - đóng góp ~22% traffic tăng thêm):** Strategy -> Plan Cluster -> GenAI sinh Outline + Viết bài + Auto Audit (**936đ/bài**) -> Web Team duyệt xuất bản.
+* **Luồng 1 - Trang nội dung chính (132 trang - đóng góp ~72% traffic tăng thêm):** Content Strategy chốt khung -> Dev dựng UI/UX tiện ích -> AI fill nội dung (**936đ/trang**) -> Nhân sự chuyên môn kiểm duyệt fact & SEO.
+* **Luồng 2 - Blog hỗ trợ (1.200 bài - đóng góp ~22% traffic tăng thêm):** Strategy -> Plan Cluster -> GenAI sinh Outline + Viết bài + Auto Audit (**936đ/bài**) -> Web Team duyệt xuất bản.
 
 ---
 
@@ -151,7 +151,7 @@ Sản xuất Onpage 2027 vận hành qua 2 luồng công việc tự động hó
 
 Chuyển đổi sang mô hình **In-House + Admicro** (đơn vị phân phối thuộc VCCorp):
 * **Tuyển dụng 1 Chuyên viên SEO Offpage In-house:** Trực tiếp quản lý kế hoạch link building, làm việc với nhà báo, điều hành mảng Social, Forum Seeding (VOZ, Tinh tế) và xây dựng mạng lưới **Partner/Merchant Hub**.
-* **Hợp tác trực tiếp với Admicro:** Mua bài PR với chiết khấu 20% – 55%, hạ đơn giá mua link xuống trung bình **~3,83 triệu VNĐ/link** (so với 8,48 triệu VNĐ của agency).
+* **Hợp tác trực tiếp với Admicro:** Mua bài PR với chiết khấu 20% - 55%, hạ đơn giá mua link xuống trung bình **~3,83 triệu VNĐ/link** (so với 8,48 triệu VNĐ của agency).
 * **Tiết kiệm chi phí:** Chi phí mua 316 link qua Admicro tốn **1,189 tỷ VNĐ**, giúp tiết kiệm trực tiếp **~1,49 tỷ VNĐ (~56%)** so với đơn giá agency 2026.
 
 ---
@@ -208,7 +208,7 @@ Chuyển đổi sang mô hình **In-House + Admicro** (đơn vị phân phối t
 
 ## IX. FINANCIAL PLAN & BUDGET PROPOSAL 2027
 
-### 8.1. Phân rã Chi tiết Ngân sách theo 3 Kịch bản
+### 8.1. Bóc tách Chi tiết Ngân sách theo 3 Kịch bản
 
 | Hạng mục Chi phí | Công thức / Khối lượng Tính toán | Kịch bản Thận trọng (VNĐ) | Kịch bản Trung bình (Xin duyệt) | Kịch bản Tốt nhất (VNĐ) |
 | :--- | :--- | :---: | :---: | :---: |
@@ -275,7 +275,7 @@ Chuyển đổi sang mô hình **In-House + Admicro** (đơn vị phân phối t
 
 1. **Theo dõi Đối thủ:** Quét Ahrefs cập nhật backlink profile của ZaloPay, VNPay, ViettelMoney.
 2. **Chọn Nguồn Link:** Đối chiếu danh sách 1.933 domain uy tín chưa trỏ về MoMo để chọn nguồn phù hợp.
-3. **Tiêu chí Chọn Trang Mục tiêu:** Ưu tiên các trang có từ khóa đang ở vị trí **Top 11–30** (cần ít link nhất để lọt Top 10) và có search volume lớn thuộc 5 trụ cột sản phẩm đối ứng.
+3. **Tiêu chí Chọn Trang Mục tiêu:** Ưu tiên các trang có từ khóa đang ở vị trí **Top 11-30** (cần ít link nhất để lọt Top 10) và có search volume lớn thuộc 5 trụ cột sản phẩm đối ứng.
 4. **Triển khai Booking & Partner Page:** Đặt bài PR qua Admicro; xây dựng trang **Partner Page** (`momo.vn/doi-tac/`) trên web đối tác.
 5. **Đo lường & Báo cáo:** Theo dõi vị trí từ khóa, referral traffic và chi phí thực tế.
 
@@ -289,8 +289,8 @@ Chuyển đổi sang mô hình **In-House + Admicro** (đơn vị phân phối t
 | :--- | :---: | :--- |
 | **1. Rủi ro Tự vận hành Offpage** | Khá | Tuyển chuyên viên Offpage có kinh nghiệm; ký hợp đồng khung với Admicro để bảo đảm mạng lưới báo chí; duy trì 1 agency nhỏ trong Q1 để làm đối chứng. |
 | **2. Thuật toán phạt Scaled Content (YMYL)** | Trung bình | Duy trì quy trình kiểm duyệt chuyên môn (Human-in-the-loop); chỉ xuất bản khi đạt điểm SEO/GEO >= 80 trên MoSpark; gắn tác giả chuyên môn. |
-| **3. Giả định Traffic Trang chính (~4.660 PV/trang)** | Thấp | Mức giả định đã được hạ từ 7.700 xuống 4.660 PV/trang. Chạy thí điểm (Pilot) 2–3 trang chính mảng Tín dụng & Thu nhập trong Q1/2027 để cân chỉnh. |
-| **4. Chi phí Dev & Nhân sự Duyệt bài** | Thấp | Chốt quota công việc duyệt bài với Inbound/BU và lịch làm việc của team Dev trước khi bấm nút triển khai hàng loạt. |
+| **3. Giả định Traffic Trang chính (~4.660 PV/trang)** | Thấp | Mức giả định đã được hạ từ 7.700 xuống 4.660 PV/trang. Chạy thí điểm (Pilot) 2-3 trang chính mảng Tín dụng & Thu nhập trong Q1/2027 để cân chỉnh. |
+| **4. Chi phí Dev & Nhân sự Duyệt bài** | Thấp | Chốt quota công việc duyệt bài với Inbound/BU và lịch làm việc của team Dev trước khi nhấp vào nút triển khai hàng loạt. |
 
 ---
 

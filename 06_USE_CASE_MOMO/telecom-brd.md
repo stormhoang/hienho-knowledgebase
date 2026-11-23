@@ -1,13 +1,13 @@
 # BRD: Viễn Thông
 
-> - **Project:** MoMo Telecom Growth - Sim Số Đẹp - Nạp Data - eSIM Du Lịch - Nạp Tiền ĐT
-> - **Main URL:** momo.vn/vien-thong (hub) - /sim-so-dep - /nap-data - /esim-du-lich - /nap-tien-dien-thoai
-> - **Division:** PS (Payment Services)
+> - **Dự án:** MoMo Telecom Growth - Sim Số Đẹp - Nạp Data - eSIM Du Lịch - Nạp Tiền ĐT
+> - **URL chính:** momo.vn/vien-thong (hub) - /sim-so-dep - /nap-data - /esim-du-lich - /nap-tien-dien-thoai
+> - **Khối phụ trách:** PS (Payment Services)
 > - **Use Case:** Telco
 > - **Owner:** Web Platform
-> - **Governance:** Web Product Lead (Hiến)
-> - **Version:** 2.1 - 2026-05-24
-> - **Status:** Active (Approved)
+> - **Phê duyệt:** Web Product Lead (Hiến)
+> - **Phiên bản:** 2.1 - 2026-05-24
+> - **Trạng thái:** Active (Approved)
 
 ---
 
@@ -21,7 +21,7 @@
 
 ### 1.1 Elegant Problem Framing
 - **Vấn đề cốt lõi:** Người dùng cần mua sim phong thủy, mua data gấp hoặc tìm eSIM đi du lịch, nhưng trải nghiệm mua online từ nhà mạng thì rời rạc, ra đại lý thì mất thời gian.
-- **Giải pháp (The "What"):** Gom toàn bộ nhu cầu viễn thông vào 1 Hub duy nhất trên MoMo Web. Sử dụng AI Giải luận phong thủy để tạo "Aha moment" (Bữa tối gia đình test của CEO) và cho phép thanh toán trọn vẹn hành trình (Full Journey).
+- **Giải pháp (The "What"):** Gom toàn bộ nhu cầu viễn thông vào 1 Hub duy nhất trên MoMo Web. Sử dụng AI Giải luận phong thủy để tạo "Aha moment" (Tiêu chuẩn trải nghiệm đột phá của CEO) và cho phép thanh toán trọn vẹn hành trình (Full Journey).
 
 ### 1.2 Situation & Complication
 Mỗi ngày, hàng triệu người Việt search "sim số đẹp hợp tuổi", "gói data Viettel tháng này", "esim du lịch Nhật". Thị trường ước tính 500K-800K searches/tháng, intent rõ ràng, CAC = 0. Nhưng MoMo rank yếu hoặc không rank cho các nhóm từ khóa volume cao này, nhường sân chơi cho TGDD và các bên bán sim trung gian.

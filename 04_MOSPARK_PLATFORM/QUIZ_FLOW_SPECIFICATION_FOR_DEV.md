@@ -29,7 +29,7 @@ Hệ thống Quiz trên Web Platform được chuẩn hóa thành 2 dạng kiế
 ├───────────────────────────────────┼────────────────────────────────────┤
 │ • Cấu trúc: Tuyến tính cố định    │ • Cấu trúc: Đồ thị hữu hướng (DAG) │
 │   Q1 ──► Q2 ──► Q3 ──► Result     │   Q1 ──► Q2.1 / Q2.2 ──► Q3.x      │
-│ • Độ dài: Cố định (3–4 câu)       │ • Độ dài: Co giãn linh hoạt (1–4 c)│
+│ • Độ dài: Cố định (3-4 câu)       │ • Độ dài: Co giãn linh hoạt (1-4 c)│
 │ • Cơ chế: Tất cả user đi cùng một │ • Cơ chế: Hỗ trợ Fast Exit (2 câu) │
 │   chuỗi câu hỏi; kết quả phân hoá │   và Contextual Drill-down sâu     │
 │   dựa trên điểm tổng (Scoring).   │ • Ứng dụng: Điểm Tín Dụng, Bảo hiểm│
@@ -117,8 +117,8 @@ Dev có thể dùng trực tiếp các sơ đồ Mermaid dưới đây để ren
 graph LR
     vts_q1["Q1: Nhu cầu chi tiêu chính?"] -->|Chọn bất kỳ| vts_q2["Q2: Mức chi tiêu tháng?"]
     vts_q2 -->|Chọn bất kỳ| vts_q3["Q3: Đã có tài khoản MoMo?"]
-    vts_q3 -->|Đã có MoMo| vts_res_ready["Result: 92% tỷ lệ duyệt (Hạn mức 1–3tr)"]
-    vts_q3 -->|Chưa có MoMo| vts_res_new["Result: Gói quà kích hoạt 1tr tân thủ"]
+    vts_q3 -->|Đã có MoMo| vts_res_ready["Result: 92% tỷ lệ duyệt (Hạn mức 1-3tr)"]
+    vts_q3 -->|Chưa có MoMo| vts_res_new["Result: Gói quà kích hoạt 1tr cho người dùng mới"]
 ```
 
 #### B. Quiz Tiết Kiệm & Tích Lũy (`quiz-tiet-kiem`)
@@ -136,9 +136,9 @@ graph LR
     vn_q1["Q1: Số tiền muốn vay?"] --> vn_q2["Q2: Mức độ cần gấp?"]
     vn_q2 --> vn_q3["Q3: Nguồn thu nhập?"]
     vn_q3 --> vn_q4["Q4: Lịch sử tín dụng?"]
-    vn_q4 -->|Điểm cao (3–4)| vn_res_a["Result: Duyệt 95% theo yêu cầu (1 phút)"]
-    vn_q4 -->|Điểm TB (1–2)| vn_res_b["Result: Đề xuất gói khả thi 5–10tr"]
-    vn_q4 -->|Điểm rủi ro (0)| vn_res_c["Result: Hướng sang Ví Trả Sau 1–3tr"]
+    vn_q4 -->|Điểm cao (3-4)| vn_res_a["Result: Duyệt 95% theo yêu cầu (1 phút)"]
+    vn_q4 -->|Điểm TB (1-2)| vn_res_b["Result: Đề xuất gói khả thi 5-10tr"]
+    vn_q4 -->|Điểm rủi ro (0)| vn_res_c["Result: Hướng sang Ví Trả Sau 1-3tr"]
 ```
 
 ---
@@ -156,11 +156,11 @@ graph TD
     cic_q_paid -->|Chưa trả| cic_res_bad["Result: Nguy cơ nợ xấu (Dưới 550 điểm)"]
     cic_q_paid -->|Đã thanh toán| cic_q_time["Q: Tất toán bao lâu rồi?"]
     
-    cic_q_time -->|Dưới 12 tháng| cic_res_fair["Result: Điểm Trung bình (550–619 điểm)"]
+    cic_q_time -->|Dưới 12 tháng| cic_res_fair["Result: Điểm Trung bình (550-619 điểm)"]
     cic_q_time -->|Trên 1 năm| cic_q_loans
     
-    cic_q_loans -->|Chưa có khoản nào| cic_res_good["Result: Điểm Khá (620–679 điểm)"]
-    cic_q_loans -->|1–2 khoản tốt| cic_res_exc["Result: Điểm Rất Tốt (680–750 điểm)"]
+    cic_q_loans -->|Chưa có khoản nào| cic_res_good["Result: Điểm Khá (620-679 điểm)"]
+    cic_q_loans -->|1-2 khoản tốt| cic_res_exc["Result: Điểm Rất Tốt (680-750 điểm)"]
     cic_q_loans -->|Từ 3 khoản trở lên| cic_res_fair
 ```
 
@@ -207,7 +207,7 @@ graph TD
     tax_q1 -->|Kiểm tra Hoàn Thuế| tax_job["Q: Tình trạng công việc trong năm?"]
     tax_job -->|Làm đủ 12 tháng 1 nơi| tax_res_stable["Result: Công ty ủy quyền quyết toán thay"]
     tax_job -->|Nhảy việc / Ngắt quãng| tax_exp["Q: Đã từng tự quyết toán online chưa?"]
-    tax_exp --> tax_res_refund["Result: DỰ BÁO ĐƯỢC HOÀN THUẾ (1.5tr – 8tr)"]
+    tax_exp --> tax_res_refund["Result: DỰ BÁO ĐƯỢC HOÀN THUẾ (1.5tr - 8tr)"]
     
     %% Nhánh 3: Freelance
     tax_q1 -->|Làm Freelance bị trừ 10%| tax_cert["Q: Có chứng từ khấu trừ 10% không?"]

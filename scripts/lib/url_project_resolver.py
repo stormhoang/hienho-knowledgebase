@@ -62,7 +62,7 @@ _AUTO_CANONICAL = {}
 
 def _canonical_project(name: str, page_type: str = "") -> str:
     n = name.strip()
-    # Dự án Cinema: Phân rã theo page_type thành Cinema_Cineplex Page, Cinema_Page, ...
+    # Dự án Cinema: Bóc tách theo page_type thành Cinema_Cineplex Page, Cinema_Page, ...
     if n.lower() == "cinema":
         pt = (page_type or "").strip()
         if pt in ("Cineplex Page", "Page", "Home Page", "Blog", "News", "Landing Page"):
@@ -146,15 +146,32 @@ INFERRED_PREFIX = [
     (r"^momo\.vn/tien-ich-giao-thong(?:/.*)?$", "Tiện Ích Giao Thông", "Hub Page", "high"),
     (r"^momo\.vn/(?:hoi-dap|tro-giup|ho-tro)(?:/.*)?$", "Hỏi đáp", "FAQ", "high"),
     (r"^momo\.vn/huong-dan(?:/.*)?$", "Guide", "Guide", "high"),
+    (r"^momo\.vn/tin-tuc/khuyen-mai/.*(?:chaomomo|chao-momo|hellomomo|gioi-thieu-momo|chao-ban-moi|qua-tang-ban-moi).*$", "New User", "News", "high"),
     (r"^momo\.vn/tin-tuc(?:/.*)?$", "Tin Tức", "News", "high"),
-    (r"^momo\.vn/(?:chao-ban-moi|hellomomo|welcome|curated-onboarding)(?:/.*)?$", "New User", "Landing Page", "high"),
+    (r"^momo\.vn/(?:gioi-thieu-momo|lienkettaikhoan|chao-ban-moi|hellomomo|chaomomo|chao-momo|welcome|curated-onboarding|qua-tang-ban-moi|game/mot-mua-quyt)(?:/.*)?$", "New User", "Landing Page", "high"),
     (r"^momo\.vn/download(?:/.*)?$", "Download", "Landing Page", "high"),
     (r"^momo\.vn/tai-app(?:/.*)?$", "Download", "Landing Page", "high"),
+    (r"^momo\.vn/tim-kiem(?:/.*)?$", "Tìm Kiếm", "Mini Web", "high"),
     (r"^momo\.vn/?$", "Home MoMo", "Home Page", "high"),
+    (r"^momo\.vn/thanh-toan-hoa-don/dien(?:/.*)?$", "Điện", "Landing Page", "high"),
+    (r"^momo\.vn/thanh-toan-hoa-don/nuoc(?:/.*)?$", "Nước", "Landing Page", "high"),
+    (r"^momo\.vn/thanh-toan-hoa-don/internet(?:/.*)?$", "Internet", "Landing Page", "high"),
+    (r"^momo\.vn/thanh-toan-hoa-don/truyen-hinh(?:/.*)?$", "Truyền Hình", "Landing Page", "high"),
+    (r"^momo\.vn/thanh-toan-hoa-don/chung-cu(?:/.*)?$", "Chung Cư", "Landing Page", "high"),
+    (r"^momo\.vn/thanh-toan-hoa-don/hoc-phi(?:/.*)?$", "Học Phí", "Landing Page", "high"),
+    (r"^momo\.vn/thanh-toan-hoa-don/?$", "Billpay", "Landing Page", "high"),
+    (r"^momo\.vn/dien(?:/.*)?$", "Điện", "Landing Page", "high"),
+    (r"^momo\.vn/nuoc(?:/.*)?$", "Nước", "Landing Page", "high"),
     (r"^momo\.vn/internet(?:/.*)?$", "Internet", "Landing Page", "high"),
+    (r"^momo\.vn/truyen-hinh(?:/.*)?$", "Truyền Hình", "Landing Page", "high"),
+    (r"^momo\.vn/chung-cu(?:/.*)?$", "Chung Cư", "Landing Page", "high"),
+    (r"^momo\.vn/phi-xet-tuyen(?:/.*)?$", "Phí Xét Tuyển", "Landing Page", "high"),
+    (r"^momo\.vn/vien-thong-tien-ich(?:/.*)?$", "Billpay", "Landing Page", "high"),
+    (r"^momo\.vn/thanh-toan-momo-the-hoc-duong-ssc(?:/.*)?$", "Học Phí", "Landing Page", "high"),
     (r"^momo\.vn/nap-tien-dien-thoai(?:/.*)?$", "Nạp tiền điện thoại", "Landing Page", "high"),
     (r"^momo\.vn/(?:tuyen-dung|career)(?:/.*)?$", "Tuyển Dụng", "Career", "high"),
     (r"^momo\.vn/campaign(?:/.*)?$", "Campaign", "Campaign", "high"),
+    (r"^momo\.vn/tro-thu-tai-chinh(?:/.*)?$", "Campaign", "Campaign", "high"),
     (r"^momo\.vn/(?:chuong-trinh|voucher)(?:/.*)?$", "Khuyến mãi", "Promotion", "high"),
     (r"^momo\.vn/(?:lixi|nhat-ky-lacxi)(?:/.*)?$", "Game Hub", "Game", "high"),
     (r"^momo\.vn/an-to(?:a|à)n(?:[-/].*)?$", "Trust", "Trust", "high"),
@@ -168,6 +185,11 @@ INFERRED_PREFIX = [
     (r"^momo\.vn/xe(?:/.*)?$", "Vé Xe", "Page", "high"),
     (r"^momo\.vn/esim(?:[-/].*)?$", "Esim", "Landing Page", "high"),
     (r"^momo\.vn/bao-hiem(?:[-/].*)?$", "Bảo Hiểm", "Landing Page", "high"),
+    (r"^momo\.vn/.*loa-thong-bao.*$", "Soundbox", "Page", "high"),
+    (r"^momo\.vn/loa-momo(?:/.*)?$", "Soundbox", "Page", "high"),
+    (r"^momo\.vn/page(?:/.*)?$", "Merchant", "Page", "high"),
+    (r"^momo\.vn/doi-tac(?:/.*)?$", "Merchant", "Merchant Page", "high"),
+    (r"^momo\.vn/thanh-toan-momo-.*$", "Merchant", "Merchant Page", "high"),
 ]
 
 

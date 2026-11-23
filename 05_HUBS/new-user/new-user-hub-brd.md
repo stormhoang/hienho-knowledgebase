@@ -1,10 +1,10 @@
 # Master BRD: Web-to-App New User Acquisition & Pre-install Personalization Engine
 
-> - **Project:** New User Hub & Web-to-App Personalization Journey
-> - **Division:** Growth Platform Division (GPD)
-> - **Owners:** Web Platform Team x User Growth Team
-> - **Version:** 2.0 · Tháng 8/2026
-> - **Status:** Active (Strategic Alignment & Execution)
+> - **Dự án:** New User Hub & Web-to-App Personalization Journey
+> - **Khối phụ trách:** Growth Platform Division (GPD)
+> - **Owner:** Web Platform Team x User Growth Team
+> - **Phiên bản:** 2.0 · Tháng 8/2026
+> - **Trạng thái:** Active (Strategic Alignment & Execution)
 
 ---
 
@@ -416,7 +416,7 @@ Nhằm tối ưu hóa đồng thời tốc độ chuyển đổi của quảng c
 
 1. **Luồng 1 - Performance Fast Track (Dành cho Paid Ads qua URL Parameter):**
    * **Cơ chế:** Khi người dùng nhấp từ quảng cáo có đính kèm tham số nhu cầu (ví dụ: `momo.vn/welcome?intent=cinema`), MoSpark Edge Node đọc tham số trong < 15ms và hiển thị **ngay lập tức** bộ Thẻ quà khớp với nội dung quảng cáo trong 0 giây chờ, không bắt làm khảo sát.
-   * **Mục tiêu:** Triệt tiêu ma sát ở Upper Funnel, giảm tối đa tỷ lệ thoát trang (Bounce Rate) và thúc đẩy hành động bấm nút "Tải App Nhận Quà".
+   * **Mục tiêu:** Giảm rào cản thao tác ở Upper Funnel, giảm tối đa tỷ lệ thoát trang (Bounce Rate) và thúc đẩy hành động nhấp vào nút "Tải App Nhận Quà".
 
 2. **Luồng 2 - Interactive Survey Track (Dành cho Direct / Organic Traffic):**
    * **Cơ chế:** Khi người dùng tự gõ địa chỉ `momo.vn/welcome` (hoặc vào từ Google không có tham số), trang Web hiển thị Bộ quà Mặc định (Best-Seller Pack) đính kèm **Khung trắc nghiệm Vibe Quiz 1-Click** (*"Cuối tuần có tiền, gu của bạn là gì?"* với 4 lựa chọn: Xem phim, Game & Data, F&B Mua sắm, Học tập).
@@ -424,7 +424,7 @@ Nhằm tối ưu hóa đồng thời tốc độ chuyển đổi của quảng c
 
 ### 2.3 Phân Khúc Thử Nghiệm Đầu Tiên: U18 & Back to School (`momo.vn/welcome`)
 * **Định vị:** Nhóm U18 (học sinh cấp 3 chuẩn bị bước vào Đại học / Tân sinh viên) được chọn làm phân khúc thử nghiệm đầu tiên (Validation Segment).
-* **Touchpoint chuyên biệt:** Trang Master Hub `momo.vn/welcome` đóng vai trò là cửa ngõ chính, thay thế cho các trang landing page ngắn hạn, tích hợp gói quà tân thủ và bộ voucher tiếp sức mùa nhập học.
+* **Touchpoint chuyên biệt:** Trang Master Hub `momo.vn/welcome` đóng vai trò là cửa ngõ chính, thay thế cho các trang landing page ngắn hạn, tích hợp gói quà người dùng mới và bộ voucher tiếp sức mùa nhập học.
 
 ### 2.4 Cửa Ngõ Tải Ứng Dụng Tiện Ích Độc Lập (`momo.vn/tai-app`)
 * **Định vị & Phân tách với `/download`:** Tách biệt hoàn toàn luồng Tải Ứng Dụng mới khỏi trang `/download` (vốn được ITC sử dụng riêng cho cơ chế ép Update App). Trang `momo.vn/tai-app` được thiết kế theo triết lý **Trung tâm Tiện ích Tải Ứng Dụng Thuần Túy (Zero Marketing Noise)**, không tiếp thị thẻ quà hay sự kiện có thời hạn.

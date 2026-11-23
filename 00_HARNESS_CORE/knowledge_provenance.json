@@ -1,10 +1,10 @@
 {
   "version": "1.0",
-  "generated_at": "2026-11-07T14:01:36.717609+00:00",
+  "generated_at": "2026-11-14T06:58:27.810705+00:00",
   "mode": "observe",
   "summary": {
-    "total_sources": 27,
-    "verified_count": 27,
+    "total_sources": 28,
+    "verified_count": 28,
     "missing_count": 0,
     "checksum_algorithm": "sha256"
   },
@@ -23,7 +23,7 @@
       "file_modified_at": "2026-11-05T01:40:46.684819+00:00",
       "data_as_of": null,
       "data_period": "Không xác định",
-      "verified_at": "2026-11-07T14:01:36.717609+00:00"
+      "verified_at": "2026-11-14T06:58:27.810705+00:00"
     },
     {
       "id": "agent_capabilities",
@@ -39,7 +39,7 @@
       "file_modified_at": "2026-11-05T01:45:48.687126+00:00",
       "data_as_of": null,
       "data_period": "Không xác định",
-      "verified_at": "2026-11-07T14:01:36.717609+00:00"
+      "verified_at": "2026-11-14T06:58:27.810705+00:00"
     },
     {
       "id": "agent_safety_contract",
@@ -55,7 +55,7 @@
       "file_modified_at": "2026-11-05T01:40:46.687050+00:00",
       "data_as_of": null,
       "data_period": "Không xác định",
-      "verified_at": "2026-11-07T14:01:36.717609+00:00"
+      "verified_at": "2026-11-14T06:58:27.810705+00:00"
     },
     {
       "id": "agent_output_contract",
@@ -71,7 +71,7 @@
       "file_modified_at": "2026-11-05T01:45:48.686710+00:00",
       "data_as_of": null,
       "data_period": "Không xác định",
-      "verified_at": "2026-11-07T14:01:36.717609+00:00"
+      "verified_at": "2026-11-14T06:58:27.810705+00:00"
     },
     {
       "id": "evidence_contract",
@@ -87,7 +87,7 @@
       "file_modified_at": "2026-11-05T01:56:03.400041+00:00",
       "data_as_of": null,
       "data_period": "Không xác định",
-      "verified_at": "2026-11-07T14:01:36.717609+00:00"
+      "verified_at": "2026-11-14T06:58:27.810705+00:00"
     },
     {
       "id": "team_scope_of_work",
@@ -98,12 +98,12 @@
       "system_of_record": "Web Platform Organizational Charter",
       "generator_script": "manual_authoring",
       "status": "verified",
-      "sha256": "ed4066b258fa0469175d0e624f69b26622f82087d587395ab88dfe7a1fabd596",
-      "content_length_bytes": 19807,
-      "file_modified_at": "2026-11-07T11:39:21.002799+00:00",
+      "sha256": "9ac2218f3ee05bbaf66aeff4f9dff7eaa52fab16953e3ef16e5547615687d4a3",
+      "content_length_bytes": 21620,
+      "file_modified_at": "2026-11-11T13:29:04.456128+00:00",
       "data_as_of": null,
       "data_period": "Không xác định",
-      "verified_at": "2026-11-07T14:01:36.717609+00:00"
+      "verified_at": "2026-11-14T06:58:27.810705+00:00"
     },
     {
       "id": "hienho_master_doc",
@@ -119,7 +119,7 @@
       "file_modified_at": "2026-11-07T13:02:02.619146+00:00",
       "data_as_of": null,
       "data_period": "Không xác định",
-      "verified_at": "2026-11-07T14:01:36.717609+00:00"
+      "verified_at": "2026-11-14T06:58:27.810705+00:00"
     },
     {
       "id": "knowledge_routing",
@@ -130,12 +130,12 @@
       "system_of_record": "Antigravity Knowledge Routing Policy",
       "generator_script": "manual_authoring",
       "status": "verified",
-      "sha256": "af59765ed370ef75fe8e27c0fa1b4dfcff50b9bd137a29b5c801ba1c1d6e0466",
-      "content_length_bytes": 11442,
-      "file_modified_at": "2026-11-07T12:54:58.325174+00:00",
+      "sha256": "3c66493a6f0bf6eaca4e98b707a9e0e8b7e9445690b34720ea94769083f19871",
+      "content_length_bytes": 12025,
+      "file_modified_at": "2026-11-09T05:34:54.753373+00:00",
       "data_as_of": null,
       "data_period": "Không xác định",
-      "verified_at": "2026-11-07T14:01:36.717609+00:00"
+      "verified_at": "2026-11-14T06:58:27.810705+00:00"
     },
     {
       "id": "codebase_manifest",
@@ -146,12 +146,12 @@
       "system_of_record": "Git Repository & Codebase Manifest",
       "generator_script": "manual_authoring",
       "status": "verified",
-      "sha256": "1b1c1bc88735535593878c633754d84826bc660546c41a171a49905af79a6af0",
-      "content_length_bytes": 13688,
-      "file_modified_at": "2026-11-05T01:45:50.955360+00:00",
+      "sha256": "49e12be7340e8060ea4c3173dc35cb2a8f596fcf15437d153bbf743a952d5413",
+      "content_length_bytes": 13941,
+      "file_modified_at": "2026-11-09T05:36:04.457744+00:00",
       "data_as_of": null,
       "data_period": "Không xác định",
-      "verified_at": "2026-11-07T14:01:36.717609+00:00"
+      "verified_at": "2026-11-14T06:58:27.810705+00:00"
     },
     {
       "id": "orchestrator_engine",
@@ -162,12 +162,12 @@
       "system_of_record": "Antigravity Orchestration Engine",
       "generator_script": "manual_authoring",
       "status": "verified",
-      "sha256": "d9135bf22847650a089a2b5e91b638c94ceca0b9fde7daafcc6fcecd1f036695",
+      "sha256": "ad47398f00f7a4db1200f2267f9998856aaf0ad0d057d6eb83e95ac5e64a040f",
       "content_length_bytes": 15334,
-      "file_modified_at": "2026-08-08T05:34:17.242378+00:00",
+      "file_modified_at": "2026-11-09T00:31:37.509488+00:00",
       "data_as_of": null,
       "data_period": "Không xác định",
-      "verified_at": "2026-11-07T14:01:36.717609+00:00"
+      "verified_at": "2026-11-14T06:58:27.810705+00:00"
     },
     {
       "id": "dispatch_readme",
@@ -178,12 +178,12 @@
       "system_of_record": "Antigravity Task Dispatch Protocol",
       "generator_script": "manual_authoring",
       "status": "verified",
-      "sha256": "4b754b8d356d498daa6844246d47679774563f860230820b12a7d2ac3b294ed5",
-      "content_length_bytes": 4924,
-      "file_modified_at": "2026-11-07T11:25:21.805748+00:00",
+      "sha256": "33a450ce3059c013af7540d415f18710d51cb231dd3e0881ac2c9ba155e7294e",
+      "content_length_bytes": 5121,
+      "file_modified_at": "2026-11-11T13:29:04.481270+00:00",
       "data_as_of": null,
       "data_period": "Không xác định",
-      "verified_at": "2026-11-07T14:01:36.717609+00:00"
+      "verified_at": "2026-11-14T06:58:27.810705+00:00"
     },
     {
       "id": "vocabulary_glossary",
@@ -194,12 +194,12 @@
       "system_of_record": "MoMo Reporting Glossary SSOT",
       "generator_script": "manual_authoring",
       "status": "verified",
-      "sha256": "ddeb2823cfa27b21da1c7a24f9168fe4d4a3e7585c1624a4b4cc577f592bc77a",
-      "content_length_bytes": 55038,
-      "file_modified_at": "2026-11-07T10:16:44.701012+00:00",
+      "sha256": "82c92952ef07f8b8d29f7b9fcf8bb34287cff0106de714e93ab15bfa1ab68ed5",
+      "content_length_bytes": 60152,
+      "file_modified_at": "2026-11-13T01:46:26.937867+00:00",
       "data_as_of": null,
       "data_period": "Không xác định",
-      "verified_at": "2026-11-07T14:01:36.717609+00:00"
+      "verified_at": "2026-11-14T06:58:27.810705+00:00"
     },
     {
       "id": "performance_tracking_master",
@@ -210,12 +210,12 @@
       "system_of_record": "Google Sheets Cloud SSOT (1JaaYv2MnDy-dfBdC3P-GMB6SFgjez2VowdjX9PjmPYU) & BigQuery",
       "generator_script": "scripts/sync_tracking_report.py",
       "status": "verified",
-      "sha256": "0c15082f13d416bb640b9a50a567f1f4d25de195733bffee3bbff826e7577f8c",
-      "content_length_bytes": 79331,
-      "file_modified_at": "2026-11-06T04:23:48.000135+00:00",
+      "sha256": "3735c4a039121dc94ca03092ceb6aedb6f0b1fb413f49ba0f921b32304a17c62",
+      "content_length_bytes": 83660,
+      "file_modified_at": "2026-11-11T13:29:04.462121+00:00",
       "data_as_of": "2026-10-10",
       "data_period": "GSC Export 2026-10-10",
-      "verified_at": "2026-11-07T14:01:36.717609+00:00"
+      "verified_at": "2026-11-14T06:58:27.810705+00:00"
     },
     {
       "id": "performance_data_mart",
@@ -231,7 +231,7 @@
       "file_modified_at": "2026-11-05T02:03:14.684326+00:00",
       "data_as_of": "2026-11-04",
       "data_period": "MTD 2026-11 (cắt ngày 2026-11-04)",
-      "verified_at": "2026-11-07T14:01:36.717609+00:00"
+      "verified_at": "2026-11-14T06:58:27.810705+00:00"
     },
     {
       "id": "performance_snapshot_latest",
@@ -242,12 +242,12 @@
       "system_of_record": "GA4 Data API & Local History Snapshot",
       "generator_script": "scripts/sync_ga4_master.py",
       "status": "verified",
-      "sha256": "3cc5ed544d340397f9da3c11bfb19670f70743d7aa05c15c0ad098da1740096d",
-      "content_length_bytes": 4288,
-      "file_modified_at": "2026-11-07T13:09:27.785959+00:00",
-      "data_as_of": "2026-10-10",
-      "data_period": "Tháng 10/2026 (MTD 9 ngày: 01/10 - 09/10/2026)",
-      "verified_at": "2026-11-07T14:01:36.717609+00:00"
+      "sha256": "7994d06472027f13c439c5d823f5edd2ee605045a8fd4f32fb02d937a1aed0b8",
+      "content_length_bytes": 7365,
+      "file_modified_at": "2026-11-14T00:30:46.290175+00:00",
+      "data_as_of": "2026-11-14",
+      "data_period": "Tháng 11/2026 (MTD 13 ngày: 01/11 - 13/11/2026, GA4 Data API, lọc chuẩn hostName == 'www.momo.vn')",
+      "verified_at": "2026-11-14T06:58:27.810705+00:00"
     },
     {
       "id": "paid_ads_performance",
@@ -258,12 +258,12 @@
       "system_of_record": "GA4 Data API (Property 270743103) Paid Media Channels",
       "generator_script": "scripts/sync_paid_ads.py",
       "status": "verified",
-      "sha256": "d2912a890d7584c3d27f02038035afef0b349b7e09216d7b42de9bc16aca70bf",
-      "content_length_bytes": 221114,
-      "file_modified_at": "2026-10-25T07:16:24.488736+00:00",
-      "data_as_of": "2026-10-25",
-      "data_period": "2026-10-01 đến today",
-      "verified_at": "2026-11-07T14:01:36.717609+00:00"
+      "sha256": "c81751da24d8cacb0f01d019b185c3ee34d0b2de8654feea9be6780af0d251fc",
+      "content_length_bytes": 200815,
+      "file_modified_at": "2026-11-11T00:50:04.710584+00:00",
+      "data_as_of": null,
+      "data_period": "Không xác định",
+      "verified_at": "2026-11-14T06:58:27.810705+00:00"
     },
     {
       "id": "theme_seasonality",
@@ -272,14 +272,14 @@
       "owner": "Web Platform",
       "authority": "secondary",
       "system_of_record": "Google Trends API (pytrends VN)",
-      "generator_script": "scripts/cron_theme_seasonality.py",
+      "generator_script": "scripts/theme_seasonality.py",
       "status": "verified",
       "sha256": "86b19eb558aeb3aa09281c25ac578d1333aed4c76f28a23b7b77ca95d2781a00",
       "content_length_bytes": 89270,
       "file_modified_at": "2026-10-23T16:09:19.046514+00:00",
-      "data_as_of": "2026-10-23",
-      "data_period": "today 5-y (cập nhật 2026-10-23)",
-      "verified_at": "2026-11-07T14:01:36.717609+00:00"
+      "data_as_of": null,
+      "data_period": "Không xác định",
+      "verified_at": "2026-11-14T06:58:27.810705+00:00"
     },
     {
       "id": "decision_log",
@@ -295,7 +295,7 @@
       "file_modified_at": "2026-11-06T01:05:28.624299+00:00",
       "data_as_of": "2026-10-14",
       "data_period": "Quyết định gần nhất (2026-10-14)",
-      "verified_at": "2026-11-07T14:01:36.717609+00:00"
+      "verified_at": "2026-11-14T06:58:27.810705+00:00"
     },
     {
       "id": "roadmap_releases",
@@ -311,23 +311,23 @@
       "file_modified_at": "2026-11-05T01:36:00.058277+00:00",
       "data_as_of": "2026-10-30",
       "data_period": "Bản ghi gần nhất (2026-10-30)",
-      "verified_at": "2026-11-07T14:01:36.717609+00:00"
+      "verified_at": "2026-11-14T06:58:27.810705+00:00"
     },
     {
       "id": "utility_tracking",
       "path": "04_MOSPARK_PLATFORM/umami_utility_tracking.md",
       "domain": "tracking",
-      "owner": "SE Team / Thuận",
+      "owner": "SE Team",
       "authority": "primary",
       "system_of_record": "Umami Analytics Cloud Instance & MoSpark Tracking Specification",
       "generator_script": "manual_authoring",
       "status": "verified",
-      "sha256": "8e602ce0c03db3892263caa207d0208072482f73c3e067ae02c6d15eff144252",
-      "content_length_bytes": 45146,
-      "file_modified_at": "2026-10-15T13:46:02.291006+00:00",
+      "sha256": "b431fff629ae0022250cf971a0853836bac17f5feb514cf4d6297673f8c218c3",
+      "content_length_bytes": 45274,
+      "file_modified_at": "2026-11-09T00:31:37.962448+00:00",
       "data_as_of": null,
       "data_period": "Không xác định",
-      "verified_at": "2026-11-07T14:01:36.717609+00:00"
+      "verified_at": "2026-11-14T06:58:27.810705+00:00"
     },
     {
       "id": "cinema_hub_brd",
@@ -338,28 +338,12 @@
       "system_of_record": "Cinema Hub Business Requirement Document",
       "generator_script": "manual_authoring",
       "status": "verified",
-      "sha256": "3e199d0af5c8d092cc700438c14366604f29d48937e8c054a48c8d029ad92b52",
-      "content_length_bytes": 157120,
-      "file_modified_at": "2026-11-07T08:40:40.164448+00:00",
+      "sha256": "d63ee46f332b43fe60dd5a1d8c383bd974b000a3496d040870ef409a08dd196a",
+      "content_length_bytes": 167168,
+      "file_modified_at": "2026-11-11T14:10:40.874840+00:00",
       "data_as_of": null,
       "data_period": "Không xác định",
-      "verified_at": "2026-11-07T14:01:36.717609+00:00"
-    },
-    {
-      "id": "cinema_funnel_architecture",
-      "path": "05_HUBS/cinema/CINEMA_FUNNEL_ARCHITECTURE.md",
-      "domain": "hubs_cinema",
-      "owner": "Cinema Hub Team",
-      "authority": "primary",
-      "system_of_record": "Cinema Hub Web-to-App Funnel Architecture",
-      "generator_script": "manual_authoring",
-      "status": "verified",
-      "sha256": "affe000b2d1b2d0cc3aac5cb4eca54247b00f171b90a853c91e0bb58dfb57aff",
-      "content_length_bytes": 6706,
-      "file_modified_at": "2026-11-07T08:40:12.106531+00:00",
-      "data_as_of": null,
-      "data_period": "Không xác định",
-      "verified_at": "2026-11-07T14:01:36.717609+00:00"
+      "verified_at": "2026-11-14T06:58:27.810705+00:00"
     },
     {
       "id": "vehicle_hub_brd",
@@ -370,12 +354,44 @@
       "system_of_record": "Vehicle Hub Business Requirement Document",
       "generator_script": "manual_authoring",
       "status": "verified",
-      "sha256": "a105976a572a6170f4244a6f59bca436cb59217fa8d16d277db04046084defa2",
-      "content_length_bytes": 127586,
-      "file_modified_at": "2026-11-06T04:27:43.353886+00:00",
+      "sha256": "4cf567bbd5e95b253b9875a0e6150ec77955f1b75efa57bb934b48819d1ac0de",
+      "content_length_bytes": 138876,
+      "file_modified_at": "2026-11-14T05:29:51.653737+00:00",
       "data_as_of": null,
       "data_period": "Không xác định",
-      "verified_at": "2026-11-07T14:01:36.717609+00:00"
+      "verified_at": "2026-11-14T06:58:27.810705+00:00"
+    },
+    {
+      "id": "vehicle_partner_garages",
+      "path": "05_HUBS/vehicle/datasets/partner-garages.json",
+      "domain": "hubs_vehicle",
+      "owner": "Vehicle Hub Team",
+      "authority": "primary",
+      "system_of_record": "Danh bạ garage đối tác đã làm sạch (chuẩn hóa tên, khử trùng, có garage_id và search_volume)",
+      "generator_script": "manual_authoring",
+      "status": "verified",
+      "sha256": "d5d7e7743c843a3df2d84f0616ab61a0c4c5e8126861e4f9c13247ad279b8f3b",
+      "content_length_bytes": 4454224,
+      "file_modified_at": "2026-09-24T01:34:40.300679+00:00",
+      "data_as_of": null,
+      "data_period": "Không xác định",
+      "verified_at": "2026-11-14T06:58:27.810705+00:00"
+    },
+    {
+      "id": "vehicle_partner_garages_raw",
+      "path": "05_HUBS/inventory/vehicle-hub/partner-garages.json",
+      "domain": "hubs_vehicle",
+      "owner": "Vehicle Hub Team",
+      "authority": "reference",
+      "system_of_record": "Bản thô danh bạ garage đối tác trước khi làm sạch. Chỉ dùng để đối soát nguồn, không dùng làm số liệu.",
+      "generator_script": "manual_authoring",
+      "status": "verified",
+      "sha256": "191b1d914dcf8f556702e015aa03490c869742831e12e88bb6946eaf82d43805",
+      "content_length_bytes": 3599780,
+      "file_modified_at": "2026-09-24T00:19:43.219302+00:00",
+      "data_as_of": null,
+      "data_period": "Không xác định",
+      "verified_at": "2026-11-14T06:58:27.810705+00:00"
     },
     {
       "id": "financial_hub_brd",
@@ -386,28 +402,28 @@
       "system_of_record": "Financial Hub Business Requirement Document",
       "generator_script": "manual_authoring",
       "status": "verified",
-      "sha256": "36844155592ff8eb3ad94edf2e61f61a159d01aa5b91b3a07e169a99358bb414",
-      "content_length_bytes": 96136,
-      "file_modified_at": "2026-11-02T04:16:34.090931+00:00",
+      "sha256": "3e192339e0912950cd9e0ab6861fbf9fb1725292dec57f0b99c5920d8a1d268d",
+      "content_length_bytes": 127928,
+      "file_modified_at": "2026-11-12T13:39:21.686834+00:00",
       "data_as_of": null,
       "data_period": "Không xác định",
-      "verified_at": "2026-11-07T14:01:36.717609+00:00"
+      "verified_at": "2026-11-14T06:58:27.810705+00:00"
     },
     {
       "id": "mospark_rag_knowledge_base",
       "path": "04_MOSPARK_PLATFORM/mospark_rag_knowledge_base.md",
       "domain": "mospark_platform",
-      "owner": "SE Team / Duy",
+      "owner": "SE Team",
       "authority": "primary",
       "system_of_record": "MoSpark Platform Architecture & Knowledge Base",
       "generator_script": "manual_authoring",
       "status": "verified",
-      "sha256": "0dfdc3a91696f2a37829c95bf441d7e0bd7d9c33016573b02e9cbcba50ea63f7",
-      "content_length_bytes": 19020,
-      "file_modified_at": "2026-11-06T01:03:58.969302+00:00",
+      "sha256": "5ea895f4a6f02b6e03ac92e3a486e9b0e3030ade20f840ac0e7f6957a4b00808",
+      "content_length_bytes": 19051,
+      "file_modified_at": "2026-11-11T13:14:49.811933+00:00",
       "data_as_of": null,
       "data_period": "Không xác định",
-      "verified_at": "2026-11-07T14:01:36.717609+00:00"
+      "verified_at": "2026-11-14T06:58:27.810705+00:00"
     },
     {
       "id": "seo_execution_sop",
@@ -423,7 +439,7 @@
       "file_modified_at": "2026-11-07T13:08:38.177407+00:00",
       "data_as_of": null,
       "data_period": "Không xác định",
-      "verified_at": "2026-11-07T14:01:36.717609+00:00"
+      "verified_at": "2026-11-14T06:58:27.810705+00:00"
     },
     {
       "id": "web_growth_strategy_historical",
@@ -434,12 +450,12 @@
       "system_of_record": "Historical Web Growth BRD Archive",
       "generator_script": "manual_authoring",
       "status": "verified",
-      "sha256": "30b8fcaa4c8f9ff5c7e7a86f9c4d177723582e9f05ef6344ef055082a71deffb",
-      "content_length_bytes": 8761,
-      "file_modified_at": "2026-08-08T05:34:17.229884+00:00",
+      "sha256": "64bd1fa3a9980362078681c1ab082c6759ce07b091fc0a71cb5b4d5a17b986fb",
+      "content_length_bytes": 8771,
+      "file_modified_at": "2026-11-11T13:14:49.802689+00:00",
       "data_as_of": null,
       "data_period": "Dữ liệu đối chiếu lịch sử",
-      "verified_at": "2026-11-07T14:01:36.717609+00:00"
+      "verified_at": "2026-11-14T06:58:27.810705+00:00"
     }
   ]
 }

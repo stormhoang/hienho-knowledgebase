@@ -1,13 +1,13 @@
 # PRD: Merchant Detail Page - SME Digital Presence Platform
 
 > - **Use Case:** Merchant Pages
-> - **Main URL:** momo.vn/merchant / momo.vn/merchant/{slug}
+> - **URL chính:** momo.vn/merchant / momo.vn/merchant/{slug}
 > - **BRD Ref:** 06_USE_CASE_MOMO/doi-tac-brd.md
 > - **Owner:** Web Platform
 > - **Engineering Lead:** Web Platform Engineering Team
 > - **Architecture:** Platform Architecture Team (MoSpark integration)
-> - **Version:** 0.3 - 2026-06-10
-> - **Status:** [Giai đoạn 1 Hoàn Thành] - Thử nghiệm 39 đối tác chính thức. Luồng tự động tạo trang và giao diện chuẩn đã hoàn tất. Bàn giao phân trang danh mục.
+> - **Phiên bản:** 0.3 - 2026-06-10
+> - **Trạng thái:** [Giai đoạn 1 Hoàn Thành] - Thử nghiệm 39 đối tác chính thức. Luồng tự động tạo trang và giao diện chuẩn đã hoàn tất. Bàn giao phân trang danh mục.
 
 ---
 

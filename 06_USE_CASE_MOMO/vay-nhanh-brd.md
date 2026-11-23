@@ -1,10 +1,10 @@
 # BRD: Vay Nhanh
 
-> - **Project:** Vay Nhanh Web Growth & Conversion Platform
-> - **Main URL:** momo.vn/vay-nhanh
-> - **Division:** FS (Financial Services) - Loan
-> - **Version:** 1.2 · Tháng 7/2026
-> - **Status:** In Progress - Execution Phase (Updated Media Team Plan)
+> - **Dự án:** Vay Nhanh Web Growth & Conversion Platform
+> - **URL chính:** momo.vn/vay-nhanh
+> - **Khối phụ trách:** FS (Financial Services) - Loan
+> - **Phiên bản:** 1.2 · Tháng 7/2026
+> - **Trạng thái:** In Progress - Execution Phase (Updated Media Team Plan)
 
 ---
 
@@ -708,57 +708,6 @@ Simulator là conversion engine cốt lõi - cần revamp từ công cụ tính 
     </tr>
   </tbody>
 </table>
-
-### 4.4 Hub Page Structure
-
-<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
-  <thead>
-    <tr style="background-color:#f1f5f9;">
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Section</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Thành phần</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ghi chú</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Fold 1</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Simulator v2 (amount + term + result card + Onelink CTA)</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Above fold mobile - hard requirement</td>
-    </tr>
-    <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trust strip</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">NHNN badge · App Store rating · "31M users" · "Duyệt trong 5 phút"</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
-    </tr>
-    <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Quy trình</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3 bước: Chụp CCCD → Kết quả 5' → Nhận tiền ví</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
-    </tr>
-    <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Điều kiện vay</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Transparent checklist</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">YMYL bắt buộc</td>
-    </tr>
-    <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Service grid</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Card links đến từng sub-page segment</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
-    </tr>
-    <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">FAQ</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">10-15 câu standalone, FAQPage schema, PAA-matched</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
-    </tr>
-    <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Disclaimer</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lãi suất tham khảo + NHNN license reference</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
-    </tr>
-  </tbody>
-</table>
-
-**Schema required:** LoanProduct (name, loanType, amount range, termDuration, annualPercentageRate) · FAQPage · BreadcrumbList
 
 ### 4.5 Content Strategy
 

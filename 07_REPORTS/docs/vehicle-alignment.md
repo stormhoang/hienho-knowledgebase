@@ -73,7 +73,7 @@ $$Search Demand (Google/AI)\longrightarrow Web Utility Page\longrightarrow Vehic
 
 ---
 
-### 2. Bảng Phân Rã Monthly Run-Rate Phase 1 Pilot (Tháng 9 - Tháng 12/2026)
+### 2. Bảng Bóc Tách Monthly Run-Rate Phase 1 Pilot (Tháng 9 - Tháng 12/2026)
 
 <table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
   <thead>

@@ -157,7 +157,7 @@ Qua đối soát cấu trúc On-Page của các đối thủ dẫn đầu, hệ 
 - `nó có thể tạo thói quen vay mượn`
 - `phép bạn vay tiền nhanh`
 - `trải nghiệm vay nhanh uy tín`
-- `– thời hạn khoản vay tối đa`
+- `- thời hạn khoản vay tối đa`
 - `công cụ tính toán tiền vay nhanh`
 - `trang chủvay nhanh online tiền`
 - `khoản vay thứ 2 trở`
@@ -185,7 +185,7 @@ Qua đối soát cấu trúc On-Page của các đối thủ dẫn đầu, hệ 
 
 **Câu hỏi/nhóm ý đối thủ bỏ trống (độ phủ thấp):**
 
-- `– thời hạn khoản vay tối đa`
+- `- thời hạn khoản vay tối đa`
 - `vay tiền online lãi suất 0`
 - `quá trình tính tổng chi phí khoản vay`
 - `vay tiền nhanh lãi suất thấp`
@@ -194,7 +194,7 @@ Qua đối soát cấu trúc On-Page của các đối thủ dẫn đầu, hệ 
 
 **Đề xuất điểm chạm nội dung vượt trội (Recommended Unique Angles):**
 
-- Bổ sung mục Giải đáp trực tiếp (Direct Answer) cho các câu hỏi đối thủ bỏ trống: – thời hạn khoản vay tối đa; vay tiền online lãi suất 0; quá trình tính tổng chi phí khoản vay; vay tiền nhanh lãi suất thấp; lãi suất vay có thể thay đổi tùy
+- Bổ sung mục Giải đáp trực tiếp (Direct Answer) cho các câu hỏi đối thủ bỏ trống: - thời hạn khoản vay tối đa; vay tiền online lãi suất 0; quá trình tính tổng chi phí khoản vay; vay tiền nhanh lãi suất thấp; lãi suất vay có thể thay đổi tùy
 - Nhúng bảng số liệu động (lãi suất/phí/biểu phí theo thời gian thực) thay vì nội dung tĩnh sao chép được.
 - Gắn Schema FAQPage + BreadcrumbList + cơ chế Web-to-App để chiếm Rich Snippet và chuyển đổi.
 
@@ -230,7 +230,7 @@ Qua đối soát cấu trúc On-Page của các đối thủ dẫn đầu, hệ 
 - `nó có thể tạo thói quen vay mượn` (khớp: `thoảng cần vay`, sim: 0.847)
 - `phép bạn vay tiền nhanh` (khớp: `thủ tục vay nhanh`, sim: 0.846)
 - `trải nghiệm vay nhanh uy tín` (khớp: `thủ tục vay nhanh`, sim: 0.813)
-- `– thời hạn khoản vay tối đa` (khớp: `hạn mức vay`, sim: 0.814)
+- `- thời hạn khoản vay tối đa` (khớp: `hạn mức vay`, sim: 0.814)
 - `công cụ tính toán tiền vay nhanh` (khớp: `thủ tục vay nhanh`, sim: 0.885)
 - `khoản vay thứ 2 trở` (khớp: `khoản vay`, sim: 0.841)
 - `quá trình tính tổng chi phí khoản vay` (khớp: `hạn mức vay`, sim: 0.734)

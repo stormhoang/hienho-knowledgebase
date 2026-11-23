@@ -1,6 +1,6 @@
 # Báo Cáo Xung Đột & Kiểm Tra Đường Dẫn Kho Tri Thức (Knowledge Conflict Report)
 
-- Thời điểm xuất bản: 2026-11-07T13:12:54.414500+00:00
+- Thời điểm xuất bản: 2026-11-14T06:58:21.923356+00:00
 - Chế độ vận hành: observe (Không tự ý sửa đổi mã nguồn)
 - Tổng số điểm phát hiện: 64
 
@@ -8,10 +8,10 @@
 
 | Phân loại | Số lượng | Ý nghĩa & Mô tả |
 | :--- | ---: | :--- |
-| `broken_reference` | 5 | Đường dẫn nội bộ không tìm thấy tệp đích |
-| `external_reference` | 37 | Tham chiếu sang repo khác, thư mục Downloads hoặc Obsidian |
-| `code_path_reference` | 21 | Đường dẫn trong mã nguồn; có thể là tệp sinh runtime |
-| `skill_asset_reference` | 1 | Tài nguyên thuộc các gói Agent Skill |
+| `broken_reference` | 2 | Đường dẫn nội bộ không tìm thấy tệp đích |
+| `external_reference` | 54 | Tham chiếu sang repo khác, thư mục Downloads hoặc Obsidian |
+| `code_path_reference` | 8 | Đường dẫn trong mã nguồn; có thể là tệp sinh runtime |
+| `skill_asset_reference` | 0 | Tài nguyên thuộc các gói Agent Skill |
 
 ## 2. Nguyên Tắc Xử Lý
 
@@ -19,12 +19,6 @@
 - Tuyệt đối không tự động xóa, đổi tên hoặc hợp nhất nguồn khi chưa có phê duyệt từ Web Product Lead.
 
 ## 3. Danh Sách Chi Tiết Theo Tệp Tin Nguồn
-
-### `.agents/rules/graphify.md`
-
-- **Dòng 12:** `graphify-out/wiki/index.md`
-  * Phân loại: `skill_asset_reference` | Mã lý do: `skill_package_reference`
-  * Chi tiết: Tham chiếu tài nguyên cục bộ bên trong gói agent skill.
 
 ### `.agents/skills/sync-all/SKILL.md`
 
@@ -35,8 +29,8 @@
 ### `00_HARNESS_CORE/KEYWORD_CLUSTERING_OPTIMIZATION_SPEC.md`
 
 - **Dòng 50:** `data/seo-clusters/index.json`
-  * Phân loại: `broken_reference` | Mã lý do: `unresolved_internal_path`
-  * Chi tiết: Đường dẫn nội bộ không tìm thấy tệp đích trong repository.
+  * Phân loại: `external_reference` | Mã lý do: `cross_repository_data_dependency`
+  * Chi tiết: Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ.
 
 ### `00_HARNESS_CORE/hienho_master_doc.md`
 
@@ -65,8 +59,8 @@
 ### `04_MOSPARK_PLATFORM/QUIZ_FLOW_SPECIFICATION_FOR_DEV.md`
 
 - **Dòng 233:** `./lib/data/quiz_catalog.json`
-  * Phân loại: `code_path_reference` | Mã lý do: `code_runtime_or_generated_path`
-  * Chi tiết: Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output).
+  * Phân loại: `external_reference` | Mã lý do: `cross_repository_data_dependency`
+  * Chi tiết: Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ.
 
 ### `04_MOSPARK_PLATFORM/mospark_rag_knowledge_base.md`
 
@@ -80,11 +74,11 @@
   * Phân loại: `external_reference` | Mã lý do: `historical_vault_reference`
   * Chi tiết: Tham chiếu lịch sử từ kho ghi chép cá nhân cũ (Obsidian Vault).
 
-### `05_HUBS/vehicle/vehicle-hub-brd.md`
+### `05_HUBS/HUB_CLASSIFICATION_SSOT.md`
 
-- **Dòng 1006:** `05_HUBS/vehicle-hub-navigation.md`
-  * Phân loại: `broken_reference` | Mã lý do: `unresolved_internal_path`
-  * Chi tiết: Đường dẫn nội bộ không tìm thấy tệp đích trong repository.
+- **Dòng 120:** `lib/dashboard/hub-map.json`
+  * Phân loại: `external_reference` | Mã lý do: `cross_repository_data_dependency`
+  * Chi tiết: Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ.
 
 ### `06_USE_CASE_MOMO/trust-brd.md`
 
@@ -101,41 +95,71 @@
 ### `07_REPORTS/KEYWORD_REALLOCATION_REVIEW.md`
 
 - **Dòng 160:** `data/content-plan-data.json`
-  * Phân loại: `broken_reference` | Mã lý do: `unresolved_internal_path`
-  * Chi tiết: Đường dẫn nội bộ không tìm thấy tệp đích trong repository.
+  * Phân loại: `external_reference` | Mã lý do: `cross_repository_data_dependency`
+  * Chi tiết: Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ.
 
 ### `07_REPORTS/docs/monthly-reporting-tool-architecture.md`
 
 - **Dòng 106:** `lib/dashboard/web-data.json`
+  * Phân loại: `external_reference` | Mã lý do: `cross_repository_data_dependency`
+  * Chi tiết: Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ.
+
+### `07_REPORTS/docs/weekly-report-2026-11-02-11-08.md`
+
+- **Dòng 297:** `docs/Spec_Driven-Graph_Matrix-Development/README-V1.md`
+  * Phân loại: `broken_reference` | Mã lý do: `unresolved_internal_path`
+  * Chi tiết: Đường dẫn nội bộ không tìm thấy tệp đích trong repository.
+- **Dòng 298:** `momo.cms/docs/features/FEAT-MOMATRIX-CORE-AND-DOCS-API.md`
   * Phân loại: `broken_reference` | Mã lý do: `unresolved_internal_path`
   * Chi tiết: Đường dẫn nội bộ không tìm thấy tệp đích trong repository.
 
 ### `13_INTAKE/README.md`
 
 - **Dòng 78:** `lib/dashboard/web-data.json`
-  * Phân loại: `broken_reference` | Mã lý do: `unresolved_internal_path`
-  * Chi tiết: Đường dẫn nội bộ không tìm thấy tệp đích trong repository.
-
-### `AGENTS.md`
-
-- **Dòng 88:** `/Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/web-data.json`
-  * Phân loại: `external_reference` | Mã lý do: `cross_repository_reference`
-  * Chi tiết: Tham chiếu liên kết sang repository Front-end Hub (react-web-momo).
-- **Dòng 88:** `/Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/summary.json`
-  * Phân loại: `external_reference` | Mã lý do: `cross_repository_reference`
-  * Chi tiết: Tham chiếu liên kết sang repository Front-end Hub (react-web-momo).
-- **Dòng 93:** `/Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/web-data.json`
-  * Phân loại: `external_reference` | Mã lý do: `cross_repository_reference`
-  * Chi tiết: Tham chiếu liên kết sang repository Front-end Hub (react-web-momo).
-- **Dòng 93:** `/Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo/lib/dashboard/summary.json`
-  * Phân loại: `external_reference` | Mã lý do: `cross_repository_reference`
-  * Chi tiết: Tham chiếu liên kết sang repository Front-end Hub (react-web-momo).
+  * Phân loại: `external_reference` | Mã lý do: `cross_repository_data_dependency`
+  * Chi tiết: Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ.
 
 ### `CODEBASE_MANIFEST.md`
 
 - **Dòng 39:** `cache/performance.sqlite`
   * Phân loại: `code_path_reference` | Mã lý do: `code_runtime_or_generated_path`
   * Chi tiết: Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output).
+
+### `scripts/archive/oneoff-2026-11/scratch_fix_platform.py`
+
+- **Dòng 84:** `Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md`
+  * Phân loại: `external_reference` | Mã lý do: `cross_repository_reference`
+  * Chi tiết: Tham chiếu liên kết sang repository Front-end Hub (react-web-momo).
+
+### `scripts/archive/oneoff-2026-11/scratch_fix_v2.py`
+
+- **Dòng 31:** `Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md`
+  * Phân loại: `external_reference` | Mã lý do: `cross_repository_reference`
+  * Chi tiết: Tham chiếu liên kết sang repository Front-end Hub (react-web-momo).
+
+### `scripts/archive/oneoff-2026-11/scratch_human_report.py`
+
+- **Dòng 324:** `Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md`
+  * Phân loại: `external_reference` | Mã lý do: `cross_repository_reference`
+  * Chi tiết: Tham chiếu liên kết sang repository Front-end Hub (react-web-momo).
+
+### `scripts/archive/oneoff-2026-11/scratch_strict_audit_report.py`
+
+- **Dòng 290:** `Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md`
+  * Phân loại: `external_reference` | Mã lý do: `cross_repository_reference`
+  * Chi tiết: Tham chiếu liên kết sang repository Front-end Hub (react-web-momo).
+
+### `scripts/archive/oneoff-2026-11/update_all_october_reports_30d.py`
+
+- **Dòng 12:** `react-web-momo/data/analytics/monthly-report-2026-10.json`
+  * Phân loại: `external_reference` | Mã lý do: `cross_repository_reference`
+  * Chi tiết: Tham chiếu liên kết sang repository Front-end Hub (react-web-momo).
+- **Dòng 13:** `react-web-momo/data/reports/monthly-index.json`
+  * Phân loại: `external_reference` | Mã lý do: `cross_repository_reference`
+  * Chi tiết: Tham chiếu liên kết sang repository Front-end Hub (react-web-momo).
+- **Dòng 16:** `react-web-momo/data/reports/report-thang-10-2026-board.md`
+  * Phân loại: `external_reference` | Mã lý do: `cross_repository_reference`
+  * Chi tiết: Tham chiếu liên kết sang repository Front-end Hub (react-web-momo).
 
 ### `scripts/archive/sync_mtd_22.py`
 
@@ -161,69 +185,60 @@
   * Phân loại: `external_reference` | Mã lý do: `cross_repository_reference`
   * Chi tiết: Tham chiếu liên kết sang repository Front-end Hub (react-web-momo).
 
-### `scripts/cron_gsc_cannibalization.py`
+### `scripts/detect_knowledge_conflicts.py`
+
+- **Dòng 152:** `cache/performance.sqlite`
+  * Phân loại: `code_path_reference` | Mã lý do: `code_runtime_or_generated_path`
+  * Chi tiết: Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output).
+
+### `scripts/export_3m_urls_to_sheet.py`
+
+- **Dòng 175:** `Idea/react-web-momo/lib/dashboard/hub-map.json`
+  * Phân loại: `external_reference` | Mã lý do: `cross_repository_reference`
+  * Chi tiết: Tham chiếu liên kết sang repository Front-end Hub (react-web-momo).
+
+### `scripts/export_page_mtd.py`
+
+- **Dòng 6:** `react-web-momo/data/analytics/SPEC-page-mtd.md`
+  * Phân loại: `external_reference` | Mã lý do: `cross_repository_reference`
+  * Chi tiết: Tham chiếu liên kết sang repository Front-end Hub (react-web-momo).
+- **Dòng 30:** `Idea/react-web-momo/data/analytics/page_mtd.json`
+  * Phân loại: `external_reference` | Mã lý do: `cross_repository_reference`
+  * Chi tiết: Tham chiếu liên kết sang repository Front-end Hub (react-web-momo).
+
+### `scripts/gsc_cannibalization.py`
 
 - **Dòng 9:** `07_REPORTS/data/gsc_cannibalization_matrix.json`
   * Phân loại: `code_path_reference` | Mã lý do: `code_runtime_or_generated_path`
   * Chi tiết: Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output).
 
-### `scripts/cron_gsc_crawl_stats.py`
+### `scripts/gsc_crawl_stats.py`
 
 - **Dòng 8:** `07_REPORTS/data/gsc_crawl_stats.json`
   * Phân loại: `code_path_reference` | Mã lý do: `code_runtime_or_generated_path`
   * Chi tiết: Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output).
 
-### `scripts/cron_gsc_keyword_ranking.py`
+### `scripts/gsc_keyword_ranking.py`
 
 - **Dòng 9:** `07_REPORTS/data/gsc_keyword_ranking.json`
-  * Phân loại: `code_path_reference` | Mã lý do: `code_runtime_or_generated_path`
-  * Chi tiết: Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output).
-
-### `scripts/detect_knowledge_conflicts.py`
-
-- **Dòng 144:** `cache/performance.sqlite`
   * Phân loại: `code_path_reference` | Mã lý do: `code_runtime_or_generated_path`
   * Chi tiết: Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output).
 
 ### `scripts/intake.py`
 
 - **Dòng 225:** `lib/dashboard/web-data.json`
-  * Phân loại: `code_path_reference` | Mã lý do: `code_runtime_or_generated_path`
-  * Chi tiết: Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output).
+  * Phân loại: `external_reference` | Mã lý do: `cross_repository_data_dependency`
+  * Chi tiết: Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ.
 
 ### `scripts/lib/hubs_dashboard.py`
 
 - **Dòng 3:** `lib/dashboard/web-data.json`
-  * Phân loại: `code_path_reference` | Mã lý do: `code_runtime_or_generated_path`
-  * Chi tiết: Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output).
+  * Phân loại: `external_reference` | Mã lý do: `cross_repository_data_dependency`
+  * Chi tiết: Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ.
 
 ### `scripts/lib/url_project_resolver.py`
 
 - **Dòng 32:** `Idea/react-web-momo/lib/dashboard/hub-map.json`
-  * Phân loại: `external_reference` | Mã lý do: `cross_repository_reference`
-  * Chi tiết: Tham chiếu liên kết sang repository Front-end Hub (react-web-momo).
-
-### `scripts/scratch_fix_platform.py`
-
-- **Dòng 84:** `Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md`
-  * Phân loại: `external_reference` | Mã lý do: `cross_repository_reference`
-  * Chi tiết: Tham chiếu liên kết sang repository Front-end Hub (react-web-momo).
-
-### `scripts/scratch_fix_v2.py`
-
-- **Dòng 31:** `Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md`
-  * Phân loại: `external_reference` | Mã lý do: `cross_repository_reference`
-  * Chi tiết: Tham chiếu liên kết sang repository Front-end Hub (react-web-momo).
-
-### `scripts/scratch_human_report.py`
-
-- **Dòng 324:** `Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md`
-  * Phân loại: `external_reference` | Mã lý do: `cross_repository_reference`
-  * Chi tiết: Tham chiếu liên kết sang repository Front-end Hub (react-web-momo).
-
-### `scripts/scratch_strict_audit_report.py`
-
-- **Dòng 290:** `Idea/react-web-momo/data/reports/weekly-report-2026-10-26-11-01.md`
   * Phân loại: `external_reference` | Mã lý do: `cross_repository_reference`
   * Chi tiết: Tham chiếu liên kết sang repository Front-end Hub (react-web-momo).
 
@@ -233,32 +248,32 @@
   * Phân loại: `external_reference` | Mã lý do: `cross_repository_reference`
   * Chi tiết: Tham chiếu liên kết sang repository Front-end Hub (react-web-momo).
 - **Dòng 17:** `data/reports/index.json`
-  * Phân loại: `code_path_reference` | Mã lý do: `code_runtime_or_generated_path`
-  * Chi tiết: Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output).
-- **Dòng 263:** `react-web-momo/data/reports/index.json`
+  * Phân loại: `external_reference` | Mã lý do: `cross_repository_data_dependency`
+  * Chi tiết: Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ.
+- **Dòng 265:** `react-web-momo/data/reports/index.json`
   * Phân loại: `external_reference` | Mã lý do: `cross_repository_reference`
   * Chi tiết: Tham chiếu liên kết sang repository Front-end Hub (react-web-momo).
 
 ### `scripts/sync_all_data.py`
 
 - **Dòng 10:** `data/seo-news.json`
-  * Phân loại: `code_path_reference` | Mã lý do: `code_runtime_or_generated_path`
-  * Chi tiết: Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output).
-- **Dòng 130:** `data/seo-news.json`
-  * Phân loại: `code_path_reference` | Mã lý do: `code_runtime_or_generated_path`
-  * Chi tiết: Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output).
-- **Dòng 141:** `data/ga4/landing-pages.json`
-  * Phân loại: `code_path_reference` | Mã lý do: `code_runtime_or_generated_path`
-  * Chi tiết: Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output).
+  * Phân loại: `external_reference` | Mã lý do: `cross_repository_data_dependency`
+  * Chi tiết: Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ.
+- **Dòng 132:** `data/seo-news.json`
+  * Phân loại: `external_reference` | Mã lý do: `cross_repository_data_dependency`
+  * Chi tiết: Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ.
+- **Dòng 143:** `data/ga4/landing-pages.json`
+  * Phân loại: `external_reference` | Mã lý do: `cross_repository_data_dependency`
+  * Chi tiết: Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ.
 
 ### `scripts/sync_breakout_to_hubs.py`
 
 - **Dòng 14:** `data/analytics/gsc_breakout_pages_7d.json`
-  * Phân loại: `code_path_reference` | Mã lý do: `code_runtime_or_generated_path`
-  * Chi tiết: Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output).
+  * Phân loại: `external_reference` | Mã lý do: `cross_repository_data_dependency`
+  * Chi tiết: Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ.
 - **Dòng 17:** `data/reports/weekly-report-2026-10-26-11-01.md`
-  * Phân loại: `code_path_reference` | Mã lý do: `code_runtime_or_generated_path`
-  * Chi tiết: Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output).
+  * Phân loại: `external_reference` | Mã lý do: `cross_repository_data_dependency`
+  * Chi tiết: Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ.
 - **Dòng 19:** `react-web-momo/lib/dashboard/web-data.json`
   * Phân loại: `external_reference` | Mã lý do: `cross_repository_reference`
   * Chi tiết: Tham chiếu liên kết sang repository Front-end Hub (react-web-momo).
@@ -287,20 +302,20 @@
 ### `scripts/sync_ga4_to_hubs.py`
 
 - **Dòng 5:** `data/ga4/landing-pages.json`
-  * Phân loại: `code_path_reference` | Mã lý do: `code_runtime_or_generated_path`
-  * Chi tiết: Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output).
+  * Phân loại: `external_reference` | Mã lý do: `cross_repository_data_dependency`
+  * Chi tiết: Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ.
 
 ### `scripts/sync_hybrid_report.py`
 
-- **Dòng 312:** `lib/dashboard/summary.json`
-  * Phân loại: `code_path_reference` | Mã lý do: `code_runtime_or_generated_path`
-  * Chi tiết: Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output).
+- **Dòng 313:** `lib/dashboard/summary.json`
+  * Phân loại: `external_reference` | Mã lý do: `cross_repository_data_dependency`
+  * Chi tiết: Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ.
 
 ### `scripts/sync_inventory_to_hubs.py`
 
-- **Dòng 1318:** `data/seo-clusters/index.json`
-  * Phân loại: `code_path_reference` | Mã lý do: `code_runtime_or_generated_path`
-  * Chi tiết: Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output).
+- **Dòng 1273:** `data/seo-clusters/index.json`
+  * Phân loại: `external_reference` | Mã lý do: `cross_repository_data_dependency`
+  * Chi tiết: Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ.
 
 ### `scripts/sync_roadmap_to_supabase.py`
 
@@ -314,18 +329,6 @@
 ### `scripts/sync_seo_news.py`
 
 - **Dòng 6:** `data/seo-news.json`
-  * Phân loại: `code_path_reference` | Mã lý do: `code_runtime_or_generated_path`
-  * Chi tiết: Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output).
-
-### `scripts/update_all_october_reports_30d.py`
-
-- **Dòng 12:** `react-web-momo/data/analytics/monthly-report-2026-10.json`
-  * Phân loại: `external_reference` | Mã lý do: `cross_repository_reference`
-  * Chi tiết: Tham chiếu liên kết sang repository Front-end Hub (react-web-momo).
-- **Dòng 13:** `react-web-momo/data/reports/monthly-index.json`
-  * Phân loại: `external_reference` | Mã lý do: `cross_repository_reference`
-  * Chi tiết: Tham chiếu liên kết sang repository Front-end Hub (react-web-momo).
-- **Dòng 16:** `react-web-momo/data/reports/report-thang-10-2026-board.md`
-  * Phân loại: `external_reference` | Mã lý do: `cross_repository_reference`
-  * Chi tiết: Tham chiếu liên kết sang repository Front-end Hub (react-web-momo).
+  * Phân loại: `external_reference` | Mã lý do: `cross_repository_data_dependency`
+  * Chi tiết: Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ.
 

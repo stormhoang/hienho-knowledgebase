@@ -34,19 +34,13 @@ Xác định "vũ khí" tư duy sẽ sử dụng để giải quyết vấn đ�
 
 ---
 
-## 📝 Bước 3: TRẢ (Structure Output)
-Cấu trúc câu trả lời phải đảm bảo 3 yếu tố: **Chiến lược - Thực thi - Đo lường**.
+## 📝 Bước 3: TRẢ (Structure Output - Universal Executive SSOT)
+Cấu trúc câu trả lời bắt buộc tuân thủ format tư duy 3 tầng: **Action Title ➔ What ➔ So What ➔ Now What**:
 
-1.  **Tóm tắt (Strategic Alignment):** Câu trả lời này giúp đạt được KR nào trong OKR 2026?
-2.  **Nội dung chính (Actionable Steps):** Các bước cụ thể (P0, P1, P2). Không nói lý thuyết suông.
-3.  **Dẫn chứng (Information Gain):** Trích dẫn số liệu hoặc logic đặc thù của MoMo.
-4.  **Liên kết (Cross-linking):** Luôn trỏ link về các file tài liệu liên quan trong Vault để duy trì tính kết nối.
-
-**Cấu trúc chuẩn của một phản hồi:**
-> - **Mục tiêu:** [X]
-> - **Dữ liệu đã đọc:** [Link file]
-> - **Framework áp dụng:** [[Tên Framework]]
-> - **Giải pháp cụ thể:** [Nội dung]
+1.  **Action Title (Kết luận trực diện):** 1 câu kết luận gồm [Chủ đề/Chỉ số chính] + [Hiện trạng/Xu hướng] + [Bản chất/Nguyên nhân cốt lõi].
+2.  **What (Dữ kiện sạch & Hiện tượng):** Bằng chứng thực tế, số liệu sạch kèm điểm so sánh (Target, Baseline, MoM), không đưa số liệu thô thiếu bối cảnh.
+3.  **So What (Phân tích thực chất & Tác động):** Tác động đến bài toán lớn (New User, MAU, Traffic, CVR, W2A, Doanh thu, Kiến trúc); chỉ ra điểm nghẽn và rủi ro đánh đổi.
+4.  **Now What (Hành động & Giải pháp):** Kế hoạch xử lý cụ thể theo thứ tự triển khai logic, gạch đầu dòng tự nhiên (tuyệt đối không gắn nhãn độ ưu tiên viết tắt), kèm PIC và deadline.
 
 ---
 
@@ -54,9 +48,12 @@ Cấu trúc câu trả lời phải đảm bảo 3 yếu tố: **Chiến lược
 Khi đối mặt với sự cố chỉ số (traffic sụt giảm, không đạt target, W2A rớt, v.v.), AI Agent bắt buộc áp dụng quy trình chẩn đoán 4 bước chuẩn Product Lead:
 
 1. **Hiện tượng (Symptom):** Đo lường chính xác khoảng cách giữa Thực tế (Actual) và Mục tiêu (Target), tính toán nhịp độ cần đạt (Required Pace).
-2. **Phân rã đa chiều (Decomposition):** Phân tách theo Kênh (Non-Paid vs Paid) -> Hubs -> Themes -> Top Landing Pages -> Search Queries.
+2. **Bóc tách chi tiết đa chiều (Decomposition):** Phân tách theo Kênh (Non-Paid vs Paid) -> Hubs -> Themes -> Top Landing Pages -> Search Queries.
+   - **Quy chuẩn phân loại Kênh Lưu Lượng (Harness SSOT Channel Breakdown):**
+     - **Kênh Tự Nhiên (Non-Paid):** Gồm đúng 4 nhánh: `Organic`, `Direct`, `AI Traffic (GEO)`, `Referral`. Toàn bộ nguồn đối tác, in-app webview, unassigned, social, video được hấp thu trọn vẹn vào `Referral`; tuyệt đối không tách dòng `Others` hay `Kênh khác` rời rạc.
+     - **Kênh Trả Phí (Paid Ads):** Gom toàn bộ các nguồn quảng cáo trả phí (`Paid Search`, `Paid Social`, `Paid Other`, `Cross-network`, `Display`).
 3. **Nguyên nhân gốc rễ (Root Cause):** Tách bạch giữa sụt giảm lưu lượng đầu phễu (Top of Funnel - do index, ranking, nhu cầu) và sụt giảm tỷ lệ chuyển đổi cuối phễu (Bottom of Funnel - do UX, OneLink, tracking).
-4. **Đơn thuốc hành động (Prescription):** Đưa ra khuyến nghị cụ thể theo ưu tiên P0/P1/P2 kèm đội ngũ chịu trách nhiệm (Web Dev, SEO Vendor, Content Team) và tác động kinh doanh định lượng (ROI).
+4. **Kế hoạch xử lý trọng tâm (Prescription):** Đưa ra giải pháp cụ thể theo thứ tự triển khai logic kèm đội ngũ chịu trách nhiệm (Web Dev, SEO Vendor, Content Team) và tác động kinh doanh định lượng (ROI).
 
 ---
 

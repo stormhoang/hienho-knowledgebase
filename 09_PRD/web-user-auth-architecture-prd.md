@@ -3,11 +3,11 @@
 *Tài liệu Đặc tả Chiến lược Định danh Người dùng & Kiến trúc Hệ thống Quản trị Cửa hàng (User Authentication Strategy & Merchant Portal Architecture PRD)*
 
 ## 📋 THÔNG TIN CHUNG (Metadata)
-> *   **Tên dự án / Sản phẩm (PRODUCT NAME):** Web User Authentication Strategy & Merchant Portal Architecture
-> *   **Đầu mối Cell Team (PO & Tech Lead):** GPD - Web Platform
-> *   **Web Product Lead (Duyệt dự án):** Hien.ho
-> *   **Trạng thái tài liệu (Document status):** DRAFT
-> *   **Tiến độ dự kiến:** Q3/2026 (Kick-off) ➔ Q3/2026 (Pilot) ➔ Q4/2026 (Go-Live)
+> *   **Dự án:** Web User Authentication Strategy & Merchant Portal Architecture
+> *   **Đội ngũ triển khai:** GPD - Web Platform
+> *   **Phê duyệt:** Hien.ho
+> *   **Trạng thái:** DRAFT
+> *   **Tiến độ:** Q3/2026 (Kick-off) ➔ Q3/2026 (Pilot) ➔ Q4/2026 (Go-Live)
 > *   **Loại yêu cầu:** [x] Tính năng mới | [ ] Cải tiến/Thay đổi cấu trúc
 
 ---

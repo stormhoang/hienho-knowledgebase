@@ -1066,6 +1066,45 @@ Dữ liệu Single Source of Truth (SSOT) phễu chuyển đổi người dùng 
 3. **iOS Tiếp Tục Chiếm Ưu Thế Về Giá Trị Kinh Doanh:** Dù chỉ chiếm 51,22% lượng cài đặt, người dùng iOS mang lại **57,10% N2MM (1.364 users)** và **58,64% Active MAU (753 users)**. Tỷ lệ Map/REG trên iOS đạt **67,39%**, cao hơn Android (+12,81 p.p).
 4. **Hiệu Quả Luồng Thử Nghiệm Mới (Financial Health):** Khởi động luồng Financial Health từ 12/10 ghi nhận 68 Installs và 3 Map Bank đầu tiên. Cần tiếp tục tối ưu hóa hành trình Pre-install trên Web để nâng tỷ lệ REG/Install (hiện ở mức 10,29%).
 
+---
+
+### 8.5 Phân Tích Phễu Chuyển Đổi MTD Tháng 11/2026 (Lũy Kế 10 Ngày Đầu Tháng - Dữ Liệu AppsFlyer SSOT)
+
+* Dữ liệu Single Source of Truth (SSOT) phễu chuyển đổi MTD 10 Ngày Tháng 11/2026 được lưu trữ tại:
+  - `07_REPORTS/data/analytics/gpd_momo_web_nov_2026.csv`
+  - `07_REPORTS/data/monthly_11_2026_mtd_10d.json`
+  - Sheet `New User` trong `07_REPORTS/web_performance_tracking.xlsx` và Google Sheets Cloud SSOT (ID `1JaaYv2MnDy-dfBdC3P-GMB6SFgjez2VowdjX9PjmPYU`)
+
+#### A. Tổng Quan Phễu Chuyển Đổi Web-to-App MTD 10 Ngày (01/11 - 10/11/2026):
+* **Total Installs (Cài đặt):** **3.171 installs** (Nhịp vận hành: **317,1 lượt/ngày**; Dự báo 30 ngày: **9.513 installs**, đạt 85,4% so với Full Month Tháng 10 là 11.143).
+* **Đăng Ký Tài Khoản (REG):** **864 users** (Nhịp vận hành: **86,4 user/ngày**; Dự báo 30 ngày: **2.592 users**; CVR Install -> REG đạt **27,25%**).
+* **Liên Kết Ngân Hàng (Map Bank / N2MM):** **533 users** (Nhịp vận hành: **53,3 user/ngày**; Dự báo 30 ngày: **1.599 users**; CVR REG -> Map: **61,69%**; CVR Install -> Map: **16,81%**).
+* **Active MAU (Kích hoạt người dùng):** **314 users** (Nhịp vận hành: **31,4 user/ngày**; Dự báo 30 ngày: **942 users**; CVR Map -> MAU: **58,91%**; End-to-End CVR Install -> MAU: **9,90%**).
+
+#### B. Cơ Cấu Theo Placement & Nhóm Chiến Dịch (Tháng 11 MTD 10 Ngày):
+| Cụm Sản Phẩm / Placement | Installs | Tỷ Trọng | REG | CVR REG | Map Bank | CVR Map | Active MAU | End-to-End CVR |
+| :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| **C.CHAOMOMO (Banner đại trà)** | 2.763 | 87,13% | 772 | 27,94% | 479 | 62,05% | 275 | 9,95% |
+| **Cinema Hub (Rạp phim & Lotte)** | **224** | **7,06%** | **58** | **25,89%** | **38** | **65,52%** | **27** | **12,05%** |
+| **WEB_BRT_C.CHAOMOMO (Đổi quà)** | 58 | 1,83% | 16 | 27,59% | 8 | 50,00% | 5 | 8,62% |
+| **Bảo Hiểm (InsurTech)** | 53 | 1,67% | 13 | 24,53% | 6 | 46,15% | 5 | 9,43% |
+| **Merchant Hub (Đối tác)** | 42 | 1,32% | 3 | 7,14% | 1 | 33,33% | 1 | 2,38% |
+| **Financial Health** | 31 | 0,98% | 2 | 6,45% | 1 | 50,00% | 1 | 3,23% |
+| **TỔNG CỘNG MTD 10 NGÀY** | **3.171** | **100,00%** | **864** | **27,25%** | **533** | **61,69%** | **314** | **9,90%** |
+
+#### C. Cơ Cấu Theo Nền Tảng Hệ Điều Hành (Tháng 11 MTD 10 Ngày):
+| Hệ Điều Hành | Installs | Tỷ Trọng | REG | CVR REG | Map Bank | CVR Map | Active MAU | End-to-End CVR |
+| :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| **Android** | 1.651 | 52,07% | 442 | 26,77% | 238 | 53,85% | 129 | 7,81% |
+| **iOS** | **1.520** | **47,93%** | **422** | **27,76%** | **295** | **69,91%** | **185** | **12,17%** |
+| **TỔNG CỘNG** | **3.171** | **100,00%** | **864** | **27,25%** | **533** | **61,69%** | **314** | **9,90%** |
+
+#### D. Đánh Giá Chiến Lược & Nhận Định Product/Tech Lead:
+1. **Duy Trì Tỷ Lệ Map Bank Trên Đăng Ký Vững Chắc (61,69%):** Tỷ lệ chuyển đổi từ REG sang Map Bank trong 10 ngày đầu tháng 11 đạt 61,69%, ngang bằng với mức kỷ lục của Tháng 10 (61,23%). Điều này cho thấy chất lượng người dùng đăng ký tài khoản từ web vẫn rất thực chất.
+2. **Điểm Nghẽn Nằm Ở Bước Install Sang Đăng Ký (27,25% vs 35,02% Tháng 10):** Tỷ lệ người dùng cài app hoàn tất đăng ký tài khoản giảm từ 35,0% trong Tháng 10 xuống 27,2% trong 10 ngày đầu Tháng 11. Cần tiếp tục theo dõi hiệu quả điều hướng của trang Tải App tập trung (`/tai-app`) và tối ưu màn hình Onboarding đầu tiên sau khi mở app.
+3. **Cinema Hub Tiếp Tục Dẫn Đầu Về Tỷ Lệ Giữ Chân Thực Tế (End-to-End CVR 12,05%):** Khách hàng đến từ bối cảnh rạp phim tiếp tục có chất lượng chuyển đổi cao nhất với 12,05% người cài app trở thành Active MAU (so với mức trung bình nền tảng là 9,90%).
+4. **iOS Giữ Vững Tỷ Suất Sinh Lời Cao:** Người dùng iOS đóng góp tới 55,35% tổng số liên kết ngân hàng (295 users) dù lượng cài đặt thấp hơn Android (47,93%), với CVR REG -> Map chạm ngưỡng 69,91%.
+
 
 
 

@@ -71,7 +71,7 @@ Chuyển đổi người dùng tự nhiên (Web-to-App W2A MAU / New Users)
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tháng 7/2026</strong></td>
       <td style="border:1px solid #94a3b8### 1.5. Bảng Quy Hoạch KPI 5 Strategic Web Hubs H2/2026 (Bảng Final)
 
-Bảng ma trận quy hoạch 5 Strategic Web Hubs chính thức (Đồng bộ 100% với Slide Matrix Final):
+Bảng tổng hợp quy hoạch 5 Strategic Web Hubs chính thức (Đồng bộ 100% với Slide Matrix Final):
 
 <table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
   <thead>
@@ -294,7 +294,7 @@ Bảng ma trận quy hoạch 5 Strategic Web Hubs chính thức (Đồng bộ 10
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Thách Thức & Bối Cảnh</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Thách thức Đầu Q3/2026:</strong> Rà soát 20+ Use Cases thuộc nhiều Cell Teams ở tất cả các Division. Mỗi dự án có mục tiêu phân mảnh, rời rạc, gây khó khăn trong việc đo lường và đóng góp vào mục tiêu tổng của Web Platform - GPD.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tập Chỉ Số Chuẩn Hóa (Standardize Key Metrics):</strong><br>- <em>Web Metrics:</em> Traffic (6M MUV), CTR (10 – 15%).<br>- <em>App Metrics:</em> Login App (W2A Users), MEU.<br>- <em>Business Impact:</em> MEU / MAU, Transactions / Revenue.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tập Chỉ Số Chuẩn Hóa (Standardize Key Metrics):</strong><br>- <em>Web Metrics:</em> Traffic (6M MUV), CTR (10-15%).<br>- <em>App Metrics:</em> Login App (W2A Users), MEU.<br>- <em>Business Impact:</em> MEU / MAU, Transactions / Revenue.</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Năng Lực & Phân Định Vai Trò</strong></td>
@@ -332,29 +332,29 @@ Trong H2/2026, Web Platform tập trung cung cấp các giải pháp về nền 
 
 ### 2.1. MoSpark Platform
 MoSpark Platform được phát triển các cấu phần thông minh nhằm đáp ứng kỷ nguyên AI Search và tối ưu hóa chuyển đổi:
-*   *GenAI Content:* **Cỗ máy sản xuất nội dung đa phương tiện tự trị bằng AI** – Tích hợp đa dạng model ngôn ngữ lớn để tự động hóa hoàn chỉnh các định dạng content blog, content mini web, sinh hình ảnh, video, crawl dữ liệu bản đồ Google Maps, website scraper và chuyển đổi text-to-speech.
-*   *PLG Project & Topic Cluster:* **Bản đồ tri thức ngành và chốt chặn an toàn nội dung** – Quản lý tập trung các cụm chủ đề thực thể (Topic Clusters), phân cụm từ khóa và tự động kích hoạt cơ chế Hard-Block tối cao để bảo vệ độ toàn vẹn thông tin, ngăn chặn xung đột SEO.
-*   *Merchant-Led Growth (Local SEO Pages):* **Số hóa sự hiện diện của đối tác offline trên kênh tìm kiếm** – Tự động hóa phủ rộng 500 trang Local SEO (Merchant Detail và Location Listing) nhằm đón đầu search intent địa phương, tích hợp sâu giải pháp Ví Trả Sau và Soundbox để chuyển hóa người dùng từ online sang offline (O2O).
-*   *GEO & AI Search Inventory:* **Radar thị phần tiếng nói của MoMo trong kỷ nguyên AI Search** – Vận hành pipeline đo lường lưu lượng trích dẫn, click giới thiệu và phân tích thị phần hiển thị của MoMo trên Google AI Overviews, ChatGPT và Perplexity.
-*   *Landing Page Builder:* **Giải phóng năng lực thiết kế giao diện tự chủ cho Cell Teams** – Chuẩn hóa thư viện kéo thả Mobase (Mobase V2 & Puck Editor) kết hợp AI tự thiết kế layout để rút ngắn thời gian launch trang từ tuần xuống ngày mà vẫn nhất quán nhận diện thương hiệu.
-*   *Module Định danh Người dùng (Identity Platform):* **Định danh người dùng liên kênh và minh bạch hóa hiệu quả ROI** – Hợp nhất chính xác hành vi người dùng ẩn danh từ Web tới các hành vi giao dịch trong App (Deep-link mapping qua Edge Cookie và Edge Middleware) để đo lường hiệu quả ROI trên BigQuery.
-*   *Ads Manager & Utilities Tool SDK:* **Phễu chuyển đổi thông minh dựa trên giá trị tiện ích (Utility-First)** – Tự động điều phối quảng cáo theo ngữ cảnh và cung cấp SDK tích hợp các widget tương tác (Finhub, Simulator, Giá Vàng) giúp giải quyết trực tiếp JTBD và thu hút người dùng tự nhiên.
-*   *Chatbot Customizer & RAG Pipeline:* **Trợ lý tri thức thông minh đồng hành cùng khách hàng** – Tự động chuyển đổi dữ liệu dự án (Knowledge Base) thành cơ sở dữ liệu vector thời gian thực giúp chatbot tư vấn tức thì thông tin sản phẩm và điều hướng chính xác nhu cầu giao dịch.
-*   *Umami Analytics:* **Hệ thống đo lường hiệu năng và hành vi người dùng thời gian thực** – Tự động tích hợp mã theo dõi trên các Microsite, Landing Page, Merchant Page và Ads Banner để ghi nhận real-time traffic, click, CTR và đo lường trực quan hiệu năng chuyển đổi Web-to-App trên từng block giao diện.
+*   *GenAI Content:* **Cỗ máy sản xuất nội dung đa phương tiện tự trị bằng AI** - Tích hợp đa dạng model ngôn ngữ lớn để tự động hóa hoàn chỉnh các định dạng content blog, content mini web, sinh hình ảnh, video, crawl dữ liệu bản đồ Google Maps, website scraper và chuyển đổi text-to-speech.
+*   *PLG Project & Topic Cluster:* **Bản đồ tri thức ngành và chốt chặn an toàn nội dung** - Quản lý tập trung các cụm chủ đề thực thể (Topic Clusters), phân cụm từ khóa và tự động kích hoạt cơ chế Hard-Block tối cao để bảo vệ độ toàn vẹn thông tin, ngăn chặn xung đột SEO.
+*   *Merchant-Led Growth (Local SEO Pages):* **Số hóa sự hiện diện của đối tác offline trên kênh tìm kiếm** - Tự động hóa phủ rộng 500 trang Local SEO (Merchant Detail và Location Listing) nhằm đón đầu search intent địa phương, tích hợp sâu giải pháp Ví Trả Sau và Soundbox để chuyển hóa người dùng từ online sang offline (O2O).
+*   *GEO & AI Search Inventory:* **Radar thị phần tiếng nói của MoMo trong kỷ nguyên AI Search** - Vận hành pipeline đo lường lưu lượng trích dẫn, click giới thiệu và phân tích thị phần hiển thị của MoMo trên Google AI Overviews, ChatGPT và Perplexity.
+*   *Landing Page Builder:* **Giải phóng năng lực thiết kế giao diện tự chủ cho Cell Teams** - Chuẩn hóa thư viện kéo thả Mobase (Mobase V2 & Puck Editor) kết hợp AI tự thiết kế layout để rút ngắn thời gian launch trang từ tuần xuống ngày mà vẫn nhất quán nhận diện thương hiệu.
+*   *Module Định danh Người dùng (Identity Platform):* **Định danh người dùng liên kênh và minh bạch hóa hiệu quả ROI** - Hợp nhất chính xác hành vi người dùng ẩn danh từ Web tới các hành vi giao dịch trong App (Deep-link mapping qua Edge Cookie và Edge Middleware) để đo lường hiệu quả ROI trên BigQuery.
+*   *Ads Manager & Utilities Tool SDK:* **Phễu chuyển đổi thông minh dựa trên giá trị tiện ích (Utility-First)** - Tự động điều phối quảng cáo theo ngữ cảnh và cung cấp SDK tích hợp các widget tương tác (Finhub, Simulator, Giá Vàng) giúp giải quyết trực tiếp JTBD và thu hút người dùng tự nhiên.
+*   *Chatbot Customizer & RAG Pipeline:* **Trợ lý tri thức thông minh đồng hành cùng khách hàng** - Tự động chuyển đổi dữ liệu dự án (Knowledge Base) thành cơ sở dữ liệu vector thời gian thực giúp chatbot tư vấn tức thì thông tin sản phẩm và điều hướng chính xác nhu cầu giao dịch.
+*   *Umami Analytics:* **Hệ thống đo lường hiệu năng và hành vi người dùng thời gian thực** - Tự động tích hợp mã theo dõi trên các Microsite, Landing Page, Merchant Page và Ads Banner để ghi nhận real-time traffic, click, CTR và đo lường trực quan hiệu năng chuyển đổi Web-to-App trên từng block giao diện.
 
 ### 2.2. Quy Chuẩn Vận Hành & Quản Trị Hệ Thống (Platform Governance & Self-Serve)
 Để đảm bảo tính toàn vẹn hệ thống và tối ưu hóa năng lực tự vận hành cho các đơn vị, mô hình quản trị trong H2/2026 được phân định rõ ràng thành hai hạng mục cốt lõi:
 
 #### 2.2.1. Platform Guidelines (Hành Lang Quản Trị & Kiểm Soát Kỹ Thuật)
 Đây là các chốt chặn bắt buộc và quy tắc hệ thống do Web Platform kiểm soát chặt chẽ nhằm bảo vệ sức khỏe website `momo.vn`:
-*   *Quality Gate (Publish Approval):* **Chốt chặn chất lượng và pháp lý tuyệt đối trước khi Go-live** – Phê duyệt nghiêm ngặt 100% dự án Web mới nhằm đảm bảo tiêu chuẩn Agent-Led Search (Schema markup, E-E-A-T, Named Author) và cam kết điểm số GEO/SEO ≥ 80.
-*   *Domain & Backlink Security:* **Hệ thống bảo vệ sức khỏe và độ uy tín tên miền** – Rà quét định kỳ hệ thống link profile của tên miền `momo.vn` để chủ động disavow các backlink spam, củng cố vững chắc điểm số Domain Authority.
-*   *URL Governance & Crawl Budget:* **Kiểm soát chặt chẽ đường dẫn và ngân sách cào dữ liệu** – Đây là quy tắc kỹ thuật bắt buộc phải được đảm bảo và kiểm soát nghiêm ngặt; tiến hành dọn dẹp crawl waste, kiểm soát chặt chẽ query parameter rác và loại bỏ URL lỗi thời để tối đa hóa hiệu suất lập chỉ mục của các AI Search crawlers.
+*   *Quality Gate (Publish Approval):* **Chốt chặn chất lượng và pháp lý tuyệt đối trước khi Go-live** - Phê duyệt nghiêm ngặt 100% dự án Web mới nhằm đảm bảo tiêu chuẩn Agent-Led Search (Schema markup, E-E-A-T, Named Author) và cam kết điểm số GEO/SEO ≥ 80.
+*   *Domain & Backlink Security:* **Hệ thống bảo vệ sức khỏe và độ uy tín tên miền** - Rà quét định kỳ hệ thống link profile của tên miền `momo.vn` để chủ động disavow các backlink spam, củng cố vững chắc điểm số Domain Authority.
+*   *URL Governance & Crawl Budget:* **Kiểm soát chặt chẽ đường dẫn và ngân sách cào dữ liệu** - Đây là quy tắc kỹ thuật bắt buộc phải được đảm bảo và kiểm soát nghiêm ngặt; tiến hành dọn dẹp crawl waste, kiểm soát chặt chẽ query parameter rác và loại bỏ URL lỗi thời để tối đa hóa hiệu suất lập chỉ mục của các AI Search crawlers.
 
 #### 2.2.2. Cell Team Self-Serve (Hỗ Trợ Tự Vận Hành & Thực Thi)
 Đây là các bộ tài nguyên, quy trình và môi trường do Web Platform cung cấp để Cell Teams chủ động triển khai sản phẩm/chiến dịch đúng tiêu chuẩn:
-*   *Platform Guidelines Specification:* **Quy chuẩn kỹ thuật đóng gói** – Cung cấp tài liệu quy chuẩn kỹ thuật đồng bộ (SEO/GEO standards, tracking rules, boilerplate mẫu) giúp các Cell Teams tự tin triển khai sản phẩm đúng hướng.
-*   *Vòng lặp Kiểm thử SPA (reSearch - Pilot - Action):* **Quy trình tối ưu hóa hiệu quả đầu tư sản phẩm** – Cung cấp môi trường sandbox/UAT preview và cố vấn chuyên sâu để Cell Teams chạy thử nghiệm quy mô nhỏ (Pilot) trước khi tiến hành scale-up diện rộng *(Lưu ý: Quy trình này chỉ áp dụng cho các dự án tăng trưởng PLG tích hợp công cụ tương tác/Widget; không áp dụng cho các Cell Teams triển khai Mini Web & Landing Page chiến dịch truyền thông/sự kiện)*.
+*   *Platform Guidelines Specification:* **Quy chuẩn kỹ thuật đóng gói** - Cung cấp tài liệu quy chuẩn kỹ thuật đồng bộ (SEO/GEO standards, tracking rules, boilerplate mẫu) giúp các Cell Teams tự tin triển khai sản phẩm đúng hướng.
+*   *Vòng lặp Test SPA (reSearch - Pilot - Action):* **Quy trình tối ưu hóa hiệu quả đầu tư sản phẩm** - Cung cấp môi trường sandbox/UAT preview và cố vấn chuyên sâu để Cell Teams chạy thử nghiệm quy mô nhỏ (Pilot) trước khi tiến hành scale-up diện rộng *(Lưu ý: Quy trình này chỉ áp dụng cho các dự án tăng trưởng PLG tích hợp công cụ tương tác/Widget; không áp dụng cho các Cell Teams triển khai Mini Web & Landing Page chiến dịch truyền thông/sự kiện)*.
 
 ---
 
@@ -365,7 +365,7 @@ Danh mục các dự án tăng trưởng (PLG Projects) trong H2/2026 được p
 
 #### 3.1.1. Merchant Detail & Listing Pages (Merchant-Led Growth)
 *   **Trạng thái:** Dự án trọng điểm cốt lõi của Web Platform (Scale-up diện rộng từ Pilot Live)
-*   **Chủ trì / Phối hợp:** Web Platform x SMEs Offline Payment x M4B
+*   **Điều phối / Phối hợp:** Web Platform x SMEs Offline Payment x M4B
 *   **Vấn đề & Điểm nghẽn Cốt lõi (Business & Platform Issues):**
     *   **[Business]**
         *   *Chưa chốt KPI chuyển đổi Ví Trả Sau:* Đội ngũ sản phẩm mảng Tín dụng (PO VTS) chưa phê duyệt Target KPI chuyển đổi mở Ví Trả Sau từ trang `/merchant`.
@@ -377,15 +377,15 @@ Danh mục các dự án tăng trưởng (PLG Projects) trong H2/2026 được p
         *   *Tạm gác luồng Soundbox trên Web:* Thiếu danh sách đối tác xác thực và spec đường dẫn Onelink deep link cho form đăng ký Loa Soundbox; tạm thời gác luồng Soundbox trên Web.
         *   *Chưa kiểm định xong URL Mapping & Umami Tracking:* Chi tiết cấu hình theo dõi sự kiện (Umami Tracking) và danh sách ánh xạ các URL cũ (`PAGE_ID` legacy `/page/{id}` ➔ `momo.vn/merchant/{slug}`) chưa hoàn tất audit.
 *   **Định hướng chiến lược H2/2026:**
-    *   *Product Vision:* **Số hóa sự hiện diện của đối tác offline trên nền tảng Web** – Kiến tạo hệ thống trang thông tin chi tiết và bản đồ địa lý cho các hộ kinh doanh (SME) và chuỗi đối tác lớn của MoMo, tích hợp trực tiếp luồng đặt mua thiết bị Soundbox và đăng ký người dùng mới Ví Trả Sau.
+    *   *Product Vision:* **Số hóa sự hiện diện của đối tác offline trên nền tảng Web** - Kiến tạo hệ thống trang thông tin chi tiết và bản đồ địa lý cho các hộ kinh doanh (SME) và chuỗi đối tác lớn của MoMo, tích hợp trực tiếp luồng đặt mua thiết bị Soundbox và đăng ký người dùng mới Ví Trả Sau.
     *   *Business Objective:* Đón đầu và tối ưu hóa **Traffic & Search Rankings** cho các từ khóa địa phương; scale-up triển khai thành công từ **500 đến 1.000 trang đối tác (Merchant Pages)** trong H2/2026 nhằm thúc đẩy trực tiếp số lượng đơn hàng đăng ký thiết bị **Soundbox (Soundbox Orders)** và thu hút người dùng mới cho Ví Trả Sau (New User Acquisition).
 *   **KPI & Web Objectives:**
     *   *Quy mô triển khai:* Hoàn thành thiết lập **500 - 1.000 Merchant Pages** hoạt động.
     *   *Chỉ số hiệu quả:* Lượt hiển thị tìm kiếm tự nhiên tại địa phương (*Local Organic Search Impressions*), lượng truy cập trang Merchant, số lượng đơn hàng đăng ký thiết bị Soundbox (*Soundbox Orders*), số lượng người dùng mới đăng ký thành công Ví Trả Sau (*New VTS Users*), và lượt tương tác với các Widget tiện ích tích hợp (*Widget Interactions*).
 
 #### 3.1.2. Tra cứu Phạt Nguội
-*   **Trạng thái:** Hoạt động & Scale-up mạnh mẽ (Phase 2 Scaling - Dự án Evergreen P0)
-*   **Chủ trì / Phối hợp:** Web Platform x VTTI
+*   **Trạng thái:** Hoạt động & Scale-up mạnh mẽ (Phase 2 Scaling - Dự án Evergreen trọng điểm)
+*   **Điều phối / Phối hợp:** Web Platform x VTTI
 *   **Vấn đề & Điểm nghẽn Cốt lõi (Business & Platform Issues):**
     *   **[Business]**
         *   *Tỷ lệ đính kèm dịch vụ có phí (Attach Rate) chưa cao:* Traffic tra cứu rất lớn (~500K-600K views/tháng), nhưng tỷ lệ chuyển đổi sang gói Cảnh báo tự động 9k/năm và Bảo hiểm Ô tô/Xe máy chưa tương xứng.
@@ -396,17 +396,17 @@ Danh mục các dự án tăng trưởng (PLG Projects) trong H2/2026 được p
         *   *Scale-up pSEO 63 Tỉnh Thành & Bảo mật Captcha:* Khối lượng lớn sub-pages local pSEO `/phat-nguoi/{tinh-thanh}` đòi hỏi MoSpark CMS duy trì sitemap động và hạ tầng Captcha Module chống DDoS/Scraping dữ liệu.
         *   *Tỷ lệ lưu tự động Hồ sơ xe (Vehicle Profile):* Tính năng lưu biển số xe đã tra cứu từ Cookie Web sang Agent ID In-App chưa đạt tỷ lệ phủ 100%.
 *   **Định hướng chiến lược H2/2026:**
-    *   *Product Vision:* **Nền tảng tra cứu vi phạm giao thông tin dùng hàng đầu cho người tham gia giao thông** – Cung cấp công cụ tra cứu phạt nguội 1-click tức thì không CAPTCHA, tự động hóa luồng đăng ký nhận thông báo vi phạm thời gian thực và lưu biển số xe để khởi tạo Hồ sơ phương tiện.
+    *   *Product Vision:* **Nền tảng tra cứu vi phạm giao thông tin dùng hàng đầu cho người tham gia giao thông** - Cung cấp công cụ tra cứu phạt nguội 1-click tức thì không CAPTCHA, tự động hóa luồng đăng ký nhận thông báo vi phạm thời gian thực và lưu biển số xe để khởi tạo Hồ sơ phương tiện.
     *   *Business Objective:* Vận hành như phễu hứng traffic chủ xe ô tô lớn nhất để đổ về đăng ký **Vehicle Hub**; đồng thời liên kết thương mại chặt chẽ với **Bảo hiểm Ô tô** qua gói tặng kèm 1 năm giám sát vi phạm tự động nhằm thúc đẩy tỷ lệ bán chéo (Cross-sell).
     *   *Mục tiêu SEO & pSEO:* Bảo vệ vị thế **Top 3 Google Search Ranking** cho các từ khóa chính và scale-up Local pSEO cho 63 tỉnh thành bằng layout trang địa phương tối ưu.
 *   **KPI & Web Objectives:**
-    *   **70% (Trọng số chính) – MEU (Monthly Engagement User):** Số lượng người dùng duy nhất thực hiện hành vi tra cứu phạt nguội, phản ánh mức độ tương tác thực tế và tệp nhu cầu chất lượng cao ở đỉnh phễu thương mại hóa.
-    *   **30% (Trọng số phụ) – MAU (Monthly Active User):** Số lượng người dùng duy nhất phát sinh giao dịch mua gói subscription nhận cảnh báo tự động, đo lường tỷ lệ chuyển đổi thương mại hóa.
+    *   **70% (Trọng số chính) - MEU (Monthly Engagement User):** Số lượng người dùng duy nhất thực hiện hành vi tra cứu phạt nguội, phản ánh mức độ tương tác thực tế và tệp nhu cầu chất lượng cao ở đỉnh phễu thương mại hóa.
+    *   **30% (Trọng số phụ) - MAU (Monthly Active User):** Số lượng người dùng duy nhất phát sinh giao dịch mua gói subscription nhận cảnh báo tự động, đo lường tỷ lệ chuyển đổi thương mại hóa.
     *   **Awareness Target:** Đạt vị trí **Top 3 SEO ranking** cho cụm từ khóa chính *"tra cứu phạt nguội"*.
 
 #### 3.1.3. eSIM Du Lịch
 *   **Trạng thái:** Hoạt động & Tăng tốc Tăng trưởng (Mùa cao điểm du lịch H2/2026)
-*   **Chủ trì / Phối hợp:** Web Platform
+*   **Điều phối / Phối hợp:** Web Platform
 *   **Định hướng chiến lược H2/2026:**
     *   *Tầm nhìn của BU:* Đạt mục tiêu tăng trưởng đột phá trong quý cao điểm du lịch (Q3/2026) bằng cách triển khai chiến dịch *Travel Hub & "Trip Kit" bundle* (bán chéo eSIM cùng các dịch vụ đặt vé du lịch) và tối ưu giao diện "Country-first" để bắt trọn search intent của tệp khách Outbound.
     *   *Thương mại hóa qua Web:* Kích hoạt luồng đóng góp giao dịch trực tiếp từ kênh Web ngoài App, định hình tỷ lệ đóng góp tăng dần qua từng tháng để giải quyết các ma sát trong hành trình mua hàng của khách.
@@ -416,7 +416,7 @@ Danh mục các dự án tăng trưởng (PLG Projects) trong H2/2026 được p
 
 #### 3.1.4. Tiện ích Giao thông (Vehicle Hub)
 *   **Trạng thái:** Đang tiến hành (Giai đoạn Đồng bộ Chiến lược)
-*   **Chủ trì / Phối hợp:** Web Platform
+*   **Điều phối / Phối hợp:** Web Platform
 *   **Vấn đề & Điểm nghẽn Cốt lõi (Business & Platform Issues):**
     *   **[Business]**
         *   *Phân mảnh tiện ích chủ xe:* Nhu cầu tra cứu phạt nguội, nạp ETC, hạn đăng kiểm và bảo hiểm bị rải rác trên nhiều ứng dụng độc lập, chưa tập trung về một điểm chạm duy nhất.
@@ -425,7 +425,7 @@ Danh mục các dự án tăng trưởng (PLG Projects) trong H2/2026 được p
         *   *Phụ thuộc kết nối API đối tác:* Luồng tra cứu Phạt nguội 0-CAPTCHA phụ thuộc lớn vào tốc độ phản hồi và kết nối API từ các bên thứ ba (ePass, TTDK, Cổng Dịch vụ công).
         *   *Hạ tầng Hồ sơ phương tiện (Vehicle Profile):* Hệ thống tự động lưu lại biển số xe và pre-fill thông tin tự động khi mua Bảo hiểm/ETC chưa hoàn thiện đồng bộ 100%.
 *   **Định hướng chiến lược H2/2026:**
-    *   *Triết lý cốt lõi:* Vận hành theo nguyên tắc *"Một chiếc xe – Một tài khoản dịch vụ"*, đồng hành cùng VTTI (ePass) làm **trung tâm quản lý hồ sơ phương tiện (Vehicle Profile)** từ thông tin biển số xe thu thập qua phễu **Tra cứu Phạt Nguội** (quản lý ETC ePass/VETC, đăng kiểm, cứu hộ SOS 24/7, giá xăng dầu, bản đồ trạm sạc VinFast).
+    *   *Triết lý cốt lõi:* Vận hành theo nguyên tắc *"Một chiếc xe - Một tài khoản dịch vụ"*, đồng hành cùng VTTI (ePass) làm **trung tâm quản lý hồ sơ phương tiện (Vehicle Profile)** từ thông tin biển số xe thu thập qua phễu **Tra cứu Phạt Nguội** (quản lý ETC ePass/VETC, đăng kiểm, cứu hộ SOS 24/7, giá xăng dầu, bản đồ trạm sạc VinFast).
     *   *Động cơ Bán chéo (Car Model pSEO):* Phát triển 1.537 sub-pages theo từng dòng xe để cá nhân hóa phễu thu thập thông tin xe, cung cấp dữ liệu pre-fill (tự động điền) giúp tối ưu hóa luồng đăng ký mua **Bảo hiểm Ô tô**.
     *   *Giao diện Web:* Phát triển widget tra cứu số dư tài khoản giao thông và lịch sử di chuyển trực tiếp trên Web.
 *   **KPI & Web Objectives:**
@@ -435,7 +435,7 @@ Danh mục các dự án tăng trưởng (PLG Projects) trong H2/2026 được p
 
 #### 3.1.5. Cinema Hub (Phim chiếu rạp Movies & Truyền hình OTT)
 *   **Trạng thái:** Hoạt động & Duy trì Vị thế Dẫn đầu (Organic Leadership)
-*   **Chủ trì / Phối hợp:** Web Platform
+*   **Điều phối / Phối hợp:** Web Platform
 *   **Vấn đề & Điểm nghẽn Cốt lõi (Business & Platform Issues):**
     *   **[Business]**
         *   *Thanh toán bị đứt gãy:* Khách hàng bắt buộc phải tải App MoMo mới mua được vé rạp, chưa thể quét mã QR thanh toán ngay trên trang Web.
@@ -448,7 +448,7 @@ Danh mục các dự án tăng trưởng (PLG Projects) trong H2/2026 được p
     *   *Phạm vi mở rộng H2/2026:* Bên cạnh mảng vé xem phim chiếu rạp (**Movies**), Cinema Hub mở rộng tích hợp danh mục giải trí truyền hình số và phim bộ trực tuyến (**OTT Streaming** bao gồm VieON, FPT Play, Galaxy Play, TV360, VTVcab ON).
     *   *Dọn dẹp hạ tầng:* Đã hoàn thành xử lý dứt điểm **959 URL rác (zero-traffic review pages)** để bảo vệ Crawl Budget.
 *   **Định hướng chiến lược H2/2026:**
-    *   *Product Vision:* **Nền tảng trải nghiệm giải trí phim rạp và truyền hình OTT end-to-end trên trình duyệt Web** – Hợp nhất hoàn chỉnh phễu đặt vé rạp qua component Cinebox Ticket và cổng đăng ký/gia hạn gói OTT trực tuyến; tích hợp giải pháp **All-in-One QR** để người dùng hoàn tất thanh toán nhận vé/gói xem phim tức thì.
+    *   *Product Vision:* **Nền tảng trải nghiệm giải trí phim rạp và truyền hình OTT end-to-end trên trình duyệt Web** - Hợp nhất hoàn chỉnh phễu đặt vé rạp qua component Cinebox Ticket và cổng đăng ký/gia hạn gói OTT trực tuyến; tích hợp giải pháp **All-in-One QR** để người dùng hoàn tất thanh toán nhận vé/gói xem phim tức thì.
     *   *Business Objective:* Chuyển dịch toàn diện hệ thống trang Cinema & OTT về nền tảng **MoSpark** và tích hợp vào cấu trúc **PLG Project**; tập trung tối ưu hóa SEO để **scale-up traffic và giành thứ hạng cao (Top ranking)** cho các trang chi tiết phim chiếu rạp và gói giải trí OTT, song song với việc áp dụng quy chế *Noindex bắt buộc* cho các trang lịch chiếu hết hạn để bảo vệ sức khỏe domain.
 *   **KPI & Web Objectives (H2 Target - Cam kết cùng Movies & Entertainment BU):**
     *   *Mục tiêu lưu lượng:* Đạt **4,020,082 organic clicks** (tự nhiên) và **8,070,056 PageViews** (tổng lưu lượng) trong H2/2026 (tương ứng khoảng **~670K clicks/tháng** và **~1.34M views/tháng**), đóng góp tối đa vào mục tiêu chung 3.0M PageViews/tháng của Cell Team Growth Projects.
@@ -456,7 +456,7 @@ Danh mục các dự án tăng trưởng (PLG Projects) trong H2/2026 được p
 
 #### 3.1.6. Bảo hiểm Ô tô & Xe máy
 *   **Trạng thái:** Hoạt động & Tối ưu hóa (Media Team tham gia cùng Midas, Web Platform đồng chịu trách nhiệm chính)
-*   **Chủ trì / Phối hợp:** Web Platform x InsurTech
+*   **Điều phối / Phối hợp:** Web Platform x InsurTech
 *   **Vấn đề & Điểm nghẽn Cốt lõi (Business & Platform Issues):**
     *   **[Business]**
         *   *Tâm lý người dùng e ngại "mua sai/hớ":* Thuật ngữ bảo hiểm phức tạp; người dùng có thói quen nghiên cứu và so sánh báo giá nhiều bên out-app trước khi quyết định mua.
@@ -471,7 +471,7 @@ Danh mục các dự án tăng trưởng (PLG Projects) trong H2/2026 được p
     *   *Leads hiện tại:* Lượng lead thu thập qua In-app chững lại quanh mức **3.000 - 4.000 leads/tháng** và chưa tiếp cận hiệu quả tệp chủ xe cao cấp từ kênh Web.
     *   *Điểm sáng phục hồi:* Cụm từ khóa *"Bảo hiểm thân vỏ ô tô"* ghi nhận sự phục hồi từ vị trí 56 lên 17, đặc biệt từ khóa *"mua bảo hiểm thân vỏ ô tô"* đã lọt **Top #2 Google Search** trong Tháng 7/2026.
 *   **Định hướng chiến lược H2/2026:**
-    *   *Product Vision:* **Nền tảng so sánh và phân phối bảo hiểm xe cơ giới tích hợp 9 đối tác hàng đầu** – Xây dựng cổng tổng hợp (aggregating) trung lập, tự động hóa luồng tính phí và điền thông tin dựa trên hồ sơ xe của Vehicle Hub, giúp người dùng lựa chọn và mua gói bảo hiểm tối ưu nhất trực tiếp trên trình duyệt Web.
+    *   *Product Vision:* **Nền tảng so sánh và phân phối bảo hiểm xe cơ giới tích hợp 9 đối tác hàng đầu** - Xây dựng cổng tổng hợp (aggregating) trung lập, tự động hóa luồng tính phí và điền thông tin dựa trên hồ sơ xe của Vehicle Hub, giúp người dùng lựa chọn và mua gói bảo hiểm tối ưu nhất trực tiếp trên trình duyệt Web.
     *   *Chuyển dịch nền tảng (Platform Migration):* Tiến hành chuyển dịch hoàn toàn hệ thống trang Bảo hiểm Ô tô sang vận hành trên nền tảng **MoSpark** nhằm thống nhất hạ tầng quản trị.
     *   *Tích hợp hệ thống (PLG Project Integration):* Tích hợp sâu vào cấu trúc của **PLG Project** để tận dụng các thư viện Mobase V2, hệ thống tracking của Umami Analytics và cơ chế định danh người dùng liên kênh.
     *   *Mở rộng SEO/GEO:* Xây dựng hệ thống sub-pages theo từng dòng xe kết hợp so sánh phí bảo hiểm nhanh; tối ưu hóa các bài viết bám sát kết quả Google AI Overview (AIO) cho các từ khóa chính.
@@ -484,7 +484,7 @@ Danh mục các dự án tăng trưởng (PLG Projects) trong H2/2026 được p
 
 #### 3.1.7. Công cụ Giả lập Tài chính Finhub [NEW]
 *   **Trạng thái:** Mới triển khai trong H2/2026 (Dự án trực thuộc Web Platform)
-*   **Chủ trì / Phối hợp:** Web Platform x FinHub
+*   **Điều phối / Phối hợp:** Web Platform x FinHub
 *   **Vấn đề & Điểm nghẽn Cốt lõi (Business & Platform Issues):**
     *   **[Business]**
         *   *Tâm lý e ngại khi đánh giá sức khỏe tài chính:* Khách hàng có nhu cầu tự tính toán bài toán tài chính cá nhân (lãi tiết kiệm, BHXH, chứng khoán) out-app trước khi giao dịch.
@@ -493,7 +493,7 @@ Danh mục các dự án tăng trưởng (PLG Projects) trong H2/2026 được p
         *   *Bộ công cụ Simulator chưa phủ rộng:* Các tiện ích giả lập đầu tư chứng khoán, tracker tỷ giá 24/7 và BHXH/Lương hưu mới dừng lại ở bản thử nghiệm, chưa nhúng diện rộng trên MoSpark CMS.
         *   *Tải trọng dữ liệu Realtime:* Các widget tracker giá vàng 24/7 và tỷ giá ngoại tệ đòi hỏi hạ tầng cào dữ liệu & cache realtime để không làm giảm tốc độ tải trang Master Hub.
 *   **Định hướng chiến lược H2/2026:**
-    *   *Product Vision:* **Hệ sinh thái công cụ tính toán và giả lập tài chính thông minh trên nền tảng Web** – Xây dựng bộ thư viện widget giả lập tương tác đa dạng giúp giải quyết lập tức nhu cầu tính toán tiện ích tài chính của người dùng trực tiếp trên trình duyệt Web.
+    *   *Product Vision:* **Hệ sinh thái công cụ tính toán và giả lập tài chính thông minh trên nền tảng Web** - Xây dựng bộ thư viện widget giả lập tương tác đa dạng giúp giải quyết lập tức nhu cầu tính toán tiện ích tài chính của người dùng trực tiếp trên trình duyệt Web.
     *   *Business Objective:* Phát hành rộng rãi các công cụ giả lập làm phễu thu hút traffic tự nhiên chất lượng cao; tích hợp cơ chế thu thập dữ liệu tính toán để chuyển giao mượt mà sang các luồng đăng ký dịch vụ tài chính trên App thông qua Smart CTA.
 *   **KPI & Web Objectives:**
     *   *Quy mô phát triển:* Tốc độ phát triển và mở rộng danh mục các công cụ giả lập tương tác mới (không giới hạn số lượng).
@@ -505,7 +505,7 @@ Danh mục các dự án tăng trưởng (PLG Projects) trong H2/2026 được p
 
 #### 3.2.1. Ví Trả Sau (BNPL)
 *   **Trạng thái:** Hoạt động & Tối ưu hóa chuyển đổi
-*   **Chủ trì / Phối hợp:** Media
+*   **Điều phối / Phối hợp:** Media
 *   **Định hướng chiến lược H2/2026:**
     *   Mục tiêu SEO: Bảo vệ và tăng SOV trên 3 thị trường: thị trường Trả Sau (tăng lên 75% SOV, bao phủ 550 từ khóa), thị trường Trả Góp (tăng lên 70% SOV, bao phủ 269 từ khóa), và thị trường Tín Dụng (tăng lên 60% SOV, bao phủ 3.600 từ khóa).
     *   Tái cấu trúc UI/UX miniweb VTS, bổ sung social proof và kịch bản cá nhân hóa theo phân khúc (Sinh viên, Nhân viên văn phòng, Lao động tự do) để tăng tỷ lệ chuyển đổi (CR) từ 7% lên 20%.
@@ -516,7 +516,7 @@ Danh mục các dự án tăng trưởng (PLG Projects) trong H2/2026 được p
 
 #### 3.2.2. Vay Nhanh
 *   **Trạng thái:** Hoạt động & Tối ưu hóa YMYL
-*   **Chủ trì / Phối hợp:** Media
+*   **Điều phối / Phối hợp:** Media
 *   **Định hướng chiến lược H2/2026:**
     *   Đạt bao phủ 50% SOV thị trường vay tiêu dùng và xếp hạng tối thiểu 20% từ khóa trong Top 5 Google Search.
     *   Tối ưu hóa Technical SEO chuyên sâu: Bổ sung các thẻ structured data (LoanOrCredit schema, FAQPage schema, BreadcrumbList schema, Organization schema với thông tin giấy phép NHNN). Sửa lỗi copyright.
@@ -527,7 +527,7 @@ Danh mục các dự án tăng trưởng (PLG Projects) trong H2/2026 được p
 
 #### 3.2.3. Tra cứu Điểm Tín Dụng (CIC)
 *   **Trạng thái:** Hoạt động (Đã hoàn thành 2 bộ công cụ tra cứu điểm và cách nâng điểm, thiết lập tích hợp thành công trong Mini Web)
-*   **Chủ trì / Phối hợp:** Media
+*   **Điều phối / Phối hợp:** Media
 *   **Định hướng chiến lược H2/2026:**
     *   Vận hành và tối ưu hóa 2 công cụ tra cứu điểm và cách thức nâng điểm CIC đã thiết lập để thu hút lượng traffic tự nhiên tìm kiếm về nợ xấu, kiểm tra CIC cá nhân.
     *   Sử dụng phễu CIC để điều hướng và bán chéo (Cross-sell) trực tiếp sang **Ví Trả Sau** và **Vay Nhanh** nhằm tối ưu hóa việc bao phủ thị trường Tín Dụng.
@@ -536,12 +536,12 @@ Danh mục các dự án tăng trưởng (PLG Projects) trong H2/2026 được p
 
 #### 3.2.4. Bảo hiểm Y tế (BHYT)
 *   **Trạng thái:** Hoạt động & Tối ưu hóa
-*   **Chủ trì / Phối hợp:** Media + Vendor
+*   **Điều phối / Phối hợp:** Media + Vendor
 *   **Hiện trạng & Baseline:**
-    *   *Baseline 2025:* Traffic organic đạt **31.732 views** (tính cho 8 tháng từ T5 - T12/2025), trung bình **~3.966 views/tháng** (tháng 12 đạt đỉnh **10.477 views** sau khi đã loại trừ 12.452 clicks từ ads).
+    *   *Baseline 2025:* Traffic organic đạt **31.732 views** (tính cho 8 tháng từ T5 - T12/2025), trung bình **~3.966 views/tháng** (tháng 12 chạm mức cao nhất **10.477 views** sau khi đã loại trừ 12.452 clicks từ ads).
     *   *Lưu lượng H1/2026 (Thực tế):* Đạt **32.492 views** cho 6 tháng đầu năm (trung bình **~5.415 views/tháng**).
 *   **Định hướng chiến lược H2/2026:**
-    *   *Product Vision:* **Cổng tiện ích và thông tin dịch vụ BHYT trực tuyến quốc dân** – Cung cấp giải pháp tra cứu thông tin BHYT tức thì (tra số thẻ bằng CCCD, tra cứu mã số BHYT, tra cứu thời hạn) kết hợp luồng gia hạn và đóng phí BHYT tự nguyện định kỳ theo chu kỳ 3 tháng, 6 tháng và 12 tháng tiện lợi trực tiếp trên trình duyệt Web.
+    *   *Product Vision:* **Cổng tiện ích và thông tin dịch vụ BHYT trực tuyến quốc dân** - Cung cấp giải pháp tra cứu thông tin BHYT tức thì (tra số thẻ bằng CCCD, tra cứu mã số BHYT, tra cứu thời hạn) kết hợp luồng gia hạn và đóng phí BHYT tự nguyện định kỳ theo chu kỳ 3 tháng, 6 tháng và 12 tháng tiện lợi trực tiếp trên trình duyệt Web.
     *   *Mục tiêu tối ưu hóa:* Tập trung mở rộng và tối ưu hóa cấu trúc Mini Web hiện tại theo sơ đồ Hub-Spoke để bao phủ các cụm từ khóa có volume lớn; chưa lập kế hoạch migration sang MoSpark ở giai đoạn này và tiếp tục duy trì vận hành trên hạ tầng web hiện tại.
     *   *Quy mô nội dung:* Đăng tải **60 bài/năm** (Base Case) hoặc **120 - 150 bài/năm** (Best Case) để xây dựng Topical Authority.
 *   **KPI & Web Objectives:**
@@ -552,7 +552,7 @@ Danh mục các dự án tăng trưởng (PLG Projects) trong H2/2026 được p
 
 #### 3.2.5. Bảo hiểm xe máy (BHXM)
 *   **Trạng thái:** Đang tiến hành / Khôi phục lưu lượng
-*   **Chủ trì / Phối hợp:** Media + Vendor
+*   **Điều phối / Phối hợp:** Media + Vendor
 *   **Hiện trạng & Baseline (Thứ hạng từ khóa T3/2026):**
     *   *Từ khóa thương mại chính:* Còn ở vị trí khá xa: *"bảo hiểm xe máy"* (hạng 53), *"bao hiem xe may"* (hạng 54), *"bán bảo hiểm xe máy"* (hạng 30), *"bảo hiểm xe máy online"* (hạng 33), và *"bảo hiểm xe bắt buộc"* (hạng 69).
     *   *Từ khóa ngách:* Đang ở vị trí rất tốt: *"mua bảo hiểm xe online"* (hạng 2) và *"mua bh xe máy online"* (hạng 3).
@@ -570,16 +570,16 @@ Danh mục các dự án tăng trưởng (PLG Projects) trong H2/2026 được p
 
 #### 3.2.6. Dịch Vụ Công MoMo
 *   **Trạng thái:** Đang tiến hành
-*   **Chủ trì / Phối hợp:** Media
+*   **Điều phối / Phối hợp:** Media
 *   **Định hướng chiến lược H2/2026 (Định hướng Keyword Research):**
     *   Tập trung nghiên cứu bộ từ khóa liên quan đến dịch vụ công trực tuyến, cổng thanh toán trực tiếp ePass/ETC và công cụ tương tác Smart DVC Checklist Generator để định hình cấu trúc sitemap.
 
 #### 3.2.7. Viễn Thông (Telco)
 *   **Trạng thái:** Hoạt động (Đã được phê duyệt BRD)
-*   **Chủ trì / Phối hợp:** Media
+*   **Điều phối / Phối hợp:** Media
 *   **Hiện trạng & Baseline:** Organic traffic ban đầu đạt khoảng **~13.000 sessions/tháng** (Nạp Data: ~8K, Sim Số Đẹp: ~5K). *(Lưu ý: eSIM Du Lịch đã được quản lý riêng trong dự án PLG độc lập phía trên)*.
 *   **Định hướng chiến lược H2/2026:**
-    *   *Product Vision:* **Cổng tiện ích và thông tin dịch vụ Viễn thông (Telco) trực tuyến** – Cung cấp trải nghiệm mua sắm và thanh toán khép kín (End-to-End/Full-Journey) trực tiếp trên Web cho 2 dịch vụ cốt lõi: **Sim số đẹp phong thủy** và **Gói cước/Nạp Data 4G/5G**.
+    *   *Product Vision:* **Cổng tiện ích và thông tin dịch vụ Viễn thông (Telco) trực tuyến** - Cung cấp trải nghiệm mua sắm và thanh toán khép kín (End-to-End/Full-Journey) trực tiếp trên Web cho 2 dịch vụ cốt lõi: **Sim số đẹp phong thủy** và **Gói cước/Nạp Data 4G/5G**.
     *   *Trọng tâm phát triển:* 
         *   Triển khai pSEO (Programmatic SEO) tạo 10.000+ trang sim phong thủy theo năm sinh và theo tên, kết hợp widget AI giải luận phong thủy sim cá nhân hóa.
         *   Xây dựng hệ thống landing page tối ưu sitemap cho các gói cước Data 4G/5G theo từng nhà mạng.
@@ -591,24 +591,24 @@ Danh mục các dự án tăng trưởng (PLG Projects) trong H2/2026 được p
 
 #### 3.2.8. Trust - Báo Cáo Lừa Đảo
 *   **Trạng thái:** Hoạt động & Mở rộng (Phối hợp Cell Team Risk)
-*   **Chủ trì / Phối hợp:** Media
+*   **Điều phối / Phối hợp:** Media
 *   **Định hướng chiến lược H2/2026 (Định hướng Keyword Research & Content):**
     *   Nghiên cứu bộ từ khóa về cảnh báo lừa đảo, an toàn bảo mật để xây dựng các cụm bài viết đánh chặn; phối hợp xuất bản các bản tin Cảnh báo An toàn Bảo mật hàng quý.
 *   **KPI & Web Objectives:** Số lượng báo cáo lừa đảo ẩn danh tiếp nhận thành công trên Web.
 
 #### 3.2.9. Vé xe khách (OTA - BUS)
 *   **Trạng thái:** Đang tiến hành
-*   **Chủ trì / Phối hợp:** Media
+*   **Điều phối / Phối hợp:** Media
 *   **Định hướng chiến lược H2/2026 (Định hướng Keyword Research):**
     *   Nghiên cứu và xây dựng cấu trúc từ khóa pSEO cho các tuyến đường (Routes) và nhà xe (Bus Operators) có volume tìm kiếm cao.
 *   **KPI & Web Objectives:** Số vé xe khách bán thành công được ghi nhận qua Appsflyer (*Transactions*).
 
 #### 3.2.10. Soundbox
 *   **Trạng thái:** Đang tiến hành (Hỗ trợ định hướng nội dung và giải pháp tiếp cận SME)
-*   **Chủ trì / Phối hợp:** Media
+*   **Điều phối / Phối hợp:** Media
 *   **Hiện trạng & Baseline:** Organic traffic trang giới thiệu sụt giảm sau sự kiện thay đổi URL ngày 11/05/2025 (từ đỉnh ~6.900 sessions xuống còn ~2.500 sessions/tháng). Thiết bị Soundbox chủ yếu được triển khai qua kênh Sales offline truyền thống mà chưa tận dụng tối đa kênh Web để thuyết phục và minh chứng giá trị trực quan cho SME.
 *   **Định hướng chiến lược H2/2026:**
-    *   *Product Vision:* **Kênh tiếp cận khách hàng và hỗ trợ bán hàng cho hộ kinh doanh (SME Acquisition & O2O Enablement Channel)** – Đóng vai trò là điểm chạm thông tin giúp đội ngũ Sales/BD tiếp cận, thuyết phục chủ cửa hàng (SMEs) lắp đặt thiết bị Soundbox bằng cách chứng minh giá trị gia tăng của việc số hóa cửa hàng (tăng uy tín thương hiệu địa phương, xác thực thanh toán rảnh tay chống gian lận, và kéo khách hàng thông qua Merchant Page trên Web).
+    *   *Product Vision:* **Kênh tiếp cận khách hàng và hỗ trợ bán hàng cho hộ kinh doanh (SME Acquisition & O2O Enablement Channel)** - Đóng vai trò là điểm chạm thông tin giúp đội ngũ Sales/BD tiếp cận, thuyết phục chủ cửa hàng (SMEs) lắp đặt thiết bị Soundbox bằng cách chứng minh giá trị gia tăng của việc số hóa cửa hàng (tăng uy tín thương hiệu địa phương, xác thực thanh toán rảnh tay chống gian lận, và kéo khách hàng thông qua Merchant Page trên Web).
     *   *Trọng tâm phát triển:*
         *   Tối ưu hóa và khôi phục sức mạnh SEO cho trang giới thiệu giải pháp Soundbox trên Web MoMo nhằm cung cấp tài liệu bán hàng, giải đáp thắc mắc và minh họa trực quan lợi ích sản phẩm để Sales/BD sử dụng trực tiếp khi tư vấn ngoài thị trường (dung lượng tìm kiếm tự nhiên của chủ quán ~46K searches/tháng).
         *   **Liên kết chặt chẽ với Merchant Page (O2O Loop):** Đồng bộ hóa mã QR in trên thiết bị Soundbox tại quầy vật lý để dẫn người dùng trực tiếp về trang thông tin đối tác trên Web (Merchant Page) giúp khách săn deal, xem menu số. Ngược lại, hiển thị nổi bật xác thực thanh toán qua Soundbox trên Merchant Page để củng cố niềm tin chi tiêu của khách hàng.
@@ -619,14 +619,14 @@ Danh mục các dự án tăng trưởng (PLG Projects) trong H2/2026 được p
 
 #### 3.2.11. Destination Promotion Hub (MoMo Travel)
 *   **Trạng thái:** Đang tiến hành / Triển khai thực tế
-*   **Chủ trì / Phối hợp:** Media
+*   **Điều phối / Phối hợp:** Media
 *   **Định hướng chiến lược H2/2026 (Định hướng Keyword Research):**
     *   Nghiên cứu bộ từ khóa du lịch tự túc theo điểm đến Outbound (Thái Lan, Singapore, Nhật Bản...); hỗ trợ tư vấn bộ từ khóa bán chéo dịch vụ eSIM/Khách sạn.
 *   **KPI & Web Objectives:** Đạt trên 250.000 Pageviews/tháng cho Hub Web, tỷ lệ chuyển đổi Web-to-App (W2A CR) > 12%, tỷ lệ bán chéo sản phẩm (Cross-sell Rate) > 15% khách mua vé máy bay quốc tế sẽ mua kèm eSIM hoặc Khách sạn.
 
 #### 3.2.12. Tiện ích Theo dõi Giá Vàng (Growth Utility) [NEW]
 *   **Bản chất dự án:** Đây không phải là một Use Case độc lập của Media mà là công cụ tiện ích tăng trưởng (Growth Utility) do Web Platform phát triển kỹ thuật và quản trị.
-*   **Chủ trì / Phối hợp:** Web Platform
+*   **Điều phối / Phối hợp:** Web Platform
 *   **Định hướng chiến lược H2/2026:**
     *   Xây dựng widget theo dõi Giá Vàng trong nước và thế giới theo thời gian thực (Real-time Gold Tracker) trên Web.
     *   Tận dụng organic traffic từ widget này làm phễu gián tiếp dẫn người dùng về các dịch vụ tài chính (Tiết kiệm, Đầu tư trực tuyến).
@@ -634,7 +634,7 @@ Danh mục các dự án tăng trưởng (PLG Projects) trong H2/2026 được p
 
 #### 3.2.13. Student Hub & Sản Phẩm Student Pass [NEW]
 *   **Trạng thái:** Đang lên kế hoạch (Planning - Dự án Ươm tạo / Incubator)
-*   **Chủ trì / Phối hợp:** Web Platform x MDS
+*   **Điều phối / Phối hợp:** Web Platform x MDS
 *   **Vấn đề & Điểm nghẽn Cốt lõi (Business & Platform Issues):**
     *   **[Business]**
         *   *Chưa có Cổng Web:* Student Pass mới có In-App, `momo.vn/sinh-vien` chưa có trên Web.
@@ -646,7 +646,7 @@ Danh mục các dự án tăng trưởng (PLG Projects) trong H2/2026 được p
     *   Sản phẩm đặc quyền Student Pass đã vận hành trên App MoMo nhưng chưa được xây dựng và khai thác cổng thông tin Student Hub chuyên biệt trên Web.
     *   Chưa có phễu Web-to-App tối ưu cho hoạt động đăng ký mới và xác thực thẻ sinh viên (MSSV/Email .edu) trực tuyến theo search intent.
 *   **Định hướng chiến lược H2/2026:**
-    *   *Product Vision:* **Nền tảng phân đoạn sinh viên và phân phối gói sản phẩm Student Pass** – Xây dựng Student Hub trên Web làm Hub tổng hợp hệ sinh thái nhu cầu sinh viên (học phí, F&B, giải trí, ở, di chuyển tựu trường), tích hợp sản phẩm cốt lõi **Student Pass** đóng vai trò gói thẻ đặc quyền ưu đãi thu hút tệp sinh viên dùng MoMo.
+    *   *Product Vision:* **Nền tảng phân đoạn sinh viên và phân phối gói sản phẩm Student Pass** - Xây dựng Student Hub trên Web làm Hub tổng hợp hệ sinh thái nhu cầu sinh viên (học phí, F&B, giải trí, ở, di chuyển tựu trường), tích hợp sản phẩm cốt lõi **Student Pass** đóng vai trò gói thẻ đặc quyền ưu đãi thu hút tệp sinh viên dùng MoMo.
     *   *Mục tiêu tối ưu:* Tích hợp luồng xác thực thẻ sinh viên trực tuyến mượt mà và phát hành các gói voucher Student Pass độc quyền nhằm tăng tỷ lệ đăng ký mới (KYC Student) và kích hoạt người dùng sinh viên.
 *   **KPI & Web Objectives:**
     *   *Quy mô & Tương tác:* Lượng truy cập Student Hub, số lượng Student Pass MAU.

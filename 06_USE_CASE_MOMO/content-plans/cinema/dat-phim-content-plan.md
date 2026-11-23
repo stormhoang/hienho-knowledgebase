@@ -1,21 +1,26 @@
-# KẾ HOẠCH NỘI DUNG CHUẨN (CONTENT PLAN V2 - SHIELDED) - USE CASE: DAT PHIM
+# KẾ HOẠCH NỘI DUNG CHUẨN (CONTENT PLAN V2 - SHIELDED) - THEME: ĐẶT VÉ PHIM ONLINE
 
-- **Use Case:** Dat Phim
-- **Phân Khối Ngành:** cinema
+- **Theme:** Đặt Vé Phim Online
+- **Hub:** cinema
 - **URL Pillar Hub:** `/dat-phim/`
-- **Tổng từ khóa thô ban đầu:** 215 từ khóa
+- **Tổng từ khóa thô ban đầu:** 402 từ khóa
 - **Từ khóa nhiễu bị loại bỏ:** 0 từ khóa
-- **Từ khóa trùng Intent được gom cụm (Shielded):** 4 từ khóa
-- **Số lượng URLs phân bổ:** 1 URLs (1 Pillar Hub + 0 Cluster Pages)
+- **Nguồn dữ liệu gộp theo theme:** dat-phim.csv, mua-ve-phim.csv
+- **Từ khóa nhường cho theme khác cùng Hub (chống trùng giữa các plan):** 35 từ khóa
+- **Từ khóa nhận từ CSV theme khác cùng Hub:** 34 từ khóa
+- **Từ khóa trùng Intent được gom cụm (Shielded):** 21 từ khóa
+- **Số lượng URLs phân bổ:** 3 URLs (1 Pillar Hub + 2 Cluster Pages)
 - **Quy tắc bảo vệ:** Mỗi URL giải quyết duy nhất 1 Intent độc lập. Các từ khóa cùng Intent đã được gom thành Secondary Synonyms (Zero Keyword Cannibalization).
 
 ---
 
 ## 1. BẢNG KẾ HOẠCH BÀI VIẾT CHI TIẾT (ACTIONABLE CONTENT PLAN)
 
-| STT | URL Slug | Tiêu Đề Bài Viết / Trang Đích | Primary Keyword | Secondary Synonyms (Đã Gom Chống Ăn Thịt) | Search Volume | Search Intent | Định Dạng Nội Dung | Phễu | Ưu Tiên | Điểm Chạm Web-to-App (CTA Hook) |
+| STT | URL Slug | Tiêu Đề Bài Viết / Trang Đích | Primary Keyword | Secondary Synonyms (Đã Gom Chống Ăn Thịt) | Search Volume | Search Intent | Định Dạng Nội Dung | Phễu | Đợt Sản Xuất | Điểm Chạm Web-to-App (CTA Hook) |
 | :---: | :--- | :--- | :--- | :--- | :---: | :---: | :--- | :---: | :---: | :--- |
-| 1 | `/dat-phim/` | Cẩm Nang & Bảng Tra Cứu Đặt Vé Phim Online Toàn Diện | `đặt vé cgv` | đặt vé phim, cgv đặt vé, đặt vé rạp chiếu phim quốc gia | 1,600 | `Transactional` | Pillar Hub Page + Interactive Widget | `TOFU` | `P0` | Đặt Vé Phim & Chọn Ghế Rạp Rẻ Nhất -> Deeplink: momo://cinema-booking -> Event: web_cinema_booking_btn_click |
+| 1 | `/dat-phim/` | Cẩm Nang & Bảng Tra Cứu Đặt Vé Phim Online Toàn Diện | `đặt vé phim` | đặt phim, đặt vé phim online, app đặt vé phim | 1,310 | `Transactional` | Pillar Hub Page + Interactive Widget | `TOFU` | `Đợt 1` | Đặt Vé Phim & Chọn Ghế Rạp Rẻ Nhất -> Deeplink: momo://cinema-booking -> Event: web_cinema_booking_btn_click |
+| 2 | `/dat-phim/dat-ve-cgv-lotte/` | Đặt Vé CGV & Lotte Cinema Đặt Vé Phim Online: Hướng Dẫn & Tra Cứu Chi Tiết | `đặt vé cgv` | cgv đặt vé, combo bắp nước cgv, mua ve cgv | 7,480 | `Transactional` | Step-by-step How-to & Action Form | `BOFU` | `Đợt 1` | Đặt Vé Phim & Chọn Ghế Rạp Rẻ Nhất -> Deeplink: momo://cinema-booking -> Event: web_cinema_booking_btn_click |
+| 3 | `/dat-phim/dat-ve-galaxy-cinestar-beta/` | Đặt Vé Galaxy, Cinestar & Beta Đặt Vé Phim Online: Hướng Dẫn & Tra Cứu Chi Tiết | `đặt vé rạp chiếu phim quốc gia` | đặt vé galaxy, đặt vé cinestar, giá vé bhd lê văn việt | 4,260 | `Transactional` | Step-by-step How-to & Action Form | `BOFU` | `Đợt 1` | Đặt Vé Phim & Chọn Ghế Rạp Rẻ Nhất -> Deeplink: momo://cinema-booking -> Event: web_cinema_booking_btn_click |
 
 ---
 
@@ -48,17 +53,49 @@ Dưới đây là cấu trúc dàn ý chuẩn E-E-A-T và chỉ tiêu dung lư�
 ### Bài 1: `Cẩm Nang & Bảng Tra Cứu Đặt Vé Phim Online Toàn Diện`
 - **URL Slug:** `/dat-phim/`
 - **Chỉ tiêu độ dài:** `2,500 - 3,500 từ` (Cấp bậc: `Master Hub Pillar`)
+- **Primary Keyword:** `đặt vé phim`
+- **Secondary Synonyms:** đặt phim, đặt vé phim online, app đặt vé phim, đặt vé coi phim
+- **Dàn ý H2/H3 bắt buộc (SEO Entity Checklist):**
+   - ## H2 1: Tổng quan & Khái niệm cốt lõi về đặt vé phim
+   - ## H2 2: Chi tiết các tiêu chí & Bảng tổng hợp số liệu mới nhất
+   - ## H2 3: Hồ sơ và điều kiện cần chuẩn bị trước khi thực hiện
+   - ## H2 4: Quy trình 3 bước thực hiện giao dịch nhanh chóng trên điện thoại
+   - ## H2 5: Câu hỏi thường gặp (FAQs) giải đáp thắc mắc về đặt vé phim
+   - ### H3 5.1: Đặt phim?
+   - ### H3 5.2: Đặt vé phim online?
+   - ### H3 5.3: App đặt vé phim?
+   - ## H2 6: Giải pháp tối ưu quyền lợi và thao tác nhanh qua Ứng dụng MoMo
+
+### Bài 2: `Đặt Vé CGV & Lotte Cinema Đặt Vé Phim Online: Hướng Dẫn & Tra Cứu Chi Tiết`
+- **URL Slug:** `/dat-phim/dat-ve-cgv-lotte/`
+- **Chỉ tiêu độ dài:** `1,500 - 2,200 từ` (Cấp bậc: `High Conversion Guide`)
 - **Primary Keyword:** `đặt vé cgv`
-- **Secondary Synonyms:** đặt vé phim, cgv đặt vé, đặt vé rạp chiếu phim quốc gia, đặt vé galaxy
+- **Secondary Synonyms:** cgv đặt vé, combo bắp nước cgv, mua ve cgv, đặt vé lotte cinema
 - **Dàn ý H2/H3 bắt buộc (SEO Entity Checklist):**
    - ## H2 1: Tổng quan & Khái niệm cốt lõi về đặt vé cgv
    - ## H2 2: Chi tiết các tiêu chí & Bảng tổng hợp số liệu mới nhất
    - ## H2 3: Hồ sơ và điều kiện cần chuẩn bị trước khi thực hiện
    - ## H2 4: Quy trình 3 bước thực hiện giao dịch nhanh chóng trên điện thoại
    - ## H2 5: Câu hỏi thường gặp (FAQs) giải đáp thắc mắc về đặt vé cgv
-   - ### H3 5.1: Đặt vé phim?
-   - ### H3 5.2: Cgv đặt vé?
-   - ### H3 5.3: Đặt vé rạp chiếu phim quốc gia?
+   - ### H3 5.1: Cgv đặt vé?
+   - ### H3 5.2: Combo bắp nước cgv?
+   - ### H3 5.3: Mua ve cgv?
+   - ## H2 6: Giải pháp tối ưu quyền lợi và thao tác nhanh qua Ứng dụng MoMo
+
+### Bài 3: `Đặt Vé Galaxy, Cinestar & Beta Đặt Vé Phim Online: Hướng Dẫn & Tra Cứu Chi Tiết`
+- **URL Slug:** `/dat-phim/dat-ve-galaxy-cinestar-beta/`
+- **Chỉ tiêu độ dài:** `1,500 - 2,200 từ` (Cấp bậc: `High Conversion Guide`)
+- **Primary Keyword:** `đặt vé rạp chiếu phim quốc gia`
+- **Secondary Synonyms:** đặt vé galaxy, đặt vé cinestar, giá vé bhd lê văn việt, đặt vé metiz
+- **Dàn ý H2/H3 bắt buộc (SEO Entity Checklist):**
+   - ## H2 1: Tổng quan & Khái niệm cốt lõi về đặt vé rạp chiếu phim quốc gia
+   - ## H2 2: Chi tiết các tiêu chí & Bảng tổng hợp số liệu mới nhất
+   - ## H2 3: Hồ sơ và điều kiện cần chuẩn bị trước khi thực hiện
+   - ## H2 4: Quy trình 3 bước thực hiện giao dịch nhanh chóng trên điện thoại
+   - ## H2 5: Câu hỏi thường gặp (FAQs) giải đáp thắc mắc về đặt vé rạp chiếu phim quốc gia
+   - ### H3 5.1: Đặt vé galaxy?
+   - ### H3 5.2: Đặt vé cinestar?
+   - ### H3 5.3: Giá vé bhd lê văn việt?
    - ## H2 6: Giải pháp tối ưu quyền lợi và thao tác nhanh qua Ứng dụng MoMo
 
 ---
@@ -88,7 +125,7 @@ Dưới đây là cấu trúc dàn ý chuẩn E-E-A-T và chỉ tiêu dung lư�
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Dat Phim",
+      "name": "Đặt Vé Phim Online",
       "item": "https://momo.vn/dat-phim"
     }
   ]
@@ -100,8 +137,25 @@ Dưới đây là cấu trúc dàn ý chuẩn E-E-A-T và chỉ tiêu dung lư�
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "name": "Hỏi đáp thường gặp về Dat Phim",
-  "mainEntity": []
+  "name": "Hỏi đáp thường gặp về Đặt Vé Phim Online",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Đặt Vé CGV & Lotte Cinema Đặt Vé Phim Online: Hướng Dẫn & Tra Cứu Chi Tiết?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Thông tin chi tiết về đặt vé cgv được cập nhật chính xác và minh bạch tại MoMo Web Platform. Người dùng có thể tra cứu và thực hiện tiện ích trực tiếp trên ứng dụng MoMo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Đặt Vé Galaxy, Cinestar & Beta Đặt Vé Phim Online: Hướng Dẫn & Tra Cứu Chi Tiết?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Thông tin chi tiết về đặt vé rạp chiếu phim quốc gia được cập nhật chính xác và minh bạch tại MoMo Web Platform. Người dùng có thể tra cứu và thực hiện tiện ích trực tiếp trên ứng dụng MoMo."
+      }
+    }
+  ]
 }
 ```
 
@@ -115,16 +169,16 @@ Phân tầng dòng chảy uy tín trang (PageRank) và định vị chuyên môn
 - **Trang Cột Trụ Cấp 1:** `[Tiện Ích Nền Tảng](/tien-ich)`
 - **Anchor Text Mỏ Neo:** `"Hệ sinh thái tiện ích Web MoMo"`
 
-### B. Liên kết ngang cùng ngành (Peer In-Silo):
-| Thứ tự | Use Case Bổ Trợ | Đường Dẫn Khuyến Nghị | Anchor Text Tự Nhiên | Độ Tương Đồng | Search Volume |
+### B. Liên kết ngang cùng Hub (Peer In-Silo):
+| Thứ tự | Theme Bổ Trợ | Đường Dẫn Khuyến Nghị | Anchor Text Tự Nhiên | Độ Tương Đồng | Search Volume |
 | :---: | :--- | :--- | :--- | :---: | :---: |
-| 1 | `Lịch Chiếu Phim Rạp` | `/lich-phim/` | `lịch chiếu phim` | `0.2` | 625,580 |
-| 2 | `Rạp Chiếu Phim & Cụm Rạp` | `/rap/` | `phim chiếu rạp` | `0.053` | 1,229,160 |
-| 3 | `Phim Chiếu Rạp Mới Nhất` | `/phim/` | `phim` | `0.05` | 5,409,760 |
-| 4 | `Giá Vé Xem Phim & Khuyến Mãi` | `/ve-xem-phim/` | `vé xem phim` | `0.034` | 0 |
+| 1 | `Lịch Chiếu Phim Rạp` | `/lich-phim/` | `lịch chiếu phim` | `0.412` | 625,580 |
+| 2 | `Rạp Chiếu Phim & Cụm Rạp` | `/rap/` | `phim chiếu rạp` | `0.238` | 1,229,160 |
+| 3 | `Phim Chiếu Rạp Mới Nhất` | `/phim/` | `phim` | `0.125` | 5,409,760 |
+| 4 | `Giá Vé Xem Phim & Khuyến Mãi` | `/ve-xem-phim/` | `vé xem phim` | `0.059` | 0 |
 
-### C. Cầu nối liên kết xuyên ngành (Cross-Silo Bridges):
-| Thứ tự | Use Case Đích | Phân Khối Ngành | Đường Dẫn Khuyến Nghị | Anchor Text Móc Nối | Search Volume |
+### C. Cầu nối liên kết xuyên Hub (Cross-Silo Bridges):
+| Thứ tự | Theme Đích | Hub | Đường Dẫn Khuyến Nghị | Anchor Text Móc Nối | Search Volume |
 | :---: | :--- | :--- | :--- | :--- | :---: |
 
 ---
@@ -134,14 +188,14 @@ Phân tầng dòng chảy uy tín trang (PageRank) và định vị chuyên môn
 Cung cấp sẵn khối thông tin trích dẫn phục vụ trực tiếp cho Google AI Overviews, SearchGPT, Perplexity và Gemini:
 
 ### A. Đoạn trích dẫn trực tiếp (Direct Answer Snippet - 40-60 từ):
-> "Đặt vé cgv là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến dat phim một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút."
+> "Đặt vé phim là dịch vụ tổng hợp lịch chiếu, giá vé và sơ đồ ghế ngồi thời gian thực của toàn bộ các cụm rạp chiếu phim lớn trên cả nước (CGV, Lotte, Galaxy, BHD, Beta). Người xem có thể dễ dàng so sánh suất chiếu gần nhất, áp dụng mã giảm giá độc quyền và đặt vé trực tuyến nhận vé điện tử Smart Ticket vào thẳng phòng chiếu."
 
 ### B. Bảng thuộc tính thực thể (Entity Knowledge Graph Factsheet):
 | Thuộc Tính Thực Thể | Giá Trị Chuẩn Hóa |
 | :--- | :--- |
-| Phân loại giải pháp | Tiện ích Web Cinema - MoMo Web Platform |
-| Đối tượng áp dụng | Toàn bộ người dùng cá nhân có nhu cầu tra cứu và giao dịch trực tuyến |
-| Thời gian xử lý | Xử lý tức thì (Real-time), hỗ trợ 24/7 không phụ thuộc giờ hành chính |
-| Hạ tầng kỹ thuật | Kết nối API trực tiếp từ hệ thống đối tác liên kết chính thức |
-| Tiêu chuẩn bảo mật | Bảo mật đa tầng, đạt chứng chỉ bảo mật quốc tế PCI DSS Level 1 |
-| Kênh thao tác liền mạch | Trình duyệt Web (Desktop/Mobile) kết hợp chuyển tiếp Web-to-App MoMo |
+| Hệ thống chuỗi rạp liên kết | CGV Cinemas, Lotte Cinema, Galaxy, BHD Star, Beta Cinemas, Cinestar |
+| Khung phân loại độ tuổi khán giả | Nhãn P (Phổ biến), K (Dưới 13 tuổi có bảo trợ), T13, T16, T18 và C (Cấm) |
+| Cơ chế đồng bộ suất chiếu | Đồng bộ API thời gian thực với hệ thống bán vé của từng cụm rạp |
+| Hình thức vé vào phòng chiếu | Vé điện tử (Smart Ticket QR) quét mã vào thẳng rạp không cần in vé giấy |
+| Phụ thu định dạng trải nghiệm | Áp dụng định dạng 3D, IMAX, 4DX, ScreenX và các dòng ghế đôi Sweetbox/VIP |
+| Quy định pháp lý chuyên ngành | Luật Điện ảnh & Thông tư 05/2023/TT-BVHTTDL của Bộ Văn hóa, Thể thao và Du lịch |

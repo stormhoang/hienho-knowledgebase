@@ -262,7 +262,7 @@ Bảng chính hiển thị danh sách đối tác và có cấu trúc cây mở 
     *   *Secondaries (Cột 4):* Số lượng từ khóa phụ liên quan (ví dụ: `3 supporting keywords`).
     *   *Writing Status (Cột 5):* Nhãn trạng thái (ví dụ: `Chưa viết` - Xám, `Chờ duyệt outline` - Vàng, `Đang viết` - Xanh dương, `Đã xuất bản` - Xanh lá).
     *   *Action (Cột 6):* Nút hành động tương ứng trạng thái (ví dụ: `Sinh Outline` cho Chưa viết, `Sửa & Duyệt` cho Chờ duyệt outline, `Viết bài / Sinh Draft` cho Đang viết, `Xem bài viết` cho Đã xuất bản).
-*   **Bảng cấp Con (Nested Child Table - Chi tiết từ khóa):** Khi bấm nút mũi tên để mở rộng dòng cấp Cha, một bảng con hiển thị chi tiết các từ khóa liên quan:
+*   **Bảng cấp Con (Nested Child Table - Chi tiết từ khóa):** Khi nhấp vào nút mũi tên để mở rộng dòng cấp Cha, một bảng con hiển thị chi tiết các từ khóa liên quan:
     *   *Role:* Nhãn phân vai trò từ khóa (`Primary` - Đỏ hồng hoặc `Secondary` - Xanh dương).
     *   *Keyword:* Từ khóa cụ thể (ví dụ: `tiệm mì chú cao`, `menu mì chú cao`, `tiệm mì chú cao ở đâu`, `tiệm mì chú cao ví trả sau momo`).
     *   *Volume:* Lượng tìm kiếm của từ khóa cụ thể đó.

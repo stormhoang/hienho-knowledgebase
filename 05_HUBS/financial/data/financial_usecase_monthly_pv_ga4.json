@@ -1,0 +1,1050 @@
+{
+  "updatedDay": 11,
+  "use_cases": [
+    {
+      "id": "tai-chinh",
+      "name": "Tài Chính (Master Hub)",
+      "months": [
+        {
+          "month": "2026-05",
+          "pageviews": 5430,
+          "paid": 4,
+          "non_paid": 5426,
+          "mtd": false
+        },
+        {
+          "month": "2026-06",
+          "pageviews": 5568,
+          "paid": 5,
+          "non_paid": 5563,
+          "mtd": false
+        },
+        {
+          "month": "2026-07",
+          "pageviews": 6701,
+          "paid": 230,
+          "non_paid": 6471,
+          "mtd": false
+        },
+        {
+          "month": "2026-08",
+          "pageviews": 9107,
+          "paid": 845,
+          "non_paid": 8262,
+          "mtd": false
+        },
+        {
+          "month": "2026-09",
+          "pageviews": 8025,
+          "paid": 1146,
+          "non_paid": 6879,
+          "mtd": false
+        },
+        {
+          "month": "2026-10",
+          "pageviews": 39872,
+          "paid": 9214,
+          "non_paid": 30658,
+          "mtd": false
+        },
+        {
+          "month": "2026-11",
+          "pageviews": 9504,
+          "paid": 2211,
+          "non_paid": 7293,
+          "mtd": true
+        }
+      ]
+    },
+    {
+      "id": "vay-nhanh",
+      "name": "Vay Nhanh",
+      "months": [
+        {
+          "month": "2026-05",
+          "pageviews": 127284,
+          "paid": 91929,
+          "non_paid": 35355,
+          "mtd": false
+        },
+        {
+          "month": "2026-06",
+          "pageviews": 76228,
+          "paid": 42166,
+          "non_paid": 34062,
+          "mtd": false
+        },
+        {
+          "month": "2026-07",
+          "pageviews": 65899,
+          "paid": 910,
+          "non_paid": 64989,
+          "mtd": false
+        },
+        {
+          "month": "2026-08",
+          "pageviews": 112353,
+          "paid": 1386,
+          "non_paid": 110967,
+          "mtd": false
+        },
+        {
+          "month": "2026-09",
+          "pageviews": 109955,
+          "paid": 1229,
+          "non_paid": 108726,
+          "mtd": false
+        },
+        {
+          "month": "2026-10",
+          "pageviews": 64210,
+          "paid": 1287,
+          "non_paid": 62923,
+          "mtd": false
+        },
+        {
+          "month": "2026-11",
+          "pageviews": 15360,
+          "paid": 326,
+          "non_paid": 15034,
+          "mtd": true
+        }
+      ]
+    },
+    {
+      "id": "diem-tin-dung",
+      "name": "Điểm Tín Dụng (CIC)",
+      "months": [
+        {
+          "month": "2026-05",
+          "pageviews": 12375,
+          "paid": 34,
+          "non_paid": 12341,
+          "mtd": false
+        },
+        {
+          "month": "2026-06",
+          "pageviews": 12382,
+          "paid": 42,
+          "non_paid": 12340,
+          "mtd": false
+        },
+        {
+          "month": "2026-07",
+          "pageviews": 35108,
+          "paid": 22608,
+          "non_paid": 12500,
+          "mtd": false
+        },
+        {
+          "month": "2026-08",
+          "pageviews": 91876,
+          "paid": 84901,
+          "non_paid": 6975,
+          "mtd": false
+        },
+        {
+          "month": "2026-09",
+          "pageviews": 79092,
+          "paid": 72984,
+          "non_paid": 6108,
+          "mtd": false
+        },
+        {
+          "month": "2026-10",
+          "pageviews": 79987,
+          "paid": 70639,
+          "non_paid": 9348,
+          "mtd": false
+        },
+        {
+          "month": "2026-11",
+          "pageviews": 19125,
+          "paid": 16920,
+          "non_paid": 2205,
+          "mtd": true
+        }
+      ]
+    },
+    {
+      "id": "vi-tra-sau",
+      "name": "Ví Trả Sau",
+      "months": [
+        {
+          "month": "2026-05",
+          "pageviews": 10440,
+          "paid": 784,
+          "non_paid": 9656,
+          "mtd": false
+        },
+        {
+          "month": "2026-06",
+          "pageviews": 38053,
+          "paid": 27894,
+          "non_paid": 10159,
+          "mtd": false
+        },
+        {
+          "month": "2026-07",
+          "pageviews": 23582,
+          "paid": 10754,
+          "non_paid": 12828,
+          "mtd": false
+        },
+        {
+          "month": "2026-08",
+          "pageviews": 20633,
+          "paid": 8395,
+          "non_paid": 12238,
+          "mtd": false
+        },
+        {
+          "month": "2026-09",
+          "pageviews": 42174,
+          "paid": 18306,
+          "non_paid": 23868,
+          "mtd": false
+        },
+        {
+          "month": "2026-10",
+          "pageviews": 59537,
+          "paid": 5198,
+          "non_paid": 54339,
+          "mtd": false
+        },
+        {
+          "month": "2026-11",
+          "pageviews": 14256,
+          "paid": 1234,
+          "non_paid": 13022,
+          "mtd": true
+        }
+      ]
+    },
+    {
+      "id": "tui-than-tai",
+      "name": "Túi Thần Tài / Sinh Lời",
+      "months": [
+        {
+          "month": "2026-05",
+          "pageviews": 1137,
+          "paid": 6,
+          "non_paid": 1131,
+          "mtd": false
+        },
+        {
+          "month": "2026-06",
+          "pageviews": 1034,
+          "paid": 5,
+          "non_paid": 1029,
+          "mtd": false
+        },
+        {
+          "month": "2026-07",
+          "pageviews": 2340,
+          "paid": 1,
+          "non_paid": 2339,
+          "mtd": false
+        },
+        {
+          "month": "2026-08",
+          "pageviews": 2334,
+          "paid": 2,
+          "non_paid": 2332,
+          "mtd": false
+        },
+        {
+          "month": "2026-09",
+          "pageviews": 2077,
+          "paid": 8,
+          "non_paid": 2069,
+          "mtd": false
+        },
+        {
+          "month": "2026-10",
+          "pageviews": 2135,
+          "paid": 6,
+          "non_paid": 2129,
+          "mtd": false
+        },
+        {
+          "month": "2026-11",
+          "pageviews": 478,
+          "paid": 0,
+          "non_paid": 478,
+          "mtd": true
+        }
+      ]
+    },
+    {
+      "id": "mo-the-tin-dung",
+      "name": "Mở Thẻ Tín Dụng",
+      "months": [
+        {
+          "month": "2026-05",
+          "pageviews": 1637,
+          "paid": 4,
+          "non_paid": 1633,
+          "mtd": false
+        },
+        {
+          "month": "2026-06",
+          "pageviews": 1429,
+          "paid": 52,
+          "non_paid": 1377,
+          "mtd": false
+        },
+        {
+          "month": "2026-07",
+          "pageviews": 1646,
+          "paid": 36,
+          "non_paid": 1610,
+          "mtd": false
+        },
+        {
+          "month": "2026-08",
+          "pageviews": 1432,
+          "paid": 72,
+          "non_paid": 1360,
+          "mtd": false
+        },
+        {
+          "month": "2026-09",
+          "pageviews": 1464,
+          "paid": 118,
+          "non_paid": 1346,
+          "mtd": false
+        },
+        {
+          "month": "2026-10",
+          "pageviews": 3397,
+          "paid": 461,
+          "non_paid": 2936,
+          "mtd": false
+        },
+        {
+          "month": "2026-11",
+          "pageviews": 803,
+          "paid": 124,
+          "non_paid": 679,
+          "mtd": true
+        }
+      ]
+    },
+    {
+      "id": "tra-gop",
+      "name": "Trả Góp",
+      "months": [
+        {
+          "month": "2026-05",
+          "pageviews": 819,
+          "paid": 2,
+          "non_paid": 817,
+          "mtd": false
+        },
+        {
+          "month": "2026-06",
+          "pageviews": 772,
+          "paid": 40,
+          "non_paid": 732,
+          "mtd": false
+        },
+        {
+          "month": "2026-07",
+          "pageviews": 1183,
+          "paid": 2,
+          "non_paid": 1181,
+          "mtd": false
+        },
+        {
+          "month": "2026-08",
+          "pageviews": 1020,
+          "paid": 8,
+          "non_paid": 1012,
+          "mtd": false
+        },
+        {
+          "month": "2026-09",
+          "pageviews": 1206,
+          "paid": 44,
+          "non_paid": 1162,
+          "mtd": false
+        },
+        {
+          "month": "2026-10",
+          "pageviews": 538,
+          "paid": 7,
+          "non_paid": 531,
+          "mtd": false
+        },
+        {
+          "month": "2026-11",
+          "pageviews": 113,
+          "paid": 0,
+          "non_paid": 113,
+          "mtd": true
+        }
+      ]
+    },
+    {
+      "id": "chung-khoan",
+      "name": "Chứng Khoán",
+      "months": [
+        {
+          "month": "2026-05",
+          "pageviews": 693,
+          "paid": 4,
+          "non_paid": 689,
+          "mtd": false
+        },
+        {
+          "month": "2026-06",
+          "pageviews": 672,
+          "paid": 6,
+          "non_paid": 666,
+          "mtd": false
+        },
+        {
+          "month": "2026-07",
+          "pageviews": 705,
+          "paid": 3,
+          "non_paid": 702,
+          "mtd": false
+        },
+        {
+          "month": "2026-08",
+          "pageviews": 622,
+          "paid": 9,
+          "non_paid": 613,
+          "mtd": false
+        },
+        {
+          "month": "2026-09",
+          "pageviews": 470,
+          "paid": 17,
+          "non_paid": 453,
+          "mtd": false
+        },
+        {
+          "month": "2026-10",
+          "pageviews": 1927,
+          "paid": 231,
+          "non_paid": 1696,
+          "mtd": false
+        },
+        {
+          "month": "2026-11",
+          "pageviews": 440,
+          "paid": 59,
+          "non_paid": 381,
+          "mtd": true
+        }
+      ]
+    },
+    {
+      "id": "tiet-kiem",
+      "name": "Tiết Kiệm Online",
+      "months": [
+        {
+          "month": "2026-05",
+          "pageviews": 431,
+          "paid": 1,
+          "non_paid": 430,
+          "mtd": false
+        },
+        {
+          "month": "2026-06",
+          "pageviews": 408,
+          "paid": 0,
+          "non_paid": 408,
+          "mtd": false
+        },
+        {
+          "month": "2026-07",
+          "pageviews": 550,
+          "paid": 0,
+          "non_paid": 550,
+          "mtd": false
+        },
+        {
+          "month": "2026-08",
+          "pageviews": 520,
+          "paid": 5,
+          "non_paid": 515,
+          "mtd": false
+        },
+        {
+          "month": "2026-09",
+          "pageviews": 481,
+          "paid": 8,
+          "non_paid": 473,
+          "mtd": false
+        },
+        {
+          "month": "2026-10",
+          "pageviews": 1579,
+          "paid": 268,
+          "non_paid": 1311,
+          "mtd": false
+        },
+        {
+          "month": "2026-11",
+          "pageviews": 359,
+          "paid": 59,
+          "non_paid": 300,
+          "mtd": true
+        }
+      ]
+    },
+    {
+      "id": "thanh-toan-the-tin-dung",
+      "name": "Thanh Toán Thẻ",
+      "months": [
+        {
+          "month": "2026-05",
+          "pageviews": 486,
+          "paid": 3,
+          "non_paid": 483,
+          "mtd": false
+        },
+        {
+          "month": "2026-06",
+          "pageviews": 432,
+          "paid": 7,
+          "non_paid": 425,
+          "mtd": false
+        },
+        {
+          "month": "2026-07",
+          "pageviews": 468,
+          "paid": 1,
+          "non_paid": 467,
+          "mtd": false
+        },
+        {
+          "month": "2026-08",
+          "pageviews": 362,
+          "paid": 5,
+          "non_paid": 357,
+          "mtd": false
+        },
+        {
+          "month": "2026-09",
+          "pageviews": 212,
+          "paid": 3,
+          "non_paid": 209,
+          "mtd": false
+        },
+        {
+          "month": "2026-10",
+          "pageviews": 468,
+          "paid": 25,
+          "non_paid": 443,
+          "mtd": false
+        },
+        {
+          "month": "2026-11",
+          "pageviews": 86,
+          "paid": 0,
+          "non_paid": 86,
+          "mtd": true
+        }
+      ]
+    },
+    {
+      "id": "chung-chi-quy",
+      "name": "Chứng Chỉ Quỹ",
+      "months": [
+        {
+          "month": "2026-05",
+          "pageviews": 256,
+          "paid": 0,
+          "non_paid": 256,
+          "mtd": false
+        },
+        {
+          "month": "2026-06",
+          "pageviews": 207,
+          "paid": 1,
+          "non_paid": 206,
+          "mtd": false
+        },
+        {
+          "month": "2026-07",
+          "pageviews": 237,
+          "paid": 0,
+          "non_paid": 237,
+          "mtd": false
+        },
+        {
+          "month": "2026-08",
+          "pageviews": 185,
+          "paid": 3,
+          "non_paid": 182,
+          "mtd": false
+        },
+        {
+          "month": "2026-09",
+          "pageviews": 180,
+          "paid": 4,
+          "non_paid": 176,
+          "mtd": false
+        },
+        {
+          "month": "2026-10",
+          "pageviews": 463,
+          "paid": 69,
+          "non_paid": 394,
+          "mtd": false
+        },
+        {
+          "month": "2026-11",
+          "pageviews": 113,
+          "paid": 27,
+          "non_paid": 86,
+          "mtd": true
+        }
+      ]
+    },
+    {
+      "id": "san-dau-tu",
+      "name": "Sàn Đầu Tư",
+      "months": [
+        {
+          "month": "2026-05",
+          "pageviews": 28,
+          "paid": 0,
+          "non_paid": 28,
+          "mtd": false
+        },
+        {
+          "month": "2026-06",
+          "pageviews": 22,
+          "paid": 0,
+          "non_paid": 22,
+          "mtd": false
+        },
+        {
+          "month": "2026-07",
+          "pageviews": 28,
+          "paid": 0,
+          "non_paid": 28,
+          "mtd": false
+        },
+        {
+          "month": "2026-08",
+          "pageviews": 29,
+          "paid": 0,
+          "non_paid": 29,
+          "mtd": false
+        },
+        {
+          "month": "2026-09",
+          "pageviews": 33,
+          "paid": 0,
+          "non_paid": 33,
+          "mtd": false
+        },
+        {
+          "month": "2026-10",
+          "pageviews": 30,
+          "paid": 0,
+          "non_paid": 30,
+          "mtd": false
+        },
+        {
+          "month": "2026-11",
+          "pageviews": 0,
+          "paid": 0,
+          "non_paid": 0,
+          "mtd": true
+        }
+      ]
+    },
+    {
+      "id": "tiem-vang-online",
+      "name": "Tiệm Vàng Online",
+      "months": [
+        {
+          "month": "2026-05",
+          "pageviews": 0,
+          "paid": 0,
+          "non_paid": 0,
+          "mtd": false
+        },
+        {
+          "month": "2026-06",
+          "pageviews": 0,
+          "paid": 0,
+          "non_paid": 0,
+          "mtd": false
+        },
+        {
+          "month": "2026-07",
+          "pageviews": 0,
+          "paid": 0,
+          "non_paid": 0,
+          "mtd": false
+        },
+        {
+          "month": "2026-08",
+          "pageviews": 0,
+          "paid": 0,
+          "non_paid": 0,
+          "mtd": false
+        },
+        {
+          "month": "2026-09",
+          "pageviews": 936,
+          "paid": 16,
+          "non_paid": 920,
+          "mtd": false
+        },
+        {
+          "month": "2026-10",
+          "pageviews": 761,
+          "paid": 4,
+          "non_paid": 757,
+          "mtd": false
+        },
+        {
+          "month": "2026-11",
+          "pageviews": 143,
+          "paid": 0,
+          "non_paid": 143,
+          "mtd": true
+        }
+      ]
+    },
+    {
+      "id": "ty-gia",
+      "name": "Tỷ Giá (FX Rates)",
+      "months": [
+        {
+          "month": "2026-05",
+          "pageviews": 0,
+          "paid": 0,
+          "non_paid": 0,
+          "mtd": false
+        },
+        {
+          "month": "2026-06",
+          "pageviews": 0,
+          "paid": 0,
+          "non_paid": 0,
+          "mtd": false
+        },
+        {
+          "month": "2026-07",
+          "pageviews": 0,
+          "paid": 0,
+          "non_paid": 0,
+          "mtd": false
+        },
+        {
+          "month": "2026-08",
+          "pageviews": 0,
+          "paid": 0,
+          "non_paid": 0,
+          "mtd": false
+        },
+        {
+          "month": "2026-09",
+          "pageviews": 101,
+          "paid": 0,
+          "non_paid": 101,
+          "mtd": false
+        },
+        {
+          "month": "2026-10",
+          "pageviews": 963,
+          "paid": 13,
+          "non_paid": 950,
+          "mtd": false
+        },
+        {
+          "month": "2026-11",
+          "pageviews": 1860,
+          "paid": 0,
+          "non_paid": 1860,
+          "mtd": true
+        }
+      ]
+    },
+    {
+      "id": "gia-vang",
+      "name": "Giá Vàng (Gold Price)",
+      "months": [
+        {
+          "month": "2026-05",
+          "pageviews": 0,
+          "paid": 0,
+          "non_paid": 0,
+          "mtd": false
+        },
+        {
+          "month": "2026-06",
+          "pageviews": 0,
+          "paid": 0,
+          "non_paid": 0,
+          "mtd": false
+        },
+        {
+          "month": "2026-07",
+          "pageviews": 0,
+          "paid": 0,
+          "non_paid": 0,
+          "mtd": false
+        },
+        {
+          "month": "2026-08",
+          "pageviews": 0,
+          "paid": 0,
+          "non_paid": 0,
+          "mtd": false
+        },
+        {
+          "month": "2026-09",
+          "pageviews": 59,
+          "paid": 0,
+          "non_paid": 59,
+          "mtd": false
+        },
+        {
+          "month": "2026-10",
+          "pageviews": 387,
+          "paid": 22,
+          "non_paid": 365,
+          "mtd": false
+        },
+        {
+          "month": "2026-11",
+          "pageviews": 260,
+          "paid": 0,
+          "non_paid": 260,
+          "mtd": true
+        }
+      ]
+    },
+    {
+      "id": "lai-suat",
+      "name": "Lãi Suất (Interest Rates)",
+      "months": [
+        {
+          "month": "2026-05",
+          "pageviews": 0,
+          "paid": 0,
+          "non_paid": 0,
+          "mtd": false
+        },
+        {
+          "month": "2026-06",
+          "pageviews": 0,
+          "paid": 0,
+          "non_paid": 0,
+          "mtd": false
+        },
+        {
+          "month": "2026-07",
+          "pageviews": 0,
+          "paid": 0,
+          "non_paid": 0,
+          "mtd": false
+        },
+        {
+          "month": "2026-08",
+          "pageviews": 0,
+          "paid": 0,
+          "non_paid": 0,
+          "mtd": false
+        },
+        {
+          "month": "2026-09",
+          "pageviews": 77,
+          "paid": 0,
+          "non_paid": 77,
+          "mtd": false
+        },
+        {
+          "month": "2026-10",
+          "pageviews": 809,
+          "paid": 3,
+          "non_paid": 806,
+          "mtd": false
+        },
+        {
+          "month": "2026-11",
+          "pageviews": 373,
+          "paid": 0,
+          "non_paid": 373,
+          "mtd": true
+        }
+      ]
+    },
+    {
+      "id": "nhan-tien-quoc-te",
+      "name": "Nhận Tiền Quốc Tế",
+      "months": [
+        {
+          "month": "2026-05",
+          "pageviews": 1235,
+          "paid": 6,
+          "non_paid": 1229,
+          "mtd": false
+        },
+        {
+          "month": "2026-06",
+          "pageviews": 948,
+          "paid": 1,
+          "non_paid": 947,
+          "mtd": false
+        },
+        {
+          "month": "2026-07",
+          "pageviews": 958,
+          "paid": 15,
+          "non_paid": 943,
+          "mtd": false
+        },
+        {
+          "month": "2026-08",
+          "pageviews": 994,
+          "paid": 60,
+          "non_paid": 934,
+          "mtd": false
+        },
+        {
+          "month": "2026-09",
+          "pageviews": 872,
+          "paid": 75,
+          "non_paid": 797,
+          "mtd": false
+        },
+        {
+          "month": "2026-10",
+          "pageviews": 818,
+          "paid": 37,
+          "non_paid": 781,
+          "mtd": false
+        },
+        {
+          "month": "2026-11",
+          "pageviews": 239,
+          "paid": 5,
+          "non_paid": 234,
+          "mtd": true
+        }
+      ]
+    },
+    {
+      "id": "quy-nhom",
+      "name": "Quỹ Nhóm",
+      "months": [
+        {
+          "month": "2026-05",
+          "pageviews": 1845,
+          "paid": 5,
+          "non_paid": 1840,
+          "mtd": false
+        },
+        {
+          "month": "2026-06",
+          "pageviews": 1737,
+          "paid": 6,
+          "non_paid": 1731,
+          "mtd": false
+        },
+        {
+          "month": "2026-07",
+          "pageviews": 2780,
+          "paid": 665,
+          "non_paid": 2115,
+          "mtd": false
+        },
+        {
+          "month": "2026-08",
+          "pageviews": 8588,
+          "paid": 5453,
+          "non_paid": 3135,
+          "mtd": false
+        },
+        {
+          "month": "2026-09",
+          "pageviews": 5865,
+          "paid": 3529,
+          "non_paid": 2336,
+          "mtd": false
+        },
+        {
+          "month": "2026-10",
+          "pageviews": 1708,
+          "paid": 30,
+          "non_paid": 1678,
+          "mtd": false
+        },
+        {
+          "month": "2026-11",
+          "pageviews": 1383,
+          "paid": 499,
+          "non_paid": 884,
+          "mtd": true
+        }
+      ]
+    },
+    {
+      "id": "quan-ly-chi-tieu",
+      "name": "Quản Lý Chi Tiêu",
+      "months": [
+        {
+          "month": "2026-05",
+          "pageviews": 1055,
+          "paid": 4,
+          "non_paid": 1051,
+          "mtd": false
+        },
+        {
+          "month": "2026-06",
+          "pageviews": 1081,
+          "paid": 2,
+          "non_paid": 1079,
+          "mtd": false
+        },
+        {
+          "month": "2026-07",
+          "pageviews": 906,
+          "paid": 9,
+          "non_paid": 897,
+          "mtd": false
+        },
+        {
+          "month": "2026-08",
+          "pageviews": 959,
+          "paid": 14,
+          "non_paid": 945,
+          "mtd": false
+        },
+        {
+          "month": "2026-09",
+          "pageviews": 1002,
+          "paid": 11,
+          "non_paid": 991,
+          "mtd": false
+        },
+        {
+          "month": "2026-10",
+          "pageviews": 792,
+          "paid": 10,
+          "non_paid": 782,
+          "mtd": false
+        },
+        {
+          "month": "2026-11",
+          "pageviews": 277,
+          "paid": 0,
+          "non_paid": 277,
+          "mtd": true
+        }
+      ]
+    }
+  ]
+}

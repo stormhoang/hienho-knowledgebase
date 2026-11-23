@@ -1,10 +1,10 @@
 # Web MoMo OKRs 2026
 
-> - **Document:** Web MoMo OKRs 2026
-> - **Division:** Growth Platform Division (GPD)
-> - **Version:** 1.1 · May 2026
-> - **Status:** Active
-> - **Last updated:** 2026-05-23
+> - **Tài liệu:** Web MoMo OKRs 2026
+> - **Khối phụ trách:** Growth Platform Division (GPD)
+> - **Phiên bản:** 1.1 · May 2026
+> - **Trạng thái:** Active
+> - **Cập nhật:** 2026-05-23
 
 **Vision:** Scale MoMo to Vietnam's #1 financial destination with 6M monthly visitors via an Agentic, SEO/GEO-first platform that turns underserved market needs into high-authority traffic.
 

@@ -49,7 +49,7 @@ Nên sử dụng Schema `Movie` để các công cụ tìm kiếm và AI Search 
 
 > "Lịch chiếu phim trực tuyến là dịch vụ tổng hợp thời gian chiếu, sơ đồ ghế ngồi và giá vé theo thời gian thực của tất cả các cụm rạp trên toàn quốc (CGV, Lotte Cinema, Galaxy, BHD, Beta, Cinestar). Nền tảng cho phép người xem tra cứu suất chiếu gần nhất, so sánh ưu đãi giá vé giữa các rạp và tiến hành đặt chỗ tức thì mà không cần xếp hàng mua vé tại quầy."
 
-* **Số lượng từ:** 77 từ (Đạt chuẩn tối ưu 40–55 từ).
+* **Số lượng từ:** 77 từ (Đạt chuẩn tối ưu 40-55 từ).
 * **Cấu trúc:** Thực thể định nghĩa ➔ Cơ chế vận hành số hóa ➔ Giá trị cốt lõi giải phóng rào cản.
 
 ---
@@ -71,7 +71,7 @@ Nên sử dụng Schema `Movie` để các công cụ tìm kiếm và AI Search 
 ### 3.3. Bảng phụ thu phòng chiếu đặc biệt & Chính sách hủy vé (Minh Bạch Chi Phí / High Intent)
 * **Bản chất vấn đề:** Bóc tách mức giá phụ thu các định dạng IMAX, 4DX, ScreenX, ghế đôi Sweetbox.
 * **Phân tích chiều sâu:** Người xem phim thường tìm kiếm lý do tại sao giá vé thanh toán cao hơn giá niêm yết. Cần liệt kê rõ: Phụ thu ngày Lễ/Tết, phụ thu suất chiếu cuối tuần, phụ thu định dạng âm thanh Dolby Atmos, và chính sách hủy/đổi suất chiếu của từng chuỗi rạp.
-* **Hành động triển khai:** Bảng ma trận so sánh giá vé tiêu chuẩn vs định dạng cao cấp tại Hà Nội và TP.HCM.
+* **Hành động triển khai:** Bảng so sánh giá vé tiêu chuẩn vs định dạng cao cấp tại Hà Nội và TP.HCM.
 
 ---
 
@@ -88,7 +88,7 @@ Dàn ý cấu trúc chuẩn E-E-A-T tích hợp trực tiếp các thực thể 
 ## H2 3: Cơ chế giữ chỗ & Đồng bộ sơ đồ ghế thời gian thực (Live Seat Map) (Hạ Tầng & Bảo Mật)
    - Quy trình nhận vé điện tử (Smart Ticket QR) vào thẳng phòng chiếu không cần in vé giấy.
 ## H2 4: Bảng phụ thu phòng chiếu đặc biệt & Chính sách hủy vé (Minh Bạch Phí)
-   - Bảng ma trận so sánh giá vé tiêu chuẩn vs định dạng cao cấp tại Hà Nội và TP.HCM.
+   - Bảng so sánh giá vé tiêu chuẩn vs định dạng cao cấp tại Hà Nội và TP.HCM.
 ## H2 5: Hướng Dẫn Thao Tác Trực Tuyến & Chuyển Tiếp Liền Mạch Lên MoMo
    - CTA Hook: [Đặt Vé Phim Rạp Chiếu Mới Nhất](momo://cinema-booking) | Event: `web_cinema_booking_btn_click`
 

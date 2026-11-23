@@ -1,27 +1,14 @@
 {
-  "generated_at": "2026-11-06T04:24:11+00:00",
+  "generated_at": "2026-11-10T03:24:36+00:00",
   "items": [
     {
-      "id": "596010",
-      "title": "FTC Unseals Details In Amazon Ads Auction Surcharge Suit",
-      "title_en": "FTC Unseals Details In Amazon Ads Auction Surcharge Suit",
-      "summary": "Search Engine Journal cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "id": "595875",
+      "title": "Paid Search Is Moving Up The Funnel - Google Admits AI Mode Pays Less",
+      "title_en": "Paid Search Is Moving Up The Funnel - Google Admits AI Mode Pays Less",
+      "summary": "Search Engine Journal cập nhật ngày 2026-11-09. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
       "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/ftc-unseals-details-amazon-ads-auction-surcharge-suit/596010/",
-      "published_at": "2026-11-05",
-      "category": "industry",
-      "impact": "low",
-      "tags": [],
-      "action": ""
-    },
-    {
-      "id": "595485",
-      "title": "Google Search Queries Hit A 5-Year High, And Search Revenue Didn’t Follow",
-      "title_en": "Google Search Queries Hit A 5-Year High, And Search Revenue Didn’t Follow",
-      "summary": "Search Engine Journal cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/google-search-queries-hit-a-5-year-high-and-search-revenue-didnt-follow/595485/",
-      "published_at": "2026-11-05",
+      "url": "https://www.searchenginejournal.com/paid-search-is-moving-up-the-funnel-google-admits-ai-mode-pays-less/595875/",
+      "published_at": "2026-11-09",
       "category": "ai_search",
       "impact": "low",
       "tags": [
@@ -30,28 +17,189 @@
       "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
     },
     {
-      "id": "openai-updates-chatgpt-ads-bidding-options-42470",
-      "title": "OpenAI Updates ChatGPT Ads Bidding Options For Max Bid or Max CPC",
-      "title_en": "OpenAI Updates ChatGPT Ads Bidding Options For Max Bid or Max CPC",
-      "summary": "Search Engine Roundtable cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/openai-updates-chatgpt-ads-bidding-options-42470.html",
-      "published_at": "2026-11-05",
+      "id": "596442",
+      "title": "Google Ads Tests Asset Activity Page With Weekly AI Insights",
+      "title_en": "Google Ads Tests Asset Activity Page With Weekly AI Insights",
+      "summary": "Search Engine Journal cập nhật ngày 2026-11-09. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/google-ads-tests-asset-activity-page-with-weekly-ai-insights/596442/",
+      "published_at": "2026-11-09",
+      "category": "industry",
+      "impact": "low",
+      "tags": [],
+      "action": ""
+    },
+    {
+      "id": "594529",
+      "title": "SEO Split Testing In 2027: How To Prove A Change Actually Worked",
+      "title_en": "SEO Split Testing In 2027: How To Prove A Change Actually Worked",
+      "summary": "Search Engine Journal cập nhật ngày 2026-11-09. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/seo-split-testing-prove-change-worked/594529/",
+      "published_at": "2026-11-09",
+      "category": "industry",
+      "impact": "low",
+      "tags": [],
+      "action": ""
+    },
+    {
+      "id": "596389",
+      "title": "Why An AI Usage Report Stopped Comparing AI With Search Engines",
+      "title_en": "Why An AI Usage Report Stopped Comparing AI With Search Engines",
+      "summary": "Search Engine Journal cập nhật ngày 2026-11-09. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/ai-76-billion-monthly-sessions-search-comparison/596389/",
+      "published_at": "2026-11-09",
       "category": "ai_search",
       "impact": "low",
+      "tags": [],
+      "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
+    },
+    {
+      "id": "recap-11-09-2026-42485",
+      "title": "Daily Search Forum Recap: November 9, 2026",
+      "title_en": "Daily Search Forum Recap: November 9, 2026",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-11-09. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/recap-11-09-2026-42485.html",
+      "published_at": "2026-11-09",
+      "category": "ai_search",
+      "impact": "medium",
       "tags": [
+        "search console",
         "chatgpt"
       ],
       "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
     },
     {
-      "id": "595834",
-      "title": "November Click Spikes In Google Search Console Are Bot Traffic - How To Filter Your Reports",
-      "title_en": "November Click Spikes In Google Search Console Are Bot Traffic - How To Filter Your Reports",
-      "summary": "Search Engine Journal cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "id": "594542",
+      "title": "The New Organic Growth Stack: Search, Social, Communities & AI",
+      "title_en": "The New Organic Growth Stack: Search, Social, Communities & AI",
+      "summary": "Search Engine Journal cập nhật ngày 2026-11-09. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
       "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/november-click-spikes-in-google-search-console-are-bot-traffic-how-to-filter-your-reports/595834/",
-      "published_at": "2026-11-05",
+      "url": "https://www.searchenginejournal.com/new-organic-growth-stack-search-social-communities-ai/594542/",
+      "published_at": "2026-11-09",
+      "category": "industry",
+      "impact": "low",
+      "tags": [],
+      "action": ""
+    },
+    {
+      "id": "google-search-ranking-volatility-november-9th-42486",
+      "title": "Google Search Ranking Volatility Status: Update November 8th/9th?",
+      "title_en": "Google Search Ranking Volatility Status: Update November 8th/9th?",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-11-09. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/google-search-ranking-volatility-november-9th-42486.html",
+      "published_at": "2026-11-09",
+      "category": "google_update",
+      "impact": "high",
+      "tags": [],
+      "action": "Rà soát tác động xếp hạng toàn bộ URL tài chính YMYL trên momo.vn trong Search Console ngay sau khi update kết thúc."
+    },
+    {
+      "id": "google-ai-mode-multiturn-ads-42478",
+      "title": "Google AI Mode Multiturn Ads Are Live - Follow-Up Query Ads",
+      "title_en": "Google AI Mode Multiturn Ads Are Live - Follow-Up Query Ads",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-11-09. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/google-ai-mode-multiturn-ads-42478.html",
+      "published_at": "2026-11-09",
+      "category": "ai_search",
+      "impact": "low",
+      "tags": [
+        "ai mode"
+      ],
+      "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
+    },
+    {
+      "id": "google-business-profiles-adding-booking-links-42477",
+      "title": "Google Adding Booking Links To Business Profiles Automatically?",
+      "title_en": "Google Adding Booking Links To Business Profiles Automatically?",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-11-09. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/google-business-profiles-adding-booking-links-42477.html",
+      "published_at": "2026-11-09",
+      "category": "industry",
+      "impact": "low",
+      "tags": [],
+      "action": ""
+    },
+    {
+      "id": "bing-ads-top-ai-mode-results-42479",
+      "title": "Bing Ads At Top Of AI Mode Results",
+      "title_en": "Bing Ads At Top Of AI Mode Results",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-11-09. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/bing-ads-top-ai-mode-results-42479.html",
+      "published_at": "2026-11-09",
+      "category": "ai_search",
+      "impact": "low",
+      "tags": [
+        "ai mode"
+      ],
+      "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
+    },
+    {
+      "id": "google-ads-ai-generated-summaries-42482",
+      "title": "Google Ads AI-Generated Summaries Above & Within Ads",
+      "title_en": "Google Ads AI-Generated Summaries Above & Within Ads",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-11-09. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/google-ads-ai-generated-summaries-42482.html",
+      "published_at": "2026-11-09",
+      "category": "industry",
+      "impact": "low",
+      "tags": [],
+      "action": ""
+    },
+    {
+      "id": "data-manager-in-google-analytics-42480",
+      "title": "New Data Manager In Google Analytics Beta",
+      "title_en": "New Data Manager In Google Analytics Beta",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-11-09. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/data-manager-in-google-analytics-42480.html",
+      "published_at": "2026-11-09",
+      "category": "industry",
+      "impact": "low",
+      "tags": [],
+      "action": ""
+    },
+    {
+      "id": "google-ads-asset-activity-section-42481",
+      "title": "Google Ads New Asset Activity Section",
+      "title_en": "Google Ads New Asset Activity Section",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-11-09. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/google-ads-asset-activity-section-42481.html",
+      "published_at": "2026-11-09",
+      "category": "industry",
+      "impact": "low",
+      "tags": [],
+      "action": ""
+    },
+    {
+      "id": "google-aggregator-supplier-units-things-to-do-42484",
+      "title": "Google Aggregator & Supplier Units Gain 'Things To Do' Query Support",
+      "title_en": "Google Aggregator & Supplier Units Gain 'Things To Do' Query Support",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-11-09. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/google-aggregator-supplier-units-things-to-do-42484.html",
+      "published_at": "2026-11-09",
+      "category": "industry",
+      "impact": "low",
+      "tags": [],
+      "action": ""
+    },
+    {
+      "id": "596279",
+      "title": "Ziff Davis Says Organic Google Referrals Fell About 37%",
+      "title_en": "Ziff Davis Says Organic Google Referrals Fell About 37%",
+      "summary": "Search Engine Journal cập nhật ngày 2026-11-09. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/ziff-davis-organic-google-referrals-decline/596279/",
+      "published_at": "2026-11-09",
       "category": "technical",
       "impact": "medium",
       "tags": [
@@ -60,291 +208,144 @@
       "action": "Kiểm tra lại crawl/index/sitemap cho các Hub trọng điểm để đảm bảo không thất thoát lưu lượng organic."
     },
     {
-      "id": "595984",
-      "title": "Ads In Google AI Answers Concentrate In Apparel & Electronics",
-      "title_en": "Ads In Google AI Answers Concentrate In Apparel & Electronics",
-      "summary": "Search Engine Journal cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "id": "596267",
+      "title": "Google’s AI Features Sent One Site An Estimated 21% Of Its Clicks",
+      "title_en": "Google’s AI Features Sent One Site An Estimated 21% Of Its Clicks",
+      "summary": "Search Engine Journal cập nhật ngày 2026-11-09. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
       "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/google-ai-answer-ads-apparel-electronics-report/595984/",
-      "published_at": "2026-11-05",
+      "url": "https://www.searchenginejournal.com/googles-ai-features-sent-one-site-an-estimated-21-of-its-clicks/596267/",
+      "published_at": "2026-11-09",
       "category": "ai_search",
       "impact": "medium",
       "tags": [
         "ai overview",
-        "ai mode",
-        "chatgpt"
+        "ai mode"
       ],
       "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
     },
     {
-      "id": "594569",
-      "title": "How To Optimize For Better Campaign Leads, Not Just Conversions - Ask A PPC",
-      "title_en": "How To Optimize For Better Campaign Leads, Not Just Conversions - Ask A PPC",
-      "summary": "Search Engine Journal cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "id": "596241",
+      "title": "Create More Helpful Content For AI Search With 9 Practical Workflows [Webinar]",
+      "title_en": "Create More Helpful Content For AI Search With 9 Practical Workflows [Webinar]",
+      "summary": "Search Engine Journal cập nhật ngày 2026-11-09. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
       "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/ask-a-ppc-how-to-optimize-for-better-outcomes-not-just-conversions/594569/",
-      "published_at": "2026-11-05",
-      "category": "industry",
-      "impact": "low",
-      "tags": [],
-      "action": ""
-    },
-    {
-      "id": "recap-11-05-2026-42466",
-      "title": "Daily Search Forum Recap: November 5, 2026",
-      "title_en": "Daily Search Forum Recap: November 5, 2026",
-      "summary": "Search Engine Roundtable cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/recap-11-05-2026-42466.html",
-      "published_at": "2026-11-05",
-      "category": "industry",
-      "impact": "low",
-      "tags": [],
-      "action": ""
-    },
-    {
-      "id": "facebook-answers-google-42467",
-      "title": "Facebook Answers AI-Generated 6 Million Pages Is Google Scaled Content Abuse",
-      "title_en": "Facebook Answers AI-Generated 6 Million Pages Is Google Scaled Content Abuse",
-      "summary": "Search Engine Roundtable cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/facebook-answers-google-42467.html",
-      "published_at": "2026-11-05",
-      "category": "technical",
-      "impact": "medium",
-      "tags": [],
-      "action": "Kiểm tra lại crawl/index/sitemap cho các Hub trọng điểm để đảm bảo không thất thoát lưu lượng organic."
-    },
-    {
-      "id": "595730",
-      "title": "GEO Isn’t A Distraction - Referral Data Misses Where AI Shapes Buying Decisions",
-      "title_en": "GEO Isn’t A Distraction - Referral Data Misses Where AI Shapes Buying Decisions",
-      "summary": "Search Engine Journal cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/geo-isnt-a-distraction-referral-data-misses-where-ai-shapes-buying-decisions/595730/",
-      "published_at": "2026-11-05",
-      "category": "ai_search",
-      "impact": "low",
-      "tags": [
-        "geo",
-        "chatgpt"
-      ],
-      "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
-    },
-    {
-      "id": "google-ads-expands-ai-content-label-disclosure-42461",
-      "title": "Google Ads Expands AI Content Disclosure Label To More Regions",
-      "title_en": "Google Ads Expands AI Content Disclosure Label To More Regions",
-      "summary": "Search Engine Roundtable cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/google-ads-expands-ai-content-label-disclosure-42461.html",
-      "published_at": "2026-11-05",
-      "category": "industry",
-      "impact": "low",
-      "tags": [],
-      "action": ""
-    },
-    {
-      "id": "google-ads-pmax-channel-report-search-42454",
-      "title": "Google Ads PMax Channel Report Definitions Coming To Search & Shopping",
-      "title_en": "Google Ads PMax Channel Report Definitions Coming To Search & Shopping",
-      "summary": "Search Engine Roundtable cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/google-ads-pmax-channel-report-search-42454.html",
-      "published_at": "2026-11-05",
+      "url": "https://www.searchenginejournal.com/create-more-helpful-content-for-ai-search-with-9-practical-workflows-webinar/596241/",
+      "published_at": "2026-11-09",
       "category": "google_update",
       "impact": "low",
       "tags": [],
       "action": "Rà soát tác động xếp hạng toàn bộ URL tài chính YMYL trên momo.vn trong Search Console ngay sau khi update kết thúc."
     },
     {
-      "id": "google-ai-mode-home-services-booking-42459",
-      "title": "Google AI Mode Integrates With Home Services Booking",
-      "title_en": "Google AI Mode Integrates With Home Services Booking",
-      "summary": "Search Engine Roundtable cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/google-ai-mode-home-services-booking-42459.html",
-      "published_at": "2026-11-05",
+      "id": "596257",
+      "title": "Tripadvisor Says SEO Will Still Weigh On Growth In 2027",
+      "title_en": "Tripadvisor Says SEO Will Still Weigh On Growth In 2027",
+      "summary": "Search Engine Journal cập nhật ngày 2026-11-08. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/tripadvisor-says-seo-will-still-weigh-on-growth-in-2027/596257/",
+      "published_at": "2026-11-08",
+      "category": "industry",
+      "impact": "low",
+      "tags": [],
+      "action": ""
+    },
+    {
+      "id": "596248",
+      "title": "Cloudflare CEO Likens AI Agent Optimization To A New Version Of SEO",
+      "title_en": "Cloudflare CEO Likens AI Agent Optimization To A New Version Of SEO",
+      "summary": "Search Engine Journal cập nhật ngày 2026-11-08. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/cloudflare-ai-agent-optimization-new-seo/596248/",
+      "published_at": "2026-11-08",
+      "category": "technical",
+      "impact": "medium",
+      "tags": [],
+      "action": "Kiểm tra lại crawl/index/sitemap cho các Hub trọng điểm để đảm bảo không thất thoát lưu lượng organic."
+    },
+    {
+      "id": "596104",
+      "title": "Google Rank Data Issues, Lighthouse Update & AI Opt-Out - SEO Pulse",
+      "title_en": "Google Rank Data Issues, Lighthouse Update & AI Opt-Out - SEO Pulse",
+      "summary": "Search Engine Journal cập nhật ngày 2026-11-07. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/seo-pulse-rank-data-problems-pagespeed-scores-ai-training-opt-out/596104/",
+      "published_at": "2026-11-07",
+      "category": "ai_search",
+      "impact": "low",
+      "tags": [],
+      "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
+    },
+    {
+      "id": "595829",
+      "title": "Brave Sells Its Search Index To AI, And Your Website Is Probably In It",
+      "title_en": "Brave Sells Its Search Index To AI, And Your Website Is Probably In It",
+      "summary": "Search Engine Journal cập nhật ngày 2026-11-06. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/brave-sells-its-search-index-to-ai-and-your-website-is-probably-in-it/595829/",
+      "published_at": "2026-11-06",
       "category": "ai_search",
       "impact": "low",
       "tags": [
-        "ai mode"
+        "perplexity"
       ],
       "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
     },
     {
-      "id": "595967",
-      "title": "Google Explains How Redirects Affect Ranking Signals",
-      "title_en": "Google Explains How Redirects Affect Ranking Signals",
-      "summary": "Search Engine Journal cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "id": "596120",
+      "title": "Google Gemini Business Profile Tools Are Coming To Workspace",
+      "title_en": "Google Gemini Business Profile Tools Are Coming To Workspace",
+      "summary": "Search Engine Journal cập nhật ngày 2026-11-06. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
       "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/google-explains-how-redirects-affect-ranking-signals/595967/",
-      "published_at": "2026-11-05",
-      "category": "technical",
-      "impact": "low",
-      "tags": [],
-      "action": "Kiểm tra lại crawl/index/sitemap cho các Hub trọng điểm để đảm bảo không thất thoát lưu lượng organic."
-    },
-    {
-      "id": "google-protected-important-urls-index-42464",
-      "title": "Google Can Temporarily Protect Important URLs From Being Deindexed",
-      "title_en": "Google Can Temporarily Protect Important URLs From Being Deindexed",
-      "summary": "Search Engine Roundtable cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/google-protected-important-urls-index-42464.html",
-      "published_at": "2026-11-05",
-      "category": "technical",
-      "impact": "high",
-      "tags": [],
-      "action": "Kiểm tra lại crawl/index/sitemap cho các Hub trọng điểm để đảm bảo không thất thoát lưu lượng organic."
-    },
-    {
-      "id": "google-business-profiles-car-dealership-inventory-42465",
-      "title": "Google Business Profiles Car Dealership Inventory Limited Pilot",
-      "title_en": "Google Business Profiles Car Dealership Inventory Limited Pilot",
-      "summary": "Search Engine Roundtable cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/google-business-profiles-car-dealership-inventory-42465.html",
-      "published_at": "2026-11-05",
-      "category": "industry",
-      "impact": "low",
-      "tags": [],
-      "action": ""
-    },
-    {
-      "id": "google-search-profiles-adds-linkedin-42458",
-      "title": "Google Search Profiles Spotted Adding LinkedIn",
-      "title_en": "Google Search Profiles Spotted Adding LinkedIn",
-      "summary": "Search Engine Roundtable cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/google-search-profiles-adds-linkedin-42458.html",
-      "published_at": "2026-11-05",
-      "category": "industry",
-      "impact": "low",
-      "tags": [],
-      "action": ""
-    },
-    {
-      "id": "google-ads-telemedicine-certification-42460",
-      "title": "Google Ads Gains A New Telemedicine Certification Option",
-      "title_en": "Google Ads Gains A New Telemedicine Certification Option",
-      "summary": "Search Engine Roundtable cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/google-ads-telemedicine-certification-42460.html",
-      "published_at": "2026-11-05",
-      "category": "industry",
-      "impact": "high",
-      "tags": [],
-      "action": ""
-    },
-    {
-      "id": "595959",
-      "title": "SERP Data Providers Say Google Is Throttling Goto Result Links",
-      "title_en": "SERP Data Providers Say Google Is Throttling Goto Result Links",
-      "summary": "Search Engine Journal cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/google-goto-result-links-throttling/595959/",
-      "published_at": "2026-11-05",
-      "category": "industry",
-      "impact": "low",
-      "tags": [],
-      "action": ""
-    },
-    {
-      "id": "594163",
-      "title": "AI Visibility vs. Search Rankings: Is Your Agency Measuring the Wrong Thing For 2027?",
-      "title_en": "AI Visibility vs. Search Rankings: Is Your Agency Measuring the Wrong Thing For 2027?",
-      "summary": "Search Engine Journal cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/ai-visibility-vs-search-rankings-is-your-agency-measuring-the-wrong-thing-for-2027-spa/594163/",
-      "published_at": "2026-11-05",
-      "category": "geo",
-      "impact": "high",
-      "tags": [],
-      "action": "Chuẩn hóa entity, schema và off-web citation để cải thiện tỉ lệ xuất hiện trong AI Overviews."
-    },
-    {
-      "id": "595882",
-      "title": "Google Brings UCP Direct Checkout To AI Mode In Canada",
-      "title_en": "Google Brings UCP Direct Checkout To AI Mode In Canada",
-      "summary": "Search Engine Journal cập nhật ngày 2026-11-05. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/google-brings-ucp-direct-checkout-to-ai-mode-in-canada/595882/",
-      "published_at": "2026-11-05",
+      "url": "https://www.searchenginejournal.com/google-gemini-business-profile-workspace-2/596120/",
+      "published_at": "2026-11-06",
       "category": "ai_search",
       "impact": "low",
       "tags": [
-        "ai mode",
         "gemini"
       ],
       "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
     },
     {
-      "id": "google-ads-search-terms-match-type-keywords-42463",
-      "title": "Google Ads Explains Difference With Search Terms Match Type (Keywords)",
-      "title_en": "Google Ads Explains Difference With Search Terms Match Type (Keywords)",
-      "summary": "Search Engine Roundtable cập nhật ngày 2026-11-04. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/google-ads-search-terms-match-type-keywords-42463.html",
-      "published_at": "2026-11-04",
+      "id": "596016",
+      "title": "Google Ads Skills Transfer To TikTok Search Ads - With 4 Catches",
+      "title_en": "Google Ads Skills Transfer To TikTok Search Ads - With 4 Catches",
+      "summary": "Search Engine Journal cập nhật ngày 2026-11-06. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/tiktok-search-ads-are-becoming-real-search-advertising/596016/",
+      "published_at": "2026-11-06",
       "category": "industry",
       "impact": "low",
       "tags": [],
       "action": ""
     },
     {
-      "id": "google-email-site-reputation-policy-eea-42462",
-      "title": "Google Emails: Site Reputation Policy Manual Actions No Longer Impact EEA",
-      "title_en": "Google Emails: Site Reputation Policy Manual Actions No Longer Impact EEA",
-      "summary": "Search Engine Roundtable cập nhật ngày 2026-11-04. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "id": "chatgpt-tools-for-business-42476",
+      "title": "OpenAI Working On ChatGPT Tools For Business For Analytics & Citations",
+      "title_en": "OpenAI Working On ChatGPT Tools For Business For Analytics & Citations",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-11-06. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
       "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/google-email-site-reputation-policy-eea-42462.html",
-      "published_at": "2026-11-04",
-      "category": "technical",
-      "impact": "high",
+      "url": "https://www.seroundtable.com/chatgpt-tools-for-business-42476.html",
+      "published_at": "2026-11-06",
+      "category": "ai_search",
+      "impact": "medium",
       "tags": [
-        "search console"
+        "search console",
+        "chatgpt"
       ],
-      "action": "Kiểm tra lại crawl/index/sitemap cho các Hub trọng điểm để đảm bảo không thất thoát lưu lượng organic."
+      "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
     },
     {
-      "id": "595935",
-      "title": "Reddit Begins Testing Ads In Its Own Search Results",
-      "title_en": "Reddit Begins Testing Ads In Its Own Search Results",
-      "summary": "Search Engine Journal cập nhật ngày 2026-11-04. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "id": "594405",
+      "title": "4 Datasets On AI Visibility: ChatGPT Sends 0.62% Of Google’s Organic Traffic",
+      "title_en": "4 Datasets On AI Visibility: ChatGPT Sends 0.62% Of Google’s Organic Traffic",
+      "summary": "Search Engine Journal cập nhật ngày 2026-11-06. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
       "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/reddit-begins-testing-ads-in-its-own-search-results/595935/",
-      "published_at": "2026-11-04",
-      "category": "industry",
-      "impact": "low",
-      "tags": [],
-      "action": ""
-    },
-    {
-      "id": "595483",
-      "title": "Businesses Treat Your AI Agent 3 Different Ways",
-      "title_en": "Businesses Treat Your AI Agent 3 Different Ways",
-      "summary": "Search Engine Journal cập nhật ngày 2026-11-04. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/businesses-treat-your-ai-agent-3-different-ways/595483/",
-      "published_at": "2026-11-04",
-      "category": "industry",
-      "impact": "low",
-      "tags": [],
-      "action": ""
-    },
-    {
-      "id": "595871",
-      "title": "Google Adds Home Service Booking & Quote Links To AI Mode",
-      "title_en": "Google Adds Home Service Booking & Quote Links To AI Mode",
-      "summary": "Search Engine Journal cập nhật ngày 2026-11-04. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/google-ai-mode-home-services-booking-quote-links/595871/",
-      "published_at": "2026-11-04",
+      "url": "https://www.searchenginejournal.com/ai-visibility-isnt-a-sham-most-ways-of-measuring-it-are/594405/",
+      "published_at": "2026-11-06",
       "category": "ai_search",
       "impact": "low",
       "tags": [
-        "ai mode"
+        "chatgpt"
       ],
       "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
     },
@@ -374,7 +375,22 @@
       "tags": [
         "robots.txt"
       ],
-      "action": ""
+      "action": "",
+      "insight": {
+        "status": "watch",
+        "finding": "Dữ liệu sau mốc 3/11 mới có 4/7 ngày: số URL có impressions trong GSC tăng 3,2% tạm tính so với 4 ngày liền trước.",
+        "evidence": [
+          {
+            "label": "URL có impressions trong GSC (proxy index coverage)",
+            "value": "7.5K",
+            "delta_pct": 3.2,
+            "source": "GSC",
+            "period": "4 ngày sau vs 4 ngày trước 3/11 (chưa đủ 7 ngày dữ liệu sau mốc)"
+          }
+        ],
+        "next_step": "Chạy lại kiểm tra sau 10/11 khi đủ 7 ngày dữ liệu; đối chiếu Pages report.",
+        "data_as_of": "2026-11-07"
+      }
     },
     {
       "id": "chatgpt-ads-update-42427",
@@ -438,7 +454,36 @@
         "geo",
         "aeo"
       ],
-      "action": ""
+      "action": "",
+      "insight": {
+        "status": "watch",
+        "finding": "Dữ liệu sau mốc 3/11 mới có 4/7 ngày: clicks organic toàn site giảm 3,0% tạm tính so với 4 ngày liền trước.",
+        "evidence": [
+          {
+            "label": "Clicks organic toàn site",
+            "value": "30.4K",
+            "delta_pct": -3.0,
+            "source": "GSC",
+            "period": "4 ngày sau vs 4 ngày trước 3/11 (chưa đủ 7 ngày dữ liệu sau mốc)"
+          },
+          {
+            "label": "Impressions toàn site",
+            "value": "986.9K",
+            "delta_pct": -6.8,
+            "source": "GSC",
+            "period": "4 ngày sau vs 4 ngày trước 3/11 (chưa đủ 7 ngày dữ liệu sau mốc)"
+          },
+          {
+            "label": "Vị trí trung bình (impression-weighted)",
+            "value": "6.0",
+            "delta_pct": -1.5,
+            "source": "GSC",
+            "period": "4 ngày sau vs 4 ngày trước 3/11 (chưa đủ 7 ngày dữ liệu sau mốc)"
+          }
+        ],
+        "next_step": "Chạy lại kiểm tra GSC sau 10/11 khi đủ 7 ngày dữ liệu sau mốc; nếu clicks giảm ≥10% thì rà top URL theo cùng khung so sánh.",
+        "data_as_of": "2026-11-07"
+      }
     },
     {
       "id": "google-ai-opt-out-test-organic-clicks-drop-499898",
@@ -488,18 +533,18 @@
       "action": "",
       "insight": {
         "status": "watch",
-        "finding": "Dữ liệu sau mốc 1/11 mới có 2/7 ngày: số URL có impressions trong GSC giảm 0,8% tạm tính so với 2 ngày liền trước.",
+        "finding": "Dữ liệu sau mốc 1/11 mới có 6/7 ngày: số URL có impressions trong GSC tăng 2,5% tạm tính so với 6 ngày liền trước.",
         "evidence": [
           {
             "label": "URL có impressions trong GSC (proxy index coverage)",
-            "value": "5.2K",
-            "delta_pct": -0.8,
+            "value": "9.1K",
+            "delta_pct": 2.5,
             "source": "GSC",
-            "period": "2 ngày sau vs 2 ngày trước 1/11 (chưa đủ 7 ngày dữ liệu sau mốc)"
+            "period": "6 ngày sau vs 6 ngày trước 1/11 (chưa đủ 7 ngày dữ liệu sau mốc)"
           }
         ],
         "next_step": "Chạy lại kiểm tra sau 8/11 khi đủ 7 ngày dữ liệu; đối chiếu Pages report.",
-        "data_as_of": "2026-11-03"
+        "data_as_of": "2026-11-07"
       }
     },
     {
@@ -609,19 +654,19 @@
       ],
       "action": "",
       "insight": {
-        "status": "watch",
-        "finding": "Dữ liệu sau mốc 31/10 mới có 3/7 ngày: số URL có impressions trong GSC giảm 2,2% tạm tính so với 3 ngày liền trước.",
+        "status": "not_affected",
+        "finding": "Số URL có impressions trong GSC tăng 2,0% trong 7 ngày sau 31/10 so với 7 ngày trước đó, không vượt ngưỡng 5%.",
         "evidence": [
           {
             "label": "URL có impressions trong GSC (proxy index coverage)",
-            "value": "6.3K",
-            "delta_pct": -2.2,
+            "value": "9.8K",
+            "delta_pct": 2.0,
             "source": "GSC",
-            "period": "3 ngày sau vs 3 ngày trước 31/10 (chưa đủ 7 ngày dữ liệu sau mốc)"
+            "period": "7 ngày sau vs 7 ngày trước 31/10"
           }
         ],
-        "next_step": "Chạy lại kiểm tra sau 7/11 khi đủ 7 ngày dữ liệu; đối chiếu Pages report.",
-        "data_as_of": "2026-11-03"
+        "next_step": "Không cần hành động; duy trì theo dõi index coverage định kỳ.",
+        "data_as_of": "2026-11-07"
       }
     },
     {
@@ -639,19 +684,19 @@
       ],
       "action": "Kiểm tra lại crawl/index/sitemap cho các Hub trọng điểm để đảm bảo không thất thoát lưu lượng organic.",
       "insight": {
-        "status": "watch",
-        "finding": "Dữ liệu sau mốc 30/10 mới có 4/7 ngày: số URL có impressions trong GSC giảm 0,7% tạm tính so với 4 ngày liền trước.",
+        "status": "not_affected",
+        "finding": "Số URL có impressions trong GSC tăng 0,5% trong 7 ngày sau 30/10 so với 7 ngày trước đó, không vượt ngưỡng 5%.",
         "evidence": [
           {
             "label": "URL có impressions trong GSC (proxy index coverage)",
-            "value": "7.2K",
-            "delta_pct": -0.7,
+            "value": "9.7K",
+            "delta_pct": 0.5,
             "source": "GSC",
-            "period": "4 ngày sau vs 4 ngày trước 30/10 (chưa đủ 7 ngày dữ liệu sau mốc)"
+            "period": "7 ngày sau vs 7 ngày trước 30/10"
           }
         ],
-        "next_step": "Chạy lại kiểm tra sau 6/11 khi đủ 7 ngày dữ liệu; đối chiếu Pages report.",
-        "data_as_of": "2026-11-03"
+        "next_step": "Không cần hành động; duy trì theo dõi index coverage định kỳ.",
+        "data_as_of": "2026-11-07"
       }
     },
     {
@@ -917,7 +962,7 @@
           }
         ],
         "next_step": "Theo dõi thêm 7 ngày tiếp theo trên GSC; nếu mức giảm vượt 10% thì rà top URL.",
-        "data_as_of": "2026-11-03"
+        "data_as_of": "2026-11-07"
       }
     },
     {
@@ -1074,7 +1119,7 @@
           }
         ],
         "next_step": "Theo dõi thêm 7 ngày tiếp theo trên GSC; nếu mức giảm vượt 10% thì rà top URL.",
-        "data_as_of": "2026-11-03"
+        "data_as_of": "2026-11-07"
       }
     },
     {
@@ -1380,7 +1425,7 @@
           }
         ],
         "next_step": "Theo dõi thêm 7 ngày tiếp theo trên GSC; nếu mức giảm vượt 10% thì rà top URL.",
-        "data_as_of": "2026-11-03"
+        "data_as_of": "2026-11-07"
       }
     },
     {
@@ -1651,7 +1696,7 @@
           }
         ],
         "next_step": "Theo dõi thêm 7 ngày tiếp theo trên GSC; nếu mức giảm vượt 10% thì rà top URL.",
-        "data_as_of": "2026-11-03"
+        "data_as_of": "2026-11-07"
       }
     },
     {
@@ -1851,7 +1896,7 @@
           }
         ],
         "next_step": "Rà soát /nap-xu-tiktok và 4 URL còn lại trong danh sách affected trên GSC (on-page, internal link, trạng thái index) trước khi kết luận.",
-        "data_as_of": "2026-11-03",
+        "data_as_of": "2026-11-07",
         "affected": [
           {
             "name": "/nap-xu-tiktok",
@@ -2068,7 +2113,7 @@
           }
         ],
         "next_step": "Không cần hành động; duy trì theo dõi index coverage định kỳ.",
-        "data_as_of": "2026-11-03"
+        "data_as_of": "2026-11-07"
       }
     },
     {
@@ -2113,7 +2158,7 @@
           }
         ],
         "next_step": "Không cần hành động ngay; duy trì theo dõi GSC định kỳ.",
-        "data_as_of": "2026-11-03"
+        "data_as_of": "2026-11-07"
       }
     },
     {
@@ -2144,7 +2189,7 @@
           }
         ],
         "next_step": "Không cần hành động; duy trì theo dõi index coverage định kỳ.",
-        "data_as_of": "2026-11-03"
+        "data_as_of": "2026-11-07"
       }
     },
     {
@@ -2170,21 +2215,6 @@
       "source": "Google Search Central",
       "url": "https://developers.google.com/search/blog/2026/09/search-central-live-india-2026",
       "published_at": "2026-09-14",
-      "category": "industry",
-      "impact": "low",
-      "tags": [
-        "event"
-      ],
-      "action": ""
-    },
-    {
-      "id": "search-central-live-mexico-and-colombia",
-      "title": "Search Central Live đến Bogota và Mexico City",
-      "title_en": "Search Central Live is coming to Bogota and Ciudad de México",
-      "summary": "Search Central Live sẽ đến Bogota và Ciudad de México. Sự kiện cộng đồng SEO khu vực Mỹ Latin của Google.",
-      "source": "Google Search Central",
-      "url": "https://developers.google.com/search/blog/2026/09/search-central-live-mexico-and-colombia",
-      "published_at": "2026-09-08",
       "category": "industry",
       "impact": "low",
       "tags": [

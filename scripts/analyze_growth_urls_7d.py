@@ -1,3 +1,7 @@
+"""Phân tích tăng trưởng URL 7 ngày so với 7 ngày liền trước bằng GA4 Data API.
+
+Usage: ./.venv/bin/python scripts/analyze_growth_urls_7d.py"""
+
 import json, os, sys
 from collections import defaultdict
 from google.oauth2 import service_account

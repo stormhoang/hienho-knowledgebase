@@ -1,7 +1,6 @@
 # BÁO CÁO KINH DOANH VÀ HIỆU SUẤT NỀN TẢNG WEB - THÁNG 10/2026
-> **Đối tượng:** Ban Giám Đốc / Hội đồng Quản trị
 > **Chu kỳ dữ liệu:** 01/10/2026 - 31/10/2026 (31 ngày, chốt full month)
-> **Nguồn dữ liệu (SSOT):** GA4 Data API (Property 270743103) cho tổng, kênh và New Users; Excel SSOT `web_performance_tracking.xlsx` (pivot Full month) cho Hub và project; AppsFlyer GPD cho Web-to-App.
+> **Nguồn dữ liệu:** GA4 Data API (Property 270743103) cho tổng, kênh và New Users; Excel `web_performance_tracking.xlsx` (pivot Full month) cho Hub và project; AppsFlyer GPD cho Web-to-App.
 > **Lưu ý nguồn:** Một số số Hub đang lệch giữa GA4 và Excel. Xem mục 7.
 
 ---
@@ -111,7 +110,7 @@
    - Trang phim lẻ (Cinema_Page): Paid giảm từ 332.738 xuống 8.221 PVs. Lượt tự nhiên tăng 13,3% (279.336 → 316.627). Phần giảm 272.360 PVs của trang này chủ yếu đến từ việc cắt Paid, không phải mất lượt tự nhiên.
    - Financial Hub đạt 273.705 PVs (+9,6%). Trung Tâm Tài Chính 43.495 PVs (+442,0%), Ví Trả Sau 58.268 PVs (+38,2%), bù mức giảm 47.814 PVs của Vay Nhanh (-43,5%).
 3. **Phễu Install sang MAU rơi mạnh ở bước đầu.** Install sang đăng ký chỉ đạt 35,0%, nên 6.388 install chưa đăng ký. Map Bank sang MAU đạt 54,6%, nghĩa là gần một nửa người đã liên kết ngân hàng chưa thành MAU. Ads đang đặt nhiều nhất ở trang nạp TikTok (78.340 phiên), nhưng chưa có CR đáng tin để xếp hạng trang.
-4. **Phạt Nguội (dự án P0) giảm mạnh.** Đạt 21.812 PVs (-44,6% MoM, hạng 25/69 project), trong đó organic 11.551 PVs. Cần đẩy SEO On-Page và liên kết nội bộ để phục hồi lưu lượng. Chưa có target tháng cho dự án này.
+4. **Phạt Nguội (dự án trọng điểm) giảm mạnh.** Đạt 21.812 PVs (-44,6% MoM, hạng 25/69 project), trong đó organic 11.551 PVs. Cần đẩy SEO On-Page và liên kết nội bộ để phục hồi lưu lượng. Chưa có target tháng cho dự án này.
 
 **Hoạt động tối ưu Cinema và giá trị tạo ra (tháng 10):**
 
@@ -181,12 +180,12 @@
 
 ### 8. QUYẾT SÁCH TRỌNG TÂM CẦN BAN GIÁM ĐỐC PHÊ DUYỆT (DECISION REQUIRED)
 
-#### Đề Xuất 1: Chuẩn Hóa Cổng Tải App Tập Trung (`/tai-app`) — Hóa Giải Thất Thoát GSC & Chặn Rủi Ro Bảo Mật APK
+#### Đề Xuất 1: Chuẩn Hóa Cổng Tải App Tập Trung (`/tai-app`) - Hóa Giải Thất Thoát GSC & Chặn Rủi Ro Bảo Mật APK
 
 **1. Dữ liệu thực tế từ Google Search Console (GSC) & Thất thoát lưu lượng:**
 - **Quy mô hiển thị thực tế (Impressions):** Đạt **99.749 lượt hiển thị/tháng** (~100.000 impressions/tháng) trên Google Search cho 62 truy vấn tìm kiếm trực diện về việc tải và cài đặt MoMo.
 - **Lượt nhấp thực tế (Clicks):** Chỉ thu về **5.585 clicks/tháng**.
-- **CTR trung bình cực thấp:** Chỉ **5,60%** (trong khi tỷ lệ nhấp chuẩn của từ khóa Brand Search Intent phải đạt **25% – 35%**).
+- **CTR trung bình cực thấp:** Chỉ **5,60%** (trong khi tỷ lệ nhấp chuẩn của từ khóa Brand Search Intent phải đạt **25% - 35%**).
 - **Nguyên nhân gốc rễ thất thoát:** MoMo **chưa có landing page chính thức `/tai-app`**. Google đang trả về các bài hướng dẫn tĩnh cũ năm 2021 (`/huong-dan/huong-dan-tai-va-cai-dat-vi-momo`, `/hoi-dap/cach-tai-vi-momo`), không có cơ chế 1-chạm mở app store và không hiển thị mã QR trên máy tính, khiến phần lớn người dùng rơi rụng sang các trang download trung gian bên ngoài.
 
 **2. Dung lượng thị trường từ bộ từ khóa Inventory Brand (`05_HUBS/inventory/brand/`):**
@@ -203,8 +202,8 @@
 - **Nguy cơ cực lớn:** Người dùng cài đặt nhầm ứng dụng giả mạo bị chèn mã độc/trojan, dẫn đến việc bị lộ thông tin cá nhân và đánh cắp tiền trong tài khoản ví MoMo.
 
 **4. Lợi ích kinh doanh & Bài toán tăng trưởng Web-to-App:**
-- **Tối ưu CTR từ 5,6% lên 25% – 30%:** Thu hút trọn vẹn thêm **+20.000 đến +25.000 lượt truy cập sạch mỗi tháng**.
-- **Chuyển đổi Web-to-App:** Người dùng chủ động tìm tải app có ý định cài đặt ngay lập tức, CVR dự kiến đạt **40% – 60%**, tạo ra **8.000 – 15.000 New Installs/tháng** hoàn toàn miễn phí (Organic 0đ Paid).
+- **Tối ưu CTR từ 5,6% lên 25% - 30%:** Thu hút trọn vẹn thêm **+20.000 đến +25.000 lượt truy cập sạch mỗi tháng**.
+- **Chuyển đổi Web-to-App:** Người dùng chủ động tìm tải app có ý định cài đặt ngay lập tức, CVR dự kiến đạt **40% - 60%**, tạo ra **8.000-15.000 New Installs/tháng** hoàn toàn miễn phí (Organic 0đ Paid).
 - **Trải nghiệm 1-chạm thông minh:** Trang `/tai-app` tự động nhận diện thiết bị (Mobile iOS mở App Store, Android mở Google Play, Desktop hiển thị mã QR sắc nét quét cài app).
 - **Chi phí triển khai:** **0 VNĐ** (Mã nguồn đã hoàn thiện 100% trên Production tại `momo.vn/tai-app`, đã tích hợp OneLink AppsFlyer).
 

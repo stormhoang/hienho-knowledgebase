@@ -15,7 +15,7 @@ Dưới đây là bản đồ điều hướng dự án. Agent phải xác đị
     <tr style="background-color:#f1f5f9;">
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Bước</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tên Giai Đoạn</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Stakeholder Chủ Trì</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Stakeholder Điều Phối</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Skill/Methodology</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Gate Check (Core Principle)</th>
     </tr>
@@ -110,7 +110,7 @@ Khi tiếp nhận yêu cầu về dự án, Agent thực hiện theo quy trình 
 ## 3. Active Pipeline Board
 
 > *Phần này dùng để theo dõi các dự án đang chạy (Cần cập nhật thường xuyên)*
-> *Target: [[web-momo-okrs-2026|6M MUA — OKR 2026]]*
+> *Target: [[web-momo-okrs-2026|6M MUA - OKR 2026]]*
 
 <table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
   <thead>
@@ -214,4 +214,4 @@ Mọi output từ Agent phải đi qua bộ lọc này:
 
 ## References & Alignment
 - **Operational Engine:** [[operational_routine]]
-- **Mục tiêu chiến lược:** [[web-momo-okrs-2026]] — 6M MUA (KR 1.1)
+- **Mục tiêu chiến lược:** [[web-momo-okrs-2026]] - 6M MUA (KR 1.1)

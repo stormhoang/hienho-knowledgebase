@@ -72,7 +72,7 @@ Hệ thống sử dụng các Rule Engine dựa trên các biến (Variables) th
 
 ## 6. Phạm vi Tích hợp (Module Applicability Matrix)
 
-Dự án A/B Testing & Personalization (M10) đóng vai trò là một "Core Engine". Tuy nhiên, cơ chế nội dung động này không được áp dụng tùy tiện trên toàn hệ thống mà bị giới hạn chặt chẽ để bảo vệ nền tảng SEO. Dưới đây là ma trận phân bổ:
+Dự án A/B Testing & Personalization (M10) đóng vai trò là một "Core Engine". Tuy nhiên, cơ chế nội dung động này không được áp dụng tùy tiện trên toàn hệ thống mà bị giới hạn chặt chẽ để bảo vệ nền tảng SEO. Dưới đây là bảng phân bổ:
 
 ### 6.1. Chi tiết Ma trận Tích hợp
 

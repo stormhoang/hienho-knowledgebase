@@ -1,7 +1,7 @@
 # Khung Quản Trị & Vận Hành Nhóm Dự Án Hỗ Trợ Vận Hành & Phối Hợp Nền Tảng Chưa Chốt High-Level Strategic
 
 > - **Tài liệu:** Operational & Platform Support Projects Framework
-> - **Bộ phận:** Growth Platform Division (GPD) x Web Platform
+> - **Khối phụ trách:** Growth Platform Division (GPD) x Web Platform
 > - **Phiên bản:** 1.0
 > - **Ngày phát hành:** 2026-08-12
 > - **Trạng thái:** DRAFT - Đang chờ phê duyệt từ Executive Leadership
@@ -179,7 +179,7 @@ graph TD
 <table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
   <thead>
     <tr style="background-color:#f1f5f9;">
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ưu Tiên</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Đợt Triển Khai</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tên Hạng Mục Hành Động</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội Dung Chi Tiết Thực Thi</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Đội Ngũ Thực Hiện</th>
@@ -187,25 +187,25 @@ graph TD
   </thead>
   <tbody>
     <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>P0</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Đợt 1</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khai Thống Alignment Strategic Cấp Cao</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tổ chức phiên làm việc giữa Web Platform Lead và Head of BMC - Media để chốt chỉ số đo lường tuyệt đối (Traffic, CTR, Login App) cho Ví Trả Sau & Vay Nhanh.</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Platform Lead x Media Lead (BMC)</td>
     </tr>
     <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>P1</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Đợt 2</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ban Hành SOP Phân Định Trách Nhiệm</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phân rã rõ ràng: BMC phụ trách sản xuất nội dung & Off-page Media; Web Platform phụ trách kiểm duyệt Quality Gate (Score >= 80) và cấp công cụ MoSpark.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bóc tách rõ ràng: BMC phụ trách sản xuất nội dung & Off-page Media; Web Platform phụ trách kiểm duyệt Quality Gate (Score >= 80) và cấp công cụ MoSpark.</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Product Lead x Media Team</td>
     </tr>
     <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>P2</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Đợt 3</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đóng Gói Financial Utilities Nhúng Bài Viết</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đưa bộ công cụ Finhub Calculator (tính hạn mức Ví Trả Sau, tính lãi vay, giả lập điểm CIC) vào MoSpark Widget Store để BMC tự nhúng vào bài cẩm nang.</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Software Engineering Team x Media Team</td>
     </tr>
     <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>P3</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Đợt 4</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chuyển Giao Tự Vận Hành Soundbox</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bàn giao hoàn toàn module MoSpark Merchant Builder dạng Self-serve cho Media / Sales Team tự vận hành, không tiêu tốn nhân lực kỹ thuật Web Platform.</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Software Engineering Team x Sales / Media Team</td>

@@ -384,7 +384,7 @@ def build_workbook():
     
     ws2["A1"] = "HIỆU SUẤT THEO PHÂN HỆ HUB CHIẾN LƯỢC (STRATEGIC HUBS BREAKDOWN)"
     ws2["A1"].font = font_title
-    ws2["A2"] = f"Dữ liệu MTD {days_elapsed} ngày (01/10 - {days_elapsed}/10/2026) phân rã theo 4 Zones & Mô hình Chuyển đổi"
+    ws2["A2"] = f"Dữ liệu MTD {days_elapsed} ngày (01/10 - {days_elapsed}/10/2026) cơ cấu theo 4 Zones & Mô hình Chuyển đổi"
     ws2["A2"].font = font_subtitle
     
     headers2 = [
@@ -630,7 +630,7 @@ def build_workbook():
     
     ws4["A1"] = f"CHI TIẾT PHÂN HỆ CINEMA HUB SUB-PAGES (GA4 DATA API MTD {days_elapsed}D)"
     ws4["A1"].font = font_title
-    ws4["A2"] = "Phân rã theo định danh chuẩn mới: Trang Rạp phim, Trang phim chi tiết, Cinema Home..."
+    ws4["A2"] = "Bóc tách theo định danh chuẩn mới: Trang Rạp phim, Trang phim chi tiết, Cinema Home..."
     ws4["A2"].font = font_subtitle
     
     headers4 = [

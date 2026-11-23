@@ -1,10 +1,10 @@
 # BRD: Báo Cáo Lừa Đảo & Bản Tin An Toàn Bảo Mật (Trust - Report Scam & Security Newsletter)
 
-> - **Project:** Use Case Báo Cáo Lừa Đảo (Trust) - Web Growth & Media Team Web Platform
-> - **Main URL:** momo.vn/report-scam & momo.vn/atbm/ban-tin/{quy-nam}
-> - **Division:** Risk & Security (GPD Web Platform)
-> - **Version:** 1.3 · Tháng 6/2026
-> - **Status:** Active (Scope: Landing Page báo cáo, Form nhập tay tĩnh & Bản tin ATBM Quý - S-P-A Framework)
+> - **Dự án:** Use Case Báo Cáo Lừa Đảo (Trust) - Web Growth & Media Team Web Platform
+> - **URL chính:** momo.vn/report-scam & momo.vn/atbm/ban-tin/{quy-nam}
+> - **Khối phụ trách:** Risk & Security (GPD Web Platform)
+> - **Phiên bản:** 1.3 · Tháng 6/2026
+> - **Trạng thái:** Active (Scope: Landing Page báo cáo, Form nhập tay tĩnh & Bản tin ATBM Quý - S-P-A Framework)
 > - **PRD Specs (Report Scam):** [09_PRD/trust-prd.md](../09_PRD/trust-prd.md)
 > - **PRD Specs (Bản tin ATBM):** [09_PRD/ban-tin-atbm-prd.md](../09_PRD/ban-tin-atbm-prd.md)
 
@@ -128,7 +128,7 @@ Xây dựng niềm tin số toàn diện từ trong ra ngoài (Inside out) dựa
 ### 3.2 Giai đoạn 2: Pilot (Thử nghiệm MVP)
 *   **Nhiệm vụ chi tiết:**
     1.  **Xây dựng Landing Page MVP:** Phát triển Landing Page giới thiệu tĩnh tích hợp Form nhập liệu tĩnh trực tiếp tại đường dẫn `/report-scam`.
-    2.  **Kiểm thử luồng submit:** Kết nối submit form về endpoint API tạm thời để kiểm tra tính ổn định của luồng truyền nhận file bằng chứng (ảnh chụp màn hình) và dữ liệu dạng text.
+    2.  **Test luồng submit:** Kết nối submit form về endpoint API tạm thời để kiểm tra tính ổn định của luồng truyền nhận file bằng chứng (ảnh chụp màn hình) và dữ liệu dạng text.
     3.  **Đo lường Pilot:** Chạy thử nghiệm trên nhóm nhỏ người dùng mẫu (~50-100 người) để đo lường tỷ lệ điền hết form (Completion Rate) và thu thập phản hồi về các rào cản trải nghiệm (UX Friction).
 
 ### 3.3 Giai đoạn 3: Action (Vận hành Rộng rãi)

@@ -106,7 +106,8 @@ MERGE_MAP = {
     'bao-hiem-than-vo': 'bao-hiem-o-to',
     'bao-hiem-vat-chat': 'bao-hiem-o-to',
     'dong-bao-hiem': 'bhxh',
-    'bao-hiem': 'bhxh',
+    # 'bao-hiem' KHÔNG gộp vào bhxh: là theme tổng của Insurtech Hub (35% BHXH, 15% BHYT, còn lại brand, nhân thọ, xe).
+    # Từ khóa trùng theme con được loại ở content_plan_config.UMBRELLA_THEMES.
     'bao-hiem-benh': 'bao-hiem-tai-nan',
     # PS
     'nap-xu-tiktok': 'nap-tiktok',
@@ -268,7 +269,8 @@ VIETNAMESE_THEME_NAMES = {
     'dat-lich-kham-benh': 'Đặt Lịch Khám Bệnh',
     'tinh-calo': 'Tính Calo & Dinh Dưỡng',
 
-    # === insurtech (8) ===
+    # === insurtech (9) ===
+    'bao-hiem': 'Bảo Hiểm',
     'bao-hiem-chay-no': 'Bảo Hiểm Cháy Nổ',
     'bao-hiem-nhan-tho': 'Bảo Hiểm Nhân Thọ',
     'bao-hiem-o-to': 'Bảo Hiểm Ô Tô (TNDS & Vật Chất)',

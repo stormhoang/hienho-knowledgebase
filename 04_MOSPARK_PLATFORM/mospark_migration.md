@@ -30,11 +30,11 @@ MoSpark không phải là một hệ thống build mới hoàn toàn mà là **b
 
 ## 4. Hậu quả (Consequences)
 
-### 3.1. Phân rã Vận hành (Operational Fragmentation)
-*   **Nỗi đau của Media Team**: Đội ngũ Media Team (quản lý toàn bộ nội dung) phải thoát ra và đăng nhập vào từng Cell Team để đăng bài. Ví dụ: Để đăng 1 bài blog về Vay, họ không thể đăng từ giao diện chính mà phải vào Cell Team Vay.
+### 3.1. Bóc tách Vận hành (Operational Fragmentation)
+*   **Điểm nghẽn của Media Team**: Đội ngũ Media Team (quản lý toàn bộ nội dung) phải thoát ra và đăng nhập vào từng Cell Team để đăng bài. Ví dụ: Để đăng 1 bài blog về Vay, họ không thể đăng từ giao diện chính mà phải vào Cell Team Vay.
 *   **Inconsistency**: Giao diện, Menu Header/Footer và các thành phần UI có thể bị lệch nhau giữa các Cell Team do không có sự quản lý tập trung.
 
-### 3.2. Phân rã SEO & URL (URL Fragmentation)
+### 3.2. Bóc tách SEO & URL (URL Fragmentation)
 *   **Cấu trúc chồng chéo**:
     *   Silo 1: `momo.vn/blog/*` (Hub content)
     *   Silo 2: `momo.vn/{use-case}/blog/*` (Vay, Cinema, Bảo hiểm...)

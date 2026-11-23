@@ -33,8 +33,12 @@ Skill này cung cấp bộ khung chuẩn hóa, phương pháp luận bóc tách 
    - Tuyệt đối không đưa CX, không đưa CWV/P90, không đưa Ticket tồn đọng. Không tính New User vào nhóm Hubs. 
    - Tuyệt đối không liệt kê lại các con số đã có trên bảng.
    - **Định vị kênh:** Organic là kênh chủ lực của Web Platform. Tuyệt đối không tô điểm cho Paid. Paid tăng mà Organic giảm là cảnh báo rủi ro về chất lượng tăng trưởng.
-   - **Phân loại Traffic Source SSOT (Non-Paid vs Paid):** BẮT BUỘC cơ cấu thành 2 nhóm lớn rõ rệt: **Kênh Tự Nhiên (Non-Paid)** chỉ gồm đúng 4 kênh con (Organic, Direct, AI Traffic (GEO), Referral) và **Kênh Trả Phí (Paid Ads)**. Khi trình bày bảng hoặc danh sách, gom rõ 2 dòng lớn Non-Paid vs Paid, 4 kênh con đặt thụt dòng dưới Non-Paid, tuyệt đối không tách thêm dòng Others rời rạc và không để Paid xen kẽ ngang hàng.
-   - **Bullet Lead-ins:** Viết tiếng Việt ngắn gọn (`Vượt target:`, `Lưu lượng trực tiếp & sức mạnh thương hiệu:`, `Chuyển dịch SEO sang GEO:`, `Điểm nổi bật:`, `Việc tiếp theo:`). Chỉ giữ tiếng Anh cho thuật ngữ chỉ số: Target, Budget, Actual, MAU, MEU, CVR, Map Bank, OneLink, Installs, New Reg. Toàn bộ báo cáo dùng một ngôn ngữ.
+   - **Phân loại Traffic Source (Non-Paid vs Paid):** BẮT BUỘC cơ cấu thành 2 nhóm lớn rõ rệt: **Kênh Tự Nhiên (Non-Paid)** chỉ gồm đúng 4 kênh con (Organic, Direct, AI Traffic (GEO), Referral) và **Kênh Trả Phí (Paid Ads)**. Khi trình bày bảng hoặc danh sách, gom rõ 2 dòng lớn Non-Paid vs Paid, 4 kênh con đặt thụt dòng dưới Non-Paid, tuyệt đối không tách thêm dòng Others rời rạc và không để Paid xen kẽ ngang hàng.
+   - **Chỉ số lưu lượng chuẩn (PageViews):** Bắt buộc dùng `PageViews`, tuyệt đối không dùng từ `lượt xem` trong báo cáo, bảng biểu hoặc phân tích số liệu.
+   - **Thuật ngữ kiểm tra chất lượng (Quality Assurance):** Bắt buộc dùng `Nghiệm thu kỹ thuật`, `Đánh giá chất lượng`, `UAT`, hoặc giữ nguyên thuật ngữ quốc tế `test`, `test cases`. Tuyệt đối không dùng cách dịch trường phái cũ (k.i.e.m t.h.u) trong báo cáo C-Suite.
+   - **Gói quà người dùng mới:** Bắt buộc dùng `Gói Quà tự chọn cho người dùng mới` hoặc `Gói quà CHAOMOMO`. Tuyệt đối không dùng từ lóng game (q.u.a t.a.n t.h.u).
+   - **Quy chuẩn ký tự & ưu tiên:** Tuyệt đối không dùng ký tự En Dash (mã U+2013) hoặc Em Dash (mã U+2014) (chỉ dùng Hyphen -); tuyệt đối không gắn nhãn mức độ ưu tiên (như chữ P kèm số từ 0 đến 3).
+   - **Bullet Lead-ins:** Viết tiếng Việt ngắn gọn (`Vượt target:`, `Lưu lượng trực tiếp & sức mạnh thương hiệu:`, `Chuyển dịch SEO sang GEO:`, `Điểm nổi bật:`, `Việc tiếp theo:`). Chỉ giữ tiếng Anh cho thuật ngữ chỉ số: Target, Budget, Actual, MAU, MEU, CVR, Map Bank, OneLink, Installs, New Reg, PageViews. Toàn bộ báo cáo dùng một ngôn ngữ.
 7. **Mật độ thông điệp & bảng biểu:** Tối đa 3 ý chính dưới mỗi tiêu đề, tốt nhất 1-2. Nhiều hơn thì tách slide. Tối đa 2-3 bảng/biểu đồ, không copy dashboard thô.
 8. **Trực quan hóa:**
    - Luồng người dùng / Conversion Funnel: Dùng sơ đồ Mermaid (`graph TD` hoặc `graph LR`) + Bảng phân tích chi tiết các bước (Step Breakdown Table).
@@ -42,7 +46,65 @@ Skill này cung cấp bộ khung chuẩn hóa, phương pháp luận bóc tách 
 
 ---
 
-## 3. TIÊU CHUẨN BÁO CÁO THÁNG ĐIỀU HÀNH WEB PLATFORM (EXECUTIVE 6 STREAMS ARCHITECTURE SSOT)
+## 3. TIÊU CHUẨN BÁO CÁO TUẦN ĐIỀU HÀNH WEB PLATFORM (INSURTECH WEEKLY ARCHITECTURE)
+
+Áp dụng nguyên mẫu kiến trúc từ `[InsurTech] Web 2026 Performance.pptx` kết hợp cẩm nang `03_SKILLS/executive-presentation-playbook.md` và các bài học chuẩn hóa thực tế (đúc kết từ Báo Cáo Tuần 46) cho toàn bộ Báo cáo Tuần (Weekly Report) gửi Executive Leadership (anh Công):
+
+### 3.1. Cấu trúc Mục I: Tổng Quan Hiệu Suất Tuần
+1. **Bốn chỉ số trọng tâm duy nhất (Section I.1 Overview):** Giới hạn đúng 4 đầu dòng then chốt, không đưa số liệu phân mảng lạc hậu hoặc số liệu suy đoán:
+   - **Tổng lưu lượng so với mục tiêu (Total PageViews vs. Target):** Số PageViews MTD, % hoàn thành kế hoạch tháng, nhịp bình quân ngày (PageViews/ngày), tốc độ 7 ngày gần nhất (+/- % WoW) và nhịp cần thiết để về đích.
+   - **Lưu lượng tự nhiên (Non-Paid Traffic):** Số PageViews và tỷ trọng % toàn Website, bóc tách Organic Search và Direct Traffic.
+   - **Tìm kiếm AI (AI Traffic / GEO):** Số PageViews từ ChatGPT, Perplexity, Gemini; nhịp ngày và đánh giá tối ưu hóa Schema/GEO.
+   - **Phễu chuyển đổi Web-to-App trọn vẹn (Install -> MAU):** Số lượng 4 tầng phễu AppsFlyer (Installs -> New Reg -> Map Bank -> Active MAU) và tỷ lệ chuyển đổi cuối phễu (End-to-End CVR).
+2. **Cơ cấu kênh lưu lượng qua các tháng (Section I.2 Multi-Month Traffic Sources):** Bảng so sánh 5 tháng liên tiếp phân định rõ Non-Paid (4 kênh con) vs Paid Ads.
+3. **Tiến độ mục tiêu các Hub (Section I.3 Realistic Hub Calibration):** Bảng đối soát Target tháng vs MTD Actual và % tiến độ; hiệu chỉnh mục tiêu các Hub (như Vehicle Hub, New User Hub) sát thực tế vận hành và run-rate MTD.
+4. **Tiến trình chuyển đổi đa tháng (Section I.4 Historical Progression):** Bảng theo dõi số lượng và tỷ lệ chuyển đổi qua các tháng (từ Tháng 7 đến MTD hiện tại) để chứng minh chất lượng tệp người dùng và đà tăng trưởng bền vững.
+
+### 3.2. Cấu trúc Mục II: Tiến Độ Dự Án Chiến Lược (Hubs Deep-Dive)
+1. **Tiêu đề hành động THUẦN SỐ LIỆU, KHÔNG MENTION TÍNH NĂNG (Numbers-Only Action Titles):**
+   - Tiêu đề mục các dự án/Hubs bắt buộc là câu kết luận trực diện gồm số liệu lưu lượng, chuyển đổi và tỷ lệ CVR.
+   - **Tuyệt đối KHÔNG đưa tên tính năng, công cụ hay công nghệ vào tiêu đề** (Không ghi "Tool Tính Thuế", "Chatbot", "0-CAPTCHA", "Dynamic QR" trên heading). Tên tính năng và chi tiết kỹ thuật chỉ được trình bày trong phần thân bài.
+   - Mẫu tiêu đề chuẩn:
+     * `1. Cinema Hub [R]: Web mang về 348.428 PageViews, kéo về 224 lượt cài app mới và đạt tỷ lệ chuyển đổi sang MAU 12,1%`
+     * `2. Financial Hub [R]: Web mang về 151.548 PageViews và kích hoạt 20.804 lượt chuyển đổi về app (Điểm Tín Dụng dẫn đầu 8.769 clicks)`
+     * `3. Vehicle Hub [R]: Đạt 108.379 PageViews (54,2% target), phễu tra cứu ghi nhận 82.862 lượt tra cứu và 47.292 lượt mở app in-app`
+     * `4. Dự án New User [R]: Web mang về 3.171 lượt cài app mới, tạo ra 864 tài khoản đăng ký và 533 người dùng liên kết ngân hàng`
+2. **Thân bài đồng nhất chuẩn 3 khối bắt buộc (Standard 3-Block Body Structure):**
+   - **`#### a. Key Highlights & Business Impact`:**
+     - Phễu chuyển đổi 4 bước định lượng: Bước 1 (Traffic) -> Bước 2 (Tương tác / Tra cứu) -> Bước 3 (Chuyển tiếp W2A clicks) -> Bước 4 (Chuyển đổi App: Installs, Đăng ký, Đơn hàng, MAU).
+     - Mốc kỹ thuật và sản phẩm đã nghiệm thu trên Production (tên công cụ, tính năng, số lượng trang/cụm rạp).
+     - Radical Candor (Lowlights / Điểm nghẽn trung thực): Nêu thẳng điểm nghẽn, tỷ lệ rơi rớt, rủi ro cạnh tranh và nguyên nhân gốc rễ (không tô hồng).
+   - **`#### b. Phối hợp liên đội ngũ (Cross-team Collaboration)`:**
+     - Nêu đích danh các BU và phòng ban đối tác (`BU Movies`, `BU Financial Services`, `BU Bank`, `Khối CSGT/VTTI`, `Media Team`, `Procurement`...).
+     - Nêu cụ thể ngân sách đầu tư và tiến độ phê duyệt (Ví dụ: Gói Pilot Off-Page Cinema 125 triệu VNĐ do BU Movies tài trợ; Gói Media New User 50 triệu VNĐ).
+   - **`#### c. Kế hoạch hành động 7 ngày tới`:**
+     - Danh sách việc cần làm cụ thể, thực thi ngay, sắp xếp theo logic tự nhiên.
+     - **Tuyệt đối KHÔNG gắn nhãn mức độ ưu tiên (như chữ P kèm số từ 0 đến 3).**
+
+### 3.3. Cấu trúc Mục III: Tiến Độ Thực Tế Các Dự Án Nền Tảng (Platform Projects)
+1. **Định vị & Phân định mục:** Phần III là khu vực bắt buộc dành riêng cho **Dự Án Nền Tảng (Platform Projects)** và **Năng Lực Kỹ Thuật Hệ Thống** (MoBase Design System, MoSpark CMS, BFF & API Security, Chatbot AI & MoMo LLM Gateway, URL Catalog, MoMatrix V1, và Hạ tầng ITC / Sự cố kỹ thuật).
+2. **Cấu trúc trình bày từng dự án nền tảng:**
+   - **Tiêu đề dự án:** [Tên Dự Án Nền Tảng]: [Cột mốc kỹ thuật & Trọng tâm vận hành trong tuần].
+   - **Key Owner & Phối hợp:** Ghi rõ nhân sự chịu trách nhiệm chính (`Key Owner`) và đội ngũ phối hợp chuyên môn.
+   - **Liên kết Demo & Production:** Các đường dẫn truy cập Staging, Production, hoặc tài liệu kiến trúc.
+   - **Mục tiêu & Tác động (Objectives & Impact):** Giải quyết bài toán kỹ thuật hoặc vận hành nào của hệ thống.
+   - **Tiến độ thực tế trong tuần (Tasks & Accomplishments):** Chi tiết các đầu việc kỹ thuật đã hoàn thành, đã nghiệm thu hoặc đưa lên Production.
+   - **Kế hoạch 7 ngày tới (Next Action):** Việc cần làm ngay tiếp theo.
+   - **Phối hợp liên đội ngũ (Cross-team Collaboration):** Phối hợp cùng ITC, DevOps, Security, AI Team hoặc các Cell Teams.
+
+### 3.4. Bảo Chứng Dữ Liệu & Nguyên Tắc Chống Hallucination (Strict Data Integrity)
+1. **Dữ liệu chuyển đổi Financial Hub:** Khi trích dẫn lượt click và chuyển tiếp OneLink của Financial Hub, bắt buộc lấy từ dữ liệu kiểm toán chính thức tại `05_HUBS/financial/financial-hub-brd.md` Mục 3.6 (20.804 clicks, CIC 8.769, TTTC 4.950, VTS 3.953, Vay Nhanh 2.202, CVR 13,7%). Tuyệt đối không suy đoán hoặc nhân tỷ lệ từ các công cụ khác.
+2. **Ưu tiên kỹ thuật Financial Hub:** Luôn có hạng mục phối hợp cùng BU Bank nghiệm thu kỹ thuật (UAT) 15 trang chi tiết ngân hàng.
+3. **Dự án New User:** Luôn bóc tách so sánh `/tai-app` vs `/download`, tỷ lệ quét Dynamic QR trên Desktop, tối ưu từ khóa tải APK, và kế hoạch triển khai "Gói Quà tự chọn cho người dùng mới" với ngân sách 50 triệu VNĐ.
+
+### 3.5. Cấu trúc Mục IV: Bảng Kết Luận & Kế Hoạch Toàn Kênh (Action Matrix)
+Thay thế danh sách gạch đầu dòng bằng Bảng 3 cột quan hệ nhân quả khép kín:
+**BÀI HỌC (Insight thực tế) | BẰNG CHỨNG (Data Proof đối soát sạch) | KẾ HOẠCH HÀNH ĐỘNG 7 NGÀY TỚI**.
+Cuối báo cáo có ghi chú nguồn số liệu (kỳ chốt GA4, trễ đối soát AppsFlyer) và ngân sách Media rõ ràng.
+
+---
+
+## 4. TIÊU CHUẨN BÁO CÁO THÁNG ĐIỀU HÀNH WEB PLATFORM (EXECUTIVE 6 STREAMS ARCHITECTURE)
 
 Đây là chuẩn mực báo cáo tháng chính thức (Monthly Executive Standard) được thống nhất cho Kênh Web MoMo, bảo đảm tính nhất quán 100% giữa văn bản Board Markdown (`report-thang-XX-YYYY-board.md`), Web Dashboard Hubs (`MonthlyReportApp.tsx`, `MonthlySlideDeck.tsx`) và Bộ Slide Trình Chiếu PowerPoint (`Web_Platform_Thang_XX_YYYY_Pyramid.pptx`):
 

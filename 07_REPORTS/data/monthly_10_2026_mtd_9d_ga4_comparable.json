@@ -1,0 +1,28 @@
+{
+  "source": "GA4 Data API, property 270743103",
+  "period_start": "2026-10-01",
+  "period_end": "2026-10-09",
+  "queried_on": "2026-11-10",
+  "metric": "screenPageViews",
+  "classification": "Same channel and landing-page classification as November MTD 9-day snapshot; local inventory fallback used for Hub mapping",
+  "total_pv": 1120606,
+  "channels": {
+    "organic": 659439,
+    "direct": 258695,
+    "referral": 93226,
+    "others": 51054,
+    "paid": 58192,
+    "non_paid_total": 1062414
+  },
+  "hubs": {
+    "cinema": 455377,
+    "financial": 95958,
+    "new_user": 27724,
+    "vehicle": 14252,
+    "insurance": 11468,
+    "student": 1076,
+    "others": 509752
+  },
+  "landing_page_limit": 10000,
+  "pv_outside_landing_page_limit": 4999
+}

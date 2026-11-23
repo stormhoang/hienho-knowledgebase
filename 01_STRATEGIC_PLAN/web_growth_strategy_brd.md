@@ -1,10 +1,10 @@
 # BRD: Chiến lược Tăng trưởng Web Growth & Content Authority
 ## Tư duy Nền tảng (Platform Owner) & Khung thực thi SPA
 
-> - **Phụ trách:** Web Platform Manager & Web Product Lead, Growth Platform Division
+> - **Owner:** Web Platform Manager & Web Product Lead, Growth Platform Division
 > - **Phê duyệt:** VP - Growth Platform Division
-> - **Version:** 2.0 · May 2026
-> - **Status:** Active
+> - **Phiên bản:** 2.0 · May 2026
+> - **Trạng thái:** Active
 
 ---
 
@@ -75,7 +75,7 @@ Thay vì chờ việc, Web Platform chủ động mang cơ hội đi "bán" cho 
 
 ## 6. Framework Phản biện (4D Framework)
 
-Khi Pitching với BU, sử dụng 4 bước để làm nổi bật "nỗi đau":
+Khi Pitching với BU, sử dụng 4 bước để làm nổi bật "điểm nghẽn":
 1. **Demand (Cầu):** Volume tìm kiếm khổng lồ của use case.
 2. **Deficit (Thiếu hụt):** MoMo đang vắng bóng (SoV = 0.6%).
 3. **Dominance (Đối thủ):** Đối thủ đang ăn trọn traffic này (SoV = 70-80%).

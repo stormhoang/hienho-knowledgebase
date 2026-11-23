@@ -1,3 +1,7 @@
+"""Chuẩn hóa weekly report: chuẩn hóa Key Owner và tinh chỉnh Section I.2 trước khi build.
+
+Usage: ./.venv/bin/python scripts/clean_build_weekly.py"""
+
 import re
 
 with open('07_REPORTS/docs/weekly-report-2026-10-26-11-01.md', 'r', encoding='utf-8') as f:

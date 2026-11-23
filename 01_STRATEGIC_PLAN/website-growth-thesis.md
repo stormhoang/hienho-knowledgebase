@@ -1,13 +1,13 @@
 # MoMo.vn Web Strategic Thesis & Governance Framework (2026)
 
-> - **Document:** MoMo.vn Web Strategic Thesis & Governance Framework (Thesis & BRD)
-> - **Main Domain:** momo.vn
-> - **Division:** Growth Platform Division (GPD)
-> - **Version:** 6.1 · May 2026
-> - **Status:** Active - Master Strategy & Quality Gate for momo.vn
-> - **Last updated:** 2026-05-23
+> - **Tài liệu:** MoMo.vn Web Strategic Thesis & Governance Framework (Thesis & BRD)
+> - **URL chính:** momo.vn
+> - **Khối phụ trách:** Growth Platform Division (GPD)
+> - **Phiên bản:** 6.1 · May 2026
+> - **Trạng thái:** Active - Master Strategy & Quality Gate for momo.vn
+> - **Cập nhật:** 2026-05-23
 
-> **Executive narrative (deck):** MoSpark Strategic Deck — đọc như proposal 15–25 phút cho C-Level và Cell Team.
+> **Executive narrative (deck):** MoSpark Strategic Deck - đọc như proposal 15-25 phút cho C-Level và Cell Team.
 
 ## 1. Tầm nhìn và Định hướng chiến lược (2026)
 
@@ -151,7 +151,7 @@ Không dàn trải mọi lĩnh vực cùng lúc, chiến lược tập trung ngu
 - **Chuẩn hóa Thực thể (Schema JSON-LD):** Nhúng mã hóa dữ liệu cấu trúc chi tiết để định nghĩa rõ ràng thực thể (Entities) và mối liên hệ nội dung với AI Search Engines.
 
 ### 4.4. Pillar 4: Product-Led Growth & Web-to-App Conversion (PLG & W2A)
-- **Trải nghiệm Tương tác không ma sát (Interactive Utilities):** Cung cấp các công cụ tính toán lãi suất (Calculators), tra cứu phạt nguội (Lookups) miễn phí, không yêu cầu đăng nhập trực tiếp trên Web để người dùng cảm nhận giá trị tức thì (*Aha! Moment*).
+- **Trải nghiệm Tương tác ít rào cản thao tác (Interactive Utilities):** Cung cấp các công cụ tính toán lãi suất (Calculators), tra cứu phạt nguội (Lookups) miễn phí, không yêu cầu đăng nhập trực tiếp trên Web để người dùng cảm nhận giá trị tức thì (*Aha! Moment*).
 - **Kích hoạt Chuyển đổi Ngữ cảnh (Contextual CTA):** Tự động đề xuất các CTA thông minh cá nhân hóa theo kết quả tính toán/tra cứu của người dùng, dẫn dắt họ đăng ký các dịch vụ canh gác tự động dài hạn trên App MoMo để tối ưu hóa conversion rate.
 
 ---
@@ -421,9 +421,9 @@ flowchart TD
     class Result outcome;
 ```
 
-> **Hai luồng Journey trên chứng minh tính hiệu quả của việc xây dựng tài sản số tích lũy so với quảng cáo trả phí (Paid Ads):** mỗi bài viết, mỗi công cụ tra cứu một khi đạt Top Google sẽ **tự động mang traffic miễn phí liên tục** — khắc phục được nhược điểm phụ thuộc ngân sách của các kênh quảng cáo ngắn hạn.
+> **Hai luồng Journey trên chứng minh tính hiệu quả của việc xây dựng tài sản số tích lũy so với quảng cáo trả phí (Paid Ads):** mỗi bài viết, mỗi công cụ tra cứu một khi đạt Top Google sẽ **tự động mang traffic miễn phí liên tục** - khắc phục được nhược điểm phụ thuộc ngân sách của các kênh quảng cáo ngắn hạn.
 >
-> Mô hình **Build → Distribute → Convert** này khi thành công với Phạt Nguội sẽ trở thành **blueprint chuẩn** nhân rộng cho toàn bộ hệ sinh thái MoMo: **Bảo hiểm xe máy, Vay tiêu dùng, Thanh toán hóa đơn, Dịch vụ công**, và hơn thế nữa — mỗi use-case là một cỗ máy tăng trưởng organic mới.
+> Mô hình **Build → Distribute → Convert** này khi thành công với Phạt Nguội sẽ trở thành **blueprint chuẩn** nhân rộng cho toàn bộ hệ sinh thái MoMo: **Bảo hiểm xe máy, Vay tiêu dùng, Thanh toán hóa đơn, Dịch vụ công**, và hơn thế nữa - mỗi use-case là một cỗ máy tăng trưởng organic mới.
 
 ---
 
@@ -445,7 +445,7 @@ flowchart TD
 #### Quy trình Hợp tác Chuẩn
 
 1. **Xác định bài toán kinh doanh:** Khởi đầu từ **Business Requirement** của từng BU, kết hợp dữ liệu nghiên cứu thị trường (keyword research, competitor analysis) từ Platform để xác định cơ hội Under-served Markets.
-2. **Phân tích User Journey:** Bản đồ hóa hành trình đầu cuối — từ lúc người dùng tìm kiếm bên ngoài (Google, AI Engines) cho đến lúc chuyển đổi trong App.
+2. **Phân tích User Journey:** Bản đồ hóa hành trình đầu cuối - từ lúc người dùng tìm kiếm bên ngoài (Google, AI Engines) cho đến lúc chuyển đổi trong App.
 3. **Cấu trúc nội dung theo Clustering:** Sử dụng phương pháp **Keyword Clustering** để bao phủ toàn bộ nhu cầu người dùng xung quanh một chủ đề, đảm bảo nội dung có chiều sâu ngữ nghĩa (Semantic Depth) để AI engines có thể quét và đề xuất.
 
 #### Mô hình Hợp tác Linh hoạt
@@ -484,7 +484,7 @@ flowchart TD
 - **Lớp 3 - Quality & Compliance Gate (Bộ lọc):** Hệ thống chấm điểm SEO/GEO tự động và luồng duyệt Legal Workflow, đóng vai trò chốt chặn (Hard-block) bảo vệ nội dung chuẩn E-E-A-T.
 - **Lớp 4 - Performance Loop (Bộ tối ưu):** Tích hợp GSC tự động phát hiện bài viết giảm rank để làm mới (Content Refresh) và tự động xây dựng Internal Link qua bản đồ ngữ nghĩa (Vector Embeddings).
 
-> Dù ở mô hình nào, **Team Web (GPD) luôn giữ vai trò giám sát và đảm bảo kết quả cuối cùng** — owning các chỉ số mục tiêu (SoV, Traffic, W2A) cho toàn bộ momo.vn. Các bộ phận khác có thể tham gia thực hiện một phần, nhưng accountability thuộc về GPD.
+> Dù ở mô hình nào, **Team Web (GPD) luôn giữ vai trò giám sát và đảm bảo kết quả cuối cùng** - owning các chỉ số mục tiêu (SoV, Traffic, W2A) cho toàn bộ momo.vn. Các bộ phận khác có thể tham gia thực hiện một phần, nhưng accountability thuộc về GPD.
 
 ---
 
@@ -519,11 +519,11 @@ MoSpark đóng vai trò là **Hệ điều hành tăng trưởng cốt lõi (Cor
 
 ## 9. Organization Transformation & Business Ownership
 
-Để chiến lược Web Growth thành công, MoMo cần một cuộc chuyển đổi tư duy tổ chức sâu sắc — từ mô hình **Operation Support** sang **Business Ownership**.
+Để chiến lược Web Growth thành công, MoMo cần một cuộc chuyển đổi tư duy tổ chức sâu sắc - từ mô hình **Operation Support** sang **Business Ownership**.
 
 ### 9.1. Chuyển đổi Tư duy: Từ Operation sang Business Owner
 
-> **Team Web không còn là đơn vị "đợi đặt hàng" (Order-taker) mà phải đóng vai trò Business Owner — chủ động dẫn dắt chiến lược tăng trưởng Web, chịu trách nhiệm trực tiếp về mục tiêu kinh doanh trên momo.vn.**
+> **Team Web không còn là đơn vị "đợi đặt hàng" (Order-taker) mà phải đóng vai trò Business Owner - chủ động dẫn dắt chiến lược tăng trưởng Web, chịu trách nhiệm trực tiếp về mục tiêu kinh doanh trên momo.vn.**
 
 <table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
   <thead>
@@ -612,7 +612,7 @@ MoSpark đóng vai trò là **Hệ điều hành tăng trưởng cốt lõi (Cor
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>v6.0</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-05-20</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tích hợp nội dung từ cuộc trao đổi lãnh đạo — bổ sung Section 1.5 (Under-served Markets & Vertical Focus Strategy với OKR cụ thể), Section 7.3 (Khung hợp tác Platform-BU linh hoạt & Toolbox), và Section 10 (Organization Transformation & Business Ownership).</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tích hợp nội dung từ cuộc trao đổi lãnh đạo - bổ sung Section 1.5 (Under-served Markets & Vertical Focus Strategy với OKR cụ thể), Section 7.3 (Khung hợp tác Platform-BU linh hoạt & Toolbox), và Section 10 (Organization Transformation & Business Ownership).</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>v6.1</strong></td>

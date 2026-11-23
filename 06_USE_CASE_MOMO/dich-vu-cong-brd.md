@@ -1,9 +1,9 @@
 # BRD: Dịch Vụ Công MoMo
 
-> - **Project:** Dịch Vụ Công MoMo (DVC) - Governance Hub
-> - **Main URL:** `momo.vn/dich-vu-cong` (Governance Hub) + kênh Web chiến lược (Phạt Nguội, ePass)
-> - **Version:** 2.5 · Tháng 5/2026
-> - **Status:** **DVC Chung** (Info hub - đề án Bộ Công An) | **Phạt Nguội** (BRD riêng, Phase 1 LIVE) | **ePass** (Build Foundation)
+> - **Dự án:** Dịch Vụ Công MoMo (DVC) - Governance Hub
+> - **URL chính:** `momo.vn/dich-vu-cong` (Governance Hub) + kênh Web chiến lược (Phạt Nguội, ePass)
+> - **Phiên bản:** 2.5 · Tháng 5/2026
+> - **Trạng thái:** **DVC Chung:** (Info hub - đề án Bộ Công An) | **Phạt Nguội:** (BRD riêng, Phase 1 LIVE) | **ePass:** (Build Foundation)
 
 ---
 
@@ -679,7 +679,7 @@ User search thủ tục hành chính hoặc phạt nguội - tìm thấy MoMo - 
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>PLG Interactive Tool</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Smart DVC Checklist Generator:</strong> Trả lời 3 câu hỏi nhanh (Loại dịch vụ, Tỉnh thành, Tình trạng) → Render ra ngay Checklist chuẩn bị hồ sơ 100% chính xác.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tạo "Aha Moment" (Utility-First của A.Công) & Passed "Bữa tối gia đình test" (của A.Tường)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tạo "Aha Moment" (Utility-First của A.Công) & Passed "Tiêu chuẩn trải nghiệm đột phá" (của A.Tường)</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Service Grid</td>
