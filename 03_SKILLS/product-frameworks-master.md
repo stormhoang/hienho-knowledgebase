@@ -48,7 +48,7 @@ Mô hình phân bổ nguồn lực và quản trị danh mục sản phẩm theo
 </table>
 
 ### Ứng Dụng Thực Tế Tại MoMo Web Platform
-Tương thích trực tiếp với chỉ đạo chiến lược C-Level trong [`MEETING_RECAPS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/MEETING_RECAPS.md):
+Tương thích trực tiếp với chỉ đạo chiến lược C-Level trong [`MEETING_RECAPS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/meetings/MEETING_RECAPS.md):
 - **Foundation (Productivity Zone):** Hạ tầng SEO, CMS, Web Tracking, Design System.
 - **Transformation Zone:** Chuyển đổi các Hubs chiến lược từ giai đoạn nuôi traffic sang giai đoạn tạo doanh thu.
 - **Incubator (Incubation Zone):** Thử nghiệm các Use Case mới theo hướng Zero to One.

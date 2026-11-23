@@ -14,7 +14,7 @@
 
 1. **Web Platform chuyển dịch vai trò.** Năm 2026, Web Platform vận hành hạ tầng dùng chung và đồng hành 3 Hub: Cinema, Financial, Vehicle. 6 Cell Teams tự vận hành Mini Web qua MoSpark, 13 Cell Teams được hỗ trợ trực tiếp. Hạ tầng đã chuyển từ AWS sang FPT Cloud 100% (36 frontend, 11 backend, 3 database) không downtime.
 
-2. **Traffic Web tạo ra Install, MAU và GMV ngoài PV.** Cinema ghi nhận 174.094 vé và 16,41 tỷ đ GMV từ luồng Web-to-App trong 10 tháng. Lượt cài đặt từ Web tăng từ 5.239 (T7) lên 11.143 (T10), gấp 2,1 lần. Tháng 10 có 3.902 đăng ký và 1.284 MAU.
+2. **Traffic Web tạo ra Install, MAU và GMV ngoài PV.** Cinema ghi nhận 168.884 vé và 15,91 tỷ đ GMV từ luồng Web-to-App trong 10 tháng. Lượt cài đặt từ Web tăng từ 5.239 (T7) lên 11.143 (T10), gấp 2,1 lần. Tháng 10 có 3.902 đăng ký và 1.284 MAU.
 
 3. **Đo lường Full Funnel Web-to-App đã vận hành.** Tracking GA4 sang BigQuery sang Dashboard live từ T5/2026. 100% liên kết đã chuẩn hóa sang OneLink, và Identity Platform theo dõi người dùng từ Web sang App. Tháng 10, 35,0% lượt cài đặt đăng ký và 61,2% đăng ký liên kết ngân hàng. Điểm nghẽn nằm ở bước cài đặt sang đăng ký.
 
@@ -32,7 +32,7 @@
 
 Chuỗi lập luận của tài liệu:
 
-- **Bằng chứng:** Hạ tầng FPT Cloud ổn định, tracking toàn phễu live từ T5, MoSpark self-serve rút thời gian build 1-2 tuần xuống 1-2 ngày, Cinema 174.094 vé/16,41 tỷ GMV trong 10 tháng, New User cài đặt 11.143/tháng T10 (tăng 6 lần so với T5), Phạt Nguội chứng minh quy trình GEO đã kiểm chứng (660 AI citations). T10/2026 Organic đạt 1,72M PV (+5,7% MoM) nhưng Non-Paid chỉ bù được 52% phần sụt của Paid - tăng trưởng chưa bền vững.
+- **Bằng chứng:** Hạ tầng FPT Cloud ổn định, tracking toàn phễu live từ T5, MoSpark self-serve rút thời gian build 1-2 tuần xuống 1-2 ngày, Cinema 168.884 vé/15,91 tỷ GMV trong 10 tháng, New User cài đặt 11.143/tháng T10 (tăng 6 lần so với T5), Phạt Nguội chứng minh quy trình GEO đã kiểm chứng (660 AI citations). T10/2026 Organic đạt 1,72M PV (+5,7% MoM) nhưng Non-Paid chỉ bù được 52% phần sụt của Paid - tăng trưởng chưa bền vững.
 - **Kết luận:** Vấn đề không còn là xây dựng được hay không, mà là chứng minh tăng trưởng tự nhiên có chuyển đổi đo được trước khi AI Search tiếp tục bào mòn content tĩnh.
 - **Đề xuất:** Tập trung 1,996 tỷ đ vào 3 cụm có mục tiêu PV và thứ hạng SERP rõ ràng (Cinema, CIC, Tích lũy), thay vì dàn trải sang nhiều hub hoặc chạy Paid Ads.
 - **Nội dung trình:** Đề xuất ngân sách 2027 1,996 tỷ đ + mô hình vận hành Growth Unit + cam kết dữ liệu và lịch sản phẩm từ BU (chi tiết mục 10).
@@ -49,7 +49,7 @@ Web Platform đi từ đội kỹ thuật nhận yêu cầu sang Growth Unit dù
 
 Kết quả đo được trong 10 tháng 2026:
 
-- **Cinema Hub:** 9.098.856 PV, 174.094 vé, 80.050 đơn hàng, 16,41 tỷ đ GMV. Đơn vị doanh thu chuẩn: đơn hàng × AoV 205.000 đ (1 đơn ~2,17 vé).
+- **Cinema Hub:** 9.098.856 PV, 168.884 vé, 77.625 đơn hàng, 15,91 tỷ đ GMV. Đơn vị doanh thu chuẩn: đơn hàng × AoV 205.000 đ (1 đơn ~2,17 vé).
 - **Financial Hub:** Toàn Hub 273.705 PV T10 (+9,6% MoM); cụm CIC ~417K PV và Tích lũy ~210K PV cả T1-T10 (đã đối chiếu GA4 cấp trang).
 - **Vehicle Hub:** Phạt Nguội là Pioneer: 28 ngày đầu tạo Organic bền vững + 660 AI citations - quy trình GEO đầu tiên của MoMo.
 - **New User:** lượt cài đặt từ Web: T7 đạt 5.239, T8 đạt 10.041, T9 đạt 10.501, T10 đạt 11.143 (gấp 2,1 lần so với T7); phễu T10: 3.902 đăng ký (CR 35,0%), 2.389 liên kết ngân hàng (CR 61,2%), 1.284 MAU (11,5% phễu).
@@ -119,7 +119,7 @@ Chỉ số chuyển đổi cuối phễu phụ thuộc use case, không quy về
 
 ### 6.1. Cơ sở tính toán theo số liệu thực
 
-- **Cinema:** baseline thực tế T1-T10 = 9.098.856 PV (gồm T9 1.220.075 và T10 1.132.721), 174.094 vé, 80.050 đơn hàng, 16,41 tỷ đ GMV (không ngoại suy). Tỷ lệ chuẩn: 19,1 vé và 8,8 đơn hàng trên 1.000 PV; ~1,80 triệu đ GMV trên 1.000 PV. Kịch bản không đầu tư giữ mức T1-T10: ~80 nghìn đơn, 16,4 tỷ GMV; có đầu tư (12,6 - 14,0M PV, mục tiêu 12 tháng): 111 - 123 nghìn đơn, 22,7 - 25,3 tỷ GMV. Đây là so sánh chưa cùng kỳ, mức chênh có thể bị thổi phồng khoảng 20%. Đơn vị doanh thu là đơn hàng × AoV 205K; số vé chỉ là chỉ số bán vé. Các con số chuyển đổi ở đây là tham chiếu chất lượng traffic, không phải cam kết của khoản đầu tư.
+- **Cinema:** baseline thực tế T1-T10 = 9.098.856 PV (gồm T9 1.220.075 và T10 1.132.721), 168.884 vé, 77.625 đơn hàng, 15,91 tỷ đ GMV (không ngoại suy, theo Dashboard In-App range T1-T10). Tỷ lệ chuẩn: 18,6 vé và 8,5 đơn hàng trên 1.000 PV; ~1,75 triệu đ GMV trên 1.000 PV. Kịch bản không đầu tư giữ mức T1-T10: ~78 nghìn đơn, 15,9 tỷ GMV; có đầu tư (12,6 - 14,0M PV, mục tiêu 12 tháng): 107 - 119 nghìn đơn, 22,0 - 24,5 tỷ GMV. Đây là so sánh chưa cùng kỳ, mức chênh có thể bị thổi phồng khoảng 20%. Đơn vị doanh thu là đơn hàng × AoV 205K; số vé chỉ là chỉ số bán vé. Các con số chuyển đổi ở đây là tham chiếu chất lượng traffic, không phải cam kết của khoản đầu tư.
 - **Financial:** baseline GA4 T1-T10 cấp trang - CIC (diem-tin-dung + nội dung tín dụng, không gồm Vay Nhanh/VTS) ~417K PV; Tích lũy & Đầu tư (tiết kiệm, chứng khoán, CCQ, quản lý chi tiêu + nội dung đầu tư) ~210K PV. Dùng số thực tế T1-T10, không ngoại suy, nên chênh so với mục tiêu 12 tháng có cùng độ lệch như Cinema.
 - **So sánh kênh:** cùng lượng truy cập tăng thêm (6,1 - 8,3M PV, tương đương 3,8 - 5,1M phiên ở 1,62 PV/phiên), chạy Paid SEM tốn 7,5 - 10,2 tỷ đ/năm (giả định giá thầu thấp nhất 2.000đ; giá thầu thực nhóm tài chính có thể 5.000 - 20.000đ, làm khoảng này chỉ lớn hơn) và mất ngay khi dừng chi. Content 1,95 tỷ đ để lại tài sản lưu lượng nhiều năm.
 
@@ -221,9 +221,10 @@ Các giả định còn lại và điểm cần xác minh trước khi trình:
 | T8 | 832.460 | 8.754 | 4.016 | 0,82 |
 | T9 | 1.220.075 | 20.983 | 9.807 | 2,01 |
 | T10 | 1.132.721 | 26.789 | 12.547 | 2,57 |
-| **T1-T10** | **9.098.856** | **174.094** | **80.050** | **16,41** |
+| **T1-T10** | **9.098.856** | **168.884** | **77.625** | **15,91** |
 
-- Tỷ lệ chuẩn: 19,1 vé + 8,8 đơn hàng/1.000 PV; ~1,80 triệu đ GMV/1.000 PV.
+- Tỷ lệ chuẩn: 18,6 vé + 8,5 đơn hàng/1.000 PV; ~1,75 triệu đ GMV/1.000 PV.
+- Lũy kế vé, đơn hàng, GMV lấy theo Dashboard In-App range T1-T10 (chốt 18/11/2026). Cộng các dòng tháng ra 174.094 vé / 80.050 đơn / 16,41 tỷ, cao hơn đúng bằng dòng T7; đang đối soát.
 - Nguồn: báo cáo tháng 01-04 và tháng 10/2026 (PV); Dashboard In-App và BU Movies (vé, đơn hàng, GMV).
 
 ### B. Financial Hub - baseline GA4 T1-T10/2026 (cấp trang, mọi kênh)

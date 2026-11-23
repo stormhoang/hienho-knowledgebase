@@ -191,6 +191,10 @@ def scan(root: Path = ROOT) -> list[dict]:
             continue
 
         for number, line in enumerate(content.splitlines(), 1):
+            # Escape hatch: dong co annotation <!-- kb:external --> la tham chieu
+            # co y tro sang repo/nguon ngoai, khong tinh la broken_reference.
+            if "<!-- kb:external" in line:
+                continue
             for match in pattern.finditer(line):
                 raw = match.group().rstrip("`\"'.,;")
                 prefix = line[:match.start()]
@@ -309,6 +313,8 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Phát hiện và phân loại các xung đột đường dẫn trong Knowledge Base")
     parser.add_argument("--output", default=str(DEFAULT_OUT), help="Đường dẫn xuất tệp JSON")
     parser.add_argument("--markdown-output", default=str(DEFAULT_MD_OUT), help="Đường dẫn xuất tệp Markdown")
+    parser.add_argument("--max-broken", type=int, default=-1,
+                        help="Fail (exit 1) nếu số broken_reference vượt ngưỡng này. -1 = observe mode.")
     args = parser.parse_args()
 
     conflicts = scan()
@@ -335,6 +341,12 @@ def main() -> int:
         print(f"  * {k}: {v}")
     print(f"  -> JSON: {out_path}")
     print(f"  -> Markdown: {md_out_path}")
+
+    if args.max_broken >= 0:
+        broken = sum(1 for c in conflicts if c.get("kind") == "broken_reference")
+        if broken > args.max_broken:
+            print(f"FAIL: broken_reference={broken} vượt ngưỡng --max-broken={args.max_broken}")
+            return 1
     return 0
 
 

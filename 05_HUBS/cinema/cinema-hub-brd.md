@@ -141,11 +141,12 @@ Dữ liệu ghi nhận từ hệ thống vận hành bán vé in-app (`SUCCESS I
 | Tháng 9/2026 | 8,927 | 26,698 | 9,807 | 20,983 | 2,010,435,000 đ | +144.2% | 2.14 |
 | Tháng 10/2026 | 11,457 | 30,470 | 12,547 | 26,789 | 2,572,135,000 đ | +20.1% | 2.13 |
 | **Tổng 9 tháng trực tiếp Dashboard** | **67,971** | **188,555** | **76,034** | **165,340** | **15,586,970,000 đ** | **-** | **2.17** |
-| **Toàn bộ 10 tháng năm 2026** | **71,728** | **201,517** | **80,050** | **174,094** | **16,410,250,000 đ** | **-** | **2.17** |
+| Cộng dồn 10 dòng tháng (tham chiếu) | 71,728 | 201,517 | 80,050 | 174,094 | 16,410,250,000 đ | - | 2.17 |
+| **Toàn bộ 10 tháng năm 2026 (Dashboard In-App, chính thức)** | **60,378** | **201,517** | **77,625** | **168,884** | **15,913,125,000 đ** | **-** | **2.18** |
 
 
 
-* **Đánh giá tăng trưởng thực tế:** Toàn bộ 10 tháng năm 2026 đã được xác thực chính thức từ dữ liệu vận hành bán vé in-app. Kênh Web-to-App đã mang về tổng cộng **80,050 đơn hàng thành công**, bán ra **174,094 vé xem phim** và đóng góp **16.41 tỷ đồng GMV thực thu** cho BU Movies (vượt toàn bộ năm 2025 tới **+53.0% về số đơn hàng**, **+56.2% về số vé bán ra** và **+53.0% về GMV thực thu**).
+* **Đánh giá tăng trưởng thực tế:** Toàn bộ 10 tháng năm 2026 đã được xác thực chính thức từ dữ liệu vận hành bán vé in-app. Theo Dashboard In-App range T1-T10 (chốt 18/11/2026), kênh Web-to-App đã mang về tổng cộng **77,625 đơn hàng thành công**, bán ra **168,884 vé xem phim** và đóng góp **15.91 tỷ đồng GMV thực thu** cho BU Movies, từ **60,378 người dùng giao dịch** không trùng lặp (vượt toàn bộ năm 2025 **+48.4% về số đơn hàng**, **+51.6% về số vé bán ra** và **+48.4% về GMV thực thu**). Cộng dồn các dòng tháng ra 80,050 đơn / 174,094 vé, cao hơn Dashboard đúng bằng dòng Tháng 7; đang đối soát, SSOT tại `CINEMA_W2A_GMV_PERFORMANCE_2026.md`.
 
 #### C. Phễu Chuyển Đổi Web-to-App Toàn Diện & Phân Tích Điểm Nghẽn OneLink (Cinema Growth Funnel)
 
@@ -178,8 +179,8 @@ flowchart TD
     end
 
     subgraph T5 ["TẦNG 5: THANH TOÁN & DOANH THU GMV TRÊN APP (CONVERSION & REVENUE)"]
-        E1["Chốt Đơn Bán Vé In-App Thành Công (CR: 66.44%)<br/>80,050 đơn hàng / 174,094 vé (Lũy kế 10T 2026)<br/>(52,311 đơn cả năm 2025)"]
-        E2["Doanh Thu Thực Thu Kênh Web-to-App<br/>16.41 tỷ đồng GMV (Lũy kế 10T 2026)<br/>(Đóng góp 10.72 tỷ đồng năm 2025)"]
+        E1["Chốt Đơn Bán Vé In-App Thành Công (CR: 66.44%)<br/>77,625 đơn hàng / 168,884 vé (Lũy kế 10T 2026)<br/>(52,311 đơn cả năm 2025)"]
+        E2["Doanh Thu Thực Thu Kênh Web-to-App<br/>15.91 tỷ đồng GMV (Lũy kế 10T 2026)<br/>(Đóng góp 10.72 tỷ đồng năm 2025)"]
         E3["Bàn Giao Khách Hàng Mới Cho BU Movies<br/>(Chuyển tiếp vào phễu Loyalty & Nuôi dưỡng của BU)"]
     end
 
@@ -241,7 +242,9 @@ Dữ liệu tổng hợp 3 nguồn: **GA4** (event `engage_product_funnel` với
 | T8 | 5.354 | 3.757 | 12.962 | 4.016 | 8.754 | 0.82 |
 | T9 | 5.828 | 8.927 | 26.698 | 9.807 | 20.983 | 2.01 |
 | T10 | 7.889 | 11.457 | 30.470 | 12.547 | 26.789 | 2.57 |
-| **Lũy kế 10T** | - | **69.666** | **201.517** | **80.050** | **174.094** | **14.28** |
+| **Lũy kế 10T** | - | **69.666** | **201.517** | **77.625*** | **168.884*** | **14.28** |
+
+\*\*\* Đơn và vé lũy kế lấy theo Dashboard In-App range T1-T10 (chốt 18/11/2026); cộng dồn các dòng tháng ra 80.050 / 174.094, chênh đúng bằng dòng T7, đang đối soát.
 
 \* W2A MEU trong bảng này là **số lượt tương tác in-app** do BU Movies dashboard ghi nhận (hệ số ~2.5-3.8 lượt/MAU), không phải unique engaged users và không phải số lần mở app.
 
@@ -820,6 +823,7 @@ Kế hoạch phát triển sản phẩm Cinema Hub được phân bổ theo các
 
 | Phiên bản | Ngày cập nhật | Người thực hiện | Nội dung thay đổi |
 | :--- | :--- | :--- | :--- |
+| **v3.7** | 2026-11-18 | Web Product Lead | **Chốt lại lũy kế Cinema W2A T1-T10 theo Dashboard In-App:** 60,378 người dùng giao dịch, 77,625 đơn, 168,884 vé, 15.91 tỷ đồng GMV thực thu (148.4% cả năm 2025), thay cho số cộng dồn bảng tháng 80,050 đơn / 174,094 vé / 16.41 tỷ. Phần chênh bằng đúng Tháng 7, đang đối soát. |
 | **v3.6** | 2026-11-16 | Web Product Lead | **Bổ sung Cập nhật Hiệu suất MTD Tháng 11/2026 (Mục 1.5.D):** Lưu lượng Web Cinema Hub MTD 15 ngày đạt 378.569 PVs số liệu sạch (29.2% Target 1.294.630, -42.1% MoM do mùa vụ), cơ cấu 8 nhóm trang theo chuẩn tracking mới, và phễu Web-to-App AppsFlyer MTD 10 ngày ghi nhận End-to-End CVR 12.1% cao nhất toàn Web. Ghi chú rõ số liệu đơn hàng/GMV in-app T11 chờ đối soát BU Movies. Đồng thời bổ sung Bảng Web Traffic Performance theo tháng (GA4 PageViews T1-T10/2026 + MTD T11) tại Mục 1.4 và chuyển toàn bộ bảng HTML inline sang Markdown table. |
 | **v3.5** | 2026-11-11 | Web Product Lead | **Bổ sung Định hướng Trợ Lý AI Phòng Vé (MoMo Cinema AI Concierge):** Mô tả toàn diện 4 nhóm ý định cốt lõi của người dùng (Khám phá phim, Khớp lịch chiếu/vị trí tiện lợi, Tối ưu ưu đãi chi phí, Xác thực thông tin nhanh) và hành trình chuyển hóa ý định thành hành động đặt vé mượt mà sang App MoMo tại Mục 3.5. |
 | **v3.4** | 2026-11-11 | Web Product Lead | **Rà soát toàn diện BRD Cinema Hub:** Chuẩn hóa phân cấp tiêu đề (Section III, 5.1.3, 5.1.4, Section VI), loại bỏ các liên kết tệp phân mảnh để tối ưu tính độc lập sạch gọn, hợp nhất Kiến trúc Phễu Chuyển Đổi 6 tầng, cập nhật số liệu vận hành chốt sổ Tháng 10/2026 (16.41 tỷ GMV in-app, 174K vé), bổ sung kiến trúc Schema Lịch chiếu Tỉnh thành và kế hoạch Chiến dịch Bom tấn Disney - Avengers: Doomsday Q4/2026. |

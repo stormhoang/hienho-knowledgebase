@@ -179,42 +179,10 @@ def main():
     else:
         results["SEO/GEO News Feed"] = ("SKIPPED (User flag)", 0)
 
-    # 7. Luồng GA4 Real Performance & W2A Sync -> data/ga4/landing-pages.json
-    if not args.skip_ga4:
-        fetch_ga4_script = SCRIPTS_DIR / "fetch_ga4.js"
-        if fetch_ga4_script.exists():
-            print(f"\n{'='*70}")
-            print(f"▶ [SYNC STEP] GA4 DATA API DIRECT FETCH")
-            print(f"{'='*70}")
-            t_ga4 = time.time()
-            try:
-                res_ga4 = subprocess.run(["node", str(fetch_ga4_script), "--days", "30"], cwd=str(BASE_DIR), capture_output=False, text=True)
-                elap_ga4 = time.time() - t_ga4
-                results["GA4 API Direct Fetch"] = ("SUCCESS" if res_ga4.returncode == 0 else "FAILED", elap_ga4)
-            except Exception as e:
-                elap_ga4 = time.time() - t_ga4
-                results["GA4 API Direct Fetch"] = (f"FAILED ({e})", elap_ga4)
-
-        ga4_script = SCRIPTS_DIR / "sync_ga4_to_hubs.py"
-        if ga4_script.exists():
-            success, elapsed = run_step("GA4 Real Data & W2A -> Web Hubs", [str(ga4_script)])
-            results["GA4 Real Data (Hubs)"] = ("SUCCESS" if success else "FAILED", elapsed)
-        else:
-            results["GA4 Real Data (Hubs)"] = ("SKIPPED (File not found)", 0)
-    else:
-        results["GA4 API Direct Fetch"] = ("SKIPPED (User flag)", 0)
-        results["GA4 Real Data (Hubs)"] = ("SKIPPED (User flag)", 0)
-
-    # 8. Luồng Bóc tách Ma trận Phễu Hợp nhất (GSC + GA4 Full-Funnel)
-    if not args.skip_funnel:
-        funnel_script = SCRIPTS_DIR / "build_full_funnel_matrix.py"
-        if funnel_script.exists():
-            success, elapsed = run_step("Full-Funnel Matrix (GSC + GA4)", [str(funnel_script)])
-            results["Full-Funnel Matrix"] = ("SUCCESS" if success else "FAILED", elapsed)
-        else:
-            results["Full-Funnel Matrix"] = ("SKIPPED (File not found)", 0)
-    else:
-        results["Full-Funnel Matrix"] = ("SKIPPED (User flag)", 0)
+    # 7-8. GA4 & GSC Luồng bị vô hiệu hóa hoàn toàn theo Chính sách Hạ tầng MoMo
+    results["GA4 API Direct Fetch"] = ("DISABLED (Policy)", 0)
+    results["GA4 Real Data (Hubs)"] = ("DISABLED (Policy)", 0)
+    results["Full-Funnel Matrix"] = ("DISABLED (Policy)", 0)
 
     # 9. Luồng Đẩy Commit sang GitHub (GitHub REST API Firewall Bypass)
     if args.push_hubs:

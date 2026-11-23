@@ -177,9 +177,11 @@ Dữ liệu ghi nhận trực tiếp từ hệ thống Dashboard vận hành bá
 | **Tháng 9/2026 (Thực tế)** | 8,927 | 26,698 | 9,807 | 20,983 | 2,010,435,000 đ | +144.2% đơn | 2.14 | Dashboard In-App (Tag tháng 9) & BU Movies |
 | **Tháng 10/2026 (Thực tế)** | 11,457 | 30,470 | 12,547 | 26,789 | 2,572,135,000 đ | +20.1% đơn | 2.13 | Dashboard In-App & BU Movies |
 | **Tổng 9 tháng trực tiếp Dashboard (T1-T7, T9, T10)** | **67,971** | **188,555** | **76,034** | **165,340** | **15,586,970,000 đ** | - | **2.17** | **9 tháng có ảnh chụp trực tiếp Dashboard (145.3% cả năm 2025)** |
-| **Toàn bộ 10 tháng năm 2026 (T1 - T10)** | **71,728** | **201,517** | **80,050** | **174,094** | **16,410,250,000 đ** | - | **2.17** | **Đầy đủ 10 tháng chính thức năm 2026 (153.0% cả năm 2025)** |
+| **Cộng dồn 10 bảng tháng (T1 - T10, tham chiếu)** | 71,728 | 201,517 | 80,050 | 174,094 | 16,410,250,000 đ | - | 2.17 | Cộng từng dòng tháng; cao hơn Dashboard đúng bằng dòng Tháng 7 (2,425 đơn / 5,211 vé), chưa xác định nguyên nhân |
+| **Toàn bộ 10 tháng năm 2026 (T1 - T10) - CHÍNH THỨC** | **60,378** | **201,517** | **77,625** | **168,884** | **15,913,125,000 đ** | - | **2.18** | **Dashboard In-App, range T1-T10 (Success In-App Transactions), chốt 18/11/2026 (148.4% cả năm 2025)** |
 
-* **Đánh giá hiệu quả kinh doanh 10 tháng năm 2026:** Toàn bộ 10 tháng năm 2026 đã được xác thực chính thức từ dữ liệu vận hành bán vé in-app. Kênh Web-to-App đã mang về tổng cộng **80,050 đơn hàng thành công**, bán ra **174,094 vé xem phim** và đóng góp **16.41 tỷ đồng GMV thực thu** cho BU Movies. Thành tích này chính thức vượt qua toàn bộ năm 2025 tới **+53.0% về số đơn hàng** (+27,739 đơn), **+56.2% về số vé bán ra** (+62,672 vé) và **+53.0% về doanh thu GMV thực thu** (+5.69 tỷ đồng).
+* **Đánh giá hiệu quả kinh doanh 10 tháng năm 2026:** Toàn bộ 10 tháng năm 2026 đã được xác thực chính thức từ dữ liệu vận hành bán vé in-app. Theo Dashboard In-App range T1-T10, kênh Web-to-App đã mang về tổng cộng **77,625 đơn hàng thành công**, bán ra **168,884 vé xem phim** và đóng góp **15.91 tỷ đồng GMV thực thu** cho BU Movies, với **60,378 người dùng giao dịch** (không trùng lặp trong cả kỳ). Thành tích này vượt toàn bộ năm 2025 **+48.4% về số đơn hàng** (+25,314 đơn), **+51.6% về số vé bán ra** (+57,462 vé) và **+48.4% về doanh thu GMV thực thu** (+5.19 tỷ đồng).
+* **Ghi chú đối soát (18/11/2026):** Tổng chính thức chuyển từ cộng dồn bảng tháng (80,050 đơn / 174,094 vé / 16.41 tỷ) sang số Dashboard range T1-T10. Phần chênh bằng đúng dòng Tháng 7 (đơn khớp tuyệt đối, vé lệch 1). Cần lọc riêng range 01/07-31/07 trên Dashboard để xác định T7 bị thiếu ở Dashboard hay bị đếm trùng ở bảng tháng. Users 60,378 là số không trùng lặp cả kỳ, không so trực tiếp với tổng MAU cộng từng tháng (71,728). Cột MEU giữ số cộng dồn tháng do Dashboard tổng không có chỉ số này.
 
 ---
 
@@ -234,11 +236,11 @@ Phễu chuyển đổi 4 tầng từ Kênh Web-to-App (Google Search -> Web MoMo
 
 ### A. Cơ sở phương pháp luận và dữ liệu tham chiếu
 Dự báo hiệu suất 2 tháng cuối năm 2026 (Tháng 11 và Tháng 12) được xây dựng dựa trên 4 trụ cột dữ liệu thực tế:
-1. **Chuỗi dữ liệu thực tế 10 tháng năm 2026 (Đã xác thực 100%):** Ghi nhận lũy kế 80,050 đơn hàng thành công, 174,094 vé xem phim và 16.41 tỷ đồng GMV thực thu (vượt +53.0% toàn bộ năm 2025).
+1. **Chuỗi dữ liệu thực tế 10 tháng năm 2026 (Đã xác thực 100%):** Ghi nhận lũy kế 77,625 đơn hàng thành công, 168,884 vé xem phim và 15.91 tỷ đồng GMV thực thu (vượt +48.4% toàn bộ năm 2025, theo Dashboard In-App range T1-T10).
 2. **Hệ số kinh tế đơn vị thực tế (Unit Economics Baseline 10M 2026):**
-   * Tần suất mua hàng bình quân: **1.116 đơn/user** ($80,050 / 71,728$).
-   * Số lượng vé bình quân trên mỗi đơn: **2.175 vé/đơn** ($174,094 / 80,050$).
-   * Giá vé thực tế bình quân: **94,261 đồng/vé** ($16,410,250,000 / 174,094$).
+   * Tần suất mua hàng bình quân: **1.286 đơn/user** ($77,625 / 60,378$, user không trùng lặp cả kỳ).
+   * Số lượng vé bình quân trên mỗi đơn: **2.176 vé/đơn** ($168,884 / 77,625$).
+   * Giá vé thực tế bình quân: **94,225 đồng/vé** ($15,913,125,000 / 168,884$).
    * Giá trị đơn hàng chuẩn hóa (AoV): **205,000 đồng/đơn**.
 3. **Tính chu kỳ mùa vụ lịch sử năm 2025 (Seasonality Reference):**
    * Tháng 11/2025: Thường có nhịp lưu lượng chậm hơn giai đoạn hè do là khoảng lặng giữa mùa hè và mùa lễ hội (ghi nhận 2,606 đơn hàng, 7,314 MAU).
@@ -267,22 +269,22 @@ Dự báo hiệu suất 2 tháng cuối năm 2026 (Tháng 11 và Tháng 12) đư
 | **Tổng 2 tháng cuối: Đơn hàng (Đơn)** | - | 22,586 | **25,615** | 30,113 |
 | **Tổng 2 tháng cuối: Vé bán ra (Vé)** | - | 49,125 | **55,712** | 65,496 |
 | **Tổng 2 tháng cuối: GMV Thực Thu (VND)**| - | 4,630,130,000 đ | **5,251,075,000 đ** | 6,173,165,000 đ |
-| **DỰ BÁO CẢ NĂM 2026: TỔNG ĐƠN HÀNG** | **80,050** | **102,636 đơn** | **105,665 đơn** | **110,163 đơn** |
-| *Tăng trưởng Đơn hàng vs Cả năm 2025* | - | *+96.2%* | ***+102.0% (Gấp đôi 2025)*** | *+110.6%* |
-| **DỰ BÁO CẢ NĂM 2026: TỔNG VÉ BÁN RA** | **174,094** | **223,219 vé** | **229,806 vé** | **239,590 vé** |
-| *Tăng trưởng Vé bán ra vs Cả năm 2025* | - | *+100.3%* | ***+106.2%*** | *+115.0%* |
-| **DỰ BÁO CẢ NĂM 2026: GMV THỰC THU** | **16,410,250,000 đ** | **21,040,380,000 đ** | **21,661,325,000 đ** | **22,583,415,000 đ** |
-| *Tăng trưởng Doanh thu GMV vs Cả năm 2025* | - | *+96.2%* | ***+102.0% (Đạt 21.66 tỷ đ)*** | *+110.6%* |
+| **DỰ BÁO CẢ NĂM 2026: TỔNG ĐƠN HÀNG** | **77,625** | **100,211 đơn** | **103,240 đơn** | **107,738 đơn** |
+| *Tăng trưởng Đơn hàng vs Cả năm 2025* | - | *+91.6%* | ***+97.4%*** | *+106.0%* |
+| **DỰ BÁO CẢ NĂM 2026: TỔNG VÉ BÁN RA** | **168,884** | **218,009 vé** | **224,596 vé** | **234,380 vé** |
+| *Tăng trưởng Vé bán ra vs Cả năm 2025* | - | *+95.7%* | ***+101.6%*** | *+110.4%* |
+| **DỰ BÁO CẢ NĂM 2026: GMV THỰC THU** | **15,913,125,000 đ** | **20,543,255,000 đ** | **21,164,200,000 đ** | **22,086,290,000 đ** |
+| *Tăng trưởng Doanh thu GMV vs Cả năm 2025* | - | *+91.6%* | ***+97.4% (Đạt 21.16 tỷ đ)*** | *+106.0%* |
 
 ---
 
 ### C. Đánh giá chiến lược và kết luận điều hành
-1. **Chắc chắn vượt mốc 100,000 đơn hàng cả năm 2026:**
-   * Ngay cả trong kịch bản thận trọng nhất, Kênh Web-to-App cũng sẽ cán mốc **102,636 đơn hàng** và **21.04 tỷ đồng GMV**, tăng trưởng +96.2% so với toàn bộ năm 2025 (52,311 đơn / 10.72 tỷ đồng GMV).
-   * Trong kịch bản cơ sở (khuyến nghị), kênh Web sẽ đạt **105,665 đơn hàng** và **21.66 tỷ đồng GMV**, chính thức thiết lập cột mốc **tăng trưởng gấp đôi (+102.0%) quy mô toàn bộ năm 2025**.
+1. **Mốc 100,000 đơn hàng cả năm 2026 vẫn trong tầm, nhưng biên an toàn mỏng:**
+   * Kịch bản thận trọng đạt **100,211 đơn hàng** và **20.54 tỷ đồng GMV**, tăng +91.6% so với toàn bộ năm 2025 (52,311 đơn / 10.72 tỷ đồng GMV), chỉ dư 211 đơn so với mốc 100,000.
+   * Kịch bản cơ sở (khuyến nghị) đạt **103,240 đơn hàng** và **21.16 tỷ đồng GMV**, tăng **+97.4%**, chưa đủ gấp đôi năm 2025. Chỉ kịch bản tích cực (+106.0%) vượt mốc gấp đôi.
 2. **Quy mô GMV tiềm năng quy đổi theo Reach (Potential GMV):**
    * Nếu quy đổi theo lượng người dùng tiếp cận chuyển đổi (W2A MAU đạt 94,680 MAU lũy kế cả năm), tổng giá trị GMV tiềm năng quy đổi đạt **19.41 tỷ đồng**.
-   * Khi tính theo giá trị thực thu của các đơn hàng thành công (Success Transactions), tổng GMV thực tế mang về cho BU Movies đạt tới **21.66 tỷ đồng** (nhờ tần suất mua hàng lặp lại 1.116 đơn/user).
+   * Khi tính theo giá trị thực thu của các đơn hàng thành công (Success Transactions), tổng GMV thực tế mang về cho BU Movies đạt **21.16 tỷ đồng** (kịch bản cơ sở).
 
 ---
 
@@ -302,7 +304,7 @@ Nếu Web Platform phối hợp cùng BU Movies xử lý triệt để nút th�
 ## 7. KẾ HOẠCH HÀNH ĐỘNG TRIỂN KHAI
 
 1. **Hoàn tất đối soát toàn diện 10 tháng năm 2026 với BU Movies (Đã xong):**
-   * Đã đối soát và xác thực 100% dữ liệu 10 tháng năm 2026 từ Dashboard in-app, đạt 80,050 đơn hàng thành công, 174,094 vé và 16.41 tỷ đồng GMV thực thu.
+   * Đã đối soát và xác thực 100% dữ liệu 10 tháng năm 2026 từ Dashboard in-app, đạt 77,625 đơn hàng thành công, 168,884 vé và 15.91 tỷ đồng GMV thực thu (Dashboard range T1-T10, chốt 18/11/2026). Còn mở: đối soát dòng Tháng 7.
 2. **Triển khai Bridge Page & QR Động:**
    * Thay thế link tĩnh bằng cầu nối thông minh: Với mobile mở thẳng App; với desktop hiển thị mã QR động chứa thông tin rạp và suất chiếu đã chọn để quét thanh toán tức thì.
 3. **Kích hoạt Cinema Chatbot theo PRD:**

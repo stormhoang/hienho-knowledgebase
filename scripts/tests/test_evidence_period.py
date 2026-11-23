@@ -10,7 +10,9 @@ from scripts.validate_evidence import validate
 
 class EvidencePeriodTests(unittest.TestCase):
     def test_snapshot_rejects_channel_and_forecast_mismatch(self):
-        source = Path("07_REPORTS/data/monthly_11_2026_mtd_4d.json")
+        source = Path("07_REPORTS/data/monthly/monthly_11_2026_mtd_4d.json")
+        if not source.exists():
+            source = Path("07_REPORTS/data/monthly_11_2026_mtd_4d.json")
         data = json.loads(source.read_text(encoding="utf-8"))
         self.assertEqual(validate_snapshot(data, date(2026, 11, 4)), [])
         data["channels"]["paid"]["pv"] += 1
@@ -28,7 +30,8 @@ class EvidencePeriodTests(unittest.TestCase):
                 select_snapshot("2026-11", Path(folder), date(2026, 11, 5))
 
     def test_snapshot_period_and_mtd_delta(self):
-        base = "07_REPORTS/data/monthly_11_2026_mtd_"
+        base_dir = "07_REPORTS/data/monthly/" if Path("07_REPORTS/data/monthly/monthly_11_2026_mtd_4d.json").exists() else "07_REPORTS/data/"
+        base = f"{base_dir}monthly_11_2026_mtd_"
         def claim(identifier, days, value):
             return {
                 "id": identifier, "claim": identifier, "metric": f"mtd_{days}",

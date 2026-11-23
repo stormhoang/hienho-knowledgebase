@@ -60,6 +60,7 @@
 | **Kiến trúc Hệ thống Báo cáo** | [`REPORT_SYSTEM_STRUCTURE.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/REPORT_SYSTEM_STRUCTURE.md) | Quy chuẩn thiết kế và vận hành hệ thống báo cáo hiệu suất Web Platform |
 | **Kiến trúc Công cụ Báo cáo Định kỳ & AI Agent** | [`monthly-reporting-tool-architecture.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/monthly-reporting-tool-architecture.md) | Chi tiết Tech Stack, Tích hợp AI Agent/MCP, Đối tượng sử dụng, Sứ mệnh & Lợi ích |
 | **Hiệu suất Tức thời** | [`PERFORMANCE_SNAPSHOT_LATEST.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/PERFORMANCE_SNAPSHOT_LATEST.md) | Snapshot dữ liệu vận hành cập nhật nhanh |
+| **Tổng Hợp Doanh Thu GMV 2026** | [`WEB_PLATFORM_GMV_2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/WEB_PLATFORM_GMV_2026.md) | Báo cáo Master SSOT doanh thu GMV toàn nền tảng Web năm 2026 (Cinema, InsurTech, eSIM) |
 
 ---
 

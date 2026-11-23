@@ -38,8 +38,8 @@ Khi nhận lệnh, AI Agent tự động thực thi script điều phối Master
 6. **SEO News (SEO/GEO/AI Search):**
    - Thu thập tin từ nguồn chính thống (Google Search Central Blog, Google Search Status Dashboard, Search Engine Journal, Search Engine Roundtable).
    - Lọc tin trong 60 ngày (chính thống lấy hết + báo ngoài tối đa 25 tin), bỏ trùng URL.
-   - Merge 2 lớp enrichment: Gemini Spark daily reports (`11_NEWS_FEED/*_daily_report.md` - title VN, tóm tắt, action, bổ sung tin ngoài RSS) và overlay thủ công `07_REPORTS/data/seo_news_enriched.json`.
-   - Gắn field `insight` từ dữ liệu thật (GSC API, Bing AI Performance, Clarity, Crawl Stats) qua `scripts/seo_news_insights.py`; tin không tính được thì bỏ field, không suy diễn. Dùng `--skip-insights` để chạy nhanh.
+   - Merge 2 lớp enrichment: Gemini Spark daily reports (`11_NEWS_FEED/daily/*_daily_report.md` - title VN, tóm tắt, action, bổ sung tin ngoài RSS) và overlay thủ công `07_REPORTS/data/seo_news_enriched.json`.
+   - Insight GSC API đã ngừng (policy) - `seo_news_insights.py` đã archive; `sync_seo_news.py` tự bỏ qua bước insight, dùng `--skip-insights` để chạy nhanh.
    - Xuất SSOT `07_REPORTS/data/seo_news_latest.json` và đẩy sang `react-web-momo/data/seo-news.json` (render tại trang `/content-plan`).
 
 ## 3. TRÌNH BÀY BÁO CÁO TỔNG HỢP CHO NGƯỜI DÙNG (EXECUTIVE REPORT)

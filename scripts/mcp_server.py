@@ -71,24 +71,22 @@ TOOLS = [
         }
     },
     {
-        "name": "sync_ga4_master",
-        "description": "Đồng bộ số liệu GA4 MTD thời gian thực từ Google Analytics Data API, tính Target Pacing và dự báo kết tháng 31 ngày.",
-        "inputSchema": {
-            "type": "object",
-            "properties": {
-                "mtd_day": {
-                    "type": "integer",
-                    "description": "Số ngày MTD cần lấy (để trống nếu lấy tự động đến ngày hôm qua)"
-                }
-            }
-        }
-    },
-    {
-        "name": "sync_paid_ads",
-        "description": "Bóc tách và phân tích các chiến dịch Paid Ads, kênh media (Google Ads, TikTok, Facebook, Admicro...), landing pages và tỷ lệ chuyển đổi Web-to-App MTD.",
+        "name": "ingest_ga4_daily",
+        "description": "Nạp dữ liệu GA4 thủ công: quét file CSV export từ GA4 Explore trong ~/Downloads, cộng dồn MTD, cập nhật Excel SSOT và Hubs Dashboard. (Thay thế sync_ga4_master đã deprecated do policy cấm GA4 API)",
         "inputSchema": {
             "type": "object",
             "properties": {}
+        }
+    },
+    {
+        "name": "ingest_gsc_mtd",
+        "description": "Nạp dữ liệu GSC thủ công: đọc tab SAS_* mới nhất của Google Sheet GSC-MTD hoặc file ZIP export, cập nhật page_mtd.json và Hub Dashboard. (Thay thế các script GSC API đã deprecated)",
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "start": {"type": "string", "description": "Override start date YYYY-MM-DD (khi thiếu Chart.csv)"},
+                "end": {"type": "string", "description": "Override end date YYYY-MM-DD"}
+            }
         }
     },
     {
@@ -159,23 +157,23 @@ MOCK_RESPONSES = {
   - Trang `/tien-ich/tinh-lai`: Tỷ lệ thoát (Bounce Rate) tăng nhẹ +4.2% trong 3 ngày gần nhất. Khuyến nghị kiểm tra khả năng hiển thị widget trên trình duyệt Safari mobile.
 """,
 
-    "sync_ga4_master": """[GA4 SYNC SUCCESS]
+    "ingest_ga4_daily": """[GA4 INGEST SUCCESS]
 Đồng bộ thành công dữ liệu MTD thời gian thực:
 - Trích xuất: 2.650.000 Pageviews, 1.820.000 Sessions, 88.500 W2A Clicks.
 - Cập nhật đồng bộ: Snapshot JSON, Dashboard Web Hubs và SSOT Master.
 - Thời gian thực thi: 8.4 giây.
 """,
 
-    "sync_paid_ads": """# BÁO CÁO HIỆU SUẤT CHIẾN DỊCH PAID ADS & UTM
+    "ingest_gsc_mtd": """# GSC MTD INGEST SUCCESS
 *Chế độ: Development / Demo Mock Data*
 
-| Kênh Media (Source / Medium) | Lượt Xem (PV) | Sessions | W2A Installs | CVR W2A (%) |
-| :--- | :--- | :--- | :--- | :--- |
-| `google / cpc` | 215.000 | 165.000 | 8.200 | 4.97% |
-| `facebook / cpc` | 98.000 | 72.000 | 2.850 | 3.96% |
-| `tiktok / cpc` | 64.500 | 45.000 | 1.420 | 3.16% |
-| `admicro / display` | 20.000 | 14.500 | 310 | 2.14% |
-| **Tổng Cộng** | **397.500** | **296.500** | **12.780** | **4.31%** |
+| Chỉ số | Giá trị |
+| :--- | :--- |
+| Total Clicks MTD | 540.654 |
+| Total Impressions MTD | 19.189.025 |
+| Avg CTR | 2.82% |
+| Avg Position | 6.13 |
+| Pages có GSC data | 16.066 |
 """,
 
     "forecast_growth": """# MÔ PHỎNG DỰ BÁO TĂNG TRƯỞNG WEB PLATFORM (3 KỊCH BẢN)
@@ -217,7 +215,8 @@ def handle_tool_call(tool_name, arguments):
         script_map = {
             "diagnose_performance": BASE_DIR / "scripts" / "diagnose_performance.py",
             "detect_anomalies": BASE_DIR / "scripts" / "detect_anomalies.py",
-            "sync_paid_ads": BASE_DIR / "scripts" / "sync_paid_ads.py",
+            "ingest_ga4_daily": BASE_DIR / "scripts" / "ingest_ga4_daily.py",
+            "ingest_gsc_mtd": BASE_DIR / "scripts" / "ingest_gsc_mtd.py",
             "forecast_growth": BASE_DIR / "scripts" / "lib" / "forecast_engine.py",
         }
 
@@ -232,19 +231,21 @@ def handle_tool_call(tool_name, arguments):
                 except Exception as e:
                     log(f"Execution error on {target_script}: {e}")
 
-        if tool_name == "sync_ga4_master":
-            target_script = BASE_DIR / "scripts" / "sync_ga4_master.py"
+        if tool_name == "ingest_gsc_mtd":
+            target_script = BASE_DIR / "scripts" / "ingest_gsc_mtd.py"
             if target_script.exists():
                 try:
-                    cmd = [py_exec, str(target_script), "--no-push"]
-                    if "mtd_day" in arguments:
-                        cmd.extend(["--mtd", str(arguments["mtd_day"])])
+                    cmd = [py_exec, str(target_script)]
+                    if arguments.get("start"):
+                        cmd.extend(["--start", str(arguments["start"])])
+                    if arguments.get("end"):
+                        cmd.extend(["--end", str(arguments["end"])])
                     res = subprocess.run(cmd, capture_output=True, text=True, cwd=str(BASE_DIR))
                     out = res.stdout if res.stdout else res.stderr
                     if out and out.strip():
                         return out.strip()
                 except Exception as e:
-                    log(f"Execution error on sync_ga4_master: {e}")
+                    log(f"Execution error on ingest_gsc_mtd: {e}")
 
     # Fallback tự động sang Mock Data (Dành cho Dev / Demo hoặc khi thiếu file cấu hình)
     log(f"[DEV / MOCK MODE] Serving mock response for {tool_name}")

@@ -1,0 +1,663 @@
+{
+  "_meta": {
+    "title": "MoMo Web Platform Google Search Console MTD Performance (19 Days)",
+    "source_archive": "/Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/data/gsc_exports/2026-11-20",
+    "period": "2026-11-01 to 2026-11-19",
+    "days_elapsed": 19,
+    "updated_at": "2026-11-20",
+    "total_clicks": 540654,
+    "total_impressions": 19189025,
+    "average_ctr_pct": 2.82,
+    "average_position": 6.13
+  },
+  "devices": [
+    {
+      "device": "Mobile",
+      "clicks": 470328,
+      "impressions": 15693057,
+      "ctr_pct": 3.0,
+      "avg_position": 5.81
+    },
+    {
+      "device": "Desktop",
+      "clicks": 67921,
+      "impressions": 3377529,
+      "ctr_pct": 2.01,
+      "avg_position": 7.58
+    },
+    {
+      "device": "Tablet",
+      "clicks": 2405,
+      "impressions": 118439,
+      "ctr_pct": 2.03,
+      "avg_position": 6.74
+    }
+  ],
+  "search_appearance": [
+    {
+      "appearance": "Review snippet",
+      "clicks": 284615,
+      "impressions": 10972184,
+      "ctr_pct": 2.59,
+      "avg_position": 7.14
+    },
+    {
+      "appearance": "Product snippets",
+      "clicks": 7150,
+      "impressions": 574872,
+      "ctr_pct": 1.24,
+      "avg_position": 7.13
+    },
+    {
+      "appearance": "Videos",
+      "clicks": 10,
+      "impressions": 1075,
+      "ctr_pct": 0.93,
+      "avg_position": 8.43
+    },
+    {
+      "appearance": "Discussion forums",
+      "clicks": 1,
+      "impressions": 14,
+      "ctr_pct": 7.14,
+      "avg_position": 5.64
+    }
+  ],
+  "performance_by_hub": [
+    {
+      "hub_name": "Cinema Hub",
+      "pages_count": 867,
+      "clicks": 184883,
+      "impressions": 5087721,
+      "ctr_pct": 3.63,
+      "avg_position": 6.26
+    },
+    {
+      "hub_name": "Financial Hub",
+      "pages_count": 1036,
+      "clicks": 75512,
+      "impressions": 5381056,
+      "ctr_pct": 1.4,
+      "avg_position": 6.48
+    },
+    {
+      "hub_name": "Support Hub",
+      "pages_count": 1075,
+      "clicks": 55455,
+      "impressions": 1367819,
+      "ctr_pct": 4.05,
+      "avg_position": 5.63
+    },
+    {
+      "hub_name": "Payment Hub",
+      "pages_count": 74,
+      "clicks": 47996,
+      "impressions": 1301590,
+      "ctr_pct": 3.69,
+      "avg_position": 4.08
+    },
+    {
+      "hub_name": "Home MoMo",
+      "pages_count": 5,
+      "clicks": 34185,
+      "impressions": 316646,
+      "ctr_pct": 10.8,
+      "avg_position": 2.4
+    },
+    {
+      "hub_name": "Travel Hub",
+      "pages_count": 5766,
+      "clicks": 31426,
+      "impressions": 2428938,
+      "ctr_pct": 1.29,
+      "avg_position": 6.48
+    },
+    {
+      "hub_name": "Game Hub",
+      "pages_count": 82,
+      "clicks": 28603,
+      "impressions": 974726,
+      "ctr_pct": 2.93,
+      "avg_position": 4.54
+    },
+    {
+      "hub_name": "Merchant Hub",
+      "pages_count": 9534,
+      "clicks": 26861,
+      "impressions": 622369,
+      "ctr_pct": 4.32,
+      "avg_position": 6.55
+    },
+    {
+      "hub_name": "Insurance Hub",
+      "pages_count": 144,
+      "clicks": 21820,
+      "impressions": 801332,
+      "ctr_pct": 2.72,
+      "avg_position": 5.34
+    },
+    {
+      "hub_name": "Blog Hub",
+      "pages_count": 908,
+      "clicks": 14097,
+      "impressions": 769602,
+      "ctr_pct": 1.83,
+      "avg_position": 5.86
+    },
+    {
+      "hub_name": "Vehicle Hub",
+      "pages_count": 362,
+      "clicks": 13159,
+      "impressions": 1489982,
+      "ctr_pct": 0.88,
+      "avg_position": 4.9
+    },
+    {
+      "hub_name": "Telco Hub",
+      "pages_count": 245,
+      "clicks": 10452,
+      "impressions": 405015,
+      "ctr_pct": 2.58,
+      "avg_position": 6.92
+    },
+    {
+      "hub_name": "News Hub",
+      "pages_count": 229,
+      "clicks": 8544,
+      "impressions": 119887,
+      "ctr_pct": 7.13,
+      "avg_position": 5.32
+    },
+    {
+      "hub_name": "Billpay Hub",
+      "pages_count": 74,
+      "clicks": 3290,
+      "impressions": 252399,
+      "ctr_pct": 1.3,
+      "avg_position": 4.03
+    },
+    {
+      "hub_name": "New User Hub",
+      "pages_count": 15,
+      "clicks": 3104,
+      "impressions": 145643,
+      "ctr_pct": 2.13,
+      "avg_position": 3.09
+    },
+    {
+      "hub_name": "Soundbox Hub",
+      "pages_count": 27,
+      "clicks": 2246,
+      "impressions": 43159,
+      "ctr_pct": 5.2,
+      "avg_position": 3.74
+    },
+    {
+      "hub_name": "Download",
+      "pages_count": 2,
+      "clicks": 1925,
+      "impressions": 40117,
+      "ctr_pct": 4.8,
+      "avg_position": 1.8
+    },
+    {
+      "hub_name": "Lottery Hub",
+      "pages_count": 24,
+      "clicks": 1057,
+      "impressions": 110447,
+      "ctr_pct": 0.96,
+      "avg_position": 6.26
+    },
+    {
+      "hub_name": "Campaign Hub",
+      "pages_count": 23,
+      "clicks": 908,
+      "impressions": 17971,
+      "ctr_pct": 5.05,
+      "avg_position": 9.46
+    },
+    {
+      "hub_name": "Student Hub",
+      "pages_count": 30,
+      "clicks": 594,
+      "impressions": 55465,
+      "ctr_pct": 1.07,
+      "avg_position": 6.4
+    },
+    {
+      "hub_name": "Donation Hub",
+      "pages_count": 129,
+      "clicks": 499,
+      "impressions": 5596,
+      "ctr_pct": 8.92,
+      "avg_position": 4.88
+    },
+    {
+      "hub_name": "Others",
+      "pages_count": 11,
+      "clicks": 24,
+      "impressions": 85,
+      "ctr_pct": 28.24,
+      "avg_position": 7.66
+    }
+  ],
+  "top_pages": [
+    {
+      "url": "https://www.momo.vn/nap-xu-tiktok",
+      "clicks": 39484,
+      "impressions": 675024,
+      "ctr_pct": 5.8,
+      "position": 3.1
+    },
+    {
+      "url": "https://www.momo.vn/",
+      "clicks": 34181,
+      "impressions": 316642,
+      "ctr_pct": 10.8,
+      "position": 2.4
+    },
+    {
+      "url": "https://www.momo.vn/blog/tra-cuu-bao-hiem-y-te-bang-cccd-c116dt2833",
+      "clicks": 15270,
+      "impressions": 498812,
+      "ctr_pct": 3.1,
+      "position": 5.3
+    },
+    {
+      "url": "https://www.momo.vn/bonbon",
+      "clicks": 13067,
+      "impressions": 220548,
+      "ctr_pct": 5.9,
+      "position": 3.9
+    },
+    {
+      "url": "https://www.momo.vn/tai-chinh/blog/ngan-hang-cho-vay-no-xau-5243",
+      "clicks": 9005,
+      "impressions": 67033,
+      "ctr_pct": 13.4,
+      "position": 4.8
+    },
+    {
+      "url": "https://www.momo.vn/hoi-dap/cach-lien-he-voi-momo",
+      "clicks": 7684,
+      "impressions": 43776,
+      "ctr_pct": 17.6,
+      "position": 3.6
+    },
+    {
+      "url": "https://www.momo.vn/cinema",
+      "clicks": 6650,
+      "impressions": 281335,
+      "ctr_pct": 2.4,
+      "position": 9.7
+    },
+    {
+      "url": "https://www.momo.vn/lienhe",
+      "clicks": 6510,
+      "impressions": 146199,
+      "ctr_pct": 4.5,
+      "position": 1.9
+    },
+    {
+      "url": "https://www.momo.vn/vay-nhanh",
+      "clicks": 6282,
+      "impressions": 147929,
+      "ctr_pct": 4.2,
+      "position": 10.3
+    },
+    {
+      "url": "https://www.momo.vn/cinema/rap/bhd-star/bhd-star-long-khanh-216",
+      "clicks": 5547,
+      "impressions": 24114,
+      "ctr_pct": 23.0,
+      "position": 6.2
+    },
+    {
+      "url": "https://www.momo.vn/cinema/rap/cgv/cgv-aeon-mall-hai-phong-149",
+      "clicks": 4892,
+      "impressions": 40628,
+      "ctr_pct": 12.0,
+      "position": 4.3
+    },
+    {
+      "url": "https://www.momo.vn/cinema/lich-chieu",
+      "clicks": 4747,
+      "impressions": 179054,
+      "ctr_pct": 2.7,
+      "position": 8.7
+    },
+    {
+      "url": "https://www.momo.vn/diem-tin-dung",
+      "clicks": 4580,
+      "impressions": 72120,
+      "ctr_pct": 6.4,
+      "position": 5.0
+    },
+    {
+      "url": "https://www.momo.vn/blog/vi-tra-sau-momo-thanh-toan-duoc-nhung-dich-vu-gi-c116dt981",
+      "clicks": 4483,
+      "impressions": 78921,
+      "ctr_pct": 5.7,
+      "position": 4.0
+    },
+    {
+      "url": "https://www.momo.vn/cinema/rap/lotte-cinema/lotte-tay-ninh-176",
+      "clicks": 4405,
+      "impressions": 19587,
+      "ctr_pct": 22.5,
+      "position": 5.9
+    },
+    {
+      "url": "https://www.momo.vn/blog/game",
+      "clicks": 3663,
+      "impressions": 23659,
+      "ctr_pct": 15.5,
+      "position": 5.2
+    },
+    {
+      "url": "https://www.momo.vn/cinema/rap/cgv",
+      "clicks": 3400,
+      "impressions": 235381,
+      "ctr_pct": 1.4,
+      "position": 5.5
+    },
+    {
+      "url": "https://www.momo.vn/blog/tra-cuu-y-nghia-so-dien-thoai-c193dt1419",
+      "clicks": 3267,
+      "impressions": 69042,
+      "ctr_pct": 4.7,
+      "position": 5.4
+    },
+    {
+      "url": "https://www.momo.vn/nap-the-game",
+      "clicks": 3248,
+      "impressions": 33252,
+      "ctr_pct": 9.8,
+      "position": 5.1
+    },
+    {
+      "url": "https://www.momo.vn/phat-nguoi",
+      "clicks": 3090,
+      "impressions": 70453,
+      "ctr_pct": 4.4,
+      "position": 7.2
+    }
+  ],
+  "top_queries": [
+    {
+      "query": "momo",
+      "clicks": 26347,
+      "impressions": 76268,
+      "ctr_pct": 34.55,
+      "position": 1.07
+    },
+    {
+      "query": "nạp xu tiktok",
+      "clicks": 10217,
+      "impressions": 161949,
+      "ctr_pct": 6.31,
+      "position": 2.58
+    },
+    {
+      "query": "mmoo",
+      "clicks": 7924,
+      "impressions": 159851,
+      "ctr_pct": 4.96,
+      "position": 3.65
+    },
+    {
+      "query": "tra cứu bảo hiểm y tế bằng cccd",
+      "clicks": 5127,
+      "impressions": 74778,
+      "ctr_pct": 6.86,
+      "position": 2.13
+    },
+    {
+      "query": "napxutiktok",
+      "clicks": 4354,
+      "impressions": 61362,
+      "ctr_pct": 7.1,
+      "position": 2.03
+    },
+    {
+      "query": "tổng đài momo",
+      "clicks": 2365,
+      "impressions": 5473,
+      "ctr_pct": 43.21,
+      "position": 1.21
+    },
+    {
+      "query": "cgv",
+      "clicks": 2285,
+      "impressions": 171498,
+      "ctr_pct": 1.33,
+      "position": 3.39
+    },
+    {
+      "query": "lotte cinema",
+      "clicks": 2111,
+      "impressions": 43908,
+      "ctr_pct": 4.81,
+      "position": 5.68
+    },
+    {
+      "query": "nạp xu",
+      "clicks": 2010,
+      "impressions": 13361,
+      "ctr_pct": 15.04,
+      "position": 2.04
+    },
+    {
+      "query": "momo đăng nhập game",
+      "clicks": 1805,
+      "impressions": 4132,
+      "ctr_pct": 43.68,
+      "position": 1.5
+    },
+    {
+      "query": "môm",
+      "clicks": 1758,
+      "impressions": 26680,
+      "ctr_pct": 6.59,
+      "position": 1.02
+    },
+    {
+      "query": "momo no hu",
+      "clicks": 1609,
+      "impressions": 18908,
+      "ctr_pct": 8.51,
+      "position": 2.0
+    },
+    {
+      "query": "vay nợ xấu dễ duyệt",
+      "clicks": 1388,
+      "impressions": 8899,
+      "ctr_pct": 15.6,
+      "position": 1.29
+    },
+    {
+      "query": "vay nhanh nợ xấu",
+      "clicks": 1363,
+      "impressions": 4968,
+      "ctr_pct": 27.44,
+      "position": 1.89
+    },
+    {
+      "query": "bhd long khánh",
+      "clicks": 1359,
+      "impressions": 2256,
+      "ctr_pct": 60.24,
+      "position": 1.94
+    },
+    {
+      "query": "nạp xu tiktok momo",
+      "clicks": 1304,
+      "impressions": 5206,
+      "ctr_pct": 25.05,
+      "position": 1.38
+    },
+    {
+      "query": "lotte cinema tây ninh",
+      "clicks": 1269,
+      "impressions": 3182,
+      "ctr_pct": 39.88,
+      "position": 1.67
+    },
+    {
+      "query": "momo88",
+      "clicks": 1260,
+      "impressions": 2735,
+      "ctr_pct": 46.07,
+      "position": 1.68
+    },
+    {
+      "query": "momo game",
+      "clicks": 1244,
+      "impressions": 3208,
+      "ctr_pct": 38.78,
+      "position": 1.61
+    },
+    {
+      "query": "tiktok coin",
+      "clicks": 1231,
+      "impressions": 46009,
+      "ctr_pct": 2.68,
+      "position": 3.04
+    }
+  ],
+  "daily_trend": [
+    {
+      "date": "2026-11-01",
+      "clicks": 32098,
+      "impressions": 1104868,
+      "ctr_pct": 2.91,
+      "position": 6.1
+    },
+    {
+      "date": "2026-11-02",
+      "clicks": 27719,
+      "impressions": 979108,
+      "ctr_pct": 2.83,
+      "position": 6.2
+    },
+    {
+      "date": "2026-11-03",
+      "clicks": 28323,
+      "impressions": 970815,
+      "ctr_pct": 2.92,
+      "position": 6.1
+    },
+    {
+      "date": "2026-11-04",
+      "clicks": 31603,
+      "impressions": 981388,
+      "ctr_pct": 3.22,
+      "position": 6.0
+    },
+    {
+      "date": "2026-11-05",
+      "clicks": 29608,
+      "impressions": 973328,
+      "ctr_pct": 3.04,
+      "position": 6.0
+    },
+    {
+      "date": "2026-11-06",
+      "clicks": 31437,
+      "impressions": 1019758,
+      "ctr_pct": 3.08,
+      "position": 6.0
+    },
+    {
+      "date": "2026-11-07",
+      "clicks": 28812,
+      "impressions": 973080,
+      "ctr_pct": 2.96,
+      "position": 6.0
+    },
+    {
+      "date": "2026-11-08",
+      "clicks": 26040,
+      "impressions": 916126,
+      "ctr_pct": 2.84,
+      "position": 6.0
+    },
+    {
+      "date": "2026-11-09",
+      "clicks": 27049,
+      "impressions": 951413,
+      "ctr_pct": 2.84,
+      "position": 6.4
+    },
+    {
+      "date": "2026-11-10",
+      "clicks": 28632,
+      "impressions": 979452,
+      "ctr_pct": 2.92,
+      "position": 6.2
+    },
+    {
+      "date": "2026-11-11",
+      "clicks": 28317,
+      "impressions": 974706,
+      "ctr_pct": 2.91,
+      "position": 6.0
+    },
+    {
+      "date": "2026-11-12",
+      "clicks": 27308,
+      "impressions": 996451,
+      "ctr_pct": 2.74,
+      "position": 6.2
+    },
+    {
+      "date": "2026-11-13",
+      "clicks": 28336,
+      "impressions": 1073568,
+      "ctr_pct": 2.64,
+      "position": 6.2
+    },
+    {
+      "date": "2026-11-14",
+      "clicks": 28379,
+      "impressions": 1131735,
+      "ctr_pct": 2.51,
+      "position": 6.0
+    },
+    {
+      "date": "2026-11-15",
+      "clicks": 28139,
+      "impressions": 1120187,
+      "ctr_pct": 2.51,
+      "position": 6.1
+    },
+    {
+      "date": "2026-11-16",
+      "clicks": 29340,
+      "impressions": 1113279,
+      "ctr_pct": 2.64,
+      "position": 6.4
+    },
+    {
+      "date": "2026-11-17",
+      "clicks": 29685,
+      "impressions": 1133804,
+      "ctr_pct": 2.62,
+      "position": 6.2
+    },
+    {
+      "date": "2026-11-18",
+      "clicks": 30922,
+      "impressions": 1154536,
+      "ctr_pct": 2.68,
+      "position": 6.2
+    },
+    {
+      "date": "2026-11-19",
+      "clicks": 18907,
+      "impressions": 641423,
+      "ctr_pct": 2.95,
+      "position": 6.2
+    }
+  ]
+}

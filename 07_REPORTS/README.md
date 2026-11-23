@@ -59,7 +59,6 @@ Tài liệu này định nghĩa cấu trúc phân cấp, vai trò và quy chuẩ
 1. **Thư mục gốc `07_REPORTS/`:** 
    - CHỈ lưu trữ các file SSOT cốt lõi được quy định trong `AGENTS.md`:
      - [`WEB_PERFORMANCE_TRACKING_MASTER.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md): Báo cáo & dữ liệu quản trị hiệu suất Master Markdown.
-     - [`web_platform_performance.xlsx`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/web_platform_performance.xlsx): Báo cáo hiệu suất độc lập chuẩn hóa từ GA4 API & GSC API (không phụ thuộc BigQuery Pivot).
      - [`web_performance_tracking.xlsx`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/web_performance_tracking.xlsx): File lưu trữ đối chiếu từ nguồn xuất BigQuery.
    - Các Master Portfolios phục vụ pipeline (`KEYWORD_INVENTORY_MASTER.md`, `QUICK_WINS_PORTFOLIO.md`, `CONTENT_PLAN_REFACTOR_REVIEW.md`, `KEYWORD_REALLOCATION_REVIEW.md`).
    - Tuyệt đối không lưu các file nháp, file Word (.docx), file Slide (.pptx) hoặc báo cáo tháng lẻ ở thư mục gốc.

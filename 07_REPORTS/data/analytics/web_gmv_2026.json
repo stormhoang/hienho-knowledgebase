@@ -1,0 +1,122 @@
+{
+  "title": "Bản Tổng Hợp GMV Toàn Nền Tảng Web Năm 2026",
+  "as_of": "2026-11-18",
+  "reporting_period": "2026 YTD (Tháng 1 - Tháng 10 / Giữa Tháng 11)",
+  "currency": "VND",
+  "summary": {
+    "total_gmv_standard": 15913125000,
+    "total_gmv_full_portfolio": 19490178292,
+    "total_gmv_full_portfolio_display": "19,49 tỷ VNĐ",
+    "total_gmv_monthly_sum": 19990613292,
+    "total_gmv_monthly_sum_display": "19,99 tỷ VNĐ",
+    "total_transactions_count": 83110,
+    "benchmark_2025_gmv": 12663976991,
+    "benchmark_2025_gmv_display": "12,66 tỷ VNĐ",
+    "yoy_growth_percent": 53.9
+  },
+  "sectors": {
+    "cinema": {
+      "name": "Điện ảnh & Giải trí (Cinema Hub)",
+      "period": "01/01/2026 - 31/10/2026 (10 tháng)",
+      "source": "Dashboard In-App range T1-T10 & BU Movies đối soát 18/11/2026",
+      "gmv": 15913125000,
+      "gmv_display": "15,91 tỷ VNĐ",
+      "gmv_monthly_sum": 16413560000,
+      "gmv_monthly_sum_display": "16,41 tỷ VNĐ",
+      "transactions": 77625,
+      "transactions_monthly_sum": 80050,
+      "tickets": 168884,
+      "tickets_monthly_sum": 174094,
+      "w2a_mau": 60378,
+      "w2a_meu": 201517,
+      "aov": 205000,
+      "tickets_per_order": 2.18,
+      "benchmark_2025": {
+        "gmv": 10723755000,
+        "gmv_display": "10,72 tỷ VNĐ",
+        "transactions": 52311,
+        "tickets": 111422,
+        "w2a_mau": 93758
+      },
+      "yoy_vs_full_year_2025_percent": 148.4,
+      "full_year_2026_forecast": {
+        "gmv": 21160000000,
+        "gmv_display": "21,16 tỷ VNĐ",
+        "transactions": 103240
+      }
+    },
+    "insurance": {
+      "name": "Bảo hiểm Trực tuyến (InsurTech)",
+      "period": "01/01/2026 - 12/11/2026",
+      "source": "Dữ liệu Văn Hiến cung cấp & Báo cáo Đánh giá InsurTech 2026",
+      "total_gmv": 3416653292,
+      "total_gmv_display": "3,42 tỷ VNĐ",
+      "total_users_reached": 136819,
+      "new_to_momo_percent_range": "44% - 51%",
+      "products": {
+        "bhyt": {
+          "name": "Bảo hiểm Y tế (BHYT)",
+          "gmv_2026": 2665621310,
+          "gmv_2026_display": "2,67 tỷ VNĐ",
+          "gmv_2025": 1614064484,
+          "gmv_2025_display": "1,61 tỷ VNĐ",
+          "yoy_percent": 65.15,
+          "traffic_pv": 196198,
+          "traffic_vs_2025": "Gấp 4,4 lần",
+          "buyers_count": 2643,
+          "native_web_checkout_share_percent": 86.0,
+          "seo_sem_spend": 150000000,
+          "cost_per_buyer": 57000
+        },
+        "vcx": {
+          "name": "Bảo hiểm Thân vỏ Ô tô (VCX)",
+          "gmv_2026": 462000000,
+          "gmv_2026_display": "462 triệu VNĐ",
+          "traffic_pv": 162304,
+          "traffic_vs_2025_percent": 46.0,
+          "leads_count": 2118,
+          "successful_orders": 71,
+          "lead_to_order_cvr_percent": 3.3,
+          "target_cvr_range": "7% - 10%",
+          "seo_sem_spend": 1050000000
+        },
+        "xmbb": {
+          "name": "Bảo hiểm Xe máy Bắt buộc (XMBB)",
+          "gmv_2026": 289031982,
+          "gmv_2026_display": "289 triệu VNĐ",
+          "gmv_2025": 326157507,
+          "gmv_2025_display": "326 triệu VNĐ",
+          "yoy_percent": -11.38,
+          "traffic_pv": 90522,
+          "orders_to_app": 1948,
+          "buyers_on_web": 1750,
+          "seo_sem_spend": 350000000
+        }
+      }
+    },
+    "travel": {
+      "name": "Du lịch & Kết nối (Travel & Connectivity)",
+      "period": "01/01/2026 - 31/10/2026",
+      "source": "Báo cáo Đánh giá Hiệu quả Chuyển đổi Web 2026",
+      "products": {
+        "esim": {
+          "name": "eSIM Du Lịch",
+          "gmv_2026": 160400000,
+          "gmv_2026_display": "160,4 triệu VNĐ",
+          "transactions": 824,
+          "cvr_percent": 3.18,
+          "ads_cost": 0,
+          "strategic_brd_target": {
+            "web_gmv_target": 2740000000,
+            "bu_total_gmv_target": 27400000000
+          }
+        },
+        "ve_xe": {
+          "name": "Vé Xe Khách (/ve-xe)",
+          "transacting_mau": 3787,
+          "gmv_status": "Đang phối hợp BU Travel đối soát giá trị giao dịch cụ thể"
+        }
+      }
+    }
+  }
+}

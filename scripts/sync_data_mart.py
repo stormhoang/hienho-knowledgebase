@@ -20,7 +20,7 @@ from urllib.parse import urlparse
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
-from scripts.lib.db import get_connection, init_db, DEFAULT_DB_PATH, DATA_DIR
+from scripts.lib.db import get_connection, init_db, DEFAULT_DB_PATH, DATA_DIR, MONTHLY_DIR
 
 
 def load_hub_map():
@@ -139,7 +139,7 @@ def sync_fact_daily_performance(conn) -> int:
     synced_at = datetime.utcnow().isoformat()
     rows = []
 
-    for p in sorted(DATA_DIR.glob("monthly_*_*_mtd_*d.json")):
+    for p in sorted(MONTHLY_DIR.glob("monthly_*_*_mtd_*d.json")):
         try:
             match = re.fullmatch(r"monthly_(\d{2})_(\d{4})_mtd_(\d+)d\.json", p.name)
             if not match:

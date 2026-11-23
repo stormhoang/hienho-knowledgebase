@@ -15,6 +15,7 @@ from typing import Dict, List, Optional, Tuple, Any
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 DATA_DIR = BASE_DIR / "07_REPORTS" / "data"
+MONTHLY_DIR = DATA_DIR / "monthly"
 CACHE_DIR = DATA_DIR / "cache"
 DEFAULT_DB_PATH = CACHE_DIR / "performance.sqlite" if (CACHE_DIR / "performance.sqlite").exists() else DATA_DIR / "performance.sqlite"
 
@@ -292,6 +293,42 @@ def query_quick_wins(min_impressions: int = 500, limit: int = 20, db_path: Optio
         WHERE impressions >= ?
         LIMIT ?;
     """, (min_impressions, limit))
+    rows = [dict(r) for r in cur.fetchall()]
+    conn.close()
+    return rows
+
+
+def query_gsc_hubs_summary(db_path: Optional[Path] = None) -> List[Dict[str, Any]]:
+    """Tra cứu hiệu suất SEO Google Search Console 2026 gom nhóm theo từng Hub."""
+    conn = get_connection(db_path)
+    cur = conn.cursor()
+    cur.execute("""
+        SELECT 
+            COALESCE(NULLIF(d.hub_name, ''), 'Chưa phân loại') AS hub_name,
+            COUNT(g.page_url) AS pages_count,
+            SUM(g.clicks) AS total_clicks,
+            SUM(g.impressions) AS total_impressions,
+            ROUND(SUM(g.clicks) * 100.0 / NULLIF(SUM(g.impressions), 0), 2) AS avg_ctr,
+            ROUND(AVG(g.position), 2) AS avg_position
+        FROM gsc_top_pages_2026 g
+        LEFT JOIN dim_url_project d ON (
+            g.page_url = d.url OR 
+            g.page_url = 'https://www.momo.vn' || d.path OR
+            g.page_url = 'https://momo.vn' || d.path
+        )
+        GROUP BY hub_name
+        ORDER BY total_clicks DESC;
+    """)
+    rows = [dict(r) for r in cur.fetchall()]
+    conn.close()
+    return rows
+
+
+def query_gsc_devices(db_path: Optional[Path] = None) -> List[Dict[str, Any]]:
+    """Tra cứu hiệu suất tìm kiếm phân bổ theo Thiết bị (Mobile vs Desktop vs Tablet)."""
+    conn = get_connection(db_path)
+    cur = conn.cursor()
+    cur.execute("SELECT device, clicks, impressions, ctr, position FROM gsc_devices_2026;")
     rows = [dict(r) for r in cur.fetchall()]
     conn.close()
     return rows

@@ -1,0 +1,225 @@
+{
+  "comparison_type": "Like-for-like MTD 18 Days",
+  "period_current": "2026-11-01 to 2026-11-18",
+  "period_previous": "2026-10-01 to 2026-10-18",
+  "days_elapsed": 18,
+  "summary": {
+    "oct_mtd_pv": 2144693,
+    "nov_mtd_pv": 3124987,
+    "net_change_pv": 980294,
+    "growth_pct_mom": 45.7,
+    "non_paid_contribution_pct": 53.02,
+    "paid_contribution_pct": 46.98
+  },
+  "channel_breakdown": {
+    "non_paid": {
+      "oct_pv": 1930753,
+      "nov_pv": 2450534,
+      "change_pv": 519781,
+      "growth_pct": 26.92,
+      "contribution_pct": 53.02
+    },
+    "organic_search": {
+      "oct_pv": 1142226,
+      "nov_pv": 1403639,
+      "change_pv": 261413,
+      "growth_pct": 22.89,
+      "contribution_pct": 26.66
+    },
+    "direct": {
+      "oct_pv": 535574,
+      "nov_pv": 796552,
+      "change_pv": 260978,
+      "growth_pct": 48.73,
+      "contribution_pct": 26.62
+    },
+    "ai_traffic": {
+      "oct_pv": 8379,
+      "nov_pv": 22684,
+      "change_pv": 14305,
+      "growth_pct": 170.72,
+      "contribution_pct": 1.46
+    },
+    "referral_others": {
+      "oct_pv": 244574,
+      "nov_pv": 227659,
+      "change_pv": -16915,
+      "growth_pct": -6.92,
+      "contribution_pct": -1.73
+    },
+    "paid": {
+      "oct_pv": 213940,
+      "nov_pv": 674453,
+      "change_pv": 460513,
+      "growth_pct": 215.25,
+      "contribution_pct": 46.98
+    }
+  },
+  "top_gainers_urls": [
+    {
+      "path": "/nap-xu-tiktok",
+      "project": "Utility / TikTok",
+      "hub": "Merchant / Utility",
+      "oct_pv": 120435,
+      "nov_pv": 300959,
+      "change_pv": 180524,
+      "primary_driver": "Google CPC SEM + Organic Search mùa mua sắm cuối năm"
+    },
+    {
+      "path": "/",
+      "project": "Homepage",
+      "hub": "Platform",
+      "oct_pv": 170728,
+      "nov_pv": 351251,
+      "change_pv": 180523,
+      "primary_driver": "Direct (+110K) và Organic (+53K) tăng mạnh nhờ thương hiệu & mùa vụ 11.11"
+    },
+    {
+      "path": "/phat-nguoi/o-to",
+      "project": "Tra Cứu Phạt Nguội Ô Tô",
+      "hub": "Vehicle Hub",
+      "oct_pv": 491,
+      "nov_pv": 118247,
+      "change_pv": 117756,
+      "primary_driver": "Chiến dịch Google CPC tracuuphatnguoi + SEO leo top SERP"
+    },
+    {
+      "path": "/game/mot-mua-quyt",
+      "project": "Minigame Web",
+      "hub": "Engagement",
+      "oct_pv": 7500,
+      "nov_pv": 97873,
+      "change_pv": 90373,
+      "primary_driver": "Minigame tương tác MoMo mùa vụ T11"
+    },
+    {
+      "path": "/phat-nguoi/xe-may",
+      "project": "Tra Cứu Phạt Nguội Xe Máy",
+      "hub": "Vehicle Hub",
+      "oct_pv": 524,
+      "nov_pv": 70060,
+      "change_pv": 69536,
+      "primary_driver": "Chiến dịch Google CPC tracuuphatnguoi + SEO leo top SERP"
+    },
+    {
+      "path": "/loa-thong-bao-chuyen-khoan",
+      "project": "Soundbox Loa Chuyển Khoản",
+      "hub": "Merchant Hub",
+      "oct_pv": 4842,
+      "nov_pv": 68948,
+      "change_pv": 64106,
+      "primary_driver": "Chiến dịch Facebook Ads Merchant Q4 + nhu cầu cửa hàng cuối năm"
+    },
+    {
+      "path": "/nuoc",
+      "project": "Hóa Đơn Nước",
+      "hub": "Utility",
+      "oct_pv": 24520,
+      "nov_pv": 84038,
+      "change_pv": 59518,
+      "primary_driver": "Chu kỳ thanh toán định kỳ đầu và giữa tháng, Direct traffic tăng"
+    },
+    {
+      "path": "/tin-tuc/khuyen-mai/chuong-trinh-gop-hoa-don-trong-rung-lap-doi-dua-9095",
+      "project": "Góp Hóa Đơn Trồng Rừng",
+      "hub": "CSR / Engagement",
+      "oct_pv": 0,
+      "nov_pv": 48381,
+      "change_pv": 48381,
+      "primary_driver": "Chiến dịch CSR gắn liền thanh toán hóa đơn tháng 11"
+    },
+    {
+      "path": "/cinema/ngay-con-con-me-25093",
+      "project": "Phim Ngày Còn Con Mẹ",
+      "hub": "Cinema Hub",
+      "oct_pv": 183,
+      "nov_pv": 43815,
+      "change_pv": 43632,
+      "primary_driver": "Phim mới ra rạp T11 thu hút lượng tìm kiếm lịch chiếu rạp"
+    },
+    {
+      "path": "/blog/tra-cuu-bao-hiem-y-te-bang-cccd-c116dt2833",
+      "project": "Tra Cứu BHYT CCCD",
+      "hub": "Insurance Hub",
+      "oct_pv": 11810,
+      "nov_pv": 52071,
+      "change_pv": 40261,
+      "primary_driver": "SEO lên Top 1-3 Google Search từ khóa tra cứu BHYT bằng CCCD"
+    },
+    {
+      "path": "/tin-tuc/khuyen-mai/1111-sieu-sale-du-lich-lon-nhat-nam-san-deal-giam-9109",
+      "project": "Siêu Sale Du Lịch 11.11",
+      "hub": "Travel / Campaign",
+      "oct_pv": 0,
+      "nov_pv": 38967,
+      "change_pv": 38967,
+      "primary_driver": "Chiến dịch truyền thông Siêu Sale 11.11"
+    },
+    {
+      "path": "/cinema/chu-de/phan-tich-phim-bo-sua-bay",
+      "project": "Review Phim Bò Sữa Bay",
+      "hub": "Cinema Hub",
+      "oct_pv": 0,
+      "nov_pv": 29294,
+      "change_pv": 29294,
+      "primary_driver": "Bài viết phân tích phim mới lan tỏa trên mạng xã hội và Google"
+    },
+    {
+      "path": "/cinema/chi-chi-em-em-3-25076",
+      "project": "Phim Chị Chị Em Em 3",
+      "hub": "Cinema Hub",
+      "oct_pv": 1102,
+      "nov_pv": 28517,
+      "change_pv": 27415,
+      "primary_driver": "Phim rạp mới ra mắt T11"
+    },
+    {
+      "path": "/cinema/godzilla-tru-khong-25137",
+      "project": "Phim Godzilla Trừ Không",
+      "hub": "Cinema Hub",
+      "oct_pv": 422,
+      "nov_pv": 26615,
+      "change_pv": 26193,
+      "primary_driver": "Phim bom tấn rạp T11"
+    }
+  ],
+  "top_paid_campaigns": [
+    {
+      "campaign": "tracuuphatnguoi",
+      "source_medium": "google / cpc",
+      "oct_pv": 791,
+      "nov_pv": 187744,
+      "change_pv": 186953,
+      "target_pages": [
+        "/phat-nguoi/o-to",
+        "/phat-nguoi/xe-may"
+      ]
+    },
+    {
+      "campaign": "TikTok Coin SEM (2 campaigns)",
+      "source_medium": "google / cpc",
+      "oct_pv": 62401,
+      "nov_pv": 207351,
+      "change_pv": 144950,
+      "target_pages": [
+        "/nap-xu-tiktok"
+      ]
+    },
+    {
+      "campaign": "Soundbox Merchant Q4",
+      "source_medium": "facebook / cpc & an / paid",
+      "oct_pv": 566,
+      "nov_pv": 102471,
+      "change_pv": 101905,
+      "target_pages": [
+        "/loa-thong-bao-chuyen-khoan"
+      ]
+    }
+  ],
+  "root_cause_conclusions": [
+    "Non-Paid đóng góp 51,91% mức tăng (+497K PV) nhờ SEO bài viết đời sống (BHYT CCCD), dàn phim mới ra rạp (Cinema) và lượt truy cập trực tiếp gia tăng mạnh dịp cuối năm.",
+    "Paid đóng góp 48,09% mức tăng (+460K PV) nhờ các BU chủ động rót ngân sách vào các chiến dịch SEM nhu cầu cao (Tra cứu phạt nguội mang về +187K PV, Nạp xu TikTok mang về +145K PV).",
+    "Cơ cấu tăng trưởng lành mạnh, gắn liền mục tiêu chuyển đổi mở ứng dụng MoMo (Web-to-App) xử lý giao dịch thực tế."
+  ],
+  "reconciliation_note": "Restated 2026-11-19: nov_mtd_pv +22.684 va non_paid +ai_traffic theo canonical schema (AI Traffic la kenh trong Non-Paid va tong PV). referral_others nov hieu chinh +22.684 (ai la kenh rieng, khong phai subset)."
+}

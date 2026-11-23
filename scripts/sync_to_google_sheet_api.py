@@ -20,7 +20,10 @@ import urllib.parse
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parents[1]
-CREDS_FILE = BASE_DIR / "07_REPORTS" / "data" / "credentials" / "ga4-credentials.json"
+_CREDS_DIR = BASE_DIR / "07_REPORTS" / "data" / "credentials"
+CREDS_FILE = next((p for p in (_CREDS_DIR / "ga4-credentials.json",
+                              _CREDS_DIR / "ga4-credentials.json.disabled") if p.exists()),
+                  _CREDS_DIR / "ga4-credentials.json")
 TOKEN_FILE = BASE_DIR / "07_REPORTS" / "data" / "credentials" / "gdrive-token.json"
 TARGET_SHEET_ID = "1JaaYv2MnDy-dfBdC3P-GMB6SFgjez2VowdjX9PjmPYU"
 
@@ -85,7 +88,7 @@ def sync_google_sheet(
     if ai_traffic_pv is None:
         try:
             m_parts = month.split("-")
-            cons_file = BASE_DIR / "07_REPORTS" / "data" / f"monthly_{m_parts[1]}_{m_parts[0]}_mtd_{days_elapsed}d.json"
+            cons_file = BASE_DIR / "07_REPORTS" / "data" / "monthly" / f"monthly_{m_parts[1]}_{m_parts[0]}_mtd_{days_elapsed}d.json"
             if cons_file.exists():
                 with open(cons_file, "r", encoding="utf-8") as f:
                     _cdata = json.load(f)
@@ -335,7 +338,7 @@ def sync_google_sheet(
 
 if __name__ == "__main__":
     # Test chạy trực tiếp với dữ liệu MTD 24
-    consolidated_file = BASE_DIR / "07_REPORTS" / "data" / "monthly_10_2026_consolidated.json"
+    consolidated_file = BASE_DIR / "07_REPORTS" / "data" / "monthly" / "monthly_10_2026_consolidated.json"
     if consolidated_file.exists():
         with open(consolidated_file, "r", encoding="utf-8") as f:
             d = json.load(f)

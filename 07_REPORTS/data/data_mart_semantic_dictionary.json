@@ -1,0 +1,140 @@
+{
+  "_meta": {
+    "title": "MoMo Web Platform Data Mart Semantic Dictionary",
+    "version": "1.0.0",
+    "updated_at": "2026-11-19",
+    "description": "Lớp ngữ nghĩa dữ liệu (Semantic Layer) đóng băng định nghĩa chỉ số kinh doanh, công thức SQL và benchmark chuẩn cho Data Analyst và Business Development Copilot.",
+    "sqlite_source": "07_REPORTS/data/cache/performance.sqlite",
+    "macro_baseline_source": "07_REPORTS/data/analytics/ga4_macro_annual_baseline_2025_2026.json",
+    "macro_events_source": "07_REPORTS/data/analytics/ga4_macro_event_breakdown_2025_2026.json",
+    "gsc_macro_source": "07_REPORTS/data/analytics/gsc_macro_performance_2026.json"
+  },
+  "metrics": {
+    "w2a_cvr": {
+      "display_name": "Web-to-App Conversion Rate (W2A CVR)",
+      "unit": "%",
+      "formula_sql": "ROUND((COALESCE(SUM(onelink_clicks_track1), 0) + COALESCE(SUM(onelink_clicks_track2), 0)) * 100.0 / NULLIF(SUM(sessions), 0), 2)",
+      "description": "Tỷ lệ phần trăm giữa tổng số lượt click OneLink (track1 + track2) mở hoặc cài đặt ứng dụng MoMo trên tổng số phiên truy cập trang web (Sessions).",
+      "benchmarks_by_hub": {
+        "Cinema Hub": 2.34,
+        "Financial Hub": 3.36,
+        "Insurance Hub": 1.28,
+        "Vehicle Hub": 7.52,
+        "Billpay Hub": 11.70,
+        "Game Hub": 4.57,
+        "Payment Hub": 4.08,
+        "Travel Hub": 5.56,
+        "Overall_Web": 4.50
+      }
+    },
+    "engagement_rate": {
+      "display_name": "Engagement Rate",
+      "unit": "%",
+      "formula_sql": "ROUND(SUM(engaged_sessions) * 100.0 / NULLIF(SUM(sessions), 0), 2)",
+      "description": "Tỷ lệ phần trăm các phiên truy cập có tương tác (ở lại trên 10 giây hoặc có 2 lượt xem trang trở lên hoặc có sự kiện chuyển đổi)."
+    },
+    "funnel_drop_off_visit_to_engage": {
+      "display_name": "Drop-off Rate: Visit to Engaged",
+      "unit": "%",
+      "formula_sql": "ROUND(100.0 - (SUM(engaged_sessions) * 100.0 / NULLIF(SUM(sessions), 0)), 2)",
+      "description": "Tỷ lệ người dùng thoát ngay sau khi vào trang (chưa kịp tương tác). Tỷ lệ > 50% báo hiệu trang đích không khớp với Search Intent hoặc tải quá chậm."
+    },
+    "funnel_drop_off_engage_to_w2a": {
+      "display_name": "Drop-off Rate: Engaged to OneLink Click",
+      "unit": "%",
+      "formula_sql": "ROUND(100.0 - ((COALESCE(SUM(onelink_clicks_track1), 0) + COALESCE(SUM(onelink_clicks_track2), 0)) * 100.0 / NULLIF(SUM(engaged_sessions), 0)), 2)",
+      "description": "Tỷ lệ người dùng đã tương tác với trang nhưng không bấm vào nút chuyển đổi OneLink sang App. Tỷ lệ > 95% báo hiệu thiếu CTA hấp dẫn hoặc thiếu sản phẩm phù hợp."
+    },
+    "non_paid_share": {
+      "display_name": "Non-Paid Traffic Share",
+      "unit": "%",
+      "formula_sql": "ROUND(SUM(CASE WHEN channel_group IN ('Organic Search', 'Direct', 'Referral', 'AI Traffic') THEN sessions ELSE 0 END) * 100.0 / NULLIF(SUM(sessions), 0), 2)",
+      "description": "Tỷ trọng lưu lượng truy cập tự nhiên, không mất phí mua quảng cáo."
+    },
+    "paid_share": {
+      "display_name": "Paid Traffic Share",
+      "unit": "%",
+      "formula_sql": "ROUND(SUM(CASE WHEN channel_group IN ('Paid Search', 'Cross-network', 'Paid Social', 'Display') THEN sessions ELSE 0 END) * 100.0 / NULLIF(SUM(sessions), 0), 2)",
+      "description": "Tỷ trọng lưu lượng trả phí từ các chiến dịch Paid Ads."
+    },
+    "market_sizing_annual_search": {
+      "display_name": "Annual Market Search Volume",
+      "unit": "searches/year",
+      "formula_sql": "volume",
+      "description": "Dung lượng tìm kiếm toàn thị trường trong 12 tháng từ dữ liệu Google Trends 5 năm chuẩn hóa."
+    },
+    "market_sizing_monthly_projected": {
+      "display_name": "Projected Monthly Search Demand",
+      "unit": "searches/month",
+      "formula_logic": "annual_volume * (seasonality_factor_month / sum_of_12_months)",
+      "description": "Lượng tìm kiếm ước tính trong tháng đang xét có tính đến trọng số mùa vụ."
+    },
+    "potential_gmv": {
+      "display_name": "Potential Gross Merchandise Value (GMV)",
+      "unit": "VND",
+      "formula_logic": "projected_monthly_searches * target_ctr * w2a_cvr * aov",
+      "description": "Doanh thu GMV tiềm năng có thể tạo ra từ lưu lượng tìm kiếm nếu đạt vị trí Top 1-3 và tỷ lệ chuyển đổi chuẩn ngành.",
+      "default_aov_vnd": {
+        "Cinema": 85000,
+        "Vehicle": 350000,
+        "Insurtech": 450000,
+        "OTA": 1200000,
+        "Financial": 500000,
+        "Lottery": 50000,
+        "Telco": 80000,
+        "Default": 150000
+      }
+    },
+    "potential_partner_revenue": {
+      "display_name": "Potential Partner Commission Revenue",
+      "unit": "VND",
+      "formula_logic": "potential_gmv * commission_rate",
+      "description": "Doanh thu hoa hồng dịch vụ tiềm năng từ đối tác theo cơ chế chia sẻ doanh thu (CPS/CPA).",
+      "default_commission_rate": {
+        "Cinema": 0.07,
+        "Vehicle": 0.15,
+        "Insurtech": 0.20,
+        "OTA": 0.05,
+        "Financial": 0.08,
+        "Default": 0.10
+      }
+    }
+  },
+  "tables": {
+    "ga4_landing_pages": {
+      "role": "Fact Table",
+      "description": "Hiệu suất từng trang đích GA4 theo kênh và số click OneLink (track1 + track2)",
+      "key_columns": ["landing_page", "channel_group", "sessions", "engaged_sessions", "onelink_clicks_track1", "onelink_clicks_track2"]
+    },
+    "dim_url_project": {
+      "role": "Dimension Table",
+      "description": "Ánh xạ 1:1 hơn 28,000 URLs của momo.vn sang Project và Hub theo hub-map.json",
+      "key_columns": ["url", "path", "primary_project", "hub_id", "hub_name"]
+    },
+    "dim_theme_seasonality": {
+      "role": "Dimension Table",
+      "description": "Dữ liệu 236 theme với khối lượng tìm kiếm và hệ số mùa vụ 12 tháng (m1 đến m12)",
+      "key_columns": ["theme_id", "name", "sector", "pillar", "volume", "m1", "m2", "m3", "m4", "m5", "m6", "m7", "m8", "m9", "m10", "m11", "m12"]
+    },
+    "gsc_search_analytics": {
+      "role": "Fact Table",
+      "description": "Dữ liệu tìm kiếm tự nhiên: URL, Query, Clicks, Impressions, CTR, Position",
+      "key_columns": ["page_url", "query", "clicks", "impressions", "ctr", "position"]
+    },
+    "gsc_keyword_ranking": {
+      "role": "Fact Table",
+      "description": "Thứ hạng và điểm cơ hội từ khóa toàn bộ hệ sinh thái MoMo",
+      "key_columns": ["query", "clicks", "impressions", "position", "opportunity_score"]
+    },
+    "v_hub_performance": {
+      "role": "Analytical View",
+      "description": "View tổng hợp Sessions, Engagement Rate, W2A Clicks, và W2A CVR (%) cho từng Hub",
+      "key_columns": ["hub_name", "active_pages", "total_sessions", "engagement_rate_pct", "w2a_clicks", "w2a_cvr_pct"]
+    },
+    "v_keyword_quick_wins": {
+      "role": "Analytical View",
+      "description": "View tự động lọc từ khóa xếp hạng vị trí 4.0 - 15.0 có Impressions >= 500 và CTR < 5%",
+      "key_columns": ["query", "page_url", "impressions", "clicks", "ctr_pct", "avg_position", "potential_gain"]
+    }
+  }
+}

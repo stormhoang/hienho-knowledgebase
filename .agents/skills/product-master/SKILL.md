@@ -95,5 +95,5 @@ Khi xử lý các bài toán tích hợp GenAI / Agentic:
 
 * Từ điển thuật ngữ chuẩn: [`03_SKILLS/mospark-glossary.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS/mospark-glossary.md)
 * Quy chuẩn viết BRD: [`03_SKILLS/brd-momo.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS/brd-momo.md)
-* Chỉ đạo chiến lược: [`MEETING_RECAPS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/MEETING_RECAPS.md)
+* Chỉ đạo chiến lược: [`MEETING_RECAPS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/meetings/MEETING_RECAPS.md)
 * Quy tắc ứng xử Agent: [`AGENTS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/AGENTS.md)

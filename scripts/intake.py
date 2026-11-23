@@ -166,7 +166,7 @@ def process_file(file_path, do_push=False):
 
     # Validate tracking truoc khi push
     if fmt == registry.TRACKING:
-        summary_path = os.path.join(DATA_DIR, "monthly_10_2026_consolidated.json")
+        summary_path = os.path.join(DATA_DIR, "monthly", "monthly_10_2026_consolidated.json")
         if os.path.exists(summary_path):
             with open(summary_path, "r", encoding="utf-8") as f:
                 summary = json.load(f)

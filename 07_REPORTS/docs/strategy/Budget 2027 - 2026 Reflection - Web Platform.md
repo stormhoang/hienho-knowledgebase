@@ -8,7 +8,7 @@
 
 1. **Web Platform chuyển dịch vai trò.** Năm 2026, Web Platform vận hành hạ tầng dùng chung và đồng hành 3 Hub: Cinema, Financial, Vehicle. 16 Cell Teams được Web Platform hỗ trợ, trong đó 6 tự vận hành Mini Web qua MoSpark. Hạ tầng đã chuyển từ AWS sang FPT Cloud 100% (36 frontend, 11 backend, 3 database), không có downtime.
 
-2. **Traffic Web tạo ra Install, MAU và GMV ngoài PageView.** Cinema ghi nhận ==174.094 vé== và ==16,41 tỷ đ GMV== từ luồng Web-to-App trong 10 tháng. Lượt cài đặt từ Web tăng từ 5.239 (T7) lên 11.143 (T10), gấp 2,1 lần. Tháng 10 có 3.902 đăng ký và 1.284 MAU.
+2. **Traffic Web tạo ra Install, MAU và GMV ngoài PageView.** Cinema ghi nhận ==168.884 vé== và ==15,91 tỷ đ GMV== từ luồng Web-to-App trong 10 tháng. Lượt cài đặt từ Web tăng từ 5.239 (T7) lên 11.143 (T10), gấp 2,1 lần. Tháng 10 có 3.902 đăng ký và 1.284 MAU.
 
 3. **Đo lường Full Funnel Web-to-App đã vận hành.** Tracking GA4 đưa vào BigQuery và Dashboard, chạy từ T5/2026. 100% liên kết đã chuẩn hóa sang OneLink, và Identity Platform theo dõi người dùng từ Web sang App. Tháng 10, !!35,0%!! lượt cài đặt đăng ký và 61,2% đăng ký liên kết ngân hàng. Điểm nghẽn nằm ở bước cài đặt sang đăng ký.
 
@@ -99,7 +99,9 @@ Các bảng Hub dưới đây đọc theo phễu: Impression → PageView → ch
 | T8/2026 | 12.784.452 | 832.460 | 8.754 | 4.016 | 0,82 |
 | T9/2026 | 11.288.422 | 1.220.075 | 20.983 | 9.807 | 2,01 |
 | T10/2026 | 10.951.659 | 1.132.721 | 26.789 | 12.547 | 2,57 |
-| **Lũy kế 10 tháng** | **122.008.146** | **9.098.856** | **174.094** | **80.050** | **16,41** |
+| **Lũy kế 10 tháng** | **122.008.146** | **9.098.856** | **168.884** | **77.625** | **15,91** |
+
+- Lũy kế vé, đơn hàng, GMV lấy theo Dashboard In-App range T1-T10 (chốt 18/11/2026). Cộng các dòng tháng ra 174.094 vé / 80.050 đơn / 16,41 tỷ, cao hơn đúng bằng dòng T7; đang đối soát.
 
 - So với mục tiêu tháng: T9 đạt 1.220.075 PageView, cao hơn mục tiêu 1,12M khoảng 9%.
 - Tổng PageView 10 tháng: 9,1M, là cơ sở để tính tỷ lệ vé và GMV trên PageView trong mục 3.5.
@@ -283,7 +285,7 @@ SoV = Impression của MoMo trên Google Search chia cho lượt tìm kiếm th�
 
 ### 3.2. Tiền đề kế thừa từ 2026
 
-- **Web tạo giao dịch có GMV:** Cinema 16,41 tỷ đ GMV từ luồng Web-to-App trong 10 tháng; BHYT 2.643 người mua, 86% chốt ngay trên Web; eSIM du lịch 824 giao dịch, 160,4 triệu đ GMV; VCX 71 đơn, khoảng 462 triệu đ GMV. 2027 cần đặt mục tiêu GMV theo từng sản phẩm.
+- **Web tạo giao dịch có GMV:** Cinema 15,91 tỷ đ GMV từ luồng Web-to-App trong 10 tháng; BHYT 2.643 người mua, 86% chốt ngay trên Web; eSIM du lịch 824 giao dịch, 160,4 triệu đ GMV; VCX 71 đơn, khoảng 462 triệu đ GMV. 2027 cần đặt mục tiêu GMV theo từng sản phẩm.
 - **Web tạo người dùng chất lượng:** lượt cài đặt từ Web tăng liên tục 3 tháng gần nhất. 2027 Web Platform cam kết Business Metrics, không chỉ Web Metrics.
 - **Công cụ tương tác hơn nội dung tĩnh:** CIC Simulator tăng 7 lần trong 3 tháng, Phạt Nguội đạt CTR 24,3%, blog tĩnh giảm đều. 2027 áp dụng Utility-first cho toàn bộ Hub.
 - **GEO là kênh mới:** 660 trích dẫn từ AI; ChatGPT chiếm 95,6% lưu lượng GEO tháng 10. Web Platform đã có playbook, 2027 mở rộng.

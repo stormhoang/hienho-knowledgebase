@@ -19,7 +19,7 @@ Khi người dùng đưa ra câu lệnh:
    - Script tự động tìm file mới nhất trong `/Users/hienhv/Downloads/` có dạng `*[Ww]eb*[Pp]erformance*[Tt]racking*.xlsx` theo thời gian `mtime`.
    - Tự động nhận diện số ngày lũy kế MTD (MTD Days).
    - Tự động lưu bản ghi sạch vào SSOT [web_performance_tracking.xlsx](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/web_performance_tracking.xlsx).
-   - Tự động khởi tạo JSON Snapshot tại `07_REPORTS/data/monthly_MM_YYYY_mtd_XXd.json`.
+   - Tự động khởi tạo JSON Snapshot tại `07_REPORTS/data/monthly/monthly_MM_YYYY_mtd_XXd.json`.
 
 2. **Cập Nhật Tài Liệu SSOT Trong Repository:**
    - Cập nhật [WEB_PERFORMANCE_TRACKING_MASTER.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md).

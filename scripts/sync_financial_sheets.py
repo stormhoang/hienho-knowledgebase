@@ -12,7 +12,10 @@ from pathlib import Path
 import openpyxl
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-CREDS_FILE = BASE_DIR / "07_REPORTS" / "data" / "credentials" / "ga4-credentials.json"
+_CREDS_DIR = BASE_DIR / "07_REPORTS" / "data" / "credentials"
+CREDS_FILE = next((p for p in (_CREDS_DIR / "ga4-credentials.json",
+                              _CREDS_DIR / "ga4-credentials.json.disabled") if p.exists()),
+                  _CREDS_DIR / "ga4-credentials.json")
 TOKEN_FILE = BASE_DIR / "07_REPORTS" / "data" / "credentials" / "gdrive-token.json"
 EXCEL_PATH = BASE_DIR / "05_HUBS" / "financial" / "financial-hub-roadmap.xlsx"
 SPREADSHEET_ID = "1_AG4otSTXH7ontpPL0zjylYgVfxOozvoSc5PziUPM6A"

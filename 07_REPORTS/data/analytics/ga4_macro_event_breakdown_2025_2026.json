@@ -1,0 +1,1300 @@
+{
+  "_meta": {
+    "title": "GA4 Macro Event Breakdown (2025-10-01 to 2026-11-19)",
+    "source_file": "/Users/hienhv/Downloads/download.csv",
+    "total_event_count": 220248605,
+    "total_views": 46019187,
+    "date_range": "20251001-20261119"
+  },
+  "top_events": [
+    {
+      "event_name": "",
+      "count": 220248605,
+      "views": 46019187,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "page_view",
+      "count": 44645223,
+      "views": 44645223,
+      "unique_paths_count": 9548
+    },
+    {
+      "event_name": "session_start",
+      "count": 29955603,
+      "views": 0,
+      "unique_paths_count": 7413
+    },
+    {
+      "event_name": "scroll",
+      "count": 23061961,
+      "views": 0,
+      "unique_paths_count": 5376
+    },
+    {
+      "event_name": "first_visit",
+      "count": 20289452,
+      "views": 0,
+      "unique_paths_count": 6175
+    },
+    {
+      "event_name": "click_to_app",
+      "count": 20066048,
+      "views": 0,
+      "unique_paths_count": 5107
+    },
+    {
+      "event_name": "webads_balloon",
+      "count": 13697245,
+      "views": 0,
+      "unique_paths_count": 3947
+    },
+    {
+      "event_name": "user_engagement",
+      "count": 12305206,
+      "views": 0,
+      "unique_paths_count": 6086
+    },
+    {
+      "event_name": "floatads_view",
+      "count": 7449945,
+      "views": 0,
+      "unique_paths_count": 2969
+    },
+    {
+      "event_name": "click_link_url",
+      "count": 6516914,
+      "views": 0,
+      "unique_paths_count": 2318
+    },
+    {
+      "event_name": "click_cta",
+      "count": 5940177,
+      "views": 0,
+      "unique_paths_count": 1439
+    },
+    {
+      "event_name": "engage_product_funnel",
+      "count": 5937348,
+      "views": 0,
+      "unique_paths_count": 666
+    },
+    {
+      "event_name": "funnel_start",
+      "count": 3332373,
+      "views": 0,
+      "unique_paths_count": 568
+    },
+    {
+      "event_name": "popup_view",
+      "count": 3138420,
+      "views": 0,
+      "unique_paths_count": 144
+    },
+    {
+      "event_name": "component_view",
+      "count": 2280014,
+      "views": 0,
+      "unique_paths_count": 592
+    },
+    {
+      "event_name": "component_click_cta",
+      "count": 1388397,
+      "views": 0,
+      "unique_paths_count": 522
+    },
+    {
+      "event_name": "video_progress",
+      "count": 1316589,
+      "views": 0,
+      "unique_paths_count": 803
+    },
+    {
+      "event_name": "form_start",
+      "count": 1138562,
+      "views": 0,
+      "unique_paths_count": 142
+    },
+    {
+      "event_name": "bhyt_form_view",
+      "count": 1090809,
+      "views": 0,
+      "unique_paths_count": 33
+    },
+    {
+      "event_name": "click_outbound_link",
+      "count": 988780,
+      "views": 0,
+      "unique_paths_count": 257
+    },
+    {
+      "event_name": "undefined",
+      "count": 946397,
+      "views": 0,
+      "unique_paths_count": 739
+    },
+    {
+      "event_name": "user_identity_init",
+      "count": 624647,
+      "views": 0,
+      "unique_paths_count": 496
+    },
+    {
+      "event_name": "video_start",
+      "count": 570856,
+      "views": 0,
+      "unique_paths_count": 719
+    },
+    {
+      "event_name": "quyt_screen_view",
+      "count": 512548,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "webads_balloon_view",
+      "count": 489905,
+      "views": 0,
+      "unique_paths_count": 789
+    },
+    {
+      "event_name": "gtm.dom",
+      "count": 283616,
+      "views": 0,
+      "unique_paths_count": 343
+    },
+    {
+      "event_name": "floatads_cta_click",
+      "count": 270501,
+      "views": 0,
+      "unique_paths_count": 230
+    },
+    {
+      "event_name": "floatads_close",
+      "count": 206861,
+      "views": 0,
+      "unique_paths_count": 480
+    },
+    {
+      "event_name": "funnel_complete",
+      "count": 195279,
+      "views": 0,
+      "unique_paths_count": 326
+    },
+    {
+      "event_name": "bus_operator_view",
+      "count": 190968,
+      "views": 0,
+      "unique_paths_count": 767
+    },
+    {
+      "event_name": "travelsim_package_impression",
+      "count": 179004,
+      "views": 0,
+      "unique_paths_count": 50
+    },
+    {
+      "event_name": "afterLoad",
+      "count": 169175,
+      "views": 0,
+      "unique_paths_count": 309
+    },
+    {
+      "event_name": "view_search_results",
+      "count": 152028,
+      "views": 0,
+      "unique_paths_count": 2
+    },
+    {
+      "event_name": "banner_click",
+      "count": 151031,
+      "views": 0,
+      "unique_paths_count": 21
+    },
+    {
+      "event_name": "webads_popup_view",
+      "count": 141401,
+      "views": 0,
+      "unique_paths_count": 435
+    },
+    {
+      "event_name": "form_submit",
+      "count": 128363,
+      "views": 0,
+      "unique_paths_count": 24
+    },
+    {
+      "event_name": "redirect_cta",
+      "count": 127312,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "bus_searchroute_submit",
+      "count": 116914,
+      "views": 0,
+      "unique_paths_count": 440
+    },
+    {
+      "event_name": "webads_popup_close",
+      "count": 107246,
+      "views": 0,
+      "unique_paths_count": 393
+    },
+    {
+      "event_name": "gmc_1vuquyt_clickplay",
+      "count": 78101,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "vts_cta_h1",
+      "count": 77350,
+      "views": 0,
+      "unique_paths_count": 6
+    },
+    {
+      "event_name": "video_complete",
+      "count": 70978,
+      "views": 0,
+      "unique_paths_count": 238
+    },
+    {
+      "event_name": "copy_promocode",
+      "count": 65659,
+      "views": 0,
+      "unique_paths_count": 74
+    },
+    {
+      "event_name": "view_promotion",
+      "count": 64288,
+      "views": 0,
+      "unique_paths_count": 4
+    },
+    {
+      "event_name": "BannerView",
+      "count": 64218,
+      "views": 0,
+      "unique_paths_count": 4
+    },
+    {
+      "event_name": "travelsim_bestseller_sku_impression",
+      "count": 61231,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "bhyt_form_submit",
+      "count": 58487,
+      "views": 0,
+      "unique_paths_count": 9
+    },
+    {
+      "event_name": "bhyt_popup_noti",
+      "count": 57199,
+      "views": 0,
+      "unique_paths_count": 8
+    },
+    {
+      "event_name": "bus_operator_select",
+      "count": 55172,
+      "views": 0,
+      "unique_paths_count": 277
+    },
+    {
+      "event_name": "bus_seatmap_view",
+      "count": 50999,
+      "views": 0,
+      "unique_paths_count": 267
+    },
+    {
+      "event_name": "vts_click_viewguide",
+      "count": 45804,
+      "views": 0,
+      "unique_paths_count": 5
+    },
+    {
+      "event_name": "bhxm_form_view",
+      "count": 43090,
+      "views": 0,
+      "unique_paths_count": 4
+    },
+    {
+      "event_name": "vts_cta_topnavi",
+      "count": 41159,
+      "views": 0,
+      "unique_paths_count": 4
+    },
+    {
+      "event_name": "vts_cta_footer",
+      "count": 37720,
+      "views": 0,
+      "unique_paths_count": 11
+    },
+    {
+      "event_name": "travelsim_home_view",
+      "count": 25323,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "travelsim_bestseller_detail_view",
+      "count": 20948,
+      "views": 0,
+      "unique_paths_count": 20
+    },
+    {
+      "event_name": "gmc_1vuquyt_install",
+      "count": 20011,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "web_vehicle_hub_view",
+      "count": 19443,
+      "views": 0,
+      "unique_paths_count": 8
+    },
+    {
+      "event_name": "travelsim_search_submit",
+      "count": 18648,
+      "views": 0,
+      "unique_paths_count": 2
+    },
+    {
+      "event_name": "news-project-event",
+      "count": 18530,
+      "views": 0,
+      "unique_paths_count": 25
+    },
+    {
+      "event_name": "travelsim_detail_view",
+      "count": 18215,
+      "views": 0,
+      "unique_paths_count": 19
+    },
+    {
+      "event_name": "CreateOrder",
+      "count": 15616,
+      "views": 0,
+      "unique_paths_count": 2
+    },
+    {
+      "event_name": "_like_film_conan",
+      "count": 14945,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "GA4-Tracuuphatnguoi-popup_open",
+      "count": 14748,
+      "views": 0,
+      "unique_paths_count": 3
+    },
+    {
+      "event_name": "adsblog_click",
+      "count": 14322,
+      "views": 0,
+      "unique_paths_count": 27
+    },
+    {
+      "event_name": "ContinueOrder",
+      "count": 13937,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "popup_click_cta",
+      "count": 13812,
+      "views": 0,
+      "unique_paths_count": 54
+    },
+    {
+      "event_name": "purchase",
+      "count": 13780,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "travelsim_view_list_countries",
+      "count": 13762,
+      "views": 0,
+      "unique_paths_count": 2
+    },
+    {
+      "event_name": "popup.cinema.seat-popcorn",
+      "count": 13380,
+      "views": 0,
+      "unique_paths_count": 65
+    },
+    {
+      "event_name": "_1missionminions",
+      "count": 12939,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "webads_balloon_click",
+      "count": 12752,
+      "views": 0,
+      "unique_paths_count": 17
+    },
+    {
+      "event_name": "bus_paxinfo_view",
+      "count": 12682,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "blog-view",
+      "count": 12513,
+      "views": 0,
+      "unique_paths_count": 44
+    },
+    {
+      "event_name": "blog-project-event",
+      "count": 11644,
+      "views": 0,
+      "unique_paths_count": 42
+    },
+    {
+      "event_name": "floatads_details_click",
+      "count": 11479,
+      "views": 0,
+      "unique_paths_count": 20
+    },
+    {
+      "event_name": "_flipcard_conan",
+      "count": 11261,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "bhyt_renew_click",
+      "count": 9887,
+      "views": 0,
+      "unique_paths_count": 2
+    },
+    {
+      "event_name": "bhxm_information_view",
+      "count": 9616,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "sim_search_submit",
+      "count": 9393,
+      "views": 0,
+      "unique_paths_count": 2
+    },
+    {
+      "event_name": "bhyt_payment_progress",
+      "count": 9236,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "bus_pickdrops_view",
+      "count": 9159,
+      "views": 0,
+      "unique_paths_count": 67
+    },
+    {
+      "event_name": "bus_seatmap_select",
+      "count": 9149,
+      "views": 0,
+      "unique_paths_count": 67
+    },
+    {
+      "event_name": "NewTransSuccess",
+      "count": 9101,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "bhxm_form_submit",
+      "count": 8834,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "webads_balloon_close",
+      "count": 8683,
+      "views": 0,
+      "unique_paths_count": 33
+    },
+    {
+      "event_name": "travelsim_package_click",
+      "count": 8179,
+      "views": 0,
+      "unique_paths_count": 15
+    },
+    {
+      "event_name": "bhtv_quote_form_submit",
+      "count": 6091,
+      "views": 0,
+      "unique_paths_count": 4
+    },
+    {
+      "event_name": "bus_paxinfo_submit",
+      "count": 5773,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "_2missionminions",
+      "count": 5674,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "sim_listing_view",
+      "count": 5194,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "_5missionminions",
+      "count": 4711,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "travelsim_checkout_view",
+      "count": 4663,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "travelsim_countries_suggest_click",
+      "count": 4599,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "bus_payment_progress",
+      "count": 4367,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "bus_click_to_buy",
+      "count": 4301,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "bhxm_image_upload",
+      "count": 4281,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "bhyt_payment_click",
+      "count": 4163,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "sim_search_suggest_click",
+      "count": 4041,
+      "views": 0,
+      "unique_paths_count": 2
+    },
+    {
+      "event_name": "bhtv_quote_form_view",
+      "count": 3817,
+      "views": 0,
+      "unique_paths_count": 3
+    },
+    {
+      "event_name": "_film_info_conan",
+      "count": 3659,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "vts-cellphones-muangay",
+      "count": 3649,
+      "views": 0,
+      "unique_paths_count": 4
+    },
+    {
+      "event_name": "bhyt_payment_result_view",
+      "count": 3568,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "travelsim_country_select",
+      "count": 3381,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "tcbh_search_result_view",
+      "count": 3249,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "tcbh_coi_click",
+      "count": 3024,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "vay-nhanh-event-view",
+      "count": 2962,
+      "views": 0,
+      "unique_paths_count": 5
+    },
+    {
+      "event_name": "_review_conan",
+      "count": 2856,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "tcbh_search_submit",
+      "count": 2841,
+      "views": 0,
+      "unique_paths_count": 2
+    },
+    {
+      "event_name": "Login",
+      "count": 2834,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "travelsim_bestseller_sku_click",
+      "count": 2822,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "quyt_share_click",
+      "count": 2677,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "bhxm_payment_progress",
+      "count": 2667,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "mega25_cta_footer",
+      "count": 2653,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "bhxm_image_scan",
+      "count": 2620,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "bus_pickdrops_select",
+      "count": 2603,
+      "views": 0,
+      "unique_paths_count": 19
+    },
+    {
+      "event_name": "travelsim_add_to_cart",
+      "count": 2379,
+      "views": 0,
+      "unique_paths_count": 6
+    },
+    {
+      "event_name": "newuser-event",
+      "count": 2367,
+      "views": 0,
+      "unique_paths_count": 3
+    },
+    {
+      "event_name": "_3missionminions",
+      "count": 2217,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "bhxm_payment_click",
+      "count": 2182,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "bhxm_image_error_view",
+      "count": 2120,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "tragop_vts_click_thamkhao",
+      "count": 2081,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "vay-nhanh-event-click",
+      "count": 2015,
+      "views": 0,
+      "unique_paths_count": 2
+    },
+    {
+      "event_name": "webads_balloon_details",
+      "count": 1978,
+      "views": 0,
+      "unique_paths_count": 5
+    },
+    {
+      "event_name": "sim_number_select",
+      "count": 1755,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "cta_follow_mm",
+      "count": 1708,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "bhxm_manual_input",
+      "count": 1629,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "_nhsnh_secret_2_9",
+      "count": 1624,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "bhxm_payment_result_view",
+      "count": 1597,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "tcbh_policy_click",
+      "count": 1569,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "_1_mission_spiderman",
+      "count": 1541,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "_like_film_spiderman",
+      "count": 1535,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "popup.article",
+      "count": 1508,
+      "views": 0,
+      "unique_paths_count": 2
+    },
+    {
+      "event_name": "_1_mission_conan",
+      "count": 1454,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "travelsim_checkout_submit",
+      "count": 1424,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "travelsim_payment_processing",
+      "count": 1362,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "bus_transaction_result",
+      "count": 1310,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "bhyt_transaction_save",
+      "count": 1251,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "vts-ss-mua-ngay",
+      "count": 1243,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "_2_mission_conan",
+      "count": 1210,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "material-car-insurance-quote",
+      "count": 1210,
+      "views": 0,
+      "unique_paths_count": 2
+    },
+    {
+      "event_name": "vts_cta_newuser",
+      "count": 1140,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "bhxm_contract_click",
+      "count": 1065,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "web_traffic_fine_lookup_form_submit",
+      "count": 1048,
+      "views": 0,
+      "unique_paths_count": 2
+    },
+    {
+      "event_name": "webads_popup_click",
+      "count": 1020,
+      "views": 0,
+      "unique_paths_count": 4
+    },
+    {
+      "event_name": "_nhsnh_flipcard",
+      "count": 1018,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "travelsim_transaction_result",
+      "count": 996,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "tragop-vts-simulation-view",
+      "count": 981,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "bus_return_operator_select",
+      "count": 888,
+      "views": 0,
+      "unique_paths_count": 4
+    },
+    {
+      "event_name": "bus_return_seatmap_view",
+      "count": 887,
+      "views": 0,
+      "unique_paths_count": 4
+    },
+    {
+      "event_name": "utility_track",
+      "count": 860,
+      "views": 0,
+      "unique_paths_count": 3
+    },
+    {
+      "event_name": "popup_copy_promocode",
+      "count": 813,
+      "views": 0,
+      "unique_paths_count": 6
+    },
+    {
+      "event_name": "bus_return_operator_view",
+      "count": 637,
+      "views": 0,
+      "unique_paths_count": 4
+    },
+    {
+      "event_name": "_4missionminions",
+      "count": 625,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "_cta_mua_ve_spiderman",
+      "count": 578,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "bhyt_remind_contact_submit",
+      "count": 559,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "bhxm_information_edit",
+      "count": 558,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "sim_click_to_buy",
+      "count": 548,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "mega25_cta_h1",
+      "count": 547,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "bhtv_get_quote_view",
+      "count": 545,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "bhyt_app_download",
+      "count": 535,
+      "views": 0,
+      "unique_paths_count": 2
+    },
+    {
+      "event_name": "_nhsnh__oi_card",
+      "count": 507,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "file_download",
+      "count": 447,
+      "views": 0,
+      "unique_paths_count": 3
+    },
+    {
+      "event_name": "sim_plan_select",
+      "count": 441,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "bus_payment_timeout",
+      "count": 426,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "bhyt_form_retry",
+      "count": 401,
+      "views": 0,
+      "unique_paths_count": 2
+    },
+    {
+      "event_name": "bhxm_upload_guideline_click",
+      "count": 397,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "tracking-vts-samsung-cta-h1",
+      "count": 390,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "tcbh_product_click",
+      "count": 370,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "_tst_spiderman",
+      "count": 360,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "_3_mission_conan",
+      "count": 354,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "travelsim_bestseller_buy_now_click",
+      "count": 343,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "bhxm_coi_description_click",
+      "count": 276,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "bhtv_info_form",
+      "count": 266,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "bus_return_pickdrops_view",
+      "count": 258,
+      "views": 0,
+      "unique_paths_count": 2
+    },
+    {
+      "event_name": "bus_return_seatmap_select",
+      "count": 258,
+      "views": 0,
+      "unique_paths_count": 2
+    },
+    {
+      "event_name": "bhxm_engine_guideline_click",
+      "count": 253,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "bhtv_qlbs_click",
+      "count": 211,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "tragop-vts-product-list-view",
+      "count": 187,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "sim_nice_number_select",
+      "count": 187,
+      "views": 0,
+      "unique_paths_count": 2
+    },
+    {
+      "event_name": "vts-samsung-cta-h1",
+      "count": 160,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "ipos_consent_update",
+      "count": 159,
+      "views": 0,
+      "unique_paths_count": 2
+    },
+    {
+      "event_name": "bus_return_pickdrops_select",
+      "count": 151,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "bhtv_insurer_details_view",
+      "count": 107,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "vts-ss-mo-ngay",
+      "count": 107,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "web_car_insur_cta_click",
+      "count": 103,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "view_item_list",
+      "count": 97,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "Register",
+      "count": 83,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "bhtv_choose_quote",
+      "count": 72,
+      "views": 0,
+      "unique_paths_count": 1
+    },
+    {
+      "event_name": "tragop-vts-product-list-cta",
+      "count": 71,
+      "views": 0,
+      "unique_paths_count": 1
+    }
+  ],
+  "click_to_app_deepdive": {
+    "total": 20066048,
+    "top_channels": [
+      [
+        "Organic Search",
+        11257984
+      ],
+      [
+        "Paid Search",
+        2730789
+      ],
+      [
+        "Direct",
+        2559088
+      ],
+      [
+        "App Referral",
+        1557497
+      ],
+      [
+        "Unassigned",
+        842379
+      ],
+      [
+        "Paid Social",
+        615953
+      ],
+      [
+        "Organic Social",
+        331388
+      ],
+      [
+        "Cross-network",
+        64493
+      ],
+      [
+        "AI Referrals",
+        54124
+      ],
+      [
+        "Paid Other",
+        39597
+      ],
+      [
+        "Display",
+        8627
+      ],
+      [
+        "Organic Video",
+        4129
+      ]
+    ],
+    "top_pages": [
+      {
+        "path": "/nap-xu-tiktok",
+        "click_to_app": 2301374
+      },
+      {
+        "path": "/",
+        "click_to_app": 1794765
+      },
+      {
+        "path": "/tin-tuc/tin-tuc-su-kien/nap-game-sieu-hoi-thang-nay-giam-den-10000d-khi-8081",
+        "click_to_app": 1164477
+      },
+      {
+        "path": "/vay-nhanh",
+        "click_to_app": 633930
+      },
+      {
+        "path": "/nuoc",
+        "click_to_app": 350100
+      },
+      {
+        "path": "/cinema/ghost-in-the-cell-25083",
+        "click_to_app": 287457
+      },
+      {
+        "path": "/vi-tra-sau/samsung",
+        "click_to_app": 270618
+      },
+      {
+        "path": "/vi-tra-sau",
+        "click_to_app": 243818
+      },
+      {
+        "path": "/tin-tuc/khuyen-mai/giam-20k-nang-cap-app-nap-game-app-store-khi-lan-8402",
+        "click_to_app": 242963
+      },
+      {
+        "path": "/cinema/lich-chieu",
+        "click_to_app": 225610
+      },
+      {
+        "path": "/cinema",
+        "click_to_app": 219356
+      },
+      {
+        "path": "/cinema/rap/bhd-star/bhd-star-long-khanh-216",
+        "click_to_app": 179628
+      },
+      {
+        "path": "/cinema/the-hell-trotter-24856",
+        "click_to_app": 161480
+      },
+      {
+        "path": "/cinema/rap/cgv/cgv-aeon-mall-hai-phong-149",
+        "click_to_app": 151335
+      },
+      {
+        "path": "/phat-nguoi",
+        "click_to_app": 150961
+      },
+      {
+        "path": "/cinema/rap/cgv",
+        "click_to_app": 133301
+      },
+      {
+        "path": "/tin-tuc/khuyen-mai/chuong-trinh-gioi-thieu-ban-be-chuyen-tien-nhan-8930",
+        "click_to_app": 132146
+      },
+      {
+        "path": "/bonbon",
+        "click_to_app": 120612
+      },
+      {
+        "path": "/tin-tuc/khuyen-mai/mua-sim-chinh-chu-de-nhu-tro-ban-tay-vao-momo-la-7460",
+        "click_to_app": 119074
+      },
+      {
+        "path": "/nap-the-game",
+        "click_to_app": 113635
+      }
+    ]
+  },
+  "tai_app_deepdive": {
+    "events": {
+      "page_view": 14343,
+      "session_start": 4567,
+      "user_identity_init": 5202,
+      "first_visit": 3585,
+      "click_link_url": 2127,
+      "user_engagement": 2512,
+      "gtm.dom": 1065,
+      "afterLoad": 845,
+      "click_outbound_link": 1003,
+      "scroll": 77
+    }
+  }
+}
