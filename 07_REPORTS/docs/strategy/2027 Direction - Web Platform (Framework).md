@@ -16,9 +16,10 @@
 
 **Điểm cải thiện 2027**
 
-- **Thiết kế Microjourney cho các Utility.** 76% Install hiện đến từ một banner toàn trang. Mỗi Utility cần một Microjourney riêng: kết quả tra cứu mở thẳng đúng Service trong App qua OneLink, giữ đúng ngữ cảnh từ Out-App đến In-App. Mục tiêu giảm tỷ trọng banner xuống dưới 50%, quản lý bằng Ads Manager trên MoSpark.
-- **Giữ ngữ cảnh khi chuyển sang App.** Hơn 90% người chọn ghế Cinema bỏ dở ở bước thanh toán trong App; Bảo hiểm ô tô chỉ chốt 71 trên 2.118 lead. Microjourney cần mở App đúng bước và giữ nguyên lựa chọn đã có.
-- **Mở rộng GEO/AEO.** AI Overview và AI Assistant trả lời trực tiếp, Organic tăng 5,7% so với T9 (T10), chậm hơn Non-Paid tổng (+13,5%). GEO/AEO bổ sung cho SEO để giữ Traffic từ nhu cầu tìm kiếm.
+- **Cải tiến Utility theo từng Microjourney** để đóng góp Traffic vào App cho các Service liên quan. Utility đạt CTR 33,7-43,8% nhưng Click to App chênh lệch giữa các Service (T11: Điểm Tín Dụng 80,4%, Trung Tâm Tài Chính 5,4%).
+- **Cải tiến GEO/AEO.** AI Traffic mới chiếm 0,6% Non-Paid (T10) dù Click to App đạt 5,24% trên phiên, ngang Direct.
+- **Web to App Tracking cho từng Service.** Mỗi Microjourney cần OneLink riêng để đo Click to App và giao dịch theo Service trong App.
+- **Hiệu suất Web.** Uptime từ 99,9% và Core Web Vitals đạt ngưỡng cho mọi sản phẩm trên momo.vn, kể cả sản phẩm do Cell Team sở hữu.
 
 **Đề xuất 2027**
 
@@ -408,7 +409,7 @@ MoSpark cung cấp công cụ sản xuất và quản trị nội dung cho các 
 4. **Landing Page Builder (Scale và Integrate).** Mở rộng thư viện template cho Utility và chiến dịch, cho phép nhúng Utility và quiz vào trang, AI-assisted generation, A/B Testing ngay trên Builder, Variant fan-out và Multi-tenant để nhiều Cell Teams cùng dùng. Mỗi trang gắn một KPI rõ ràng. Success metrics: Time-to-launch dưới 1-2 ngày, Self-serve rate, tỷ lệ trang gắn KPI.
 5. **Auto Internal Link.** Nền tảng tự đề xuất và chèn liên kết nội bộ giữa các trang cùng cụm, và từ trang Utility sang nội dung liên quan, để Cell Teams không phải gắn tay. Ưu tiên cụm Phạt Nguội, vốn cần liên kết nội bộ để phục hồi Traffic.
 6. **Ads Manager.** Quản lý Offer ngay trong MoSpark: mỗi luồng tối đa một Offer, đặt sau khi user có kết quả, luôn bỏ qua được, giữ đúng ngữ cảnh từ Out-App đến In-App qua OneLink; giảm tỷ trọng Install từ banner từ 76% xuống dưới 50%. Tách chiến dịch theo ba trạng thái: chưa cài App, đã cài chưa đăng ký, đã đăng ký chưa liên kết ngân hàng. Ads Manager đa dạng định dạng quảng cáo (Balloon Ads, banner, thẻ quà theo intent) và có tính năng retargeting ads.
-7. **Utility Tracking và Chatbot.** Chuẩn hóa tham số cho 100% liên kết OneLink vào BigQuery, mở rộng Umami cho toàn bộ Mini Web và đối soát với GA4 hằng tháng. Chatbot và RAG Knowledge Base mở rộng trợ lý tư vấn Service trên Web.
+7. **Utility Tracking và Chatbot.** Chuẩn hóa tham số cho 100% liên kết OneLink vào BigQuery, cấp OneLink riêng cho từng Microjourney để đo Web to App theo từng Service trong App, mở rộng Umami cho toàn bộ Mini Web và đối soát với GA4 hằng tháng. Chatbot và RAG Knowledge Base mở rộng trợ lý tư vấn Service trên Web.
 8. **Identify (SSO): Gamification và New User Nurturing.** Gamification kế thừa chiến dịch Game Một Mùa Quýt, triển khai Gamification Điểm Tín Dụng CIC sau khi Pháp lý xác nhận khung giấy phép. New User Nurturing dựa trên Identity Platform đã chạy Production.
 
 #### Pillar 3: New User Acquisition
