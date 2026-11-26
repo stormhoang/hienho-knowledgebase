@@ -2,7 +2,7 @@
 
 ## 1. EXECUTIVE SUMMARY
 
-**Năm 2026 (YTD), Web đạt 36,91 triệu PageView, trong đó Non-Paid 29,09 triệu (chiếm 78,8% tổng PageView). Từ T1 đến T10, tổng PageView tăng 39% và Non-Paid tăng 53%; riêng T11 (đến 24/11), tổng PageView tăng 112,1% và Non-Paid tăng 108,6% so với cùng kỳ T11/2025. Web mang về 44.684 lượt cài App từ T7 đến T11 (đến 24/11). Năm 2027, Web là entry point từ out-app cho user chưa có App: Nurture user từ nhu cầu tìm kiếm trên Google và AI, chuyển đổi (Conversion) sang cài App và điều hướng đến các Service của MoMo theo định hướng Product-Led Growth. Web đặt KPI 2027 là 55,57 triệu PageView Non-Paid (+70% so với Forecast cả năm 2026: 32,77 triệu) và 30.000 Install mỗi tháng (+169% so với T10/2026: 11.143), khoảng 360.000 Install cả năm.**
+**Năm 2026, Web đạt 36,91 triệu PageView, trong đó Non-Paid 29,09 triệu (78,8%) và tăng 53% từ T1 đến T10, cùng 44.684 lượt cài App từ T7 đến T11. Năm 2027, Web là entry point từ out-app cho user chưa có App: Nurture user từ nhu cầu tìm kiếm trên Google và AI, chuyển đổi (Conversion) sang cài App và điều hướng đến các Service của MoMo theo định hướng Product-Led Growth. KPI 2027 là 55,57 triệu PageView Non-Paid (+70% so với Forecast 2026) và 30.000 Install mỗi tháng (+169% so với T10/2026), khoảng 360.000 Install cả năm.**
 
 **Kết quả 2026**
 
@@ -80,7 +80,7 @@ Giá trị kinh tế: thay vì mỗi Cell Team duy trì đội kỹ thuật Web 
 
 ### 2.2. Traffic Web: Non-Paid và Paid
 
-**Tổng quan Traffic Web, 2026 (YTD) và Forecast cả năm**
+**Tổng quan Traffic Web 2026 và Forecast cả năm**
 
 Web đạt 32,97M PV trong 10 tháng và lũy kế **36,91M PV** đến 24/11/2026 (gồm **29,09M Non-Paid** chiếm 78,8%, trong đó Organic 18,20M chiếm 62,6% Non-Paid; và **7,82M Paid**). Forecast cả năm 2026 đạt **40,69M PV** (Non-Paid 32,77M, Paid 7,92M). Tỷ trọng Non-Paid tăng dần khi Paid được tối ưu: 77-80% trong Q1-Q3, 86,9% trong tháng 10 và Forecast đạt ~80,5% cả năm (40,69M tổng = 32,77M Non-Paid + 7,92M Paid).
 
