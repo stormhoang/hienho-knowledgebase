@@ -408,21 +408,8 @@ def ingest_gsc(zip_or_dir_path, start_override=None, end_override=None, push_hub
             hub_repo = PAGE_MTD_HUB.parents[2]
             commit_files = ["data/analytics/page_mtd.json"]
             commit_msg = f"data(gsc): update MTD page metrics ({start_date} to {end_date}) into Hubs dashboard"
-            try:
-                import subprocess
-                subprocess.run(["git", "-C", str(hub_repo), "add"] + commit_files, check=True)
-                diff_chk = subprocess.run(["git", "-C", str(hub_repo), "diff", "--cached", "--quiet"])
-                if diff_chk.returncode != 0:
-                    subprocess.run(["git", "-C", str(hub_repo), "commit", "-m", commit_msg], check=True)
-                    push_res = subprocess.run(["git", "-C", str(hub_repo), "push", "origin", "main"], capture_output=True, text=True)
-                    if push_res.returncode == 0:
-                        print(f"  ✓ Đã commit và push page_mtd.json sang GitHub vanhien26/hubs-momo:main")
-                    else:
-                        print(f"  ⚠ Lưu ý push GitHub: {push_res.stderr.strip()}")
-                else:
-                    print("  ✓ Dữ liệu page_mtd.json trên Hubs repo đã ở trạng thái mới nhất, không có commit mới.")
-            except Exception as ge:
-                print(f"  ⚠ Lỗi commit/push Hubs: {ge}")
+            from scripts.lib.hub_push import commit_and_push_hub
+            commit_and_push_hub(hub_repo, commit_files, commit_msg)
         else:
             print("  ℹ Bỏ qua git commit/push Hubs (dùng --push-hubs để bật). File page_mtd.json đã ghi local.")
 
@@ -447,12 +434,14 @@ if __name__ == "__main__":
     ap.add_argument("--push-hubs", action="store_true", help="Commit + push page_mtd.json sang repo Hubs (mặc định KHÔNG push)")
     args = ap.parse_args()
 
-    if args.target.startswith("http://") or args.target.startswith("https://"):
-        export_date = __import__("datetime").date.today().isoformat()
-        export_dir = GSC_EXPORTS_DIR / export_date
-        export_dir.mkdir(parents=True, exist_ok=True)
-        dest_csv = export_dir / "Pages_full_20k.csv"
-        download_sheet_csv(args.target, dest_csv)
-        ingest_gsc(export_dir, start_override=args.start, end_override=args.end, push_hubs=args.push_hubs)
-    else:
-        ingest_gsc(args.target, start_override=args.start, end_override=args.end, push_hubs=args.push_hubs)
+    from scripts.lib.hub_sync_lock import hub_sync_lock
+    with hub_sync_lock("ingest_gsc_mtd"):
+        if args.target.startswith("http://") or args.target.startswith("https://"):
+            export_date = __import__("datetime").date.today().isoformat()
+            export_dir = GSC_EXPORTS_DIR / export_date
+            export_dir.mkdir(parents=True, exist_ok=True)
+            dest_csv = export_dir / "Pages_full_20k.csv"
+            download_sheet_csv(args.target, dest_csv)
+            ingest_gsc(export_dir, start_override=args.start, end_override=args.end, push_hubs=args.push_hubs)
+        else:
+            ingest_gsc(args.target, start_override=args.start, end_override=args.end, push_hubs=args.push_hubs)

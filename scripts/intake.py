@@ -45,6 +45,15 @@ from intake_parsers import registry, parse_tracking, parse_crawl, parse_backlink
 TRACKING_PV_MIN = 50_000
 TRACKING_PV_MAX = 20_000_000
 
+# Freshness targets cho file data tren repo Hub (react-web-momo).
+# (path tuong doi trong hub repo, nhan hien thi, max age gio, script refresh)
+HUB_FRESHNESS_TARGETS = [
+    ("lib/dashboard/web-data.json", "web-data.json (dashboard)", 48, "build-dashboard-data.py"),
+    ("lib/dashboard/summary.json", "summary.json (dashboard)", 48, "build-dashboard-data.py / ingest_ga4_daily.py"),
+    ("data/analytics/summary.json", "summary.json (analytics)", 48, "ingest_ga4_daily.py"),
+    ("data/analytics/page_mtd.json", "page_mtd.json (analytics)", 48, "ingest_gsc_mtd.py"),
+]
+
 
 def sha256_of(path):
     h = hashlib.sha256()
@@ -114,6 +123,12 @@ def run_parser(fmt, file_path):
 
 def push_to_hubs(targets):
     """Go endpoint co san cua hubs-momo. Tra ve (ok, message)."""
+    from lib.hub_sync_lock import hub_sync_lock
+    with hub_sync_lock("intake_push"):
+        return _push_to_hubs(targets)
+
+
+def _push_to_hubs(targets):
     if not os.path.exists(HUBS_REPO):
         return False, f"Khong tim thay hubs-momo tai {HUBS_REPO}"
     msgs = []
@@ -222,15 +237,17 @@ def verify_health():
     hubs_ok = os.path.exists(HUBS_REPO)
     checks.append(("hubs-momo repo", hubs_ok, HUBS_REPO))
 
-    webdata = os.path.join(HUBS_REPO, "lib/dashboard/web-data.json")
-    exists = os.path.exists(webdata)
-    fresh = False
-    if exists:
-        age_h = (datetime.now().timestamp() - os.path.getmtime(webdata)) / 3600
-        fresh = age_h < 24 * 7
-        checks.append(("web-data.json (dashboard)", exists, f"age {age_h:.1f}h, fresh={fresh}"))
-    else:
-        checks.append(("web-data.json (dashboard)", exists, webdata))
+    for rel, label, max_age_h, hint in HUB_FRESHNESS_TARGETS:
+        fpath = os.path.join(HUBS_REPO, rel)
+        if not os.path.exists(fpath):
+            checks.append((label, False, f"missing: {fpath}"))
+            continue
+        age_h = (datetime.now().timestamp() - os.path.getmtime(fpath)) / 3600
+        fresh = age_h <= max_age_h
+        detail = f"age {age_h:.1f}h / max {max_age_h}h"
+        if not fresh:
+            detail += f" - STALE, refresh: {hint}"
+        checks.append((label, fresh, detail))
 
     intake_exists = os.path.isdir(INTAKE_DIR)
     checks.append(("intake drop zone", intake_exists, INTAKE_DIR))

@@ -366,4 +366,7 @@ def main():
     print(f"Hoàn tất: Đã đồng bộ {len(tasks)} đầu việc bằng ngôn ngữ tự nhiên thuần túy, không có bất kỳ ký hiệu mã hóa nào.")
 
 if __name__ == "__main__":
-    main()
+    sys.path.insert(0, BASE_DIR)
+    from scripts.lib.hub_sync_lock import hub_sync_lock
+    with hub_sync_lock("sync_agent_tasks"):
+        main()

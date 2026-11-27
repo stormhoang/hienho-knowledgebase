@@ -252,7 +252,10 @@ def parse_and_sync():
     return summary
 
 if __name__ == "__main__":
-    res = parse_and_sync()
+    sys.path.insert(0, BASE_DIR)
+    from scripts.lib.hub_sync_lock import hub_sync_lock
+    with hub_sync_lock("sync_tracking_report"):
+        res = parse_and_sync()
     print(f"\n=== KẾT QUẢ TRÍCH XUẤT TỰ ĐỘNG THÁNG 10 (MTD {res['days_elapsed']} NGÀY - HỢP NHẤT 3 TRỤ CỘT) ===")
     print(f"- Actual MTD: {res['actual_mtd_pv']:,} / Target: {res['target_oct_pv']:,} ({res['progress_pct']}%)")
     print(f"- Run-rate Forecast 31d: {res['forecast_31d']:,.0f} ({res['forecast_pct']}%)")
