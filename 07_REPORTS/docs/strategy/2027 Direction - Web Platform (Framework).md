@@ -412,6 +412,7 @@ Các đòn bẩy tăng trưởng của hạng mục này:
 3. **Chất lượng kỹ thuật là điều kiện xuất bản.** Core Web Vitals đạt ngưỡng (LCP dưới 2,5 giây, INP dưới 200ms, CLS dưới 0,1) và mục tiêu index 80% sau 30 ngày.
 4. **E-E-A-T cho nội dung tài chính (YMYL).** Foundation Checklist là điều kiện bắt buộc trước khi xuất bản, kể cả nội dung của Inbound và Agency; chính sách tác giả có tên cho nội dung tài chính.
 5. **GEO/AEO cho mọi dự án (kết hợp On-page và chủ động Off-page).** Chuẩn hóa Schema.org, llms.txt và trang minh bạch pháp lý YMYL, đồng thời **chủ động triển khai Off-page** (Digital PR, xây dựng Entity và mở rộng trích dẫn từ báo chí, nguồn uy tín bên ngoài) để cả Google Search và AI Agent ưu tiên trích dẫn momo.vn. Mục tiêu: AI Traffic 46.000 PV bình quân mỗi tháng. Mỗi hạng mục pilot một quý với KPI rõ: đạt ngưỡng thì mở rộng, không đạt thì dừng.
+6. **Quản trị Content Plan của momo.vn.** Web Platform đặt chuẩn và duyệt Content Plan cho mọi đội: Inbound sản xuất theo brief, nội dung của Agency đi qua Inbound review trước khi Web Platform duyệt. Content Plan bám theo bản đồ cụm từ khóa, Intent Search và Microjourney của từng dự án; mỗi nhu cầu tìm kiếm chỉ có một trang đích để các trang không tự cạnh tranh nhau. Hiệu suất nội dung được rà soát hằng quý để quyết định làm mới, gộp hoặc gỡ, dùng công cụ Content Refreshness trên MoSpark.
 
 **Đo bằng:** PV Non-Paid theo dự án, thứ hạng cụm từ khóa mục tiêu, AI Traffic 46.000 PV mỗi tháng, tỷ lệ index sau 30 ngày.
 
