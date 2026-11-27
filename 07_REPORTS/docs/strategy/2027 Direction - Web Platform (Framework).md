@@ -2,7 +2,7 @@
 
 ## 1. EXECUTIVE SUMMARY
 
-**Năm 2026, Web đạt 36,91M PageView, trong đó Non-Paid 29,09M (78,8%) và tăng 53% từ T1 đến T10, cùng 44.684 lượt cài App từ T7 đến T11. Năm 2027, Web là kênh điều hướng (Navigation) và điểm chạm Out-App từ Google/AI: đưa user đến các Anchor, nuôi dưỡng nhu cầu và dẫn dắt user tải hoặc mở App vào đúng Service theo định hướng Product-Led Growth. Mục tiêu 2027 đạt 49,08M PageView Non-Paid (Thận trọng, tổng Web 57M) đến 55,58M PageView Non-Paid (Đầu tư, tổng Web 63,50M) và 30.000 Install mỗi tháng (+169% so với T10/2026), khoảng 360.000 Install cả năm.**
+**Năm 2026, Web đạt 36,91M PageView, trong đó Non-Paid 29,09M (78,8%) và tăng 53% từ T1 đến T10, cùng 44.684 lượt cài App từ T7 đến T11. Năm 2027, Web là kênh điều hướng (Navigation) và điểm chạm Out-App từ Google/AI: đưa user đến các Anchor, nuôi dưỡng nhu cầu và dẫn dắt user tải hoặc mở App vào đúng Service theo định hướng Product-Led Growth. Mục tiêu 2027 đạt 49,08M Non-Paid Traffic (Thận trọng, tổng Web 57M) đến 55,58M Non-Paid Traffic (Đầu tư, tổng Web 63,50M) và 30.000 Install mỗi tháng (+169% so với T10/2026), khoảng 360.000 Install cả năm.**
 
 **Kết quả 2026**
 
@@ -25,7 +25,7 @@
 
 | Chỉ số | Baseline 2026 | KPI 2027 |
 | :--- | :--- | :--- |
-| PageView Non-Paid | 32,77M (Forecast cả năm) | 49,08M (Thận trọng) - 55,58M (Đầu tư) |
+| Non-Paid Traffic | 32,77M (Forecast cả năm) | 49,08M (Thận trọng) - 55,58M (Đầu tư) |
 | Tổng PageView Web | 40,69M (Forecast cả năm) | 57M (Thận trọng) - 63,50M (Đầu tư) |
 | W2A CTR | 3,36% (T10) | 4,0-4,5% (+19% đến +34%) |
 | Install mỗi tháng | 11.143 (T10) | 30.000 (+169%) |
@@ -168,7 +168,7 @@ Lũy kế từ T7 đến 24/11/2026: **44.684 lượt cài đặt (Install)** (T
 - **Traffic T10:** 273.705 PV (+9,6% so với T9), đạt 109,5% mục tiêu 250.000 PV. Trung Tâm Tài Chính và Tiện ích Tỷ giá đạt 43.495 PV (+442,0%), Ví Trả Sau đạt 58.268 PV (+38,2%), bù mức giảm 47.814 PV của Vay Nhanh (-43,5%).
 - **Utility tạo tương tác:** CTR T10 của Ước tính khoản vay là 43,8%, Tra cứu CIC 38,6%, Tính lương Gross-Net 33,7%; ba Utility này chiếm 87,4% lượt tương tác của Hub (7.100 trên 8.120 lượt). Bảng tĩnh giá vàng, tỷ giá, lãi suất đạt 0% CTR.
 - **Utility đã triển khai:** Tính lương Gross-Net, Tỷ giá, Giá vàng (từ T9), Chứng chỉ quỹ, Ước tính khoản vay, Tra cứu điểm CIC, Trả góp Ví Trả Sau, Lãi tiết kiệm, Chuyển đổi ngoại tệ, BHXH và lương hưu. Đang triển khai: Phân bổ lương 50/30/20, Tính thuế TNCN và Thuế Hộ Kinh Doanh, Gamification Điểm Tín Dụng CIC (T11).
-- **Phục hồi T11 sau tái cấu trúc PLG từ T8:** PageView Non-Paid 1-19/11 đạt 294,5 nghìn, tăng 105% so với cùng kỳ T10 (143,4 nghìn). Trong 1-20/11, Financial đạt 4,36M Impression trên Google Search (21,3% tổng momo.vn) và 5,77M Impression trên AI Overview (18/5-20/11, 25,7% toàn Website). Click to App theo user T11: Điểm Tín Dụng 80,4%, Vay Nhanh 65,0%, Ví Trả Sau 29,0%, Trung Tâm Tài Chính 5,4%.
+- **Phục hồi T11 sau tái cấu trúc PLG từ T8:** Non-Paid Traffic 1-19/11 đạt 294,5 nghìn, tăng 105% so với cùng kỳ T10 (143,4 nghìn). Trong 1-20/11, Financial đạt 4,36M Impression trên Google Search (21,3% tổng momo.vn) và 5,77M Impression trên AI Overview (18/5-20/11, 25,7% toàn Website). Click to App theo user T11: Điểm Tín Dụng 80,4%, Vay Nhanh 65,0%, Ví Trả Sau 29,0%, Trung Tâm Tài Chính 5,4%.
 - **Hướng 2027:** đạt 1M PV mỗi tháng cần gấp khoảng 3,7 lần T10. Năm 2027 chuẩn hóa UX Framework và Microjourney cho từng Utility tài chính.
 
 ### 2.7. Vehicle Hub
@@ -228,7 +228,7 @@ Năm 2026 cho thấy giá trị bị mất ở bảy điểm, từ Traffic đế
 
 | Cấp | Chỉ số | Baseline 2026 | KPI 2027 |
 | :--- | :--- | :--- | :--- |
-| **North Star Metric** | PageView Non-Paid | 32,77M (Forecast cả năm) | 49,08M (Thận trọng) - 55,58M (Đầu tư) |
+| **North Star Metric** | Non-Paid Traffic | 32,77M (Forecast cả năm) | 49,08M (Thận trọng) - 55,58M (Đầu tư) |
 | **Success Metric** (cùng BU) | GMV, DAU, MAU, MEU | Cinema 16,01 tỷ đ GMV (T1-T10); Bảo hiểm 2,67 tỷ đ GMV (BHYT) | BU và FinanceBP xác nhận |
 | **Success Metric** | W2A CTR | 3,36% (T10) | 4,0-4,5% |
 | **KPI** | Install mỗi tháng | 11.143 (T10) | 30.000 |
@@ -238,7 +238,7 @@ Năm 2026 cho thấy giá trị bị mất ở bảy điểm, từ Traffic đế
 | Hạng mục | Kịch bản Thận trọng | Kịch bản Đầu tư |
 | :--- | :---: | :---: |
 | **Mốc T12/2027 (Tổng Web)** | **5,50M PVs** *(+37,5% vs T12/2026)* | **6,50 - 7M PVs** *(+62% đến +75%)* |
-| **PageView Non-Paid cả năm** | **48,5 - 49,5M** *(Organic từ Base 2026 + 20 Cell Teams)* | **55,6 - 57,0M** *(cộng thêm +6,1-8,3M từ 3 dự án)* |
+| **Non-Paid Traffic cả năm** | **48,5 - 49,5M** *(Organic từ Base 2026 + 20 Cell Teams)* | **55,6 - 57,0M** *(cộng thêm +6,1-8,3M từ 3 dự án)* |
 | **Tổng PageView Web *(gồm 7,92M Paid)*** | **56,5 - 57,5M** | **63,5 - 65,0M** |
 | **Install mỗi tháng** | **15.000 - 20.000** | **30.000** |
 
@@ -296,7 +296,7 @@ Bốn nguyên tắc thiết kế mỗi bước nối:
 
 **Kết quả đo lường**
 
-Web chịu trách nhiệm PageView Non-Paid, Click to App và Install; các chỉ số sau cài đặt và doanh thu (GMV, DAU, MAU, MEU) cùng chịu trách nhiệm với BU. Mọi điểm chạm trên Web đều gắn OneLink riêng theo từng Utility và Service để đo đóng góp thực tế cho từng BU:
+Web chịu trách nhiệm Non-Paid Traffic, Click to App và Install; các chỉ số sau cài đặt và doanh thu (GMV, DAU, MAU, MEU) cùng chịu trách nhiệm với BU. Mọi điểm chạm trên Web đều gắn OneLink riêng theo từng Utility và Service để đo đóng góp thực tế cho từng BU:
 
 | BU | Service | Giá trị Web mang lại |
 | :--- | :--- | :--- |
@@ -304,10 +304,6 @@ Web chịu trách nhiệm PageView Non-Paid, Click to App và Install; các ch�
 | Financial Services | Ví Trả Sau, Vay Nhanh, Túi Thần Tài, Tiết kiệm, Chứng chỉ quỹ và các sản phẩm của FinHub | Traffic và Click to App |
 | InsurTech | Bảo hiểm xe, bảo hiểm y tế | Traffic và GMV |
 | User Growth (New User) | New User | Install |
-
-**Vận hành ổn định**
-
-Web Platform chịu trách nhiệm hiệu suất, hạ tầng, kỹ thuật và công nghệ của mọi sản phẩm trên momo.vn, kể cả sản phẩm do Cell Team tự sở hữu. Mục tiêu 2027: uptime từ 99,9%, Core Web Vitals đạt ngưỡng (LCP dưới 2,5 giây, INP dưới 200ms, CLS dưới 0,1), 20 Cell Teams được hỗ trợ trong đó 15 trở lên tự vận hành.
 
 **Các sản phẩm tiềm năng (Potential Market) và nhóm Anchor mở rộng**
 
@@ -322,18 +318,65 @@ Ngoài các sản phẩm, dịch vụ đã được xây dựng, Web theo dõi t
 | Bảo hiểm ô tô | Anchor -> Adjacent | 74.000 (vật chất), SoV MoMo 0% | 2.118 lead, 71 giao dịch |
 | Bảo hiểm xã hội | Anchor -> Adjacent | 938.090 | Sắp ra mắt |
 | Mua vé Tàu | Anchor -> Adjacent | - | Sắp ra mắt |
-| Vé Số | Anchor | 1,54 tỷ lượt tìm kiếm | **2026:** Hình thành Foundation (`momo.vn/ve-so`). **2027:** Tiếp cận Intent tần suất cao để dẫn traffic về Vé Số trong App và các Service khác qua Microjourney |
+| Vé Số | Anchor | 1,54 tỷ lượt tìm kiếm | **2026:** Hình thành Foundation (momo.vn/ve-so). **2027:** Tiếp cận Intent tần suất cao để dẫn traffic về Vé Số trong App và các Service khác qua Microjourney |
 | Chứng Khoán | Anchor | 2,66 triệu, SoV MoMo 0% | **2026:** Hình thành Foundation. **2027:** Tiếp cận Intent tần suất cao để dẫn traffic về Chứng Khoán trong App và các Service tài chính khác qua Microjourney |
 | Chứng Chỉ Quỹ | Anchor | 19,2 nghìn | **2026:** Hình thành Foundation. **2027:** Tiếp cận Intent tần suất cao để dẫn traffic về Chứng Chỉ Quỹ trong App và các Service tích lũy khác qua Microjourney |
 
 
-### 3.3. Strategic
+### 3.3. Nền tảng công nghệ momo.vn
+
+Web Platform là nền tảng công nghệ của momo.vn. Mọi sản phẩm Growth trên Web, từ Hub chiến lược đến Mini Web của Cell Team và BU, đều chạy trên hạ tầng, công cụ và chuẩn do Web Platform cung cấp. Nền tảng ổn định và đáp ứng kịp thì các sản phẩm mới tăng trưởng được và đạt mục tiêu Biz.
+
+**Vai trò**
+
+- **Chịu trách nhiệm nền tảng:** hiệu suất, hạ tầng, kỹ thuật và công nghệ của mọi sản phẩm trên momo.vn, kể cả sản phẩm do Cell Team tự sở hữu.
+- **Đặt chuẩn chung:** SEO/GEO, Tracking, Design System và Security cho mọi đội xuất bản trên momo.vn, để sản phẩm mới thừa hưởng uy tín thương hiệu và Domain Authority thay vì xây lại từ đầu.
+- **Đồng hành chỉ số Biz:** Web chịu trách nhiệm Non-Paid Traffic, Click to App và Install; GMV, DAU, MAU, MEU cùng chịu trách nhiệm với BU.
+
+**Năng lực nền tảng và công nghệ**
+
+| Lớp nền tảng | Năng lực | Kết quả 2026 |
+| :--- | :--- | :--- |
+| Hạ tầng | FPT Cloud, sao lưu tự động hằng ngày | Chuyển 36/36 Frontend, 11/11 Backend, 3/3 Database, 137 endpoint; 0 rollback, không downtime |
+| Sản xuất nội dung | MoSpark: CMS, Landing Page Builder, GenAI Content | Landing Page 1-2 ngày (trước: 1-2 tuần); GenAI tự động khoảng 80% quy trình nội dung SEO, GEO |
+| Thành phần dùng chung | Payment Component, Lead Form, JSON Form Builder, UI Kit, Design System MoBase V2 | Dùng cho hàng chục Mini Web; Cinema đạt 16,01 tỷ đ GMV |
+| Đo lường | GA4, GTM, GSC vào BigQuery; OneLink; Umami; Identity Platform | 100% liên kết chuẩn hóa OneLink; Dashboard live từ T5; Identity Platform lên Production |
+| Bảo mật | Chuẩn ITC Security | 69 dự án mã nguồn theo chuẩn ITC; đóng 33/101 lỗ hổng |
+
+**Khả năng đáp ứng**
+
+| Chỉ số | 2026 | 2027 |
+| :--- | :--- | :--- |
+| Cell Teams được hỗ trợ | 16 (6 tự vận hành) | 20 (15 trở lên tự vận hành) |
+| Thời gian dựng Landing Page | 1-2 ngày | 1-2 ngày, Cell Team tự xuất bản không cần Dev |
+| Strategic Hubs | 3 (Cinema, Vehicle, Financial) | 5 trở lên |
+| Mini Web hiện hữu | 100% Smoke Test đạt trên Production | Giữ 100% |
+| Uptime | Không downtime khi chuyển Cloud (T7) | Từ 99,9% |
+
+**Định hướng nền tảng 2027**
+
+1. **Một nền tảng cho mọi đội.** MoSpark là CMS duy nhất cho nội dung, quảng cáo và analytics; Cell Teams, BMC, HR và L&D tự xuất bản.
+2. **Chuẩn hóa trải nghiệm và hiệu suất.** Mọi sản phẩm theo MoBase V2 với quy trình Design-to-Code và Code-to-Design; Core Web Vitals đạt ngưỡng (LCP dưới 2,5 giây, INP dưới 200ms, CLS dưới 0,1) và Security duyệt là điều kiện Go-live.
+3. **Đo được đóng góp Biz.** OneLink riêng cho từng Microjourney; Identity Platform nối hành vi Web sang App để đo Install, đăng ký, liên kết ngân hàng và MAU theo từng nguồn.
+4. **Sẵn sàng cho AI Agent.** Chuẩn hóa dữ liệu và endpoint để AI Agent truy vấn được Utility của MoMo, làm nền cho giai đoạn Agent-ready 2028-2030.
+
+**Nền tảng phục vụ mục tiêu Biz**
+
+| BU / Sản phẩm Growth | Nền tảng cung cấp | Chỉ số Biz |
+| :--- | :--- | :--- |
+| Movies: Cinema | Payment Component; OneLink mở App đúng bước thanh toán | GMV (2026: 16,01 tỷ đ) |
+| Financial Services: CIC, Tín dụng, Tích lũy | Utility theo Microjourney, OneLink riêng từng Service | PageView 3,2-4,0M; Click to App |
+| InsurTech: Bảo hiểm | Lead Form, luồng báo giá | Lead sang giao dịch từ 3,3% lên 7-10% |
+| User Growth: New User | Ads Manager, OneLink, Identity Platform | Install 30.000 mỗi tháng |
+| Cell Teams và BU khác | MoSpark, Shared Components | 20 Cell Teams, 15 trở lên tự vận hành |
+
+### 3.4. Strategic
 
 **Tổng thể, Web là kênh điều hướng (Navigation) và điểm chạm Out-App từ Google/AI: đưa user đến các Anchor, nuôi dưỡng nhu cầu và dẫn dắt user tải hoặc mở App vào đúng Service theo định hướng Product-Led Growth.** Web thu hút Non-Paid Traffic từ Search Engine và AI Agent, thiết kế Microjourney trên Utility để giữ đúng ngữ cảnh từ Out-App đến In-App. Chiến lược này đi qua năm trụ cột: SEO / GEO / AEO, MoSpark 2.0, New User Acquisition, Security và Shared Product.
 
 **Tiêu chí lựa chọn bài toán triển khai năm 2027:** Không chỉ ưu tiên các nhu cầu có **dung lượng tìm kiếm lớn (High Volume)** để mở rộng độ phủ, Web lựa chọn song song theo **khung Microjourney** nhằm dẫn lưu lượng **đúng chất lượng và đúng nhu cầu (qualified & relevant)** về đúng Service trong App hoặc chuyển đổi thành **Install**, tránh chạy theo lượng truy cập lớn nhưng không tạo giá trị cho hệ sinh thái.
 
-### 3.4. Portfolio
+### 3.5. Portfolio
 
 Danh mục đầu tư năm 2027 tập trung vào ba nhóm dự án trọng tâm có bước nối trực tiếp vào doanh thu App (Cinema, CIC & Tín dụng, Tích lũy & Đầu tư), kết hợp mở rộng các điểm chạm chuyển đổi Install mới trên luồng Utility.
 
@@ -351,7 +394,7 @@ Danh mục đầu tư năm 2027 tập trung vào ba nhóm dự án trọng tâm 
 - Movies BU và Financial Services BU chia sẻ lịch phim, lộ trình sản phẩm và thay đổi chính sách trước 2-4 tuần.
 - Financial Services BU cung cấp chỉ số trên App (GMV, MAU, MEU) và đối soát qua Dashboard dùng chung.
 
-### 3.5. Allocation
+### 3.6. Allocation
 
 **Bảng phân bổ mục tiêu 55,58M PVs Non-Paid 2027 (Kịch bản Đầu tư) theo 3 dự án trọng tâm và phần nền:**
 
@@ -365,7 +408,7 @@ Danh mục đầu tư năm 2027 tập trung vào ba nhóm dự án trọng tâm 
 
 Mục tiêu PV giả định Paid giữ nguyên mức 2026 (7,92M, khoảng 0,66M mỗi tháng); toàn bộ mức tăng còn lại đến từ Non-Paid (xem bảng breakdown từng tháng cho cả 2 kịch bản tại mục 3.1). Non-Paid đặt theo tốc độ tăng trưởng, không theo tỷ trọng, vì Paid do BU quyết định và không thuộc cam kết của Web Platform.
 
-**Sáu chỉ số hỗ trợ KPI chính.** Ngoài PageView Non-Paid và Install, Web theo dõi sáu chỉ số cho biết từng khâu trong hành trình đang ở đâu và cần đạt gì vào năm 2027.
+**Sáu chỉ số hỗ trợ KPI chính.** Ngoài Non-Paid Traffic và Install, Web theo dõi sáu chỉ số cho biết từng khâu trong hành trình đang ở đâu và cần đạt gì vào năm 2027.
 
 | Chỉ số | Hiện tại | KPI 2027 | Ý nghĩa |
 | :--- | :--- | :--- | :--- |
@@ -378,11 +421,11 @@ Mục tiêu PV giả định Paid giữ nguyên mức 2026 (7,92M, khoảng 0,66
 
 **Cơ sở tăng trưởng có ngân sách: 100% mức tăng Non-Paid đến từ các dự án trọng tâm**
 
-Ba dự án có ngân sách đóng góp thêm `6,1-8,3M PV` (trung bình `+6,50M`), tạo phần chênh lệch trực tiếp từ kịch bản **Thận trọng** (`49,08M` Non-Paid) lên kịch bản **Đầu tư** (`55,58M` Non-Paid). Phần tăng trưởng nền từ `32,77M` lên `49,08M` đến từ đà Organic 2026, đòn bẩy tự xuất bản của 20 Cell Teams trên MoSpark 2.0 và các Anchor Microjourney.
+Ba dự án có ngân sách đóng góp thêm 6,1-8,3M PV (trung bình +6,50M), tạo phần chênh lệch trực tiếp từ kịch bản **Thận trọng** (49,08M Non-Paid) lên kịch bản **Đầu tư** (55,58M Non-Paid). Phần tăng trưởng nền từ 32,77M lên 49,08M đến từ đà Organic 2026, đòn bẩy tự xuất bản của 20 Cell Teams trên MoSpark 2.0 và các Anchor Microjourney.
 
 - **Phụ trách:** Web Platform và Out-App Traffic, rà soát hằng tuần.
 
-### 3.6. Pillar Objectives
+### 3.7. Pillar Objectives
 
 #### Pillar 1: SEO / GEO / AEO cho các Strategic Project
 *Objective:* mở rộng lưu lượng Non-Paid chất lượng cao (qualified & relevant) cho các Strategic Project thông qua kết hợp Utility-Led SEO và GEO/AEO (On-page lẫn Off-page), giữ vững đà tăng trưởng tự nhiên trước xu hướng Zero-Click Search.
@@ -403,7 +446,7 @@ Ba dự án có ngân sách đóng góp thêm `6,1-8,3M PV` (trung bình `+6,50M
 
 **Bảo hiểm.** Giữ luồng mua BHYT và tối ưu báo giá Bảo hiểm ô tô, nâng tỷ lệ lead sang giao dịch từ 3,3% lên 7-10%, chờ định hướng chung của công ty.
 
-**Phần nền ngoài dự án trọng tâm.** 22,0-24,2M PV, chiếm 55,0-60,5% Non-Paid 2027, giữ ổn định trên nền khoảng 23,0M của 2026; đến từ Vehicle Hub, New User, Tỷ giá, eSIM, Cell Teams và Bảo hiểm. Phần này cần được duy trì thứ hạng, không để Traffic giảm khi AI Search trả lời trực tiếp.
+**Phần nền ngoài dự án trọng tâm.** 37,6-39,8M PV, chiếm 67,6-71,6% Non-Paid 2027 (Kịch bản Đầu tư); tăng nhờ 20 Cell Teams tự xuất bản trên MoSpark 2.0 và Anchor Microjourney (Vehicle Hub, New User, Tỷ giá, eSIM, Bảo hiểm). Phần này cần được duy trì thứ hạng, không để Traffic giảm khi AI Search trả lời trực tiếp.
 
 Các đòn bẩy tăng trưởng của hạng mục này:
 
@@ -425,22 +468,22 @@ MoSpark cung cấp công cụ sản xuất và quản trị nội dung cho các 
 
 - Wise: mỗi trang chuyển đổi tỷ giá ứng với một cặp tiền, có tỷ giá thực, so sánh phí với ngân hàng và nút giao dịch ngay trên trang.
 
-1. **GenAI Content Pipeline và AI Quality Gate.** Mở rộng cho toàn bộ Cell Teams tự phục vụ trong vài phút. AI Quality Gate chấm điểm độ chính xác thông tin, E-E-A-T và chống trùng lặp trước khi xuất bản. Ngoài viết mới, pipeline có năng lực Content Refreshness: phát hiện bài cũ, đề xuất và tự cập nhật số liệu, nội dung theo mùa để giữ Organic.
+1. **GenAI Content Pipeline, AI Quality Gate và Pre-publish Gate.** Mở rộng cho toàn bộ Cell Teams tự phục vụ trong vài phút. AI Quality Gate chấm điểm độ chính xác thông tin, E-E-A-T và chống trùng lặp; kết hợp **Pre-publish Gate kiểm tra Schema, Performance và Core Web Vitals (CWV)** trước khi xuất bản. Ngoài viết mới, pipeline có năng lực Content Refreshness: phát hiện bài cũ, đề xuất và tự cập nhật số liệu, nội dung theo mùa để giữ Organic.
 2. **Product-Led Growth (PLG).** Nâng số Hub chiến lược từ 3 lên 5 trở lên trên PLG Project Engine của MoSpark; scale Hub có Traffic tốt, thử tiếp phần còn lại. Ngoài quản lý Content Strategy cho từng Hub, PLG Project Engine đo performance nội dung theo bài (PV, CTR, Click to App) và đề xuất chỉnh sửa bài kém hiệu quả.
 3. **Utility-Led SEO.** Xây bộ mẫu pSEO (calculator, comparison, tra cứu theo ngân hàng, quận, phương tiện) trên MoSpark, thay các bảng tĩnh có CTR 0% bằng Utility. Mỗi Utility điều hướng user sang use case tiếp theo theo Microjourney, ví dụ Tra cứu CIC sang Ví Trả Sau, Ước tính khoản vay sang Vay Nhanh.
-4. **Landing Page Builder (Scale và Integrate).** Mở rộng thư viện template cho Utility và chiến dịch, cho phép nhúng Utility và quiz vào trang, AI-assisted generation, A/B Testing ngay trên Builder, Variant fan-out và Multi-tenant để nhiều Cell Teams cùng dùng. Mỗi trang gắn một KPI rõ ràng. Success metrics: Time-to-launch dưới 1-2 ngày, Self-serve rate, tỷ lệ trang gắn KPI.
-5. **Auto Internal Link.** Nền tảng tự đề xuất và chèn liên kết nội bộ giữa các trang cùng cụm, và từ trang Utility sang nội dung liên quan, để Cell Teams không phải gắn tay. Ưu tiên cụm Phạt Nguội, vốn cần liên kết nội bộ để phục hồi Traffic.
+4. **Landing Page Builder (Scale, Automate và AI Assistant).** Mở rộng thư viện template chuẩn MoBase V2, cho phép **tự động dựng trang từ input HTML/Artifact sang các template section có sẵn**, nhúng Utility và quiz gắn Offer theo ngữ cảnh, A/B Testing ngay trên Builder, Variant fan-out và Multi-tenant cho nhiều Cell Teams cùng dùng; tích hợp **AI Assistant hướng dẫn thao tác gọn nhẹ** để tăng tỷ lệ tự vận hành của BU. Mỗi trang gắn một KPI rõ ràng. Success metrics: Time-to-launch dưới 1-2 ngày, Self-serve rate, tỷ lệ trang gắn KPI.
+5. **Auto Internal Link (Hai chiều & chống bài mồ côi).** Nền tảng tự đề xuất và chèn liên kết nội bộ giữa các trang cùng cụm và từ Utility sang nội dung liên quan; bổ sung **Reverse Internal Links** (khi có bài mới, hệ thống quét các bài cũ liên quan để đề xuất đoạn chèn link trỏ về bài mới) và **cảnh báo bài mồ côi (Orphan Pages)**, ưu tiên cụm Phạt Nguội để phục hồi Traffic.
 6. **Ads Manager.** Quản lý Offer ngay trong MoSpark: mỗi luồng tối đa một Offer, đặt sau khi user có kết quả, luôn bỏ qua được, giữ đúng ngữ cảnh từ Out-App đến In-App qua OneLink để tăng thêm nguồn Install mới bên cạnh banner. Tách chiến dịch theo ba trạng thái: chưa cài App, đã cài chưa đăng ký, đã đăng ký chưa liên kết ngân hàng. Ads Manager đa dạng định dạng quảng cáo (Balloon Ads, banner, thẻ quà theo intent) và có tính năng retargeting ads.
 7. **Utility Tracking và Chatbot.** Chuẩn hóa tham số cho 100% liên kết OneLink vào BigQuery, cấp OneLink riêng cho từng Microjourney để đo Web to App theo từng Service trong App, mở rộng Umami cho toàn bộ Mini Web và đối soát với GA4 hằng tháng. Chatbot và RAG Knowledge Base mở rộng trợ lý tư vấn Service trên Web.
 8. **Identify (SSO): Gamification và New User Nurturing.** Gamification kế thừa chiến dịch Game Một Mùa Quýt, triển khai Gamification Điểm Tín Dụng CIC sau khi Pháp lý xác nhận khung giấy phép. New User Nurturing dựa trên Identity Platform đã chạy Production.
 
 #### Pillar 3: New User Acquisition
-*Objective:* tăng Install từ Web lên 30.000 mỗi tháng và tối ưu funnel từ Install đến đăng ký, liên kết ngân hàng và MAU, cùng New User (User Growth).
+*Objective:* đưa **Install từ Web lên 30.000 mỗi tháng** thông qua **cá nhân hóa (Personalization)** và mở rộng điểm chạm trên Utility; đồng thời phối hợp dữ liệu với **User Growth (New User)** để tối ưu chuyển đổi sau cài đặt (đăng ký, liên kết ngân hàng và MAU).
 
 1. **Mở rộng điểm chạm Install trên các luồng Utility.** Cộng thêm nguồn Install mới bên cạnh banner bằng Offer theo Microjourney (đặt đúng lúc user có kết quả) và Ads Balloon hiển thị thẻ quà đúng intent từng trang.
-2. **Đo lường và mở App đúng ngữ cảnh qua AppsFlyer.** Dùng AppsFlyer tracking (OneLink) để đo chính xác Install theo từng Utility (CIC, Ước tính khoản vay) và giữ ngữ cảnh sang App, không bắt nhập lại.
-3. **Tối ưu Install sang đăng ký.** Nâng từ 33,0% lên 40-45%; thử Gamification hoặc quà tự chọn để giữ người cài; tách nguồn banner và nguồn Utility để đo riêng.
-4. **Đo funnel đến MAU theo nguồn.** Identity Platform nối hành vi Web sang App, đo Install, đăng ký, liên kết ngân hàng và MAU theo từng nguồn và Utility. New User chịu trách nhiệm chính với tỷ lệ liên kết ngân hàng trên Install.
+2. **Cá nhân hóa (Personalization) lời mời cài App theo ngữ cảnh & hành vi.** Tự động điều chỉnh thông điệp Offer, CTA và thẻ quà theo đúng Utility user vừa sử dụng (tra CIC, tính khoản vay, xem lịch chiếu, tra phạt nguội), tần suất quay lại và loại thiết bị, thay vì hiển thị một thông điệp chung cho toàn bộ trang Web.
+3. **Đo lường Install theo từng nguồn qua AppsFlyer.** Gắn tham số AppsFlyer OneLink riêng cho từng Utility, Offer và kịch bản cá nhân hóa để đo chính xác nguồn tạo Install và đối soát hiệu quả từng điểm chạm.
+4. **Phối hợp User Growth tối ưu sau cài đặt (Install -> Reg -> MAU).** Web không trực tiếp can thiệp luồng trong App mà phối hợp với User Growth thông qua **Identity Platform** và dữ liệu nguồn từ AppsFlyer: tách rõ hiệu quả từng nguồn (banner vs. Utility) để User Growth tối ưu luồng đăng ký, liên kết ngân hàng và kích hoạt MAU tương ứng với từng nhóm nhu cầu.
 
 #### Pillar 4: Security
 *Objective:* bảo vệ dữ liệu user và merchant, không để sự cố bảo mật lặp lại, giữ mọi sản phẩm trên momo.vn ổn định khi Web mở rộng Utility.
@@ -454,11 +497,11 @@ MoSpark cung cấp công cụ sản xuất và quản trị nội dung cho các 
 #### Pillar 5: Shared Product
 *Objective:* cung cấp nền tảng dùng chung cho **20 Cell Teams** (15+ đội tự xuất bản trên MoSpark), rút ngắn thời gian Go-to-Market ra end-user xuống 1-2 ngày, chuẩn hóa **Branding và Design System MoBase V2** trên toàn Web, duy trì uptime từ 99,9%.
 
-1. **Nền tảng dùng chung giúp Cell Teams Go-to-Market nhanh ra end-user.** Cung cấp hạ tầng sẵn sàng, thừa hưởng Domain Authority của `momo.vn`, tích hợp sẵn Tracking Full Funnel và OneLink để 20 Cell Teams (HR với MoMo Talent `momo.career`, L&D, BMC, GMC, MDS, CVS News duy trì 100% Smoke Test chuẩn ITC) tự xuất bản Webview In/Out App và Landing Page ra người dùng cuối mà không cần Dev thủ công.
+1. **Nền tảng dùng chung giúp Cell Teams Go-to-Market nhanh ra end-user.** Cung cấp hạ tầng sẵn sàng, thừa hưởng Domain Authority của momo.vn, tích hợp sẵn Tracking Full Funnel và OneLink để 20 Cell Teams (HR với MoMo Talent momo.career, L&D, BMC, GMC, MDS, CVS News duy trì 100% Smoke Test chuẩn ITC) tự xuất bản Webview In/Out App và Landing Page ra người dùng cuối mà không cần Dev thủ công.
 2. **Công cụ quản lý chuẩn Branding và Design System (MoBase V2).** BMC quản trị tập trung Brand Guideline ngay trên nền tảng; chuẩn hóa toàn bộ giao diện theo **MoBase V2** kết hợp quy trình **Design-to-Code** và **Code-to-Design**, đảm bảo mọi sản phẩm trên Web đồng bộ nhận diện thương hiệu, trải nghiệm người dùng và đạt chuẩn Core Web Vitals trước khi Go-live.
 3. **Bộ thành phần kỹ thuật dùng chung (Shared Components).** Payment Component, Lead Form (gắn BotID), JSON Form Builder và lớp bảo mật BFF tích hợp sẵn, giúp mọi đội tái sử dụng ngay và tuân thủ 100% chuẩn ITC Security.
 
-### 3.7. Budget
+### 3.8. Budget
 
 **Ngân sách:** 1.995.800.000 đ, khoảng 166,3 triệu đ mỗi tháng, gồm 1,95 tỷ đ cho 3 dự án và 45,8 triệu đ bản quyền công cụ. Không đề xuất ngân sách Paid. Ngân sách Cinema và Financial có phần đồng tài trợ từ BU, tỷ lệ thống nhất với từng BU trước khi giải ngân.
 
@@ -468,7 +511,7 @@ MoSpark cung cấp công cụ sản xuất và quản trị nội dung cho các 
 | **Financial - CIC & Tín dụng** | 480 triệu đ | 0,42M | 2,2 - 2,5M | 1,8 - 2,1M | Top 3-5 cụm CIC, nợ xấu, điểm tín dụng |
 | **Financial - Tích lũy & Đầu tư** | 850 triệu đ | 0,21M | 1,0 - 1,5M | 0,8 - 1,3M | Top 3-5 cụm lãi suất, tiết kiệm, CCQ, tích sản |
 | **Bản quyền công cụ** (Figma Pro 9,8 triệu đ, 2 users; Semrush Pro 36 triệu đ, 1 user) | 45,8 triệu đ |  |  |  |  |
-| **Tổng** | **1.995,8 triệu đ (~1,996 tỷ đ)** | **9,73M** | **15,8 - 18,0M** | **6,1 - 8,3M** |  |
+| **Tổng** | **1.995,8 triệu đ (~1,9 tỷ đ)** | **9,73M** | **15,8 - 18,0M** | **6,1 - 8,3M** |  |
 
 Chuyển đổi cuối phễu khác nhau theo use case: Cinema đo bằng giao dịch và GMV; Financial đo bằng lượt click App, MAU/MEU và chỉ số sản phẩm do BU định nghĩa. Đây là chỉ số chất lượng traffic, đồng chịu trách nhiệm với BU.
 
@@ -478,11 +521,11 @@ Chuyển đổi cuối phễu khác nhau theo use case: Cinema đo bằng giao d
 
 Năm 2026, Web Platform xây xong nền tảng gồm MoSpark, GenAI Content, Utility-Led SEO, Tracking Full Funnel, Payment và OneLink, và đưa Non-Paid lên 29,09M PV, 79% Traffic Web. Điểm nghẽn nằm ở chuyển đổi: 76% Install đến từ một banner, chỉ 35,0% Install đăng ký (T10), và hơn 90% người chọn ghế Cinema bỏ dở ở bước thanh toán.
 
-Năm 2027, Web là kênh điều hướng (Navigation) và điểm chạm Out-App từ Google/AI: đưa user đến các Anchor, nuôi dưỡng nhu cầu và dẫn dắt user tải hoặc mở App vào đúng Service theo định hướng Product-Led Growth. Mục tiêu 2027 đạt 49,08M PageView Non-Paid (Thận trọng) đến 55,58M PageView Non-Paid (Đầu tư), W2A CTR 4,0-4,5% và 30.000 Install mỗi tháng; GMV, DAU, MAU, MEU cùng chịu trách nhiệm với BU.
+Năm 2027, Web là kênh điều hướng (Navigation) và điểm chạm Out-App từ Google/AI: đưa user đến các Anchor, nuôi dưỡng nhu cầu và dẫn dắt user tải hoặc mở App vào đúng Service theo định hướng Product-Led Growth. Mục tiêu 2027 đạt 49,08M Non-Paid Traffic (Thận trọng) đến 55,58M Non-Paid Traffic (Đầu tư), W2A CTR 4,0-4,5% và 30.000 Install mỗi tháng; GMV, DAU, MAU, MEU cùng chịu trách nhiệm với BU.
 
 Để đạt KPI này, Web cần:
 
 - **Đầu tư song song SEO và GEO/AEO,** xây Utility cho mỗi Hub với một Microjourney và một Offer.
 - **Triển khai năm Pillar:** SEO / GEO / AEO, MoSpark 2.0, New User Acquisition, Security và Shared Product.
 - **Giữ vận hành ổn định** cho mọi sản phẩm trên momo.vn, kể cả sản phẩm do Cell Team tự sở hữu: uptime từ 99,9%, Core Web Vitals đạt ngưỡng.
-- **Ngân sách 1,996 tỷ đ** cho ba dự án Cinema, CIC và Tín dụng, Tích lũy và Đầu tư, cùng việc BU xác nhận bước nối và chỉ số kinh doanh trước khi xây.
+- **Ngân sách 1,9 tỷ đ** cho ba dự án Cinema, CIC và Tín dụng, Tích lũy và Đầu tư, cùng việc BU xác nhận bước nối và chỉ số kinh doanh trước khi xây.
