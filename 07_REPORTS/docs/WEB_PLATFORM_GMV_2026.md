@@ -110,7 +110,7 @@ Kênh Web mang về **136.819 người dùng tiếp cận bảo hiểm** (tăng 
 
 ## 5. TÀI LIỆU VÀ LIÊN KẾT LIÊN QUAN
 
-- Báo cáo Kế hoạch Ngân sách 2027: [`07_REPORTS/docs/strategy/Budget 2027 - 2026 Reflection - Web Platform.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/strategy/Budget%202027%20-%202026%20Reflection%20-%20Web%20Platform.md)
+- Báo cáo Kế hoạch Ngân sách 2027: [`07_REPORTS/docs/strategy/2027 Direction - Web Platform (Framework).md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/strategy/2027%20Direction%20-%20Web%20Platform%20%28Framework%29.md)
 - Báo cáo Hiệu suất Tuần Cinema Hub: [`07_REPORTS/docs/weekly-report-2026-11-02-11-08.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/weekly-report-2026-11-02-11-08.md)
 - Bảng đối soát Bảo hiểm YoY: [`05_HUBS/vehicle/INSURANCE_GMV_YOY_2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS/vehicle/INSURANCE_GMV_YOY_2026.md)
 - Đặc tả Sản phẩm Cinema W2A GMV: [`05_HUBS/cinema/CINEMA_W2A_GMV_PERFORMANCE_2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS/cinema/CINEMA_W2A_GMV_PERFORMANCE_2026.md)

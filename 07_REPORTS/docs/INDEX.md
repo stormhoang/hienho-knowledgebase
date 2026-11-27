@@ -8,7 +8,8 @@
 
 | Kỳ báo cáo | Phạm vi dữ liệu | Tệp tin báo cáo | Trạng thái | Điểm nhấn chính |
 | :--- | :--- | :--- | :---: | :--- |
-| **Tháng 10/2026 (Board MBR)** | MTD 28 ngày & Forecast 31 ngày | [`report-thang-10-2026-board.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-thang-10-2026-board.md) | `Active MBR Board` | Forecast 3.64M - 3.68M PVs (~100% Target); Non-Paid tăng vững chắc 87.2%; Phễu W2A và tối ưu ngân sách Ads |
+| **Tháng 11/2026 (Board MBR)** | MTD 23 ngày, phễu W2A MTD 22 ngày | [`report-thang-11-2026-board.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-thang-11-2026-board.md) | `Bản MTD, chờ đối soát` | 3.800.889 PageViews hiệu chỉnh (99,26% Target tạm tính); forecast giữ nhịp 4,96M PageViews; 7.334 Installs và 893 MAU |
+| **Tháng 10/2026 (Board MBR)** | MTD 28 ngày & Forecast 31 ngày | [`report-thang-10-2026-board.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-thang-10-2026-board.md) | `Full Month` | Forecast 3.64M - 3.68M PVs (~100% Target); Non-Paid tăng vững chắc 87.2%; Phễu W2A và tối ưu ngân sách Ads |
 | **Tháng 10/2026 (Operational)** | Lũy kế MTD 28 ngày | [`report-thang-10-2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-thang-10-2026.md) | `Active MBR` | Báo cáo chi tiết hiệu suất toàn diện Tháng 10 dành cho Web Platform |
 | **Tháng 09/2026** | Trọn tháng (01/09 - 30/09) | [`report-thang-09-2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-thang-09-2026.md) | `Full Month` | Hoàn thành mục tiêu quý 3; mở rộng cụm rạp và tiện ích tài chính |
 | **Tháng 08/2026** | MTD 28 ngày chính thức | [`report-thang-08-2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-thang-08-2026.md) | `Full Month` | Triển khai luồng Mobile Balloon Ads; đối soát phễu cài đặt Ads |
@@ -51,7 +52,7 @@
 
 | Loại tài liệu | Tệp tin | Mô tả nội dung |
 | :--- | :--- | :--- |
-| **Kế hoạch Ngân sách 2027** | [`strategy/Budget 2027 - 2026 Reflection - Web Platform.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/strategy/Budget%202027%20-%202026%20Reflection%20-%20Web%20Platform.md) | Đánh giá hiệu quả đầu tư năm 2026 và kế hoạch ngân sách nền tảng Web năm 2027 |
+| **Kế hoạch Ngân sách 2027** | [`strategy/2027 Direction - Web Platform (Framework).md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/strategy/2027%20Direction%20-%20Web%20Platform%20%28Framework%29.md) | Đánh giá hiệu quả đầu tư năm 2026 và kế hoạch ngân sách nền tảng Web năm 2027 |
 | **Chiến lược Gamification** | [`strategy/report-gamification-strategy-2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/strategy/report-gamification-strategy-2026.md) | Chiến lược Gamification thúc đẩy tương tác và tỷ lệ quay lại của người dùng |
 | **GDD Financial Goal Simulator 2.0 (FIN-SIM-MOMO-2026)** | [`../../09_PRD/financial-goal-simulator-prd.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/09_PRD/financial-goal-simulator-prd.md) | Đặc tả kỹ thuật & Game Design Document Financial Goal Simulator 2.0 (Rogue-Fintech Journey) |
 | **Nghiên cứu Hành vi Tìm kiếm** | [`strategy/web-search-term.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/strategy/web-search-term.md) | Phân tích từ khóa tìm kiếm nội bộ và xu hướng nhu cầu người dùng trên Web |
