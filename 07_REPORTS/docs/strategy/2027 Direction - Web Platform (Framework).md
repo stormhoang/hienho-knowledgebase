@@ -387,6 +387,10 @@ Ba dự án có ngân sách đóng góp thêm `6,1-8,3M PV` (trung bình `+6,50M
 #### Pillar 1: SEO / GEO / AEO cho các Strategic Project
 *Objective:* mở rộng lưu lượng Non-Paid chất lượng cao (qualified & relevant) cho các Strategic Project thông qua kết hợp Utility-Led SEO và GEO/AEO (On-page lẫn Off-page), giữ vững đà tăng trưởng tự nhiên trước xu hướng Zero-Click Search.
 
+*Dẫn chứng từ fintech:*
+
+- NerdWallet năm 2025: Organic Search giảm mạnh do AI Overview và LLM, mảng thẻ tín dụng giảm 24% trong Q4; traffic từ LLM chuyển đổi cao hơn Search.
+
 **Dự án trọng tâm.** SEO và GEO/AEO tập trung vào ba dự án:
 
 | Dự án | PVs 2027 | Tỷ trọng Non-Paid 2027 | Mục tiêu thứ hạng |
@@ -415,6 +419,10 @@ Các đòn bẩy tăng trưởng của hạng mục này:
 MoSpark cung cấp công cụ sản xuất và quản trị nội dung cho các Cell Team.
 
 *Objective:* Cell Teams tự dựng Landing Page cho Utility và chiến dịch trong 1-2 ngày; mở rộng nguồn Install mới từ Offer trong luồng qua Ads Manager; W2A CTR trên các trang Utility từ 4,5%, cao hơn mức toàn Web; GenAI Content tự phục vụ trong vài phút cho Cell Teams.
+
+*Dẫn chứng từ fintech:*
+
+- Wise: mỗi trang chuyển đổi tỷ giá ứng với một cặp tiền, có tỷ giá thực, so sánh phí với ngân hàng và nút giao dịch ngay trên trang.
 
 1. **GenAI Content Pipeline và AI Quality Gate.** Mở rộng cho toàn bộ Cell Teams tự phục vụ trong vài phút. AI Quality Gate chấm điểm độ chính xác thông tin, E-E-A-T và chống trùng lặp trước khi xuất bản. Ngoài viết mới, pipeline có năng lực Content Refreshness: phát hiện bài cũ, đề xuất và tự cập nhật số liệu, nội dung theo mùa để giữ Organic.
 2. **Product-Led Growth (PLG).** Nâng số Hub chiến lược từ 3 lên 5 trở lên trên PLG Project Engine của MoSpark; scale Hub có Traffic tốt, thử tiếp phần còn lại. Ngoài quản lý Content Strategy cho từng Hub, PLG Project Engine đo performance nội dung theo bài (PV, CTR, Click to App) và đề xuất chỉnh sửa bài kém hiệu quả.
